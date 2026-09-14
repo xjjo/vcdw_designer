@@ -1,0 +1,160 @@
+/**
+ * Deterministic SQL generation from a DesignModel: CREATE TABLE (DDL) plus
+ * sample-data INSERTs. Dialect-aware for MemSQL/MariaDB/MySQL.
+ *
+ * The goal is to give an ETL developer a runnable starting script, not a
+ * production migration — so it favors clarity and safe defaults.
+ */
+import type {
+  AnyEntity,
+  Column,
+  DesignModel,
+  Dimension,
+  Enumeration,
+  Fact,
+  SqlDialect,
+} from './types';
+
+function quoteIdent(name: string): string {
+  return '`' + name.replace(/`/g, '') + '`';
+}
+
+function columnDdl(c: Column): string {
+  const parts = [quoteIdent(c.name), c.type];
+  if (c.autoIncrement) parts.push('AUTO_INCREMENT');
+  parts.push(c.nullable === false ? 'NOT NULL' : 'NULL');
+  if (c.default != null && c.default !== '') parts.push(`DEFAULT ${c.default}`);
+  if (c.comment) parts.push(`COMMENT ${sqlString(c.comment)}`);
+  return parts.join(' ');
+}
+
+function sqlString(v: string): string {
+  return `'${v.replace(/'/g, "''")}'`;
+}
+
+function tableName(e: AnyEntity): string {
+  return e.name;
+}
+
+function tableConstraints(e: AnyEntity, dialect: SqlDialect): string[] {
+  const lines: string[] = [];
+  const pk = e.columns.filter((c) => c.isPk).map((c) => quoteIdent(c.name));
+  if (pk.length) lines.push(`PRIMARY KEY (${pk.join(', ')})`);
+
+  if (dialect === 'MemSQL') {
+    if (e.shardKey) lines.push(`SHARD KEY (${quoteIdent(e.shardKey)})`);
+    const sortKeys = e.sortKeys?.filter(Boolean) ?? [];
+    if (sortKeys.length) lines.push(`SORT KEY (${sortKeys.map(quoteIdent).join(', ')})`);
+  }
+  return lines;
+}
+
+/** Generate a single CREATE TABLE statement for any entity. */
+export function entityDdl(e: AnyEntity, dialect: SqlDialect): string {
+  const isRefTable = e.kind === 'enumeration' && (e as Enumeration).isReferenceTable && dialect === 'MemSQL';
+  const createKeyword = isRefTable ? 'CREATE REFERENCE TABLE' : 'CREATE TABLE';
+  const body = [
+    ...e.columns.map((c) => '  ' + columnDdl(c)),
+    ...tableConstraints(e, dialect).map((l) => '  ' + l),
+  ].join(',\n');
+  return `${createKeyword} IF NOT EXISTS ${quoteIdent(tableName(e))} (\n${body}\n);`;
+}
+
+/** Staging + error DDL for facts (and dimensions that require staging). */
+export function stagingDdl(e: AnyEntity, dialect: SqlDialect): string[] {
+  const out: string[] = [];
+  const cols = e.columns.filter((c) => !c.autoIncrement);
+  const stgCols = [...cols, { id: 'err', name: 'ERROR', type: 'VARCHAR(512)', nullable: true } as Column];
+  const buildStg = (tbl: string) => {
+    const body = stgCols.map((c) => '  ' + columnDdl(c)).join(',\n');
+    return `CREATE TABLE IF NOT EXISTS ${quoteIdent(tbl)} (\n${body}\n);`;
+  };
+  if (e.kind === 'fact') {
+    const f = e as Fact;
+    if (f.stagingTable) out.push(buildStg(f.stagingTable));
+    if (f.errorTable) out.push(buildStg(f.errorTable));
+  } else if (e.kind === 'dimension') {
+    const d = e as Dimension;
+    if (d.requiresStaging && d.stgTable) out.push(buildStg(d.stgTable));
+    if (d.requiresStaging && d.stgErrorTable) out.push(buildStg(d.stgErrorTable));
+  }
+  return out;
+}
+
+function sampleValueFor(c: Column, rowIndex: number): string {
+  const t = c.type.toUpperCase();
+  if (c.autoIncrement) return 'DEFAULT';
+  if (c.isSk && c.name.toUpperCase().includes('KEY')) return String(rowIndex + 1);
+  if (/INT|BIGINT|TINYINT|SMALLINT/.test(t)) {
+    if (c.name.toUpperCase() === 'DELETED') return '0';
+    return String((rowIndex + 1) * 10);
+  }
+  if (/DECIMAL|DOUBLE|FLOAT|NUMERIC/.test(t)) return String((rowIndex + 1) * 100.5);
+  if (/DATE|TIME/.test(t)) return 'CURRENT_TIMESTAMP';
+  // string-ish
+  const base = c.name.toLowerCase().replace(/_/g, ' ');
+  return sqlString(`${base} ${rowIndex + 1}`);
+}
+
+/** Sample INSERTs including the mandatory unknown (-1) row for dimensions. */
+export function sampleInserts(e: AnyEntity, rows = 3): string {
+  const cols = e.columns;
+  const insertCols = cols.map((c) => quoteIdent(c.name)).join(', ');
+  const statements: string[] = [];
+
+  const buildRow = (values: string[]) =>
+    `INSERT INTO ${quoteIdent(tableName(e))} (${insertCols}) VALUES (${values.join(', ')});`;
+
+  if (e.kind === 'dimension' && (e as Dimension).hasDefaultUnknownRow) {
+    const values = cols.map((c) => {
+      if (c.isSk) return '-1';
+      if (/INT|DECIMAL|DOUBLE|FLOAT/.test(c.type.toUpperCase())) return c.name.toUpperCase() === 'DELETED' ? '0' : '-1';
+      if (/DATE|TIME/.test(c.type.toUpperCase())) return 'CURRENT_TIMESTAMP';
+      return sqlString('Unknown');
+    });
+    statements.push(buildRow(values));
+  }
+
+  for (let i = 0; i < rows; i++) {
+    const values = cols.map((c) => sampleValueFor(c, i));
+    statements.push(buildRow(values));
+  }
+  return statements.join('\n');
+}
+
+export interface GeneratedSql {
+  ddl: string;
+  staging: string;
+  inserts: string;
+  full: string;
+}
+
+/** Generate the complete SQL script for one entity. */
+export function generateEntitySql(e: AnyEntity, dialect: SqlDialect, rows = 3): GeneratedSql {
+  const ddl = entityDdl(e, dialect);
+  const staging = stagingDdl(e, dialect).join('\n\n');
+  const inserts = sampleInserts(e, rows);
+  const sections = [
+    `-- =====================================================`,
+    `-- ${e.kind.toUpperCase()}: ${e.name}`,
+    `-- =====================================================`,
+    ddl,
+    staging ? `\n-- staging / error tables\n${staging}` : '',
+    `\n-- sample data\n${inserts}`,
+  ].filter(Boolean);
+  return { ddl, staging, inserts, full: sections.join('\n') };
+}
+
+/** Generate SQL for the whole model in dependency-friendly order. */
+export function generateModelSql(model: DesignModel, rows = 3): string {
+  const dialect = model.project.targetDatabase;
+  const order: AnyEntity[] = [...model.enumerations, ...model.dimensions, ...model.facts];
+  const header = [
+    `-- =====================================================`,
+    `-- Generated by VCDW Designer`,
+    `-- Project: ${model.project.name} v${model.project.version}`,
+    `-- Target : ${dialect}`,
+    `-- =====================================================\n`,
+  ].join('\n');
+  return header + order.map((e) => generateEntitySql(e, dialect, rows).full).join('\n\n\n');
+}
