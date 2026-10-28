@@ -1,0 +1,21 @@
+id: support_dw_job_procedure_error_log
+kind: support
+name: dw_job_procedure_error_log
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_job_procedure_error_log_0
+    name: LOG_ID
+    type: BIGINT(20)
+  - id: sc_dw_job_procedure_error_log_1
+    name: PROCEDURE_NAME
+    type: LONGTEXT
+  - id: sc_dw_job_procedure_error_log_2
+    name: ERROR_MESSAGE
+    type: LONGTEXT
+  - id: sc_dw_job_procedure_error_log_3
+    name: STEP_DESCRIPTION
+    type: LONGTEXT
+  - id: sc_dw_job_procedure_error_log_4
+    name: CREATED_AT
+    type: DATETIME(6)

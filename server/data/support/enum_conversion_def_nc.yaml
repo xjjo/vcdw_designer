@@ -1,0 +1,42 @@
+id: support_enum_conversion_def_nc
+kind: support
+name: enum_conversion_def_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_enum_conversion_def_nc_0
+    name: sys_enum_conversion_def_id
+    type: BIGINT(20)
+  - id: sc_enum_conversion_def_nc_1
+    name: model_name
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_def_nc_2
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_def_nc_3
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_enum_conversion_def_nc_4
+    name: last_modified_user
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_def_nc_5
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_enum_conversion_def_nc_6
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_enum_conversion_def_nc_7
+    name: enumeration_name
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_def_nc_8
+    name: base_unit
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_def_nc_9
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_enum_conversion_def_nc_10
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_def_nc_11
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,108 @@
+id: support_wms_inventory_pin_nc
+kind: support
+name: wms_inventory_pin_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_wms_inventory_pin_nc_0
+    name: INVENTORY_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_wms_inventory_pin_nc_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_inventory_pin_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_inventory_pin_nc_3
+    name: PIN_NUMBER
+    type: VARCHAR(64)
+  - id: sc_wms_inventory_pin_nc_4
+    name: SOURCE_MODEL_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_5
+    name: SOURCE_MODEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_wms_inventory_pin_nc_6
+    name: SYS_INVENTORY_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_7
+    name: SYS_INVENTORY_PIN_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_8
+    name: SYS_LPN_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_9
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_10
+    name: TYPE
+    type: VARCHAR(256)
+  - id: sc_wms_inventory_pin_nc_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wms_inventory_pin_nc_12
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_wms_inventory_pin_nc_13
+    name: REMOVE_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_wms_inventory_pin_nc_14
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_wms_inventory_pin_nc_15
+    name: ORIGINAL_INVENTORY_STATUS
+    type: VARCHAR(256)
+  - id: sc_wms_inventory_pin_nc_16
+    name: SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_17
+    name: INVENTORY_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_wms_inventory_pin_nc_18
+    name: SOURCE_MODEL_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_wms_inventory_pin_nc_19
+    name: REMOVE_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_wms_inventory_pin_nc_20
+    name: ADD_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_wms_inventory_pin_nc_21
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_wms_inventory_pin_nc_22
+    name: SYS_RECEIPT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_23
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wms_inventory_pin_nc_24
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_25
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_26
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_wms_inventory_pin_nc_27
+    name: ADD_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_wms_inventory_pin_nc_28
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_wms_inventory_pin_nc_29
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_wms_inventory_pin_nc_30
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_wms_inventory_pin_nc_31
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_wms_inventory_pin_nc_32
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_wms_inventory_pin_nc_33
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

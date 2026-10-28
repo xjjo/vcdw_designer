@@ -1,0 +1,24 @@
+id: support_dw_mfg_routing
+kind: support
+name: dw_mfg_routing
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_mfg_routing_0
+    name: SYS_ROUTING_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_routing_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_routing_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_routing_3
+    name: CYCLE_TIME
+    type: BIGINT(20)
+  - id: sc_dw_mfg_routing_4
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_mfg_routing_5
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

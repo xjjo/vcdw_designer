@@ -1,0 +1,39 @@
+id: support_tms_tg_nc
+kind: support
+name: tms_tg_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_tg_nc_0
+    name: sys_tg_id
+    type: BIGINT(20)
+  - id: sc_tms_tg_nc_1
+    name: model_name
+    type: VARCHAR(64)
+  - id: sc_tms_tg_nc_2
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_tms_tg_nc_3
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_tms_tg_nc_4
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_tms_tg_nc_5
+    name: sys_tp_id
+    type: BIGINT(20)
+  - id: sc_tms_tg_nc_6
+    name: tender_plan_name
+    type: VARCHAR(64)
+  - id: sc_tms_tg_nc_7
+    name: sys_routing_strategy_id
+    type: BIGINT(20)
+  - id: sc_tms_tg_nc_8
+    name: sys_org_id
+    type: BIGINT(20)
+  - id: sc_tms_tg_nc_9
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_tg_nc_10
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,537 @@
+id: support_dw_scc_order_fact_weekly
+kind: support
+name: dw_scc_order_fact_weekly
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_order_fact_weekly_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_fact_weekly_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_fact_weekly_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_fact_weekly_5
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_6
+    name: MONTH
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_7
+    name: YEAR
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_8
+    name: SHIP_FROM_CITY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_9
+    name: SHIP_FROM_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_10
+    name: SHIP_FROM_STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_11
+    name: SHIP_TO_CITY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_12
+    name: SHIP_TO_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_13
+    name: SHIP_TO_STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_14
+    name: SYS_OFW_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_15
+    name: MTWF_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_16
+    name: MTWF_ORDER_AGREED_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_17
+    name: MTWF_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_18
+    name: MTWF_ORDER_INWINDOW_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_19
+    name: MTWF_ORDER_INWINDOW_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_20
+    name: MTWF_ORDER_ONTIME_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_21
+    name: MTWF_ORDER_ONTIME_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_22
+    name: MTWF_ORDER_ONTIME_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_23
+    name: MTWF_ORDER_ONTIME_SHIP_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_24
+    name: MTWF_ORDER_SHIP_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_25
+    name: MTWF_RECEIVED_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_26
+    name: MTWF_REQUEST_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_27
+    name: MTW_CONFIRMED_LATE_ORD_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_28
+    name: MTW_LATE_DELIVERY_SHPMT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_29
+    name: MTW_LATE_SHIPMENT_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_30
+    name: MTW_MISSING_ASN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_31
+    name: QUANTITY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_scc_order_fact_weekly_32
+    name: REPORT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_fact_weekly_33
+    name: SYS_BROKER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_34
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_35
+    name: SYS_BUYING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_36
+    name: SYS_CARRIER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_37
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_38
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_39
+    name: SYS_SELLING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_40
+    name: SYS_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_41
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_fact_weekly_42
+    name: TOTAL_SPEND_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_43
+    name: WEEKLY_ACTUAL_OLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_44
+    name: WEEKLY_ACTUAL_TRANSIT_TIME
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_45
+    name: WEEKLY_AGREED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_46
+    name: WEEKLY_CONFIRMED_LATE_ORD_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_47
+    name: WEEKLY_CONTRACTED_OLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_48
+    name: WEEKLY_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_49
+    name: WEEKLY_LATE_DELIVERY_SHPMT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_50
+    name: WEEKLY_LATE_SHIPMENT_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_51
+    name: WEEKLY_MISSING_ASN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_52
+    name: WEEKLY_MOQ_ADHERENCE_CNT
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_53
+    name: WEEKLY_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_54
+    name: WEEKLY_ORDER_INWINDOW_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_55
+    name: WEEKLY_ORDER_INWINDOW_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_56
+    name: WEEKLY_ORDER_ONTIME_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_57
+    name: WEEKLY_ORDER_ONTIME_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_58
+    name: WEEKLY_ORDER_ONTIME_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_59
+    name: WEEKLY_ORDER_ONTIME_SHIP_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_60
+    name: WEEKLY_ORDER_PROMISED_LATE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_61
+    name: WEEKLY_ORDER_PROMISED_LATE_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_62
+    name: WEEKLY_ORIGINAL_PROMISE_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_63
+    name: WEEKLY_ORIGINAL_REQ_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_64
+    name: WEEKLY_OVERSHIP_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_65
+    name: WEEKLY_OVERSHIP_SHIPPED_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_66
+    name: WEEKLY_PLANNER_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_67
+    name: WEEKLY_PLANNER_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_68
+    name: WEEKLY_PLANNER_TOTAL_MISS_TIME
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_69
+    name: WEEKLY_PO_BUYER_REVISE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_70
+    name: WEEKLY_PO_VENDOR_REVISE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_71
+    name: WEEKLY_PROMISE_CUT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_72
+    name: WEEKLY_PROMISE_CUT_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_73
+    name: WEEKLY_PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_74
+    name: WEEKLY_RECEIVED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_75
+    name: WEEKLY_REQUESTED_OLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_76
+    name: WEEKLY_REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_77
+    name: WEEKLY_SHIPPED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_78
+    name: WEEKLY_SHIP_TO_INV_TIME
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_79
+    name: WEEKLY_TOTAL_CUT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_80
+    name: WEEKLY_TOTAL_CUT_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_81
+    name: WEEKLY_VENDOR_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_82
+    name: WEEKLY_VENDOR_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_83
+    name: WEEKLY_VENDOR_TOTAL_MISS_TIME
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_84
+    name: YTWF_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_85
+    name: YTWF_ORDER_AGREED_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_86
+    name: YTWF_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_87
+    name: YTWF_ORDER_INWINDOW_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_88
+    name: YTWF_ORDER_INWINDOW_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_89
+    name: YTWF_ORDER_ONTIME_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_90
+    name: YTWF_ORDER_ONTIME_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_91
+    name: YTWF_ORDER_ONTIME_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_92
+    name: YTWF_ORDER_ONTIME_SHIP_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_93
+    name: YTWF_ORDER_SHIP_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_94
+    name: YTWF_RECEIVED_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_95
+    name: YTWF_REQUEST_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_96
+    name: YTW_CONFIRMED_LATE_ORD_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_97
+    name: YTW_LATE_DELIVERY_SHPMT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_98
+    name: YTW_LATE_SHIPMENT_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_99
+    name: YTW_MISSING_ASN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_100
+    name: WEEKLY_ASN_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_101
+    name: WEEKLY_ASN_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_102
+    name: WEEKLY_ONTIME_SHIP_CNT_ON_ORSD
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_103
+    name: WEEKLY_ONTIME_SHIP_QTY_ON_ORSD
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_104
+    name: WEEKLY_ORDER_IN_TLRC_CONF_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_105
+    name: SHIPPED_ACCURACY_CNT_ON_ORQ
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_106
+    name: CURRENCY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_fact_weekly_107
+    name: SHIPPED_ACCURACY_QTY_ON_ORQ
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_108
+    name: WEEKLY_ORDER_INWINDOW_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_109
+    name: WEEKLY_DAMAGE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_110
+    name: INCOTERM_BASED
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_order_fact_weekly_111
+    name: WEEKLY_PERFECT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_112
+    name: WEEKLY_DMG_FREE_DELIVERY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_113
+    name: OMS_WEEKLY_DS_INTOL_RCV_QTY
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_114
+    name: OMS_WEEKLY_DS_INWIN_INTOL_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_115
+    name: WEEKLY_ONTIME_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_116
+    name: WEEKLY_VENDOR_REVISION_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_117
+    name: ORDER_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_fact_weekly_118
+    name: WEEKLY_EARLY_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_119
+    name: OMS_WKL_VENDOR_DEVIATION_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_120
+    name: WEEKLY_IN_FULL_RCV_CNT_ON_ORQ
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_121
+    name: WEEKLY_RETURN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_122
+    name: WEEKLY_ONTIME_PICKUP_APPT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_123
+    name: WEEKLY_REJECT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_124
+    name: WEEKLY_LATE_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_125
+    name: OMS_WEEKLY_DS_INWIN_INTOL_QTY
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_126
+    name: WEEKLY_BUYER_REVISION_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_127
+    name: WEEKLY_ONTIME_DLVRY_APPT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_128
+    name: WEEKLY_INVOICE_DISCREPANCY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_129
+    name: WEEKLY_ON_TIME_SHIP_READY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_130
+    name: OMS_WEEKLY_DS_INTOL_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_131
+    name: WEEKLY_QUALITY_CLAIMS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_132
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_fact_weekly_133
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_fact_weekly_134
+    name: WEEKLY_EARLY_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_135
+    name: WEEKLY_EARLY_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_136
+    name: MTWF_EARLY_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_137
+    name: MTWF_EARLY_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_138
+    name: YTWF_EARLY_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_139
+    name: YTWF_EARLY_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_140
+    name: WEEKLY_EARLY_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_141
+    name: WEEKLY_EARLY_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_142
+    name: MTWF_EARLY_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_143
+    name: MTWF_EARLY_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_144
+    name: YTWF_EARLY_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_145
+    name: YTWF_EARLY_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_146
+    name: WEEKLY_LATE_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_147
+    name: WEEKLY_LATE_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_148
+    name: MTWF_LATE_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_149
+    name: MTWF_LATE_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_150
+    name: YTWF_LATE_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_151
+    name: YTWF_LATE_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_152
+    name: WEEKLY_LATE_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_153
+    name: WEEKLY_LATE_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_154
+    name: MTWF_LATE_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_155
+    name: MTWF_LATE_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_156
+    name: YTWF_LATE_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_157
+    name: YTWF_LATE_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_fact_weekly_158
+    name: WEEKLY_ACTUAL_OLTC
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_159
+    name: WEEKLY_ACTUAL_OCLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_160
+    name: WEEKLY_PROMISED_OLTC
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_161
+    name: WEEKLY_CONTRACTED_TOLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_162
+    name: WEEKLY_ALT_GRT_PLT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_163
+    name: WEEKLY_ALT_LESS_PLT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_164
+    name: WEEKLY_ALT_EQUAL_PLT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_165
+    name: WEEKLY_ALT_LESS_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_166
+    name: WEEKLY_ALT_GRT_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_167
+    name: WEEKLY_ALT_EQL_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_168
+    name: WEEKLY_PLT_EQL_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_169
+    name: WEEKLY_PLT_GRT_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_170
+    name: WEEKLY_PLT_LESS_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_171
+    name: WEEKLY_CONTRACTED_OCLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_172
+    name: WEEKLY_ORDER_ALT_GRT_OCLT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_173
+    name: WEEKLY_ORDER_ALT_LESS_OCLT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_174
+    name: WEEKLY_ORDER_ALT_EQL_OCLT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_175
+    name: WEEKLY_PROMISE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_fact_weekly_176
+    name: WEEKLY_PROMISE_FULL_CNT
+    type: DECIMAL(9,0)

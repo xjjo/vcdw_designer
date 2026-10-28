@@ -1,0 +1,63 @@
+id: support_wms_kit_content_nc
+kind: support
+name: wms_kit_content_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_wms_kit_content_nc_0
+    name: ACTIVE
+    type: TINYINT(1)
+  - id: sc_wms_kit_content_nc_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_nc_3
+    name: SYS_KIT_CONTENT_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_nc_4
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_nc_5
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_nc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_wms_kit_content_nc_7
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_wms_kit_content_nc_8
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_wms_kit_content_nc_9
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_nc_10
+    name: SYS_BILL_OF_MATERIALS_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_nc_11
+    name: KIT_CONTENT_NO
+    type: VARCHAR(64)
+  - id: sc_wms_kit_content_nc_12
+    name: SYS_WORK_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_nc_14
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_wms_kit_content_nc_15
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_wms_kit_content_nc_16
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_wms_kit_content_nc_17
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_wms_kit_content_nc_18
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

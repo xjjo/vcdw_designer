@@ -1,0 +1,84 @@
+id: support_invoice_line_detail_nc
+kind: support
+name: invoice_line_detail_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_invoice_line_detail_nc_0
+    name: SYS_INVOICE_LINE_DETAIL_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_detail_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_invoice_line_detail_nc_2
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_invoice_line_detail_nc_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_invoice_line_detail_nc_4
+    name: INVOICE_LINE_DETAIL_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_detail_nc_5
+    name: REF_INVOICE_LINE_DETAIL_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_detail_nc_6
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_detail_nc_7
+    name: INVOICE_DETAIL_TYPE
+    type: SMALLINT(6)
+  - id: sc_invoice_line_detail_nc_8
+    name: INVOICE_DETAIL_SACCODE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_detail_nc_9
+    name: ORIGINAL_INVOICE_DETAIL_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_detail_nc_10
+    name: INVOICE_DETAIL_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_detail_nc_11
+    name: EXPECTED_INVOICE_DETAIL_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_detail_nc_12
+    name: TAX_ALLOWED
+    type: TINYINT(4)
+  - id: sc_invoice_line_detail_nc_13
+    name: DISCOUNT_ALLOWED
+    type: TINYINT(4)
+  - id: sc_invoice_line_detail_nc_14
+    name: SYS_INVOICE_LINE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_detail_nc_15
+    name: INVOICE_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_detail_nc_16
+    name: SYS_INVOICE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_detail_nc_17
+    name: INVOICE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_detail_nc_18
+    name: SYS_INVOICER_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_detail_nc_19
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_detail_nc_20
+    name: OMS_DISCOUNT_AMOUNT_DETAIL
+    type: DOUBLE
+  - id: sc_invoice_line_detail_nc_21
+    name: OMS_LINE_DETAIL_CURRENCY
+    type: SMALLINT(6)
+  - id: sc_invoice_line_detail_nc_22
+    name: OMS_REVISION_NO_DETAIL
+    type: BIGINT(20)
+  - id: sc_invoice_line_detail_nc_23
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_invoice_line_detail_nc_24
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_detail_nc_25
+    name: RECONCILED
+    type: TINYINT(1)

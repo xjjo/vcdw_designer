@@ -1,0 +1,186 @@
+id: support_dw_scc_work_order
+kind: support
+name: dw_scc_work_order
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_work_order_0
+    name: ACTUAL_END_TIME
+    type: DATETIME(6)
+  - id: sc_dw_scc_work_order_1
+    name: ACTUAL_START_TIME
+    type: DATETIME(6)
+  - id: sc_dw_scc_work_order_2
+    name: AUX_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_work_order_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_work_order_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_work_order_5
+    name: MFG_SYS_ROUTING_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_6
+    name: ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_work_order_7
+    name: PLANNED_END_TIME
+    type: DATETIME(6)
+  - id: sc_dw_scc_work_order_8
+    name: PLANNED_START_TIME
+    type: DATETIME(6)
+  - id: sc_dw_scc_work_order_9
+    name: PRIORITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_work_order_10
+    name: SOURCE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_work_order_11
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_work_order_12
+    name: SUB_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_work_order_13
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_14
+    name: SYS_EXECUTION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_15
+    name: SYS_MANAGEMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_16
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_17
+    name: SYS_WORK_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_18
+    name: SYS_WORK_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_19
+    name: SYS_WORK_ORDER_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_20
+    name: SYS_WORK_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_21
+    name: WORK_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_work_order_22
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_23
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_24
+    name: MFG_TOTAL_ACTUAL_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_work_order_25
+    name: IS_EXECUTION_ORDER
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_work_order_26
+    name: MFG_TOTAL_QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_work_order_27
+    name: SYS_CUST_OF_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_28
+    name: SYS_PROD_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_29
+    name: SYS_BILL_OF_MATERIALS_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_30
+    name: SYS_REQUESTING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_31
+    name: MFG_TOTAL_PLANNED_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_work_order_32
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_work_order_33
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_work_order_34
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_scc_work_order_35
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_scc_work_order_36
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_scc_work_order_37
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_scc_work_order_38
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_scc_work_order_39
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_40
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_41
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_42
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_43
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_44
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_45
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_46
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_47
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_48
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_scc_work_order_49
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_50
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_51
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_52
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_53
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_54
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_55
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_56
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_57
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_58
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_scc_work_order_59
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

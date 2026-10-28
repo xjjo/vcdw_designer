@@ -1,0 +1,75 @@
+id: support_dw_product_group_level
+kind: support
+name: dw_product_group_level
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_product_group_level_0
+    name: SYS_PGRP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_product_group_level_1
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_product_group_level_2
+    name: LEVEL_NO
+    type: BIGINT(20)
+  - id: sc_dw_product_group_level_3
+    name: LEVEL_DESC
+    type: VARCHAR(512)
+  - id: sc_dw_product_group_level_4
+    name: TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_product_group_level_5
+    name: PGRP_TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_product_group_level_6
+    name: LEVEL1_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_product_group_level_7
+    name: LEVEL2_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_product_group_level_8
+    name: LEVEL3_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_product_group_level_9
+    name: LEVEL4_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_product_group_level_10
+    name: LEVEL5_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_product_group_level_11
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_product_group_level_12
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_product_group_level_13
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_product_group_level_14
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_product_group_level_15
+    name: LEVEL_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_product_group_level_16
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_product_group_level_17
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_product_group_level_18
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_product_group_level_19
+    name: SYS_PGRP_ID
+    type: BIGINT(20)
+  - id: sc_dw_product_group_level_20
+    name: SYS_PARENT_PGRP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_product_group_level_21
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_product_group_level_22
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

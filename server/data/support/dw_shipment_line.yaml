@@ -1,0 +1,528 @@
+id: support_dw_shipment_line
+kind: support
+name: dw_shipment_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_shipment_line_0
+    name: sys_shiph_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_1
+    name: sys_shipli_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_2
+    name: level_creation_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_3
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_4
+    name: shipment_line_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_5
+    name: item_desc
+    type: VARCHAR(1024)
+  - id: sc_dw_shipment_line_6
+    name: no_unique_items
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_7
+    name: order_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_8
+    name: order_oli_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_9
+    name: order_os_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_10
+    name: target_ship_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_11
+    name: target_delivery_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_12
+    name: shipped_quantity
+    type: DOUBLE
+  - id: sc_dw_shipment_line_13
+    name: received_quantity
+    type: DOUBLE
+  - id: sc_dw_shipment_line_14
+    name: ordered_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_15
+    name: quantity_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_line_16
+    name: shipped_qty2
+    type: DOUBLE
+  - id: sc_dw_shipment_line_17
+    name: received_qty2
+    type: DOUBLE
+  - id: sc_dw_shipment_line_18
+    name: ordered_qty2
+    type: DOUBLE
+  - id: sc_dw_shipment_line_19
+    name: quantity_uom2
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_line_20
+    name: volume
+    type: DOUBLE
+  - id: sc_dw_shipment_line_21
+    name: volume_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_line_22
+    name: item_name
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_23
+    name: shipment_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_24
+    name: weight
+    type: DOUBLE
+  - id: sc_dw_shipment_line_25
+    name: weight_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_line_26
+    name: freight_class
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_line_27
+    name: transaction_cost
+    type: DOUBLE
+  - id: sc_dw_shipment_line_28
+    name: state
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_29
+    name: sys_oh_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_30
+    name: sys_oli_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_31
+    name: sys_os_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_32
+    name: item_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_33
+    name: order_creation_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_34
+    name: creation_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_35
+    name: sys_creation_template_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_36
+    name: cost_codes
+    type: VARCHAR(512)
+  - id: sc_dw_shipment_line_37
+    name: country_of_mfg
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_38
+    name: external_item_name
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_39
+    name: freight_class1
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_40
+    name: govt_contract_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_41
+    name: height
+    type: DOUBLE
+  - id: sc_dw_shipment_line_42
+    name: is_duty_free
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_43
+    name: is_line_hazardous
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_44
+    name: is_repair_item
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_45
+    name: is_warranty_repair
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_46
+    name: length
+    type: DOUBLE
+  - id: sc_dw_shipment_line_47
+    name: linear_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_line_48
+    name: line_hazmat_contact_name
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_49
+    name: line_hazmat_contact_phone
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_50
+    name: line_hazmat_packaging_group
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_51
+    name: line_package_type
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_52
+    name: ln_ext_packing_list_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_53
+    name: nmfc_code
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_54
+    name: no_of_packages_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_line_55
+    name: no_of_packages_uom
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_56
+    name: order_rs_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_57
+    name: packing_slip_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_58
+    name: pallets
+    type: DOUBLE
+  - id: sc_dw_shipment_line_59
+    name: pricing_undefinitized
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_60
+    name: primary_htscode
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_61
+    name: repair_value_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_line_62
+    name: repair_value_uom
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_63
+    name: secondary_htscode
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_64
+    name: source_inspection_complete
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_65
+    name: stackable
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_66
+    name: sys_line_hazard_class_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_67
+    name: sys_line_hazmat_number_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_68
+    name: sys_line_prop_ship_name_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_69
+    name: sys_ln_packing_list_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_70
+    name: sys_order_dschedule_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_71
+    name: sys_order_line_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_72
+    name: sys_program_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_73
+    name: tms_item_dimensions_height
+    type: DOUBLE
+  - id: sc_dw_shipment_line_74
+    name: tms_item_dimensions_length
+    type: DOUBLE
+  - id: sc_dw_shipment_line_75
+    name: tms_item_dimensions_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_line_76
+    name: tms_item_dimensions_width
+    type: DOUBLE
+  - id: sc_dw_shipment_line_77
+    name: tms_scale_weight_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_line_78
+    name: tms_scale_weight_uom
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_79
+    name: total_price_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_line_80
+    name: total_price_uom
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_81
+    name: undefinitized_contract
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_82
+    name: unit_price_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_line_83
+    name: unit_price_uom
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_84
+    name: width
+    type: DOUBLE
+  - id: sc_dw_shipment_line_85
+    name: actual_ship_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_86
+    name: oms_back_order_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_87
+    name: oms_buying_party
+    type: VARCHAR(128)
+  - id: sc_dw_shipment_line_88
+    name: oms_cancelled_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_89
+    name: oms_carrier_name_ln
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_90
+    name: oms_consignment_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_91
+    name: oms_contact_email
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_92
+    name: oms_contact_name
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_93
+    name: oms_contact_phone
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_94
+    name: oms_contract_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_95
+    name: oms_cut_code
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_96
+    name: freight_cost
+    type: DOUBLE
+  - id: sc_dw_shipment_line_97
+    name: oms_internal_ord_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_98
+    name: invoiced_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_99
+    name: oms_item_commodity_name
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_100
+    name: oms_item_manufacturer
+    type: VARCHAR(128)
+  - id: sc_dw_shipment_line_101
+    name: orig_item_name
+    type: VARCHAR(128)
+  - id: sc_dw_shipment_line_102
+    name: oms_item_national_stock_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_103
+    name: oms_line_item_status
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_104
+    name: oms_ln_ship_from_addr_comp1
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_105
+    name: oms_ln_ship_from_addr_comp2
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_106
+    name: oms_ln_ship_from_addr_comps
+    type: VARCHAR(512)
+  - id: sc_dw_shipment_line_107
+    name: oms_ln_ship_from_addr_country
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_108
+    name: oms_ln_ship_to_addr_comp1
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_109
+    name: oms_ln_ship_to_addr_comp2
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_110
+    name: oms_ln_ship_to_addr_comps
+    type: VARCHAR(512)
+  - id: sc_dw_shipment_line_111
+    name: oms_ln_ship_to_addr_country
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_112
+    name: oms_manufacturer_part_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_113
+    name: net_weight
+    type: DOUBLE
+  - id: sc_dw_shipment_line_114
+    name: oms_order_line_status
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_115
+    name: oms_other_data_ln
+    type: LONGTEXT
+  - id: sc_dw_shipment_line_116
+    name: planned_ship_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_117
+    name: planned_ship_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_118
+    name: oms_pocreation_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_119
+    name: oms_poline_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_120
+    name: oms_po_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_121
+    name: oms_promised_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_122
+    name: oms_purchase_requisition_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_123
+    name: oms_returned_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_124
+    name: oms_revision_no_ln
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_line_125
+    name: oms_selling_party
+    type: VARCHAR(128)
+  - id: sc_dw_shipment_line_126
+    name: oms_ship_from_site_name
+    type: VARCHAR(258)
+  - id: sc_dw_shipment_line_127
+    name: ship_to_comment
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_128
+    name: oms_ship_to_site_name
+    type: VARCHAR(258)
+  - id: sc_dw_shipment_line_129
+    name: oms_sys_purchase_order_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_130
+    name: oms_sys_purchase_order_ln_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_131
+    name: tracking_number_ln
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_132
+    name: trans_control_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_133
+    name: universal_item_identifier
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_134
+    name: oms_vendor_claims_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_135
+    name: oms_vendor_delivery_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_line_136
+    name: oms_vendor_part_number
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_137
+    name: oms_vendor_price
+    type: DOUBLE
+  - id: sc_dw_shipment_line_138
+    name: sys_ship_from_partner_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_139
+    name: sys_ship_to_partner_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_140
+    name: tms_cost
+    type: DOUBLE
+  - id: sc_dw_shipment_line_141
+    name: tms_cost_uom
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_142
+    name: tms_line_allocation_percentage
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_line_143
+    name: tms_line_declared_value_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_line_144
+    name: tms_line_declared_value_uom
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_145
+    name: tms_line_disposition
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_146
+    name: tms_non_catalogued_item_name
+    type: VARCHAR(128)
+  - id: sc_dw_shipment_line_147
+    name: tms_order_ref_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_148
+    name: tms_over_dimension
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_149
+    name: tms_over_weight
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_line_150
+    name: tms_packaging_type
+    type: VARCHAR(256)
+  - id: sc_dw_shipment_line_151
+    name: tms_spaces
+    type: DOUBLE
+  - id: sc_dw_shipment_line_152
+    name: tms_tracking_number
+    type: VARCHAR(512)
+  - id: sc_dw_shipment_line_153
+    name: tms_vendor_code
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_line_154
+    name: oms_sys_blanket_line_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_155
+    name: oms_sys_blanket_order_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_156
+    name: tms_sys_product_group_lvl_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_157
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_158
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_shipment_line_159
+    name: LINE_PADF_NUM_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_160
+    name: LINE_PADF_NUM_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_161
+    name: LINE_PADF_NUM_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_shipment_line_162
+    name: LINE_PADF_NUM_FIELD4
+    type: DOUBLE
+  - id: sc_dw_shipment_line_163
+    name: LINE_PADF_NUM_FIELD5
+    type: DOUBLE
+  - id: sc_dw_shipment_line_164
+    name: LINE_PADF_NUM_FIELD6
+    type: DOUBLE
+  - id: sc_dw_shipment_line_165
+    name: LINE_PADF_STR_FIELD1
+    type: TEXT
+  - id: sc_dw_shipment_line_166
+    name: LINE_PADF_STR_FIELD2
+    type: TEXT
+  - id: sc_dw_shipment_line_167
+    name: LINE_PADF_STR_FIELD3
+    type: TEXT
+  - id: sc_dw_shipment_line_168
+    name: LINE_PADF_STR_FIELD4
+    type: TEXT
+  - id: sc_dw_shipment_line_169
+    name: LINE_PADF_STR_FIELD5
+    type: TEXT
+  - id: sc_dw_shipment_line_170
+    name: LINE_PADF_STR_FIELD6
+    type: TEXT
+  - id: sc_dw_shipment_line_171
+    name: LINE_PADF_STR_FIELD7
+    type: TEXT
+  - id: sc_dw_shipment_line_172
+    name: LINE_PADF_STR_FIELD8
+    type: TEXT
+  - id: sc_dw_shipment_line_173
+    name: LINE_PADF_STR_FIELD9
+    type: TEXT

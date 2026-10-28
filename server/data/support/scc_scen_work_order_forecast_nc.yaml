@@ -1,0 +1,84 @@
+id: support_scc_scen_work_order_forecast_nc
+kind: support
+name: scc_scen_work_order_forecast_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_scen_work_order_forecast_nc_0
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_scen_work_order_forecast_nc_1
+    name: FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_scc_scen_work_order_forecast_nc_2
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_scc_scen_work_order_forecast_nc_3
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)
+  - id: sc_scc_scen_work_order_forecast_nc_4
+    name: FORECAST_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_work_order_forecast_nc_5
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_scen_work_order_forecast_nc_6
+    name: FORECAST_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_scen_work_order_forecast_nc_7
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_scen_work_order_forecast_nc_8
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_scc_scen_work_order_forecast_nc_9
+    name: SYS_WORK_ORDER_FORECAST_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_10
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_11
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_12
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_13
+    name: SYS_LIVE_CHAIN_MODEL_REF_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_14
+    name: SYS_SCENARIO_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_15
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_16
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_17
+    name: SYS_PARENT_PROD_ORDER_FCST_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_work_order_forecast_nc_18
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_work_order_forecast_nc_19
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_work_order_forecast_nc_20
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_scen_work_order_forecast_nc_21
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_scen_work_order_forecast_nc_22
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_scen_work_order_forecast_nc_23
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_scen_work_order_forecast_nc_24
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_scen_work_order_forecast_nc_25
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

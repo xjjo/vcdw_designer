@@ -1,0 +1,66 @@
+id: support_dw_scc_packing_resource
+kind: support
+name: dw_scc_packing_resource
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_packing_resource_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_packing_resource_1
+    name: CONTENT_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_resource_2
+    name: DESCRIPTION
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_resource_3
+    name: EMPTY_WEIGHT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_resource_4
+    name: FULL_WEIGHT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_resource_5
+    name: HEIGHT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_resource_6
+    name: IS_TOP_LEVEL
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_packing_resource_7
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_resource_8
+    name: LENGTH
+    type: DOUBLE
+  - id: sc_dw_scc_packing_resource_9
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_resource_10
+    name: LINEAR_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_resource_11
+    name: LOADING_METER
+    type: DOUBLE
+  - id: sc_dw_scc_packing_resource_12
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_resource_13
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_resource_14
+    name: SYS_PACKING_RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_resource_15
+    name: WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_resource_16
+    name: WIDTH
+    type: DOUBLE
+  - id: sc_dw_scc_packing_resource_17
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_resource_18
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_resource_19
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

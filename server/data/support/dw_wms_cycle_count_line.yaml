@@ -1,0 +1,141 @@
+id: support_dw_wms_cycle_count_line
+kind: support
+name: dw_wms_cycle_count_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_wms_cycle_count_line_0
+    name: SYS_CYCLE_COUNT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_1
+    name: ACTUAL_QTY_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_wms_cycle_count_line_2
+    name: ATTEMPT
+    type: DECIMAL(9,0)
+  - id: sc_dw_wms_cycle_count_line_3
+    name: AUTO_GENERATED
+    type: TINYINT(1)
+  - id: sc_dw_wms_cycle_count_line_4
+    name: BULK_INVENTORY_DISCREPANCY
+    type: TINYINT(1)
+  - id: sc_dw_wms_cycle_count_line_5
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_line_6
+    name: CYCLE_COUNT_NO
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_line_7
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_line_8
+    name: EXTERNAL_DOC_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_line_9
+    name: EXTRA_ATTRIBUTES
+    type: VARCHAR(4000)
+  - id: sc_dw_wms_cycle_count_line_10
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_line_11
+    name: EXT_SERIAL_NO
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_line_12
+    name: HASH_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_line_13
+    name: INVENTORY_NO
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_line_14
+    name: INV_QTY_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_wms_cycle_count_line_15
+    name: INV_UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_16
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_line_17
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_line_18
+    name: LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_line_19
+    name: MOVE_TO_LOCATION
+    type: TINYINT(1)
+  - id: sc_dw_wms_cycle_count_line_20
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_line_21
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_line_22
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_line_23
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_line_24
+    name: RELEASED
+    type: TINYINT(1)
+  - id: sc_dw_wms_cycle_count_line_25
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_line_26
+    name: SUBLOCATION
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_line_27
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_28
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_29
+    name: SYS_CYCLE_COUNT_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_30
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_31
+    name: SYS_KIT_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_32
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_33
+    name: SYS_LOT_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_34
+    name: SYS_LPN_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_35
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_36
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_37
+    name: SYS_SERIAL_NO_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_38
+    name: SYS_PERSON_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_39
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_40
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_41
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_line_42
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_line_43
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_line_44
+    name: CC_STATE_VALUE
+    type: BIGINT(20)

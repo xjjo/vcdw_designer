@@ -1,0 +1,129 @@
+id: enum_mu4g35tt_ks
+kind: enumeration
+name: production_type
+displayName: Production Type Enumeration
+description: "ETL sync transform: production_type_sync.ktr"
+domain: General
+isReferenceTable: true
+sourceNcTable: enumeration_nc
+enumTypeFilter: SCC.ProductionType
+auditProfileId: audit_default
+columns:
+  - id: col_mu4g35tt_kt
+    nullable: false
+    name: PRODUCTION_TYPE_KEY
+    type: BIGINT
+    isPk: true
+    isSk: true
+    autoIncrement: true
+    mappingKind: generated
+  - id: col_mu4g35tt_ku
+    nullable: false
+    name: OLTP_ID
+    type: BIGINT
+    isNaturalKey: true
+    sourceColumn: sys_enum_id
+    mappingKind: direct
+    sourceTable: en
+  - id: col_mu4g35tt_kv
+    nullable: false
+    name: PRODUCTION_TYPE_NAME
+    type: VARCHAR(256)
+    sourceColumn: enum_entry_name
+    mappingKind: direct
+    sourceTable: en
+  - id: col_mu4g35tt_kw
+    nullable: true
+    name: ENUM_ENTRY_VALUE
+    type: DECIMAL(5,0)
+    sourceColumn: enum_entry_value
+    mappingKind: direct
+    sourceTable: en
+  - id: col_mu4g35tt_kx
+    nullable: true
+    name: ENT_NAME
+    type: VARCHAR(64)
+    mappingKind: lookup
+    sourceTable: e
+    lookupId: lkp_production_type_ent
+  - id: col_mu4g35tt_ky
+    nullable: false
+    name: DELETED
+    type: TINYINT(1)
+    default: "0"
+    auditRole: deleted
+    mappingKind: audit
+  - id: col_mu4g35tt_kz
+    nullable: false
+    name: DW_CREATED
+    type: DATETIME(6)
+    default: CURRENT_TIMESTAMP
+    auditRole: created
+    mappingKind: audit
+  - id: col_mu4g35tt_l0
+    nullable: false
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+    default: CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    auditRole: modified
+    mappingKind: audit
+etlConfig:
+  isEnabled: true
+  priority: 5
+ui:
+  x: 40
+  y: 40
+enumTable: production_type
+fieldKey: PRODUCTION_TYPE_KEY
+fieldName: PRODUCTION_TYPE_NAME
+entScopeSource: sys_ent_id
+netChange:
+  - id: nc_production_type
+    isPrimary: true
+    oltpTable: enumeration
+    oltpTableSysId: SYS_ENUM_ID
+    oltpTableLmd: es_lmd
+    ncTable: enumeration_nc
+    dwOltpCopyTable: dw_enumeration
+    condition: enum_type='SCC.ProductionType'
+    alias: en
+    columns:
+      - id: sc_production_type_0
+        name: sys_enum_id
+        type: BIGINT
+      - id: sc_production_type_1
+        name: enum_type
+        type: VARCHAR(64)
+      - id: sc_production_type_2
+        name: enum_entry_name
+        type: VARCHAR(256)
+      - id: sc_production_type_3
+        name: enum_entry_value
+        type: DECIMAL(5,0)
+      - id: sc_production_type_4
+        name: last_modified_date
+        type: DATETIME(6)
+      - id: sc_production_type_5
+        name: hidden
+        type: DECIMAL(1,0)
+      - id: sc_production_type_6
+        name: sys_ent_id
+        type: BIGINT
+      - id: sc_production_type_7
+        name: es_lmd
+        type: DATETIME(6)
+lookups:
+  - id: lkp_production_type_ent
+    tableName: enterprise
+    cache: true
+    strategy: left_join
+    streamKeyFields:
+      - sys_ent_id
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: ENT_NAME
+        newName: ENT_NAME
+    name: Lookup enterprise scope

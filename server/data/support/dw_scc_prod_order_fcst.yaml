@@ -1,0 +1,177 @@
+id: support_dw_scc_prod_order_fcst
+kind: support
+name: dw_scc_prod_order_fcst
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_prod_order_fcst_0
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_prod_order_fcst_1
+    name: FORECAST_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_order_fcst_2
+    name: FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_prod_order_fcst_3
+    name: FREEZE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_order_fcst_4
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_order_fcst_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_order_fcst_6
+    name: MFG_CREATED_BY_CDT
+    type: TINYINT(1)
+  - id: sc_dw_scc_prod_order_fcst_7
+    name: MFG_CREATED_BY_MRP
+    type: TINYINT(1)
+  - id: sc_dw_scc_prod_order_fcst_8
+    name: MFG_FORECAST_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_order_fcst_9
+    name: MFG_IS_ACTIVE_CDTFCST
+    type: TINYINT(1)
+  - id: sc_dw_scc_prod_order_fcst_10
+    name: MFG_IS_ACTIVE_DTFCST
+    type: TINYINT(1)
+  - id: sc_dw_scc_prod_order_fcst_11
+    name: MFG_OPTIMAL_PLANNED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_12
+    name: MFG_SYS_SITE_RSRC_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_13
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_dw_scc_prod_order_fcst_14
+    name: PLANNED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_15
+    name: PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_16
+    name: QUANTITY_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_scc_prod_order_fcst_17
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_18
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_prod_order_fcst_19
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_20
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_21
+    name: SYS_CUSTOMER_OF_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_22
+    name: SYS_EXECUTION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_23
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_24
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_25
+    name: SYS_PROD_ORDER_FCST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_26
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_27
+    name: SYS_REQUESTING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_28
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_29
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_order_fcst_30
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_order_fcst_31
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_32
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_33
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_34
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_35
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_scc_prod_order_fcst_36
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_37
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_38
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_39
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_40
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_41
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_42
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_43
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_44
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_45
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_order_fcst_46
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_47
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_48
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_49
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_50
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_51
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_52
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_53
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_54
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_55
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_scc_prod_order_fcst_56
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

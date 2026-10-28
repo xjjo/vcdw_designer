@@ -1,0 +1,162 @@
+id: support_scc_putaway_line_nc
+kind: support
+name: scc_putaway_line_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_putaway_line_nc_0
+    name: SYS_PUTAWAY_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_putaway_line_nc_3
+    name: SYS_PUTAWAY_LIST_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_4
+    name: PUTAWAY_LIST_NO
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_5
+    name: PUTAWAY_LINE_NO
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_6
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_putaway_line_nc_7
+    name: FROM_SUBLOCATION
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_8
+    name: TO_SUBLOCATION
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_9
+    name: QTY_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_scc_putaway_line_nc_10
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_putaway_line_nc_11
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_12
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_putaway_line_nc_13
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_scc_putaway_line_nc_14
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_scc_putaway_line_nc_15
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_scc_putaway_line_nc_16
+    name: OFF_NETWORK_ORDER_NO
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_17
+    name: OFF_NETWORK_SHIPMENT_NO
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_18
+    name: OFF_NETWORK_SHIPMENT_LINE_NO
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_19
+    name: EXT_SERIAL_NO
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_20
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_21
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_putaway_line_nc_22
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_putaway_line_nc_23
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_putaway_line_nc_24
+    name: EXTERNAL_DOC_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_25
+    name: EXTRA_ATTRIBUTES
+    type: VARCHAR(4000)
+  - id: sc_scc_putaway_line_nc_26
+    name: EXTRA_ATTRIBUTES_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_27
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_28
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_29
+    name: SYS_TO_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_30
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_31
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_32
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_33
+    name: SYS_SHIPMENT_LINE_CONTENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_34
+    name: SYS_SERIAL_NO_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_35
+    name: SYS_ORDER_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_36
+    name: SYS_RECEIPT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_37
+    name: SYS_EQUIPMENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_38
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_39
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_40
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_41
+    name: SYS_LPN_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_42
+    name: SYS_PERSON_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_43
+    name: SYS_LOT_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_44
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_45
+    name: WMS_SYS_KIT_ID
+    type: BIGINT(20)
+  - id: sc_scc_putaway_line_nc_46
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_putaway_line_nc_47
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_putaway_line_nc_48
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_putaway_line_nc_49
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_putaway_line_nc_50
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_putaway_line_nc_51
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

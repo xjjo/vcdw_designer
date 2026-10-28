@@ -1,0 +1,48 @@
+id: support_dw_mfg_capacity_consumption
+kind: support
+name: dw_mfg_capacity_consumption
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_mfg_capacity_consumption_0
+    name: AVAILABLE_CAPACITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_mfg_capacity_consumption_1
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_dw_mfg_capacity_consumption_2
+    name: BUCKET_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_capacity_consumption_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_capacity_consumption_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_capacity_consumption_5
+    name: CAPACITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_mfg_capacity_consumption_6
+    name: CONSUMED_CAPACITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_mfg_capacity_consumption_7
+    name: MATERIAL_CONSUMED_CAPACITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_mfg_capacity_consumption_8
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_mfg_capacity_consumption_9
+    name: SYS_CAPACITY_CONSUMPTION_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_capacity_consumption_10
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_capacity_consumption_11
+    name: SYS_SITE_RSRC_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_capacity_consumption_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_mfg_capacity_consumption_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

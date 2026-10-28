@@ -1,0 +1,60 @@
+id: support_scc_prod_ord_dsched_asso_nc
+kind: support
+name: scc_prod_ord_dsched_asso_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_prod_ord_dsched_asso_nc_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_scc_prod_ord_dsched_asso_nc_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_prod_ord_dsched_asso_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_prod_ord_dsched_asso_nc_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_prod_ord_dsched_asso_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_prod_ord_dsched_asso_nc_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_prod_ord_dsched_asso_nc_6
+    name: MFG_ACTUAL_ALLOCATED_QTY
+    type: DOUBLE
+  - id: sc_scc_prod_ord_dsched_asso_nc_7
+    name: MFG_PLANNED_ALLOCATED_QTY
+    type: DOUBLE
+  - id: sc_scc_prod_ord_dsched_asso_nc_8
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_prod_ord_dsched_asso_nc_9
+    name: SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_prod_ord_dsched_asso_nc_10
+    name: SYS_PROD_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_scc_prod_ord_dsched_asso_nc_11
+    name: SYS_PROD_ORD_DSCHED_ASSO_ID
+    type: BIGINT(20)
+  - id: sc_scc_prod_ord_dsched_asso_nc_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_prod_ord_dsched_asso_nc_13
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_prod_ord_dsched_asso_nc_14
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_prod_ord_dsched_asso_nc_15
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_prod_ord_dsched_asso_nc_16
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_prod_ord_dsched_asso_nc_17
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

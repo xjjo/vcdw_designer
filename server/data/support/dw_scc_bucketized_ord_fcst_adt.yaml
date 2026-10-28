@@ -1,0 +1,144 @@
+id: support_dw_scc_bucketized_ord_fcst_adt
+kind: support
+name: dw_scc_bucketized_ord_fcst_adt
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_0
+    name: APPROVED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_1
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_2
+    name: BUYER_COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_3
+    name: CONFIRMED_BY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_4
+    name: CONFIRMED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_5
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_6
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_7
+    name: FORECAST_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_8
+    name: FORECAST_DATE_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_9
+    name: FORECAST_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_10
+    name: FREEZE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_11
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_12
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_13
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_14
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_15
+    name: ORIGINAL_PLANNED_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_16
+    name: ORIGINAL_PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_17
+    name: ORIGINAL_REQUEST_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_18
+    name: PLANNED_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_19
+    name: PLANNED_VERSION
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_20
+    name: PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_21
+    name: PROMISE_VERSION
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_22
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_23
+    name: REQUEST_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_24
+    name: REQUEST_VERSION
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_25
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_26
+    name: SYS_APPROVED_BY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_27
+    name: SYS_BUCKETIZED_ORD_FCST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_28
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_29
+    name: SYS_CREATION_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_30
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_31
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_32
+    name: SYS_SELLING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_33
+    name: SYS_SHIP_FROM_PATNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_34
+    name: SYS_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_35
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_36
+    name: VENDOR_COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_37
+    name: LAST_MODIFIED_ROLE
+    type: TEXT
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_38
+    name: PTX_ID
+    type: VARCHAR(64)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_39
+    name: PTX_SEQ
+    type: DECIMAL(38,0)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_40
+    name: PTX_VERSION
+    type: DECIMAL(38,0)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_41
+    name: PTX_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_42
+    name: ACTION_NAME
+    type: VARCHAR(255)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_43
+    name: ACTION_DETAIL
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_44
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_bucketized_ord_fcst_adt_45
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

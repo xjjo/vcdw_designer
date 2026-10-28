@@ -1,0 +1,45 @@
+id: support_fin_il_category_nc
+kind: support
+name: fin_il_category_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_fin_il_category_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_fin_il_category_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_fin_il_category_nc_2
+    name: JSLISTENER
+    type: VARCHAR(64)
+  - id: sc_fin_il_category_nc_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_fin_il_category_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_fin_il_category_nc_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_fin_il_category_nc_6
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_fin_il_category_nc_7
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_fin_il_category_nc_8
+    name: SYS_IL_CATEGORY_ID
+    type: BIGINT(20)
+  - id: sc_fin_il_category_nc_9
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_fin_il_category_nc_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_fin_il_category_nc_11
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_fin_il_category_nc_12
+    name: RECONCILED
+    type: TINYINT(1)

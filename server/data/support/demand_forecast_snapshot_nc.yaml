@@ -1,0 +1,366 @@
+id: support_demand_forecast_snapshot_nc
+kind: support
+name: demand_forecast_snapshot_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_demand_forecast_snapshot_nc_0
+    name: SYS_DEMAND_FORECAST_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_1
+    name: FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_snapshot_nc_2
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_snapshot_nc_3
+    name: ATTACHED_NOTE_COUNT
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_4
+    name: ATTACHED_NOTES
+    type: LONGTEXT
+  - id: sc_demand_forecast_snapshot_nc_5
+    name: QUANTITY_UOM
+    type: DECIMAL(5,0)
+  - id: sc_demand_forecast_snapshot_nc_6
+    name: FORECAST_DATE_S1
+    type: DATETIME(6)
+  - id: sc_demand_forecast_snapshot_nc_7
+    name: FORECAST_QUANTITY_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_8
+    name: OVERRIDE1_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_9
+    name: OVERRIDE2_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_10
+    name: BASELINE_FORECAST_QUANTITY_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_11
+    name: PROMOTIONAL_ADJUST_QUANTITY_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_12
+    name: SEASONAL_ADJUST_QUANTITY_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_13
+    name: FORECAST_DATE_S2
+    type: DATETIME(6)
+  - id: sc_demand_forecast_snapshot_nc_14
+    name: FORECAST_QUANTITY_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_15
+    name: OVERRIDE1_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_16
+    name: OVERRIDE2_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_17
+    name: BASELINE_FORECAST_QUANTITY_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_18
+    name: PROMOTIONAL_ADJUST_QUANTITY_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_19
+    name: SEASONAL_ADJUST_QUANTITY_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_20
+    name: FORECAST_DATE_S3
+    type: DATETIME(6)
+  - id: sc_demand_forecast_snapshot_nc_21
+    name: FORECAST_QUANTITY_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_22
+    name: OVERRIDE1_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_23
+    name: OVERRIDE2_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_24
+    name: BASELINE_FORECAST_QUANTITY_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_25
+    name: PROMOTIONAL_ADJUST_QUANTITY_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_26
+    name: SEASONAL_ADJUST_QUANTITY_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_27
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_snapshot_nc_28
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_snapshot_nc_29
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_snapshot_nc_30
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_demand_forecast_snapshot_nc_31
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_snapshot_nc_32
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_demand_forecast_snapshot_nc_33
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_demand_forecast_snapshot_nc_34
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_demand_forecast_snapshot_nc_35
+    name: ACTUALS
+    type: DOUBLE
+  - id: sc_demand_forecast_snapshot_nc_36
+    name: LAST_YEAR_ACTUALS_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_37
+    name: LAST_YEAR_ACTUALS_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_38
+    name: LAST_YEAR_ACTUALS_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_39
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_40
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_41
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_42
+    name: HISTORICAL_SALES
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_43
+    name: DIGITAL_SIGNATURE
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_snapshot_nc_44
+    name: FORECAST_CURRENCY_VALUE_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_45
+    name: OVERRIDE1_CURRENCY_VALUE_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_46
+    name: OVERRIDE2_CURRENCY_VALUE_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_47
+    name: BASELINE_FORECAST_CUR_VAL_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_48
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_49
+    name: SEASONAL_ADJUST_CUR_VAL_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_50
+    name: ITEM_PRICE_S1_AMOUNT
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_51
+    name: ITEM_PRICE_S1_CURRENCY
+    type: DECIMAL(5,0)
+  - id: sc_demand_forecast_snapshot_nc_52
+    name: FORECAST_CURRENCY_VALUE_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_53
+    name: OVERRIDE1_CURRENCY_VALUE_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_54
+    name: OVERRIDE2_CURRENCY_VALUE_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_55
+    name: BASELINE_FORECAST_CUR_VAL_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_56
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_57
+    name: SEASONAL_ADJUST_CUR_VAL_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_58
+    name: ITEM_PRICE_S2_AMOUNT
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_59
+    name: ITEM_PRICE_S2_CURRENCY
+    type: DECIMAL(5,0)
+  - id: sc_demand_forecast_snapshot_nc_60
+    name: FORECAST_CURRENCY_VALUE_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_61
+    name: OVERRIDE1_CURRENCY_VALUE_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_62
+    name: OVERRIDE2_CURRENCY_VALUE_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_63
+    name: BASELINE_FORECAST_CUR_VAL_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_64
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_65
+    name: SEASONAL_ADJUST_CUR_VAL_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_66
+    name: ITEM_PRICE_S3_AMOUNT
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_67
+    name: ITEM_PRICE_S3_CURRENCY
+    type: DECIMAL(5,0)
+  - id: sc_demand_forecast_snapshot_nc_68
+    name: ITEM_INDICATOR
+    type: DECIMAL(1,0)
+  - id: sc_demand_forecast_snapshot_nc_69
+    name: SITE_PARTNER_INDICATOR
+    type: DECIMAL(1,0)
+  - id: sc_demand_forecast_snapshot_nc_70
+    name: OVERRIDE_SIGN
+    type: DECIMAL(1,0)
+  - id: sc_demand_forecast_snapshot_nc_71
+    name: FORECAST_DATE_WEEK_YEAR
+    type: VARCHAR(10)
+  - id: sc_demand_forecast_snapshot_nc_72
+    name: SITE_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_73
+    name: PARTNER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_74
+    name: PARTNER_ORG_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_snapshot_nc_75
+    name: PARTNER_ORG_ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_snapshot_nc_76
+    name: SYS_PROD_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_77
+    name: SYS_GEO_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_78
+    name: SYS_ACCOUNT_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_79
+    name: SYS_PRODUCT_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_80
+    name: ITEM_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_81
+    name: ITEM_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_snapshot_nc_82
+    name: ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_snapshot_nc_83
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_84
+    name: PARTNER_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_snapshot_nc_85
+    name: PARTNER_ORGANIZATION_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_snapshot_nc_86
+    name: PARTNER_NAME
+    type: VARCHAR(192)
+  - id: sc_demand_forecast_snapshot_nc_87
+    name: SYS_SITE_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_88
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_89
+    name: SITE_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_snapshot_nc_90
+    name: SITE_ORGANIZATION_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_snapshot_nc_91
+    name: SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_snapshot_nc_92
+    name: CUST_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_93
+    name: NETTED_FORECAST_QUANTITY_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_94
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_95
+    name: DPX_CANNIBALIZATION_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_96
+    name: DPX_CANNIBALIZATION_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_97
+    name: DPX_CANNIBALIZATION_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_98
+    name: DPX_CATEGORY_DRAG_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_99
+    name: DPX_CATEGORY_DRAG_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_100
+    name: DPX_CATEGORY_DRAG_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_101
+    name: DPX_COMPETITOR_PROMO_S1
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_102
+    name: DPX_COMPETITOR_PROMO_S2
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_103
+    name: DPX_COMPETITOR_PROMO_S3
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_104
+    name: DPX_SYS_FCST_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_105
+    name: DPX_SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_snapshot_nc_106
+    name: MFG_CREATED_BY_MRP
+    type: DECIMAL(1,0)
+  - id: sc_demand_forecast_snapshot_nc_107
+    name: OMS_WEEK1_SNAPSHOT_QTY
+    type: DOUBLE
+  - id: sc_demand_forecast_snapshot_nc_108
+    name: OMS_WEEK2_SNAPSHOT_QTY
+    type: DOUBLE
+  - id: sc_demand_forecast_snapshot_nc_109
+    name: OMS_WEEK3_SNAPSHOT_QTY
+    type: DOUBLE
+  - id: sc_demand_forecast_snapshot_nc_110
+    name: OMS_WEEK4_SNAPSHOT_QTY
+    type: DOUBLE
+  - id: sc_demand_forecast_snapshot_nc_111
+    name: OMS_WEEK5_SNAPSHOT_QTY
+    type: DOUBLE
+  - id: sc_demand_forecast_snapshot_nc_112
+    name: SNOP_BASE_CURRENCY_ADJUST_PCT
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_113
+    name: SNOP_PROMO_CURRENCY_ADJUST_PCT
+    type: FLOAT
+  - id: sc_demand_forecast_snapshot_nc_114
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_demand_forecast_snapshot_nc_115
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_snapshot_nc_116
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_demand_forecast_snapshot_nc_117
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_demand_forecast_snapshot_nc_118
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_demand_forecast_snapshot_nc_119
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

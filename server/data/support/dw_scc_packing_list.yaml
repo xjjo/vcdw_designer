@@ -1,0 +1,96 @@
+id: support_dw_scc_packing_list
+kind: support
+name: dw_scc_packing_list
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_packing_list_0
+    name: ATTACHED_NOTES
+    type: LONGTEXT
+  - id: sc_dw_scc_packing_list_1
+    name: ATTACHED_NOTE_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_2
+    name: COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_packing_list_3
+    name: CONTACT
+    type: VARCHAR(512)
+  - id: sc_dw_scc_packing_list_4
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_list_5
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_list_7
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_list_8
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_9
+    name: PACKAGE_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_list_10
+    name: PACK_LIST_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_11
+    name: SHIP_FROM_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_12
+    name: SHIP_FROM_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_13
+    name: SHIP_FROM_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_scc_packing_list_14
+    name: SHIP_FROM_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_15
+    name: SHIP_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_16
+    name: SHIP_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_17
+    name: SHIP_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_scc_packing_list_18
+    name: SHIP_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_19
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_list_20
+    name: SYS_EQUIPMENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_21
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_22
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_23
+    name: SYS_PACKING_LIST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_24
+    name: SYS_PICK_LIST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_25
+    name: SYS_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_26
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_27
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_list_28
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_list_29
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

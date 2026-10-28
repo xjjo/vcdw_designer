@@ -1,0 +1,81 @@
+id: support_wms_cycle_count_plan_nc
+kind: support
+name: wms_cycle_count_plan_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_wms_cycle_count_plan_nc_0
+    name: SYS_CYCLE_COUNT_PLAN_ID
+    type: BIGINT(20)
+  - id: sc_wms_cycle_count_plan_nc_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cycle_count_plan_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_wms_cycle_count_plan_nc_3
+    name: EFFECTIVE_END_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cycle_count_plan_nc_4
+    name: EFFECTIVE_START_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cycle_count_plan_nc_5
+    name: FIXED_PLAN_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cycle_count_plan_nc_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cycle_count_plan_nc_7
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_wms_cycle_count_plan_nc_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cycle_count_plan_nc_9
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_wms_cycle_count_plan_nc_10
+    name: PLAN_DATE_VARIATION
+    type: VARCHAR(256)
+  - id: sc_wms_cycle_count_plan_nc_11
+    name: PLAN_NO
+    type: VARCHAR(64)
+  - id: sc_wms_cycle_count_plan_nc_12
+    name: PLAN_PERIOD_TYPE
+    type: VARCHAR(256)
+  - id: sc_wms_cycle_count_plan_nc_13
+    name: SAMPLE_SIZE
+    type: VARCHAR(64)
+  - id: sc_wms_cycle_count_plan_nc_14
+    name: SAMPLING_ALGORITHM
+    type: VARCHAR(256)
+  - id: sc_wms_cycle_count_plan_nc_15
+    name: SCHEDULE_BASE_DAY
+    type: VARCHAR(256)
+  - id: sc_wms_cycle_count_plan_nc_16
+    name: SCHEDULE_OFFSET
+    type: DECIMAL(9,0)
+  - id: sc_wms_cycle_count_plan_nc_17
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_wms_cycle_count_plan_nc_18
+    name: SYSTEM_GENERATION
+    type: TINYINT(1)
+  - id: sc_wms_cycle_count_plan_nc_19
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_wms_cycle_count_plan_nc_20
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_wms_cycle_count_plan_nc_21
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wms_cycle_count_plan_nc_22
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_wms_cycle_count_plan_nc_23
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_wms_cycle_count_plan_nc_24
+    name: RECONCILED
+    type: TINYINT(1)

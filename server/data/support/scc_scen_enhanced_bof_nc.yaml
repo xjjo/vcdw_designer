@@ -1,0 +1,234 @@
+id: support_scc_scen_enhanced_bof_nc
+kind: support
+name: scc_scen_enhanced_bof_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_scen_enhanced_bof_nc_0
+    name: AGGREGATED_BY_SHIP_DATE
+    type: DECIMAL(1,0)
+  - id: sc_scc_scen_enhanced_bof_nc_1
+    name: AGREED_PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_2
+    name: AGREED_REQUEST_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_3
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)
+  - id: sc_scc_scen_enhanced_bof_nc_4
+    name: AUXILIARY_KEY2
+    type: VARCHAR(64)
+  - id: sc_scc_scen_enhanced_bof_nc_5
+    name: AUXILIARY_KEY3
+    type: VARCHAR(64)
+  - id: sc_scc_scen_enhanced_bof_nc_6
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_scc_scen_enhanced_bof_nc_7
+    name: BUYER_REASON_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_scen_enhanced_bof_nc_8
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_enhanced_bof_nc_9
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_scen_enhanced_bof_nc_10
+    name: FORECAST_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_enhanced_bof_nc_11
+    name: FORECAST_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_scen_enhanced_bof_nc_12
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_enhanced_bof_nc_13
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_enhanced_bof_nc_14
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_scen_enhanced_bof_nc_15
+    name: ORIGINAL_PLANNED_PROMISE_QTY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_16
+    name: ORIGINAL_PLANNED_REQUEST_QTY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_17
+    name: ORIGINAL_PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_18
+    name: ORIGINAL_REQUEST_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_19
+    name: PLANNED_PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_20
+    name: PLANNED_REQUEST_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_21
+    name: PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_22
+    name: PROPOSED_PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_23
+    name: PROPOSED_REQUEST_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_24
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_scen_enhanced_bof_nc_25
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_scen_enhanced_bof_nc_26
+    name: SUGGESTED_PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_scen_enhanced_bof_nc_27
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_28
+    name: SYS_CREATION_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_29
+    name: SYS_CUSTOMER_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_30
+    name: SYS_ENHANCED_BOF_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_31
+    name: SYS_FROM_SITE_GROUP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_32
+    name: SYS_FULFILLMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_33
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_34
+    name: SYS_ORDER_MANAGEMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_35
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_36
+    name: SYS_PRODUCT_GROUP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_37
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_38
+    name: SYS_SCENARIO_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_39
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_40
+    name: SYS_SHIP_FROM_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_41
+    name: SYS_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_42
+    name: SYS_SHIP_FROM_SITE_RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_43
+    name: SYS_SHIP_TO_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_44
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_45
+    name: SYS_SHIP_TO_SITE_RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_46
+    name: SYS_TO_SITE_GROUP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_47
+    name: VENDOR_REASON_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_scen_enhanced_bof_nc_48
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_scen_enhanced_bof_nc_49
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_scen_enhanced_bof_nc_50
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_scen_enhanced_bof_nc_51
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_scen_enhanced_bof_nc_52
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_scen_enhanced_bof_nc_53
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)
+  - id: sc_scc_scen_enhanced_bof_nc_54
+    name: PAPT_BUYER_LONG1
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_55
+    name: PAPT_BUYER_LONG2
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_56
+    name: PAPT_BUYER_LONG3
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_57
+    name: PAPT_BUYER_LONG4
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_58
+    name: PAPT_BUYER_LONG5
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_59
+    name: PAPT_BUYER_STRING1
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_60
+    name: PAPT_BUYER_STRING2
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_61
+    name: PAPT_BUYER_STRING3
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_62
+    name: PAPT_BUYER_STRING4
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_63
+    name: PAPT_BUYER_STRING5
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_64
+    name: PAPT_VENDOR_LONG1
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_65
+    name: PAPT_VENDOR_LONG2
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_66
+    name: PAPT_VENDOR_LONG3
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_67
+    name: PAPT_VENDOR_LONG4
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_68
+    name: PAPT_VENDOR_LONG5
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_69
+    name: PAPT_VENDOR_STRING1
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_70
+    name: PAPT_VENDOR_STRING2
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_71
+    name: PAPT_VENDOR_STRING3
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_72
+    name: PAPT_VENDOR_STRING4
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_73
+    name: PAPT_VENDOR_STRING5
+    type: VARCHAR(128)
+  - id: sc_scc_scen_enhanced_bof_nc_74
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_enhanced_bof_nc_75
+    name: PARTNER_PROCESS_TYPE_KEY
+    type: BIGINT(20)

@@ -1,0 +1,132 @@
+id: support_scc_inventory_nc
+kind: support
+name: scc_inventory_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_inventory_nc_0
+    name: SYS_INVENTORY_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_nc_7
+    name: INVENTORY_NO
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_8
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_nc_9
+    name: QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_inventory_nc_10
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_nc_11
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_nc_12
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_nc_13
+    name: EXT_SERIAL_NO
+    type: VARCHAR(200)
+  - id: sc_scc_inventory_nc_14
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_nc_15
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_nc_16
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_17
+    name: LOCKED
+    type: DECIMAL(1,0)
+  - id: sc_scc_inventory_nc_18
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_nc_19
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_nc_20
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_nc_21
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_22
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_23
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_24
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_25
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_26
+    name: WMS_DEFECT_CODE1
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_27
+    name: WMS_DEFECT_CODE2
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_28
+    name: WMS_DEFECT_CODE3
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_29
+    name: WMS_DEFECT_CODE4
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_30
+    name: WMS_DEFECT_CODE5
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_31
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_inventory_nc_32
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_33
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_inventory_nc_34
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_35
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_36
+    name: SYS_PERSON_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_37
+    name: SYS_LOT_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_nc_38
+    name: SUBLOCATION
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_nc_39
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_inventory_nc_40
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_inventory_nc_41
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

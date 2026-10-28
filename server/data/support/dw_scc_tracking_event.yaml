@@ -1,0 +1,102 @@
+id: support_dw_scc_tracking_event
+kind: support
+name: dw_scc_tracking_event
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_tracking_event_0
+    name: SYS_TRACKING_EVENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_7
+    name: EVENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_8
+    name: MESSAGE
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_tracking_event_9
+    name: ORIGIN
+    type: VARCHAR(256)
+  - id: sc_dw_scc_tracking_event_10
+    name: EVENT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_11
+    name: EVENT_SOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_12
+    name: ADDITIONAL_INFO
+    type: LONGTEXT
+  - id: sc_dw_scc_tracking_event_13
+    name: EVENT_ATTRIBUTES
+    type: LONGTEXT
+  - id: sc_dw_scc_tracking_event_14
+    name: EVENT_SOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_15
+    name: EVENT_SOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_16
+    name: IS_ACTIVE
+    type: TINYINT(1)
+  - id: sc_dw_scc_tracking_event_17
+    name: EVENT_RELATED_TO_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_18
+    name: EVENT_RELATED_TO_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_19
+    name: EVENT_RELATED_TO_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_20
+    name: EVENT_RELATED_TO_INFO
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_tracking_event_21
+    name: SYS_EVENT_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_22
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_23
+    name: TMS_RELATED_TXN_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_24
+    name: TMS_RELATED_TXN_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_25
+    name: TMS_RELATED_TXN_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_26
+    name: TMS_EVENT_LOCATION
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_27
+    name: TMS_EVENT_SOURCE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_tracking_event_28
+    name: TMS_LOCATION_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_29
+    name: TMS_TERMINAL_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_30
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_31
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

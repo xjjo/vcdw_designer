@@ -1,0 +1,78 @@
+id: support_dw_wms_cycle_count_plan
+kind: support
+name: dw_wms_cycle_count_plan
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_wms_cycle_count_plan_0
+    name: SYS_CYCLE_COUNT_PLAN_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_plan_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_plan_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_plan_3
+    name: EFFECTIVE_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_plan_4
+    name: EFFECTIVE_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_plan_5
+    name: FIXED_PLAN_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_plan_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_plan_7
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_plan_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_plan_9
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_plan_10
+    name: PLAN_DATE_VARIATION
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_plan_11
+    name: PLAN_NO
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_plan_12
+    name: PLAN_PERIOD_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_plan_13
+    name: SAMPLE_SIZE
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_plan_14
+    name: SAMPLING_ALGORITHM
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_plan_15
+    name: SCHEDULE_BASE_DAY
+    type: VARCHAR(256)
+  - id: sc_dw_wms_cycle_count_plan_16
+    name: SCHEDULE_OFFSET
+    type: DECIMAL(9,0)
+  - id: sc_dw_wms_cycle_count_plan_17
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_plan_18
+    name: SYSTEM_GENERATION
+    type: TINYINT(1)
+  - id: sc_dw_wms_cycle_count_plan_19
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_plan_20
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_plan_21
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_plan_22
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_plan_23
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

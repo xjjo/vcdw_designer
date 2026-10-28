@@ -1,0 +1,36 @@
+id: support_geo_pattern_list_nc
+kind: support
+name: geo_pattern_list_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_geo_pattern_list_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_geo_pattern_list_nc_1
+    name: CREATION_USER
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_list_nc_2
+    name: DESCRIPTION
+    type: VARCHAR(255)
+  - id: sc_geo_pattern_list_nc_3
+    name: GPATTERN_LIST_NAME
+    type: VARCHAR(256)
+  - id: sc_geo_pattern_list_nc_4
+    name: GPATTERN_TYPE
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_list_nc_5
+    name: IS_ACTIVE
+    type: TINYINT(1)
+  - id: sc_geo_pattern_list_nc_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_geo_pattern_list_nc_7
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_list_nc_8
+    name: ORG_ID
+    type: BIGINT(20)
+  - id: sc_geo_pattern_list_nc_9
+    name: SYS_GPATTERN_LIST_ID
+    type: BIGINT(20)

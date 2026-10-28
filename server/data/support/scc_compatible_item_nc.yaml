@@ -1,0 +1,45 @@
+id: support_scc_compatible_item_nc
+kind: support
+name: scc_compatible_item_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_compatible_item_nc_0
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_compatible_item_nc_1
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_scc_compatible_item_nc_2
+    name: QUANTITY
+    type: DOUBLE
+  - id: sc_scc_compatible_item_nc_3
+    name: RESOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_compatible_item_nc_4
+    name: RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_compatible_item_nc_5
+    name: RESOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_compatible_item_nc_6
+    name: STOCKING_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_compatible_item_nc_7
+    name: SYS_COMPATIBLE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_compatible_item_nc_8
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_compatible_item_nc_9
+    name: SYS_PACKING_RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_compatible_item_nc_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_compatible_item_nc_11
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_compatible_item_nc_12
+    name: RECONCILED
+    type: TINYINT(1)

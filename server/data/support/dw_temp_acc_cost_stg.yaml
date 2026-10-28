@@ -1,0 +1,45 @@
+id: support_dw_temp_acc_cost_stg
+kind: support
+name: dw_temp_acc_cost_stg
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_temp_acc_cost_stg_0
+    name: SYS_SHIPH_ID
+    type: BIGINT(20)
+  - id: sc_dw_temp_acc_cost_stg_1
+    name: SYS_TENDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_temp_acc_cost_stg_2
+    name: SYS_MVMT_ID
+    type: BIGINT(20)
+  - id: sc_dw_temp_acc_cost_stg_3
+    name: SHIPFROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_temp_acc_cost_stg_4
+    name: SHIPTO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_temp_acc_cost_stg_5
+    name: TC_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_temp_acc_cost_stg_6
+    name: NET_COST
+    type: FLOAT
+  - id: sc_dw_temp_acc_cost_stg_7
+    name: NET_COST_TYPE1
+    type: FLOAT
+  - id: sc_dw_temp_acc_cost_stg_8
+    name: SHIP_WEIGHT
+    type: FLOAT
+  - id: sc_dw_temp_acc_cost_stg_9
+    name: SHIP_VOLUME
+    type: FLOAT
+  - id: sc_dw_temp_acc_cost_stg_10
+    name: TYPE
+    type: DECIMAL(5,0)
+  - id: sc_dw_temp_acc_cost_stg_11
+    name: IS_VALID
+    type: TINYINT(4)
+  - id: sc_dw_temp_acc_cost_stg_12
+    name: ACC_COST_TYPE
+    type: VARCHAR(64)

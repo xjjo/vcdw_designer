@@ -1,0 +1,105 @@
+id: support_tms_contract_nc
+kind: support
+name: tms_contract_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_contract_nc_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_tms_contract_nc_1
+    name: CARRIER_ACC_PTP
+    type: DOUBLE
+  - id: sc_tms_contract_nc_2
+    name: COMMODITY_CODE
+    type: DECIMAL(1,0)
+  - id: sc_tms_contract_nc_3
+    name: CONTRACT_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_contract_nc_4
+    name: CONTRACT_TYPE
+    type: VARCHAR(256)
+  - id: sc_tms_contract_nc_5
+    name: COST_ALLOCATOR
+    type: VARCHAR(256)
+  - id: sc_tms_contract_nc_6
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_tms_contract_nc_7
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_tms_contract_nc_8
+    name: DESTINATION
+    type: DECIMAL(1,0)
+  - id: sc_tms_contract_nc_9
+    name: DIM_CALCULATION_LEVEL
+    type: VARCHAR(256)
+  - id: sc_tms_contract_nc_10
+    name: DIM_FACTOR
+    type: DOUBLE
+  - id: sc_tms_contract_nc_11
+    name: ENABLE_RATES_FOR_REV_LANES
+    type: DECIMAL(1,0)
+  - id: sc_tms_contract_nc_12
+    name: END_DATE
+    type: DATETIME(6)
+  - id: sc_tms_contract_nc_13
+    name: EXEMPT_TAXES
+    type: DECIMAL(1,0)
+  - id: sc_tms_contract_nc_14
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_contract_nc_15
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_contract_nc_16
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_tms_contract_nc_17
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_contract_nc_18
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_contract_nc_19
+    name: MAX_RATE_WARE_WEIGHT_GROUP
+    type: VARCHAR(256)
+  - id: sc_tms_contract_nc_20
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_contract_nc_21
+    name: ORIGIN
+    type: DECIMAL(1,0)
+  - id: sc_tms_contract_nc_22
+    name: RATING_LEVEL
+    type: VARCHAR(256)
+  - id: sc_tms_contract_nc_23
+    name: RATING_TYPE
+    type: DECIMAL(1,0)
+  - id: sc_tms_contract_nc_24
+    name: ROUND_UP_DIM_WT_VOL
+    type: DECIMAL(1,0)
+  - id: sc_tms_contract_nc_25
+    name: START_DATE
+    type: DATETIME(6)
+  - id: sc_tms_contract_nc_26
+    name: SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_tms_contract_nc_27
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_tms_contract_nc_28
+    name: SYS_SERVICING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_tms_contract_nc_29
+    name: SYS_THREE_PL_ORG_ID
+    type: BIGINT(20)
+  - id: sc_tms_contract_nc_30
+    name: TARIFF
+    type: VARCHAR(64)
+  - id: sc_tms_contract_nc_31
+    name: VAL_ADD_ACC_PTP
+    type: DOUBLE
+  - id: sc_tms_contract_nc_32
+    name: ZONE_BASED_RATING
+    type: DECIMAL(1,0)

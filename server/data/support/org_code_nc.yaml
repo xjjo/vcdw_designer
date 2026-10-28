@@ -1,0 +1,42 @@
+id: support_org_code_nc
+kind: support
+name: org_code_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_org_code_nc_0
+    name: CODE_TYPE
+    type: VARCHAR(64)
+  - id: sc_org_code_nc_1
+    name: CODE_VALUE
+    type: VARCHAR(64)
+  - id: sc_org_code_nc_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_org_code_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_org_code_nc_4
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_org_code_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_org_code_nc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_org_code_nc_7
+    name: SYS_ORG_CODE_ID
+    type: BIGINT(20)
+  - id: sc_org_code_nc_8
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_org_code_nc_9
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_org_code_nc_10
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_org_code_nc_11
+    name: RECONCILED
+    type: TINYINT(1)

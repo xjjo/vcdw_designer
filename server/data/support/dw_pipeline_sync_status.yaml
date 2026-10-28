@@ -1,0 +1,33 @@
+id: support_dw_pipeline_sync_status
+kind: support
+name: dw_pipeline_sync_status
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_pipeline_sync_status_0
+    name: DW_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_pipeline_sync_status_1
+    name: OLTP_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_pipeline_sync_status_2
+    name: JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_pipeline_sync_status_3
+    name: SYNC_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_pipeline_sync_status_4
+    name: SYNC_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_pipeline_sync_status_5
+    name: STATUS
+    type: TINYINT(4)
+  - id: sc_dw_pipeline_sync_status_6
+    name: EXPORT_STATUS
+    type: TINYINT(4)
+  - id: sc_dw_pipeline_sync_status_7
+    name: IMPORT_STATUS
+    type: TINYINT(4)
+  - id: sc_dw_pipeline_sync_status_8
+    name: RESET
+    type: TINYINT(4)

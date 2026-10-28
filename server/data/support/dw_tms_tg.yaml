@@ -1,0 +1,36 @@
+id: support_dw_tms_tg
+kind: support
+name: dw_tms_tg
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_tg_0
+    name: sys_tg_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tg_1
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_tg_2
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_dw_tms_tg_3
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_tg_4
+    name: sys_tp_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tg_5
+    name: tender_plan_name
+    type: VARCHAR(64)
+  - id: sc_dw_tms_tg_6
+    name: sys_routing_strategy_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tg_7
+    name: sys_org_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tg_8
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_tg_9
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

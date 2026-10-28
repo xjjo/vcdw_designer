@@ -1,0 +1,17 @@
+# VCDW Designer — runtime configuration
+# Edited from the "Train / Sources" section of the app, or by hand.
+# Do NOT commit real passwords: leave `password` blank to keep the saved value.
+
+db:
+  host: 13.201.35.232
+  name: byn26_4_dev_memsql
+  user: byn26_4_dev_memsql
+  password: 'Dev^!%*Mem!#@26.4#$'
+  port: 30128
+
+etl:
+  root: c:\git-views\RTVN-BYN26.4\apps\DataWarehouse\cfg\etl\
+  enumerationsDir: c:\git-views\RTVN-BYN26.4\apps\DataWarehouse\cfg\etl\dimension\
+
+catalog:
+  enumCatalogPath: knowledge/graph/etl/enum/enum_catalog.md

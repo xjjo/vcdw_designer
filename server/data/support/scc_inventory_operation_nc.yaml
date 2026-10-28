@@ -1,0 +1,150 @@
+id: support_scc_inventory_operation_nc
+kind: support
+name: scc_inventory_operation_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_inventory_operation_nc_0
+    name: SYS_INVENTORY_OPERATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_operation_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_operation_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_operation_nc_7
+    name: OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_8
+    name: OPERATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_operation_nc_9
+    name: EXT_ITEM_NAME
+    type: VARCHAR(128)
+  - id: sc_scc_inventory_operation_nc_10
+    name: QTY_AMOUNT
+    type: FLOAT
+  - id: sc_scc_inventory_operation_nc_11
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_operation_nc_12
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_operation_nc_13
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_operation_nc_14
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inventory_operation_nc_15
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_operation_nc_16
+    name: COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_scc_inventory_operation_nc_17
+    name: EXT_SERIAL_NO
+    type: VARCHAR(200)
+  - id: sc_scc_inventory_operation_nc_18
+    name: BALANCE_QTY_AMOUNT
+    type: FLOAT
+  - id: sc_scc_inventory_operation_nc_19
+    name: BALANCE_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_operation_nc_20
+    name: ORIGINAL_OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_21
+    name: AUXILARY_KEY
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_22
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_23
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_operation_nc_24
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_operation_nc_25
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_operation_nc_26
+    name: ORIGIN
+    type: VARCHAR(256)
+  - id: sc_scc_inventory_operation_nc_27
+    name: MASTER_OPERATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_28
+    name: MASTER_OPERATION_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_29
+    name: MASTER_OPERATION_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_30
+    name: SOURCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_31
+    name: SOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_32
+    name: SOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_33
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_34
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_35
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_36
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_37
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_38
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_39
+    name: SYS_ORIGINAL_ORDER_DS_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_40
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_inventory_operation_nc_41
+    name: WMS_DEFECT_CODE1
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_42
+    name: WMS_DEFECT_CODE2
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_43
+    name: WMS_DEFECT_CODE3
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_44
+    name: WMS_DEFECT_CODE4
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_45
+    name: WMS_DEFECT_CODE5
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_46
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_inventory_operation_nc_47
+    name: RECONCILED
+    type: TINYINT(1)

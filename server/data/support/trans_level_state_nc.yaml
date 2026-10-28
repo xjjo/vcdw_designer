@@ -1,0 +1,30 @@
+id: support_trans_level_state_nc
+kind: support
+name: trans_level_state_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_trans_level_state_nc_0
+    name: sys_trans_level_state_id
+    type: BIGINT(20)
+  - id: sc_trans_level_state_nc_1
+    name: trans_name
+    type: VARCHAR(64)
+  - id: sc_trans_level_state_nc_2
+    name: level_name
+    type: VARCHAR(64)
+  - id: sc_trans_level_state_nc_3
+    name: state
+    type: VARCHAR(64)
+  - id: sc_trans_level_state_nc_4
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_trans_level_state_nc_5
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_trans_level_state_nc_6
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_trans_level_state_nc_7
+    name: RECONCILED
+    type: TINYINT(1)

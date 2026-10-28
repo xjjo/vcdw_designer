@@ -1,0 +1,30 @@
+id: support_dw_hierarchy_meta
+kind: support
+name: dw_hierarchy_meta
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_hierarchy_meta_0
+    name: SYS_HIERARCHY_META_ID
+    type: BIGINT(20)
+  - id: sc_dw_hierarchy_meta_1
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_hierarchy_meta_2
+    name: ENTERPRISE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_hierarchy_meta_3
+    name: HIERARCHY_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_hierarchy_meta_4
+    name: DESCRIPTION
+    type: VARCHAR(128)
+  - id: sc_dw_hierarchy_meta_5
+    name: TYPE
+    type: BIGINT(20)
+  - id: sc_dw_hierarchy_meta_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_hierarchy_meta_7
+    name: ES_LMD
+    type: DATETIME(6)

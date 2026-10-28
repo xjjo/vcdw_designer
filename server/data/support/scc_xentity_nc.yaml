@@ -1,0 +1,126 @@
+id: support_scc_xentity_nc
+kind: support
+name: scc_xentity_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_xentity_nc_0
+    name: ACTIVE
+    type: TINYINT(1)
+  - id: sc_scc_xentity_nc_1
+    name: ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_2
+    name: ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_3
+    name: ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_xentity_nc_4
+    name: ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_5
+    name: AGGREGATOR_ID
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_6
+    name: ALIAS1
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_7
+    name: ALIAS2
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_8
+    name: ALIAS3
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_9
+    name: CAGE_CODE
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_10
+    name: CONTACT
+    type: VARCHAR(512)
+  - id: sc_scc_xentity_nc_11
+    name: CONTACT_EMAIL
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_12
+    name: CONTACT_PHONE
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_13
+    name: CORPORATE_LATITUDE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_nc_14
+    name: CORPORATE_LONGITUDE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_nc_15
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_xentity_nc_16
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_17
+    name: DESCRIPTION
+    type: LONGTEXT
+  - id: sc_scc_xentity_nc_18
+    name: DUNS_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_scc_xentity_nc_19
+    name: EIN
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_20
+    name: EINTYPE
+    type: DECIMAL(9,0)
+  - id: sc_scc_xentity_nc_21
+    name: FOUNDING_DATE
+    type: DATETIME(6)
+  - id: sc_scc_xentity_nc_22
+    name: IMAGE_URL
+    type: VARCHAR(1024)
+  - id: sc_scc_xentity_nc_23
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_xentity_nc_24
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_25
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_xentity_nc_26
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_27
+    name: NAICS2022_INDUSTRY_KEY
+    type: VARCHAR(128)
+  - id: sc_scc_xentity_nc_28
+    name: NAICS2022_INDUSTRY_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_29
+    name: NAME
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_30
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_scc_xentity_nc_31
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_xentity_nc_32
+    name: SYS_PARENT_XENTITY_ID
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_33
+    name: SYS_PARENT_XENTITY_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_34
+    name: SYS_XENTITY_ID
+    type: BIGINT(20)
+  - id: sc_scc_xentity_nc_35
+    name: XENTITY_ID
+    type: VARCHAR(256)
+  - id: sc_scc_xentity_nc_36
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_xentity_nc_37
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_xentity_nc_38
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_nc_39
+    name: RECONCILED
+    type: TINYINT(1)

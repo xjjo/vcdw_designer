@@ -1,0 +1,192 @@
+id: support_scc_container_move_nc
+kind: support
+name: scc_container_move_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_container_move_nc_0
+    name: ACTIVE_MVMT_FROM_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_nc_1
+    name: ACTIVE_MVMT_NO
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_2
+    name: ACTIVE_MVMT_TO_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_nc_3
+    name: ACTUAL_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_4
+    name: ACTUAL_DEPARTURE_AT_ORIGIN
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_5
+    name: ACTUAL_PICKUP_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_6
+    name: ACTUAL_PORT_OF_ARRIVAL
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_7
+    name: BOOKING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_8
+    name: CARRIER_ASSET_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_9
+    name: CONTAINER_NO
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_10
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_11
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_12
+    name: CUSTOMS_CLEARANCE_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_13
+    name: DOCUMENT_RECEIVED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_14
+    name: ETAPORT_OF_DISCHARGE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_15
+    name: ETDPORT_OF_LOADING
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_16
+    name: FINAL_DESTINATION_ADDR_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_17
+    name: FINAL_DESTINATION_ADDR_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_18
+    name: FINAL_DESTINATION_ADDR_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_container_move_nc_19
+    name: FINAL_DESTINATION_ADDR_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_20
+    name: FIRST_SEGMENT_PICK_UP
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_21
+    name: FIRST_SEG_DELIVERY
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_22
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_23
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_24
+    name: LAST_POSITION_UPDATE_TIME
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_25
+    name: LAST_SEGMENT_DELIVERY
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_26
+    name: LAST_SEGMENT_PICK_UP
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_27
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_28
+    name: LOADED_ON_VESSEL_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_29
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_30
+    name: RETURN_CONTAINER_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_31
+    name: RETURN_MVMT_NO
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_32
+    name: SCHEDULE_ID
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_33
+    name: SERIAL_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_34
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_35
+    name: SYS_ACTIVE_CARRIER_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_36
+    name: SYS_ACTIVE_MVMT_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_37
+    name: SYS_CONTAINER_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_38
+    name: SYS_CONTAINER_MOVE_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_39
+    name: SYS_CONTAINER_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_40
+    name: SYS_FINAL_DESTINATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_41
+    name: SYS_FREIGHT_SCHEDULES_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_42
+    name: SYS_MOVEMENT_TC_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_43
+    name: SYS_PACK_LIST_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_44
+    name: SYS_PORT_OF_DISCHARGE_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_45
+    name: SYS_PORT_OF_LOADING_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_46
+    name: SYS_RETURN_MVMT_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_47
+    name: TMS_SYS_BOOKING_RESP_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_48
+    name: TMS_SYS_OCEAN_BOOKING_REQST_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_49
+    name: TMS_ROUTING_GROUP
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_nc_50
+    name: TRANSPORTATION_MODE
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_nc_51
+    name: VESSEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_52
+    name: VESSEL_SLOT
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_53
+    name: TMS_SYS_OCEAN_CARRIER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_nc_54
+    name: TMS_NET_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_nc_55
+    name: TMS_NET_VOLUME_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_container_move_nc_56
+    name: TMS_NET_WEIGHT_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_container_move_nc_57
+    name: TMS_NET_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_nc_58
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_container_move_nc_59
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_container_move_nc_60
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_nc_61
+    name: TRACKING_STATUS
+    type: VARCHAR(256)

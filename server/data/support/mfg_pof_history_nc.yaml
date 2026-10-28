@@ -1,0 +1,111 @@
+id: support_mfg_pof_history_nc
+kind: support
+name: mfg_pof_history_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_mfg_pof_history_nc_0
+    name: SYS_POF_HISTORY_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_mfg_pof_history_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_mfg_pof_history_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_pof_history_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_mfg_pof_history_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_pof_history_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_pof_history_nc_7
+    name: COMPUTATION_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_pof_history_nc_8
+    name: TIME_PERIOD_OUT
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_9
+    name: TIME_PERIOD_OUT_UOM
+    type: VARCHAR(256)
+  - id: sc_mfg_pof_history_nc_10
+    name: AGGREGATION_BEGIN_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_pof_history_nc_11
+    name: AGGREGATION_END_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_pof_history_nc_12
+    name: AGGREGATION_HORIZON
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_13
+    name: AGGREGATION_HORIZON_UOM
+    type: VARCHAR(256)
+  - id: sc_mfg_pof_history_nc_14
+    name: ACTUAL_QUANTITY
+    type: DOUBLE
+  - id: sc_mfg_pof_history_nc_15
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_mfg_pof_history_nc_16
+    name: PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_mfg_pof_history_nc_17
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_mfg_pof_history_nc_18
+    name: PLANNED_QUANTITY
+    type: DOUBLE
+  - id: sc_mfg_pof_history_nc_19
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_20
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_21
+    name: SYS_REQUESTING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_22
+    name: SYS_EXECUTION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_23
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_24
+    name: SYS_CUSTOMER_OF_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_25
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_26
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_27
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_28
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_mfg_pof_history_nc_29
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_mfg_pof_history_nc_30
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_mfg_pof_history_nc_31
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_mfg_pof_history_nc_32
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_mfg_pof_history_nc_33
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_mfg_pof_history_nc_34
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

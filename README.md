@@ -10,7 +10,7 @@ export:
 - **SQL scripts** (DDL + sample `INSERT`s) to spin up tables with example data.
 
 Built with **React + TypeScript (Vite)** on the client and **Node + Express** on the server.
-The interactive star-schema diagram uses **React Flow**; the JSON/SQL viewer uses **Monaco**.
+The JSON/SQL viewer uses **Monaco**.
 
 ## Why
 
@@ -23,7 +23,7 @@ into the ETL code generator.
 
 ```
 vcdw-designer/
-  client/   React SPA (Vite + TS, React Flow, Monaco, Zustand)
+  client/   React SPA (Vite + TS, Monaco, Zustand)
   server/   Express API (model persistence, SQL generation, generator mapping)
   shared/   Framework-neutral design model, templates, SQL generator, generator map
 ```
@@ -62,15 +62,17 @@ indicator in the header reflects backend availability.
   - **General** — names, domain, keys, staging toggles, NC tables, shard/sort keys.
   - **Columns** — fully editable grid with PK/SK/NK/FK/measure flags, source-column
     mapping, aggregations and formulas; one-click standard-column and audit templates.
-  - **Sources & Joins** — net-change (CDC) sources and custom joins.
-  - **Custom Lookups** — generic, fully customizable lookups.
+  - **Source Tables** — declare the tables available in the design context, with
+    columns, aliases and optional SingleStore CREATE TABLE DDL.
+  - **NC** — select which source tables drive net-change (CDC), primary/secondary
+    role and Sys ID / LMD columns.
+  - **Joins** — custom joins between the source, dimension and enumeration tables.
+  - **Lookups** — generic, fully customizable lookups.
   - **Dimension Links** (facts) — surrogate-key resolution, geo enrichment, currency conversion.
   - **Validation** (facts) — quarantine rules for `*_stg_error`.
   - **ETL Config** — enable flag, priority, resource cost.
   - **Preview** — per-entity generator JSON and SQL.
 - **Audit Profiles** — reusable, customizable audit-column sets applied to any entity.
-- **Star-Schema Canvas** — interactive React Flow diagram (drag to arrange,
-  double-click to edit); mandatory links animated.
 - **JSON & SQL** — Monaco editor for the design JSON (bidirectional apply),
   generator JSON per entity, and full-model SQL with adjustable sample rows.
 

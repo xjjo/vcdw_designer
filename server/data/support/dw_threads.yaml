@@ -1,0 +1,30 @@
+id: support_dw_threads
+kind: support
+name: dw_threads
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_threads_0
+    name: THREAD_ID
+    type: BIGINT(20)
+  - id: sc_dw_threads_1
+    name: THREAD_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_threads_2
+    name: JOB_TASK_MAPPING_ID
+    type: BIGINT(20)
+  - id: sc_dw_threads_3
+    name: RESOURCE_COST
+    type: INT(5)
+  - id: sc_dw_threads_4
+    name: STATE
+    type: INT(11)
+  - id: sc_dw_threads_5
+    name: LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_threads_6
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_threads_7
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

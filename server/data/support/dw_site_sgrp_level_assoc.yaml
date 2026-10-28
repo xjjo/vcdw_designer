@@ -1,0 +1,45 @@
+id: support_dw_site_sgrp_level_assoc
+kind: support
+name: dw_site_sgrp_level_assoc
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_site_sgrp_level_assoc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_sgrp_level_assoc_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_sgrp_level_assoc_2
+    name: LEVEL1_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_site_sgrp_level_assoc_3
+    name: LEVEL2_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_site_sgrp_level_assoc_4
+    name: LEVEL3_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_site_sgrp_level_assoc_5
+    name: LEVEL4_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_site_sgrp_level_assoc_6
+    name: SGRP_TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_sgrp_level_assoc_7
+    name: SYS_SGRP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_sgrp_level_assoc_8
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_sgrp_level_assoc_9
+    name: SYS_SITE_SGRP_LEVEL_ASSOC_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_sgrp_level_assoc_10
+    name: TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_sgrp_level_assoc_11
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_site_sgrp_level_assoc_12
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,21 @@
+id: support_dw_scheduler
+kind: support
+name: dw_scheduler
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scheduler_0
+    name: start_time
+    type: TIME
+  - id: sc_dw_scheduler_1
+    name: end_time
+    type: TIME
+  - id: sc_dw_scheduler_2
+    name: load_type
+    type: TINYINT(4)
+  - id: sc_dw_scheduler_3
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_scheduler_4
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

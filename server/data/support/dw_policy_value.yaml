@@ -1,0 +1,36 @@
+id: support_dw_policy_value
+kind: support
+name: dw_policy_value
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_policy_value_0
+    name: SYS_POLICY_VALUE_ID
+    type: BIGINT(20)
+  - id: sc_dw_policy_value_1
+    name: OWNER_DISPLAY
+    type: VARCHAR(256)
+  - id: sc_dw_policy_value_2
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_policy_value_3
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_policy_value_4
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_policy_value_5
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_policy_value_6
+    name: VALUE
+    type: LONGTEXT
+  - id: sc_dw_policy_value_7
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_policy_value_8
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_policy_value_9
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)

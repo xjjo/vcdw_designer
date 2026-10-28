@@ -1,0 +1,63 @@
+id: support_scc_compliance_check_nc
+kind: support
+name: scc_compliance_check_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_compliance_check_nc_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_scc_compliance_check_nc_1
+    name: AUDIT_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_compliance_check_nc_2
+    name: COMPLIANCE_CHECK_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_compliance_check_nc_3
+    name: COST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_compliance_check_nc_4
+    name: COST_DIMENSION
+    type: VARCHAR(256)
+  - id: sc_scc_compliance_check_nc_5
+    name: COST_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_compliance_check_nc_6
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_compliance_check_nc_7
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_compliance_check_nc_8
+    name: IS_ATTACHMENT_REQUIRED
+    type: DECIMAL(1,0)
+  - id: sc_scc_compliance_check_nc_9
+    name: IS_REQUIRED
+    type: DECIMAL(1,0)
+  - id: sc_scc_compliance_check_nc_10
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_compliance_check_nc_11
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_compliance_check_nc_12
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_compliance_check_nc_13
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_compliance_check_nc_14
+    name: SYS_COMPLIANCE_CHECK_ID
+    type: BIGINT(20)
+  - id: sc_scc_compliance_check_nc_15
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_compliance_check_nc_16
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_compliance_check_nc_17
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_compliance_check_nc_18
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,57 @@
+id: support_dw_scc_reason_code_assoc
+kind: support
+name: dw_scc_reason_code_assoc
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_reason_code_assoc_0
+    name: SYS_REASON_CODE_ASSOC_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_reason_code_assoc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_reason_code_assoc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_reason_code_assoc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_reason_code_assoc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_reason_code_assoc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_reason_code_assoc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_reason_code_assoc_7
+    name: TRANSACTION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_reason_code_assoc_8
+    name: TRANSACTION_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_reason_code_assoc_9
+    name: TRANSACTION_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_reason_code_assoc_10
+    name: DISCRIMINATOR
+    type: VARCHAR(64)
+  - id: sc_dw_scc_reason_code_assoc_11
+    name: COMMENTS
+    type: TEXT
+  - id: sc_dw_scc_reason_code_assoc_12
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_reason_code_assoc_13
+    name: SYS_OWNING_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_reason_code_assoc_14
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_reason_code_assoc_15
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_reason_code_assoc_16
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

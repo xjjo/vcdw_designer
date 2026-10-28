@@ -1,0 +1,39 @@
+id: support_dw_yms_yard_content_type
+kind: support
+name: dw_yms_yard_content_type
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_yms_yard_content_type_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_yms_yard_content_type_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_yms_yard_content_type_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_yms_yard_content_type_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_yms_yard_content_type_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_yms_yard_content_type_5
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_yms_yard_content_type_6
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_yms_yard_content_type_7
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_yms_yard_content_type_8
+    name: SYS_YARD_CONTENT_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_dw_yms_yard_content_type_9
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_yms_yard_content_type_10
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

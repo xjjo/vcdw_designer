@@ -1,0 +1,126 @@
+id: support_dpx_data_measure_nc
+kind: support
+name: dpx_data_measure_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_dpx_data_measure_nc_0
+    name: SYS_DATA_MEASURE_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_1
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_2
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_3
+    name: SYS_PARTNER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_4
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_5
+    name: SYS_PRODUCT_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_6
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_7
+    name: SYS_SITE_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_8
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_9
+    name: SYS_CUST_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_10
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_11
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_12
+    name: SYS_DM_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_13
+    name: EXTRA_ATTRIBUTES
+    type: VARCHAR(4000)
+  - id: sc_dpx_data_measure_nc_14
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_dpx_data_measure_nc_15
+    name: DM_TYPE
+    type: VARCHAR(256)
+  - id: sc_dpx_data_measure_nc_16
+    name: DM_SUB_TYPE
+    type: VARCHAR(256)
+  - id: sc_dpx_data_measure_nc_17
+    name: DM_DATE
+    type: DATETIME(6)
+  - id: sc_dpx_data_measure_nc_18
+    name: QUANTITY_UOM
+    type: BIGINT(20)
+  - id: sc_dpx_data_measure_nc_19
+    name: QUANTITY
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_20
+    name: OVERRIDE1
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_21
+    name: OVERRIDE2
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_22
+    name: BASELINE_QUANTITY
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_23
+    name: PROMOTIONAL_ADJUST_QUANTITY
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_24
+    name: SEASONAL_ADJUST_QUANTITY
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_25
+    name: CURRENCY_VALUE
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_26
+    name: OVERRIDE1_CURRENCY_VALUE
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_27
+    name: OVERRIDE2_CURRENCY_VALUE
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_28
+    name: BASELINE_CUR_VAL
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_29
+    name: PROMOTIONAL_ADJUST_CUR_VAL
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_30
+    name: SEASONAL_ADJUST_CUR_VAL
+    type: DOUBLE
+  - id: sc_dpx_data_measure_nc_31
+    name: DM_NUMBER
+    type: VARCHAR(256)
+  - id: sc_dpx_data_measure_nc_32
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dpx_data_measure_nc_33
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dpx_data_measure_nc_34
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dpx_data_measure_nc_35
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_dpx_data_measure_nc_36
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_dpx_data_measure_nc_37
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_dpx_data_measure_nc_38
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_dpx_data_measure_nc_39
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

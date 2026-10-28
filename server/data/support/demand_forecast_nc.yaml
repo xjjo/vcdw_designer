@@ -1,0 +1,1272 @@
+id: support_demand_forecast_nc
+kind: support
+name: demand_forecast_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_demand_forecast_nc_0
+    name: FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_nc_1
+    name: SITE_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_2
+    name: SYS_PRODUCT_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_3
+    name: ITEM_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_4
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_5
+    name: PARTNER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_6
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_7
+    name: SYS_SITE_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_8
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_9
+    name: CUST_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_10
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_11
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_12
+    name: DPX_SYS_FCST_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_13
+    name: DPX_SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_14
+    name: FORECAST_END_DATE
+    type: DATETIME(6)
+  - id: sc_demand_forecast_nc_15
+    name: FORECAST_DATE_S1
+    type: DATETIME(6)
+  - id: sc_demand_forecast_nc_16
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_nc_17
+    name: QUANTITY_UOM
+    type: SMALLINT(6)
+  - id: sc_demand_forecast_nc_18
+    name: FORECAST_QUANTITY_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_19
+    name: FORECAST_QUANTITY_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_20
+    name: FORECAST_QUANTITY_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_21
+    name: FORECAST_QUANTITY_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_22
+    name: FORECAST_QUANTITY_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_23
+    name: FORECAST_QUANTITY_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_24
+    name: FORECAST_QUANTITY_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_25
+    name: FORECAST_QUANTITY_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_26
+    name: FORECAST_QUANTITY_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_27
+    name: FORECAST_QUANTITY_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_28
+    name: FORECAST_QUANTITY_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_29
+    name: FORECAST_QUANTITY_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_30
+    name: FORECAST_QUANTITY_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_31
+    name: FORECAST_QUANTITY_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_32
+    name: FORECAST_QUANTITY_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_33
+    name: FORECAST_QUANTITY_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_34
+    name: FORECAST_QUANTITY_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_35
+    name: FORECAST_QUANTITY_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_36
+    name: FORECAST_QUANTITY_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_37
+    name: FORECAST_QUANTITY_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_38
+    name: OVERRIDE1_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_39
+    name: OVERRIDE1_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_40
+    name: OVERRIDE1_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_41
+    name: OVERRIDE1_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_42
+    name: OVERRIDE1_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_43
+    name: OVERRIDE1_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_44
+    name: OVERRIDE1_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_45
+    name: OVERRIDE1_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_46
+    name: OVERRIDE1_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_47
+    name: OVERRIDE1_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_48
+    name: OVERRIDE1_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_49
+    name: OVERRIDE1_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_50
+    name: OVERRIDE1_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_51
+    name: OVERRIDE1_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_52
+    name: OVERRIDE1_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_53
+    name: OVERRIDE1_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_54
+    name: OVERRIDE1_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_55
+    name: OVERRIDE1_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_56
+    name: OVERRIDE1_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_57
+    name: OVERRIDE1_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_58
+    name: OVERRIDE2_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_59
+    name: OVERRIDE2_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_60
+    name: OVERRIDE2_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_61
+    name: OVERRIDE2_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_62
+    name: OVERRIDE2_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_63
+    name: OVERRIDE2_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_64
+    name: OVERRIDE2_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_65
+    name: OVERRIDE2_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_66
+    name: OVERRIDE2_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_67
+    name: OVERRIDE2_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_68
+    name: OVERRIDE2_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_69
+    name: OVERRIDE2_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_70
+    name: OVERRIDE2_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_71
+    name: OVERRIDE2_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_72
+    name: OVERRIDE2_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_73
+    name: OVERRIDE2_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_74
+    name: OVERRIDE2_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_75
+    name: OVERRIDE2_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_76
+    name: OVERRIDE2_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_77
+    name: OVERRIDE2_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_78
+    name: BASELINE_FORECAST_QUANTITY_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_79
+    name: BASELINE_FORECAST_QUANTITY_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_80
+    name: BASELINE_FORECAST_QUANTITY_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_81
+    name: BASELINE_FORECAST_QUANTITY_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_82
+    name: BASELINE_FORECAST_QUANTITY_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_83
+    name: BASELINE_FORECAST_QUANTITY_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_84
+    name: BASELINE_FORECAST_QUANTITY_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_85
+    name: BASELINE_FORECAST_QUANTITY_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_86
+    name: BASELINE_FORECAST_QUANTITY_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_87
+    name: BASELINE_FORECAST_QUANTITY_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_88
+    name: BASELINE_FORECAST_QUANTITY_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_89
+    name: BASELINE_FORECAST_QUANTITY_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_90
+    name: BASELINE_FORECAST_QUANTITY_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_91
+    name: BASELINE_FORECAST_QUANTITY_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_92
+    name: BASELINE_FORECAST_QUANTITY_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_93
+    name: BASELINE_FORECAST_QUANTITY_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_94
+    name: BASELINE_FORECAST_QUANTITY_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_95
+    name: BASELINE_FORECAST_QUANTITY_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_96
+    name: BASELINE_FORECAST_QUANTITY_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_97
+    name: BASELINE_FORECAST_QUANTITY_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_98
+    name: PROMOTIONAL_ADJUST_QUANTITY_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_99
+    name: PROMOTIONAL_ADJUST_QUANTITY_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_100
+    name: PROMOTIONAL_ADJUST_QUANTITY_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_101
+    name: PROMOTIONAL_ADJUST_QUANTITY_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_102
+    name: PROMOTIONAL_ADJUST_QUANTITY_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_103
+    name: PROMOTIONAL_ADJUST_QUANTITY_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_104
+    name: PROMOTIONAL_ADJUST_QUANTITY_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_105
+    name: PROMOTIONAL_ADJUST_QUANTITY_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_106
+    name: PROMOTIONAL_ADJUST_QUANTITY_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_107
+    name: PROMOTIONAL_ADJUST_QUANTITY_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_108
+    name: PROMOTIONAL_ADJUST_QUANTITY_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_109
+    name: PROMOTIONAL_ADJUST_QUANTITY_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_110
+    name: PROMOTIONAL_ADJUST_QUANTITY_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_111
+    name: PROMOTIONAL_ADJUST_QUANTITY_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_112
+    name: PROMOTIONAL_ADJUST_QUANTITY_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_113
+    name: PROMOTIONAL_ADJUST_QUANTITY_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_114
+    name: PROMOTIONAL_ADJUST_QUANTITY_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_115
+    name: PROMOTIONAL_ADJUST_QUANTITY_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_116
+    name: PROMOTIONAL_ADJUST_QUANTITY_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_117
+    name: PROMOTIONAL_ADJUST_QUANTITY_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_118
+    name: SEASONAL_ADJUST_QUANTITY_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_119
+    name: SEASONAL_ADJUST_QUANTITY_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_120
+    name: SEASONAL_ADJUST_QUANTITY_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_121
+    name: SEASONAL_ADJUST_QUANTITY_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_122
+    name: SEASONAL_ADJUST_QUANTITY_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_123
+    name: SEASONAL_ADJUST_QUANTITY_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_124
+    name: SEASONAL_ADJUST_QUANTITY_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_125
+    name: SEASONAL_ADJUST_QUANTITY_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_126
+    name: SEASONAL_ADJUST_QUANTITY_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_127
+    name: SEASONAL_ADJUST_QUANTITY_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_128
+    name: SEASONAL_ADJUST_QUANTITY_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_129
+    name: SEASONAL_ADJUST_QUANTITY_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_130
+    name: SEASONAL_ADJUST_QUANTITY_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_131
+    name: SEASONAL_ADJUST_QUANTITY_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_132
+    name: SEASONAL_ADJUST_QUANTITY_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_133
+    name: SEASONAL_ADJUST_QUANTITY_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_134
+    name: SEASONAL_ADJUST_QUANTITY_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_135
+    name: SEASONAL_ADJUST_QUANTITY_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_136
+    name: SEASONAL_ADJUST_QUANTITY_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_137
+    name: SEASONAL_ADJUST_QUANTITY_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_138
+    name: LAST_YEAR_ACTUALS_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_139
+    name: LAST_YEAR_ACTUALS_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_140
+    name: LAST_YEAR_ACTUALS_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_141
+    name: LAST_YEAR_ACTUALS_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_142
+    name: LAST_YEAR_ACTUALS_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_143
+    name: LAST_YEAR_ACTUALS_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_144
+    name: LAST_YEAR_ACTUALS_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_145
+    name: LAST_YEAR_ACTUALS_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_146
+    name: LAST_YEAR_ACTUALS_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_147
+    name: LAST_YEAR_ACTUALS_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_148
+    name: LAST_YEAR_ACTUALS_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_149
+    name: LAST_YEAR_ACTUALS_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_150
+    name: LAST_YEAR_ACTUALS_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_151
+    name: LAST_YEAR_ACTUALS_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_152
+    name: LAST_YEAR_ACTUALS_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_153
+    name: LAST_YEAR_ACTUALS_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_154
+    name: LAST_YEAR_ACTUALS_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_155
+    name: LAST_YEAR_ACTUALS_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_156
+    name: LAST_YEAR_ACTUALS_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_157
+    name: LAST_YEAR_ACTUALS_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_158
+    name: ITEM_PRICE_S1_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_159
+    name: ITEM_PRICE_S2_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_160
+    name: ITEM_PRICE_S3_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_161
+    name: ITEM_PRICE_S4_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_162
+    name: ITEM_PRICE_S5_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_163
+    name: ITEM_PRICE_S6_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_164
+    name: ITEM_PRICE_S7_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_165
+    name: ITEM_PRICE_S8_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_166
+    name: ITEM_PRICE_S9_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_167
+    name: ITEM_PRICE_S10_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_168
+    name: ITEM_PRICE_S11_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_169
+    name: ITEM_PRICE_S12_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_170
+    name: ITEM_PRICE_S13_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_171
+    name: ITEM_PRICE_S14_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_172
+    name: ITEM_PRICE_S15_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_173
+    name: ITEM_PRICE_S16_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_174
+    name: ITEM_PRICE_S17_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_175
+    name: ITEM_PRICE_S18_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_176
+    name: ITEM_PRICE_S19_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_177
+    name: ITEM_PRICE_S20_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_178
+    name: FORECAST_CURRENCY_VALUE_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_179
+    name: FORECAST_CURRENCY_VALUE_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_180
+    name: FORECAST_CURRENCY_VALUE_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_181
+    name: FORECAST_CURRENCY_VALUE_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_182
+    name: FORECAST_CURRENCY_VALUE_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_183
+    name: FORECAST_CURRENCY_VALUE_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_184
+    name: FORECAST_CURRENCY_VALUE_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_185
+    name: FORECAST_CURRENCY_VALUE_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_186
+    name: FORECAST_CURRENCY_VALUE_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_187
+    name: FORECAST_CURRENCY_VALUE_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_188
+    name: FORECAST_CURRENCY_VALUE_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_189
+    name: FORECAST_CURRENCY_VALUE_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_190
+    name: FORECAST_CURRENCY_VALUE_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_191
+    name: FORECAST_CURRENCY_VALUE_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_192
+    name: FORECAST_CURRENCY_VALUE_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_193
+    name: FORECAST_CURRENCY_VALUE_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_194
+    name: FORECAST_CURRENCY_VALUE_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_195
+    name: FORECAST_CURRENCY_VALUE_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_196
+    name: FORECAST_CURRENCY_VALUE_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_197
+    name: FORECAST_CURRENCY_VALUE_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_198
+    name: OVERRIDE1_CURRENCY_VALUE_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_199
+    name: OVERRIDE1_CURRENCY_VALUE_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_200
+    name: OVERRIDE1_CURRENCY_VALUE_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_201
+    name: OVERRIDE1_CURRENCY_VALUE_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_202
+    name: OVERRIDE1_CURRENCY_VALUE_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_203
+    name: OVERRIDE1_CURRENCY_VALUE_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_204
+    name: OVERRIDE1_CURRENCY_VALUE_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_205
+    name: OVERRIDE1_CURRENCY_VALUE_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_206
+    name: OVERRIDE1_CURRENCY_VALUE_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_207
+    name: OVERRIDE1_CURRENCY_VALUE_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_208
+    name: OVERRIDE1_CURRENCY_VALUE_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_209
+    name: OVERRIDE1_CURRENCY_VALUE_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_210
+    name: OVERRIDE1_CURRENCY_VALUE_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_211
+    name: OVERRIDE1_CURRENCY_VALUE_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_212
+    name: OVERRIDE1_CURRENCY_VALUE_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_213
+    name: OVERRIDE1_CURRENCY_VALUE_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_214
+    name: OVERRIDE1_CURRENCY_VALUE_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_215
+    name: OVERRIDE1_CURRENCY_VALUE_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_216
+    name: OVERRIDE1_CURRENCY_VALUE_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_217
+    name: OVERRIDE1_CURRENCY_VALUE_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_218
+    name: OVERRIDE2_CURRENCY_VALUE_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_219
+    name: OVERRIDE2_CURRENCY_VALUE_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_220
+    name: OVERRIDE2_CURRENCY_VALUE_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_221
+    name: OVERRIDE2_CURRENCY_VALUE_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_222
+    name: OVERRIDE2_CURRENCY_VALUE_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_223
+    name: OVERRIDE2_CURRENCY_VALUE_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_224
+    name: OVERRIDE2_CURRENCY_VALUE_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_225
+    name: OVERRIDE2_CURRENCY_VALUE_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_226
+    name: OVERRIDE2_CURRENCY_VALUE_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_227
+    name: OVERRIDE2_CURRENCY_VALUE_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_228
+    name: OVERRIDE2_CURRENCY_VALUE_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_229
+    name: OVERRIDE2_CURRENCY_VALUE_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_230
+    name: OVERRIDE2_CURRENCY_VALUE_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_231
+    name: OVERRIDE2_CURRENCY_VALUE_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_232
+    name: OVERRIDE2_CURRENCY_VALUE_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_233
+    name: OVERRIDE2_CURRENCY_VALUE_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_234
+    name: OVERRIDE2_CURRENCY_VALUE_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_235
+    name: OVERRIDE2_CURRENCY_VALUE_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_236
+    name: OVERRIDE2_CURRENCY_VALUE_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_237
+    name: OVERRIDE2_CURRENCY_VALUE_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_238
+    name: BASELINE_FORECAST_CUR_VAL_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_239
+    name: BASELINE_FORECAST_CUR_VAL_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_240
+    name: BASELINE_FORECAST_CUR_VAL_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_241
+    name: BASELINE_FORECAST_CUR_VAL_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_242
+    name: BASELINE_FORECAST_CUR_VAL_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_243
+    name: BASELINE_FORECAST_CUR_VAL_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_244
+    name: BASELINE_FORECAST_CUR_VAL_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_245
+    name: BASELINE_FORECAST_CUR_VAL_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_246
+    name: BASELINE_FORECAST_CUR_VAL_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_247
+    name: BASELINE_FORECAST_CUR_VAL_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_248
+    name: BASELINE_FORECAST_CUR_VAL_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_249
+    name: BASELINE_FORECAST_CUR_VAL_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_250
+    name: BASELINE_FORECAST_CUR_VAL_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_251
+    name: BASELINE_FORECAST_CUR_VAL_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_252
+    name: BASELINE_FORECAST_CUR_VAL_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_253
+    name: BASELINE_FORECAST_CUR_VAL_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_254
+    name: BASELINE_FORECAST_CUR_VAL_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_255
+    name: BASELINE_FORECAST_CUR_VAL_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_256
+    name: BASELINE_FORECAST_CUR_VAL_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_257
+    name: BASELINE_FORECAST_CUR_VAL_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_258
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_259
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_260
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_261
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_262
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_263
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_264
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_265
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_266
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_267
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_268
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_269
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_270
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_271
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_272
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_273
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_274
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_275
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_276
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_277
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_278
+    name: SEASONAL_ADJUST_CUR_VAL_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_279
+    name: SEASONAL_ADJUST_CUR_VAL_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_280
+    name: SEASONAL_ADJUST_CUR_VAL_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_281
+    name: SEASONAL_ADJUST_CUR_VAL_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_282
+    name: SEASONAL_ADJUST_CUR_VAL_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_283
+    name: SEASONAL_ADJUST_CUR_VAL_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_284
+    name: SEASONAL_ADJUST_CUR_VAL_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_285
+    name: SEASONAL_ADJUST_CUR_VAL_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_286
+    name: SEASONAL_ADJUST_CUR_VAL_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_287
+    name: SEASONAL_ADJUST_CUR_VAL_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_288
+    name: SEASONAL_ADJUST_CUR_VAL_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_289
+    name: SEASONAL_ADJUST_CUR_VAL_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_290
+    name: SEASONAL_ADJUST_CUR_VAL_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_291
+    name: SEASONAL_ADJUST_CUR_VAL_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_292
+    name: SEASONAL_ADJUST_CUR_VAL_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_293
+    name: SEASONAL_ADJUST_CUR_VAL_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_294
+    name: SEASONAL_ADJUST_CUR_VAL_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_295
+    name: SEASONAL_ADJUST_CUR_VAL_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_296
+    name: SEASONAL_ADJUST_CUR_VAL_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_297
+    name: SEASONAL_ADJUST_CUR_VAL_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_298
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_299
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_300
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_301
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_302
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_303
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_304
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_305
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_306
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_307
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_308
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_309
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_310
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_311
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_312
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_313
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_314
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_315
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_316
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_317
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_318
+    name: ITEM_PRICE_S1_CURRENCY
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_319
+    name: ITEM_PRICE_S2_CURRENCY
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_320
+    name: ITEM_PRICE_S3_CURRENCY
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_321
+    name: ITEM_PRICE_S4_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_322
+    name: ITEM_PRICE_S5_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_323
+    name: ITEM_PRICE_S6_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_324
+    name: ITEM_PRICE_S7_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_325
+    name: ITEM_PRICE_S8_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_326
+    name: ITEM_PRICE_S9_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_327
+    name: ITEM_PRICE_S10_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_328
+    name: ITEM_PRICE_S11_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_329
+    name: ITEM_PRICE_S12_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_330
+    name: ITEM_PRICE_S13_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_331
+    name: ITEM_PRICE_S14_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_332
+    name: ITEM_PRICE_S15_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_333
+    name: ITEM_PRICE_S16_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_334
+    name: ITEM_PRICE_S17_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_335
+    name: ITEM_PRICE_S18_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_336
+    name: ITEM_PRICE_S19_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_337
+    name: ITEM_PRICE_S20_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_338
+    name: NETTED_FORECAST_QUANTITY_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_339
+    name: DPX_CANNIBALIZATION_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_340
+    name: DPX_CANNIBALIZATION_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_341
+    name: DPX_CANNIBALIZATION_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_342
+    name: DPX_CANNIBALIZATION_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_343
+    name: CANNIBALIZATION_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_344
+    name: CANNIBALIZATION_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_345
+    name: CANNIBALIZATION_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_346
+    name: CANNIBALIZATION_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_347
+    name: CANNIBALIZATION_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_348
+    name: CANNIBALIZATION_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_349
+    name: CANNIBALIZATION_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_350
+    name: CANNIBALIZATION_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_351
+    name: CANNIBALIZATION_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_352
+    name: CANNIBALIZATION_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_353
+    name: CANNIBALIZATION_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_354
+    name: CANNIBALIZATION_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_355
+    name: CANNIBALIZATION_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_356
+    name: CANNIBALIZATION_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_357
+    name: CANNIBALIZATION_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_358
+    name: CANNIBALIZATION_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_359
+    name: DPX_CATEGORY_DRAG_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_360
+    name: DPX_CATEGORY_DRAG_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_361
+    name: DPX_CATEGORY_DRAG_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_362
+    name: DPX_CATEGORY_DRAG_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_363
+    name: CATEGORY_DRAG_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_364
+    name: CATEGORY_DRAG_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_365
+    name: CATEGORY_DRAG_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_366
+    name: CATEGORY_DRAG_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_367
+    name: CATEGORY_DRAG_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_368
+    name: CATEGORY_DRAG_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_369
+    name: CATEGORY_DRAG_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_370
+    name: CATEGORY_DRAG_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_371
+    name: CATEGORY_DRAG_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_372
+    name: CATEGORY_DRAG_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_373
+    name: CATEGORY_DRAG_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_374
+    name: CATEGORY_DRAG_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_375
+    name: CATEGORY_DRAG_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_376
+    name: CATEGORY_DRAG_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_377
+    name: CATEGORY_DRAG_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_378
+    name: CATEGORY_DRAG_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_379
+    name: DPX_COMPETITOR_PROMO_S1
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_380
+    name: DPX_COMPETITOR_PROMO_S2
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_381
+    name: DPX_COMPETITOR_PROMO_S3
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_382
+    name: DPX_COMPETITOR_PROMO_S4
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_383
+    name: COMPETITOR_PROMO_S5
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_384
+    name: COMPETITOR_PROMO_S6
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_385
+    name: COMPETITOR_PROMO_S7
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_386
+    name: COMPETITOR_PROMO_S8
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_387
+    name: COMPETITOR_PROMO_S9
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_388
+    name: COMPETITOR_PROMO_S10
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_389
+    name: COMPETITOR_PROMO_S11
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_390
+    name: COMPETITOR_PROMO_S12
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_391
+    name: COMPETITOR_PROMO_S13
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_392
+    name: COMPETITOR_PROMO_S14
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_393
+    name: COMPETITOR_PROMO_S15
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_394
+    name: COMPETITOR_PROMO_S16
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_395
+    name: COMPETITOR_PROMO_S17
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_396
+    name: COMPETITOR_PROMO_S18
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_397
+    name: COMPETITOR_PROMO_S19
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_398
+    name: COMPETITOR_PROMO_S20
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_399
+    name: HISTORICAL_SALES
+    type: DECIMAL(65,6)
+  - id: sc_demand_forecast_nc_400
+    name: ITEM_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_nc_401
+    name: ITEM_INDICATOR
+    type: DECIMAL(1,0)
+  - id: sc_demand_forecast_nc_402
+    name: ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_403
+    name: OVERRIDE_SIGN
+    type: DECIMAL(1,0)
+  - id: sc_demand_forecast_nc_404
+    name: PARTNER_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_nc_405
+    name: PARTNER_NAME
+    type: VARCHAR(192)
+  - id: sc_demand_forecast_nc_406
+    name: PARTNER_ORGANIZATION_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_nc_407
+    name: PARTNER_ORG_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_nc_408
+    name: PARTNER_ORG_ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_nc_409
+    name: SITE_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_nc_410
+    name: SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_demand_forecast_nc_411
+    name: SITE_ORGANIZATION_NAME
+    type: VARCHAR(128)
+  - id: sc_demand_forecast_nc_412
+    name: SITE_PARTNER_INDICATOR
+    type: DECIMAL(1,0)
+  - id: sc_demand_forecast_nc_413
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_nc_414
+    name: SYS_DEMAND_FORECAST_ID
+    type: BIGINT(20)
+  - id: sc_demand_forecast_nc_415
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_demand_forecast_nc_416
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_demand_forecast_nc_417
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_demand_forecast_nc_418
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_demand_forecast_nc_419
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_demand_forecast_nc_420
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_demand_forecast_nc_421
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

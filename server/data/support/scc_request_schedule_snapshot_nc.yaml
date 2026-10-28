@@ -1,0 +1,33 @@
+id: support_scc_request_schedule_snapshot_nc
+kind: support
+name: scc_request_schedule_snapshot_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_request_schedule_snapshot_nc_0
+    name: SYS_REQUEST_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_snapshot_nc_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_request_schedule_snapshot_nc_2
+    name: SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_snapshot_nc_3
+    name: REQUEST_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_snapshot_nc_4
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_snapshot_nc_5
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_request_schedule_snapshot_nc_6
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_snapshot_nc_7
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_request_schedule_snapshot_nc_8
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)

@@ -1,0 +1,114 @@
+id: support_dw_scc_scen_prod_order_fcst
+kind: support
+name: dw_scc_scen_prod_order_fcst
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_scen_prod_order_fcst_0
+    name: SYS_PROD_ORDER_FCST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_1
+    name: FORECAST_NO
+    type: VARCHAR(128)
+  - id: sc_dw_scc_scen_prod_order_fcst_2
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_scen_prod_order_fcst_3
+    name: FORECAST_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_4
+    name: FREEZE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_5
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(128)
+  - id: sc_dw_scc_scen_prod_order_fcst_6
+    name: PLANNED_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_scen_prod_order_fcst_7
+    name: REQUEST_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_scen_prod_order_fcst_8
+    name: PROMISE_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_scen_prod_order_fcst_9
+    name: QUANTITY_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_10
+    name: APPROVED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_11
+    name: CONFIRMED_BY
+    type: VARCHAR(128)
+  - id: sc_dw_scc_scen_prod_order_fcst_12
+    name: CONFIRMED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_13
+    name: PLANNED_VERSION
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_14
+    name: REQUEST_VERSION
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_15
+    name: PROMISE_VERSION
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_16
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_17
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_18
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_19
+    name: SYS_SCENARIO_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_20
+    name: SYS_APPROVED_BY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_21
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_22
+    name: SYS_REQUESTING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_23
+    name: SYS_EXECUTION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_24
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_25
+    name: SYS_CUSTOMER_OF_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_26
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_27
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_28
+    name: MFG_FORECAST_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_29
+    name: ORIGIN
+    type: VARCHAR(128)
+  - id: sc_dw_scc_scen_prod_order_fcst_30
+    name: MFG_OPTIMAL_PLANNED_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_scen_prod_order_fcst_31
+    name: MFG_SYS_SITE_RSRC_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_prod_order_fcst_32
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_33
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_34
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_prod_order_fcst_35
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

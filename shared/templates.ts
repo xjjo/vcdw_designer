@@ -8,6 +8,9 @@ import type {
   Dimension,
   Enumeration,
   Fact,
+  LookupDef,
+  NetChangeSource,
+  SourceColumn,
 } from './types';
 
 let counter = 0;
@@ -50,14 +53,29 @@ export function materializeAuditColumns(profile: AuditFieldProfile): Column[] {
   return profile.columns.map((c) => ({ ...c, id: uid('col') }));
 }
 
-export function standardEnumColumns(enumName: string): Column[] {
-  const key = `${enumName.toUpperCase()}_KEY`;
+export function standardEnumColumns(enumName: string, entLookupId?: string): Column[] {
+  const base = enumName.toUpperCase();
+  // Canonical VCDW enum target shape: surrogate key + OLTP natural key + name + code + scope.
   return [
-    col({ name: key, type: 'BIGINT', isPk: true, isSk: true, autoIncrement: true, nullable: false }),
-    col({ name: 'ENUM_TYPE', type: 'VARCHAR(64)', nullable: false }),
-    col({ name: 'ENUM_ENTRY_NAME', type: 'VARCHAR(128)', isNaturalKey: true, nullable: false }),
-    col({ name: 'ENUM_ENTRY_VALUE', type: 'VARCHAR(256)', nullable: true }),
-    col({ name: 'OLTP_ID', type: 'BIGINT', nullable: true }),
+    col({ name: `${base}_KEY`, type: 'BIGINT', isPk: true, isSk: true, autoIncrement: true, nullable: false, mappingKind: 'generated' }),
+    col({ name: 'OLTP_ID', type: 'BIGINT', isNaturalKey: true, nullable: false, mappingKind: 'direct', sourceColumn: 'sys_enum_id', sourceTable: 'en' }),
+    col({ name: `${base}_NAME`, type: 'VARCHAR(256)', nullable: false, mappingKind: 'direct', sourceColumn: 'enum_entry_name', sourceTable: 'en' }),
+    col({ name: 'ENUM_ENTRY_VALUE', type: 'DECIMAL(5,0)', nullable: true, mappingKind: 'direct', sourceColumn: 'enum_entry_value', sourceTable: 'en' }),
+    col({ name: 'ENT_NAME', type: 'VARCHAR(64)', nullable: true, mappingKind: 'lookup', lookupId: entLookupId, sourceTable: 'e' }),
+  ];
+}
+
+/** Physical columns of the shared `enumeration_nc` source table. */
+export function standardEnumSourceColumns(): SourceColumn[] {
+  return [
+    { id: uid('sc'), name: 'sys_enum_id', type: 'BIGINT' },
+    { id: uid('sc'), name: 'enum_type', type: 'VARCHAR(64)' },
+    { id: uid('sc'), name: 'enum_entry_name', type: 'VARCHAR(256)' },
+    { id: uid('sc'), name: 'enum_entry_value', type: 'DECIMAL(5,0)' },
+    { id: uid('sc'), name: 'last_modified_date', type: 'DATETIME(6)' },
+    { id: uid('sc'), name: 'hidden', type: 'DECIMAL(1,0)' },
+    { id: uid('sc'), name: 'sys_ent_id', type: 'BIGINT' },
+    { id: uid('sc'), name: 'es_lmd', type: 'DATETIME(6)' },
   ];
 }
 
@@ -79,8 +97,63 @@ export function standardFactColumns(factName: string): Column[] {
   ];
 }
 
+/**
+ * Definable "standard column" presets, filtered by entity category. Each profile
+ * builds a fresh set of columns for a given entity name so the UI can offer
+ * category-appropriate choices from the "Insert standard columns" control.
+ */
+export interface StandardColumnProfile {
+  id: string;
+  label: string;
+  description?: string;
+  /** Categories where this profile is offered. */
+  categories: ('enumeration' | 'dimension' | 'fact' | 'support')[];
+  /** Build the columns for an entity with the given physical name. */
+  build: (entityName: string) => Column[];
+}
+
+export const STANDARD_COLUMN_PROFILES: StandardColumnProfile[] = [
+  {
+    id: 'enum_core',
+    label: 'Enumeration core (KEY · OLTP_ID · NAME · VALUE · ENT_NAME)',
+    description: 'Canonical VCDW enumeration target shape.',
+    categories: ['enumeration'],
+    build: (n) => standardEnumColumns(n),
+  },
+  {
+    id: 'dim_core',
+    label: 'Dimension core (KEY · OLTP_ID)',
+    description: 'Surrogate key plus OLTP natural key.',
+    categories: ['dimension'],
+    build: (n) => standardDimensionColumns(n),
+  },
+  {
+    id: 'fact_core',
+    label: 'Fact core (KEY · OLTP_ID · REPORT_DATE)',
+    description: 'Surrogate key, natural key and report-date columns.',
+    categories: ['fact'],
+    build: (n) => standardFactColumns(n),
+  },
+  {
+    id: 'audit',
+    label: 'Audit (DELETED · DW_CREATED · DW_LAST_MODIFIED)',
+    description: 'Soft-delete flag and DW create/modify timestamps.',
+    categories: ['enumeration', 'dimension', 'fact'],
+    build: () => materializeAuditColumns(defaultAuditProfile()),
+  },
+];
+
+/** Standard column profiles offered for a given entity category. */
+export function standardProfilesFor(
+  category: 'enumeration' | 'dimension' | 'fact' | 'support',
+): StandardColumnProfile[] {
+  return STANDARD_COLUMN_PROFILES.filter((p) => p.categories.includes(category));
+}
+
 export function newEnumeration(name = 'new_enum'): Enumeration {
   const audit = defaultAuditProfile();
+  const base = name.toUpperCase();
+  const entLookup = standardEnterpriseLookup();
   return {
     id: uid('enum'),
     kind: 'enumeration',
@@ -91,11 +164,77 @@ export function newEnumeration(name = 'new_enum'): Enumeration {
     isReferenceTable: true,
     sourceNcTable: 'enumeration_nc',
     enumTypeFilter: name,
+    enumTable: name,
+    fieldKey: `${base}_KEY`,
+    fieldName: `${base}_NAME`,
+    entScopeSource: 'sys_ent_id',
     auditProfileId: audit.id,
-    columns: [...standardEnumColumns(name), ...materializeAuditColumns(audit)],
+    columns: [],
+    netChange: [standardEnumNetChange(name)],
+    lookups: [entLookup],
     etlConfig: { isEnabled: true, priority: 5 },
     ui: { x: 40, y: 40 },
   };
+}
+
+/** Standard `enumeration_nc` net-change source shared by (almost) every enum. */
+export function standardEnumNetChange(enumType: string): NetChangeSource {
+  return {
+    id: uid('nc'),
+    role: 'netchange',
+    isPrimary: true,
+    oltpTable: 'enumeration',
+    oltpTableSysId: 'SYS_ENUM_ID',
+    oltpTableLmd: 'es_lmd',
+    ncTable: 'enumeration_nc',
+    dwOltpCopyTable: 'dw_enumeration',
+    condition: `enum_type='${enumType}'`,
+    alias: 'en',
+    columns: standardEnumSourceColumns(),
+  };
+}
+
+/** Standard enterprise-scope lookup that resolves ENT_NAME from `sys_ent_id`. */
+export function standardEnterpriseLookup(): LookupDef {
+  return {
+    id: uid('lkp'),
+    name: 'Lookup enterprise scope',
+    tableName: 'enterprise',
+    cache: true,
+    strategy: 'left_join',
+    streamKeyFields: ['sys_ent_id'],
+    tableKeyFields: ['OLTP_ID'],
+    keyConditions: ['='],
+    returnFields: [{ field: 'ENT_NAME', newName: 'ENT_NAME' }],
+  };
+}
+
+/** Titleize a snake/lower identifier for display: `load_type` -> `Load Type`. */
+export function titleize(name: string): string {
+  return name
+    .replace(/[_.]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+/**
+ * Build a fully-formed enumeration design from a catalog row so its columns are
+ * generated with the correct physical name (no stale placeholder like ENUM_1_KEY).
+ */
+export function newEnumerationFromCatalog(
+  name: string,
+  enumType?: string,
+  kjb?: string,
+): Enumeration {
+  const e = newEnumeration(name);
+  e.displayName = `${titleize(name)} Enumeration`;
+  if (enumType) {
+    e.enumTypeFilter = enumType;
+    e.netChange = [standardEnumNetChange(enumType)];
+  }
+  if (kjb) e.description = `ETL sync transform: ${kjb}.ktr`;
+  return e;
 }
 
 export function newDimension(name = 'new_dim'): Dimension {
@@ -115,7 +254,7 @@ export function newDimension(name = 'new_dim'): Dimension {
     shardKey: 'OLTP_ID',
     sortKeys: ['OLTP_ID'],
     auditProfileId: audit.id,
-    columns: [...standardDimensionColumns(name), ...materializeAuditColumns(audit)],
+    columns: [],
     etlConfig: { isEnabled: true, priority: 1 },
     ui: { x: 40, y: 40 },
   };
@@ -138,7 +277,7 @@ export function newFact(name = 'dw_new_fact'): Fact {
     shardKey: 'OLTP_ID',
     sortKeys: ['OLTP_ID', 'REPORT_DATE_KEY', 'DELETED'],
     auditProfileId: audit.id,
-    columns: [...standardFactColumns(name), ...materializeAuditColumns(audit)],
+    columns: [],
     dimensionLookups: [],
     geoEnrichment: [],
     currencyConversions: [],

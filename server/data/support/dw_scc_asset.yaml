@@ -1,0 +1,33 @@
+id: support_dw_scc_asset
+kind: support
+name: dw_scc_asset
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_asset_0
+    name: SYS_ASSET_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_asset_1
+    name: SYS_OWNING_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_asset_2
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_asset_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_asset_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_asset_5
+    name: ASSET_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_asset_6
+    name: AUXILLIARY_KEY
+    type: VARCHAR(1024)
+  - id: sc_dw_scc_asset_7
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_asset_8
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

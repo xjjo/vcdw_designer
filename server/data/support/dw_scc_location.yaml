@@ -1,0 +1,63 @@
+id: support_dw_scc_location
+kind: support
+name: dw_scc_location
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_location_0
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_location_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_location_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_location_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_location_4
+    name: NAME
+    type: VARCHAR(164)
+  - id: sc_dw_scc_location_5
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+  - id: sc_dw_scc_location_6
+    name: LOCATION_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_location_7
+    name: IS_DEFAULT
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_location_8
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_location_9
+    name: RUN_REPLENISHMENT
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_location_10
+    name: AUTO_PUTAWAY
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_location_11
+    name: SPACE_CAPACITY
+    type: BIGINT(20)
+  - id: sc_dw_scc_location_12
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_location_13
+    name: SYS_PARENT_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_location_14
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_location_15
+    name: WMS_LOCKED
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_location_16
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_location_17
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_location_18
+    name: WMS_LOCK_STATUS
+    type: VARCHAR(256)

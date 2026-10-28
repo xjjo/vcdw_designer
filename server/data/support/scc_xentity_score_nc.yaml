@@ -1,0 +1,96 @@
+id: support_scc_xentity_score_nc
+kind: support
+name: scc_xentity_score_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_xentity_score_nc_0
+    name: ADDITIONAL_SCORES
+    type: TEXT
+  - id: sc_scc_xentity_score_nc_1
+    name: AGGREGATOR
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_2
+    name: AGGREGATOR_ID
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_xentity_score_nc_4
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_5
+    name: ENTITY_ID
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_6
+    name: ENV_HAZARD_SCORE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_score_nc_7
+    name: ESGSCORE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_score_nc_8
+    name: FINANCIAL_SCORE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_score_nc_9
+    name: GEO_POLITICAL_SCORE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_score_nc_10
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_xentity_score_nc_11
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_12
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_xentity_score_nc_13
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_14
+    name: MODEL_REFERENCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_15
+    name: MODEL_REFERENCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_xentity_score_nc_16
+    name: MODEL_REFERENCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_17
+    name: SCORE_ATTRIBUTES
+    type: LONGTEXT
+  - id: sc_scc_xentity_score_nc_18
+    name: SYS_ENTITY_ID
+    type: BIGINT(20)
+  - id: sc_scc_xentity_score_nc_19
+    name: SYS_XENTITY_SCORE_ID
+    type: BIGINT(20)
+  - id: sc_scc_xentity_score_nc_20
+    name: TECH_SCORE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_score_nc_21
+    name: TOTAL_SCORE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_score_nc_22
+    name: TRADE_REGULATION_SCORE
+    type: DECIMAL(65,6)
+  - id: sc_scc_xentity_score_nc_23
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_xentity_score_nc_24
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_xentity_score_nc_25
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_xentity_score_nc_26
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_xentity_score_nc_27
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_xentity_score_nc_28
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)
+  - id: sc_scc_xentity_score_nc_29
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

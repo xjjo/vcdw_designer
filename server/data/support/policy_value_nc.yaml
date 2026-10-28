@@ -1,0 +1,42 @@
+id: support_policy_value_nc
+kind: support
+name: policy_value_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_policy_value_nc_0
+    name: SYS_POLICY_VALUE_ID
+    type: BIGINT(20)
+  - id: sc_policy_value_nc_1
+    name: OWNER_DISPLAY
+    type: VARCHAR(256)
+  - id: sc_policy_value_nc_2
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_policy_value_nc_3
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_policy_value_nc_4
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_policy_value_nc_5
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_policy_value_nc_6
+    name: VALUE
+    type: LONGTEXT
+  - id: sc_policy_value_nc_7
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_policy_value_nc_8
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_policy_value_nc_9
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_policy_value_nc_10
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_policy_value_nc_11
+    name: RECONCILED
+    type: TINYINT(1)

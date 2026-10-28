@@ -1,14 +1,13 @@
-import type { AnyEntity, LookupDef } from '@shared/types';
+import type { LookupDef } from '@shared/types';
 import { uid } from '@shared/templates';
 
 interface Props {
   lookups: LookupDef[];
-  entities: AnyEntity[];
   onChange: (l: LookupDef[]) => void;
 }
 
 /** Generic, fully customizable lookups (maps 1:1 to the ETL generator lookup contract). */
-export default function LookupsEditor({ lookups, entities, onChange }: Props) {
+export default function LookupsEditor({ lookups, onChange }: Props) {
   function update(id: string, patch: Partial<LookupDef>) {
     onChange(lookups.map((l) => (l.id === id ? { ...l, ...patch } : l)));
   }
@@ -17,9 +16,10 @@ export default function LookupsEditor({ lookups, entities, onChange }: Props) {
   }
   return (
     <div className="panel">
-      <h3>Custom lookups</h3>
+      <h3>Lookups</h3>
       <p className="hint">
         Comma-separate multiple fields. Return fields use the same order across the return columns.
+        With joins defined in the Joins tab, these entries behave as stream lookups.
       </p>
       <div className="section-actions">
         <button
@@ -48,20 +48,6 @@ export default function LookupsEditor({ lookups, entities, onChange }: Props) {
             <div className="field">
               <label>Lookup table</label>
               <input value={l.tableName} onChange={(e) => update(l.id, { tableName: e.target.value })} />
-            </div>
-            <div className="field">
-              <label>Linked entity (diagram)</label>
-              <select
-                value={l.targetEntityId ?? ''}
-                onChange={(e) => update(l.id, { targetEntityId: e.target.value || undefined })}
-              >
-                <option value="">— none —</option>
-                {entities.map((en) => (
-                  <option key={en.id} value={en.id}>
-                    {en.name}
-                  </option>
-                ))}
-              </select>
             </div>
             <div className="field" style={{ maxWidth: 120 }}>
               <label className="check">

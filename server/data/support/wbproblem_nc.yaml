@@ -1,0 +1,120 @@
+id: support_wbproblem_nc
+kind: support
+name: wbproblem_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_wbproblem_nc_0
+    name: ATT1
+    type: VARCHAR(256)
+  - id: sc_wbproblem_nc_1
+    name: ATT2
+    type: VARCHAR(256)
+  - id: sc_wbproblem_nc_2
+    name: ATT3
+    type: VARCHAR(256)
+  - id: sc_wbproblem_nc_3
+    name: CORRELATION_ID
+    type: VARCHAR(1024)
+  - id: sc_wbproblem_nc_4
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_nc_5
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_wbproblem_nc_6
+    name: ESCALATED
+    type: DECIMAL(1,0)
+  - id: sc_wbproblem_nc_7
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_nc_8
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_nc_9
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_wbproblem_nc_10
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_nc_11
+    name: MODEL_REF_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_wbproblem_nc_12
+    name: MODEL_REF_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_nc_13
+    name: MODEL_REF_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_wbproblem_nc_14
+    name: PARAMS_JSON
+    type: LONGTEXT
+  - id: sc_wbproblem_nc_15
+    name: PRIORITY
+    type: VARCHAR(256)
+  - id: sc_wbproblem_nc_16
+    name: DUE_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_nc_17
+    name: RESOLUTION_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_nc_18
+    name: PROBLEM_ID
+    type: VARCHAR(256)
+  - id: sc_wbproblem_nc_19
+    name: RESOLUTION
+    type: VARCHAR(4000)
+  - id: sc_wbproblem_nc_20
+    name: RESOLUTION_CODE
+    type: VARCHAR(128)
+  - id: sc_wbproblem_nc_21
+    name: ROOM_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_nc_22
+    name: ROOM_PREAUTH_GUID
+    type: VARCHAR(128)
+  - id: sc_wbproblem_nc_23
+    name: ROOT_CAUSE
+    type: VARCHAR(128)
+  - id: sc_wbproblem_nc_24
+    name: ROOT_CAUSE_EXPLANATION
+    type: VARCHAR(4000)
+  - id: sc_wbproblem_nc_25
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_wbproblem_nc_26
+    name: SUMMARY_JSON
+    type: LONGTEXT
+  - id: sc_wbproblem_nc_27
+    name: SYS_ASSIGNEE_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_nc_28
+    name: SYS_OWNER_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_nc_29
+    name: SYS_PROBLEM_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_nc_30
+    name: SYS_WBPROBLEM_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_nc_31
+    name: TITLE_ARGS
+    type: VARCHAR(4000)
+  - id: sc_wbproblem_nc_32
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_wbproblem_nc_33
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_wbproblem_nc_34
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_wbproblem_nc_35
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_wbproblem_nc_36
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_wbproblem_nc_37
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

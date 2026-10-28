@@ -1,0 +1,1462 @@
+tables:
+  - name: aggregated_orders_nc
+    tableKind: nc
+    yaml: aggregated_orders_nc.yaml
+  - name: aggregated_shipments_nc
+    tableKind: nc
+    yaml: aggregated_shipments_nc.yaml
+  - name: ams_asset_fact_nc
+    tableKind: nc
+    yaml: ams_asset_fact_nc.yaml
+  - name: attachment_nc
+    tableKind: nc
+    yaml: attachment_nc.yaml
+  - name: attribute_nc
+    tableKind: nc
+    yaml: attribute_nc.yaml
+  - name: avl_line_nc
+    tableKind: nc
+    yaml: avl_line_nc.yaml
+  - name: buffer_measure_daily_nc
+    tableKind: nc
+    yaml: buffer_measure_daily_nc.yaml
+  - name: buffer_nc
+    tableKind: nc
+    yaml: buffer_nc.yaml
+  - name: client_login_history_nc
+    tableKind: nc
+    yaml: client_login_history_nc.yaml
+  - name: currency_conversion_nc
+    tableKind: nc
+    yaml: currency_conversion_nc.yaml
+  - name: currency_converter_nc
+    tableKind: nc
+    yaml: currency_converter_nc.yaml
+  - name: delete_audit_nc
+    tableKind: nc
+    yaml: delete_audit_nc.yaml
+  - name: demand_forecast_nc
+    tableKind: nc
+    yaml: demand_forecast_nc.yaml
+  - name: demand_forecast_snapshot_nc
+    tableKind: nc
+    yaml: demand_forecast_snapshot_nc.yaml
+  - name: dpx_data_measure_nc
+    tableKind: nc
+    yaml: dpx_data_measure_nc.yaml
+  - name: dw_aggregated_orders
+    tableKind: dw
+    yaml: dw_aggregated_orders.yaml
+  - name: dw_aggregated_shipments
+    tableKind: dw
+    yaml: dw_aggregated_shipments.yaml
+  - name: dw_ams_asset_fact
+    tableKind: dw
+    yaml: dw_ams_asset_fact.yaml
+  - name: dw_attachment
+    tableKind: dw
+    yaml: dw_attachment.yaml
+  - name: dw_attribute
+    tableKind: dw
+    yaml: dw_attribute.yaml
+  - name: dw_avl_line
+    tableKind: dw
+    yaml: dw_avl_line.yaml
+  - name: dw_buffer
+    tableKind: dw
+    yaml: dw_buffer.yaml
+  - name: dw_client_login_history
+    tableKind: dw
+    yaml: dw_client_login_history.yaml
+  - name: dw_csv_chunk_tracker
+    tableKind: dw
+    yaml: dw_csv_chunk_tracker.yaml
+  - name: dw_currency_conversion
+    tableKind: dw
+    yaml: dw_currency_conversion.yaml
+  - name: dw_currency_converter
+    tableKind: dw
+    yaml: dw_currency_converter.yaml
+  - name: dw_delete_audit
+    tableKind: dw
+    yaml: dw_delete_audit.yaml
+  - name: dw_delete_audit_temp
+    tableKind: dw
+    yaml: dw_delete_audit_temp.yaml
+  - name: dw_demand_forecast
+    tableKind: dw
+    yaml: dw_demand_forecast.yaml
+  - name: dw_dimension_enabler_config
+    tableKind: dw
+    yaml: dw_dimension_enabler_config.yaml
+  - name: dw_dpx_data_measure
+    tableKind: dw
+    yaml: dw_dpx_data_measure.yaml
+  - name: dw_enterprise
+    tableKind: dw
+    yaml: dw_enterprise.yaml
+  - name: dw_enum_conversion_def
+    tableKind: dw
+    yaml: dw_enum_conversion_def.yaml
+  - name: dw_enum_conversion_factor
+    tableKind: dw
+    yaml: dw_enum_conversion_factor.yaml
+  - name: dw_enumeration
+    tableKind: dw
+    yaml: dw_enumeration.yaml
+  - name: dw_equipment_type
+    tableKind: dw
+    yaml: dw_equipment_type.yaml
+  - name: dw_fact_enabler_config
+    tableKind: dw
+    yaml: dw_fact_enabler_config.yaml
+  - name: dw_fact_loader_execution_history
+    tableKind: dw
+    yaml: dw_fact_loader_execution_history.yaml
+  - name: dw_fin_il_category
+    tableKind: dw
+    yaml: dw_fin_il_category.yaml
+  - name: dw_fin_invoice_evt
+    tableKind: dw
+    yaml: dw_fin_invoice_evt.yaml
+  - name: dw_fiscal_calendar
+    tableKind: dw
+    yaml: dw_fiscal_calendar.yaml
+  - name: dw_geo_pattern
+    tableKind: dw
+    yaml: dw_geo_pattern.yaml
+  - name: dw_geo_pattern_list
+    tableKind: dw
+    yaml: dw_geo_pattern_list.yaml
+  - name: dw_hierarchy_meta
+    tableKind: dw
+    yaml: dw_hierarchy_meta.yaml
+  - name: dw_internal_config
+    tableKind: dw
+    yaml: dw_internal_config.yaml
+  - name: dw_invoice
+    tableKind: dw
+    yaml: dw_invoice.yaml
+  - name: dw_invoice_line
+    tableKind: dw
+    yaml: dw_invoice_line.yaml
+  - name: dw_invoice_line_detail
+    tableKind: dw
+    yaml: dw_invoice_line_detail.yaml
+  - name: dw_item
+    tableKind: dw
+    yaml: dw_item.yaml
+  - name: dw_item_pgrp_level_assoc
+    tableKind: dw
+    yaml: dw_item_pgrp_level_assoc.yaml
+  - name: dw_job_procedure_error_log
+    tableKind: dw
+    yaml: dw_job_procedure_error_log.yaml
+  - name: dw_job_table_stats
+    tableKind: dw
+    yaml: dw_job_table_stats.yaml
+  - name: dw_mfg_capacity_consumption
+    tableKind: dw
+    yaml: dw_mfg_capacity_consumption.yaml
+  - name: dw_mfg_pof_history
+    tableKind: dw
+    yaml: dw_mfg_pof_history.yaml
+  - name: dw_mfg_prod_order_milestone
+    tableKind: dw
+    yaml: dw_mfg_prod_order_milestone.yaml
+  - name: dw_mfg_prod_order_ms_evt
+    tableKind: dw
+    yaml: dw_mfg_prod_order_ms_evt.yaml
+  - name: dw_mfg_routing
+    tableKind: dw
+    yaml: dw_mfg_routing.yaml
+  - name: dw_mfg_site_rsrc_allocation
+    tableKind: dw
+    yaml: dw_mfg_site_rsrc_allocation.yaml
+  - name: dw_mfg_womilestone_event
+    tableKind: dw
+    yaml: dw_mfg_womilestone_event.yaml
+  - name: dw_mfg_work_order_milestone
+    tableKind: dw
+    yaml: dw_mfg_work_order_milestone.yaml
+  - name: dw_mvmt_header
+    tableKind: dw
+    yaml: dw_mvmt_header.yaml
+  - name: dw_mvmt_stop
+    tableKind: dw
+    yaml: dw_mvmt_stop.yaml
+  - name: dw_mvmt_stop_line
+    tableKind: dw
+    yaml: dw_mvmt_stop_line.yaml
+  - name: dw_nc_table_detailed_stats
+    tableKind: dw
+    yaml: dw_nc_table_detailed_stats.yaml
+  - name: dw_oltp_tables_mapping
+    tableKind: dw
+    yaml: dw_oltp_tables_mapping.yaml
+  - name: dw_oms_additional_cost
+    tableKind: dw
+    yaml: dw_oms_additional_cost.yaml
+  - name: dw_oms_contract
+    tableKind: dw
+    yaml: dw_oms_contract.yaml
+  - name: dw_oms_contract_line
+    tableKind: dw
+    yaml: dw_oms_contract_line.yaml
+  - name: dw_oms_contract_price
+    tableKind: dw
+    yaml: dw_oms_contract_price.yaml
+  - name: dw_oms_contract_terms
+    tableKind: dw
+    yaml: dw_oms_contract_terms.yaml
+  - name: dw_oms_cost_component
+    tableKind: dw
+    yaml: dw_oms_cost_component.yaml
+  - name: dw_oms_payment_terms
+    tableKind: dw
+    yaml: dw_oms_payment_terms.yaml
+  - name: dw_oms_pr_milestone
+    tableKind: dw
+    yaml: dw_oms_pr_milestone.yaml
+  - name: dw_oms_prmilestone_event
+    tableKind: dw
+    yaml: dw_oms_prmilestone_event.yaml
+  - name: dw_oms_scorecard_entry
+    tableKind: dw
+    yaml: dw_oms_scorecard_entry.yaml
+  - name: dw_oms_scorecard_formula
+    tableKind: dw
+    yaml: dw_oms_scorecard_formula.yaml
+  - name: dw_oms_scorecard_measures
+    tableKind: dw
+    yaml: dw_oms_scorecard_measures.yaml
+  - name: dw_oms_user_product_assc
+    tableKind: dw
+    yaml: dw_oms_user_product_assc.yaml
+  - name: dw_order_forecast
+    tableKind: dw
+    yaml: dw_order_forecast.yaml
+  - name: dw_org_code
+    tableKind: dw
+    yaml: dw_org_code.yaml
+  - name: dw_organization
+    tableKind: dw
+    yaml: dw_organization.yaml
+  - name: dw_papt
+    tableKind: dw
+    yaml: dw_papt.yaml
+  - name: dw_partner
+    tableKind: dw
+    yaml: dw_partner.yaml
+  - name: dw_partner_profile
+    tableKind: dw
+    yaml: dw_partner_profile.yaml
+  - name: dw_partner_site
+    tableKind: dw
+    yaml: dw_partner_site.yaml
+  - name: dw_payment
+    tableKind: dw
+    yaml: dw_payment.yaml
+  - name: dw_person
+    tableKind: dw
+    yaml: dw_person.yaml
+  - name: dw_person_space
+    tableKind: dw
+    yaml: dw_person_space.yaml
+  - name: dw_pipeline_job_execution_history
+    tableKind: dw
+    yaml: dw_pipeline_job_execution_history.yaml
+  - name: dw_pipeline_sync_history
+    tableKind: dw
+    yaml: dw_pipeline_sync_history.yaml
+  - name: dw_pipeline_sync_status
+    tableKind: dw
+    yaml: dw_pipeline_sync_status.yaml
+  - name: dw_plan
+    tableKind: dw
+    yaml: dw_plan.yaml
+  - name: dw_policy_value
+    tableKind: dw
+    yaml: dw_policy_value.yaml
+  - name: dw_product_group
+    tableKind: dw
+    yaml: dw_product_group.yaml
+  - name: dw_product_group_level
+    tableKind: dw
+    yaml: dw_product_group_level.yaml
+  - name: dw_resource_threshold
+    tableKind: dw
+    yaml: dw_resource_threshold.yaml
+  - name: dw_restricted_state_records
+    tableKind: dw
+    yaml: dw_restricted_state_records.yaml
+  - name: dw_role
+    tableKind: dw
+    yaml: dw_role.yaml
+  - name: dw_scc_asset
+    tableKind: dw
+    yaml: dw_scc_asset.yaml
+  - name: dw_scc_asset_category
+    tableKind: dw
+    yaml: dw_scc_asset_category.yaml
+  - name: dw_scc_asset_type
+    tableKind: dw
+    yaml: dw_scc_asset_type.yaml
+  - name: dw_scc_attrib_schema
+    tableKind: dw
+    yaml: dw_scc_attrib_schema.yaml
+  - name: dw_scc_attrib_schema_ln
+    tableKind: dw
+    yaml: dw_scc_attrib_schema_ln.yaml
+  - name: dw_scc_attrib_schema_map
+    tableKind: dw
+    yaml: dw_scc_attrib_schema_map.yaml
+  - name: dw_scc_attrib_set
+    tableKind: dw
+    yaml: dw_scc_attrib_set.yaml
+  - name: dw_scc_attribute
+    tableKind: dw
+    yaml: dw_scc_attribute.yaml
+  - name: dw_scc_attribute_option
+    tableKind: dw
+    yaml: dw_scc_attribute_option.yaml
+  - name: dw_scc_attribute_set
+    tableKind: dw
+    yaml: dw_scc_attribute_set.yaml
+  - name: dw_scc_bill_of_materials
+    tableKind: dw
+    yaml: dw_scc_bill_of_materials.yaml
+  - name: dw_scc_bucketized_ord_fcst
+    tableKind: dw
+    yaml: dw_scc_bucketized_ord_fcst.yaml
+  - name: dw_scc_bucketized_ord_fcst_adt
+    tableKind: dw
+    yaml: dw_scc_bucketized_ord_fcst_adt.yaml
+  - name: dw_scc_budget
+    tableKind: dw
+    yaml: dw_scc_budget.yaml
+  - name: dw_scc_budget_line
+    tableKind: dw
+    yaml: dw_scc_budget_line.yaml
+  - name: dw_scc_buffer_msre_daily
+    tableKind: dw
+    yaml: dw_scc_buffer_msre_daily.yaml
+  - name: dw_scc_cancel_inv_operation
+    tableKind: dw
+    yaml: dw_scc_cancel_inv_operation.yaml
+  - name: dw_scc_claim
+    tableKind: dw
+    yaml: dw_scc_claim.yaml
+  - name: dw_scc_claim_line
+    tableKind: dw
+    yaml: dw_scc_claim_line.yaml
+  - name: dw_scc_compatible_item
+    tableKind: dw
+    yaml: dw_scc_compatible_item.yaml
+  - name: dw_scc_compliance_check
+    tableKind: dw
+    yaml: dw_scc_compliance_check.yaml
+  - name: dw_scc_container_move
+    tableKind: dw
+    yaml: dw_scc_container_move.yaml
+  - name: dw_scc_container_move_link
+    tableKind: dw
+    yaml: dw_scc_container_move_link.yaml
+  - name: dw_scc_container_type
+    tableKind: dw
+    yaml: dw_scc_container_type.yaml
+  - name: dw_scc_cost_condition_code
+    tableKind: dw
+    yaml: dw_scc_cost_condition_code.yaml
+  - name: dw_scc_delivery_schedule
+    tableKind: dw
+    yaml: dw_scc_delivery_schedule.yaml
+  - name: dw_scc_delivery_schedule_snapshot
+    tableKind: dw
+    yaml: dw_scc_delivery_schedule_snapshot.yaml
+  - name: dw_scc_enh_bof_history
+    tableKind: dw
+    yaml: dw_scc_enh_bof_history.yaml
+  - name: dw_scc_enhanced_order
+    tableKind: dw
+    yaml: dw_scc_enhanced_order.yaml
+  - name: dw_scc_enhanced_order_adt
+    tableKind: dw
+    yaml: dw_scc_enhanced_order_adt.yaml
+  - name: dw_scc_enhanced_order_snapshot
+    tableKind: dw
+    yaml: dw_scc_enhanced_order_snapshot.yaml
+  - name: dw_scc_equipment_settings
+    tableKind: dw
+    yaml: dw_scc_equipment_settings.yaml
+  - name: dw_scc_hold
+    tableKind: dw
+    yaml: dw_scc_hold.yaml
+  - name: dw_scc_hold_reason_code
+    tableKind: dw
+    yaml: dw_scc_hold_reason_code.yaml
+  - name: dw_scc_inv_attr_change
+    tableKind: dw
+    yaml: dw_scc_inv_attr_change.yaml
+  - name: dw_scc_inv_consumption
+    tableKind: dw
+    yaml: dw_scc_inv_consumption.yaml
+  - name: dw_scc_inv_discrepancy
+    tableKind: dw
+    yaml: dw_scc_inv_discrepancy.yaml
+  - name: dw_scc_inv_reason_code
+    tableKind: dw
+    yaml: dw_scc_inv_reason_code.yaml
+  - name: dw_scc_inventory
+    tableKind: dw
+    yaml: dw_scc_inventory.yaml
+  - name: dw_scc_inventory_adjust
+    tableKind: dw
+    yaml: dw_scc_inventory_adjust.yaml
+  - name: dw_scc_inventory_receipt
+    tableKind: dw
+    yaml: dw_scc_inventory_receipt.yaml
+  - name: dw_scc_inventory_transfer
+    tableKind: dw
+    yaml: dw_scc_inventory_transfer.yaml
+  - name: dw_scc_invoice_fact_weekly
+    tableKind: dw
+    yaml: dw_scc_invoice_fact_weekly.yaml
+  - name: dw_scc_issue_inventory
+    tableKind: dw
+    yaml: dw_scc_issue_inventory.yaml
+  - name: dw_scc_issue_inventory_line
+    tableKind: dw
+    yaml: dw_scc_issue_inventory_line.yaml
+  - name: dw_scc_item_price
+    tableKind: dw
+    yaml: dw_scc_item_price.yaml
+  - name: dw_scc_landed_cost
+    tableKind: dw
+    yaml: dw_scc_landed_cost.yaml
+  - name: dw_scc_landed_cost_line
+    tableKind: dw
+    yaml: dw_scc_landed_cost_line.yaml
+  - name: dw_scc_location
+    tableKind: dw
+    yaml: dw_scc_location.yaml
+  - name: dw_scc_lot
+    tableKind: dw
+    yaml: dw_scc_lot.yaml
+  - name: dw_scc_milestone_config
+    tableKind: dw
+    yaml: dw_scc_milestone_config.yaml
+  - name: dw_scc_milestone_type
+    tableKind: dw
+    yaml: dw_scc_milestone_type.yaml
+  - name: dw_scc_order_analytics_fact
+    tableKind: dw
+    yaml: dw_scc_order_analytics_fact.yaml
+  - name: dw_scc_order_event
+    tableKind: dw
+    yaml: dw_scc_order_event.yaml
+  - name: dw_scc_order_evt_config
+    tableKind: dw
+    yaml: dw_scc_order_evt_config.yaml
+  - name: dw_scc_order_fact_weekly
+    tableKind: dw
+    yaml: dw_scc_order_fact_weekly.yaml
+  - name: dw_scc_order_line
+    tableKind: dw
+    yaml: dw_scc_order_line.yaml
+  - name: dw_scc_order_line_snapshot
+    tableKind: dw
+    yaml: dw_scc_order_line_snapshot.yaml
+  - name: dw_scc_order_milestone
+    tableKind: dw
+    yaml: dw_scc_order_milestone.yaml
+  - name: dw_scc_order_milestone_type
+    tableKind: dw
+    yaml: dw_scc_order_milestone_type.yaml
+  - name: dw_scc_packing_line
+    tableKind: dw
+    yaml: dw_scc_packing_line.yaml
+  - name: dw_scc_packing_list
+    tableKind: dw
+    yaml: dw_scc_packing_list.yaml
+  - name: dw_scc_packing_requirement
+    tableKind: dw
+    yaml: dw_scc_packing_requirement.yaml
+  - name: dw_scc_packing_resource
+    tableKind: dw
+    yaml: dw_scc_packing_resource.yaml
+  - name: dw_scc_partner_group_header
+    tableKind: dw
+    yaml: dw_scc_partner_group_header.yaml
+  - name: dw_scc_pick_line
+    tableKind: dw
+    yaml: dw_scc_pick_line.yaml
+  - name: dw_scc_pick_list
+    tableKind: dw
+    yaml: dw_scc_pick_list.yaml
+  - name: dw_scc_prod_ord_dsched_asso
+    tableKind: dw
+    yaml: dw_scc_prod_ord_dsched_asso.yaml
+  - name: dw_scc_prod_order_fcst
+    tableKind: dw
+    yaml: dw_scc_prod_order_fcst.yaml
+  - name: dw_scc_prod_order_header
+    tableKind: dw
+    yaml: dw_scc_prod_order_header.yaml
+  - name: dw_scc_program
+    tableKind: dw
+    yaml: dw_scc_program.yaml
+  - name: dw_scc_putaway_line
+    tableKind: dw
+    yaml: dw_scc_putaway_line.yaml
+  - name: dw_scc_putaway_list
+    tableKind: dw
+    yaml: dw_scc_putaway_list.yaml
+  - name: dw_scc_reason_code
+    tableKind: dw
+    yaml: dw_scc_reason_code.yaml
+  - name: dw_scc_reason_code_assoc
+    tableKind: dw
+    yaml: dw_scc_reason_code_assoc.yaml
+  - name: dw_scc_receipt
+    tableKind: dw
+    yaml: dw_scc_receipt.yaml
+  - name: dw_scc_receipt_line
+    tableKind: dw
+    yaml: dw_scc_receipt_line.yaml
+  - name: dw_scc_remove_inv_operation
+    tableKind: dw
+    yaml: dw_scc_remove_inv_operation.yaml
+  - name: dw_scc_request_schedule
+    tableKind: dw
+    yaml: dw_scc_request_schedule.yaml
+  - name: dw_scc_request_schedule_snapshot
+    tableKind: dw
+    yaml: dw_scc_request_schedule_snapshot.yaml
+  - name: dw_scc_requisition
+    tableKind: dw
+    yaml: dw_scc_requisition.yaml
+  - name: dw_scc_requisition_line
+    tableKind: dw
+    yaml: dw_scc_requisition_line.yaml
+  - name: dw_scc_risk_event_line
+    tableKind: dw
+    yaml: dw_scc_risk_event_line.yaml
+  - name: dw_scc_risk_events
+    tableKind: dw
+    yaml: dw_scc_risk_events.yaml
+  - name: dw_scc_saccode
+    tableKind: dw
+    yaml: dw_scc_saccode.yaml
+  - name: dw_scc_scen_enhanced_bof
+    tableKind: dw
+    yaml: dw_scc_scen_enhanced_bof.yaml
+  - name: dw_scc_scen_prod_demand_forecast
+    tableKind: dw
+    yaml: dw_scc_scen_prod_demand_forecast.yaml
+  - name: dw_scc_scen_prod_order_fcst
+    tableKind: dw
+    yaml: dw_scc_scen_prod_order_fcst.yaml
+  - name: dw_scc_scen_work_order_forecast
+    tableKind: dw
+    yaml: dw_scc_scen_work_order_forecast.yaml
+  - name: dw_scc_site_trait
+    tableKind: dw
+    yaml: dw_scc_site_trait.yaml
+  - name: dw_scc_snop_dmd_fcst
+    tableKind: dw
+    yaml: dw_scc_snop_dmd_fcst.yaml
+  - name: dw_scc_snop_event
+    tableKind: dw
+    yaml: dw_scc_snop_event.yaml
+  - name: dw_scc_snop_event_occur
+    tableKind: dw
+    yaml: dw_scc_snop_event_occur.yaml
+  - name: dw_scc_srvc_inv_operation
+    tableKind: dw
+    yaml: dw_scc_srvc_inv_operation.yaml
+  - name: dw_scc_sub_inv_operation
+    tableKind: dw
+    yaml: dw_scc_sub_inv_operation.yaml
+  - name: dw_scc_tracking_event
+    tableKind: dw
+    yaml: dw_scc_tracking_event.yaml
+  - name: dw_scc_tracking_event_cnfg
+    tableKind: dw
+    yaml: dw_scc_tracking_event_cnfg.yaml
+  - name: dw_scc_work_order
+    tableKind: dw
+    yaml: dw_scc_work_order.yaml
+  - name: dw_scc_work_order_task
+    tableKind: dw
+    yaml: dw_scc_work_order_task.yaml
+  - name: dw_scc_xentity
+    tableKind: dw
+    yaml: dw_scc_xentity.yaml
+  - name: dw_scc_xentity_relationship
+    tableKind: dw
+    yaml: dw_scc_xentity_relationship.yaml
+  - name: dw_scc_xentity_score
+    tableKind: dw
+    yaml: dw_scc_xentity_score.yaml
+  - name: dw_scc_xentity_sub_score
+    tableKind: dw
+    yaml: dw_scc_xentity_sub_score.yaml
+  - name: dw_scen_order_forecast
+    tableKind: dw
+    yaml: dw_scen_order_forecast.yaml
+  - name: dw_scenario
+    tableKind: dw
+    yaml: dw_scenario.yaml
+  - name: dw_scheduler
+    tableKind: dw
+    yaml: dw_scheduler.yaml
+  - name: dw_shipment_header
+    tableKind: dw
+    yaml: dw_shipment_header.yaml
+  - name: dw_shipment_line
+    tableKind: dw
+    yaml: dw_shipment_line.yaml
+  - name: dw_singleton
+    tableKind: dw
+    yaml: dw_singleton.yaml
+  - name: dw_site
+    tableKind: dw
+    yaml: dw_site.yaml
+  - name: dw_site_group
+    tableKind: dw
+    yaml: dw_site_group.yaml
+  - name: dw_site_group_level
+    tableKind: dw
+    yaml: dw_site_group_level.yaml
+  - name: dw_site_lane
+    tableKind: dw
+    yaml: dw_site_lane.yaml
+  - name: dw_site_rsrc
+    tableKind: dw
+    yaml: dw_site_rsrc.yaml
+  - name: dw_site_rsrc_rsvn
+    tableKind: dw
+    yaml: dw_site_rsrc_rsvn.yaml
+  - name: dw_site_sgrp_level_assoc
+    tableKind: dw
+    yaml: dw_site_sgrp_level_assoc.yaml
+  - name: dw_slice_migration_columns
+    tableKind: dw
+    yaml: dw_slice_migration_columns.yaml
+  - name: dw_store_demand_forecast
+    tableKind: dw
+    yaml: dw_store_demand_forecast.yaml
+  - name: dw_store_order_schedule
+    tableKind: dw
+    yaml: dw_store_order_schedule.yaml
+  - name: dw_sync_table_counts
+    tableKind: dw
+    yaml: dw_sync_table_counts.yaml
+  - name: dw_sync_table_stats
+    tableKind: dw
+    yaml: dw_sync_table_stats.yaml
+  - name: dw_table_and_dimension_mapping
+    tableKind: dw
+    yaml: dw_table_and_dimension_mapping.yaml
+  - name: dw_table_and_fact_mapping
+    tableKind: dw
+    yaml: dw_table_and_fact_mapping.yaml
+  - name: dw_temp_acc_cost_stg
+    tableKind: dw
+    yaml: dw_temp_acc_cost_stg.yaml
+  - name: dw_temp_order_reconcile
+    tableKind: dw
+    yaml: dw_temp_order_reconcile.yaml
+  - name: dw_temp_procedure_output
+    tableKind: dw
+    yaml: dw_temp_procedure_output.yaml
+  - name: dw_temp_tms_reconcile
+    tableKind: dw
+    yaml: dw_temp_tms_reconcile.yaml
+  - name: dw_threads
+    tableKind: dw
+    yaml: dw_threads.yaml
+  - name: dw_tms_acc_rate
+    tableKind: dw
+    yaml: dw_tms_acc_rate.yaml
+  - name: dw_tms_accessorial
+    tableKind: dw
+    yaml: dw_tms_accessorial.yaml
+  - name: dw_tms_base_rate
+    tableKind: dw
+    yaml: dw_tms_base_rate.yaml
+  - name: dw_tms_claim
+    tableKind: dw
+    yaml: dw_tms_claim.yaml
+  - name: dw_tms_claim_line
+    tableKind: dw
+    yaml: dw_tms_claim_line.yaml
+  - name: dw_tms_contract
+    tableKind: dw
+    yaml: dw_tms_contract.yaml
+  - name: dw_tms_cost_component
+    tableKind: dw
+    yaml: dw_tms_cost_component.yaml
+  - name: dw_tms_distrib_code_policy
+    tableKind: dw
+    yaml: dw_tms_distrib_code_policy.yaml
+  - name: dw_tms_exception_code
+    tableKind: dw
+    yaml: dw_tms_exception_code.yaml
+  - name: dw_tms_forecast_scenario
+    tableKind: dw
+    yaml: dw_tms_forecast_scenario.yaml
+  - name: dw_tms_frcst_scenario_line
+    tableKind: dw
+    yaml: dw_tms_frcst_scenario_line.yaml
+  - name: dw_tms_movement_evt
+    tableKind: dw
+    yaml: dw_tms_movement_evt.yaml
+  - name: dw_tms_ocean_booking_reqst
+    tableKind: dw
+    yaml: dw_tms_ocean_booking_reqst.yaml
+  - name: dw_tms_org_profile
+    tableKind: dw
+    yaml: dw_tms_org_profile.yaml
+  - name: dw_tms_rs
+    tableKind: dw
+    yaml: dw_tms_rs.yaml
+  - name: dw_tms_service_level
+    tableKind: dw
+    yaml: dw_tms_service_level.yaml
+  - name: dw_tms_shipment_evt
+    tableKind: dw
+    yaml: dw_tms_shipment_evt.yaml
+  - name: dw_tms_shipment_milestone
+    tableKind: dw
+    yaml: dw_tms_shipment_milestone.yaml
+  - name: dw_tms_shipper_sc_plcy
+    tableKind: dw
+    yaml: dw_tms_shipper_sc_plcy.yaml
+  - name: dw_tms_site_acc_rate
+    tableKind: dw
+    yaml: dw_tms_site_acc_rate.yaml
+  - name: dw_tms_smmilestone_event
+    tableKind: dw
+    yaml: dw_tms_smmilestone_event.yaml
+  - name: dw_tms_tender
+    tableKind: dw
+    yaml: dw_tms_tender.yaml
+  - name: dw_tms_tg
+    tableKind: dw
+    yaml: dw_tms_tg.yaml
+  - name: dw_tms_tp
+    tableKind: dw
+    yaml: dw_tms_tp.yaml
+  - name: dw_tms_tracking_evt_config
+    tableKind: dw
+    yaml: dw_tms_tracking_evt_config.yaml
+  - name: dw_trans_level_state
+    tableKind: dw
+    yaml: dw_trans_level_state.yaml
+  - name: dw_users
+    tableKind: dw
+    yaml: dw_users.yaml
+  - name: dw_usro
+    tableKind: dw
+    yaml: dw_usro.yaml
+  - name: dw_wbgeo
+    tableKind: dw
+    yaml: dw_wbgeo.yaml
+  - name: dw_wbproblem
+    tableKind: dw
+    yaml: dw_wbproblem.yaml
+  - name: dw_wbproblem_addtl_modelref
+    tableKind: dw
+    yaml: dw_wbproblem_addtl_modelref.yaml
+  - name: dw_wbproblem_dimension
+    tableKind: dw
+    yaml: dw_wbproblem_dimension.yaml
+  - name: dw_wbproblem_type
+    tableKind: dw
+    yaml: dw_wbproblem_type.yaml
+  - name: dw_wms_cc_plan_request
+    tableKind: dw
+    yaml: dw_wms_cc_plan_request.yaml
+  - name: dw_wms_cycle_count
+    tableKind: dw
+    yaml: dw_wms_cycle_count.yaml
+  - name: dw_wms_cycle_count_line
+    tableKind: dw
+    yaml: dw_wms_cycle_count_line.yaml
+  - name: dw_wms_cycle_count_plan
+    tableKind: dw
+    yaml: dw_wms_cycle_count_plan.yaml
+  - name: dw_wms_inventory_pin
+    tableKind: dw
+    yaml: dw_wms_inventory_pin.yaml
+  - name: dw_wms_kit_content
+    tableKind: dw
+    yaml: dw_wms_kit_content.yaml
+  - name: dw_wms_kit_content_line
+    tableKind: dw
+    yaml: dw_wms_kit_content_line.yaml
+  - name: dw_yms_trailer_move
+    tableKind: dw
+    yaml: dw_yms_trailer_move.yaml
+  - name: dw_yms_yard_content_type
+    tableKind: dw
+    yaml: dw_yms_yard_content_type.yaml
+  - name: dw_yms_yard_location
+    tableKind: dw
+    yaml: dw_yms_yard_location.yaml
+  - name: dw_yms_yard_slot
+    tableKind: dw
+    yaml: dw_yms_yard_slot.yaml
+  - name: enterprise_nc
+    tableKind: nc
+    yaml: enterprise_nc.yaml
+  - name: enum_conversion_def_nc
+    tableKind: nc
+    yaml: enum_conversion_def_nc.yaml
+  - name: enum_conversion_factor_nc
+    tableKind: nc
+    yaml: enum_conversion_factor_nc.yaml
+  - name: enumeration_nc
+    tableKind: nc
+    yaml: enumeration_nc.yaml
+  - name: equipment_type_nc
+    tableKind: nc
+    yaml: equipment_type_nc.yaml
+  - name: fin_il_category_nc
+    tableKind: nc
+    yaml: fin_il_category_nc.yaml
+  - name: fin_invoice_evt_nc
+    tableKind: nc
+    yaml: fin_invoice_evt_nc.yaml
+  - name: fiscal_calendar_nc
+    tableKind: nc
+    yaml: fiscal_calendar_nc.yaml
+  - name: geo_pattern_list_nc
+    tableKind: nc
+    yaml: geo_pattern_list_nc.yaml
+  - name: geo_pattern_nc
+    tableKind: nc
+    yaml: geo_pattern_nc.yaml
+  - name: hierarchy_meta_nc
+    tableKind: nc
+    yaml: hierarchy_meta_nc.yaml
+  - name: incremental_load_require_nc
+    tableKind: nc
+    yaml: incremental_load_require_nc.yaml
+  - name: initial_load_require_nc
+    tableKind: nc
+    yaml: initial_load_require_nc.yaml
+  - name: invoice_line_detail_nc
+    tableKind: nc
+    yaml: invoice_line_detail_nc.yaml
+  - name: invoice_line_nc
+    tableKind: nc
+    yaml: invoice_line_nc.yaml
+  - name: invoice_nc
+    tableKind: nc
+    yaml: invoice_nc.yaml
+  - name: invoice_weekly_fact_nc
+    tableKind: nc
+    yaml: invoice_weekly_fact_nc.yaml
+  - name: item_nc
+    tableKind: nc
+    yaml: item_nc.yaml
+  - name: mfg_capacity_consumption_nc
+    tableKind: nc
+    yaml: mfg_capacity_consumption_nc.yaml
+  - name: mfg_pof_history_nc
+    tableKind: nc
+    yaml: mfg_pof_history_nc.yaml
+  - name: mfg_prod_order_milestone_nc
+    tableKind: nc
+    yaml: mfg_prod_order_milestone_nc.yaml
+  - name: mfg_prod_order_ms_evt_nc
+    tableKind: nc
+    yaml: mfg_prod_order_ms_evt_nc.yaml
+  - name: mfg_routing_nc
+    tableKind: nc
+    yaml: mfg_routing_nc.yaml
+  - name: mfg_site_rsrc_allocation_nc
+    tableKind: nc
+    yaml: mfg_site_rsrc_allocation_nc.yaml
+  - name: mfg_womilestone_event_nc
+    tableKind: nc
+    yaml: mfg_womilestone_event_nc.yaml
+  - name: mfg_work_order_milestone_nc
+    tableKind: nc
+    yaml: mfg_work_order_milestone_nc.yaml
+  - name: mvmt_header_nc
+    tableKind: nc
+    yaml: mvmt_header_nc.yaml
+  - name: mvmt_stop_line_nc
+    tableKind: nc
+    yaml: mvmt_stop_line_nc.yaml
+  - name: mvmt_stop_nc
+    tableKind: nc
+    yaml: mvmt_stop_nc.yaml
+  - name: oms_additional_cost_nc
+    tableKind: nc
+    yaml: oms_additional_cost_nc.yaml
+  - name: oms_contract_line_nc
+    tableKind: nc
+    yaml: oms_contract_line_nc.yaml
+  - name: oms_contract_nc
+    tableKind: nc
+    yaml: oms_contract_nc.yaml
+  - name: oms_contract_price_nc
+    tableKind: nc
+    yaml: oms_contract_price_nc.yaml
+  - name: oms_contract_terms_nc
+    tableKind: nc
+    yaml: oms_contract_terms_nc.yaml
+  - name: oms_cost_component_nc
+    tableKind: nc
+    yaml: oms_cost_component_nc.yaml
+  - name: oms_payment_terms_nc
+    tableKind: nc
+    yaml: oms_payment_terms_nc.yaml
+  - name: oms_pr_milestone_nc
+    tableKind: nc
+    yaml: oms_pr_milestone_nc.yaml
+  - name: oms_prmilestone_event_nc
+    tableKind: nc
+    yaml: oms_prmilestone_event_nc.yaml
+  - name: oms_scorecard_entry_nc
+    tableKind: nc
+    yaml: oms_scorecard_entry_nc.yaml
+  - name: oms_scorecard_formula_nc
+    tableKind: nc
+    yaml: oms_scorecard_formula_nc.yaml
+  - name: oms_scorecard_measures_nc
+    tableKind: nc
+    yaml: oms_scorecard_measures_nc.yaml
+  - name: oms_user_product_assc_nc
+    tableKind: nc
+    yaml: oms_user_product_assc_nc.yaml
+  - name: order_analytics_nc
+    tableKind: nc
+    yaml: order_analytics_nc.yaml
+  - name: order_forecast_nc
+    tableKind: nc
+    yaml: order_forecast_nc.yaml
+  - name: order_schedule_weekly_nc
+    tableKind: nc
+    yaml: order_schedule_weekly_nc.yaml
+  - name: org_code_nc
+    tableKind: nc
+    yaml: org_code_nc.yaml
+  - name: organization_nc
+    tableKind: nc
+    yaml: organization_nc.yaml
+  - name: papt_nc
+    tableKind: nc
+    yaml: papt_nc.yaml
+  - name: partner_nc
+    tableKind: nc
+    yaml: partner_nc.yaml
+  - name: partner_process_type_nc
+    tableKind: nc
+    yaml: partner_process_type_nc.yaml
+  - name: partner_profile_nc
+    tableKind: nc
+    yaml: partner_profile_nc.yaml
+  - name: partner_site_nc
+    tableKind: nc
+    yaml: partner_site_nc.yaml
+  - name: payment_nc
+    tableKind: nc
+    yaml: payment_nc.yaml
+  - name: person_nc
+    tableKind: nc
+    yaml: person_nc.yaml
+  - name: person_space_nc
+    tableKind: nc
+    yaml: person_space_nc.yaml
+  - name: plan_nc
+    tableKind: nc
+    yaml: plan_nc.yaml
+  - name: policy_value_nc
+    tableKind: nc
+    yaml: policy_value_nc.yaml
+  - name: product_group_level_nc
+    tableKind: nc
+    yaml: product_group_level_nc.yaml
+  - name: product_group_nc
+    tableKind: nc
+    yaml: product_group_nc.yaml
+  - name: require_nc
+    tableKind: nc
+    yaml: require_nc.yaml
+  - name: role_nc
+    tableKind: nc
+    yaml: role_nc.yaml
+  - name: scc_asset_category_nc
+    tableKind: nc
+    yaml: scc_asset_category_nc.yaml
+  - name: scc_asset_nc
+    tableKind: nc
+    yaml: scc_asset_nc.yaml
+  - name: scc_asset_type_nc
+    tableKind: nc
+    yaml: scc_asset_type_nc.yaml
+  - name: scc_attrib_schema_ln_nc
+    tableKind: nc
+    yaml: scc_attrib_schema_ln_nc.yaml
+  - name: scc_attrib_schema_map_nc
+    tableKind: nc
+    yaml: scc_attrib_schema_map_nc.yaml
+  - name: scc_attrib_schema_nc
+    tableKind: nc
+    yaml: scc_attrib_schema_nc.yaml
+  - name: scc_attrib_set_nc
+    tableKind: nc
+    yaml: scc_attrib_set_nc.yaml
+  - name: scc_attribute_nc
+    tableKind: nc
+    yaml: scc_attribute_nc.yaml
+  - name: scc_attribute_option_nc
+    tableKind: nc
+    yaml: scc_attribute_option_nc.yaml
+  - name: scc_bill_of_materials_nc
+    tableKind: nc
+    yaml: scc_bill_of_materials_nc.yaml
+  - name: scc_bucketized_ord_fcst_adt_nc
+    tableKind: nc
+    yaml: scc_bucketized_ord_fcst_adt_nc.yaml
+  - name: scc_bucketized_ord_fcst_nc
+    tableKind: nc
+    yaml: scc_bucketized_ord_fcst_nc.yaml
+  - name: scc_budget_line_nc
+    tableKind: nc
+    yaml: scc_budget_line_nc.yaml
+  - name: scc_budget_nc
+    tableKind: nc
+    yaml: scc_budget_nc.yaml
+  - name: scc_cancel_inv_operation_nc
+    tableKind: nc
+    yaml: scc_cancel_inv_operation_nc.yaml
+  - name: scc_claim_line_nc
+    tableKind: nc
+    yaml: scc_claim_line_nc.yaml
+  - name: scc_claim_nc
+    tableKind: nc
+    yaml: scc_claim_nc.yaml
+  - name: scc_compatible_item_nc
+    tableKind: nc
+    yaml: scc_compatible_item_nc.yaml
+  - name: scc_compliance_check_nc
+    tableKind: nc
+    yaml: scc_compliance_check_nc.yaml
+  - name: scc_container_move_link_nc
+    tableKind: nc
+    yaml: scc_container_move_link_nc.yaml
+  - name: scc_container_move_nc
+    tableKind: nc
+    yaml: scc_container_move_nc.yaml
+  - name: scc_container_type_nc
+    tableKind: nc
+    yaml: scc_container_type_nc.yaml
+  - name: scc_cost_condition_code_nc
+    tableKind: nc
+    yaml: scc_cost_condition_code_nc.yaml
+  - name: scc_delivery_schedule_nc
+    tableKind: nc
+    yaml: scc_delivery_schedule_nc.yaml
+  - name: scc_delivery_schedule_snapshot_nc
+    tableKind: nc
+    yaml: scc_delivery_schedule_snapshot_nc.yaml
+  - name: scc_enh_bof_history_nc
+    tableKind: nc
+    yaml: scc_enh_bof_history_nc.yaml
+  - name: scc_enhanced_order_adt_nc
+    tableKind: nc
+    yaml: scc_enhanced_order_adt_nc.yaml
+  - name: scc_enhanced_order_nc
+    tableKind: nc
+    yaml: scc_enhanced_order_nc.yaml
+  - name: scc_enhanced_order_snapshot_nc
+    tableKind: nc
+    yaml: scc_enhanced_order_snapshot_nc.yaml
+  - name: scc_equipment_settings_nc
+    tableKind: nc
+    yaml: scc_equipment_settings_nc.yaml
+  - name: scc_hold_nc
+    tableKind: nc
+    yaml: scc_hold_nc.yaml
+  - name: scc_hold_reason_code_nc
+    tableKind: nc
+    yaml: scc_hold_reason_code_nc.yaml
+  - name: scc_inv_attr_change_nc
+    tableKind: nc
+    yaml: scc_inv_attr_change_nc.yaml
+  - name: scc_inv_consumption_nc
+    tableKind: nc
+    yaml: scc_inv_consumption_nc.yaml
+  - name: scc_inv_discrepancy_nc
+    tableKind: nc
+    yaml: scc_inv_discrepancy_nc.yaml
+  - name: scc_inv_reason_code_nc
+    tableKind: nc
+    yaml: scc_inv_reason_code_nc.yaml
+  - name: scc_inventory_adjust_nc
+    tableKind: nc
+    yaml: scc_inventory_adjust_nc.yaml
+  - name: scc_inventory_nc
+    tableKind: nc
+    yaml: scc_inventory_nc.yaml
+  - name: scc_inventory_operation_nc
+    tableKind: nc
+    yaml: scc_inventory_operation_nc.yaml
+  - name: scc_inventory_receipt_nc
+    tableKind: nc
+    yaml: scc_inventory_receipt_nc.yaml
+  - name: scc_inventory_transfer_nc
+    tableKind: nc
+    yaml: scc_inventory_transfer_nc.yaml
+  - name: scc_issue_inventory_line_nc
+    tableKind: nc
+    yaml: scc_issue_inventory_line_nc.yaml
+  - name: scc_issue_inventory_nc
+    tableKind: nc
+    yaml: scc_issue_inventory_nc.yaml
+  - name: scc_item_price_nc
+    tableKind: nc
+    yaml: scc_item_price_nc.yaml
+  - name: scc_landed_cost_line_nc
+    tableKind: nc
+    yaml: scc_landed_cost_line_nc.yaml
+  - name: scc_landed_cost_nc
+    tableKind: nc
+    yaml: scc_landed_cost_nc.yaml
+  - name: scc_location_nc
+    tableKind: nc
+    yaml: scc_location_nc.yaml
+  - name: scc_lot_nc
+    tableKind: nc
+    yaml: scc_lot_nc.yaml
+  - name: scc_milestone_config_nc
+    tableKind: nc
+    yaml: scc_milestone_config_nc.yaml
+  - name: scc_milestone_type_nc
+    tableKind: nc
+    yaml: scc_milestone_type_nc.yaml
+  - name: scc_order_event_nc
+    tableKind: nc
+    yaml: scc_order_event_nc.yaml
+  - name: scc_order_evt_config_nc
+    tableKind: nc
+    yaml: scc_order_evt_config_nc.yaml
+  - name: scc_order_line_nc
+    tableKind: nc
+    yaml: scc_order_line_nc.yaml
+  - name: scc_order_line_snapshot_nc
+    tableKind: nc
+    yaml: scc_order_line_snapshot_nc.yaml
+  - name: scc_order_milestone_nc
+    tableKind: nc
+    yaml: scc_order_milestone_nc.yaml
+  - name: scc_order_milestone_type_nc
+    tableKind: nc
+    yaml: scc_order_milestone_type_nc.yaml
+  - name: scc_packing_line_nc
+    tableKind: nc
+    yaml: scc_packing_line_nc.yaml
+  - name: scc_packing_list_nc
+    tableKind: nc
+    yaml: scc_packing_list_nc.yaml
+  - name: scc_packing_requirement_nc
+    tableKind: nc
+    yaml: scc_packing_requirement_nc.yaml
+  - name: scc_packing_resource_nc
+    tableKind: nc
+    yaml: scc_packing_resource_nc.yaml
+  - name: scc_partner_group_header_nc
+    tableKind: nc
+    yaml: scc_partner_group_header_nc.yaml
+  - name: scc_pick_line_nc
+    tableKind: nc
+    yaml: scc_pick_line_nc.yaml
+  - name: scc_pick_list_nc
+    tableKind: nc
+    yaml: scc_pick_list_nc.yaml
+  - name: scc_prod_ord_dsched_asso_nc
+    tableKind: nc
+    yaml: scc_prod_ord_dsched_asso_nc.yaml
+  - name: scc_prod_order_fcst_nc
+    tableKind: nc
+    yaml: scc_prod_order_fcst_nc.yaml
+  - name: scc_prod_order_header_nc
+    tableKind: nc
+    yaml: scc_prod_order_header_nc.yaml
+  - name: scc_program_item_nc
+    tableKind: nc
+    yaml: scc_program_item_nc.yaml
+  - name: scc_program_nc
+    tableKind: nc
+    yaml: scc_program_nc.yaml
+  - name: scc_putaway_line_nc
+    tableKind: nc
+    yaml: scc_putaway_line_nc.yaml
+  - name: scc_putaway_list_nc
+    tableKind: nc
+    yaml: scc_putaway_list_nc.yaml
+  - name: scc_reason_code_assoc_nc
+    tableKind: nc
+    yaml: scc_reason_code_assoc_nc.yaml
+  - name: scc_reason_code_nc
+    tableKind: nc
+    yaml: scc_reason_code_nc.yaml
+  - name: scc_receipt_line_nc
+    tableKind: nc
+    yaml: scc_receipt_line_nc.yaml
+  - name: scc_receipt_nc
+    tableKind: nc
+    yaml: scc_receipt_nc.yaml
+  - name: scc_remove_inv_operation_nc
+    tableKind: nc
+    yaml: scc_remove_inv_operation_nc.yaml
+  - name: scc_request_schedule_nc
+    tableKind: nc
+    yaml: scc_request_schedule_nc.yaml
+  - name: scc_request_schedule_snapshot_nc
+    tableKind: nc
+    yaml: scc_request_schedule_snapshot_nc.yaml
+  - name: scc_requisition_line_nc
+    tableKind: nc
+    yaml: scc_requisition_line_nc.yaml
+  - name: scc_requisition_nc
+    tableKind: nc
+    yaml: scc_requisition_nc.yaml
+  - name: scc_risk_event_line_nc
+    tableKind: nc
+    yaml: scc_risk_event_line_nc.yaml
+  - name: scc_risk_events_nc
+    tableKind: nc
+    yaml: scc_risk_events_nc.yaml
+  - name: scc_saccode_nc
+    tableKind: nc
+    yaml: scc_saccode_nc.yaml
+  - name: scc_scen_enhanced_bof_nc
+    tableKind: nc
+    yaml: scc_scen_enhanced_bof_nc.yaml
+  - name: scc_scen_prod_demand_forecast_nc
+    tableKind: nc
+    yaml: scc_scen_prod_demand_forecast_nc.yaml
+  - name: scc_scen_prod_order_fcst_nc
+    tableKind: nc
+    yaml: scc_scen_prod_order_fcst_nc.yaml
+  - name: scc_scen_work_order_forecast_nc
+    tableKind: nc
+    yaml: scc_scen_work_order_forecast_nc.yaml
+  - name: scc_site_trait_nc
+    tableKind: nc
+    yaml: scc_site_trait_nc.yaml
+  - name: scc_snop_dmd_fcst_nc
+    tableKind: nc
+    yaml: scc_snop_dmd_fcst_nc.yaml
+  - name: scc_snop_event_nc
+    tableKind: nc
+    yaml: scc_snop_event_nc.yaml
+  - name: scc_snop_event_occur_nc
+    tableKind: nc
+    yaml: scc_snop_event_occur_nc.yaml
+  - name: scc_srvc_inv_operation_nc
+    tableKind: nc
+    yaml: scc_srvc_inv_operation_nc.yaml
+  - name: scc_sub_inv_operation_nc
+    tableKind: nc
+    yaml: scc_sub_inv_operation_nc.yaml
+  - name: scc_tracking_event_cnfg_nc
+    tableKind: nc
+    yaml: scc_tracking_event_cnfg_nc.yaml
+  - name: scc_tracking_event_nc
+    tableKind: nc
+    yaml: scc_tracking_event_nc.yaml
+  - name: scc_work_order_nc
+    tableKind: nc
+    yaml: scc_work_order_nc.yaml
+  - name: scc_work_order_task_nc
+    tableKind: nc
+    yaml: scc_work_order_task_nc.yaml
+  - name: scc_xentity_nc
+    tableKind: nc
+    yaml: scc_xentity_nc.yaml
+  - name: scc_xentity_relationship_nc
+    tableKind: nc
+    yaml: scc_xentity_relationship_nc.yaml
+  - name: scc_xentity_score_nc
+    tableKind: nc
+    yaml: scc_xentity_score_nc.yaml
+  - name: scc_xentity_sub_score_nc
+    tableKind: nc
+    yaml: scc_xentity_sub_score_nc.yaml
+  - name: scen_order_forecast_nc
+    tableKind: nc
+    yaml: scen_order_forecast_nc.yaml
+  - name: scenario_nc
+    tableKind: nc
+    yaml: scenario_nc.yaml
+  - name: shipment_header_nc
+    tableKind: nc
+    yaml: shipment_header_nc.yaml
+  - name: shipment_line_nc
+    tableKind: nc
+    yaml: shipment_line_nc.yaml
+  - name: singleton_nc
+    tableKind: nc
+    yaml: singleton_nc.yaml
+  - name: site_group_level_nc
+    tableKind: nc
+    yaml: site_group_level_nc.yaml
+  - name: site_group_nc
+    tableKind: nc
+    yaml: site_group_nc.yaml
+  - name: site_lane_nc
+    tableKind: nc
+    yaml: site_lane_nc.yaml
+  - name: site_nc
+    tableKind: nc
+    yaml: site_nc.yaml
+  - name: site_rsrc_nc
+    tableKind: nc
+    yaml: site_rsrc_nc.yaml
+  - name: site_rsrc_rsvn_nc
+    tableKind: nc
+    yaml: site_rsrc_rsvn_nc.yaml
+  - name: store_demand_forecast_nc
+    tableKind: nc
+    yaml: store_demand_forecast_nc.yaml
+  - name: store_order_schedule_nc
+    tableKind: nc
+    yaml: store_order_schedule_nc.yaml
+  - name: tms_acc_rate_nc
+    tableKind: nc
+    yaml: tms_acc_rate_nc.yaml
+  - name: tms_accessorial_nc
+    tableKind: nc
+    yaml: tms_accessorial_nc.yaml
+  - name: tms_base_rate_nc
+    tableKind: nc
+    yaml: tms_base_rate_nc.yaml
+  - name: tms_claim_line_nc
+    tableKind: nc
+    yaml: tms_claim_line_nc.yaml
+  - name: tms_claim_nc
+    tableKind: nc
+    yaml: tms_claim_nc.yaml
+  - name: tms_contract_nc
+    tableKind: nc
+    yaml: tms_contract_nc.yaml
+  - name: tms_cost_component_nc
+    tableKind: nc
+    yaml: tms_cost_component_nc.yaml
+  - name: tms_distrib_code_policy_nc
+    tableKind: nc
+    yaml: tms_distrib_code_policy_nc.yaml
+  - name: tms_exception_code_nc
+    tableKind: nc
+    yaml: tms_exception_code_nc.yaml
+  - name: tms_forecast_scenario_nc
+    tableKind: nc
+    yaml: tms_forecast_scenario_nc.yaml
+  - name: tms_frcst_scenario_line_nc
+    tableKind: nc
+    yaml: tms_frcst_scenario_line_nc.yaml
+  - name: tms_movement_evt_nc
+    tableKind: nc
+    yaml: tms_movement_evt_nc.yaml
+  - name: tms_ocean_booking_reqst_nc
+    tableKind: nc
+    yaml: tms_ocean_booking_reqst_nc.yaml
+  - name: tms_rs_nc
+    tableKind: nc
+    yaml: tms_rs_nc.yaml
+  - name: tms_service_level_nc
+    tableKind: nc
+    yaml: tms_service_level_nc.yaml
+  - name: tms_shipment_evt_nc
+    tableKind: nc
+    yaml: tms_shipment_evt_nc.yaml
+  - name: tms_shipment_milestone_nc
+    tableKind: nc
+    yaml: tms_shipment_milestone_nc.yaml
+  - name: tms_shipper_sc_plcy_nc
+    tableKind: nc
+    yaml: tms_shipper_sc_plcy_nc.yaml
+  - name: tms_site_acc_rate_nc
+    tableKind: nc
+    yaml: tms_site_acc_rate_nc.yaml
+  - name: tms_smmilestone_event_nc
+    tableKind: nc
+    yaml: tms_smmilestone_event_nc.yaml
+  - name: tms_tender_nc
+    tableKind: nc
+    yaml: tms_tender_nc.yaml
+  - name: tms_tg_nc
+    tableKind: nc
+    yaml: tms_tg_nc.yaml
+  - name: tms_tp_nc
+    tableKind: nc
+    yaml: tms_tp_nc.yaml
+  - name: tms_tracking_evt_config_nc
+    tableKind: nc
+    yaml: tms_tracking_evt_config_nc.yaml
+  - name: trans_level_state_nc
+    tableKind: nc
+    yaml: trans_level_state_nc.yaml
+  - name: users_nc
+    tableKind: nc
+    yaml: users_nc.yaml
+  - name: usro_nc
+    tableKind: nc
+    yaml: usro_nc.yaml
+  - name: wbgeo_nc
+    tableKind: nc
+    yaml: wbgeo_nc.yaml
+  - name: wbproblem_addtl_modelref_nc
+    tableKind: nc
+    yaml: wbproblem_addtl_modelref_nc.yaml
+  - name: wbproblem_dimension_nc
+    tableKind: nc
+    yaml: wbproblem_dimension_nc.yaml
+  - name: wbproblem_nc
+    tableKind: nc
+    yaml: wbproblem_nc.yaml
+  - name: wbproblem_type_nc
+    tableKind: nc
+    yaml: wbproblem_type_nc.yaml
+  - name: wms_cc_plan_request_nc
+    tableKind: nc
+    yaml: wms_cc_plan_request_nc.yaml
+  - name: wms_cycle_count_line_nc
+    tableKind: nc
+    yaml: wms_cycle_count_line_nc.yaml
+  - name: wms_cycle_count_nc
+    tableKind: nc
+    yaml: wms_cycle_count_nc.yaml
+  - name: wms_cycle_count_plan_nc
+    tableKind: nc
+    yaml: wms_cycle_count_plan_nc.yaml
+  - name: wms_inventory_pin_nc
+    tableKind: nc
+    yaml: wms_inventory_pin_nc.yaml
+  - name: wms_kit_content_line_nc
+    tableKind: nc
+    yaml: wms_kit_content_line_nc.yaml
+  - name: wms_kit_content_nc
+    tableKind: nc
+    yaml: wms_kit_content_nc.yaml
+  - name: yms_trailer_move_nc
+    tableKind: nc
+    yaml: yms_trailer_move_nc.yaml
+  - name: yms_yard_content_type_nc
+    tableKind: nc
+    yaml: yms_yard_content_type_nc.yaml
+  - name: yms_yard_location_nc
+    tableKind: nc
+    yaml: yms_yard_location_nc.yaml
+  - name: yms_yard_slot_nc
+    tableKind: nc
+    yaml: yms_yard_slot_nc.yaml

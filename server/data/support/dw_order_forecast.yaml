@@ -1,0 +1,246 @@
+id: support_dw_order_forecast
+kind: support
+name: dw_order_forecast
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_order_forecast_0
+    name: SYS_OF_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_1
+    name: ORDER_FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_dw_order_forecast_2
+    name: TRANS_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_order_forecast_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_4
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_order_forecast_5
+    name: REQUEST_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_6
+    name: PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_order_forecast_7
+    name: PROMISE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_8
+    name: QUANTITY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_order_forecast_9
+    name: EARLIEST_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_10
+    name: LATEST_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_11
+    name: COMMIT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_12
+    name: FREEZE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_13
+    name: EARLIEST_ORDER_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_14
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_15
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_16
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_order_forecast_17
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_18
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_19
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_order_forecast_20
+    name: PRIORITY
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_21
+    name: TRANS_MODE
+    type: VARCHAR(256)
+  - id: sc_dw_order_forecast_22
+    name: SHIPTO_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_order_forecast_23
+    name: SHIPFROM_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_order_forecast_24
+    name: ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_order_forecast_25
+    name: REF_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_order_forecast_26
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_order_forecast_27
+    name: ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_28
+    name: REF_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_29
+    name: SHIPFROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_30
+    name: SHIPTO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_31
+    name: BROKER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_32
+    name: SHIPTO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_33
+    name: SHIPFROM_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_34
+    name: BROKER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_35
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_36
+    name: APPROVED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_37
+    name: FROM_STORAGE_CAPACITY_STATUS
+    type: DECIMAL(6,0)
+  - id: sc_dw_order_forecast_38
+    name: FROM_TRANS_CAPACITY_STATUS
+    type: DECIMAL(6,0)
+  - id: sc_dw_order_forecast_39
+    name: IS_MANUAL
+    type: DECIMAL(1,0)
+  - id: sc_dw_order_forecast_40
+    name: IS_PUSH
+    type: DECIMAL(1,0)
+  - id: sc_dw_order_forecast_41
+    name: LOAD_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_dw_order_forecast_42
+    name: OF_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_order_forecast_43
+    name: SCC_SYS_SELLING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_44
+    name: SYS_APPROVED_BY_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_45
+    name: SYS_BUYING_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_46
+    name: SYS_SELLING_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_47
+    name: SYS_SHIP_FROM_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_48
+    name: SYS_SHIP_FROM_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_49
+    name: SYS_SHIP_FROM_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_50
+    name: SYS_SHIP_TO_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_51
+    name: SYS_SHIP_TO_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_52
+    name: SYS_SHIP_TO_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_53
+    name: TO_STORAGE_CAPACITY_STATUS
+    type: DECIMAL(6,0)
+  - id: sc_dw_order_forecast_54
+    name: TO_TRANS_CAPACITY_STATUS
+    type: DECIMAL(6,0)
+  - id: sc_dw_order_forecast_55
+    name: VOLUME
+    type: DOUBLE
+  - id: sc_dw_order_forecast_56
+    name: WEIGHT
+    type: DOUBLE
+  - id: sc_dw_order_forecast_57
+    name: REQUEST_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_58
+    name: RPL_FTRDCASE_ORDER
+    type: DECIMAL(1,0)
+  - id: sc_dw_order_forecast_59
+    name: RPL_FTRDQUANTITY
+    type: DOUBLE
+  - id: sc_dw_order_forecast_60
+    name: RPL_INCREMENT_LOT_SIZE
+    type: DOUBLE
+  - id: sc_dw_order_forecast_61
+    name: RPL_IXMDATE_CREATED
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_62
+    name: RPL_IXMDEMAND
+    type: DOUBLE
+  - id: sc_dw_order_forecast_63
+    name: RPL_IXMDESIRED_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_64
+    name: RPL_IXMDESIRED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_order_forecast_65
+    name: RPL_IXMLOST_SALES_ADJUST
+    type: DOUBLE
+  - id: sc_dw_order_forecast_66
+    name: RPL_IXMON_HAND
+    type: DOUBLE
+  - id: sc_dw_order_forecast_67
+    name: RPL_IXMSUPPLY
+    type: DOUBLE
+  - id: sc_dw_order_forecast_68
+    name: RPL_JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_69
+    name: RPL_MAX_LOT_SIZE
+    type: DOUBLE
+  - id: sc_dw_order_forecast_70
+    name: RPL_MIN_LOT_SIZE
+    type: DOUBLE
+  - id: sc_dw_order_forecast_71
+    name: RPL_PROJECTED_DAYS_OF_SUPPLY
+    type: DOUBLE
+  - id: sc_dw_order_forecast_72
+    name: RPL_PUSH_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_73
+    name: RPL_SYS_CONVERTING_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_74
+    name: RPL_SYS_PARENT_FORECAST_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_75
+    name: SYS_EVENT_OCCURRENCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_76
+    name: SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_order_forecast_77
+    name: OMS_IS_SOURCED
+    type: DECIMAL(1,0)
+  - id: sc_dw_order_forecast_78
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_order_forecast_79
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

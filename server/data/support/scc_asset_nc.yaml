@@ -1,0 +1,45 @@
+id: support_scc_asset_nc
+kind: support
+name: scc_asset_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_asset_nc_0
+    name: SYS_ASSET_ID
+    type: BIGINT(20)
+  - id: sc_scc_asset_nc_1
+    name: SYS_OWNING_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_scc_asset_nc_2
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_asset_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_asset_nc_4
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_asset_nc_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_asset_nc_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_asset_nc_7
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_asset_nc_8
+    name: ASSET_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_asset_nc_9
+    name: AUXILLIARY_KEY
+    type: VARCHAR(1024)
+  - id: sc_scc_asset_nc_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_asset_nc_11
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_asset_nc_12
+    name: RECONCILED
+    type: TINYINT(1)

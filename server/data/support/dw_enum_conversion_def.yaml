@@ -1,0 +1,39 @@
+id: support_dw_enum_conversion_def
+kind: support
+name: dw_enum_conversion_def
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_enum_conversion_def_0
+    name: sys_enum_conversion_def_id
+    type: BIGINT(20)
+  - id: sc_dw_enum_conversion_def_1
+    name: model_name
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_def_2
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_def_3
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_dw_enum_conversion_def_4
+    name: last_modified_user
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_def_5
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_enum_conversion_def_6
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_enum_conversion_def_7
+    name: enumeration_name
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_def_8
+    name: base_unit
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_def_9
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_enum_conversion_def_10
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

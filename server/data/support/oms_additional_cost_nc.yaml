@@ -1,0 +1,51 @@
+id: support_oms_additional_cost_nc
+kind: support
+name: oms_additional_cost_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_oms_additional_cost_nc_0
+    name: AUX_KEY
+    type: VARCHAR(64)
+  - id: sc_oms_additional_cost_nc_1
+    name: CONVERTED_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_oms_additional_cost_nc_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_oms_additional_cost_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_oms_additional_cost_nc_4
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_oms_additional_cost_nc_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_oms_additional_cost_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_oms_additional_cost_nc_7
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_oms_additional_cost_nc_8
+    name: OWNER_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_oms_additional_cost_nc_9
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_oms_additional_cost_nc_10
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_oms_additional_cost_nc_11
+    name: SYS_ADDITIONAL_COST_ID
+    type: BIGINT(20)
+  - id: sc_oms_additional_cost_nc_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_oms_additional_cost_nc_13
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_oms_additional_cost_nc_14
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,45 @@
+id: support_dw_scc_enhanced_order_snapshot
+kind: support
+name: dw_scc_enhanced_order_snapshot
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_enhanced_order_snapshot_0
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_snapshot_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_snapshot_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_snapshot_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_snapshot_4
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_snapshot_5
+    name: ORDER_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_snapshot_6
+    name: ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_snapshot_7
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_snapshot_8
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_snapshot_9
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_snapshot_10
+    name: ORDER_SUB_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_snapshot_11
+    name: INCO_TERMS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_snapshot_12
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)

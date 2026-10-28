@@ -12,6 +12,10 @@ import type {
   Dimension,
   Enumeration,
   Fact,
+  JoinDef,
+  LookupDef,
+  MappingKind,
+  NetChangeSource,
   SqlDialect,
 } from './types';
 
@@ -146,8 +150,7 @@ export function generateEntitySql(e: AnyEntity, dialect: SqlDialect, rows = 3): 
 }
 
 /** Generate SQL for the whole model in dependency-friendly order. */
-export function generateModelSql(model: DesignModel, rows = 3): string {
-  const dialect = model.project.targetDatabase;
+export function generateModelSql(model: DesignModel, rows = 3): string {  const dialect = model.project.targetDatabase;
   const order: AnyEntity[] = [...model.enumerations, ...model.dimensions, ...model.facts];
   const header = [
     `-- =====================================================`,
@@ -157,4 +160,160 @@ export function generateModelSql(model: DesignModel, rows = 3): string {
     `-- =====================================================\n`,
   ].join('\n');
   return header + order.map((e) => generateEntitySql(e, dialect, rows).full).join('\n\n\n');
+}
+
+// ---------------------------------------------------------------------------
+// Source SELECT preview (Sources & Joins editor)
+// ---------------------------------------------------------------------------
+
+/** Minimal shape needed to render an illustrative source SELECT. */
+export interface SelectPreviewInput {
+  sources: NetChangeSource[];
+  joins: JoinDef[];
+  columns: Column[];
+}
+
+/** Mirror of the mapping editor's inference so the preview matches the Mapping tab. */
+function effectiveMappingKind(c: Column): MappingKind {
+  if (c.mappingKind) return c.mappingKind;
+  if (c.auditRole) return 'audit';
+  if (c.autoIncrement || c.isSk) return 'generated';
+  if (c.isCalculated) return 'calculated';
+  if (c.lookupId) return 'lookup';
+  return 'direct';
+}
+
+function isNumericType(type = ''): boolean {
+  return /(INT|DECIMAL|NUMERIC|DOUBLE|FLOAT)/.test(type.toUpperCase());
+}
+
+const aliasOf = (s: NetChangeSource): string => s.alias?.trim() || s.ncTable;
+
+/** Build a live, illustrative SELECT from the declared sources, joins and column mapping. */
+export function buildSourceSelectPreview({ sources, joins, columns }: SelectPreviewInput): string {
+  const netchange = sources.filter((s) => (s.role ?? 'netchange') !== 'support');
+  const from = netchange.find((s) => s.isPrimary) ?? netchange[0] ?? sources[0];
+  if (!from || !from.ncTable.trim()) {
+    return '-- Declare at least one source table (with a table name) to preview the SELECT.';
+  }
+
+  const selectLines: string[] = [];
+  for (const c of columns) {
+    const kind = effectiveMappingKind(c);
+    // Audit / surrogate columns are DW-managed; lookups add a column to the
+    // Pentaho *stream* (a separate Database Lookup step), never to the SELECT.
+    if (kind === 'audit' || kind === 'generated' || kind === 'lookup') continue;
+    if (kind === 'direct') {
+      const a = c.sourceTable?.trim();
+      const src = c.sourceColumn?.trim();
+      if (a && src) {
+        const ref = `${a}.${src}`;
+        const expr = c.coalesce ? `COALESCE(${ref}, ${isNumericType(c.type) ? '-1' : "'No Value'"})` : ref;
+        selectLines.push(`${expr} AS ${c.name}`);
+      } else {
+        selectLines.push(`NULL AS ${c.name} -- map a source column`);
+      }
+    } else if (kind === 'constant') {
+      selectLines.push(`${c.constantValue ? `'${c.constantValue}'` : 'NULL'} AS ${c.name}`);
+    } else if (kind === 'calculated') {
+      selectLines.push(`${c.formula ? `(${c.formula})` : 'NULL'} AS ${c.name}`);
+    } else if (kind === 'join') {
+      // A join-mapped column is projected from the joined table, aliased to the
+      // final mapped column name (e.g. `en.ENTERPRISE_NAME AS ENTERPRISE_NAME`).
+      const join = joins.find((j) => j.id === c.joinId);
+      const a = join?.rightAlias?.trim() || join?.rightTable?.trim();
+      const field = c.joinField?.trim();
+      if (a && field) {
+        const ref = `${a}.${field}`;
+        const expr = c.coalesce ? `COALESCE(${ref}, ${isNumericType(c.type) ? '-1' : "'No Value'"})` : ref;
+        selectLines.push(`${expr} AS ${c.name}`);
+      } else {
+        selectLines.push(`NULL AS ${c.name} -- pick a join and its returned field in Mapping`);
+      }
+    }
+  }
+  if (!selectLines.length) selectLines.push(`${aliasOf(from)}.*`);
+
+  const lines: string[] = ['SELECT'];
+  lines.push(selectLines.map((l, i) => `  ${l}${i < selectLines.length - 1 ? ',' : ''}`).join('\n'));
+  lines.push(`FROM ${from.ncTable} ${aliasOf(from)}`);
+
+  for (const j of joins) {
+    const rightRef = j.rightAlias?.trim() ? `${j.rightTable} ${j.rightAlias.trim()}` : j.rightTable || '/* table */';
+    const cond = j.onConditions
+      .filter((c) => c.left || c.right)
+      .map((c) => `${c.left} ${c.op || '='} ${c.right}`)
+      .join(' AND ');
+    lines.push(`${j.joinType} JOIN ${rightRef} ON ${cond || '/* on ... */'}`);
+  }
+
+  return lines.join('\n');
+}
+
+/** Minimal shape needed to describe the Pentaho stream lookup steps. */
+export interface StreamLookupInput {
+  columns: Column[];
+  lookups: LookupDef[];
+}
+
+/**
+ * Describe the columns that lookup steps add to the *stream* (not the SELECT).
+ * Each lookup-mapped column becomes a Pentaho "Database Lookup" step that reads
+ * the current stream keys and appends its returned value as a new stream field.
+ */
+export function buildStreamLookupPreview({ columns, lookups }: StreamLookupInput): string {
+  const lines: string[] = [];
+  for (const c of columns) {
+    if (effectiveMappingKind(c) !== 'lookup') continue;
+    const lk = lookups.find((l) => l.id === c.lookupId);
+    const table = lk?.tableName?.trim() || '/* lookup table */';
+    const ret =
+      c.lookupField?.trim() ||
+      lk?.returnFields?.[0]?.newName ||
+      lk?.returnFields?.[0]?.field ||
+      c.name;
+    const streamKeys = lk?.streamKeyFields ?? [];
+    const tableKeys = lk?.tableKeyFields ?? [];
+    const conds = lk?.keyConditions ?? [];
+    const n = Math.max(streamKeys.length, tableKeys.length);
+    const matches: string[] = [];
+    for (let i = 0; i < n; i++) {
+      const tk = (tableKeys[i] || '/* key */').trim();
+      const sk = (streamKeys[i] || '/* stream field */').trim();
+      const op = (conds[i] || '=').trim();
+      matches.push(`${table}.${tk} ${op} stream.${sk}`);
+    }
+    const matchText = matches.length ? matches.join(' AND ') : '/* no key condition */';
+    lines.push(
+      `Lookup to ${table}: match ${matchText}; return ${table}.${ret} and add it to the stream as "${c.name}"`,
+    );
+  }
+  if (!lines.length) {
+    return '-- No lookups: no columns are mapped via a lookup. Lookups add fields to the stream, not the SELECT.';
+  }
+  return lines.join('\n');
+}
+
+/** Minimal shape to render a SingleStore CREATE TABLE for a declared source table. */
+export interface SourceDdlInput {
+  name: string;
+  columns?: { name: string; type?: string }[];
+  storageType?: 'columnstore' | 'rowstore';
+}
+
+/** Build a SingleStore (MemSQL) CREATE TABLE statement for a source table. */
+export function buildSourceTableDdl({ name, columns, storageType = 'columnstore' }: SourceDdlInput): string {
+  const tableName = name.trim() || 'source_table';
+  const cols = (columns ?? []).filter((c) => c.name.trim());
+  const colLines = cols.length
+    ? cols.map((c) => `  ${c.name.trim()} ${c.type?.trim() || 'VARCHAR(256)'}`)
+    : ['  /* add columns in the Source Tables section */'];
+  const isRowstore = storageType === 'rowstore';
+  const header = isRowstore
+    ? `-- SingleStore in-memory rowstore table\nCREATE ROWSTORE TABLE ${tableName} (`
+    : `-- SingleStore columnstore table\nCREATE TABLE ${tableName} (`;
+  const keyLine = isRowstore
+    ? '  /* SHARD KEY (col) — pick a distribution column */'
+    : '  /* SORT KEY (col), SHARD KEY (col) — pick columns for ordering/distribution */';
+  return `${header}\n${[...colLines, keyLine].join(',\n')}\n);`;
 }

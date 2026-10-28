@@ -1,0 +1,42 @@
+id: support_dw_fin_il_category
+kind: support
+name: dw_fin_il_category
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_fin_il_category_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fin_il_category_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_fin_il_category_2
+    name: JSLISTENER
+    type: VARCHAR(64)
+  - id: sc_dw_fin_il_category_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fin_il_category_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_fin_il_category_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fin_il_category_6
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_fin_il_category_7
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_fin_il_category_8
+    name: SYS_IL_CATEGORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_fin_il_category_9
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_fin_il_category_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_fin_il_category_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

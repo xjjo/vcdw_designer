@@ -1,0 +1,339 @@
+id: support_dw_singleton
+kind: support
+name: dw_singleton
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_singleton_0
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_1
+    name: SINGLETON_NO
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_2
+    name: SPT_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_3
+    name: SPT_VERSION
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_4
+    name: TRANS_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_5
+    name: CURRENT_POSITION
+    type: VARCHAR(512)
+  - id: sc_dw_singleton_6
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_7
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_8
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_9
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_10
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_11
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_12
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_13
+    name: EPC
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_14
+    name: MFG_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_15
+    name: EXPIRATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_16
+    name: EXPIRATION_WARNING_TOLERANCE
+    type: BIGINT(20)
+  - id: sc_dw_singleton_17
+    name: SINGLETON_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_18
+    name: CURRENT_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_19
+    name: NEXT_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_20
+    name: PREVIOUS_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_21
+    name: EXPECTED_ARRIVAL_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_22
+    name: WEIGHT
+    type: DOUBLE
+  - id: sc_dw_singleton_23
+    name: WEIGHT_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_singleton_24
+    name: VOLUME
+    type: DOUBLE
+  - id: sc_dw_singleton_25
+    name: VOLUME_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_singleton_26
+    name: SERIAL_NO
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_27
+    name: UNIQUEID
+    type: VARCHAR(120)
+  - id: sc_dw_singleton_28
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_29
+    name: RFID
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_30
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_31
+    name: SINGLETON_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_32
+    name: CURRENT_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_33
+    name: PREVIOUS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_34
+    name: NEXT_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_35
+    name: ORIGIN_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_36
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_37
+    name: SYS_PARENT_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_38
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_39
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_40
+    name: CURRENT_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_41
+    name: CURRENT_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_42
+    name: CURRENT_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_singleton_43
+    name: CURRENT_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_44
+    name: CURRENT_POSITION_LAT
+    type: DOUBLE
+  - id: sc_dw_singleton_45
+    name: CURRENT_POSITION_LON
+    type: DOUBLE
+  - id: sc_dw_singleton_46
+    name: DIMENSION_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_47
+    name: HEIGHT
+    type: DOUBLE
+  - id: sc_dw_singleton_48
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_singleton_49
+    name: LENGTH
+    type: DOUBLE
+  - id: sc_dw_singleton_50
+    name: MANUFACTURER_EXPIRATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_51
+    name: MANUFACTURER_LOT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_52
+    name: NEXT_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_53
+    name: NEXT_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_54
+    name: NEXT_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_singleton_55
+    name: NEXT_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_56
+    name: OWNER_AUX_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_57
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_58
+    name: OWNER_SERIAL_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_59
+    name: PRESSURE
+    type: DOUBLE
+  - id: sc_dw_singleton_60
+    name: PRESSURE_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_61
+    name: PREVIOUS_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_62
+    name: PREVIOUS_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_63
+    name: PREVIOUS_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_singleton_64
+    name: PREVIOUS_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_65
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_66
+    name: SCC_SYS_ASSIGNED_TO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_67
+    name: SCC_SYS_CURRENT_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_68
+    name: SCC_SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_69
+    name: SCC_SYS_POSSESSING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_70
+    name: SCC_SYS_PREVIOUS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_71
+    name: SCC_SYS_PREVIOUS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_72
+    name: SINGLETON_AUX_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_singleton_73
+    name: SYS_CURRENT_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_74
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_75
+    name: SYS_NEXT_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_76
+    name: SYS_PREVIOUS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_77
+    name: SYS_STCATEGORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_78
+    name: TEMPERATURE
+    type: DOUBLE
+  - id: sc_dw_singleton_79
+    name: TEMPERATURE_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_80
+    name: TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_singleton_81
+    name: WIDTH
+    type: DOUBLE
+  - id: sc_dw_singleton_82
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_singleton_83
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_singleton_84
+    name: SCC_SYS_BILL_OF_MATERIALS_ID
+    type: BIGINT(20)
+  - id: sc_dw_singleton_85
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_singleton_86
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_singleton_87
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_singleton_88
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_singleton_89
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_singleton_90
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_singleton_91
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_singleton_92
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_singleton_93
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_singleton_94
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_singleton_95
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_singleton_96
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_singleton_97
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_singleton_98
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_singleton_99
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_singleton_100
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_101
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_102
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_103
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_104
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_105
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_106
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_107
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_108
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_109
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_singleton_110
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

@@ -1,0 +1,84 @@
+id: support_tms_service_level_nc
+kind: support
+name: tms_service_level_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_service_level_nc_0
+    name: SYS_SERVICE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_tms_service_level_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_service_level_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_tms_service_level_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_tms_service_level_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_tms_service_level_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_service_level_nc_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_service_level_nc_7
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_service_level_nc_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_service_level_nc_9
+    name: SERVICE_LEVEL_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_service_level_nc_10
+    name: TRANSIT_TIME
+    type: BIGINT(20)
+  - id: sc_tms_service_level_nc_11
+    name: DESCRIPTION
+    type: VARCHAR(256)
+  - id: sc_tms_service_level_nc_12
+    name: PICKUP_CUT_OFF_TIME_HOUR
+    type: DECIMAL(9,0)
+  - id: sc_tms_service_level_nc_13
+    name: PICKUP_CUT_OFF_TIME_MINUTE
+    type: DECIMAL(9,0)
+  - id: sc_tms_service_level_nc_14
+    name: DELIVERY_COMMIT_TIME_HOUR
+    type: DECIMAL(9,0)
+  - id: sc_tms_service_level_nc_15
+    name: DELIVERY_COMMIT_TIME_MINUTE
+    type: DECIMAL(9,0)
+  - id: sc_tms_service_level_nc_16
+    name: TMS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_tms_service_level_nc_17
+    name: NO_OF_ALT_ROUTES_TO_EXPLORE
+    type: DECIMAL(9,0)
+  - id: sc_tms_service_level_nc_18
+    name: EX_SCH_BETWEEN_FORWARDER_SITES
+    type: DECIMAL(1,0)
+  - id: sc_tms_service_level_nc_19
+    name: APPLICABLE_ROUTE_SCENARIOS
+    type: VARCHAR(256)
+  - id: sc_tms_service_level_nc_20
+    name: DECLARED_VALUE_THRESHOLD
+    type: DOUBLE
+  - id: sc_tms_service_level_nc_21
+    name: IS_PREMIUM
+    type: DECIMAL(1,0)
+  - id: sc_tms_service_level_nc_22
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_tms_service_level_nc_23
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_tms_service_level_nc_24
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_service_level_nc_25
+    name: RECONCILED
+    type: TINYINT(1)

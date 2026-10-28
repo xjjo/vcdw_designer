@@ -1,0 +1,57 @@
+id: support_scc_partner_group_header_nc
+kind: support
+name: scc_partner_group_header_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_partner_group_header_nc_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_scc_partner_group_header_nc_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_partner_group_header_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_partner_group_header_nc_3
+    name: GROUP_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_partner_group_header_nc_4
+    name: GROUP_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_partner_group_header_nc_5
+    name: IS_MUTUALLY_EXCLUSIVE
+    type: DECIMAL(1,0)
+  - id: sc_scc_partner_group_header_nc_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_partner_group_header_nc_7
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_partner_group_header_nc_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_partner_group_header_nc_9
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_partner_group_header_nc_10
+    name: PARTNER_TYPE
+    type: VARCHAR(64)
+  - id: sc_scc_partner_group_header_nc_11
+    name: SYS_OWNING_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_scc_partner_group_header_nc_12
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_partner_group_header_nc_13
+    name: SYS_PARTNER_GROUP_HEADER_ID
+    type: BIGINT(20)
+  - id: sc_scc_partner_group_header_nc_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_partner_group_header_nc_15
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_partner_group_header_nc_16
+    name: RECONCILED
+    type: TINYINT(1)

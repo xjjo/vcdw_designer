@@ -1,0 +1,186 @@
+id: support_dw_site_rsrc_rsvn
+kind: support
+name: dw_site_rsrc_rsvn
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_site_rsrc_rsvn_0
+    name: sys_site_rsrc_rsvn_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_1
+    name: trans_name
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_2
+    name: spt_name
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_3
+    name: spt_version
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_4
+    name: rsvn_id
+    type: VARCHAR(128)
+  - id: sc_dw_site_rsrc_rsvn_5
+    name: rsvn_group_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_6
+    name: rsvn_request_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_7
+    name: parent_site_rsrc_name
+    type: VARCHAR(164)
+  - id: sc_dw_site_rsrc_rsvn_8
+    name: rsrc_demand_type
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_9
+    name: rsvn_contact
+    type: VARCHAR(256)
+  - id: sc_dw_site_rsrc_rsvn_10
+    name: supplier_contact
+    type: VARCHAR(512)
+  - id: sc_dw_site_rsrc_rsvn_11
+    name: carrier_contact
+    type: VARCHAR(512)
+  - id: sc_dw_site_rsrc_rsvn_12
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_13
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_14
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_15
+    name: last_modified_user
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_16
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_17
+    name: last_computed_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_18
+    name: last_touched_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_19
+    name: rsvn_start_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_20
+    name: rsvn_end_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_21
+    name: user_provided_start_time
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_rsrc_rsvn_22
+    name: cancel_comment
+    type: VARCHAR(1024)
+  - id: sc_dw_site_rsrc_rsvn_23
+    name: cancel_reason
+    type: DECIMAL(6,0)
+  - id: sc_dw_site_rsrc_rsvn_24
+    name: state
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_25
+    name: attached_notes
+    type: LONGTEXT
+  - id: sc_dw_site_rsrc_rsvn_26
+    name: attached_note_count
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_27
+    name: rsrc_name
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_28
+    name: rsrc_site_name
+    type: VARCHAR(256)
+  - id: sc_dw_site_rsrc_rsvn_29
+    name: rsvn_site_org_name
+    type: VARCHAR(128)
+  - id: sc_dw_site_rsrc_rsvn_30
+    name: off_network_carrier
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_31
+    name: creation_user_ent_name
+    type: VARCHAR(128)
+  - id: sc_dw_site_rsrc_rsvn_32
+    name: last_modified_user_ent_name
+    type: VARCHAR(128)
+  - id: sc_dw_site_rsrc_rsvn_33
+    name: rsrc_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_34
+    name: parent_site_rsrc_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_35
+    name: carrier_org_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_36
+    name: supplier_org_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_37
+    name: participant_org_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_38
+    name: rsrc_site_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_39
+    name: rsvn_site_org_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_40
+    name: creation_user_ent_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_41
+    name: last_modified_user_ent_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_42
+    name: sys_creation_template_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_43
+    name: rsvn_estimated_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_44
+    name: schedule_type
+    type: VARCHAR(256)
+  - id: sc_dw_site_rsrc_rsvn_45
+    name: sch_date_change_reason_code
+    type: VARCHAR(256)
+  - id: sc_dw_site_rsrc_rsvn_46
+    name: sch_live_ddg_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_47
+    name: sch_rsvn_slot_type
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_48
+    name: sch_soft_appt_expiration_date
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_49
+    name: sch_standing_appt_reason
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_50
+    name: sch_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_site_rsrc_rsvn_51
+    name: sys_end_loc_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_52
+    name: sys_start_loc_id
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_rsvn_53
+    name: tms_allowance
+    type: DOUBLE
+  - id: sc_dw_site_rsrc_rsvn_54
+    name: tms_cost
+    type: DOUBLE
+  - id: sc_dw_site_rsrc_rsvn_55
+    name: tms_reservation_end_date_tz
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_56
+    name: tms_reservation_start_date_tz
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_57
+    name: tms_resource_site_integ_ref
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_rsvn_58
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_rsvn_59
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

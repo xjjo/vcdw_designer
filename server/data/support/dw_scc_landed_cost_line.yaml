@@ -1,0 +1,51 @@
+id: support_dw_scc_landed_cost_line
+kind: support
+name: dw_scc_landed_cost_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_landed_cost_line_0
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_landed_cost_line_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_landed_cost_line_2
+    name: LINE_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_landed_cost_line_3
+    name: LINE_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_landed_cost_line_4
+    name: LINE_HSCODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_landed_cost_line_5
+    name: OWNING_MODEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_line_6
+    name: OWNING_MODEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_landed_cost_line_7
+    name: SERVICE_PROVIDER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_landed_cost_line_8
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_line_9
+    name: SYS_LANDED_COST_CONDITION_C_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_line_10
+    name: SYS_LANDED_COST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_line_11
+    name: SYS_LANDED_COST_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_line_12
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_line_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_landed_cost_line_14
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

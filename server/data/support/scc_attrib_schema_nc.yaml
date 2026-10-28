@@ -1,0 +1,48 @@
+id: support_scc_attrib_schema_nc
+kind: support
+name: scc_attrib_schema_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_attrib_schema_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attrib_schema_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_nc_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attrib_schema_nc_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_nc_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attrib_schema_nc_5
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_nc_6
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_nc_7
+    name: PRIVATE_SCHEMA
+    type: DECIMAL(1,0)
+  - id: sc_scc_attrib_schema_nc_8
+    name: SCHEMA_DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_nc_9
+    name: SYS_ATTRIB_SCHEMA_ID
+    type: BIGINT(20)
+  - id: sc_scc_attrib_schema_nc_10
+    name: SYS_OWNING_ENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_attrib_schema_nc_11
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_attrib_schema_nc_12
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_nc_13
+    name: RECONCILED
+    type: TINYINT(1)

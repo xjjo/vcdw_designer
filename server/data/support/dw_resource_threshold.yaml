@@ -1,0 +1,21 @@
+id: support_dw_resource_threshold
+kind: support
+name: dw_resource_threshold
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_resource_threshold_0
+    name: RESOURCE_COST
+    type: INT(5)
+  - id: sc_dw_resource_threshold_1
+    name: MAX_EXECUTION_TIME
+    type: BIGINT(20)
+  - id: sc_dw_resource_threshold_2
+    name: MAX_EXECUTION_NO
+    type: BIGINT(20)
+  - id: sc_dw_resource_threshold_3
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_resource_threshold_4
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

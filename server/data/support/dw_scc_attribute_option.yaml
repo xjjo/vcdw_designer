@@ -1,0 +1,36 @@
+id: support_dw_scc_attribute_option
+kind: support
+name: dw_scc_attribute_option
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_attribute_option_0
+    name: ATTRIBUTE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attribute_option_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attribute_option_2
+    name: OPTION_DESCRIPTION
+    type: VARCHAR(100)
+  - id: sc_dw_scc_attribute_option_3
+    name: OPTION_VALUE
+    type: VARCHAR(100)
+  - id: sc_dw_scc_attribute_option_4
+    name: SYS_ATTRIBUTE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attribute_option_5
+    name: SYS_ATTRIBUTE_OPTION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attribute_option_6
+    name: SYS_ATTRIBUTE_SET_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attribute_option_7
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attribute_option_8
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_attribute_option_9
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

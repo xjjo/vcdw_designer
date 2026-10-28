@@ -1,0 +1,63 @@
+id: support_scc_delivery_schedule_snapshot_nc
+kind: support
+name: scc_delivery_schedule_snapshot_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_delivery_schedule_snapshot_nc_0
+    name: SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_delivery_schedule_snapshot_nc_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_delivery_schedule_snapshot_nc_2
+    name: SYS_REQUEST_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_delivery_schedule_snapshot_nc_3
+    name: SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_delivery_schedule_snapshot_nc_4
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_scc_delivery_schedule_snapshot_nc_5
+    name: ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_delivery_schedule_snapshot_nc_6
+    name: LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_delivery_schedule_snapshot_nc_7
+    name: REQUEST_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_delivery_schedule_snapshot_nc_8
+    name: DELIVERY_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_delivery_schedule_snapshot_nc_9
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_delivery_schedule_snapshot_nc_10
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_delivery_schedule_snapshot_nc_11
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_delivery_schedule_snapshot_nc_12
+    name: REQUEST_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_delivery_schedule_snapshot_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_delivery_schedule_snapshot_nc_14
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_delivery_schedule_snapshot_nc_15
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_delivery_schedule_snapshot_nc_16
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_delivery_schedule_snapshot_nc_17
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_delivery_schedule_snapshot_nc_18
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

@@ -1,0 +1,141 @@
+id: support_dw_tms_movement_evt
+kind: support
+name: dw_tms_movement_evt
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_movement_evt_0
+    name: ADDITIONAL_PARAMS
+    type: LONGTEXT
+  - id: sc_dw_tms_movement_evt_1
+    name: ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_2
+    name: ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_3
+    name: ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_tms_movement_evt_4
+    name: ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_5
+    name: CHANGE_APPROVED_BY
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_6
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_movement_evt_7
+    name: CREATION_ORGANIZATION_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_tms_movement_evt_8
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_9
+    name: CURRENT_CARRIER_ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_tms_movement_evt_10
+    name: CURRENT_POSITION_LATITUDE
+    type: DOUBLE
+  - id: sc_dw_tms_movement_evt_11
+    name: CURRENT_POSITION_LONGITUDE
+    type: DOUBLE
+  - id: sc_dw_tms_movement_evt_12
+    name: CUSTOM_EVT_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_13
+    name: ESTIMATED_ARRIVAL
+    type: DATETIME(6)
+  - id: sc_dw_tms_movement_evt_14
+    name: EVT_CATEGORY
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_movement_evt_15
+    name: EVT_DATA
+    type: VARCHAR(4000)
+  - id: sc_dw_tms_movement_evt_16
+    name: EVT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_movement_evt_17
+    name: EVT_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_movement_evt_18
+    name: EVT_LOCATION
+    type: VARCHAR(512)
+  - id: sc_dw_tms_movement_evt_19
+    name: EVT_MESSAGE
+    type: VARCHAR(4000)
+  - id: sc_dw_tms_movement_evt_20
+    name: EVT_SOURCE
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_21
+    name: EVT_TIME_ZONE
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_22
+    name: EVT_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_movement_evt_23
+    name: EXTERNAL
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_movement_evt_24
+    name: FIRST_STOP_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_tms_movement_evt_25
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_movement_evt_26
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_movement_evt_27
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_28
+    name: LAST_STOP_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_tms_movement_evt_29
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_movement_evt_30
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_movement_evt_31
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_32
+    name: MVMT_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_33
+    name: MVMT_STATE
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_34
+    name: MVM_FROM_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_tms_movement_evt_35
+    name: MVM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_36
+    name: MVM_TO_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_tms_movement_evt_37
+    name: REASON_CODE
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_movement_evt_38
+    name: REASON_CODE_COMMENTS
+    type: VARCHAR(2048)
+  - id: sc_dw_tms_movement_evt_39
+    name: SPLC
+    type: VARCHAR(64)
+  - id: sc_dw_tms_movement_evt_40
+    name: SYS_EVT_CREATOR_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_movement_evt_41
+    name: SYS_EVT_TARGET_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_movement_evt_42
+    name: SYS_MOVEMENT_EVT_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_movement_evt_43
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_movement_evt_44
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

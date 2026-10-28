@@ -1,0 +1,213 @@
+id: support_organization_nc
+kind: support
+name: organization_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_organization_nc_0
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_organization_nc_1
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_organization_nc_2
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_organization_nc_3
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+  - id: sc_organization_nc_4
+    name: DESCRIPTION
+    type: VARCHAR(255)
+  - id: sc_organization_nc_5
+    name: CONTACT
+    type: VARCHAR(512)
+  - id: sc_organization_nc_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_organization_nc_7
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_organization_nc_8
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_9
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_organization_nc_10
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_organization_nc_11
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_organization_nc_12
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_organization_nc_13
+    name: BILLTO_ADDR_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_organization_nc_14
+    name: BILLTO_ADDR_COMP1
+    type: VARCHAR(64)
+  - id: sc_organization_nc_15
+    name: BILLTO_ADDR_COMP2
+    type: VARCHAR(64)
+  - id: sc_organization_nc_16
+    name: BILLTO_ADDR_COMPS
+    type: VARCHAR(512)
+  - id: sc_organization_nc_17
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_organization_nc_18
+    name: AUTHORITATIVE_LEVEL
+    type: VARCHAR(256)
+  - id: sc_organization_nc_19
+    name: CONTACT_EMAIL
+    type: VARCHAR(64)
+  - id: sc_organization_nc_20
+    name: CONTACT_PHONE
+    type: VARCHAR(64)
+  - id: sc_organization_nc_21
+    name: DEFAULT_DIST_CALC
+    type: DECIMAL(6,0)
+  - id: sc_organization_nc_22
+    name: DIST_CALC_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_organization_nc_23
+    name: DUNSNUMBER
+    type: BIGINT(20)
+  - id: sc_organization_nc_24
+    name: ORDER_NO_PREFIX
+    type: VARCHAR(64)
+  - id: sc_organization_nc_25
+    name: ORDER_PRINT_TEMPLATE_NAME
+    type: VARCHAR(256)
+  - id: sc_organization_nc_26
+    name: SHIPMENT_NO_PREFIX
+    type: VARCHAR(64)
+  - id: sc_organization_nc_27
+    name: CMDC_ADDITIONAL_PROPERTIES
+    type: LONGTEXT
+  - id: sc_organization_nc_28
+    name: CMDC_AUTHORITY_LEVEL
+    type: VARCHAR(64)
+  - id: sc_organization_nc_29
+    name: CMDC_LAST_SYNCED_FROM_CMD
+    type: DATETIME(6)
+  - id: sc_organization_nc_30
+    name: CMDC_UPDATED_FROM_CMD
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_31
+    name: SCH_SUPPORT_CTRL_NONCTRL_APPT
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_32
+    name: OMS_DISC_BILL_TO_ADDR_COMP1
+    type: VARCHAR(64)
+  - id: sc_organization_nc_33
+    name: OMS_DISC_BILL_TO_ADDR_COMP2
+    type: VARCHAR(64)
+  - id: sc_organization_nc_34
+    name: OMS_DISC_BILL_TO_ADDR_COMPS
+    type: VARCHAR(512)
+  - id: sc_organization_nc_35
+    name: OMS_DISC_BILL_TO_ADDR_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_organization_nc_36
+    name: OMS_INVOICE_LINE_AMT_TOLERANCE
+    type: DOUBLE
+  - id: sc_organization_nc_37
+    name: OMS_INVOICE_PRINT_TEMPLATE_NAM
+    type: VARCHAR(64)
+  - id: sc_organization_nc_38
+    name: OMS_LINE_QNTY_TOLERANCE_PCT
+    type: DOUBLE
+  - id: sc_organization_nc_39
+    name: OMS_TOTAL_AMOUNT_TOLERANCE
+    type: DOUBLE
+  - id: sc_organization_nc_40
+    name: OMS_UNIT_PRICE_TOLERANCE_PCT
+    type: DOUBLE
+  - id: sc_organization_nc_41
+    name: TMS_ADDITIONAL_CHARGE_LIMIT
+    type: DOUBLE
+  - id: sc_organization_nc_42
+    name: TMS_APPOINTMENT_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_43
+    name: TMS_APPT_NOTES_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_44
+    name: TMS_CON_INV_SITE_ORIDE_PLC
+    type: DECIMAL(6,0)
+  - id: sc_organization_nc_45
+    name: TMS_FREIGHT_INV_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_46
+    name: TMS_GENERATE_INVOICE_ON_TENDER
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_47
+    name: TMS_MVMT_APPROVED_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_48
+    name: TMS_NON_CON_INV_SITE_ORIDE_PLC
+    type: DECIMAL(6,0)
+  - id: sc_organization_nc_49
+    name: TMS_PSNGENERATION_STATE
+    type: VARCHAR(256)
+  - id: sc_organization_nc_50
+    name: TMS_QUEUE_PREFIX
+    type: VARCHAR(64)
+  - id: sc_organization_nc_51
+    name: TMS_SEND_TENDER_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_52
+    name: TMS_SHIPMENT_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_53
+    name: TMS_SKIP_MMNOTIFICATIONS
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_54
+    name: TMS_SUBS_APPT_NOTIF_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_organization_nc_55
+    name: TMS_TRACK_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_organization_nc_56
+    name: TMS_TRACK_NOT_FILE_TYPE
+    type: VARCHAR(256)
+  - id: sc_organization_nc_57
+    name: SCPT_SCPL_EDI_DELIMITER
+    type: VARCHAR(64)
+  - id: sc_organization_nc_58
+    name: SCPT_SCPL_GS_IDENTIFIER
+    type: VARCHAR(64)
+  - id: sc_organization_nc_59
+    name: SCPT_SCPL_ISA_IDENTIFIER
+    type: VARCHAR(64)
+  - id: sc_organization_nc_60
+    name: SCPT_SCPL_ISA_QUALIFIER
+    type: VARCHAR(64)
+  - id: sc_organization_nc_61
+    name: SCPT_SCPL_MAILBOX
+    type: VARCHAR(64)
+  - id: sc_organization_nc_62
+    name: SCPT_SCPL_NOTES
+    type: VARCHAR(64)
+  - id: sc_organization_nc_63
+    name: OMS_SYS_REQUISTION_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_organization_nc_64
+    name: OMS_SYS_INVOICER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_organization_nc_65
+    name: OMS_SYS_INVOICEE_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_organization_nc_66
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_organization_nc_67
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_organization_nc_68
+    name: RECONCILED
+    type: TINYINT(1)

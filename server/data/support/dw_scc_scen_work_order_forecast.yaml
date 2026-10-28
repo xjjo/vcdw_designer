@@ -1,0 +1,69 @@
+id: support_dw_scc_scen_work_order_forecast
+kind: support
+name: dw_scc_scen_work_order_forecast
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_scen_work_order_forecast_0
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_scen_work_order_forecast_1
+    name: FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_scen_work_order_forecast_2
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_dw_scc_scen_work_order_forecast_3
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_scen_work_order_forecast_4
+    name: FORECAST_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_work_order_forecast_5
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_scen_work_order_forecast_6
+    name: FORECAST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_scen_work_order_forecast_7
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_scen_work_order_forecast_8
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_dw_scc_scen_work_order_forecast_9
+    name: SYS_WORK_ORDER_FORECAST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_10
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_11
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_12
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_13
+    name: SYS_LIVE_CHAIN_MODEL_REF_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_14
+    name: SYS_SCENARIO_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_15
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_16
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_17
+    name: SYS_PARENT_PROD_ORDER_FCST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_scen_work_order_forecast_18
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_work_order_forecast_19
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_scen_work_order_forecast_20
+    name: ES_LMD
+    type: DATETIME(6)

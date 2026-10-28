@@ -1,0 +1,33 @@
+id: support_dw_scc_attribute_set
+kind: support
+name: dw_scc_attribute_set
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_attribute_set_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attribute_set_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attribute_set_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attribute_set_3
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attribute_set_4
+    name: SYS_ATTRIBUTE_SET_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attribute_set_5
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attribute_set_6
+    name: TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attribute_set_7
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_attribute_set_8
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,162 @@
+id: support_scc_equipment_settings_nc
+kind: support
+name: scc_equipment_settings_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_equipment_settings_nc_0
+    name: AUTO_DERIVE_CANDIDATE
+    type: TINYINT(1)
+  - id: sc_scc_equipment_settings_nc_1
+    name: BREAK_BULK_DISABLED
+    type: TINYINT(1)
+  - id: sc_scc_equipment_settings_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_equipment_settings_nc_3
+    name: MAX_CONSOL_VOLUME_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_4
+    name: MAX_CONSOL_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_5
+    name: MAX_CONSOL_WEIGHT_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_6
+    name: MAX_CONSOL_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_7
+    name: MAX_NUMBER_OF_STOPS_PER_EQPT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_8
+    name: MAX_VOLUME_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_9
+    name: MAX_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_10
+    name: MAX_WEIGHT_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_11
+    name: MAX_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_12
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_equipment_settings_nc_13
+    name: ON_VIOLATION
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_14
+    name: QUANTITY_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_15
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_16
+    name: SHIP_GRTHLNT_RNG_LOWER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_17
+    name: SHIP_GRTHLNT_RNG_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_18
+    name: SHIP_GRTHLNT_RNG_UPPER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_19
+    name: SHIP_UNIT_GRTH_RNG_LOWER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_20
+    name: SHIP_UNIT_GRTH_RNG_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_21
+    name: SHIP_UNIT_GRTH_RNG_UPPER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_22
+    name: SHIP_UNIT_HGT_RNG_LOWER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_23
+    name: SHIP_UNIT_HGT_RNG_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_24
+    name: SHIP_UNIT_HGT_RNG_UPPER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_25
+    name: SHIP_UNIT_LNT_RNG_LOWER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_26
+    name: SHIP_UNIT_LNT_RNG_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_27
+    name: SHIP_UNIT_LNT_RNG_UPPER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_28
+    name: SHIP_UNIT_WDT_RNG_LOWER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_29
+    name: SHIP_UNIT_WDT_RNG_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_30
+    name: SHIP_UNIT_WDT_RNG_UPPER_BOUND
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_31
+    name: SHIP_UNIT_WGT_RNG_MAX
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_32
+    name: SHIP_UNIT_WGT_RNG_MIN
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_33
+    name: SHIP_UNIT_WGT_RNG_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_34
+    name: SPACES
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_35
+    name: SPEED_CAPABILITY_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_36
+    name: SPEED_CAPABILITY_DISTANCE_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_37
+    name: SPEED_CAPABILITY_TIME_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_38
+    name: SYS_EQUIPMENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_equipment_settings_nc_39
+    name: SYS_EQUIPMENT_SETTINGS_ID
+    type: BIGINT(20)
+  - id: sc_scc_equipment_settings_nc_40
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_equipment_settings_nc_41
+    name: THRESHOLD_VOLUME_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_42
+    name: THRESHOLD_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_43
+    name: THRESHOLD_WEIGHT_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_equipment_settings_nc_44
+    name: THRESHOLD_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_45
+    name: TRANSIT_MODE
+    type: VARCHAR(256)
+  - id: sc_scc_equipment_settings_nc_46
+    name: YARD_STORAGE_ENABLED
+    type: TINYINT(1)
+  - id: sc_scc_equipment_settings_nc_47
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_equipment_settings_nc_48
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_equipment_settings_nc_49
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_equipment_settings_nc_50
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_equipment_settings_nc_51
+    name: RECONCILED
+    type: TINYINT(1)

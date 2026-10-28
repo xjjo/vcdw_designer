@@ -1,0 +1,90 @@
+id: support_scc_scen_prod_demand_forecast_nc
+kind: support
+name: scc_scen_prod_demand_forecast_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_scen_prod_demand_forecast_nc_0
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_scc_scen_prod_demand_forecast_nc_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_prod_demand_forecast_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_scen_prod_demand_forecast_nc_3
+    name: FORECAST_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_prod_demand_forecast_nc_4
+    name: FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_scc_scen_prod_demand_forecast_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_prod_demand_forecast_nc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_scen_prod_demand_forecast_nc_7
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_scen_prod_demand_forecast_nc_8
+    name: MFG_IS_ACTIVE_CDTFCST
+    type: DECIMAL(1,0)
+  - id: sc_scc_scen_prod_demand_forecast_nc_9
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_scc_scen_prod_demand_forecast_nc_10
+    name: PLANNED_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_scen_prod_demand_forecast_nc_11
+    name: PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_scen_prod_demand_forecast_nc_12
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_scen_prod_demand_forecast_nc_13
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_scen_prod_demand_forecast_nc_14
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_scen_prod_demand_forecast_nc_15
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_prod_demand_forecast_nc_16
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_prod_demand_forecast_nc_17
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_prod_demand_forecast_nc_18
+    name: SYS_PROD_DEMAND_FORECAST_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_prod_demand_forecast_nc_19
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_prod_demand_forecast_nc_20
+    name: SYS_SCENARIO_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_prod_demand_forecast_nc_21
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_scen_prod_demand_forecast_nc_22
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_scen_prod_demand_forecast_nc_23
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_scen_prod_demand_forecast_nc_24
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_scen_prod_demand_forecast_nc_25
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_scen_prod_demand_forecast_nc_26
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_scen_prod_demand_forecast_nc_27
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

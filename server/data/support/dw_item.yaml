@@ -1,0 +1,462 @@
+id: support_dw_item
+kind: support
+name: dw_item
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_item_0
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_1
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_item_2
+    name: ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_item_3
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+  - id: sc_dw_item_4
+    name: DESCRIPTION
+    type: VARCHAR(1024)
+  - id: sc_dw_item_5
+    name: TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_item_6
+    name: MFG_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_item_7
+    name: MFG_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_item_8
+    name: UNIVERSAL_ITEM_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_item_9
+    name: GTIN
+    type: VARCHAR(64)
+  - id: sc_dw_item_10
+    name: PRICE
+    type: DOUBLE
+  - id: sc_dw_item_11
+    name: MSRP
+    type: DOUBLE
+  - id: sc_dw_item_12
+    name: OMS_SYS_PACKAGE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_13
+    name: PURCHASE_COST
+    type: DOUBLE
+  - id: sc_dw_item_14
+    name: TOTAL_LANDED_COST
+    type: DOUBLE
+  - id: sc_dw_item_15
+    name: CURRENCY
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_16
+    name: STYLE
+    type: VARCHAR(64)
+  - id: sc_dw_item_17
+    name: SIZE_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_item_18
+    name: COLOR
+    type: VARCHAR(64)
+  - id: sc_dw_item_19
+    name: STD_CASE_ITEM_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_20
+    name: STD_PALLET_ITEM_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_21
+    name: STD_PALLET_CASE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_22
+    name: WEIGHT
+    type: DOUBLE
+  - id: sc_dw_item_23
+    name: WEIGHT_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_24
+    name: LENGTH
+    type: DOUBLE
+  - id: sc_dw_item_25
+    name: WIDTH
+    type: DOUBLE
+  - id: sc_dw_item_26
+    name: HEIGHT
+    type: DOUBLE
+  - id: sc_dw_item_27
+    name: LINEAR_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_28
+    name: CASE_WEIGHT
+    type: DOUBLE
+  - id: sc_dw_item_29
+    name: CASE_WEIGHT_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_30
+    name: CASE_LENGTH
+    type: DOUBLE
+  - id: sc_dw_item_31
+    name: CASE_WIDTH
+    type: DOUBLE
+  - id: sc_dw_item_32
+    name: CASE_HEIGHT
+    type: DOUBLE
+  - id: sc_dw_item_33
+    name: CASE_LINEAR_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_34
+    name: PALLET_WEIGHT
+    type: DOUBLE
+  - id: sc_dw_item_35
+    name: PALLET_WEIGHT_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_36
+    name: PALLET_LENGTH
+    type: DOUBLE
+  - id: sc_dw_item_37
+    name: PALLET_WIDTH
+    type: DOUBLE
+  - id: sc_dw_item_38
+    name: PALLET_HEIGHT
+    type: DOUBLE
+  - id: sc_dw_item_39
+    name: PALLET_LINEAR_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_40
+    name: ORDERING_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_41
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_item_42
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_item_43
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_44
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_item_45
+    name: ACTIVATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_item_46
+    name: DEACTIVATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_item_47
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_item_48
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_item_49
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_50
+    name: MFG_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_51
+    name: AUTHORITATIVE_LEVEL
+    type: VARCHAR(256)
+  - id: sc_dw_item_52
+    name: BOMITEM_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_item_53
+    name: CASE_UPC
+    type: VARCHAR(64)
+  - id: sc_dw_item_54
+    name: COMPLEX
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_55
+    name: CYCLE_COUNTING_FREQUENCY
+    type: BIGINT(20)
+  - id: sc_dw_item_56
+    name: DEADLINE_DURATION
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_57
+    name: DEADLINE_DURATION_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_item_58
+    name: DRAWING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_item_59
+    name: EXT_MFG_ENT_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_item_60
+    name: EXT_MFG_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_item_61
+    name: FORECAST_BEGIN_DATE
+    type: DATETIME(6)
+  - id: sc_dw_item_62
+    name: GROWTH_DURATION
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_63
+    name: GROWTH_DURATION_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_item_64
+    name: HAZMAT_CONTACT_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_item_65
+    name: HAZMAT_CONTACT_PHONE
+    type: VARCHAR(64)
+  - id: sc_dw_item_66
+    name: HTS_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_item_67
+    name: INITIAL_DURATION
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_68
+    name: INITIAL_DURATION_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_item_69
+    name: IS_HAZARDOUS
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_70
+    name: IS_LOT_CONTROLLED
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_71
+    name: IS_NEVER_OUT_ITEM
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_72
+    name: IS_SERIAL_CONTROLLED
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_73
+    name: ITEM_CATEGORY
+    type: VARCHAR(256)
+  - id: sc_dw_item_74
+    name: ITEM_CLASS
+    type: VARCHAR(64)
+  - id: sc_dw_item_75
+    name: ITEM_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_item_76
+    name: LAUNCH_DATE
+    type: DATETIME(6)
+  - id: sc_dw_item_77
+    name: LAYERS_PER_PALLET
+    type: DOUBLE
+  - id: sc_dw_item_78
+    name: MATURITY_DURATION
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_79
+    name: MATURITY_DURATION_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_item_80
+    name: MEAN_TIME_BETWEEN_FAILURES
+    type: BIGINT(20)
+  - id: sc_dw_item_81
+    name: MODEL_SUPPLY_CHAIN
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_82
+    name: NOTES_FIELDS
+    type: VARCHAR(64)
+  - id: sc_dw_item_83
+    name: OMS_BUYER_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_item_84
+    name: ORD_TO_STOCK_CONV_FACTOR
+    type: DOUBLE
+  - id: sc_dw_item_85
+    name: PACKAGE_UPC
+    type: VARCHAR(64)
+  - id: sc_dw_item_86
+    name: PLANNER_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_item_87
+    name: POSITEM_IDS
+    type: VARCHAR(4000)
+  - id: sc_dw_item_88
+    name: PRIMARY_
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_89
+    name: RUN_REPLENISHMENT
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_90
+    name: SCC_SYS_GENERIC_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_91
+    name: SCC_SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_92
+    name: SHELF_LIFE
+    type: DECIMAL(9,0)
+  - id: sc_dw_item_93
+    name: SHELF_LIFE_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_item_94
+    name: STACKABLE
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_95
+    name: STANDARD_COST
+    type: DOUBLE
+  - id: sc_dw_item_96
+    name: STOCKING_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_97
+    name: STOCKING_UOM_SPACES
+    type: BIGINT(20)
+  - id: sc_dw_item_98
+    name: SYS_HAZARD_CLASS_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_99
+    name: SYS_HAZMAT_NUMBER_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_100
+    name: SYS_LIKE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_101
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_102
+    name: SYS_PROPER_SHIP_NAME_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_103
+    name: TMS_COMMODITY_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_item_104
+    name: TMS_FREIGHT_CLASS
+    type: DECIMAL(6,0)
+  - id: sc_dw_item_105
+    name: UNITS_PER_LAYER
+    type: DOUBLE
+  - id: sc_dw_item_106
+    name: OMS_BRITE_ITEM_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_item_107
+    name: OMS_BRITE_ITEM_DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_dw_item_108
+    name: OMS_BUYER_CATEGORY_MGR_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_item_109
+    name: OMS_COMMON_CASE_FACTOR
+    type: DOUBLE
+  - id: sc_dw_item_110
+    name: OMS_ENABLE_DCINV_METRICS
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_111
+    name: OMS_ENABLE_REPORTING
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_112
+    name: OMS_EQUIVALENT_CASE_FACTOR
+    type: DOUBLE
+  - id: sc_dw_item_113
+    name: OMS_IS_COA_REQUIRED
+    type: DECIMAL(1,0)
+  - id: sc_dw_item_114
+    name: OMS_ITEM_RANK
+    type: VARCHAR(64)
+  - id: sc_dw_item_115
+    name: OMS_OLT
+    type: BIGINT(20)
+  - id: sc_dw_item_116
+    name: OMS_ORDER_FILE_NO
+    type: VARCHAR(64)
+  - id: sc_dw_item_117
+    name: OMS_ORDER_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_item_118
+    name: OMS_PLCCODE
+    type: VARCHAR(64)
+  - id: sc_dw_item_119
+    name: OMS_SIZES
+    type: VARCHAR(64)
+  - id: sc_dw_item_120
+    name: OMS_SOURCING_POLICY_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_item_121
+    name: OMS_STAT_CONVFACTOR
+    type: DOUBLE
+  - id: sc_dw_item_122
+    name: OMS_SYS_INVOICE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_item_123
+    name: OMS_VENDOR_PACK_QTY
+    type: DOUBLE
+  - id: sc_dw_item_124
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_item_125
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_item_126
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_item_127
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_item_128
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_item_129
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_item_130
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_item_131
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_item_132
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_item_133
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_item_134
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_item_135
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_item_136
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_item_137
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_item_138
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_item_139
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_item_140
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_item_141
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_item_142
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_item_143
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_item_144
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_item_145
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_item_146
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_item_147
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_item_148
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_item_149
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_item_150
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_item_151
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

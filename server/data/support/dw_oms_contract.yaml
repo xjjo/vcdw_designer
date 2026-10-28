@@ -1,0 +1,204 @@
+id: support_dw_oms_contract
+kind: support
+name: dw_oms_contract
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_contract_0
+    name: SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_7
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_9
+    name: CONTRACT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_10
+    name: REFERENCE_CONTRACT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_11
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_12
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_13
+    name: CONTRACT_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_dw_oms_contract_14
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_15
+    name: REVISION_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_16
+    name: REVISION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_17
+    name: MAX_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_18
+    name: MAX_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_oms_contract_19
+    name: EFFECTIVE_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_20
+    name: EFFECTIVE_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_21
+    name: CPCNUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_22
+    name: BUYER_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_23
+    name: FALREQUISITION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_24
+    name: FALAPPROVED_FOR_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_25
+    name: CUR_FALASSIGN_TO_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_26
+    name: CURRENCY
+    type: DECIMAL(6,0)
+  - id: sc_dw_oms_contract_27
+    name: SALES_REP
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_28
+    name: SALES_REP_PHONE
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_29
+    name: SYS_CREATION_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_30
+    name: SYS_BUYING_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_31
+    name: SYS_BUYING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_32
+    name: SYS_SELLING_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_33
+    name: SYS_SELLING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_34
+    name: SYS_RFQ_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_35
+    name: SYS_RFQPARTICIPANT_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_36
+    name: SYS_CLONE_SOURCE_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_37
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_38
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_39
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_40
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_oms_contract_41
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_oms_contract_42
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_oms_contract_43
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_oms_contract_44
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_oms_contract_45
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_46
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_47
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_48
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_49
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_50
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_51
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_52
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_53
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_54
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_55
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_56
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_57
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_58
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_59
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_60
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_61
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_62
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_63
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_64
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_65
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

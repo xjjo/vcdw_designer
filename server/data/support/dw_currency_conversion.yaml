@@ -1,0 +1,42 @@
+id: support_dw_currency_conversion
+kind: support
+name: dw_currency_conversion
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_currency_conversion_0
+    name: SYS_CURRENCY_CONVERSION_ID
+    type: BIGINT(20)
+  - id: sc_dw_currency_conversion_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_currency_conversion_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_currency_conversion_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_currency_conversion_4
+    name: FROM_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_dw_currency_conversion_5
+    name: TO_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_dw_currency_conversion_6
+    name: EFFECTIVE_START_INCLUSIVE
+    type: DATETIME(6)
+  - id: sc_dw_currency_conversion_7
+    name: EFFECTIVE_END_EXCLUSIVE
+    type: DATETIME(6)
+  - id: sc_dw_currency_conversion_8
+    name: FACTOR
+    type: DOUBLE
+  - id: sc_dw_currency_conversion_9
+    name: SYS_CURRENCY_CONVERTER_ID
+    type: BIGINT(20)
+  - id: sc_dw_currency_conversion_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_currency_conversion_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

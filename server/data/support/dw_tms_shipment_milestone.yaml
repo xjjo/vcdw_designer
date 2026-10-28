@@ -1,0 +1,54 @@
+id: support_dw_tms_shipment_milestone
+kind: support
+name: dw_tms_shipment_milestone
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_shipment_milestone_0
+    name: ACTUAL_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_shipment_milestone_1
+    name: COMMENTS
+    type: VARCHAR(1024)
+  - id: sc_dw_tms_shipment_milestone_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_shipment_milestone_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_shipment_milestone_4
+    name: ESTIMATED_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_shipment_milestone_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_shipment_milestone_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_shipment_milestone_7
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_shipment_milestone_8
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_shipment_milestone_9
+    name: ORIGINAL_ESTIMATED_COMPLETION
+    type: DATETIME(6)
+  - id: sc_dw_tms_shipment_milestone_10
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_tms_shipment_milestone_11
+    name: SYS_MILESTONE_TYPE_REF_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_shipment_milestone_12
+    name: SYS_SHIPMENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_shipment_milestone_13
+    name: SYS_SHIPMENT_MILESTONE_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_shipment_milestone_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_shipment_milestone_15
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

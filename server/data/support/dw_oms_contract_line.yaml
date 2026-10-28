@@ -1,0 +1,300 @@
+id: support_dw_oms_contract_line
+kind: support
+name: dw_oms_contract_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_contract_line_0
+    name: SYS_CONTRACT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_line_2
+    name: LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_line_3
+    name: REFERENCE_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_line_4
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_line_5
+    name: REFERENCE_ITEM
+    type: VARCHAR(256)
+  - id: sc_dw_oms_contract_line_6
+    name: EFFECTIVE_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_line_7
+    name: EFFECTIVE_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_line_8
+    name: IS_TAX_ALLOWED
+    type: DECIMAL(1,0)
+  - id: sc_dw_oms_contract_line_9
+    name: QTY_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_oms_contract_line_10
+    name: MIN_PER_ORDER_QTY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_11
+    name: TOTAL_MAX_QTY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_12
+    name: TOTAL_MIN_QTY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_13
+    name: TOTAL_ORDERED_QTY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_14
+    name: TOTAL_RECEIVED_QTY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_15
+    name: TOTAL_REMAINING_QTY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_16
+    name: TOTAL_MAX_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_17
+    name: TOTAL_MIN_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_18
+    name: TOTAL_ORDERED_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_19
+    name: TOTAL_RECEIVED_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_20
+    name: TOTAL_REMAINING_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_21
+    name: MAX_QTY_PER_TIME_BUCKET
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_22
+    name: MAX_QTY_TIME_BUCKET_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_oms_contract_line_23
+    name: MIN_QTY_PER_TIME_BUCKET
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_24
+    name: MIN_QTY_TIME_BUCKET_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_oms_contract_line_25
+    name: MAX_POS_PER_TIME_BUCKET
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_26
+    name: MAX_POS_TIME_BUCKET_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_oms_contract_line_27
+    name: MIN_POS_PER_TIME_BUCKET
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_28
+    name: MIN_POS_TIME_BUCKET_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_oms_contract_line_29
+    name: PRICE
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_30
+    name: ORDER_COMMIT_LEAD_TIME
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_31
+    name: ORDER_SHIP_CONFIRM_LEAD_TIME
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_32
+    name: ORDER_LEAD_TIME
+    type: DECIMAL(9,0)
+  - id: sc_dw_oms_contract_line_33
+    name: VMITARGET_FILL_RATE
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_34
+    name: IS_VMIREQUIRES_BUYER_APPROVAL
+    type: DECIMAL(1,0)
+  - id: sc_dw_oms_contract_line_35
+    name: VMIMIN_TARGET_DOS
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_36
+    name: VMIMAX_TARGET_DOS
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_37
+    name: VMIMIN_TARGET_QTY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_38
+    name: VMIMAX_TARGET_QTY
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_39
+    name: VMIROP
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_40
+    name: VMIROQ
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_41
+    name: BUYER_PLANNER_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_line_42
+    name: COMMENTS
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_line_43
+    name: CONSIGNMENT_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_line_44
+    name: CONSIGNMENT_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_line_45
+    name: SYS_CONTRACT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_46
+    name: SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_47
+    name: CONTRACT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_line_48
+    name: CONTRACT_TERMS_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_line_49
+    name: PRICE_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_oms_contract_line_50
+    name: PRICE_CUMULATION_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_oms_contract_line_51
+    name: PRICE_CUMULATION_PERIOD
+    type: SMALLINT(6)
+  - id: sc_dw_oms_contract_line_52
+    name: TARGET_PRICE
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_53
+    name: TARGET_ORDER_LEAD_TIME
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_54
+    name: LINE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_oms_contract_line_55
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_56
+    name: SYS_INVOICE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_57
+    name: SYS_LN_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_58
+    name: SYS_LN_SHIP_FROM_PAR_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_59
+    name: SYS_LN_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_60
+    name: SYS_LN_SHIP_TO_PAR_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_61
+    name: SYS_CREATION_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_62
+    name: SYS_SHIP_FROM_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_63
+    name: SYS_SHIP_TO_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_64
+    name: SYS_VENDOR_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_65
+    name: SYS_CUSTOMER_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_66
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_67
+    name: LN_INCO_TERMS
+    type: VARCHAR(256)
+  - id: sc_dw_oms_contract_line_68
+    name: LN_INCO_TERMS_LOCATION
+    type: VARCHAR(64)
+  - id: sc_dw_oms_contract_line_69
+    name: SYS_OWNING_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_70
+    name: TOTAL_RESET_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_line_71
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_line_72
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_contract_line_73
+    name: LVL2_PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_74
+    name: LVL2_PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_75
+    name: LVL2_PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_76
+    name: LVL2_PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_77
+    name: LVL2_PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_oms_contract_line_78
+    name: LVL2_PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_79
+    name: LVL2_PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_80
+    name: LVL2_PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_81
+    name: LVL2_PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_82
+    name: LVL2_PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_83
+    name: LVL2_PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_84
+    name: LVL2_PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_85
+    name: LVL2_PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_86
+    name: LVL2_PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_87
+    name: LVL2_PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_oms_contract_line_88
+    name: LVL2_PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_89
+    name: LVL2_PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_90
+    name: LVL2_PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_91
+    name: LVL2_PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_92
+    name: LVL2_PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_93
+    name: LVL2_PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_94
+    name: LVL2_PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_95
+    name: LVL2_PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_96
+    name: LVL2_PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_oms_contract_line_97
+    name: LVL2_PADF_STRING_FIELD9
+    type: VARCHAR(128)

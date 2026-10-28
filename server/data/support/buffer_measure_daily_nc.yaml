@@ -1,0 +1,192 @@
+id: support_buffer_measure_daily_nc
+kind: support
+name: buffer_measure_daily_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_buffer_measure_daily_nc_0
+    name: AVG_DAILY_DEMAND
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_1
+    name: AVG_DAILY_DEMAND_BY_FCST
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_2
+    name: AVG_DAILY_DEMAND_BY_ORDER_FCST
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_3
+    name: AVG_DAILY_DEMAND_BY_SHIPMENT
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_4
+    name: AVG_DAILY_ON_HAND
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_5
+    name: AVG_DAILY_POS
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_6
+    name: BUFFER_NAME
+    type: VARCHAR(128)
+  - id: sc_buffer_measure_daily_nc_7
+    name: AVG_ORDER_LEAD_TIME
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_8
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_9
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_buffer_measure_daily_nc_10
+    name: DAYS_OF_SUPPLY
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_11
+    name: FCST_YESTERDAY
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_12
+    name: INV_ABOVE_MAX
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_13
+    name: INV_BELOW_MIN
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_14
+    name: IS_DAILY_FCST_SALES_DEV
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_15
+    name: IS_FCST_ACCURACY
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_16
+    name: IS_FCST_DEV
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_17
+    name: IS_OVERSTOCK
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_18
+    name: IS_PHANTOM_INV
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_19
+    name: IS_PROJECTED_STOCKOUT
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_20
+    name: IS_SHELF_EMPTY
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_21
+    name: IS_STOCKOUT
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_22
+    name: IS_UNDERSTATED_INV
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_23
+    name: IS_WEEKLY_FCST_SALES_DEV
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_24
+    name: ITEM_PRICE
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_25
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_26
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_27
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_buffer_measure_daily_nc_28
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_29
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_30
+    name: LOST_SALES
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_31
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_buffer_measure_daily_nc_32
+    name: ON_HAND
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_33
+    name: ON_HAND_DATE
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_34
+    name: ON_HAND_UOM
+    type: VARCHAR(256)
+  - id: sc_buffer_measure_daily_nc_35
+    name: ON_ORDER_PLANNER_CUT_QTY
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_36
+    name: ON_ORDER_QTY
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_37
+    name: ON_ORDER_TOTAL_CUT_QTY
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_38
+    name: POS_LAST7_DAYS
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_39
+    name: POS_YESTERDAY
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_40
+    name: PROJECTED_INV_ABOVE_MAX
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_41
+    name: PROJECTED_INV_BELOW_MIN
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_42
+    name: PROJECTED_LOST_SALES
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_43
+    name: PROJECTED_STOCKOUT_DATE
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_44
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_buffer_measure_daily_nc_45
+    name: REPORT_DATE
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_46
+    name: RUN_REPLENISHMENT
+    type: TINYINT(4)
+  - id: sc_buffer_measure_daily_nc_47
+    name: SHIPPED_QTY_IN
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_48
+    name: SHIPPED_QTY_OUT
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_49
+    name: SITE_TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_buffer_measure_daily_nc_50
+    name: SYS_BMD_ID
+    type: BIGINT(20)
+  - id: sc_buffer_measure_daily_nc_51
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_buffer_measure_daily_nc_52
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_buffer_measure_daily_nc_53
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_buffer_measure_daily_nc_54
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_buffer_measure_daily_nc_55
+    name: TURNS
+    type: DOUBLE
+  - id: sc_buffer_measure_daily_nc_56
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_buffer_measure_daily_nc_57
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_buffer_measure_daily_nc_58
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_buffer_measure_daily_nc_59
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_buffer_measure_daily_nc_60
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_buffer_measure_daily_nc_61
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

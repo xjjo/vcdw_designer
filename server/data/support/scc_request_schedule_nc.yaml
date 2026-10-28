@@ -1,0 +1,171 @@
+id: support_scc_request_schedule_nc
+kind: support
+name: scc_request_schedule_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_request_schedule_nc_0
+    name: SYS_REQUEST_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_request_schedule_nc_3
+    name: SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_4
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_5
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_6
+    name: ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_7
+    name: LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_8
+    name: REQUEST_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_9
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_10
+    name: ORIG_REQUEST_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_request_schedule_nc_11
+    name: ORIG_REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_request_schedule_nc_12
+    name: EXT_SHIP_TO_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_request_schedule_nc_13
+    name: EXT_SHIP_TO_LOCATION_NAME
+    type: VARCHAR(164)
+  - id: sc_scc_request_schedule_nc_14
+    name: ORDER_FORECAST_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_15
+    name: PROJECTED_DAYS_OF_SUPPLY
+    type: DOUBLE
+  - id: sc_scc_request_schedule_nc_16
+    name: DEMAND_SCALE_UP_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_request_schedule_nc_17
+    name: DEMAND_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_request_schedule_nc_18
+    name: ORIG_REQUEST_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_scc_request_schedule_nc_19
+    name: RS_AUDIT_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_20
+    name: SHIP_TO_COMMENT
+    type: VARCHAR(256)
+  - id: sc_scc_request_schedule_nc_21
+    name: PLANNED_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_request_schedule_nc_22
+    name: RS_IS_EXPEDITE
+    type: DECIMAL(1,0)
+  - id: sc_scc_request_schedule_nc_23
+    name: BUYER_NOT_ACCEPTABLE
+    type: DECIMAL(1,0)
+  - id: sc_scc_request_schedule_nc_24
+    name: BUYER_CONFIRM_REMARK
+    type: VARCHAR(256)
+  - id: sc_scc_request_schedule_nc_25
+    name: VENDOR_NOT_ACCEPTABLE
+    type: DECIMAL(1,0)
+  - id: sc_scc_request_schedule_nc_26
+    name: VENDOR_CONFIRM_REMARK
+    type: VARCHAR(256)
+  - id: sc_scc_request_schedule_nc_27
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_28
+    name: SYS_SHIP_TO_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_29
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_30
+    name: SYS_CONVERTING_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_31
+    name: SYS_RS_SERVICE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_32
+    name: SYS_RS_SHIP_TO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_33
+    name: SHIP_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_34
+    name: SHIP_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_35
+    name: SHIP_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_36
+    name: SHIP_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_request_schedule_nc_37
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_38
+    name: OMS_SYS_PARENT_REQ_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_39
+    name: OMS_RS_CANCEL_COLLAB_STATUS
+    type: VARCHAR(256)
+  - id: sc_scc_request_schedule_nc_40
+    name: SYS_RS_TRANS_MODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_41
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_request_schedule_nc_42
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_request_schedule_nc_43
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_request_schedule_nc_44
+    name: ORDER_TYPE_VALUE
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_45
+    name: RS_AUX_NUM_FIELD1
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_46
+    name: RSAUX_NUM_FIELD2
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_47
+    name: RSAUX_NUM_FIELD3
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_48
+    name: RSAUX_NUM_FIELD4
+    type: BIGINT(20)
+  - id: sc_scc_request_schedule_nc_49
+    name: RSAUX_NUM_FIELD5
+    type: DOUBLE
+  - id: sc_scc_request_schedule_nc_50
+    name: RSAUX_STR_FIELD1
+    type: VARCHAR(128)
+  - id: sc_scc_request_schedule_nc_51
+    name: RSAUX_STR_FIELD2
+    type: VARCHAR(128)
+  - id: sc_scc_request_schedule_nc_52
+    name: RSAUX_STR_FIELD3
+    type: VARCHAR(128)
+  - id: sc_scc_request_schedule_nc_53
+    name: RSAUX_STR_FIELD4
+    type: VARCHAR(128)
+  - id: sc_scc_request_schedule_nc_54
+    name: RSAUX_STR_FIELD5
+    type: VARCHAR(128)

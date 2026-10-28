@@ -1,0 +1,144 @@
+id: support_mvmt_stop_line_nc
+kind: support
+name: mvmt_stop_line_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_mvmt_stop_line_nc_0
+    name: sys_mvmt_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_1
+    name: sys_mvmt_stop_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_2
+    name: sys_mvmt_stopli_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_3
+    name: trans_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_4
+    name: spt_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_5
+    name: spt_version
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_6
+    name: level_creation_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_line_nc_7
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_line_nc_8
+    name: mvmt_stopli_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_9
+    name: mvmt_stop_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_10
+    name: mvmt_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_11
+    name: stopli_seq_no
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_12
+    name: operation_type
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_line_nc_13
+    name: shipment_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_14
+    name: shipment_ref_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_15
+    name: shipped_qty
+    type: DOUBLE
+  - id: sc_mvmt_stop_line_nc_16
+    name: received_qty
+    type: DOUBLE
+  - id: sc_mvmt_stop_line_nc_17
+    name: ordered_qty
+    type: DOUBLE
+  - id: sc_mvmt_stop_line_nc_18
+    name: quantity_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_line_nc_19
+    name: shipped_qty2
+    type: DOUBLE
+  - id: sc_mvmt_stop_line_nc_20
+    name: received_qty2
+    type: DOUBLE
+  - id: sc_mvmt_stop_line_nc_21
+    name: ordered_qty2
+    type: DOUBLE
+  - id: sc_mvmt_stop_line_nc_22
+    name: quantity_uom2
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_line_nc_23
+    name: volume
+    type: DOUBLE
+  - id: sc_mvmt_stop_line_nc_24
+    name: volume_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_line_nc_25
+    name: weight
+    type: DOUBLE
+  - id: sc_mvmt_stop_line_nc_26
+    name: weight_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_line_nc_27
+    name: target_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_line_nc_28
+    name: estimated_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_line_nc_29
+    name: operation_date_range_start
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_line_nc_30
+    name: operation_date_range_end
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_line_nc_31
+    name: planned_var_time
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_32
+    name: state
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_33
+    name: shipment_creation_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_34
+    name: creation_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_35
+    name: sys_ship_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_36
+    name: sys_creation_template_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_line_nc_37
+    name: shipment_trans_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_38
+    name: tms_lading_quantity_items
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_39
+    name: tms_lading_quantity_units
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_40
+    name: tms_shipped_quantity_desc
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_41
+    name: tms_special_handling_code
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_42
+    name: tms_special_handling_desc
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_43
+    name: tms_special_services_code
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_44
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_line_nc_45
+    name: RECONCILED
+    type: TINYINT(1)

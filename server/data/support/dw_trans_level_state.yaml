@@ -1,0 +1,27 @@
+id: support_dw_trans_level_state
+kind: support
+name: dw_trans_level_state
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_trans_level_state_0
+    name: sys_trans_level_state_id
+    type: BIGINT(20)
+  - id: sc_dw_trans_level_state_1
+    name: trans_name
+    type: VARCHAR(64)
+  - id: sc_dw_trans_level_state_2
+    name: level_name
+    type: VARCHAR(64)
+  - id: sc_dw_trans_level_state_3
+    name: state
+    type: VARCHAR(64)
+  - id: sc_dw_trans_level_state_4
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_trans_level_state_5
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_trans_level_state_6
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

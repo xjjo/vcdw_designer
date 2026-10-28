@@ -1,0 +1,531 @@
+id: support_item_nc
+kind: support
+name: item_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_item_nc_0
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_1
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_item_nc_2
+    name: ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_item_nc_3
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+  - id: sc_item_nc_4
+    name: DESCRIPTION
+    type: VARCHAR(1024)
+  - id: sc_item_nc_5
+    name: TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_item_nc_6
+    name: MFG_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_item_nc_7
+    name: MFG_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_item_nc_8
+    name: UNIVERSAL_ITEM_NAME
+    type: VARCHAR(128)
+  - id: sc_item_nc_9
+    name: GTIN
+    type: VARCHAR(64)
+  - id: sc_item_nc_10
+    name: PRICE
+    type: DOUBLE
+  - id: sc_item_nc_11
+    name: MSRP
+    type: DOUBLE
+  - id: sc_item_nc_12
+    name: OMS_SYS_PACKAGE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_13
+    name: PURCHASE_COST
+    type: DOUBLE
+  - id: sc_item_nc_14
+    name: TOTAL_LANDED_COST
+    type: DOUBLE
+  - id: sc_item_nc_15
+    name: CURRENCY
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_16
+    name: STYLE
+    type: VARCHAR(64)
+  - id: sc_item_nc_17
+    name: SIZE_CODE
+    type: VARCHAR(64)
+  - id: sc_item_nc_18
+    name: COLOR
+    type: VARCHAR(64)
+  - id: sc_item_nc_19
+    name: STD_CASE_ITEM_CNT
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_20
+    name: STD_PALLET_ITEM_CNT
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_21
+    name: STD_PALLET_CASE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_22
+    name: WEIGHT
+    type: DOUBLE
+  - id: sc_item_nc_23
+    name: WEIGHT_UOM
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_24
+    name: LENGTH
+    type: DOUBLE
+  - id: sc_item_nc_25
+    name: WIDTH
+    type: DOUBLE
+  - id: sc_item_nc_26
+    name: HEIGHT
+    type: DOUBLE
+  - id: sc_item_nc_27
+    name: LINEAR_UOM
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_28
+    name: CASE_WEIGHT
+    type: DOUBLE
+  - id: sc_item_nc_29
+    name: CASE_WEIGHT_UOM
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_30
+    name: CASE_LENGTH
+    type: DOUBLE
+  - id: sc_item_nc_31
+    name: CASE_WIDTH
+    type: DOUBLE
+  - id: sc_item_nc_32
+    name: CASE_HEIGHT
+    type: DOUBLE
+  - id: sc_item_nc_33
+    name: CASE_LINEAR_UOM
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_34
+    name: PALLET_WEIGHT
+    type: DOUBLE
+  - id: sc_item_nc_35
+    name: PALLET_WEIGHT_UOM
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_36
+    name: PALLET_LENGTH
+    type: DOUBLE
+  - id: sc_item_nc_37
+    name: PALLET_WIDTH
+    type: DOUBLE
+  - id: sc_item_nc_38
+    name: PALLET_HEIGHT
+    type: DOUBLE
+  - id: sc_item_nc_39
+    name: PALLET_LINEAR_UOM
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_40
+    name: ORDERING_UOM
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_41
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_42
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_item_nc_43
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_44
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_45
+    name: ACTIVATION_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_46
+    name: DEACTIVATION_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_47
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_item_nc_48
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_49
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_50
+    name: MFG_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_51
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_52
+    name: FLT
+    type: BIGINT(20)
+  - id: sc_item_nc_53
+    name: AUTHORITATIVE_LEVEL
+    type: VARCHAR(256)
+  - id: sc_item_nc_54
+    name: BOMITEM_TYPE
+    type: VARCHAR(64)
+  - id: sc_item_nc_55
+    name: CASE_UPC
+    type: VARCHAR(64)
+  - id: sc_item_nc_56
+    name: COMPLEX
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_57
+    name: CYCLE_COUNTING_FREQUENCY
+    type: BIGINT(20)
+  - id: sc_item_nc_58
+    name: DEADLINE_DURATION
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_59
+    name: DEADLINE_DURATION_UOM
+    type: VARCHAR(256)
+  - id: sc_item_nc_60
+    name: DRAWING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_item_nc_61
+    name: EXT_MFG_ENT_NAME
+    type: VARCHAR(256)
+  - id: sc_item_nc_62
+    name: EXT_MFG_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_item_nc_63
+    name: FORECAST_BEGIN_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_64
+    name: GROWTH_DURATION
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_65
+    name: GROWTH_DURATION_UOM
+    type: VARCHAR(256)
+  - id: sc_item_nc_66
+    name: HAZMAT_CONTACT_NAME
+    type: VARCHAR(64)
+  - id: sc_item_nc_67
+    name: HAZMAT_CONTACT_PHONE
+    type: VARCHAR(64)
+  - id: sc_item_nc_68
+    name: HTS_CODE
+    type: VARCHAR(64)
+  - id: sc_item_nc_69
+    name: INITIAL_DURATION
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_70
+    name: INITIAL_DURATION_UOM
+    type: VARCHAR(256)
+  - id: sc_item_nc_71
+    name: IS_HAZARDOUS
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_72
+    name: IS_LOT_CONTROLLED
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_73
+    name: IS_NEVER_OUT_ITEM
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_74
+    name: IS_SERIAL_CONTROLLED
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_75
+    name: ITEM_CATEGORY
+    type: VARCHAR(256)
+  - id: sc_item_nc_76
+    name: ITEM_CLASS
+    type: VARCHAR(64)
+  - id: sc_item_nc_77
+    name: ITEM_TYPE
+    type: VARCHAR(256)
+  - id: sc_item_nc_78
+    name: LAUNCH_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_79
+    name: LAYERS_PER_PALLET
+    type: DOUBLE
+  - id: sc_item_nc_80
+    name: MATURITY_DURATION
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_81
+    name: MATURITY_DURATION_UOM
+    type: VARCHAR(256)
+  - id: sc_item_nc_82
+    name: MEAN_TIME_BETWEEN_FAILURES
+    type: BIGINT(20)
+  - id: sc_item_nc_83
+    name: MODEL_SUPPLY_CHAIN
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_84
+    name: NOTES_FIELDS
+    type: VARCHAR(64)
+  - id: sc_item_nc_85
+    name: OMS_BUYER_CODE
+    type: VARCHAR(64)
+  - id: sc_item_nc_86
+    name: ORD_TO_STOCK_CONV_FACTOR
+    type: DOUBLE
+  - id: sc_item_nc_87
+    name: PACKAGE_UPC
+    type: VARCHAR(64)
+  - id: sc_item_nc_88
+    name: PLANNER_CODE
+    type: VARCHAR(64)
+  - id: sc_item_nc_89
+    name: POSITEM_IDS
+    type: VARCHAR(4000)
+  - id: sc_item_nc_90
+    name: PRIMARY_
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_91
+    name: RUN_REPLENISHMENT
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_92
+    name: SCC_SYS_GENERIC_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_93
+    name: SCC_SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_94
+    name: SHELF_LIFE
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_95
+    name: SHELF_LIFE_UOM
+    type: VARCHAR(256)
+  - id: sc_item_nc_96
+    name: STACKABLE
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_97
+    name: STANDARD_COST
+    type: DOUBLE
+  - id: sc_item_nc_98
+    name: STOCKING_UOM
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_99
+    name: STOCKING_UOM_SPACES
+    type: BIGINT(20)
+  - id: sc_item_nc_100
+    name: SYS_HAZARD_CLASS_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_101
+    name: SYS_HAZMAT_NUMBER_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_102
+    name: SYS_LIKE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_103
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_104
+    name: SYS_PROPER_SHIP_NAME_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_105
+    name: TMS_COMMODITY_CODE
+    type: VARCHAR(64)
+  - id: sc_item_nc_106
+    name: TMS_FREIGHT_CLASS
+    type: DECIMAL(6,0)
+  - id: sc_item_nc_107
+    name: UNITS_PER_LAYER
+    type: DOUBLE
+  - id: sc_item_nc_108
+    name: CMDC_ADDITIONAL_PROPERTIES
+    type: LONGTEXT
+  - id: sc_item_nc_109
+    name: CMDC_AUTHORITY_LEVEL
+    type: VARCHAR(64)
+  - id: sc_item_nc_110
+    name: CMDC_LAST_SYNCED_FROM_CMD
+    type: DATETIME(6)
+  - id: sc_item_nc_111
+    name: CMDC_UPDATED_FROM_CMD
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_112
+    name: DPX_DEACTIVATION_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_113
+    name: DPX_FORECAST_BY_ANALOGY
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_114
+    name: DPX_FORECAST_END_DATE
+    type: DATETIME(6)
+  - id: sc_item_nc_115
+    name: DPX_IS_RUN
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_116
+    name: DPX_PLAN_SITE_COUNT
+    type: DECIMAL(9,0)
+  - id: sc_item_nc_117
+    name: DPX_STATE
+    type: VARCHAR(64)
+  - id: sc_item_nc_118
+    name: MFG_BOM_EFFECTIVITY_TYPE
+    type: VARCHAR(64)
+  - id: sc_item_nc_119
+    name: MFG_INCREMENT_PROD_BATCH
+    type: FLOAT
+  - id: sc_item_nc_120
+    name: MFG_MIN_PROD_BATCH
+    type: FLOAT
+  - id: sc_item_nc_121
+    name: MFG_PRODUCTION_FREQUENCY
+    type: FLOAT
+  - id: sc_item_nc_122
+    name: MFG_PRODUCTION_FREQUENCY_UOM
+    type: DECIMAL(5,0)
+  - id: sc_item_nc_123
+    name: MFG_QUANTITY_UOM
+    type: DECIMAL(5,0)
+  - id: sc_item_nc_124
+    name: REPLENISHMENT_PILOT
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_125
+    name: REPLENISHMENT_TYPE
+    type: DECIMAL(5,0)
+  - id: sc_item_nc_126
+    name: OMS_BRITE_ITEM_CODE
+    type: VARCHAR(64)
+  - id: sc_item_nc_127
+    name: OMS_BRITE_ITEM_DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_item_nc_128
+    name: OMS_BUYER_CATEGORY_MGR_CODE
+    type: VARCHAR(64)
+  - id: sc_item_nc_129
+    name: OMS_COMMON_CASE_FACTOR
+    type: DOUBLE
+  - id: sc_item_nc_130
+    name: OMS_ENABLE_DCINV_METRICS
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_131
+    name: OMS_ENABLE_REPORTING
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_132
+    name: OMS_EQUIVALENT_CASE_FACTOR
+    type: DOUBLE
+  - id: sc_item_nc_133
+    name: OMS_IS_COA_REQUIRED
+    type: DECIMAL(1,0)
+  - id: sc_item_nc_134
+    name: OMS_ITEM_RANK
+    type: VARCHAR(64)
+  - id: sc_item_nc_135
+    name: OMS_OLT
+    type: BIGINT(20)
+  - id: sc_item_nc_136
+    name: OMS_ORDER_FILE_NO
+    type: VARCHAR(64)
+  - id: sc_item_nc_137
+    name: OMS_ORDER_TYPE
+    type: VARCHAR(64)
+  - id: sc_item_nc_138
+    name: OMS_PLCCODE
+    type: VARCHAR(64)
+  - id: sc_item_nc_139
+    name: OMS_SIZES
+    type: VARCHAR(64)
+  - id: sc_item_nc_140
+    name: OMS_SOURCING_POLICY_NAME
+    type: VARCHAR(256)
+  - id: sc_item_nc_141
+    name: OMS_STAT_CONVFACTOR
+    type: DOUBLE
+  - id: sc_item_nc_142
+    name: OMS_SYS_INVOICE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_item_nc_143
+    name: OMS_VENDOR_PACK_QTY
+    type: DOUBLE
+  - id: sc_item_nc_144
+    name: RTL_CORP_VENDOR_NUMBER
+    type: VARCHAR(64)
+  - id: sc_item_nc_145
+    name: SCPT_SCPL_PACK_QUANTITY
+    type: FLOAT
+  - id: sc_item_nc_146
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_item_nc_147
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_item_nc_148
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_item_nc_149
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_item_nc_150
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_item_nc_151
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_item_nc_152
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_item_nc_153
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_item_nc_154
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_item_nc_155
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_item_nc_156
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_item_nc_157
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_item_nc_158
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_item_nc_159
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_item_nc_160
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_item_nc_161
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_item_nc_162
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_item_nc_163
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_item_nc_164
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_item_nc_165
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_item_nc_166
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_item_nc_167
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_item_nc_168
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_item_nc_169
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_item_nc_170
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_item_nc_171
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_item_nc_172
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_item_nc_173
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_item_nc_174
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

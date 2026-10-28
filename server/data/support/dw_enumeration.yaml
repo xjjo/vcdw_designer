@@ -1,0 +1,33 @@
+id: support_dw_enumeration
+kind: support
+name: dw_enumeration
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_enumeration_0
+    name: SYS_ENUM_ID
+    type: BIGINT(20)
+  - id: sc_dw_enumeration_1
+    name: ENUM_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_enumeration_2
+    name: ENUM_ENTRY_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_enumeration_3
+    name: ENUM_ENTRY_VALUE
+    type: DECIMAL(5,0)
+  - id: sc_dw_enumeration_4
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_enumeration_5
+    name: HIDDEN
+    type: DECIMAL(1,0)
+  - id: sc_dw_enumeration_6
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_enumeration_7
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_enumeration_8
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

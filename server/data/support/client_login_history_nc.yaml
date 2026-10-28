@@ -1,0 +1,72 @@
+id: support_client_login_history_nc
+kind: support
+name: client_login_history_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_client_login_history_nc_0
+    name: CLIENT_IP
+    type: VARCHAR(1024)
+  - id: sc_client_login_history_nc_1
+    name: ID
+    type: BIGINT(20)
+  - id: sc_client_login_history_nc_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_client_login_history_nc_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_client_login_history_nc_4
+    name: LOGIN_DATE
+    type: DATETIME(6)
+  - id: sc_client_login_history_nc_5
+    name: LOGOUT_DATE
+    type: DATETIME(6)
+  - id: sc_client_login_history_nc_6
+    name: MESSAGE
+    type: TEXT
+  - id: sc_client_login_history_nc_7
+    name: SERVER_IP
+    type: VARCHAR(64)
+  - id: sc_client_login_history_nc_8
+    name: SESSION_KEY
+    type: VARCHAR(64)
+  - id: sc_client_login_history_nc_9
+    name: STATUS
+    type: VARCHAR(64)
+  - id: sc_client_login_history_nc_10
+    name: SYS_ALIAS_USER_ID
+    type: BIGINT(20)
+  - id: sc_client_login_history_nc_11
+    name: SYS_CLIENT_HISTORY_LOGIN_ID
+    type: BIGINT(20)
+  - id: sc_client_login_history_nc_12
+    name: SYS_ROLE_ID
+    type: BIGINT(20)
+  - id: sc_client_login_history_nc_13
+    name: SYS_USER_ID
+    type: BIGINT(20)
+  - id: sc_client_login_history_nc_14
+    name: TOMCAT_SESSION_ID
+    type: VARCHAR(128)
+  - id: sc_client_login_history_nc_15
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_client_login_history_nc_16
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_client_login_history_nc_17
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_client_login_history_nc_18
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_client_login_history_nc_19
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_client_login_history_nc_20
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_client_login_history_nc_21
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

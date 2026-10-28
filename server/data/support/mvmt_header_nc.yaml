@@ -1,0 +1,633 @@
+id: support_mvmt_header_nc
+kind: support
+name: mvmt_header_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_mvmt_header_nc_0
+    name: sys_mvmt_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_1
+    name: trans_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_2
+    name: spt_version
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_3
+    name: spt_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_4
+    name: mvmt_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_5
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_6
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_7
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_8
+    name: last_modified_user
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_9
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_10
+    name: last_computed_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_11
+    name: last_touched_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_12
+    name: first_stop_date_range_start
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_13
+    name: first_stop_date_range_end
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_14
+    name: last_stop_date_range_start
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_15
+    name: last_stop_date_range_end
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_16
+    name: stop_count
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_17
+    name: billto_contact
+    type: VARCHAR(512)
+  - id: sc_mvmt_header_nc_18
+    name: total_distance
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_19
+    name: total_volume
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_20
+    name: total_weight
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_21
+    name: carrier_pro_number
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_22
+    name: mode_service
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_23
+    name: mvmt_type
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_24
+    name: continuous_move_id
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_25
+    name: continuous_move_seq_no
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_26
+    name: dead_head_distance
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_27
+    name: special_instructions
+    type: VARCHAR(512)
+  - id: sc_mvmt_header_nc_28
+    name: tender_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_29
+    name: distance_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_30
+    name: weight_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_31
+    name: volume_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_32
+    name: bill_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_33
+    name: equipment_id
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_34
+    name: current_position_lon
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_35
+    name: current_position_lat
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_36
+    name: state
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_37
+    name: attached_notes
+    type: LONGTEXT
+  - id: sc_mvmt_header_nc_38
+    name: attached_note_count
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_39
+    name: first_stop_site_name
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_40
+    name: last_stop_site_name
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_41
+    name: equipment_type
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_42
+    name: total_shipped_qty
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_43
+    name: total_received_qty
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_44
+    name: quantity_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_45
+    name: total_shipped_qty2
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_46
+    name: total_received_qty2
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_47
+    name: quantity_uom2
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_48
+    name: curr_position_updated_time
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_49
+    name: next_stop_eta
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_50
+    name: creation_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_51
+    name: ent_rsrc_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_52
+    name: first_stop_site_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_53
+    name: last_stop_site_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_54
+    name: billto_site_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_55
+    name: tc_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_56
+    name: custof_tc_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_57
+    name: current_carrier_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_58
+    name: equip_type_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_59
+    name: first_stop_site_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_60
+    name: last_stop_site_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_61
+    name: first_stop_addr_country
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_62
+    name: first_stop_addr_comp1
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_63
+    name: first_stop_addr_comp2
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_64
+    name: first_stop_addr_comps
+    type: VARCHAR(512)
+  - id: sc_mvmt_header_nc_65
+    name: last_stop_addr_country
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_66
+    name: last_stop_addr_comp1
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_67
+    name: last_stop_addr_comp2
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_68
+    name: last_stop_addr_comps
+    type: VARCHAR(512)
+  - id: sc_mvmt_header_nc_69
+    name: billto_addr_country
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_70
+    name: billto_addr_comp1
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_71
+    name: billto_addr_comp2
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_72
+    name: billto_addr_comps
+    type: VARCHAR(512)
+  - id: sc_mvmt_header_nc_73
+    name: current_address_country
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_74
+    name: current_address_comp1
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_75
+    name: current_address_comp2
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_76
+    name: current_address_comps
+    type: VARCHAR(512)
+  - id: sc_mvmt_header_nc_77
+    name: sys_creation_template_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_78
+    name: ent_rsrc_ent_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_79
+    name: is_over_dimension
+    type: DECIMAL(1,0)
+  - id: sc_mvmt_header_nc_80
+    name: is_over_weight
+    type: DECIMAL(1,0)
+  - id: sc_mvmt_header_nc_81
+    name: allowance_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_82
+    name: allowance_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_83
+    name: consolidated_cost_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_84
+    name: consolidated_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_85
+    name: dem_deliv_cost_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_86
+    name: dem_deliv_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_87
+    name: ent_rsrc_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_88
+    name: last_pos_update_time
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_89
+    name: mvmt_state_details
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_90
+    name: non_consolidated_cost_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_91
+    name: non_consolidated_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_92
+    name: out_of_route_miles_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_93
+    name: out_of_route_miles_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_94
+    name: sys_tender_plan_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_95
+    name: time_flex
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_96
+    name: tms_accessorial_list
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_97
+    name: tms_actual_delivery_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_98
+    name: tms_actual_pickup_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_99
+    name: tms_allw_opr_cost_amount
+    type: FLOAT
+  - id: sc_mvmt_header_nc_100
+    name: tms_allw_opr_cost_uom
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_101
+    name: tms_approved_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_102
+    name: tms_base_rate_level
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_103
+    name: tms_bidding_end_time
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_104
+    name: tms_booking_number
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_105
+    name: tms_carbon_emission_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_106
+    name: tms_carbon_emission_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_107
+    name: tms_carrier_for_status
+    type: VARCHAR(128)
+  - id: sc_mvmt_header_nc_108
+    name: tms_carrier_integ_ref
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_109
+    name: tms_carrier_type
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_110
+    name: tms_comments
+    type: VARCHAR(512)
+  - id: sc_mvmt_header_nc_111
+    name: tms_consolidation_type
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_112
+    name: tms_cost_opr_cost_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_113
+    name: tms_cost_opr_cost_uom
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_114
+    name: tms_current_position
+    type: VARCHAR(512)
+  - id: sc_mvmt_header_nc_115
+    name: tms_deadhead_distance
+    type: FLOAT
+  - id: sc_mvmt_header_nc_116
+    name: tms_deadhead_type
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_117
+    name: tms_delivery_appointment_code
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_118
+    name: tms_demurrage_time
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_119
+    name: tms_dem_delivery_free_days
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_120
+    name: tms_dem_pickup_free_days
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_121
+    name: tms_dem_pick_cost_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_122
+    name: tms_dem_pick_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_123
+    name: tms_detention_time
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_124
+    name: tms_distance_source
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_125
+    name: tms_distance_type
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_126
+    name: tms_distribution_code
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_127
+    name: tms_equipment_returned_time
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_128
+    name: tms_estimated_arrival
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_129
+    name: tms_exp_equipment_return_time
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_130
+    name: tms_generated_by
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_131
+    name: tms_is_round_trip
+    type: DECIMAL(1,0)
+  - id: sc_mvmt_header_nc_132
+    name: tms_last_rr_distance_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_133
+    name: tms_last_rr_quantity1_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_134
+    name: tms_last_rr_quantity2_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_135
+    name: tms_last_rr_spaces_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_136
+    name: tms_last_rr_volume_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_137
+    name: tms_last_rr_weight_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_138
+    name: tms_last_used_sorting_strategy
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_139
+    name: tms_latest_approval_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_140
+    name: tms_location_basis
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_141
+    name: tms_mode
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_142
+    name: tms_offnetwork_driver_name
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_143
+    name: tms_order_origin_state
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_144
+    name: tms_outgate_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_145
+    name: tms_out_of_route_miles_percent
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_146
+    name: tms_pf_rsvn_grp_id
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_147
+    name: tms_pickup_appointment_code
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_148
+    name: tms_plan_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_149
+    name: tms_plan_id
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_150
+    name: tms_plan_status
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_151
+    name: tms_ready_for_delivery_time
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_152
+    name: tms_ready_for_pickup_time
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_153
+    name: tms_recovered_lost_sales_value
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_154
+    name: tms_reject_reason
+    type: VARCHAR(1024)
+  - id: sc_mvmt_header_nc_155
+    name: tms_reject_reason_type
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_156
+    name: tms_resource_status
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_157
+    name: tms_route_type
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_158
+    name: tms_scale_weight_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_159
+    name: tms_scale_weight_uom
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_160
+    name: tms_shipment_type
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_161
+    name: tms_size
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_162
+    name: tms_status
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_163
+    name: tms_sys_approved_by_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_164
+    name: tms_sys_broker_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_165
+    name: tms_sys_broker_site_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_166
+    name: tms_sys_container_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_167
+    name: tms_sys_distance_plcy_ovr_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_168
+    name: tms_sys_distance_policy_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_169
+    name: tms_sys_driver_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_170
+    name: tms_sys_resource_template_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_171
+    name: tms_sys_service_level_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_172
+    name: tms_sys_static_route_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_173
+    name: tms_sys_trailer_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_174
+    name: tms_sys_trans_commodity_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_175
+    name: tms_sys_truck_id
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_176
+    name: tms_total_spaces
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_177
+    name: tms_track_action_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_178
+    name: tms_trailer_number
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_179
+    name: tms_transportation_mode
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_180
+    name: tms_trans_service_type
+    type: VARCHAR(256)
+  - id: sc_mvmt_header_nc_181
+    name: tms_vehicle_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_182
+    name: tms_whse_release_date
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_183
+    name: total_cost_amount
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_184
+    name: total_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_185
+    name: travel_direction
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_header_nc_186
+    name: tms_transit_time_by_dist_src
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_187
+    name: reconciled
+    type: TINYINT(1)
+  - id: sc_mvmt_header_nc_188
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_mvmt_header_nc_189
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_mvmt_header_nc_190
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_mvmt_header_nc_191
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_mvmt_header_nc_192
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)
+  - id: sc_mvmt_header_nc_193
+    name: PADF_NUM_FIELD1
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_194
+    name: PADF_NUM_FIELD2
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_195
+    name: PADF_NUM_FIELD3
+    type: BIGINT(20)
+  - id: sc_mvmt_header_nc_196
+    name: PADF_NUM_FIELD4
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_197
+    name: PADF_NUM_FIELD5
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_198
+    name: PADF_NUM_FIELD6
+    type: DOUBLE
+  - id: sc_mvmt_header_nc_199
+    name: PADF_STR_FIELD1
+    type: TEXT
+  - id: sc_mvmt_header_nc_200
+    name: PADF_STR_FIELD2
+    type: TEXT
+  - id: sc_mvmt_header_nc_201
+    name: PADF_STR_FIELD3
+    type: TEXT
+  - id: sc_mvmt_header_nc_202
+    name: PADF_STR_FIELD4
+    type: TEXT
+  - id: sc_mvmt_header_nc_203
+    name: PADF_STR_FIELD5
+    type: TEXT
+  - id: sc_mvmt_header_nc_204
+    name: PADF_STR_FIELD6
+    type: TEXT
+  - id: sc_mvmt_header_nc_205
+    name: PADF_STR_FIELD7
+    type: TEXT
+  - id: sc_mvmt_header_nc_206
+    name: PADF_STR_FIELD8
+    type: TEXT
+  - id: sc_mvmt_header_nc_207
+    name: PADF_STR_FIELD9
+    type: TEXT
+  - id: sc_mvmt_header_nc_208
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

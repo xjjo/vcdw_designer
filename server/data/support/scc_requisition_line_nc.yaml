@@ -1,0 +1,165 @@
+id: support_scc_requisition_line_nc
+kind: support
+name: scc_requisition_line_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_requisition_line_nc_0
+    name: SYS_REQUISITION_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_2
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_line_nc_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_line_nc_4
+    name: SYS_REQUISITION_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_5
+    name: LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_6
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_7
+    name: QUANTITY_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_requisition_line_nc_8
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_9
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_10
+    name: COST_CENTER
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_11
+    name: TARGET_PRICE
+    type: DOUBLE
+  - id: sc_scc_requisition_line_nc_12
+    name: TOTAL_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_requisition_line_nc_13
+    name: LINE_COMMENT
+    type: VARCHAR(500)
+  - id: sc_scc_requisition_line_nc_14
+    name: REQUISITION_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_15
+    name: LINE_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_16
+    name: ITEM_DESCRIPTION
+    type: VARCHAR(200)
+  - id: sc_scc_requisition_line_nc_17
+    name: SYS_REQUESTING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_18
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_19
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_20
+    name: SYS_BUDGET_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_21
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_22
+    name: SYS_BUDGET_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_23
+    name: SYS_GENERIC_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_24
+    name: LINE_INCO_TERMS
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_25
+    name: INCO_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_line_nc_26
+    name: SYS_LINE_SHIP_TO_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_27
+    name: INCO_TERMS_LOCATION
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_28
+    name: LINE_APPROVAL_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_line_nc_29
+    name: LINE_SHIP_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_30
+    name: LINE_SHIP_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_31
+    name: LINE_SHIP_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_32
+    name: LINE_SHIP_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_requisition_line_nc_33
+    name: CURRENCY_CONV_RATE_INFO
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_34
+    name: CONVERTED_TARGET_LINE_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_scc_requisition_line_nc_35
+    name: CONVERTED_TARGET_PRICE
+    type: DECIMAL(65,6)
+  - id: sc_scc_requisition_line_nc_36
+    name: ORIG_ORDERED_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_requisition_line_nc_37
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_38
+    name: PLANNER_CODE
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_39
+    name: TARGET_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_40
+    name: LINE_REQUISITION_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_line_nc_41
+    name: LINE_PURCHASING_ADDRES_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_42
+    name: LINE_PURCHASING_ADDRES_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_43
+    name: LINE_PURCHASING_ADDRES_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_requisition_line_nc_44
+    name: LINE_PURCHASING_ADDRES_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_45
+    name: SYS_SPLIT_FROM_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_46
+    name: SYS_PARENT_REQUISITION_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_line_nc_47
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_requisition_line_nc_48
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_requisition_line_nc_49
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_line_nc_50
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_requisition_line_nc_51
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_requisition_line_nc_52
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

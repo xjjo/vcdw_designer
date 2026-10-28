@@ -1,0 +1,63 @@
+id: support_wms_kit_content_line_nc
+kind: support
+name: wms_kit_content_line_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_wms_kit_content_line_nc_0
+    name: KIT_CONTENT_LINE_NO
+    type: VARCHAR(64)
+  - id: sc_wms_kit_content_line_nc_1
+    name: KIT_CONTENT_NO
+    type: VARCHAR(64)
+  - id: sc_wms_kit_content_line_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_line_nc_3
+    name: SYS_KIT_CONTENT_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_line_nc_4
+    name: SYS_KIT_CONTENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_line_nc_5
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_line_nc_6
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_line_nc_7
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_line_nc_8
+    name: QUANTITY_AMOUNT
+    type: DOUBLE
+  - id: sc_wms_kit_content_line_nc_9
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_wms_kit_content_line_nc_10
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_wms_kit_content_line_nc_11
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_wms_kit_content_line_nc_12
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_line_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_wms_kit_content_line_nc_14
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_wms_kit_content_line_nc_15
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_wms_kit_content_line_nc_16
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_wms_kit_content_line_nc_17
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_wms_kit_content_line_nc_18
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

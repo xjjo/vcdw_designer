@@ -1,0 +1,93 @@
+id: support_dw_wms_inventory_pin
+kind: support
+name: dw_wms_inventory_pin
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_wms_inventory_pin_0
+    name: INVENTORY_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_wms_inventory_pin_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_inventory_pin_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_inventory_pin_3
+    name: PIN_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_inventory_pin_4
+    name: SOURCE_MODEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_5
+    name: SOURCE_MODEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_wms_inventory_pin_6
+    name: SYS_INVENTORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_7
+    name: SYS_INVENTORY_PIN_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_8
+    name: SYS_LPN_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_9
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_10
+    name: TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_wms_inventory_pin_11
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_inventory_pin_12
+    name: REMOVE_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_wms_inventory_pin_13
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_inventory_pin_14
+    name: ORIGINAL_INVENTORY_STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_wms_inventory_pin_15
+    name: SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_16
+    name: INVENTORY_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_wms_inventory_pin_17
+    name: SOURCE_MODEL_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_wms_inventory_pin_18
+    name: REMOVE_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_wms_inventory_pin_19
+    name: ADD_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_wms_inventory_pin_20
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_wms_inventory_pin_21
+    name: SYS_RECEIPT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_22
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_inventory_pin_23
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_24
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_25
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_inventory_pin_26
+    name: ADD_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_wms_inventory_pin_27
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_inventory_pin_28
+    name: ES_LMD
+    type: DATETIME(6)

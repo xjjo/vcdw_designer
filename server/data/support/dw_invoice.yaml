@@ -1,0 +1,450 @@
+id: support_dw_invoice
+kind: support
+name: dw_invoice
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_invoice_0
+    name: SYS_INVOICE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_7
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_9
+    name: INVOICE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_10
+    name: REFERENCE_INVOICE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_11
+    name: INVOICE_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_invoice_12
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_13
+    name: REMIT_TO_ZIP
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_14
+    name: INVOICE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_15
+    name: INVOICE_SUBMIT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_16
+    name: BUYER_INVOICE_RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_17
+    name: PAYMENT_DUE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_18
+    name: APPROVED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_19
+    name: DISCOUNT_EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_20
+    name: LAST_PAYMENT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_21
+    name: CURRENCY
+    type: SMALLINT(6)
+  - id: sc_dw_invoice_22
+    name: INVOICEE_VOID_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_23
+    name: INVOICEE_VOID_REASON_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_24
+    name: TOTAL_ORIGINAL_INVOICE_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_25
+    name: TOTAL_INVOICE_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_26
+    name: TOTAL_EXPECTED_INVOICE_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_27
+    name: TOTAL_TAX_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_28
+    name: TOTAL_PAYMENT_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_29
+    name: TOTAL_EXPECTED_DISCOUNT_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_30
+    name: TOTAL_DISCOUNT_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_31
+    name: APREP_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_32
+    name: ARREP_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_33
+    name: SYS_INVOICEE_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_34
+    name: SYS_INVOICER_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_35
+    name: SYS_INVOICEE_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_36
+    name: SYS_INVOICER_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_37
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_38
+    name: BILL_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_39
+    name: BILL_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_40
+    name: BILL_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_41
+    name: BILL_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_invoice_42
+    name: REMIT_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_43
+    name: REMIT_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_44
+    name: REMIT_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_45
+    name: REMIT_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_invoice_46
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_47
+    name: FIN_GENERATION_MODE
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_48
+    name: FIN_PERIODIC_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_49
+    name: FIN_PERIODIC_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_50
+    name: FIN_SYS_APACCOUNT_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_51
+    name: FIN_SYS_AP_INVOICE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_52
+    name: FIN_SYS_ARACCOUNT_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_53
+    name: FIN_SYS_RELATED_INVOICE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_54
+    name: OMS_APINSTRUCTIONS
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_55
+    name: OMS_BANK_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_56
+    name: OMS_CHECK
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_57
+    name: OMS_CONTRACT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_58
+    name: OMS_CREATION_USER_ROLE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_59
+    name: OMS_DISCOUNT_DUE_DAYS
+    type: BIGINT(20)
+  - id: sc_dw_invoice_60
+    name: OMS_DISCOUNT_PERCENT
+    type: DOUBLE
+  - id: sc_dw_invoice_61
+    name: OMS_EDITRANS_SET
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_62
+    name: OMS_EDITRANS_SET_CTRL_NO
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_63
+    name: OMS_EDITRANS_SET_PURPOSE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_64
+    name: OMS_EDI_RECEIVER_ID
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_65
+    name: OMS_EDI_RECEIVER_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_66
+    name: OMS_EDI_SENDER_ID
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_67
+    name: OMS_EDI_SENDER_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_68
+    name: OMS_EST_DISCOUNT_EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_69
+    name: OMS_EST_PAYMENT_DUE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_70
+    name: OMS_FIRST_HOLD_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_71
+    name: OMS_INVOICE_CATEGORY
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_72
+    name: OMS_INVOICE_DUE_DAYS
+    type: BIGINT(20)
+  - id: sc_dw_invoice_73
+    name: OMS_IS_CREDIT_MEMO
+    type: TINYINT(4)
+  - id: sc_dw_invoice_74
+    name: OMS_OK_TO_PAY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_75
+    name: OMS_ORIGIN
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_76
+    name: OMS_ORIGINAL_INVOICE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_77
+    name: OMS_ORIGINAL_INVOICE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_78
+    name: OMS_ORIG_TO_ORG
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_79
+    name: OMS_OTHER_DATA
+    type: LONGTEXT
+  - id: sc_dw_invoice_80
+    name: OMS_PAYMENT_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_81
+    name: OMS_PENDING
+    type: TINYINT(4)
+  - id: sc_dw_invoice_82
+    name: OMS_PENDING_SHIP_RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_83
+    name: OMS_POSHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_84
+    name: OMS_PO_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_85
+    name: OMS_PURCHASING_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_86
+    name: OMS_PURCHASING_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_87
+    name: OMS_PURCHASING_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_invoice_88
+    name: OMS_PURCHASING_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_89
+    name: OMS_REVISION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_90
+    name: OMS_REVISION_NO
+    type: BIGINT(20)
+  - id: sc_dw_invoice_91
+    name: OMS_SHIP_RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_92
+    name: OMS_SYS_CARRIER_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_93
+    name: OMS_SYS_PAYMENT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_94
+    name: OMS_SYS_SHIP_TO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_95
+    name: OMS_SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_96
+    name: OMS_VALID_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_97
+    name: OMS_VENDOR_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_98
+    name: OMS_VOUCHER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_99
+    name: TMS_CHECK_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_100
+    name: TMS_CHECK_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_101
+    name: TMS_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_102
+    name: TMS_INVOICE_CATEGORY
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_103
+    name: TMS_INVOICING_PLCY_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_104
+    name: TMS_INVOICING_PLCY_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_105
+    name: TMS_INVOICING_PLCY_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_106
+    name: TMS_IS_PERIODIC_INVOICE
+    type: TINYINT(4)
+  - id: sc_dw_invoice_107
+    name: TMS_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_108
+    name: TMS_STORAGE_CHARGES
+    type: TINYINT(4)
+  - id: sc_dw_invoice_109
+    name: TMS_SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_110
+    name: TMS_SYS_TMSINVOICE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_111
+    name: OMS_CURRENCY_CONV_RATE_INFO
+    type: VARCHAR(512)
+  - id: sc_dw_invoice_112
+    name: OMS_CNVT_TOTAL_INVOICE_AMT
+    type: DECIMAL(65,6)
+  - id: sc_dw_invoice_113
+    name: OMS_SYS_INVOICE_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_114
+    name: OMS_CONVERTED_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_115
+    name: OMS_SHIP_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_116
+    name: OMS_SHIP_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_117
+    name: OMS_SHIP_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_invoice_118
+    name: OMS_SHIP_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_119
+    name: OMS_EXT_SHIP_TO_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_120
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_invoice_121
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_122
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_invoice_123
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_invoice_124
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_invoice_125
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_invoice_126
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_invoice_127
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_invoice_128
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_invoice_129
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_invoice_130
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_invoice_131
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_invoice_132
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_invoice_133
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_invoice_134
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_invoice_135
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_invoice_136
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_invoice_137
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_138
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_139
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_140
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_141
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_142
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_143
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_144
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_145
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_146
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_147
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

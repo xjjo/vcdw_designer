@@ -1,0 +1,66 @@
+id: support_tms_claim_line_nc
+kind: support
+name: tms_claim_line_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_claim_line_nc_0
+    name: CLAIM_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_tms_claim_line_nc_1
+    name: CLAIM_COST_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_claim_line_nc_2
+    name: CLAIM_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_tms_claim_line_nc_3
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_tms_claim_line_nc_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_claim_line_nc_5
+    name: ORIGINAL_CLAIM_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_tms_claim_line_nc_6
+    name: ORIGINAL_CLAIM_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_tms_claim_line_nc_7
+    name: PART_NUMBER
+    type: VARCHAR(64)
+  - id: sc_tms_claim_line_nc_8
+    name: QUANTITY
+    type: DOUBLE
+  - id: sc_tms_claim_line_nc_9
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_tms_claim_line_nc_10
+    name: RELATED_TO_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_tms_claim_line_nc_11
+    name: RELATED_TO_ID
+    type: BIGINT(20)
+  - id: sc_tms_claim_line_nc_12
+    name: RELATED_TO_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_tms_claim_line_nc_13
+    name: SALVAGE_RETENTION_AMOUNT
+    type: DOUBLE
+  - id: sc_tms_claim_line_nc_14
+    name: SALVAGE_RETENTION_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_claim_line_nc_15
+    name: SYS_CLAIM_ID
+    type: BIGINT(20)
+  - id: sc_tms_claim_line_nc_16
+    name: SYS_CLAIM_LINE_ID
+    type: BIGINT(20)
+  - id: sc_tms_claim_line_nc_17
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_tms_claim_line_nc_18
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_claim_line_nc_19
+    name: RECONCILED
+    type: TINYINT(1)

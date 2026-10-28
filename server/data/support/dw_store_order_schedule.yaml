@@ -1,0 +1,201 @@
+id: support_dw_store_order_schedule
+kind: support
+name: dw_store_order_schedule
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_store_order_schedule_0
+    name: AGREED_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_1
+    name: AGREED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_2
+    name: AGREED_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_3
+    name: APPROVED_BY
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_4
+    name: APPROVED_ON
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_5
+    name: ATTACHED_NOTES
+    type: LONGTEXT
+  - id: sc_dw_store_order_schedule_6
+    name: ATTACHED_NOTE_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_7
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_8
+    name: CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_9
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_10
+    name: CURRENCY
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_11
+    name: EARLIEST_BUYER_REVIEW_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_12
+    name: EARLIEST_ORDER_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_13
+    name: IS_DIRECT_SHIP
+    type: DECIMAL(1,0)
+  - id: sc_dw_store_order_schedule_14
+    name: ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_15
+    name: IXMDATE_CREATED
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_16
+    name: IXMDEMAND
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_17
+    name: IXMDESIRED_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_18
+    name: IXMDESIRED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_19
+    name: IXMLOST_SALES_ADJUST
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_20
+    name: IXMON_HAND
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_21
+    name: IXMSUPPLY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_22
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_23
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_24
+    name: LATEST_RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_25
+    name: LATEST_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_26
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_27
+    name: ORDER_LINE_ITEM_NO
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_28
+    name: ORDER_NO
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_29
+    name: ORDER_ORIGIN
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_30
+    name: PARTNER_ITEM_SHIPPED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_31
+    name: PARTNER_QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_store_order_schedule_32
+    name: PARTNER_REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_33
+    name: PRIORITY
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_34
+    name: PROMISE_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_35
+    name: PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_36
+    name: PROMISE_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_37
+    name: QUANTITY_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_store_order_schedule_38
+    name: RECEIVED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_39
+    name: RECOVERED_LOST_SALES_DAYS
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_40
+    name: RECOVERED_LOST_SALES_VALUE
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_41
+    name: REQUEST_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_42
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_43
+    name: REQUEST_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_44
+    name: RPL_REPLENISHMENT_SCENERIO_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_45
+    name: SHIPFROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_46
+    name: SHIPPED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_47
+    name: SHIPTO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_48
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_49
+    name: SYS_EVENT_OCCURRENCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_50
+    name: SYS_PARENT_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_51
+    name: SYS_PARENT_SOS_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_52
+    name: SYS_PARTNER_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_53
+    name: SYS_PARTNER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_54
+    name: SYS_SOS_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_55
+    name: TOTAL_PRICE
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_56
+    name: TOTAL_VOLUME
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_57
+    name: TOTAL_WEIGHT
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_58
+    name: TRANS_MODE
+    type: VARCHAR(64)
+  - id: sc_dw_store_order_schedule_59
+    name: UNIT_PRICE
+    type: DOUBLE
+  - id: sc_dw_store_order_schedule_60
+    name: VENDOR_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_store_order_schedule_61
+    name: VOLUME_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_store_order_schedule_62
+    name: WEIGHT_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_store_order_schedule_63
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_store_order_schedule_64
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

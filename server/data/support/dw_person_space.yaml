@@ -1,0 +1,48 @@
+id: support_dw_person_space
+kind: support
+name: dw_person_space
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_person_space_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_person_space_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_person_space_2
+    name: ID_FORMAT
+    type: VARCHAR(64)
+  - id: sc_dw_person_space_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_person_space_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_person_space_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_person_space_6
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_person_space_7
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_person_space_8
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_person_space_9
+    name: SYS_PERSON_SPACE_ID
+    type: BIGINT(20)
+  - id: sc_dw_person_space_10
+    name: UNIQ_ATT_KEY_GEN_EXPR
+    type: LONGTEXT
+  - id: sc_dw_person_space_11
+    name: UNIQ_ATT_KEY_VALID_EXPR
+    type: LONGTEXT
+  - id: sc_dw_person_space_12
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_person_space_13
+    name: ES_LMD
+    type: DATETIME(6)

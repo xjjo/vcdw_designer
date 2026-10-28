@@ -1,0 +1,93 @@
+id: support_dw_wms_cycle_count
+kind: support
+name: dw_wms_cycle_count
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_wms_cycle_count_0
+    name: SYS_CYCLE_COUNT_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_1
+    name: ACTUAL_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_2
+    name: ATTACHED_NOTES
+    type: LONGTEXT
+  - id: sc_dw_wms_cycle_count_3
+    name: ATTACHED_NOTE_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_4
+    name: BLIND
+    type: TINYINT(1)
+  - id: sc_dw_wms_cycle_count_5
+    name: COUNTING_COMPLETED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_6
+    name: COUNTING_STARTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_7
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_8
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_9
+    name: CYCLE_COUNT_GROUP
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_10
+    name: CYCLE_COUNT_NO
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_11
+    name: EARLIEST_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_12
+    name: EXT_ASSIGNED_TO
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_13
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_14
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_15
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_16
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_17
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_18
+    name: PLANNED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_19
+    name: POSTING_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_20
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_wms_cycle_count_21
+    name: SYS_CC_PLAN_REQUEST_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_22
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_23
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_24
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_25
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_cycle_count_26
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_27
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_cycle_count_28
+    name: CC_STATE_VALUE
+    type: BIGINT(20)

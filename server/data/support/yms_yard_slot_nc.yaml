@@ -1,0 +1,66 @@
+id: support_yms_yard_slot_nc
+kind: support
+name: yms_yard_slot_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_yms_yard_slot_nc_0
+    name: COLUMN_INDEX
+    type: DOUBLE
+  - id: sc_yms_yard_slot_nc_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_yms_yard_slot_nc_2
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_yms_yard_slot_nc_3
+    name: NEW_SLOT_NAME
+    type: VARCHAR(64)
+  - id: sc_yms_yard_slot_nc_4
+    name: OCCUPIED_SINCE
+    type: DATETIME(6)
+  - id: sc_yms_yard_slot_nc_5
+    name: ROW_INDEX
+    type: DOUBLE
+  - id: sc_yms_yard_slot_nc_6
+    name: SLOT_NAME
+    type: VARCHAR(64)
+  - id: sc_yms_yard_slot_nc_7
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_yms_yard_slot_nc_8
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_yms_yard_slot_nc_9
+    name: SYS_TRAILER_MOVE_ID
+    type: BIGINT(20)
+  - id: sc_yms_yard_slot_nc_10
+    name: SYS_YARD_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_yms_yard_slot_nc_11
+    name: SYS_YARD_SLOT_ID
+    type: BIGINT(20)
+  - id: sc_yms_yard_slot_nc_12
+    name: VACANT_SINCE
+    type: DATETIME(6)
+  - id: sc_yms_yard_slot_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_yms_yard_slot_nc_14
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_yms_yard_slot_nc_15
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_yms_yard_slot_nc_16
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_yms_yard_slot_nc_17
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_yms_yard_slot_nc_18
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_yms_yard_slot_nc_19
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

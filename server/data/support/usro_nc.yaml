@@ -1,0 +1,60 @@
+id: support_usro_nc
+kind: support
+name: usro_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_usro_nc_0
+    name: EFFECTIVE_END_DATE
+    type: DATETIME(6)
+  - id: sc_usro_nc_1
+    name: EFFECTIVE_START_DATE
+    type: DATETIME(6)
+  - id: sc_usro_nc_2
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_usro_nc_3
+    name: IS_DEFAULT_USER
+    type: DECIMAL(1,0)
+  - id: sc_usro_nc_4
+    name: TIME_ZONE
+    type: VARCHAR(64)
+  - id: sc_usro_nc_5
+    name: SYS_ROLE_ID
+    type: BIGINT(20)
+  - id: sc_usro_nc_6
+    name: SYS_USER_ID
+    type: BIGINT(20)
+  - id: sc_usro_nc_7
+    name: SYS_USRO_ID
+    type: BIGINT(20)
+  - id: sc_usro_nc_8
+    name: ROLE_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_usro_nc_9
+    name: ROLE_NAME
+    type: VARCHAR(164)
+  - id: sc_usro_nc_10
+    name: ROLE_ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_usro_nc_11
+    name: ROLE_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_usro_nc_12
+    name: USER_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_usro_nc_13
+    name: USER_NAME
+    type: VARCHAR(64)
+  - id: sc_usro_nc_14
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_usro_nc_15
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_usro_nc_16
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_usro_nc_17
+    name: RECONCILED
+    type: TINYINT(1)

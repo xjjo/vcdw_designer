@@ -1,0 +1,126 @@
+id: support_tms_site_acc_rate_nc
+kind: support
+name: tms_site_acc_rate_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_site_acc_rate_nc_0
+    name: APPLY_TO
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_1
+    name: CHARGE_ALWAYS_FLAG
+    type: DECIMAL(1,0)
+  - id: sc_tms_site_acc_rate_nc_2
+    name: COST_METHOD
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_tms_site_acc_rate_nc_4
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_tms_site_acc_rate_nc_5
+    name: DIM_CAL_LEVEL
+    type: VARCHAR(256)
+  - id: sc_tms_site_acc_rate_nc_6
+    name: DIM_WEIGHT_FACTOR
+    type: DOUBLE
+  - id: sc_tms_site_acc_rate_nc_7
+    name: DISTANCE_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_8
+    name: END_DATE
+    type: DATETIME(6)
+  - id: sc_tms_site_acc_rate_nc_9
+    name: EQUIPMENT_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_10
+    name: INCREMENTAL_RATING
+    type: DECIMAL(1,0)
+  - id: sc_tms_site_acc_rate_nc_11
+    name: IS_TAXABLE
+    type: DECIMAL(1,0)
+  - id: sc_tms_site_acc_rate_nc_12
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_site_acc_rate_nc_13
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_site_acc_rate_nc_14
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_tms_site_acc_rate_nc_15
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_site_acc_rate_nc_16
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_site_acc_rate_nc_17
+    name: MAX_COST
+    type: DOUBLE
+  - id: sc_tms_site_acc_rate_nc_18
+    name: MIN_COST
+    type: DOUBLE
+  - id: sc_tms_site_acc_rate_nc_19
+    name: MIN_MAX_COST_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_20
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_site_acc_rate_nc_21
+    name: QUANTITY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_22
+    name: RATE
+    type: DOUBLE
+  - id: sc_tms_site_acc_rate_nc_23
+    name: RATE_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_24
+    name: RATING_TYPE
+    type: VARCHAR(256)
+  - id: sc_tms_site_acc_rate_nc_25
+    name: ROUND_UP_DIM_WT_VOL
+    type: DECIMAL(1,0)
+  - id: sc_tms_site_acc_rate_nc_26
+    name: SECONDARY_RATE
+    type: DOUBLE
+  - id: sc_tms_site_acc_rate_nc_27
+    name: SECONDARY_RATE_UOM
+    type: VARCHAR(256)
+  - id: sc_tms_site_acc_rate_nc_28
+    name: START_DATE
+    type: DATETIME(6)
+  - id: sc_tms_site_acc_rate_nc_29
+    name: SYS_ACC_ID
+    type: BIGINT(20)
+  - id: sc_tms_site_acc_rate_nc_30
+    name: SYS_COMMODITY_CODE_ID
+    type: BIGINT(20)
+  - id: sc_tms_site_acc_rate_nc_31
+    name: SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_tms_site_acc_rate_nc_32
+    name: SYS_REGION_ID
+    type: BIGINT(20)
+  - id: sc_tms_site_acc_rate_nc_33
+    name: SYS_SERVICE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_tms_site_acc_rate_nc_34
+    name: SYS_SITE_ACC_RATE_ID
+    type: BIGINT(20)
+  - id: sc_tms_site_acc_rate_nc_35
+    name: TIME_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_36
+    name: TMS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_tms_site_acc_rate_nc_37
+    name: TYPE
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_38
+    name: VOLUME_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_site_acc_rate_nc_39
+    name: WEIGHT_UOM
+    type: DECIMAL(6,0)

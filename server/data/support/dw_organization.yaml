@@ -1,0 +1,171 @@
+id: support_dw_organization
+kind: support
+name: dw_organization
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_organization_0
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_organization_1
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_organization_2
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_organization_3
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+  - id: sc_dw_organization_4
+    name: DESCRIPTION
+    type: VARCHAR(255)
+  - id: sc_dw_organization_5
+    name: CONTACT
+    type: VARCHAR(512)
+  - id: sc_dw_organization_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_organization_7
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_organization_8
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_9
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_organization_10
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_organization_11
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_organization_12
+    name: BILLTO_ADDR_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_organization_13
+    name: BILLTO_ADDR_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_organization_14
+    name: BILLTO_ADDR_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_organization_15
+    name: BILLTO_ADDR_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_organization_16
+    name: AUTHORITATIVE_LEVEL
+    type: VARCHAR(256)
+  - id: sc_dw_organization_17
+    name: CONTACT_EMAIL
+    type: VARCHAR(64)
+  - id: sc_dw_organization_18
+    name: CONTACT_PHONE
+    type: VARCHAR(64)
+  - id: sc_dw_organization_19
+    name: DEFAULT_DIST_CALC
+    type: DECIMAL(6,0)
+  - id: sc_dw_organization_20
+    name: DIST_CALC_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_dw_organization_21
+    name: DUNSNUMBER
+    type: BIGINT(20)
+  - id: sc_dw_organization_22
+    name: ORDER_NO_PREFIX
+    type: VARCHAR(64)
+  - id: sc_dw_organization_23
+    name: ORDER_PRINT_TEMPLATE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_organization_24
+    name: SHIPMENT_NO_PREFIX
+    type: VARCHAR(64)
+  - id: sc_dw_organization_25
+    name: SCH_SUPPORT_CTRL_NONCTRL_APPT
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_26
+    name: OMS_DISC_BILL_TO_ADDR_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_organization_27
+    name: OMS_DISC_BILL_TO_ADDR_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_organization_28
+    name: OMS_DISC_BILL_TO_ADDR_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_organization_29
+    name: OMS_DISC_BILL_TO_ADDR_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_organization_30
+    name: OMS_INVOICE_LINE_AMT_TOLERANCE
+    type: DOUBLE
+  - id: sc_dw_organization_31
+    name: OMS_LINE_QNTY_TOLERANCE_PCT
+    type: DOUBLE
+  - id: sc_dw_organization_32
+    name: OMS_TOTAL_AMOUNT_TOLERANCE
+    type: DOUBLE
+  - id: sc_dw_organization_33
+    name: OMS_UNIT_PRICE_TOLERANCE_PCT
+    type: DOUBLE
+  - id: sc_dw_organization_34
+    name: TMS_ADDITIONAL_CHARGE_LIMIT
+    type: DOUBLE
+  - id: sc_dw_organization_35
+    name: TMS_APPOINTMENT_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_36
+    name: TMS_APPT_NOTES_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_37
+    name: TMS_CON_INV_SITE_ORIDE_PLC
+    type: DECIMAL(6,0)
+  - id: sc_dw_organization_38
+    name: TMS_FREIGHT_INV_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_39
+    name: TMS_GENERATE_INVOICE_ON_TENDER
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_40
+    name: TMS_MVMT_APPROVED_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_41
+    name: TMS_NON_CON_INV_SITE_ORIDE_PLC
+    type: DECIMAL(6,0)
+  - id: sc_dw_organization_42
+    name: TMS_PSNGENERATION_STATE
+    type: VARCHAR(256)
+  - id: sc_dw_organization_43
+    name: TMS_QUEUE_PREFIX
+    type: VARCHAR(64)
+  - id: sc_dw_organization_44
+    name: TMS_SEND_TENDER_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_45
+    name: TMS_SHIPMENT_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_46
+    name: TMS_SKIP_MMNOTIFICATIONS
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_47
+    name: TMS_SUBS_APPT_NOTIF_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_dw_organization_48
+    name: TMS_TRACK_NOTIFICATION
+    type: DECIMAL(1,0)
+  - id: sc_dw_organization_49
+    name: TMS_TRACK_NOT_FILE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_organization_50
+    name: OMS_SYS_REQUISTION_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_organization_51
+    name: OMS_SYS_INVOICER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_organization_52
+    name: OMS_SYS_INVOICEE_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_organization_53
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_organization_54
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

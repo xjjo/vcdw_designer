@@ -1,0 +1,42 @@
+id: support_dw_scc_program
+kind: support
+name: dw_scc_program
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_program_0
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_program_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_program_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_program_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_program_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_program_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_program_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_program_7
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_program_8
+    name: DESCRIPTION
+    type: VARCHAR(1024)
+  - id: sc_dw_scc_program_9
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_program_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_program_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

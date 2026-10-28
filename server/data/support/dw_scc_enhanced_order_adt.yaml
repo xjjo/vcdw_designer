@@ -1,0 +1,366 @@
+id: support_dw_scc_enhanced_order_adt
+kind: support
+name: dw_scc_enhanced_order_adt
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_enhanced_order_adt_0
+    name: AUDIT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_1
+    name: BILL_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_2
+    name: BILL_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_3
+    name: BILL_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_scc_enhanced_order_adt_4
+    name: BILL_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_5
+    name: BUYER_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_6
+    name: BUYER_ORDER_APPROVAL_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_7
+    name: BUYER_REVISION_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_enhanced_order_adt_8
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_9
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_10
+    name: CURRENCY
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_11
+    name: DELIVERY_MODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_12
+    name: EXT_BPO_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_13
+    name: EXT_BUYER_APPROVED_BY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_14
+    name: EXT_FREIGHT_FORWARDER_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_15
+    name: EXT_PARENT_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_16
+    name: EXT_TCO_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_17
+    name: EXT_VENDOR_APPROVED_BY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_18
+    name: FREIGHT_CONTROL_BY_SYSTEM
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_19
+    name: INCO_TERMS
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_20
+    name: IS_AUTO_RECEIPT
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_21
+    name: IS_CONSIGNMENT
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_22
+    name: IS_DISABLE_DELIVERY_DATE_COMPL
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_23
+    name: IS_EMERGENCY
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_24
+    name: IS_EXPEDITE
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_25
+    name: IS_MIN_ORDER_QTY_RELAXED
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_26
+    name: IS_PROMOTION
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_27
+    name: IS_SPOT
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_28
+    name: IS_VMI
+    type: TINYINT(1)
+  - id: sc_dw_scc_enhanced_order_adt_29
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_30
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_31
+    name: LATEST_BUYER_REVISION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_32
+    name: LATEST_VENDOR_REVISION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_33
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_34
+    name: LOAD_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_scc_enhanced_order_adt_35
+    name: OMS_CANCEL_COLLAB_STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_36
+    name: OMS_FOBCODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_37
+    name: OMS_FOBPOINT
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_38
+    name: OMS_SYS_ADDITIONAL_COST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_39
+    name: OMS_SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_40
+    name: OMS_SYS_CONTRACT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_41
+    name: OMS_SYS_PAYMENT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_42
+    name: ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_43
+    name: ORDER_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_44
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_45
+    name: PLANNER_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_46
+    name: PLANNER_NOTES
+    type: VARCHAR(512)
+  - id: sc_dw_scc_enhanced_order_adt_47
+    name: PRIORITY
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_enhanced_order_adt_48
+    name: PROMISE_STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_49
+    name: PURCHASE_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_50
+    name: PURCHASING_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_51
+    name: PURCHASING_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_52
+    name: PURCHASING_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_scc_enhanced_order_adt_53
+    name: PURCHASING_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_54
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_55
+    name: REMIT_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_56
+    name: REMIT_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_57
+    name: REMIT_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_scc_enhanced_order_adt_58
+    name: REMIT_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_59
+    name: RETURN_VALID_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_60
+    name: RETURN_VALID_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_61
+    name: RMA_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_62
+    name: SALES_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_63
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_64
+    name: SYS_BILL_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_65
+    name: SYS_BUYER_APPROVED_BY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_66
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_67
+    name: SYS_CLONED_FROM_ORDER_NO_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_68
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_69
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_70
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_71
+    name: SYS_CUST_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_72
+    name: SYS_EMERGENCY_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_73
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_74
+    name: SYS_FREIGHT_FWD_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_75
+    name: SYS_FULFILLMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_76
+    name: SYS_MILESTONE_CONFIG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_77
+    name: SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_78
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_79
+    name: SYS_OWNING_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_80
+    name: SYS_PARENT_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_81
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_82
+    name: SYS_REQUISITION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_83
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_84
+    name: SYS_SERVICE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_85
+    name: SYS_SHIP_FROM_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_86
+    name: SYS_SHIP_TO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_87
+    name: SYS_TCO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_88
+    name: SYS_TRANS_MODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_89
+    name: SYS_VENDOR_APPROVED_BY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_90
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enhanced_order_adt_91
+    name: TOTAL_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_92
+    name: TOTAL_EMISSION_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_93
+    name: TOTAL_EMISSION_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_94
+    name: TOTAL_INVOICE_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_95
+    name: TOTAL_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_96
+    name: TOTAL_SCALE_UP_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_97
+    name: TOTAL_SCALE_UP_VOLUME
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_98
+    name: TOTAL_SCALE_UP_WEIGHT
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_99
+    name: TOTAL_VOLUME
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_100
+    name: TOTAL_WEIGHT
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_enhanced_order_adt_101
+    name: VENDOR_ACCEPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_102
+    name: VENDOR_ACK_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_103
+    name: VENDOR_CSRCODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_104
+    name: VENDOR_NOTES
+    type: VARCHAR(512)
+  - id: sc_dw_scc_enhanced_order_adt_105
+    name: VENDOR_NOTIFICATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_106
+    name: VENDOR_ORDER_APPROVAL_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_107
+    name: VENDOR_REVISION_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_enhanced_order_adt_108
+    name: VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_109
+    name: WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enhanced_order_adt_110
+    name: PTX_ID
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enhanced_order_adt_111
+    name: PTX_SEQ
+    type: DECIMAL(38,0)
+  - id: sc_dw_scc_enhanced_order_adt_112
+    name: PTX_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_113
+    name: PTX_VERSION
+    type: DECIMAL(38,0)
+  - id: sc_dw_scc_enhanced_order_adt_114
+    name: ACTION_NAME
+    type: VARCHAR(255)
+  - id: sc_dw_scc_enhanced_order_adt_115
+    name: ACTION_DETAIL
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_enhanced_order_adt_116
+    name: LAST_MODIFIED_ROLE
+    type: TEXT
+  - id: sc_dw_scc_enhanced_order_adt_117
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_118
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enhanced_order_adt_119
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)

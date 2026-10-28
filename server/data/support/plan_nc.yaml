@@ -1,0 +1,63 @@
+id: support_plan_nc
+kind: support
+name: plan_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_plan_nc_0
+    name: SYS_PLAN_ID
+    type: BIGINT(20)
+  - id: sc_plan_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_plan_nc_2
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_plan_nc_3
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_plan_nc_4
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)
+  - id: sc_plan_nc_5
+    name: PLAN_TYPE
+    type: VARCHAR(256)
+  - id: sc_plan_nc_6
+    name: START_DATE
+    type: DATETIME(6)
+  - id: sc_plan_nc_7
+    name: DURATION
+    type: BIGINT(20)
+  - id: sc_plan_nc_8
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_plan_nc_9
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_plan_nc_10
+    name: ACTIVE
+    type: TINYINT(1)
+  - id: sc_plan_nc_11
+    name: IS_CURRENT
+    type: TINYINT(1)
+  - id: sc_plan_nc_12
+    name: IS_PREVIOUS
+    type: TINYINT(1)
+  - id: sc_plan_nc_13
+    name: SYS_CREATION_ENT_ID
+    type: BIGINT(20)
+  - id: sc_plan_nc_14
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_plan_nc_15
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_plan_nc_16
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_plan_nc_17
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_plan_nc_18
+    name: RECONCILED
+    type: TINYINT(1)

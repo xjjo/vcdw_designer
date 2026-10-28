@@ -1,0 +1,33 @@
+id: support_dw_sync_table_counts
+kind: support
+name: dw_sync_table_counts
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_sync_table_counts_0
+    name: JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_counts_1
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_sync_table_counts_2
+    name: OLTP_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_sync_table_counts_3
+    name: INITIAL_LOAD
+    type: TINYINT(1)
+  - id: sc_dw_sync_table_counts_4
+    name: TOTAL_ROWS_SLICE
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_counts_5
+    name: TOTAL_ROWS_DW
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_counts_6
+    name: TOTAL_ROWS_DIM_OR_FACT
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_counts_7
+    name: TOTAL_ROWS_STG_ERROR
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_counts_8
+    name: COMMENT
+    type: VARCHAR(255)

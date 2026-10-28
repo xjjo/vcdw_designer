@@ -1,0 +1,75 @@
+id: support_scc_location_nc
+kind: support
+name: scc_location_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_location_nc_0
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_location_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_location_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_location_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_location_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_location_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_location_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_location_nc_7
+    name: NAME
+    type: VARCHAR(164)
+  - id: sc_scc_location_nc_8
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+  - id: sc_scc_location_nc_9
+    name: LOCATION_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_location_nc_10
+    name: IS_DEFAULT
+    type: DECIMAL(1,0)
+  - id: sc_scc_location_nc_11
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_scc_location_nc_12
+    name: RUN_REPLENISHMENT
+    type: DECIMAL(1,0)
+  - id: sc_scc_location_nc_13
+    name: AUTO_PUTAWAY
+    type: DECIMAL(1,0)
+  - id: sc_scc_location_nc_14
+    name: SPACE_CAPACITY
+    type: BIGINT(20)
+  - id: sc_scc_location_nc_15
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_location_nc_16
+    name: SYS_PARENT_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_location_nc_17
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_location_nc_18
+    name: WMS_LOCKED
+    type: DECIMAL(1,0)
+  - id: sc_scc_location_nc_19
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_location_nc_20
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_location_nc_21
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_location_nc_22
+    name: WMS_LOCK_STATUS
+    type: VARCHAR(256)

@@ -1,0 +1,60 @@
+id: support_scc_packing_requirement_nc
+kind: support
+name: scc_packing_requirement_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_packing_requirement_nc_0
+    name: COUNT
+    type: DOUBLE
+  - id: sc_scc_packing_requirement_nc_1
+    name: GROUP_ID
+    type: VARCHAR(64)
+  - id: sc_scc_packing_requirement_nc_2
+    name: IS_AUTO_GENERATED
+    type: DECIMAL(1,0)
+  - id: sc_scc_packing_requirement_nc_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_packing_requirement_nc_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_packing_requirement_nc_5
+    name: PACKING_TYPE_LEVEL
+    type: DECIMAL(9,0)
+  - id: sc_scc_packing_requirement_nc_6
+    name: RESOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_packing_requirement_nc_7
+    name: RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_packing_requirement_nc_8
+    name: RESOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_packing_requirement_nc_9
+    name: SYS_PACKING_REQUIREMENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_packing_requirement_nc_10
+    name: SYS_PACKING_RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_packing_requirement_nc_11
+    name: UTILIZATION
+    type: DOUBLE
+  - id: sc_scc_packing_requirement_nc_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_packing_requirement_nc_13
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_packing_requirement_nc_14
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_packing_requirement_nc_15
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_packing_requirement_nc_16
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_packing_requirement_nc_17
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

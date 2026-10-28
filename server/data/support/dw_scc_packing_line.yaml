@@ -1,0 +1,129 @@
+id: support_dw_scc_packing_line
+kind: support
+name: dw_scc_packing_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_packing_line_0
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_1
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_line_2
+    name: EXT_CONTAINER_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_line_3
+    name: EXT_SITE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_line_4
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_line_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_line_6
+    name: LINE_PACKAGE_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_7
+    name: LINE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_8
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_9
+    name: PACKING_LINE_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_line_10
+    name: PACK_LIST_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_line_11
+    name: QTY2_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_line_12
+    name: QTY2_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_13
+    name: QTY3_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_line_14
+    name: QTY3_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_15
+    name: QTYAMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_line_16
+    name: QTYUOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_17
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_line_18
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_line_19
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_20
+    name: SYS_CONTAINER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_21
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_22
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_23
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_24
+    name: SYS_LOT_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_25
+    name: SYS_ORDER_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_26
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_27
+    name: SYS_PACKING_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_28
+    name: SYS_PACKING_LIST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_29
+    name: SYS_PARENT_PACKING_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_30
+    name: SYS_PICK_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_31
+    name: SYS_SERIAL_NO_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_32
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_33
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_34
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_line_35
+    name: TMS_VOLUME_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_line_36
+    name: TMS_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_37
+    name: TMS_WEIGHT_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_line_38
+    name: TMS_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_packing_line_39
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_line_40
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

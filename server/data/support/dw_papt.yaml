@@ -1,0 +1,57 @@
+id: support_dw_papt
+kind: support
+name: dw_papt
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_papt_0
+    name: SYS_PAPT_ID
+    type: BIGINT(20)
+  - id: sc_dw_papt_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_papt_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_papt_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_papt_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_papt_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_papt_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_papt_7
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_papt_8
+    name: VERSION
+    type: VARCHAR(64)
+  - id: sc_dw_papt_9
+    name: INTRINSIC_PARTNER_PROCESS_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_papt_10
+    name: INTRINSIC_PARTNER_PROCESS_SUB
+    type: VARCHAR(64)
+  - id: sc_dw_papt_11
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_papt_12
+    name: DEFINITION
+    type: LONGTEXT
+  - id: sc_dw_papt_13
+    name: SYS_OWNING_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_papt_14
+    name: DESCRIPTION
+    type: VARCHAR(256)
+  - id: sc_dw_papt_15
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_papt_16
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

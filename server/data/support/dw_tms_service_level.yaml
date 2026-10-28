@@ -1,0 +1,81 @@
+id: support_dw_tms_service_level
+kind: support
+name: dw_tms_service_level
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_service_level_0
+    name: SYS_SERVICE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_service_level_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_service_level_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_service_level_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_service_level_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_service_level_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_service_level_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_service_level_7
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_service_level_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_service_level_9
+    name: SERVICE_LEVEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_service_level_10
+    name: TRANSIT_TIME
+    type: BIGINT(20)
+  - id: sc_dw_tms_service_level_11
+    name: DESCRIPTION
+    type: VARCHAR(256)
+  - id: sc_dw_tms_service_level_12
+    name: PICKUP_CUT_OFF_TIME_HOUR
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_service_level_13
+    name: PICKUP_CUT_OFF_TIME_MINUTE
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_service_level_14
+    name: DELIVERY_COMMIT_TIME_HOUR
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_service_level_15
+    name: DELIVERY_COMMIT_TIME_MINUTE
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_service_level_16
+    name: TMS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_service_level_17
+    name: NO_OF_ALT_ROUTES_TO_EXPLORE
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_service_level_18
+    name: EX_SCH_BETWEEN_FORWARDER_SITES
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_service_level_19
+    name: APPLICABLE_ROUTE_SCENARIOS
+    type: VARCHAR(256)
+  - id: sc_dw_tms_service_level_20
+    name: DECLARED_VALUE_THRESHOLD
+    type: DOUBLE
+  - id: sc_dw_tms_service_level_21
+    name: IS_PREMIUM
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_service_level_22
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_service_level_23
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_service_level_24
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,120 @@
+id: support_scc_order_event_nc
+kind: support
+name: scc_order_event_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_order_event_nc_0
+    name: CREATED_BY
+    type: VARCHAR(64)
+  - id: sc_scc_order_event_nc_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_order_event_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_order_event_nc_3
+    name: EVENT_DATE
+    type: DATETIME(6)
+  - id: sc_scc_order_event_nc_4
+    name: EVENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_5
+    name: EVENT_SOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_order_event_nc_6
+    name: EVENT_SOURCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_7
+    name: EVENT_SOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_order_event_nc_8
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_scc_order_event_nc_9
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_order_event_nc_10
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_order_event_nc_11
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_order_event_nc_12
+    name: MESSAGE
+    type: VARCHAR(4000)
+  - id: sc_scc_order_event_nc_13
+    name: ORDER_INFO
+    type: VARCHAR(64)
+  - id: sc_scc_order_event_nc_14
+    name: ORIGIN
+    type: VARCHAR(256)
+  - id: sc_scc_order_event_nc_15
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_16
+    name: SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_17
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_18
+    name: SYS_EVENT_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_19
+    name: SYS_FULFILLMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_20
+    name: SYS_ORDER_EVENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_21
+    name: SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_22
+    name: SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_23
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_24
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_25
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_26
+    name: SYS_REQUEST_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_27
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_28
+    name: SYS_SHIP_FROM_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_29
+    name: SYS_SHIP_TO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_event_nc_30
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_order_event_nc_31
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_order_event_nc_32
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_order_event_nc_33
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_order_event_nc_34
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_order_event_nc_35
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_order_event_nc_36
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_order_event_nc_37
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

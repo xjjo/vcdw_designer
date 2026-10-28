@@ -1,0 +1,96 @@
+id: support_ams_asset_fact_nc
+kind: support
+name: ams_asset_fact_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_ams_asset_fact_nc_0
+    name: SYS_ASSET_FACT_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_ams_asset_fact_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_ams_asset_fact_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_ams_asset_fact_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_ams_asset_fact_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_ams_asset_fact_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_ams_asset_fact_nc_7
+    name: REPORT_DATE
+    type: DATETIME(6)
+  - id: sc_ams_asset_fact_nc_8
+    name: ASSET_AUX_KEY
+    type: VARCHAR(64)
+  - id: sc_ams_asset_fact_nc_9
+    name: DOWN_TIME
+    type: DOUBLE
+  - id: sc_ams_asset_fact_nc_10
+    name: UP_TIME
+    type: DOUBLE
+  - id: sc_ams_asset_fact_nc_11
+    name: REPAIR_DOWN_TIME
+    type: DOUBLE
+  - id: sc_ams_asset_fact_nc_12
+    name: REPAIR_UP_TIME
+    type: DOUBLE
+  - id: sc_ams_asset_fact_nc_13
+    name: NO_OF_BREAKDOWNS
+    type: DOUBLE
+  - id: sc_ams_asset_fact_nc_14
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_15
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_16
+    name: SYS_OPERATING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_17
+    name: SYS_POSSESSING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_18
+    name: SYS_CATEGORY_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_19
+    name: SYS_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_20
+    name: SYS_ASSET_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_21
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_22
+    name: SYS_HOME_SITE_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_23
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_ams_asset_fact_nc_24
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_ams_asset_fact_nc_25
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_ams_asset_fact_nc_26
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_ams_asset_fact_nc_27
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_ams_asset_fact_nc_28
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_ams_asset_fact_nc_29
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

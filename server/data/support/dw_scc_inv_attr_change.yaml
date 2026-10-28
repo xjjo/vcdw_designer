@@ -1,0 +1,153 @@
+id: support_dw_scc_inv_attr_change
+kind: support
+name: dw_scc_inv_attr_change
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_inv_attr_change_0
+    name: SYS_INV_ATTR_CHANGE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_attr_change_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_attr_change_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_attr_change_7
+    name: OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_8
+    name: OPERATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_attr_change_9
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_attr_change_10
+    name: QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inv_attr_change_11
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_attr_change_12
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_attr_change_13
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_attr_change_14
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_attr_change_15
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_attr_change_16
+    name: COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_inv_attr_change_17
+    name: EXT_SERIAL_NO
+    type: VARCHAR(200)
+  - id: sc_dw_scc_inv_attr_change_18
+    name: BALANCE_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inv_attr_change_19
+    name: BALANCE_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_attr_change_20
+    name: ORIGINAL_OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_21
+    name: AUXILARY_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_22
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_23
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_attr_change_24
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_attr_change_25
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_attr_change_26
+    name: ORIGIN
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_attr_change_27
+    name: MASTER_OPERATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_28
+    name: MASTER_OPERATION_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_29
+    name: MASTER_OPERATION_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_30
+    name: SOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_31
+    name: SOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_32
+    name: SOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_33
+    name: EXTERNAL_DOC_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_34
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_35
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_36
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_37
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_38
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_39
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_40
+    name: SYS_ORIGINAL_ORDER_DS_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_41
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_attr_change_42
+    name: WMS_DEFECT_CODE1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_43
+    name: WMS_DEFECT_CODE2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_44
+    name: WMS_DEFECT_CODE3
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_45
+    name: WMS_DEFECT_CODE4
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_46
+    name: WMS_DEFECT_CODE5
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_attr_change_47
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_attr_change_48
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

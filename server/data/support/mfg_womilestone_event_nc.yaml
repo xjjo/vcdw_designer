@@ -1,0 +1,60 @@
+id: support_mfg_womilestone_event_nc
+kind: support
+name: mfg_womilestone_event_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_mfg_womilestone_event_nc_0
+    name: SYS_WOMILESTONE_EVENT_ID
+    type: BIGINT(20)
+  - id: sc_mfg_womilestone_event_nc_1
+    name: SYS_WORK_ORDER_MILESTONE_ID
+    type: BIGINT(20)
+  - id: sc_mfg_womilestone_event_nc_2
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_mfg_womilestone_event_nc_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_womilestone_event_nc_4
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_womilestone_event_nc_5
+    name: EVENT_ID
+    type: BIGINT(20)
+  - id: sc_mfg_womilestone_event_nc_6
+    name: EVENT_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_mfg_womilestone_event_nc_7
+    name: EVENT_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_mfg_womilestone_event_nc_8
+    name: EVENT_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_womilestone_event_nc_9
+    name: SYS_WORK_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_mfg_womilestone_event_nc_10
+    name: SYS_MILESTONE_TYPE_REF_ID
+    type: BIGINT(20)
+  - id: sc_mfg_womilestone_event_nc_11
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_mfg_womilestone_event_nc_12
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_womilestone_event_nc_13
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_mfg_womilestone_event_nc_14
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_mfg_womilestone_event_nc_15
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_mfg_womilestone_event_nc_16
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_mfg_womilestone_event_nc_17
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

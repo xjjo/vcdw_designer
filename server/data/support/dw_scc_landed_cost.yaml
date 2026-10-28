@@ -1,0 +1,48 @@
+id: support_dw_scc_landed_cost
+kind: support
+name: dw_scc_landed_cost
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_landed_cost_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_landed_cost_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_landed_cost_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_landed_cost_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_landed_cost_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_landed_cost_5
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_landed_cost_6
+    name: OWNING_MODEL_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_landed_cost_7
+    name: OWNING_MODEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_8
+    name: OWNING_MODEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_landed_cost_9
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_10
+    name: SYS_LANDED_COST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_11
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_landed_cost_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_landed_cost_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

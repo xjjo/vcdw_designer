@@ -1,0 +1,66 @@
+id: support_dw_scc_issue_inventory
+kind: support
+name: dw_scc_issue_inventory
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_issue_inventory_0
+    name: SYS_ISSUE_INVENTORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_issue_inventory_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_issue_inventory_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_issue_inventory_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_issue_inventory_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_issue_inventory_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_issue_inventory_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_issue_inventory_7
+    name: ISSUE_INVENTORY_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_issue_inventory_8
+    name: ISSUE_INVENTORY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_issue_inventory_9
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_issue_inventory_10
+    name: COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_issue_inventory_11
+    name: APPROVAL_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_issue_inventory_12
+    name: APPROVED_BY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_issue_inventory_13
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_dw_scc_issue_inventory_14
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_issue_inventory_15
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_issue_inventory_16
+    name: SYS_PICK_LIST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_issue_inventory_17
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_issue_inventory_18
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_issue_inventory_19
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

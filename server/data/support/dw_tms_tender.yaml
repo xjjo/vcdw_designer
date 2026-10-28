@@ -1,0 +1,171 @@
+id: support_dw_tms_tender
+kind: support
+name: dw_tms_tender
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_tender_0
+    name: sys_tender_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_1
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_tender_2
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_dw_tms_tender_3
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_tender_4
+    name: sequence
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_tender_5
+    name: rating_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_6
+    name: state
+    type: VARCHAR(64)
+  - id: sc_dw_tms_tender_7
+    name: tender_time
+    type: DATETIME(6)
+  - id: sc_dw_tms_tender_8
+    name: tender_expire_time
+    type: DATETIME(6)
+  - id: sc_dw_tms_tender_9
+    name: actual_response_time
+    type: DATETIME(6)
+  - id: sc_dw_tms_tender_10
+    name: additional_status
+    type: VARCHAR(2000)
+  - id: sc_dw_tms_tender_11
+    name: rotational_carrier_entry_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_12
+    name: ship_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_tender_13
+    name: carrier_total_cost_amount
+    type: DOUBLE
+  - id: sc_dw_tms_tender_14
+    name: carrier_total_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_15
+    name: three_pltotal_cost_amount
+    type: DOUBLE
+  - id: sc_dw_tms_tender_16
+    name: three_pltotal_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_17
+    name: total_cost_amount
+    type: DOUBLE
+  - id: sc_dw_tms_tender_18
+    name: total_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_19
+    name: reject_reason_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_20
+    name: reject_reason
+    type: VARCHAR(4000)
+  - id: sc_dw_tms_tender_21
+    name: sys_tg_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_22
+    name: sys_tp_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_23
+    name: tender_plan_name
+    type: VARCHAR(64)
+  - id: sc_dw_tms_tender_24
+    name: override_duration_hour
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_tender_25
+    name: override_duration_minute
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_tender_26
+    name: cost_limit_amount
+    type: DOUBLE
+  - id: sc_dw_tms_tender_27
+    name: cost_limit_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_28
+    name: cost_limit_status
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_29
+    name: tender_no
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_tender_30
+    name: transit_time
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_31
+    name: carrier_service_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_32
+    name: base_rate_level
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_33
+    name: execution_warnings
+    type: TEXT
+  - id: sc_dw_tms_tender_34
+    name: allow_spot_tender
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_tender_35
+    name: is_spot_group
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_tender_36
+    name: spot_tender_cost_amount
+    type: DOUBLE
+  - id: sc_dw_tms_tender_37
+    name: spot_tender_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_38
+    name: commitment_overriden
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_tender_39
+    name: grouping_criteria
+    type: VARCHAR(200)
+  - id: sc_dw_tms_tender_40
+    name: conversion_rate
+    type: VARCHAR(1024)
+  - id: sc_dw_tms_tender_41
+    name: conversion_event_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_tender_42
+    name: spot_tender_opr_cost_amount
+    type: DOUBLE
+  - id: sc_dw_tms_tender_43
+    name: spot_tender_opr_cost_uom
+    type: VARCHAR(256)
+  - id: sc_dw_tms_tender_44
+    name: sys_carrier_org_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_45
+    name: sys_routing_strategy_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_46
+    name: sys_clsetting_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_47
+    name: sys_org_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_48
+    name: sys_other_org_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_49
+    name: sys_static_route_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_50
+    name: sys_carrier_commitment_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_tender_51
+    name: carbon_emission_amount
+    type: DOUBLE
+  - id: sc_dw_tms_tender_52
+    name: carbon_emission_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_tender_53
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_tender_54
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

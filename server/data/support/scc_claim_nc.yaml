@@ -1,0 +1,114 @@
+id: support_scc_claim_nc
+kind: support
+name: scc_claim_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_claim_nc_0
+    name: SYS_CLAIM_ID
+    type: BIGINT(20)
+  - id: sc_scc_claim_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_claim_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_claim_nc_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_claim_nc_7
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_claim_nc_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_claim_nc_9
+    name: CLAIM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_10
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_11
+    name: CLAIM_TYPE
+    type: SMALLINT(6)
+  - id: sc_scc_claim_nc_12
+    name: CONTACT_PHONE
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_13
+    name: CONTACT_EMAIL
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_14
+    name: TOTAL_CLAIM_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_claim_nc_15
+    name: TOTAL_CLAIM_COST_UOM
+    type: SMALLINT(6)
+  - id: sc_scc_claim_nc_16
+    name: NOTES
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_17
+    name: BILL_OF_LADING_SUBMITTED
+    type: TINYINT(4)
+  - id: sc_scc_claim_nc_18
+    name: VENDOR_INVOICE_SUBMITTED
+    type: TINYINT(4)
+  - id: sc_scc_claim_nc_19
+    name: REPAIR_INVOICE_SUBMITTED
+    type: TINYINT(4)
+  - id: sc_scc_claim_nc_20
+    name: DISCOUNT_SALE_DOC_SUBMITTED
+    type: TINYINT(4)
+  - id: sc_scc_claim_nc_21
+    name: INSPECTION_REPORT_SUBMITTED
+    type: TINYINT(4)
+  - id: sc_scc_claim_nc_22
+    name: ACCEPTED_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_claim_nc_23
+    name: ACCEPTED_COST_UOM
+    type: SMALLINT(6)
+  - id: sc_scc_claim_nc_24
+    name: DAMAGE_NOTED_AT_DELIVERY
+    type: TINYINT(4)
+  - id: sc_scc_claim_nc_25
+    name: ATTACHED_NOTE_COUNT
+    type: BIGINT(20)
+  - id: sc_scc_claim_nc_26
+    name: ATTACHED_NOTES
+    type: LONGTEXT
+  - id: sc_scc_claim_nc_27
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_scc_claim_nc_28
+    name: SYS_CLAIMANT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_claim_nc_29
+    name: CLAIMANT_ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_scc_claim_nc_30
+    name: CLAIMANT_ORG_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_scc_claim_nc_31
+    name: SYS_CLAIMEE_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_claim_nc_32
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_scc_claim_nc_33
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_claim_nc_34
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_claim_nc_35
+    name: RECONCILED
+    type: TINYINT(1)

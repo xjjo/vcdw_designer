@@ -1,0 +1,42 @@
+id: support_dw_tms_rs
+kind: support
+name: dw_tms_rs
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_rs_0
+    name: DEFINED_BY
+    type: VARCHAR(64)
+  - id: sc_dw_tms_rs_1
+    name: DISTRIBUTION_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_tms_rs_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_rs_3
+    name: RANKING_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_tms_rs_4
+    name: ROUTING_RULE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_rs_5
+    name: SELECTION_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_tms_rs_6
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_rs_7
+    name: SYS_ROUTING_RULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_rs_8
+    name: SYS_RS_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_rs_9
+    name: TMS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_rs_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_rs_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

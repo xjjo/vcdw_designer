@@ -1,0 +1,54 @@
+id: support_dw_tms_distrib_code_policy
+kind: support
+name: dw_tms_distrib_code_policy
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_distrib_code_policy_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_distrib_code_policy_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_distrib_code_policy_2
+    name: DESTINATION_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_tms_distrib_code_policy_3
+    name: DESTINATION_GROUP
+    type: VARCHAR(64)
+  - id: sc_dw_tms_distrib_code_policy_4
+    name: DISTRIBUTION_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_tms_distrib_code_policy_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_distrib_code_policy_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_distrib_code_policy_7
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_distrib_code_policy_8
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_distrib_code_policy_9
+    name: ORIGIN_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_tms_distrib_code_policy_10
+    name: ORIGIN_GROUP
+    type: VARCHAR(64)
+  - id: sc_dw_tms_distrib_code_policy_11
+    name: SYS_COMMODITY_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_distrib_code_policy_12
+    name: SYS_DISTRIB_CODE_POLICY_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_distrib_code_policy_13
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_distrib_code_policy_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_distrib_code_policy_15
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

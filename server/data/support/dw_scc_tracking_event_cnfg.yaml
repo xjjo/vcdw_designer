@@ -1,0 +1,63 @@
+id: support_dw_scc_tracking_event_cnfg
+kind: support
+name: dw_scc_tracking_event_cnfg
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_tracking_event_cnfg_0
+    name: SYS_TRACKING_EVENT_CNFG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_cnfg_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_cnfg_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_cnfg_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_cnfg_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_cnfg_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_cnfg_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_cnfg_7
+    name: EVENT_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_cnfg_8
+    name: EVENT_CATEGORY
+    type: VARCHAR(256)
+  - id: sc_dw_scc_tracking_event_cnfg_9
+    name: IS_ACTION_DRIVEN
+    type: TINYINT(1)
+  - id: sc_dw_scc_tracking_event_cnfg_10
+    name: ALLOWED_TO
+    type: VARCHAR(256)
+  - id: sc_dw_scc_tracking_event_cnfg_11
+    name: IS_ACTIVE
+    type: TINYINT(1)
+  - id: sc_dw_scc_tracking_event_cnfg_12
+    name: TARGET_MODEL_LEVEL_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_tracking_event_cnfg_13
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_cnfg_14
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_cnfg_15
+    name: TMS_DEBRIEF_EXCEPTION_ENABLED
+    type: TINYINT(1)
+  - id: sc_dw_scc_tracking_event_cnfg_16
+    name: TMS_SYS_EXCEPTION_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_tracking_event_cnfg_17
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_tracking_event_cnfg_18
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

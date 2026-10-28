@@ -1,0 +1,108 @@
+id: support_store_demand_forecast_nc
+kind: support
+name: store_demand_forecast_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_store_demand_forecast_nc_0
+    name: SYS_STORE_DEMAND_FCST_ID
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_store_demand_forecast_nc_2
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_store_demand_forecast_nc_3
+    name: FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_store_demand_forecast_nc_4
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(128)
+  - id: sc_store_demand_forecast_nc_5
+    name: QUANTITY_UOM
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_6
+    name: FORECAST_DATE_S1
+    type: DATETIME(6)
+  - id: sc_store_demand_forecast_nc_7
+    name: FORECAST_QUANTITY_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_8
+    name: OVERRIDE1_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_9
+    name: OVERRIDE2_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_10
+    name: BASELINE_FORECAST_QUANTITY_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_11
+    name: PROMOTIONAL_ADJUST_QUANTITY_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_12
+    name: SEASONAL_ADJUST_QUANTITY_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_13
+    name: FORECAST_CURRENCY_VALUE_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_14
+    name: BASELINE_FORECAST_CUR_VAL_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_15
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_16
+    name: SEASONAL_ADJUST_CUR_VAL_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_17
+    name: SYS_PRODUCT_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_18
+    name: ITEM_ID
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_19
+    name: SYS_SITE_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_20
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_21
+    name: SYS_VENDOR_ENT_ID
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_22
+    name: MFG_CREATED_BY_MRP
+    type: TINYINT(1)
+  - id: sc_store_demand_forecast_nc_23
+    name: MFG_IS_ACTIVE_DTFCST
+    type: TINYINT(1)
+  - id: sc_store_demand_forecast_nc_24
+    name: MFG_WASTE_S1
+    type: DOUBLE
+  - id: sc_store_demand_forecast_nc_25
+    name: SYS_PROD_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_26
+    name: SYS_GEO_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_store_demand_forecast_nc_27
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_store_demand_forecast_nc_28
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_store_demand_forecast_nc_29
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_store_demand_forecast_nc_30
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_store_demand_forecast_nc_31
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_store_demand_forecast_nc_32
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_store_demand_forecast_nc_33
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

@@ -1,0 +1,57 @@
+id: support_dw_fiscal_calendar
+kind: support
+name: dw_fiscal_calendar
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_fiscal_calendar_0
+    name: CALENDAR_DAY
+    type: DATETIME(6)
+  - id: sc_dw_fiscal_calendar_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fiscal_calendar_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_fiscal_calendar_3
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_fiscal_calendar_4
+    name: FISCAL_MONTH_NAME
+    type: SMALLINT(6)
+  - id: sc_dw_fiscal_calendar_5
+    name: FISCAL_MONTH_NO
+    type: BIGINT(20)
+  - id: sc_dw_fiscal_calendar_6
+    name: FISCAL_QUARTER_NO
+    type: BIGINT(20)
+  - id: sc_dw_fiscal_calendar_7
+    name: FISCAL_WEEK_NO
+    type: BIGINT(20)
+  - id: sc_dw_fiscal_calendar_8
+    name: FISCAL_YEAR
+    type: BIGINT(20)
+  - id: sc_dw_fiscal_calendar_9
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fiscal_calendar_10
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fiscal_calendar_11
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_fiscal_calendar_12
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fiscal_calendar_13
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_fiscal_calendar_14
+    name: SYS_FISCAL_CALENDAR_ID
+    type: BIGINT(20)
+  - id: sc_dw_fiscal_calendar_15
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_fiscal_calendar_16
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

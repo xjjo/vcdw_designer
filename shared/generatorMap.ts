@@ -11,7 +11,8 @@
  *                 lookups[], fields[], netchange[], reconciles[] }
  *  - dimension: { type, name, dim_table, stg_table, stg_error_table, sub_job_name,
  *                 surrogate_key, natural_key, lookups[], fields[], netchange[] }
- *  - enumeration:{ type, enum_type, name, field_key, field_name }
+ *  - enumeration:{ type, name, table, enum_type, field_key, field_name,
+ *                 fields[], netchange[], lookups[] }
  *  Lookup fields are comma-separated strings (streamKeyField, returnValue*, ...).
  */
 import type {
@@ -75,29 +76,42 @@ function mapLookup(l: LookupDef): GeneratorLookup {
   };
 }
 
-/** Non-audit, non-auto-increment columns become source fields. */
+/** True when a column is a 1:1 rename of a source (NC) column (a generator `field`). */
+function isDirectField(c: Column): boolean {
+  if (c.mappingKind) return c.mappingKind === 'direct';
+  return !c.autoIncrement && !c.auditRole && !c.isCalculated && !!c.sourceColumn;
+}
+
+/** Direct-mapped columns become source fields (rename + optional coalesce + table alias). */
 function mapFields(cols: Column[]): GeneratorField[] {
-  return cols
-    .filter((c) => !c.autoIncrement)
-    .map((c) => ({
-      coalesce: false,
-      name: c.sourceColumn ?? c.name.toLowerCase(),
-      new_name: c.name,
+  return cols.filter(isDirectField).map((c) => {
+    const source = c.sourceColumn ?? c.name.toLowerCase();
+    const renamed = source.toUpperCase() !== c.name.toUpperCase();
+    return {
+      coalesce: c.coalesce ?? false,
+      name: source,
+      new_name: renamed ? c.name : '',
       data_type: c.type,
-      alias: '',
-    }));
+      alias: c.sourceTable ?? '',
+    };
+  });
 }
 
 function mapNetChange(nc: NetChangeSource): GeneratorNetChange {
   return {
     is_primary: nc.isPrimary ?? false,
-    oltp_table: nc.oltpTable,
+    oltp_table: nc.oltpTable ?? nc.ncTable.replace(/_nc$/, ''),
     oltp_table_sys_id: nc.oltpTableSysId ?? '',
     oltp_table_lmd: nc.oltpTableLmd ?? 'last_modified_date',
     nc_table: nc.ncTable,
     dw_oltp_copy_table: nc.dwOltpCopyTable ?? '',
     condition: nc.condition ?? '',
   };
+}
+
+/** Only net-change sources become generator netchange records; support tables are join-only. */
+function netChangeSources(sources: NetChangeSource[] = []): NetChangeSource[] {
+  return sources.filter((s) => (s.role ?? 'netchange') !== 'support');
 }
 
 /** Derive generator lookups from a fact's dimension lookups + generic lookups. */
@@ -118,17 +132,115 @@ function factLookups(f: Fact): GeneratorLookup[] {
   return [...fromDims, ...generic];
 }
 
+interface GeneratorEnumField {
+  name: string;
+  new_name: string;
+  data_type: string;
+  coalesce: boolean;
+}
+
+interface GeneratorEnumLookup {
+  strategy: string;
+  table_name: string;
+  cache: boolean;
+  table_field_key: string;
+  key_condition: string;
+  stream_key_field: string;
+  return_value_field: string;
+  return_value_new_name: string;
+}
+
+/** Normalize a physical SQL type into the generator's coarse data-type vocabulary. */
+function generatorDataType(sqlType: string): string {
+  const t = (sqlType ?? '').toUpperCase();
+  if (/(BIGINT|SMALLINT|TINYINT|INT)/.test(t)) return 'integer';
+  if (/(DECIMAL|NUMERIC|DOUBLE|FLOAT)/.test(t)) return 'decimal';
+  if (/(DATETIME|TIMESTAMP|DATE|TIME)/.test(t)) return 'timestamp';
+  return 'string';
+}
+
+/** The NC SELECT columns: direct-mapped columns + the ent scope join key. */
+function enumFields(e: Enumeration): GeneratorEnumField[] {
+  const fields = e.columns.filter(isDirectField).map((c) => ({
+    name: c.sourceColumn as string,
+    new_name: c.name,
+    data_type: generatorDataType(c.type),
+    coalesce: c.coalesce ?? false,
+  }));
+  const entSource = e.entScopeSource ?? 'sys_ent_id';
+  if (entSource && !fields.some((f) => f.name.toLowerCase() === entSource.toLowerCase())) {
+    fields.push({ name: entSource, new_name: entSource.toUpperCase(), data_type: 'integer', coalesce: false });
+  }
+  return fields;
+}
+
+/** Map a design lookup into the enum lookup shape (single stream key, explicit strategy). */
+function mapEnumLookup(l: LookupDef): GeneratorEnumLookup {
+  const returns = l.returnFields ?? [];
+  return {
+    strategy: l.strategy ?? 'left_join',
+    table_name: l.tableName,
+    cache: l.cache ?? true,
+    table_field_key: csv(l.tableKeyFields),
+    key_condition: csv(l.keyConditions?.length ? l.keyConditions : l.tableKeyFields.map(() => '=')),
+    stream_key_field: csv(l.streamKeyFields),
+    return_value_field: csv(returns.map((r) => r.field)),
+    return_value_new_name: csv(returns.map((r) => r.newName ?? '')),
+  };
+}
+
+/** Custom enum lookups, or the standard enterprise-scope lookup when none are defined. */
+function enumLookups(e: Enumeration): GeneratorEnumLookup[] {
+  const defined = (e.lookups ?? []).map(mapEnumLookup);
+  if (defined.length) return defined;
+  return [
+    {
+      strategy: 'left_join',
+      table_name: 'enterprise',
+      cache: true,
+      table_field_key: 'OLTP_ID',
+      key_condition: '=',
+      stream_key_field: e.entScopeSource ?? 'sys_ent_id',
+      return_value_field: 'ENT_NAME',
+      return_value_new_name: 'ENT_NAME',
+    },
+  ];
+}
+
+/** Derive the standard `enumeration_nc` net-change record from the design. */
+function enumNetChange(e: Enumeration): GeneratorNetChange {
+  const ncTable = e.sourceNcTable ?? 'enumeration_nc';
+  const oltp = ncTable.replace(/_nc$/, '');
+  return {
+    is_primary: true,
+    oltp_table: oltp,
+    oltp_table_sys_id: 'SYS_ENUM_ID',
+    oltp_table_lmd: 'es_lmd',
+    nc_table: ncTable,
+    dw_oltp_copy_table: `dw_${oltp}`,
+    condition: `enum_type='${e.enumTypeFilter ?? e.name}'`,
+  };
+}
+
 export function enumerationToGenerator(e: Enumeration) {
-  const keyCol = e.columns.find((c) => c.isSk) ?? e.columns[0];
+  const keyCol = e.columns.find((c) => c.isSk) ?? e.columns.find((c) => c.isPk) ?? e.columns[0];
+  // field_name (the enum's natural key) is derived from the Columns + Mapping tabs.
   const nameCol =
-    e.columns.find((c) => c.name.toUpperCase() === 'ENUM_ENTRY_NAME') ??
-    e.columns.find((c) => c.isNaturalKey);
+    e.columns.find((c) => c.sourceColumn === 'enum_entry_name') ??
+    e.columns.find((c) => c.name.toUpperCase().endsWith('_NAME')) ??
+    e.columns.find((c) => c.isNaturalKey && !c.isSk && !c.isPk);
+  const ncSources = netChangeSources(e.netChange);
+  const netchange = ncSources.length ? ncSources.map(mapNetChange) : [enumNetChange(e)];
   return {
     type: 'enumeration',
-    enum_type: e.enumTypeFilter ?? e.name,
     name: e.name,
-    field_key: keyCol?.name ?? `${e.name.toUpperCase()}_KEY`,
-    field_name: nameCol?.name ?? 'ENUM_ENTRY_NAME',
+    table: e.enumTable ?? e.name,
+    enum_type: e.enumTypeFilter ?? e.name,
+    field_key: e.fieldKey ?? keyCol?.name ?? `${e.name.toUpperCase()}_KEY`,
+    field_name: e.fieldName ?? nameCol?.name ?? `${e.name.toUpperCase()}_NAME`,
+    fields: enumFields(e),
+    netchange,
+    lookups: enumLookups(e),
   };
 }
 
@@ -146,7 +258,7 @@ export function dimensionToGenerator(d: Dimension) {
     natural_key: nk,
     lookups: (d.lookups ?? []).map(mapLookup),
     fields: mapFields(d.columns),
-    netchange: (d.netChange ?? []).map(mapNetChange),
+    netchange: netChangeSources(d.netChange).map(mapNetChange),
   };
 }
 
@@ -174,7 +286,7 @@ export function factToGenerator(f: Fact) {
       ...(f.secondaryNcTables ?? []).map((t, i) =>
         mapNetChange({ id: `sec_${i}`, isPrimary: false, oltpTable: t.replace(/_nc$/, ''), ncTable: t }),
       ),
-      ...(f.netChange ?? []).map(mapNetChange),
+      ...netChangeSources(f.netChange).map(mapNetChange),
     ],
     reconciles: [],
   };

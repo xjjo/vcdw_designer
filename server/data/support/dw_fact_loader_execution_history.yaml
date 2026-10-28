@@ -1,0 +1,48 @@
+id: support_dw_fact_loader_execution_history
+kind: support
+name: dw_fact_loader_execution_history
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_fact_loader_execution_history_0
+    name: JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_fact_loader_execution_history_1
+    name: EXECUTION_ORDER
+    type: BIGINT(20)
+  - id: sc_dw_fact_loader_execution_history_2
+    name: FACT_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_fact_loader_execution_history_3
+    name: JOB_TASK_MAPPING_ID
+    type: BIGINT(20)
+  - id: sc_dw_fact_loader_execution_history_4
+    name: RESOURCE_COST
+    type: INT(11)
+  - id: sc_dw_fact_loader_execution_history_5
+    name: EXECUTION_STATUS
+    type: INT(11)
+  - id: sc_dw_fact_loader_execution_history_6
+    name: START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fact_loader_execution_history_7
+    name: END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fact_loader_execution_history_8
+    name: IN_EXECUTION_JOB_TASK_MAPPING_ID
+    type: VARCHAR(64)
+  - id: sc_dw_fact_loader_execution_history_9
+    name: IN_EXECUTION_FACT_NAME
+    type: VARCHAR(512)
+  - id: sc_dw_fact_loader_execution_history_10
+    name: IN_EXECUTION_RESOURCE_COST
+    type: VARCHAR(64)
+  - id: sc_dw_fact_loader_execution_history_11
+    name: TOTAL_RESOURCE_COST
+    type: INT(11)
+  - id: sc_dw_fact_loader_execution_history_12
+    name: SEQUENCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_fact_loader_execution_history_13
+    name: SEQUENCE_CONFIGURATION
+    type: VARCHAR(64)

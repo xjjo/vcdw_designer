@@ -1,0 +1,48 @@
+id: support_dw_yms_yard_location
+kind: support
+name: dw_yms_yard_location
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_yms_yard_location_0
+    name: ACTIVE
+    type: TINYINT(1)
+  - id: sc_dw_yms_yard_location_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_yms_yard_location_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_yms_yard_location_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_yms_yard_location_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_yms_yard_location_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_yms_yard_location_6
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_yms_yard_location_7
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_yms_yard_location_8
+    name: NUM_OF_ROWS
+    type: DOUBLE
+  - id: sc_dw_yms_yard_location_9
+    name: SLOTS_PER_ROW
+    type: DOUBLE
+  - id: sc_dw_yms_yard_location_10
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_yms_yard_location_11
+    name: SYS_YARD_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_yms_yard_location_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_yms_yard_location_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

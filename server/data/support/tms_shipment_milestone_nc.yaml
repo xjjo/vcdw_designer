@@ -1,0 +1,66 @@
+id: support_tms_shipment_milestone_nc
+kind: support
+name: tms_shipment_milestone_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_shipment_milestone_nc_0
+    name: ACTUAL_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_tms_shipment_milestone_nc_1
+    name: COMMENTS
+    type: VARCHAR(1024)
+  - id: sc_tms_shipment_milestone_nc_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_tms_shipment_milestone_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_tms_shipment_milestone_nc_4
+    name: ESTIMATED_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_tms_shipment_milestone_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_shipment_milestone_nc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_tms_shipment_milestone_nc_7
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_shipment_milestone_nc_8
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_shipment_milestone_nc_9
+    name: ORIGINAL_ESTIMATED_COMPLETION
+    type: DATETIME(6)
+  - id: sc_tms_shipment_milestone_nc_10
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_tms_shipment_milestone_nc_11
+    name: SYS_MILESTONE_TYPE_REF_ID
+    type: BIGINT(20)
+  - id: sc_tms_shipment_milestone_nc_12
+    name: SYS_SHIPMENT_ID
+    type: BIGINT(20)
+  - id: sc_tms_shipment_milestone_nc_13
+    name: SYS_SHIPMENT_MILESTONE_ID
+    type: BIGINT(20)
+  - id: sc_tms_shipment_milestone_nc_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_tms_shipment_milestone_nc_15
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_shipment_milestone_nc_16
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_tms_shipment_milestone_nc_17
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_tms_shipment_milestone_nc_18
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_tms_shipment_milestone_nc_19
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

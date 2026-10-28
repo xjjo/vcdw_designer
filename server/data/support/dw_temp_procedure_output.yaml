@@ -1,0 +1,12 @@
+id: support_dw_temp_procedure_output
+kind: support
+name: dw_temp_procedure_output
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_temp_procedure_output_0
+    name: OUT
+    type: INT(11)
+  - id: sc_dw_temp_procedure_output_1
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)

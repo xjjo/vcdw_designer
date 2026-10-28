@@ -1,0 +1,54 @@
+id: support_scc_item_price_nc
+kind: support
+name: scc_item_price_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_item_price_nc_0
+    name: COST_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_scc_item_price_nc_1
+    name: COST_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_item_price_nc_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_item_price_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_item_price_nc_4
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_item_price_nc_5
+    name: PRICE_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_scc_item_price_nc_6
+    name: PRICE_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_item_price_nc_7
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_item_price_nc_8
+    name: SYS_ITEM_PRICE_ID
+    type: BIGINT(20)
+  - id: sc_scc_item_price_nc_9
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_item_price_nc_10
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_item_price_nc_11
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_item_price_nc_12
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_item_price_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_item_price_nc_14
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_item_price_nc_15
+    name: RECONCILED
+    type: TINYINT(1)

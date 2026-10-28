@@ -1,0 +1,549 @@
+id: support_order_schedule_weekly_nc
+kind: support
+name: order_schedule_weekly_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_order_schedule_weekly_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_order_schedule_weekly_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_order_schedule_weekly_nc_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_order_schedule_weekly_nc_5
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_6
+    name: MONTH
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_7
+    name: YEAR
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_8
+    name: SHIP_FROM_CITY
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_9
+    name: SHIP_FROM_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_10
+    name: SHIP_FROM_STATE
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_11
+    name: SHIP_TO_CITY
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_12
+    name: SHIP_TO_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_13
+    name: SHIP_TO_STATE
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_14
+    name: SYS_OFW_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_15
+    name: MTWF_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_16
+    name: MTWF_ORDER_AGREED_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_17
+    name: MTWF_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_18
+    name: MTWF_ORDER_INWINDOW_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_19
+    name: MTWF_ORDER_INWINDOW_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_20
+    name: MTWF_ORDER_ONTIME_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_21
+    name: MTWF_ORDER_ONTIME_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_22
+    name: MTWF_ORDER_ONTIME_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_23
+    name: MTWF_ORDER_ONTIME_SHIP_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_24
+    name: MTWF_ORDER_SHIP_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_25
+    name: MTWF_RECEIVED_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_26
+    name: MTWF_REQUEST_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_27
+    name: MTW_CONFIRMED_LATE_ORD_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_28
+    name: MTW_LATE_DELIVERY_SHPMT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_29
+    name: MTW_LATE_SHIPMENT_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_30
+    name: MTW_MISSING_ASN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_31
+    name: QUANTITY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_order_schedule_weekly_nc_32
+    name: REPORT_DATE
+    type: DATETIME(6)
+  - id: sc_order_schedule_weekly_nc_33
+    name: SYS_BROKER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_34
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_35
+    name: SYS_BUYING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_36
+    name: SYS_CARRIER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_37
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_38
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_39
+    name: SYS_SELLING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_40
+    name: SYS_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_41
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_order_schedule_weekly_nc_42
+    name: TOTAL_SPEND_AMOUNT
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_43
+    name: WEEKLY_ACTUAL_OLT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_44
+    name: WEEKLY_ACTUAL_TRANSIT_TIME
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_45
+    name: WEEKLY_AGREED_QUANTITY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_46
+    name: WEEKLY_CONFIRMED_LATE_ORD_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_47
+    name: WEEKLY_CONTRACTED_OLT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_48
+    name: WEEKLY_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_49
+    name: WEEKLY_LATE_DELIVERY_SHPMT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_50
+    name: WEEKLY_LATE_SHIPMENT_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_51
+    name: WEEKLY_MISSING_ASN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_52
+    name: WEEKLY_MOQ_ADHERENCE_CNT
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_53
+    name: WEEKLY_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_54
+    name: WEEKLY_ORDER_INWINDOW_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_55
+    name: WEEKLY_ORDER_INWINDOW_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_56
+    name: WEEKLY_ORDER_ONTIME_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_57
+    name: WEEKLY_ORDER_ONTIME_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_58
+    name: WEEKLY_ORDER_ONTIME_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_59
+    name: WEEKLY_ORDER_ONTIME_SHIP_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_60
+    name: WEEKLY_ORDER_PROMISED_LATE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_61
+    name: WEEKLY_ORDER_PROMISED_LATE_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_62
+    name: WEEKLY_ORIGINAL_PROMISE_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_63
+    name: WEEKLY_ORIGINAL_REQ_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_64
+    name: WEEKLY_OVERSHIP_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_65
+    name: WEEKLY_OVERSHIP_SHIPPED_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_66
+    name: WEEKLY_PLANNER_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_67
+    name: WEEKLY_PLANNER_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_68
+    name: WEEKLY_PLANNER_TOTAL_MISS_TIME
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_69
+    name: WEEKLY_PO_BUYER_REVISE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_70
+    name: WEEKLY_PO_VENDOR_REVISE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_71
+    name: WEEKLY_PROMISE_CUT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_72
+    name: WEEKLY_PROMISE_CUT_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_73
+    name: WEEKLY_PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_74
+    name: WEEKLY_RECEIVED_QUANTITY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_75
+    name: WEEKLY_REQUESTED_OLT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_76
+    name: WEEKLY_REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_77
+    name: WEEKLY_SHIPPED_QUANTITY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_78
+    name: WEEKLY_SHIP_TO_INV_TIME
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_79
+    name: WEEKLY_TOTAL_CUT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_80
+    name: WEEKLY_TOTAL_CUT_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_81
+    name: WEEKLY_VENDOR_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_82
+    name: WEEKLY_VENDOR_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_83
+    name: WEEKLY_VENDOR_TOTAL_MISS_TIME
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_84
+    name: YTWF_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_85
+    name: YTWF_ORDER_AGREED_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_86
+    name: YTWF_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_87
+    name: YTWF_ORDER_INWINDOW_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_88
+    name: YTWF_ORDER_INWINDOW_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_89
+    name: YTWF_ORDER_ONTIME_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_90
+    name: YTWF_ORDER_ONTIME_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_91
+    name: YTWF_ORDER_ONTIME_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_92
+    name: YTWF_ORDER_ONTIME_SHIP_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_93
+    name: YTWF_ORDER_SHIP_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_94
+    name: YTWF_RECEIVED_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_95
+    name: YTWF_REQUEST_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_96
+    name: YTW_CONFIRMED_LATE_ORD_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_97
+    name: YTW_LATE_DELIVERY_SHPMT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_98
+    name: YTW_LATE_SHIPMENT_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_99
+    name: YTW_MISSING_ASN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_100
+    name: WEEKLY_ASN_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_101
+    name: WEEKLY_ASN_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_102
+    name: WEEKLY_ONTIME_SHIP_CNT_ON_ORSD
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_103
+    name: WEEKLY_ONTIME_SHIP_QTY_ON_ORSD
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_104
+    name: WEEKLY_ORDER_IN_TLRC_CONF_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_105
+    name: SHIPPED_ACCURACY_CNT_ON_ORQ
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_106
+    name: CURRENCY_UOM
+    type: VARCHAR(256)
+  - id: sc_order_schedule_weekly_nc_107
+    name: SHIPPED_ACCURACY_QTY_ON_ORQ
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_108
+    name: WEEKLY_ORDER_INWINDOW_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_109
+    name: WEEKLY_DAMAGE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_110
+    name: INCOTERM_BASED
+    type: DECIMAL(1,0)
+  - id: sc_order_schedule_weekly_nc_111
+    name: WEEKLY_PERFECT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_112
+    name: WEEKLY_DMG_FREE_DELIVERY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_113
+    name: OMS_WEEKLY_DS_INTOL_RCV_QTY
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_114
+    name: OMS_WEEKLY_DS_INWIN_INTOL_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_115
+    name: WEEKLY_ONTIME_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_116
+    name: WEEKLY_VENDOR_REVISION_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_117
+    name: ORDER_TYPE
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_118
+    name: WEEKLY_EARLY_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_119
+    name: OMS_WKL_VENDOR_DEVIATION_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_120
+    name: WEEKLY_IN_FULL_RCV_CNT_ON_ORQ
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_121
+    name: WEEKLY_RETURN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_122
+    name: WEEKLY_ONTIME_PICKUP_APPT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_123
+    name: WEEKLY_REJECT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_124
+    name: WEEKLY_LATE_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_125
+    name: OMS_WEEKLY_DS_INWIN_INTOL_QTY
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_126
+    name: WEEKLY_BUYER_REVISION_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_127
+    name: WEEKLY_ONTIME_DLVRY_APPT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_128
+    name: WEEKLY_INVOICE_DISCREPANCY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_129
+    name: WEEKLY_ON_TIME_SHIP_READY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_130
+    name: OMS_WEEKLY_DS_INTOL_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_131
+    name: WEEKLY_QUALITY_CLAIMS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_132
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_order_schedule_weekly_nc_133
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_order_schedule_weekly_nc_134
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_order_schedule_weekly_nc_135
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_order_schedule_weekly_nc_136
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_order_schedule_weekly_nc_137
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)
+  - id: sc_order_schedule_weekly_nc_138
+    name: WEEKLY_EARLY_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_139
+    name: WEEKLY_EARLY_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_140
+    name: MTWF_EARLY_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_141
+    name: MTWF_EARLY_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_142
+    name: YTWF_EARLY_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_143
+    name: YTWF_EARLY_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_144
+    name: WEEKLY_EARLY_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_145
+    name: WEEKLY_EARLY_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_146
+    name: MTWF_EARLY_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_147
+    name: MTWF_EARLY_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_148
+    name: YTWF_EARLY_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_149
+    name: YTWF_EARLY_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_150
+    name: WEEKLY_LATE_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_151
+    name: WEEKLY_LATE_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_152
+    name: MTWF_LATE_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_153
+    name: MTWF_LATE_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_154
+    name: YTWF_LATE_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_155
+    name: YTWF_LATE_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_156
+    name: WEEKLY_LATE_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_157
+    name: WEEKLY_LATE_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_158
+    name: MTWF_LATE_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_159
+    name: MTWF_LATE_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_160
+    name: YTWF_LATE_INWIN_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_161
+    name: YTWF_LATE_INWIN_RCV_QTY
+    type: DOUBLE
+  - id: sc_order_schedule_weekly_nc_162
+    name: WEEKLY_ACTUAL_OLTC
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_163
+    name: WEEKLY_ACTUAL_OCLT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_164
+    name: WEEKLY_PROMISED_OLTC
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_165
+    name: WEEKLY_CONTRACTED_TOLT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_166
+    name: WEEKLY_ALT_GRT_PLT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_167
+    name: WEEKLY_ALT_LESS_PLT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_168
+    name: WEEKLY_ALT_EQUAL_PLT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_169
+    name: WEEKLY_ALT_LESS_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_170
+    name: WEEKLY_ALT_GRT_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_171
+    name: WEEKLY_ALT_EQL_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_172
+    name: WEEKLY_PLT_EQL_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_173
+    name: WEEKLY_PLT_GRT_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_174
+    name: WEEKLY_PLT_LESS_CONT_LT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_175
+    name: WEEKLY_CONTRACTED_OCLT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_176
+    name: WEEKLY_ORDER_ALT_GRT_OCLT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_177
+    name: WEEKLY_ORDER_ALT_LESS_OCLT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_178
+    name: WEEKLY_ORDER_ALT_EQL_OCLT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_179
+    name: WEEKLY_PROMISE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_order_schedule_weekly_nc_180
+    name: WEEKLY_PROMISE_FULL_CNT
+    type: DECIMAL(9,0)

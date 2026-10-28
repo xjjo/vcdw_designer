@@ -1,0 +1,42 @@
+id: support_dw_wbproblem_addtl_modelref
+kind: support
+name: dw_wbproblem_addtl_modelref
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_wbproblem_addtl_modelref_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wbproblem_addtl_modelref_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wbproblem_addtl_modelref_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wbproblem_addtl_modelref_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wbproblem_addtl_modelref_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wbproblem_addtl_modelref_5
+    name: MODEL_REF_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_wbproblem_addtl_modelref_6
+    name: MODEL_REF_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_addtl_modelref_7
+    name: MODEL_REF_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_wbproblem_addtl_modelref_8
+    name: SYS_ADDTL_MODELREF_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_addtl_modelref_9
+    name: SYS_PROBLEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_addtl_modelref_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_wbproblem_addtl_modelref_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

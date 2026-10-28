@@ -1,0 +1,54 @@
+id: support_wms_cc_plan_request_nc
+kind: support
+name: wms_cc_plan_request_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_wms_cc_plan_request_nc_0
+    name: SYS_CC_PLAN_REQUEST_ID
+    type: BIGINT(20)
+  - id: sc_wms_cc_plan_request_nc_1
+    name: AUTO_GENERATE
+    type: TINYINT(1)
+  - id: sc_wms_cc_plan_request_nc_2
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cc_plan_request_nc_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cc_plan_request_nc_4
+    name: PLANNED_DATE
+    type: DATETIME(6)
+  - id: sc_wms_cc_plan_request_nc_5
+    name: PLAN_NO
+    type: VARCHAR(64)
+  - id: sc_wms_cc_plan_request_nc_6
+    name: PLAN_SCHEDULING_OFFSET
+    type: DECIMAL(9,0)
+  - id: sc_wms_cc_plan_request_nc_7
+    name: REQUEST_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_wms_cc_plan_request_nc_8
+    name: REQUEST_SAMPLE_SIZE
+    type: VARCHAR(64)
+  - id: sc_wms_cc_plan_request_nc_9
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_wms_cc_plan_request_nc_10
+    name: SYS_CYCLE_COUNT_PLAN_ID
+    type: BIGINT(20)
+  - id: sc_wms_cc_plan_request_nc_11
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_wms_cc_plan_request_nc_12
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wms_cc_plan_request_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_wms_cc_plan_request_nc_14
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_wms_cc_plan_request_nc_15
+    name: RECONCILED
+    type: TINYINT(1)

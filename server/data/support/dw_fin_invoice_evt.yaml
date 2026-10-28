@@ -1,0 +1,87 @@
+id: support_dw_fin_invoice_evt
+kind: support
+name: dw_fin_invoice_evt
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_fin_invoice_evt_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fin_invoice_evt_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_fin_invoice_evt_2
+    name: CURRENCY
+    type: VARCHAR(256)
+  - id: sc_dw_fin_invoice_evt_3
+    name: EVENT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fin_invoice_evt_4
+    name: HOLD_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_dw_fin_invoice_evt_5
+    name: ID
+    type: BIGINT(20)
+  - id: sc_dw_fin_invoice_evt_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fin_invoice_evt_7
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_fin_invoice_evt_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_fin_invoice_evt_9
+    name: LINE_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_fin_invoice_evt_10
+    name: LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_fin_invoice_evt_11
+    name: LINE_ORIGINAL_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_fin_invoice_evt_12
+    name: LINE_REFERENCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_fin_invoice_evt_13
+    name: LINE_REFERENCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_fin_invoice_evt_14
+    name: MESSAGE
+    type: VARCHAR(4000)
+  - id: sc_dw_fin_invoice_evt_15
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_fin_invoice_evt_16
+    name: SYS_EVENT_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_fin_invoice_evt_17
+    name: SYS_EVENT_USER_ID
+    type: BIGINT(20)
+  - id: sc_dw_fin_invoice_evt_18
+    name: SYS_INVOICE_EVT_ID
+    type: BIGINT(20)
+  - id: sc_dw_fin_invoice_evt_19
+    name: SYS_TARGET_ID
+    type: BIGINT(20)
+  - id: sc_dw_fin_invoice_evt_20
+    name: TARGET_STATE
+    type: VARCHAR(64)
+  - id: sc_dw_fin_invoice_evt_21
+    name: TOTAL_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_fin_invoice_evt_22
+    name: TOTAL_ORIGINAL_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_fin_invoice_evt_23
+    name: TOTAL_PAID_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_fin_invoice_evt_24
+    name: TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_fin_invoice_evt_25
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_fin_invoice_evt_26
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,33 @@
+id: support_dw_slice_migration_columns
+kind: support
+name: dw_slice_migration_columns
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_slice_migration_columns_0
+    name: oltp_column_name
+    type: VARCHAR(128)
+  - id: sc_dw_slice_migration_columns_1
+    name: oltp_table
+    type: VARCHAR(128)
+  - id: sc_dw_slice_migration_columns_2
+    name: dim_or_fact_table_name
+    type: VARCHAR(128)
+  - id: sc_dw_slice_migration_columns_3
+    name: migration_version
+    type: VARCHAR(64)
+  - id: sc_dw_slice_migration_columns_4
+    name: fact_migration_column_name
+    type: VARCHAR(128)
+  - id: sc_dw_slice_migration_columns_5
+    name: is_present
+    type: TINYINT(1)
+  - id: sc_dw_slice_migration_columns_6
+    name: is_synced
+    type: TINYINT(1)
+  - id: sc_dw_slice_migration_columns_7
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_slice_migration_columns_8
+    name: duplicates_exist
+    type: TINYINT(1)

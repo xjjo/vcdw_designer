@@ -1,0 +1,45 @@
+id: support_scc_order_line_snapshot_nc
+kind: support
+name: scc_order_line_snapshot_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_order_line_snapshot_nc_0
+    name: SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_line_snapshot_nc_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_order_line_snapshot_nc_2
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_line_snapshot_nc_3
+    name: ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_order_line_snapshot_nc_4
+    name: LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_order_line_snapshot_nc_5
+    name: COUNTRY_OF_MANUFACTURING
+    type: VARCHAR(64)
+  - id: sc_scc_order_line_snapshot_nc_6
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_order_line_snapshot_nc_7
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_order_line_snapshot_nc_8
+    name: DROP_SHIPMENT
+    type: DECIMAL(1,0)
+  - id: sc_scc_order_line_snapshot_nc_9
+    name: OMS_LN_CANCEL_COLLAB_STATUS
+    type: VARCHAR(256)
+  - id: sc_scc_order_line_snapshot_nc_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_order_line_snapshot_nc_11
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_order_line_snapshot_nc_12
+    name: RECONCILED
+    type: TINYINT(1)

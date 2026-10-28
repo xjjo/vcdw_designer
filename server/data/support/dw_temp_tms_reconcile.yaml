@@ -1,0 +1,18 @@
+id: support_dw_temp_tms_reconcile
+kind: support
+name: dw_temp_tms_reconcile
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_temp_tms_reconcile_0
+    name: SYS_ID
+    type: BIGINT(20)
+  - id: sc_dw_temp_tms_reconcile_1
+    name: MODEL_TABLE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_temp_tms_reconcile_2
+    name: STEP_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_temp_tms_reconcile_3
+    name: FACT_OR_DIM_TABLE_NAME
+    type: VARCHAR(64)

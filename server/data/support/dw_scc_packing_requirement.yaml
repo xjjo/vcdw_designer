@@ -1,0 +1,48 @@
+id: support_dw_scc_packing_requirement
+kind: support
+name: dw_scc_packing_requirement
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_packing_requirement_0
+    name: COUNT
+    type: DOUBLE
+  - id: sc_dw_scc_packing_requirement_1
+    name: GROUP_ID
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_requirement_2
+    name: IS_AUTO_GENERATED
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_packing_requirement_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_requirement_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_requirement_5
+    name: PACKING_TYPE_LEVEL
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_packing_requirement_6
+    name: RESOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_requirement_7
+    name: RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_requirement_8
+    name: RESOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_packing_requirement_9
+    name: SYS_PACKING_REQUIREMENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_requirement_10
+    name: SYS_PACKING_RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_packing_requirement_11
+    name: UTILIZATION
+    type: DOUBLE
+  - id: sc_dw_scc_packing_requirement_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_packing_requirement_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

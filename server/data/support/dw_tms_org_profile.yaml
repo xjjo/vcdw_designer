@@ -1,0 +1,21 @@
+id: support_dw_tms_org_profile
+kind: support
+name: dw_tms_org_profile
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_org_profile_0
+    name: SCACCODE
+    type: VARCHAR(64)
+  - id: sc_dw_tms_org_profile_1
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_org_profile_2
+    name: SYS_ORG_PROFILE_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_org_profile_3
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_org_profile_4
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

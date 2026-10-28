@@ -1,0 +1,30 @@
+id: support_dw_oms_scorecard_measures
+kind: support
+name: dw_oms_scorecard_measures
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_scorecard_measures_0
+    name: SYS_SCORECARD_MEASURES_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_measures_1
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_measures_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_measures_3
+    name: SYS_SCORECARD_ENTRY_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_measures_4
+    name: KPI_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_oms_scorecard_measures_5
+    name: SCORE
+    type: DOUBLE
+  - id: sc_dw_oms_scorecard_measures_6
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_measures_7
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,30 @@
+id: support_dw_scc_request_schedule_snapshot
+kind: support
+name: dw_scc_request_schedule_snapshot
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_request_schedule_snapshot_0
+    name: SYS_REQUEST_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_request_schedule_snapshot_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_request_schedule_snapshot_2
+    name: SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_request_schedule_snapshot_3
+    name: REQUEST_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_request_schedule_snapshot_4
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_request_schedule_snapshot_5
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_request_schedule_snapshot_6
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_request_schedule_snapshot_7
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

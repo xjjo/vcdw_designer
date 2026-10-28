@@ -1,0 +1,75 @@
+id: support_geo_pattern_nc
+kind: support
+name: geo_pattern_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_geo_pattern_nc_0
+    name: ADDR_COMP1
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_1
+    name: ADDR_COMP2
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_2
+    name: COUNTRY
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_geo_pattern_nc_4
+    name: CREATION_USER
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_5
+    name: DISTRICT_RANGE_END
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_6
+    name: DISTRICT_RANGE_START
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_7
+    name: GPATTERN_LIST_ID
+    type: BIGINT(20)
+  - id: sc_geo_pattern_nc_8
+    name: GPATTERN_TYPE
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_9
+    name: IS_ACTIVE
+    type: TINYINT(1)
+  - id: sc_geo_pattern_nc_10
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_geo_pattern_nc_11
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_12
+    name: LATITUDE
+    type: DECIMAL(65,6)
+  - id: sc_geo_pattern_nc_13
+    name: LONGITUDE
+    type: DECIMAL(65,6)
+  - id: sc_geo_pattern_nc_14
+    name: ORG_ID
+    type: BIGINT(20)
+  - id: sc_geo_pattern_nc_15
+    name: PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_geo_pattern_nc_16
+    name: POSTAL_CODE_RANGE_END
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_17
+    name: POSTAL_CODE_RANGE_START
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_18
+    name: RADIUS_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_geo_pattern_nc_19
+    name: RADIUS_UOM
+    type: SMALLINT(6)
+  - id: sc_geo_pattern_nc_20
+    name: SITE_ID
+    type: BIGINT(20)
+  - id: sc_geo_pattern_nc_21
+    name: SUB_CITY
+    type: VARCHAR(128)
+  - id: sc_geo_pattern_nc_22
+    name: SYS_GPATTERN_ID
+    type: BIGINT(20)

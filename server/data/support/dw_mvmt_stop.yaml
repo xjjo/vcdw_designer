@@ -1,0 +1,162 @@
+id: support_dw_mvmt_stop
+kind: support
+name: dw_mvmt_stop
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_mvmt_stop_0
+    name: sys_mvmt_id
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_1
+    name: sys_mvmt_stop_id
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_2
+    name: level_creation_date
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_3
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_4
+    name: mvmt_stop_no
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_5
+    name: stop_seq_no
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_6
+    name: notes
+    type: VARCHAR(512)
+  - id: sc_dw_mvmt_stop_7
+    name: rate_stop_number
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_8
+    name: target_arrival_date
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_9
+    name: estimated_arrival_date
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_10
+    name: eta_reason
+    type: DECIMAL(6,0)
+  - id: sc_dw_mvmt_stop_11
+    name: actual_arrival_date
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_12
+    name: actual_departure_date
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_13
+    name: arrival_date_range_start
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_14
+    name: arrival_date_range_end
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_15
+    name: latest_planned_departure_date
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_16
+    name: planned_fixed_time
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_17
+    name: planned_var_time
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_18
+    name: distance_to_stop
+    type: DOUBLE
+  - id: sc_dw_mvmt_stop_19
+    name: time_to_stop
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_20
+    name: total_non_work_time
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_21
+    name: state
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_22
+    name: mvmt_no
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_23
+    name: site_name
+    type: VARCHAR(256)
+  - id: sc_dw_mvmt_stop_24
+    name: site_id
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_25
+    name: site_org_id
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_26
+    name: creation_org_id
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_27
+    name: addr_country
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_28
+    name: addr_comp1
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_29
+    name: addr_comp2
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_30
+    name: addr_comps
+    type: VARCHAR(512)
+  - id: sc_dw_mvmt_stop_31
+    name: sys_creation_template_id
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_32
+    name: tms_cum_distance_to_stop
+    type: DOUBLE
+  - id: sc_dw_mvmt_stop_33
+    name: tms_cum_time_to_stop
+    type: BIGINT(20)
+  - id: sc_dw_mvmt_stop_34
+    name: tms_discounted
+    type: DECIMAL(1,0)
+  - id: sc_dw_mvmt_stop_35
+    name: tms_stop_cage
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_36
+    name: tms_stop_contact_phone
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_37
+    name: tms_stop_contact_phone_qual
+    type: DECIMAL(6,0)
+  - id: sc_dw_mvmt_stop_38
+    name: tms_stop_dodaac
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_39
+    name: tms_stop_mapac
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_40
+    name: tms_stop_off_splc
+    type: DECIMAL(9,0)
+  - id: sc_dw_mvmt_stop_41
+    name: tms_stop_quantity1
+    type: DOUBLE
+  - id: sc_dw_mvmt_stop_42
+    name: tms_stop_quantity1_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_mvmt_stop_43
+    name: tms_stop_quantity2
+    type: DOUBLE
+  - id: sc_dw_mvmt_stop_44
+    name: tms_stop_quantity2_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_mvmt_stop_45
+    name: tms_stop_reason
+    type: VARCHAR(64)
+  - id: sc_dw_mvmt_stop_46
+    name: tms_stop_volume
+    type: DOUBLE
+  - id: sc_dw_mvmt_stop_47
+    name: tms_stop_volume_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_mvmt_stop_48
+    name: tms_stop_weight
+    type: DOUBLE
+  - id: sc_dw_mvmt_stop_49
+    name: tms_stop_weight_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_mvmt_stop_50
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_mvmt_stop_51
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

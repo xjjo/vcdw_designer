@@ -1,0 +1,138 @@
+id: support_tms_shipper_sc_plcy_nc
+kind: support
+name: tms_shipper_sc_plcy_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_shipper_sc_plcy_nc_0
+    name: sys_shipper_sc_plcy_id
+    type: BIGINT(20)
+  - id: sc_tms_shipper_sc_plcy_nc_1
+    name: delivery_on_time_event
+    type: VARCHAR(64)
+  - id: sc_tms_shipper_sc_plcy_nc_2
+    name: delivery_on_time_reference
+    type: VARCHAR(256)
+  - id: sc_tms_shipper_sc_plcy_nc_3
+    name: delivery_on_time_early_toleran
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_4
+    name: delivery_on_time_late_toleranc
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_5
+    name: active
+    type: DECIMAL(1,0)
+  - id: sc_tms_shipper_sc_plcy_nc_6
+    name: on_time_pickup_event
+    type: VARCHAR(64)
+  - id: sc_tms_shipper_sc_plcy_nc_7
+    name: on_time_pickup_reference
+    type: VARCHAR(256)
+  - id: sc_tms_shipper_sc_plcy_nc_8
+    name: on_time_pickup_early_tolerance
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_9
+    name: on_time_picku_late_tolerance
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_10
+    name: sys_organization_id
+    type: BIGINT(20)
+  - id: sc_tms_shipper_sc_plcy_nc_11
+    name: original_pickup_on_time_refere
+    type: VARCHAR(256)
+  - id: sc_tms_shipper_sc_plcy_nc_12
+    name: pu_late_med_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_13
+    name: sys_service_level_id
+    type: BIGINT(20)
+  - id: sc_tms_shipper_sc_plcy_nc_14
+    name: original_delivery_on_time_refe
+    type: VARCHAR(256)
+  - id: sc_tms_shipper_sc_plcy_nc_15
+    name: pu_early_low_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_16
+    name: pu_late_low_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_17
+    name: pu_early_high_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_18
+    name: dl_early_high_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_19
+    name: transportation_mode
+    type: VARCHAR(256)
+  - id: sc_tms_shipper_sc_plcy_nc_20
+    name: dl_late_high_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_21
+    name: dl_early_low_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_22
+    name: pu_early_med_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_23
+    name: dl_late_med_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_24
+    name: pu_late_high_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_25
+    name: pu_late_med_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_26
+    name: dl_early_med_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_27
+    name: pu_late_high_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_28
+    name: dl_early_high_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_29
+    name: dl_late_high_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_30
+    name: pu_late_low_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_31
+    name: dl_late_low_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_32
+    name: pu_early_high_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_33
+    name: dl_early_low_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_34
+    name: dl_late_low_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_35
+    name: dl_early_med_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_36
+    name: schedule_on_time_reference
+    type: VARCHAR(256)
+  - id: sc_tms_shipper_sc_plcy_nc_37
+    name: pu_early_low_tardiness_ub
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_38
+    name: pu_early_med_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_39
+    name: dl_late_med_tardiness_lb
+    type: DECIMAL(9,0)
+  - id: sc_tms_shipper_sc_plcy_nc_40
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_tms_shipper_sc_plcy_nc_41
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_tms_shipper_sc_plcy_nc_42
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_shipper_sc_plcy_nc_43
+    name: RECONCILED
+    type: TINYINT(1)

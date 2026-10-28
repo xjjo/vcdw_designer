@@ -1,0 +1,51 @@
+id: support_dw_scc_attrib_set
+kind: support
+name: dw_scc_attrib_set
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_attrib_set_0
+    name: ASSOCIATED_MODEL_DISPLAY
+    type: VARCHAR(128)
+  - id: sc_dw_scc_attrib_set_1
+    name: ASSOCIATED_MODEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attrib_set_2
+    name: ASSOCIATED_MODEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attrib_set_3
+    name: ATTRIBUTE_SEQUENCE
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_attrib_set_4
+    name: ATTRIBUTE_VALUE
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_attrib_set_5
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attrib_set_6
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attrib_set_7
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attrib_set_8
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attrib_set_9
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attrib_set_10
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attrib_set_11
+    name: SYS_ATTRIB_SCHEMA_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attrib_set_12
+    name: SYS_ATTRIB_SET_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attrib_set_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_attrib_set_14
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

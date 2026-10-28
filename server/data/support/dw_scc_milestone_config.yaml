@@ -1,0 +1,48 @@
+id: support_dw_scc_milestone_config
+kind: support
+name: dw_scc_milestone_config
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_milestone_config_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_milestone_config_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_milestone_config_2
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_dw_scc_milestone_config_3
+    name: INTERNATIONAL
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_milestone_config_4
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_milestone_config_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_milestone_config_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_milestone_config_7
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_milestone_config_8
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_milestone_config_9
+    name: ORDER_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_milestone_config_10
+    name: SYS_MILESTONE_CONFIG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_milestone_config_11
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_milestone_config_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_milestone_config_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

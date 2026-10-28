@@ -1,0 +1,402 @@
+id: support_dw_invoice_line
+kind: support
+name: dw_invoice_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_invoice_line_0
+    name: SYS_INVOICE_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_1
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_line_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_line_3
+    name: INVOICE_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_4
+    name: REFERENCE_INVOICE_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_5
+    name: BILL_OF_LADING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_6
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_7
+    name: INVOICE_LINE_TYPE
+    type: SMALLINT(6)
+  - id: sc_dw_invoice_line_8
+    name: INVOICE_SACCODE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_9
+    name: REFERENCE_ITEM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_10
+    name: QUANTITY_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_invoice_line_11
+    name: ORIGINAL_INVOICE_LINE_QTY
+    type: DOUBLE
+  - id: sc_dw_invoice_line_12
+    name: INVOICE_LINE_QTY
+    type: DOUBLE
+  - id: sc_dw_invoice_line_13
+    name: EXPECTED_INVOICE_LINE_QTY
+    type: DOUBLE
+  - id: sc_dw_invoice_line_14
+    name: ORIGINAL_UNIT_PRICE
+    type: DOUBLE
+  - id: sc_dw_invoice_line_15
+    name: UNIT_PRICE
+    type: DOUBLE
+  - id: sc_dw_invoice_line_16
+    name: EXPECTED_UNIT_PRICE
+    type: DOUBLE
+  - id: sc_dw_invoice_line_17
+    name: ORIGINAL_INVOICE_LINE_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_line_18
+    name: INVOICE_LINE_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_line_19
+    name: EXPECTED_INVOICE_LINE_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_line_20
+    name: TAX_ALLOWED
+    type: TINYINT(4)
+  - id: sc_dw_invoice_line_21
+    name: DISCOUNT_ALLOWED
+    type: TINYINT(4)
+  - id: sc_dw_invoice_line_22
+    name: SYS_INVOICE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_23
+    name: INVOICE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_24
+    name: SYS_SHIPMENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_25
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_26
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_27
+    name: SYS_INVOICER_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_28
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_29
+    name: ITEM_DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_30
+    name: SCC_SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_31
+    name: SCC_SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_32
+    name: SCC_SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_33
+    name: SCC_SYS_PURCHASE_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_34
+    name: SCC_SYS_PURCHASE_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_35
+    name: FIN_COMMENTS
+    type: VARCHAR(512)
+  - id: sc_dw_invoice_line_36
+    name: FIN_CONTRACTED_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_line_37
+    name: FIN_DURATION
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_38
+    name: FIN_MODIFICATION_REASON
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_39
+    name: FIN_NOTES
+    type: LONGTEXT
+  - id: sc_dw_invoice_line_40
+    name: FIN_OTHER_REF_NO
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_41
+    name: FIN_RATE
+    type: DOUBLE
+  - id: sc_dw_invoice_line_42
+    name: FIN_RATE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_line_43
+    name: FIN_REFERENCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_44
+    name: FIN_REFERENCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_45
+    name: FIN_REFERENCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_46
+    name: FIN_SYS_CATEGORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_47
+    name: FIN_TIME_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_line_48
+    name: OMS_CONTRACT_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_49
+    name: OMS_CONTRACT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_50
+    name: OMS_CONTRACT_TERM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_51
+    name: OMS_DEL_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_52
+    name: OMS_DISCOUNT_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_line_53
+    name: OMS_FOBCODE
+    type: SMALLINT(6)
+  - id: sc_dw_invoice_line_54
+    name: OMS_FOBINSTRUCTIONS
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_55
+    name: OMS_IS_NEGATIVE_QTY
+    type: TINYINT(4)
+  - id: sc_dw_invoice_line_56
+    name: OMS_ITEM_COMMODITY_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_57
+    name: OMS_ITEM_MANUFACTURER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_58
+    name: OMS_ITEM_NAME
+    type: VARCHAR(255)
+  - id: sc_dw_invoice_line_59
+    name: OMS_ITEM_NATIONAL_STOCK_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_60
+    name: OMS_LINE_CURRENCY
+    type: SMALLINT(6)
+  - id: sc_dw_invoice_line_61
+    name: OMS_LN_OTHER_DATA
+    type: LONGTEXT
+  - id: sc_dw_invoice_line_62
+    name: OMS_LN_PURCHASE_REQ_NO
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_63
+    name: OMS_MANUFACTURER_PART_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_64
+    name: OMS_ORDER_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_65
+    name: OMS_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_66
+    name: OMS_PURCHASE_ORDER_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_line_67
+    name: OMS_REQ_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_68
+    name: OMS_REVISION_NO_LN
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_69
+    name: OMS_SHIPMENT_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_70
+    name: OMS_SHIPMENT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_71
+    name: OMS_SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_72
+    name: OMS_SYS_CONTRACT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_73
+    name: OMS_SYS_CONTRACT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_74
+    name: OMS_UNIVERSAL_ITEM_IDENTIFIER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_75
+    name: OMS_VENDOR_PART_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_76
+    name: TMS_ACCRUAL_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_77
+    name: TMS_BILLED_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_line_78
+    name: TMS_BILLED_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_line_79
+    name: TMS_BILLED_VOLUME_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_line_80
+    name: TMS_BILLED_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_line_81
+    name: TMS_BILLED_WEIGHT_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_invoice_line_82
+    name: TMS_BILLED_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_invoice_line_83
+    name: TMS_FINAL_PAYMENT_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_84
+    name: TMS_REFERENCE_NO
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_85
+    name: TMS_SHIP_FROM_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_86
+    name: TMS_SHIP_FROM_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_87
+    name: TMS_SHIP_FROM_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_invoice_line_88
+    name: TMS_SHIP_FROM_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_89
+    name: TMS_SHIP_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_90
+    name: TMS_SHIP_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_91
+    name: TMS_SHIP_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_invoice_line_92
+    name: TMS_SHIP_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_93
+    name: TMS_STOP_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_94
+    name: TMS_SYS_ACCESSORIAL_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_95
+    name: TMS_SYS_BILLED_DESTINATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_96
+    name: TMS_SYS_BILLED_ORIGIN_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_97
+    name: TMS_SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_98
+    name: TMS_SYS_TAX_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_99
+    name: TMS_TAX_PERCENTAGE
+    type: DOUBLE
+  - id: sc_dw_invoice_line_100
+    name: OMS_SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_101
+    name: OMS_ORDERED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_invoice_line_102
+    name: OMS_SHIPPED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_invoice_line_103
+    name: OMS_RECEIVED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_invoice_line_104
+    name: OMS_ITEM_HSCODE
+    type: VARCHAR(64)
+  - id: sc_dw_invoice_line_105
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_invoice_line_106
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_invoice_line_107
+    name: LVL1_PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_invoice_line_108
+    name: LVL1_PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_invoice_line_109
+    name: LVL1_PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_invoice_line_110
+    name: LVL1_PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_invoice_line_111
+    name: LVL1_PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_invoice_line_112
+    name: LVL1_PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_113
+    name: LVL1_PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_114
+    name: LVL1_PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_115
+    name: LVL1_PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_116
+    name: LVL1_PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_117
+    name: LVL1_PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_118
+    name: LVL1_PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_119
+    name: LVL1_PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_120
+    name: LVL1_PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_121
+    name: LVL1_PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_invoice_line_122
+    name: LVL1_PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_123
+    name: LVL1_PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_124
+    name: LVL1_PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_125
+    name: LVL1_PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_126
+    name: LVL1_PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_127
+    name: LVL1_PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_128
+    name: LVL1_PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_129
+    name: LVL1_PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_130
+    name: LVL1_PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_invoice_line_131
+    name: LVL1_PADF_STRING_FIELD9
+    type: VARCHAR(128)

@@ -1,0 +1,120 @@
+id: support_dw_scc_claim_line
+kind: support
+name: dw_scc_claim_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_claim_line_0
+    name: SYS_CLAIM_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_claim_line_2
+    name: QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_claim_line_3
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_claim_line_4
+    name: CLAIM_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_claim_line_5
+    name: CLAIM_COST_UOM
+    type: SMALLINT(6)
+  - id: sc_dw_scc_claim_line_6
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_claim_line_7
+    name: SYS_CLAIM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_8
+    name: CLAIM_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_claim_line_9
+    name: LN_CLAIM_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_claim_line_10
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_claim_line_11
+    name: EXT_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_claim_line_12
+    name: EXT_SHIPMENT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_claim_line_13
+    name: ACCEPTED_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_claim_line_14
+    name: ACCEPTED_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_claim_line_15
+    name: LN_ORIGINAL_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_claim_line_16
+    name: LN_ORIGINAL_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_claim_line_17
+    name: CLAIM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_claim_line_18
+    name: LN_CLAIM_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_claim_line_19
+    name: LN_CLAIM_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_claim_line_20
+    name: CLAIM_TYPE_DESCRIPTION
+    type: VARCHAR(500)
+  - id: sc_dw_scc_claim_line_21
+    name: CLAIMANT_COMMENTS
+    type: VARCHAR(1000)
+  - id: sc_dw_scc_claim_line_22
+    name: CLAIMEE_COMMENTS
+    type: VARCHAR(1000)
+  - id: sc_dw_scc_claim_line_23
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_24
+    name: SYS_CLAIMANT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_25
+    name: CLAIMANT_ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_scc_claim_line_26
+    name: CLAIMANT_ORG_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_scc_claim_line_27
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_28
+    name: SYS_ORDER_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_29
+    name: SYS_RECEIPT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_30
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_31
+    name: SYS_PENALTY_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_32
+    name: SYS_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_33
+    name: SYS_SHIPMENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_34
+    name: SYS_RECEIPT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_35
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_claim_line_36
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_claim_line_37
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

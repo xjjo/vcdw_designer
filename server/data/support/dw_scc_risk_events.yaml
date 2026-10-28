@@ -1,0 +1,96 @@
+id: support_dw_scc_risk_events
+kind: support
+name: dw_scc_risk_events
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_risk_events_0
+    name: ACTIVE
+    type: TINYINT(1)
+  - id: sc_dw_scc_risk_events_1
+    name: ASSOCIATED_RISK_TYPES
+    type: LONGTEXT
+  - id: sc_dw_scc_risk_events_2
+    name: AUXILARY_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_events_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_events_4
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_events_5
+    name: EVENT_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_events_6
+    name: EVENT_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_events_7
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_events_8
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_events_9
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_events_10
+    name: LIKELIHOOD
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_events_11
+    name: LIKELIHOOD_OVERRIDE
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_events_12
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_events_13
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_events_14
+    name: OVERRIDDEN
+    type: TINYINT(1)
+  - id: sc_dw_scc_risk_events_15
+    name: RAW_RISK_SOURCE
+    type: VARCHAR(128)
+  - id: sc_dw_scc_risk_events_16
+    name: RISK_DESCRIPTION
+    type: LONGTEXT
+  - id: sc_dw_scc_risk_events_17
+    name: RISK_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_events_18
+    name: RISK_TITLE
+    type: VARCHAR(512)
+  - id: sc_dw_scc_risk_events_19
+    name: RISK_TITLE_OVERRIDE
+    type: VARCHAR(512)
+  - id: sc_dw_scc_risk_events_20
+    name: RISK_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_risk_events_21
+    name: SEVERITY
+    type: VARCHAR(256)
+  - id: sc_dw_scc_risk_events_22
+    name: SEVERITY_OVERRIDE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_risk_events_23
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_events_24
+    name: SYS_OWNING_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_events_25
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_events_26
+    name: SYS_RISK_EVENTS_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_events_27
+    name: SYS_SCENARIO_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_events_28
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_events_29
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

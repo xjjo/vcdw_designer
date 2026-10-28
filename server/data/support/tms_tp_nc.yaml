@@ -1,0 +1,99 @@
+id: support_tms_tp_nc
+kind: support
+name: tms_tp_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_tp_nc_0
+    name: sys_tp_id
+    type: BIGINT(20)
+  - id: sc_tms_tp_nc_1
+    name: model_name
+    type: VARCHAR(64)
+  - id: sc_tms_tp_nc_2
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_tms_tp_nc_3
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_tms_tp_nc_4
+    name: last_modified_user
+    type: VARCHAR(64)
+  - id: sc_tms_tp_nc_5
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_tms_tp_nc_6
+    name: last_computed_date
+    type: DATETIME(6)
+  - id: sc_tms_tp_nc_7
+    name: last_touched_date
+    type: DATETIME(6)
+  - id: sc_tms_tp_nc_8
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_tms_tp_nc_9
+    name: state
+    type: VARCHAR(64)
+  - id: sc_tms_tp_nc_10
+    name: tender_plan_name
+    type: VARCHAR(64)
+  - id: sc_tms_tp_nc_11
+    name: parent_tender_cost
+    type: DOUBLE
+  - id: sc_tms_tp_nc_12
+    name: is_auto_tendered
+    type: DECIMAL(1,0)
+  - id: sc_tms_tp_nc_13
+    name: is_system_generated
+    type: DECIMAL(1,0)
+  - id: sc_tms_tp_nc_14
+    name: cost_limit_status
+    type: DECIMAL(6,0)
+  - id: sc_tms_tp_nc_15
+    name: cost_limit_cost_amount
+    type: DOUBLE
+  - id: sc_tms_tp_nc_16
+    name: cost_limit_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_tms_tp_nc_17
+    name: tender_in_future_time
+    type: DATETIME(6)
+  - id: sc_tms_tp_nc_18
+    name: is_spot_bidded
+    type: DECIMAL(1,0)
+  - id: sc_tms_tp_nc_19
+    name: is_create_rate_or_route
+    type: DECIMAL(1,0)
+  - id: sc_tms_tp_nc_20
+    name: is_override_tender_schedule
+    type: DECIMAL(1,0)
+  - id: sc_tms_tp_nc_21
+    name: sys_org_id
+    type: BIGINT(20)
+  - id: sc_tms_tp_nc_22
+    name: sys_movement_id
+    type: BIGINT(20)
+  - id: sc_tms_tp_nc_23
+    name: sys_master_movement_id
+    type: BIGINT(20)
+  - id: sc_tms_tp_nc_24
+    name: sys_routing_rule_id
+    type: BIGINT(20)
+  - id: sc_tms_tp_nc_25
+    name: sys_route_id
+    type: BIGINT(20)
+  - id: sc_tms_tp_nc_26
+    name: sys_parent_tender_id
+    type: BIGINT(20)
+  - id: sc_tms_tp_nc_27
+    name: sys_clsetting_id
+    type: BIGINT(20)
+  - id: sc_tms_tp_nc_28
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_tms_tp_nc_29
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_tp_nc_30
+    name: RECONCILED
+    type: TINYINT(1)

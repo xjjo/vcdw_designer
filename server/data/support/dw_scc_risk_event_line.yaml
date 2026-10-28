@@ -1,0 +1,129 @@
+id: support_dw_scc_risk_event_line
+kind: support
+name: dw_scc_risk_event_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_risk_event_line_0
+    name: ACTIVE
+    type: TINYINT(1)
+  - id: sc_dw_scc_risk_event_line_1
+    name: CITY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_event_line_2
+    name: COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_event_line_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_event_line_4
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_event_line_5
+    name: DIMENSION_DESCRIPTION
+    type: VARCHAR(512)
+  - id: sc_dw_scc_risk_event_line_6
+    name: DIMENSION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_7
+    name: DIMENSION_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_risk_event_line_8
+    name: EFFECTIVITY_FACTOR
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_event_line_9
+    name: EFFECTIVITY_FACTOR_OVERRIDE
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_event_line_10
+    name: GEO_STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_event_line_11
+    name: IS_LANE
+    type: TINYINT(1)
+  - id: sc_dw_scc_risk_event_line_12
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_event_line_13
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_event_line_14
+    name: LATITUDE
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_event_line_15
+    name: LEAD_TIME_FACTOR
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_event_line_16
+    name: LEAD_TIME_FACTOR_OVERRIDE
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_event_line_17
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_event_line_18
+    name: LINE_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_event_line_19
+    name: LINE_LEVEL_SEVERITY
+    type: VARCHAR(256)
+  - id: sc_dw_scc_risk_event_line_20
+    name: LINE_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_event_line_21
+    name: LONGITUDE
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_event_line_22
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_event_line_23
+    name: RADIUS
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_risk_event_line_24
+    name: RADIUS_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_risk_event_line_25
+    name: SEVERITY_OVERRIDE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_risk_event_line_26
+    name: SYS_FROM_SITE_GROUP_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_27
+    name: SYS_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_28
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_29
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_30
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_31
+    name: SYS_PRODUCT_GROUP_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_32
+    name: SYS_RISK_EVENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_33
+    name: SYS_RISK_EVENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_34
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_35
+    name: SYS_TO_SITE_GROUP_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_36
+    name: SYS_XENTITY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_37
+    name: TO_DIMENSION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_risk_event_line_38
+    name: ZIPCODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_risk_event_line_39
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_risk_event_line_40
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

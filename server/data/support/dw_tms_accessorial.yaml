@@ -1,0 +1,66 @@
+id: support_dw_tms_accessorial
+kind: support
+name: dw_tms_accessorial
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_accessorial_0
+    name: ACCESSORIAL_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_accessorial_1
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_accessorial_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_accessorial_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_accessorial_4
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_dw_tms_accessorial_5
+    name: EDICODE
+    type: VARCHAR(3)
+  - id: sc_dw_tms_accessorial_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_accessorial_7
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_accessorial_8
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_accessorial_9
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_accessorial_10
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_accessorial_11
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_accessorial_12
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_accessorial_13
+    name: ORG_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_tms_accessorial_14
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_tms_accessorial_15
+    name: SERVICE_OFFERING
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_accessorial_16
+    name: SYS_ACCESSORIAL_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_accessorial_17
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_accessorial_18
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_accessorial_19
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

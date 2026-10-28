@@ -1,0 +1,1341 @@
+id: support_dw_shipment_header
+kind: support
+name: dw_shipment_header
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_shipment_header_0
+    name: sys_shiph_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_1
+    name: trans_name
+    type: TEXT
+  - id: sc_dw_shipment_header_2
+    name: spt_version
+    type: TEXT
+  - id: sc_dw_shipment_header_3
+    name: spt_name
+    type: TEXT
+  - id: sc_dw_shipment_header_4
+    name: shipment_no
+    type: VARCHAR(64)
+  - id: sc_dw_shipment_header_5
+    name: shipfrom_contact
+    type: TEXT
+  - id: sc_dw_shipment_header_6
+    name: shipto_contact
+    type: TEXT
+  - id: sc_dw_shipment_header_7
+    name: current_carrier_contact
+    type: TEXT
+  - id: sc_dw_shipment_header_8
+    name: creation_user
+    type: TEXT
+  - id: sc_dw_shipment_header_9
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_10
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_11
+    name: last_modified_user
+    type: TEXT
+  - id: sc_dw_shipment_header_12
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_13
+    name: last_computed_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_14
+    name: last_touched_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_15
+    name: billto_contact
+    type: TEXT
+  - id: sc_dw_shipment_header_16
+    name: earliest_ship_target_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_17
+    name: estimated_ship_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_18
+    name: actual_pickup_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_19
+    name: pickup_date_range_start
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_20
+    name: pickup_date_range_end
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_21
+    name: pickup_appt_required
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_22
+    name: pickup_rsrv_grp_id
+    type: TEXT
+  - id: sc_dw_shipment_header_23
+    name: pickup_appt_date_range_start
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_24
+    name: pickup_appt_date_range_end
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_25
+    name: earliest_delivery_target_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_26
+    name: estimated_delivery_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_27
+    name: actual_delivery_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_28
+    name: delivery_date_range_start
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_29
+    name: delivery_date_range_end
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_30
+    name: delivery_appt_required
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_31
+    name: delivery_rsrv_grp_id
+    type: TEXT
+  - id: sc_dw_shipment_header_32
+    name: delivery_appt_date_range_start
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_33
+    name: delivery_appt_date_range_end
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_34
+    name: load_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_35
+    name: current_position
+    type: TEXT
+  - id: sc_dw_shipment_header_36
+    name: order_ref_no
+    type: TEXT
+  - id: sc_dw_shipment_header_37
+    name: master_shipment_no
+    type: TEXT
+  - id: sc_dw_shipment_header_38
+    name: total_volume
+    type: DOUBLE
+  - id: sc_dw_shipment_header_39
+    name: volume_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_40
+    name: total_weight
+    type: DOUBLE
+  - id: sc_dw_shipment_header_41
+    name: weight_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_42
+    name: total_shipped_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_header_43
+    name: total_received_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_header_44
+    name: total_ordered_qty
+    type: DOUBLE
+  - id: sc_dw_shipment_header_45
+    name: quantity_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_46
+    name: total_shipped_qty2
+    type: DOUBLE
+  - id: sc_dw_shipment_header_47
+    name: total_received_qty2
+    type: DOUBLE
+  - id: sc_dw_shipment_header_48
+    name: total_ordered_qty2
+    type: DOUBLE
+  - id: sc_dw_shipment_header_49
+    name: quantity_uom2
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_50
+    name: freight_terms
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_51
+    name: special_instructions
+    type: TEXT
+  - id: sc_dw_shipment_header_52
+    name: freight_controlled_by_system
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_53
+    name: state
+    type: TEXT
+  - id: sc_dw_shipment_header_54
+    name: attached_notes
+    type: LONGTEXT
+  - id: sc_dw_shipment_header_55
+    name: attached_note_count
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_56
+    name: parent_ship_no
+    type: TEXT
+  - id: sc_dw_shipment_header_57
+    name: bill_of_lading_no
+    type: TEXT
+  - id: sc_dw_shipment_header_58
+    name: routing_no
+    type: TEXT
+  - id: sc_dw_shipment_header_59
+    name: buyer_contact
+    type: TEXT
+  - id: sc_dw_shipment_header_60
+    name: seller_contact
+    type: TEXT
+  - id: sc_dw_shipment_header_61
+    name: description
+    type: TEXT
+  - id: sc_dw_shipment_header_62
+    name: fob_location
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_63
+    name: fob_notes
+    type: TEXT
+  - id: sc_dw_shipment_header_64
+    name: current_position_lon
+    type: DOUBLE
+  - id: sc_dw_shipment_header_65
+    name: current_position_lat
+    type: DOUBLE
+  - id: sc_dw_shipment_header_66
+    name: transaction_cost
+    type: DOUBLE
+  - id: sc_dw_shipment_header_67
+    name: shipto_site_name
+    type: TEXT
+  - id: sc_dw_shipment_header_68
+    name: shipfrom_site_name
+    type: TEXT
+  - id: sc_dw_shipment_header_69
+    name: pickup_commodity_code
+    type: TEXT
+  - id: sc_dw_shipment_header_70
+    name: delivery_commodity_code
+    type: TEXT
+  - id: sc_dw_shipment_header_71
+    name: pickup_dock_door_group_name
+    type: TEXT
+  - id: sc_dw_shipment_header_72
+    name: delivery_dock_door_group_name
+    type: TEXT
+  - id: sc_dw_shipment_header_73
+    name: recovered_lost_sales_value
+    type: DOUBLE
+  - id: sc_dw_shipment_header_74
+    name: recovered_lost_sales_days
+    type: DOUBLE
+  - id: sc_dw_shipment_header_75
+    name: ship_with_group_ref
+    type: TEXT
+  - id: sc_dw_shipment_header_76
+    name: priority
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_77
+    name: pickup_notifications
+    type: TEXT
+  - id: sc_dw_shipment_header_78
+    name: delivery_notifications
+    type: TEXT
+  - id: sc_dw_shipment_header_79
+    name: creation_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_80
+    name: shipfrom_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_81
+    name: shipto_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_82
+    name: shipfrom_partner_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_83
+    name: shipfrom_partner_prof_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_84
+    name: shipto_partner_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_85
+    name: shipto_partner_prof_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_86
+    name: tc_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_87
+    name: custof_tc_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_88
+    name: current_carrier_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_89
+    name: broker_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_90
+    name: billto_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_91
+    name: billto_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_92
+    name: pickup_appt_code_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_93
+    name: delivery_appt_code_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_94
+    name: pickup_commodity_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_95
+    name: delivery_commodity_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_96
+    name: pickup_dd_group_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_97
+    name: delivery_dd_group_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_98
+    name: parent_ship_creation_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_99
+    name: buy_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_100
+    name: sell_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_101
+    name: shipto_partner_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_102
+    name: shipto_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_103
+    name: shipfrom_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_104
+    name: shipfrom_partner_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_105
+    name: broker_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_106
+    name: mvmt_creation_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_107
+    name: sys_parent_ship_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_108
+    name: sys_mvmt_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_109
+    name: shipfrom_addr_country
+    type: TEXT
+  - id: sc_dw_shipment_header_110
+    name: shipfrom_addr_comp1
+    type: TEXT
+  - id: sc_dw_shipment_header_111
+    name: shipfrom_addr_comp2
+    type: TEXT
+  - id: sc_dw_shipment_header_112
+    name: shipfrom_addr_comps
+    type: TEXT
+  - id: sc_dw_shipment_header_113
+    name: shipto_addr_country
+    type: TEXT
+  - id: sc_dw_shipment_header_114
+    name: shipto_addr_comp1
+    type: TEXT
+  - id: sc_dw_shipment_header_115
+    name: shipto_addr_comp2
+    type: TEXT
+  - id: sc_dw_shipment_header_116
+    name: shipto_addr_comps
+    type: TEXT
+  - id: sc_dw_shipment_header_117
+    name: billto_addr_country
+    type: TEXT
+  - id: sc_dw_shipment_header_118
+    name: billto_addr_comp1
+    type: TEXT
+  - id: sc_dw_shipment_header_119
+    name: billto_addr_comp2
+    type: TEXT
+  - id: sc_dw_shipment_header_120
+    name: billto_addr_comps
+    type: TEXT
+  - id: sc_dw_shipment_header_121
+    name: buyer_addr_country
+    type: TEXT
+  - id: sc_dw_shipment_header_122
+    name: buyer_addr_comp1
+    type: TEXT
+  - id: sc_dw_shipment_header_123
+    name: buyer_addr_comp2
+    type: TEXT
+  - id: sc_dw_shipment_header_124
+    name: buyer_addr_comps
+    type: TEXT
+  - id: sc_dw_shipment_header_125
+    name: seller_addr_country
+    type: TEXT
+  - id: sc_dw_shipment_header_126
+    name: seller_addr_comp1
+    type: TEXT
+  - id: sc_dw_shipment_header_127
+    name: seller_addr_comp2
+    type: TEXT
+  - id: sc_dw_shipment_header_128
+    name: seller_addr_comps
+    type: TEXT
+  - id: sc_dw_shipment_header_129
+    name: sys_creation_template_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_130
+    name: total_shipped_qty3
+    type: DOUBLE
+  - id: sc_dw_shipment_header_131
+    name: total_received_qty3
+    type: DOUBLE
+  - id: sc_dw_shipment_header_132
+    name: total_ordered_qty3
+    type: DOUBLE
+  - id: sc_dw_shipment_header_133
+    name: quantity_uom3
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_134
+    name: buyer_allowance_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_135
+    name: buyer_allowance_uom
+    type: TEXT
+  - id: sc_dw_shipment_header_136
+    name: cust_of_buyer_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_137
+    name: delivery_ready_notifications
+    type: TEXT
+  - id: sc_dw_shipment_header_138
+    name: equipment_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_139
+    name: expedite1
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_140
+    name: external_contract_no
+    type: TEXT
+  - id: sc_dw_shipment_header_141
+    name: ext_packing_list_no
+    type: TEXT
+  - id: sc_dw_shipment_header_142
+    name: hazmat_contact_name
+    type: TEXT
+  - id: sc_dw_shipment_header_143
+    name: hazmat_contact_phone
+    type: TEXT
+  - id: sc_dw_shipment_header_144
+    name: hazmat_packaging_group
+    type: TEXT
+  - id: sc_dw_shipment_header_145
+    name: inco_terms
+    type: TEXT
+  - id: sc_dw_shipment_header_146
+    name: international
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_147
+    name: is_hazardous
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_148
+    name: is_over_dimension
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_149
+    name: is_over_weight
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_150
+    name: odc_certified
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_151
+    name: package_type
+    type: TEXT
+  - id: sc_dw_shipment_header_152
+    name: rmanumber
+    type: TEXT
+  - id: sc_dw_shipment_header_153
+    name: seal_no
+    type: TEXT
+  - id: sc_dw_shipment_header_154
+    name: ship_from_close_time
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_155
+    name: swpmcertified
+    type: TEXT
+  - id: sc_dw_shipment_header_156
+    name: sys_customs_broker_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_157
+    name: sys_fulfillment_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_158
+    name: sys_hazard_class_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_159
+    name: sys_hazmat_number_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_160
+    name: sys_packing_list_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_161
+    name: sys_proper_ship_name_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_162
+    name: sys_sales_order_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_163
+    name: tms_default_freight_class
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_164
+    name: tms_equipment_number
+    type: TEXT
+  - id: sc_dw_shipment_header_165
+    name: tms_execution_status
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_166
+    name: tms_pro_number
+    type: TEXT
+  - id: sc_dw_shipment_header_167
+    name: tms_routing_group
+    type: TEXT
+  - id: sc_dw_shipment_header_168
+    name: tms_size
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_169
+    name: tms_sys_service_level_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_170
+    name: tms_total_scale_weight_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_171
+    name: tms_total_scale_weight_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_172
+    name: total_allowance_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_173
+    name: total_allowance_uom
+    type: TEXT
+  - id: sc_dw_shipment_header_174
+    name: total_no_of_packages_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_175
+    name: total_no_of_packages_uom
+    type: TEXT
+  - id: sc_dw_shipment_header_176
+    name: total_value_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_177
+    name: total_value_uom
+    type: TEXT
+  - id: sc_dw_shipment_header_178
+    name: delivery_dd_primary_demander
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_179
+    name: delivery_schedule_type
+    type: TEXT
+  - id: sc_dw_shipment_header_180
+    name: distinct_item_count
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_181
+    name: off_network_carrier
+    type: TEXT
+  - id: sc_dw_shipment_header_182
+    name: pickup_dd_primary_demander
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_183
+    name: pickup_schedule_type
+    type: TEXT
+  - id: sc_dw_shipment_header_184
+    name: sch_balance_item
+    type: TEXT
+  - id: sc_dw_shipment_header_185
+    name: sch_dacomments
+    type: TEXT
+  - id: sc_dw_shipment_header_186
+    name: sch_delivery_auto_sch_status
+    type: TEXT
+  - id: sc_dw_shipment_header_187
+    name: sch_num_required_delivery_appt
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_188
+    name: sch_num_required_pickup_appts
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_189
+    name: sch_origin_vendor
+    type: TEXT
+  - id: sc_dw_shipment_header_190
+    name: sch_pickup_auto_sch_status
+    type: TEXT
+  - id: sc_dw_shipment_header_191
+    name: sch_pickup_load_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_192
+    name: sch_pocomments1
+    type: TEXT
+  - id: sc_dw_shipment_header_193
+    name: sch_pocomments2
+    type: TEXT
+  - id: sc_dw_shipment_header_194
+    name: sch_scheduled_receiving_date
+    type: TEXT
+  - id: sc_dw_shipment_header_195
+    name: sch_sys_shipment_owning_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_196
+    name: sch_vendor_pallet_qty
+    type: TEXT
+  - id: sc_dw_shipment_header_197
+    name: oms_acklowledgement_type
+    type: TEXT
+  - id: sc_dw_shipment_header_198
+    name: oms_actual_receipt_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_199
+    name: oms_carrier_name
+    type: TEXT
+  - id: sc_dw_shipment_header_200
+    name: carrier_scac
+    type: TEXT
+  - id: sc_dw_shipment_header_201
+    name: container_number
+    type: TEXT
+  - id: sc_dw_shipment_header_202
+    name: oms_created_in_tms
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_203
+    name: oms_delay_reason
+    type: TEXT
+  - id: sc_dw_shipment_header_204
+    name: editrans_set
+    type: TEXT
+  - id: sc_dw_shipment_header_205
+    name: editrans_set_ctrl_no
+    type: TEXT
+  - id: sc_dw_shipment_header_206
+    name: editrans_set_purpose
+    type: TEXT
+  - id: sc_dw_shipment_header_207
+    name: edi_receiver_id
+    type: TEXT
+  - id: sc_dw_shipment_header_208
+    name: edi_receiver_type
+    type: TEXT
+  - id: sc_dw_shipment_header_209
+    name: edi_sender_id
+    type: TEXT
+  - id: sc_dw_shipment_header_210
+    name: edi_sender_type
+    type: TEXT
+  - id: sc_dw_shipment_header_211
+    name: equipment_initials
+    type: TEXT
+  - id: sc_dw_shipment_header_212
+    name: oms_equipment_size
+    type: TEXT
+  - id: sc_dw_shipment_header_213
+    name: oms_freight_currency
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_214
+    name: oms_hold_shipment
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_215
+    name: movement_number
+    type: TEXT
+  - id: sc_dw_shipment_header_216
+    name: old_movement_no
+    type: TEXT
+  - id: sc_dw_shipment_header_217
+    name: oms_order_status
+    type: TEXT
+  - id: sc_dw_shipment_header_218
+    name: origin
+    type: TEXT
+  - id: sc_dw_shipment_header_219
+    name: orig_to_org
+    type: TEXT
+  - id: sc_dw_shipment_header_220
+    name: oms_other_data
+    type: LONGTEXT
+  - id: sc_dw_shipment_header_221
+    name: oms_revision_no
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_222
+    name: oms_seal_number
+    type: TEXT
+  - id: sc_dw_shipment_header_223
+    name: orig_ship_from_site_name
+    type: TEXT
+  - id: sc_dw_shipment_header_224
+    name: orig_ship_to_site_name
+    type: TEXT
+  - id: sc_dw_shipment_header_225
+    name: oms_stop_sequence_number
+    type: TEXT
+  - id: sc_dw_shipment_header_226
+    name: scc_sys_trans_mode_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_227
+    name: oms_total_cheps_in
+    type: DOUBLE
+  - id: sc_dw_shipment_header_228
+    name: oms_total_cheps_out
+    type: DOUBLE
+  - id: sc_dw_shipment_header_229
+    name: oms_total_net_weight
+    type: DOUBLE
+  - id: sc_dw_shipment_header_230
+    name: oms_total_pallets_in
+    type: DOUBLE
+  - id: sc_dw_shipment_header_231
+    name: oms_total_pallets_out
+    type: DOUBLE
+  - id: sc_dw_shipment_header_232
+    name: tracking_number
+    type: TEXT
+  - id: sc_dw_shipment_header_233
+    name: oms_transmission_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_234
+    name: oms_vendor_delivery_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_235
+    name: oms_vendor_partner_site_name
+    type: TEXT
+  - id: sc_dw_shipment_header_236
+    name: oms_vendor_trans_mgr_code
+    type: TEXT
+  - id: sc_dw_shipment_header_237
+    name: allowance_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_238
+    name: allowance_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_239
+    name: consolidated_cost_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_240
+    name: consolidated_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_241
+    name: declared_value_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_242
+    name: declared_value_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_243
+    name: del_change_reason_code
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_244
+    name: estimated_delivery_dt_local
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_245
+    name: estimated_dlv_target_dt_local
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_246
+    name: estimated_ship_dt_local
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_247
+    name: estimated_ship_target_dt_local
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_248
+    name: last_pos_update_time
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_249
+    name: ltlcost_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_250
+    name: ltlcost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_251
+    name: non_consolidated_cost_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_252
+    name: non_consolidated_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_253
+    name: pickup_change_reason_code
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_254
+    name: ship_with_group_volume_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_255
+    name: ship_with_group_volume_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_256
+    name: ship_with_group_weight_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_257
+    name: ship_with_group_weight_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_258
+    name: sys_quote_plan_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_259
+    name: sys_tender_plan_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_260
+    name: tlcost_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_261
+    name: tlcost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_262
+    name: tms_accessorial_list
+    type: TEXT
+  - id: sc_dw_shipment_header_263
+    name: tms_accessorial_names_list
+    type: TEXT
+  - id: sc_dw_shipment_header_264
+    name: tms_actual_due
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_265
+    name: tms_advance_purchase_number
+    type: TEXT
+  - id: sc_dw_shipment_header_266
+    name: tms_allocation_percentage
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_267
+    name: tms_all_times_in_local_time
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_268
+    name: tms_apply_across_siblings
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_269
+    name: tms_authorization_code
+    type: TEXT
+  - id: sc_dw_shipment_header_270
+    name: tms_base_rate_level
+    type: TEXT
+  - id: sc_dw_shipment_header_271
+    name: tms_bill_to_site_integ_ref
+    type: TEXT
+  - id: sc_dw_shipment_header_272
+    name: tms_booking_number
+    type: TEXT
+  - id: sc_dw_shipment_header_273
+    name: tms_broker_service_level
+    type: TEXT
+  - id: sc_dw_shipment_header_274
+    name: tms_buyer_id
+    type: TEXT
+  - id: sc_dw_shipment_header_275
+    name: tms_carbon_emission_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_276
+    name: tms_carbon_emission_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_277
+    name: tms_carrier_for_status
+    type: TEXT
+  - id: sc_dw_shipment_header_278
+    name: tms_carrier_integ_ref
+    type: TEXT
+  - id: sc_dw_shipment_header_279
+    name: tms_carrier_pro_number_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_280
+    name: tms_carrier_ref
+    type: TEXT
+  - id: sc_dw_shipment_header_281
+    name: tms_check_number
+    type: TEXT
+  - id: sc_dw_shipment_header_282
+    name: tms_compliancy_codes
+    type: TEXT
+  - id: sc_dw_shipment_header_283
+    name: tms_consider_for_pooling
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_284
+    name: tms_cost_alloc_description
+    type: TEXT
+  - id: sc_dw_shipment_header_285
+    name: tms_cost_description
+    type: TEXT
+  - id: sc_dw_shipment_header_286
+    name: tms_credit_acct
+    type: TEXT
+  - id: sc_dw_shipment_header_287
+    name: tms_csr
+    type: TEXT
+  - id: sc_dw_shipment_header_288
+    name: tms_customer_order_ref
+    type: TEXT
+  - id: sc_dw_shipment_header_289
+    name: tms_debit_acct
+    type: TEXT
+  - id: sc_dw_shipment_header_290
+    name: tms_delivery_attempts
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_291
+    name: tms_delivery_instruction
+    type: TEXT
+  - id: sc_dw_shipment_header_292
+    name: tms_delivery_sequence
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_293
+    name: tms_destination_location
+    type: TEXT
+  - id: sc_dw_shipment_header_294
+    name: tms_direct_distance
+    type: DOUBLE
+  - id: sc_dw_shipment_header_295
+    name: tms_discounted_stop
+    type: TEXT
+  - id: sc_dw_shipment_header_296
+    name: tms_discount_acc_code_ids
+    type: TEXT
+  - id: sc_dw_shipment_header_297
+    name: tms_dispatch_response_code
+    type: TEXT
+  - id: sc_dw_shipment_header_298
+    name: tms_disposition
+    type: TEXT
+  - id: sc_dw_shipment_header_299
+    name: tms_distance
+    type: DOUBLE
+  - id: sc_dw_shipment_header_300
+    name: tms_distance_source
+    type: TEXT
+  - id: sc_dw_shipment_header_301
+    name: tms_distance_type
+    type: TEXT
+  - id: sc_dw_shipment_header_302
+    name: tms_distance_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_303
+    name: tms_driver_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_304
+    name: tms_enable_promotion
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_305
+    name: tms_equipment_model
+    type: TEXT
+  - id: sc_dw_shipment_header_306
+    name: tms_etaport_of_discharge
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_307
+    name: tms_etdport_of_loading
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_308
+    name: tms_expedite
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_309
+    name: tms_fed_ex_pickup_location
+    type: TEXT
+  - id: sc_dw_shipment_header_310
+    name: tms_fed_ex_pickup_status
+    type: TEXT
+  - id: sc_dw_shipment_header_311
+    name: tms_functional_grp_ctrl_number
+    type: TEXT
+  - id: sc_dw_shipment_header_312
+    name: tms_functional_grp_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_313
+    name: tms_fwd_client_addr_comp1
+    type: TEXT
+  - id: sc_dw_shipment_header_314
+    name: tms_fwd_client_addr_comp2
+    type: TEXT
+  - id: sc_dw_shipment_header_315
+    name: tms_fwd_client_addr_comps
+    type: TEXT
+  - id: sc_dw_shipment_header_316
+    name: tms_fwd_client_addr_country
+    type: TEXT
+  - id: sc_dw_shipment_header_317
+    name: tms_height
+    type: DOUBLE
+  - id: sc_dw_shipment_header_318
+    name: tms_integ_file_name
+    type: TEXT
+  - id: sc_dw_shipment_header_319
+    name: tms_is_changed_after_planning
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_320
+    name: tms_is_combined
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_321
+    name: tms_last_rr_distance_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_322
+    name: tms_last_rr_quantity1_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_323
+    name: tms_last_rr_quantity2_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_324
+    name: tms_last_rr_spaces_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_325
+    name: tms_last_rr_volume_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_326
+    name: tms_last_rr_weight_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_327
+    name: tms_leg_sequence_no
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_328
+    name: tms_length
+    type: DOUBLE
+  - id: sc_dw_shipment_header_329
+    name: tms_linear_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_330
+    name: tms_load_reference
+    type: TEXT
+  - id: sc_dw_shipment_header_331
+    name: tms_load_sequence
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_332
+    name: tms_location_basis
+    type: TEXT
+  - id: sc_dw_shipment_header_333
+    name: tms_lock_shipment_structure
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_334
+    name: tms_manually_cancelled_appt
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_335
+    name: tms_manual_dispatch
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_336
+    name: tms_master_bill_of_lading
+    type: TEXT
+  - id: sc_dw_shipment_header_337
+    name: tms_menlo_load_number
+    type: TEXT
+  - id: sc_dw_shipment_header_338
+    name: tms_mode
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_339
+    name: tms_offnw_dlv_carr_contact
+    type: TEXT
+  - id: sc_dw_shipment_header_340
+    name: tms_offnw_pkup_carr_contact
+    type: TEXT
+  - id: sc_dw_shipment_header_341
+    name: tms_operating_price_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_342
+    name: tms_operating_price_uom
+    type: TEXT
+  - id: sc_dw_shipment_header_343
+    name: tms_order_origin_state
+    type: TEXT
+  - id: sc_dw_shipment_header_344
+    name: tms_order_type_code
+    type: TEXT
+  - id: sc_dw_shipment_header_345
+    name: tms_payment_option
+    type: TEXT
+  - id: sc_dw_shipment_header_346
+    name: tms_pickup_attempts
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_347
+    name: tms_pickup_instruction
+    type: TEXT
+  - id: sc_dw_shipment_header_348
+    name: tms_pickup_number
+    type: TEXT
+  - id: sc_dw_shipment_header_349
+    name: tms_pickup_sequence
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_350
+    name: tms_planned_delivery_end
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_351
+    name: tms_planned_delivery_start
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_352
+    name: tms_planned_pickup_end
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_353
+    name: tms_planned_pickup_start
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_354
+    name: tms_planning_group_id
+    type: TEXT
+  - id: sc_dw_shipment_header_355
+    name: tms_plan_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_356
+    name: tms_plan_id
+    type: TEXT
+  - id: sc_dw_shipment_header_357
+    name: tms_plan_status
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_358
+    name: tms_pool_priority
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_359
+    name: tms_pool_priority_level
+    type: TEXT
+  - id: sc_dw_shipment_header_360
+    name: tms_price_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_361
+    name: tms_price_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_362
+    name: tms_rcv_client_addr_comp1
+    type: TEXT
+  - id: sc_dw_shipment_header_363
+    name: tms_rcv_client_addr_comp2
+    type: TEXT
+  - id: sc_dw_shipment_header_364
+    name: tms_rcv_client_addr_comps
+    type: TEXT
+  - id: sc_dw_shipment_header_365
+    name: tms_rcv_client_addr_country
+    type: TEXT
+  - id: sc_dw_shipment_header_366
+    name: tms_ready_for_delivery_time
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_367
+    name: tms_ready_for_pickup_time
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_368
+    name: tms_received_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_369
+    name: tms_receiving_slip_number
+    type: TEXT
+  - id: sc_dw_shipment_header_370
+    name: tms_request_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_371
+    name: tms_return_shipment
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_372
+    name: tms_shipment_number_purpose
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_373
+    name: tms_shipment_received_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_374
+    name: tms_shipment_template_type
+    type: TEXT
+  - id: sc_dw_shipment_header_375
+    name: tms_shipment_type
+    type: TEXT
+  - id: sc_dw_shipment_header_376
+    name: tms_ship_distribution_code
+    type: TEXT
+  - id: sc_dw_shipment_header_377
+    name: tms_ship_from_site_group
+    type: TEXT
+  - id: sc_dw_shipment_header_378
+    name: tms_ship_from_site_integ_ref
+    type: TEXT
+  - id: sc_dw_shipment_header_379
+    name: tms_ship_to_site_group
+    type: TEXT
+  - id: sc_dw_shipment_header_380
+    name: tms_ship_to_site_integ_ref
+    type: TEXT
+  - id: sc_dw_shipment_header_381
+    name: tms_ship_with_group_id
+    type: TEXT
+  - id: sc_dw_shipment_header_382
+    name: tms_should_skip_mvmt_gen
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_383
+    name: tms_status
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_384
+    name: tms_std_carrier_alpha_code
+    type: TEXT
+  - id: sc_dw_shipment_header_385
+    name: tms_sys_account_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_386
+    name: tms_sys_carrier_service_lvl_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_387
+    name: tms_sys_controlling_site_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_388
+    name: tms_sys_conv_shipt_tpl_cfg_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_389
+    name: tms_sys_distance_plcy_ovr_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_390
+    name: tms_sys_distance_policy_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_391
+    name: tms_sys_dlv_carr_contact_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_392
+    name: tms_sys_followup_shipment_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_393
+    name: tms_sys_fwd_client_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_394
+    name: tms_sys_itinerary_route_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_395
+    name: tms_sys_lead_logistics_prov_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_396
+    name: tms_sys_pkup_carr_contact_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_397
+    name: tms_sys_port_of_discharge_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_398
+    name: tms_sys_port_of_loading_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_399
+    name: tms_sys_rcv_client_org_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_400
+    name: tms_sys_return_shipment_lin_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_401
+    name: tms_sys_shipment_tpl_cfg_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_402
+    name: tms_sys_static_route_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_403
+    name: tms_tcn_number
+    type: TEXT
+  - id: sc_dw_shipment_header_404
+    name: tms_temperature
+    type: TEXT
+  - id: sc_dw_shipment_header_405
+    name: tms_terms_accepted_by
+    type: TEXT
+  - id: sc_dw_shipment_header_406
+    name: tms_total_spaces
+    type: DOUBLE
+  - id: sc_dw_shipment_header_407
+    name: tms_to_be_hard_deleted
+    type: DECIMAL(1,0)
+  - id: sc_dw_shipment_header_408
+    name: tms_track_action_name
+    type: TEXT
+  - id: sc_dw_shipment_header_409
+    name: tms_trans_service_type
+    type: TEXT
+  - id: sc_dw_shipment_header_410
+    name: tms_trasaction_opr_cost_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_411
+    name: tms_trasaction_opr_cost_uom
+    type: TEXT
+  - id: sc_dw_shipment_header_412
+    name: tms_units
+    type: TEXT
+  - id: sc_dw_shipment_header_413
+    name: tms_unload_sequence
+    type: DECIMAL(9,0)
+  - id: sc_dw_shipment_header_414
+    name: tms_uuid
+    type: TEXT
+  - id: sc_dw_shipment_header_415
+    name: vehicle_no
+    type: TEXT
+  - id: sc_dw_shipment_header_416
+    name: tms_whse_release_date
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_417
+    name: tms_width
+    type: DOUBLE
+  - id: sc_dw_shipment_header_418
+    name: total_shipped_quantity_amount
+    type: DOUBLE
+  - id: sc_dw_shipment_header_419
+    name: total_shipped_quantity_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_shipment_header_420
+    name: TMS_TRANSPORTATION_MODE
+    type: TEXT
+  - id: sc_dw_shipment_header_421
+    name: inco_terms_enum
+    type: TEXT
+  - id: sc_dw_shipment_header_422
+    name: tms_total_half_spaces
+    type: DOUBLE
+  - id: sc_dw_shipment_header_423
+    name: tms_sys_product_group_level_id
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_424
+    name: oms_ext_ship_from_site_name
+    type: TEXT
+  - id: sc_dw_shipment_header_425
+    name: oms_ext_ship_to_site_name
+    type: TEXT
+  - id: sc_dw_shipment_header_426
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_427
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_shipment_header_428
+    name: PADF_NUM_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_429
+    name: PADF_NUM_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_430
+    name: PADF_NUM_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_431
+    name: PADF_NUM_FIELD4
+    type: DOUBLE
+  - id: sc_dw_shipment_header_432
+    name: PADF_NUM_FIELD5
+    type: DOUBLE
+  - id: sc_dw_shipment_header_433
+    name: PADF_NUM_FIELD6
+    type: DOUBLE
+  - id: sc_dw_shipment_header_434
+    name: PADF_STR_FIELD1
+    type: TEXT
+  - id: sc_dw_shipment_header_435
+    name: PADF_STR_FIELD2
+    type: TEXT
+  - id: sc_dw_shipment_header_436
+    name: PADF_STR_FIELD3
+    type: TEXT
+  - id: sc_dw_shipment_header_437
+    name: PADF_STR_FIELD4
+    type: TEXT
+  - id: sc_dw_shipment_header_438
+    name: PADF_STR_FIELD5
+    type: TEXT
+  - id: sc_dw_shipment_header_439
+    name: PADF_STR_FIELD6
+    type: TEXT
+  - id: sc_dw_shipment_header_440
+    name: PADF_STR_FIELD7
+    type: TEXT
+  - id: sc_dw_shipment_header_441
+    name: PADF_STR_FIELD8
+    type: TEXT
+  - id: sc_dw_shipment_header_442
+    name: PADF_STR_FIELD9
+    type: TEXT
+  - id: sc_dw_shipment_header_443
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_dw_shipment_header_444
+    name: TMS_DIRECTION
+    type: VARCHAR(256)

@@ -1,0 +1,45 @@
+id: support_dw_scc_asset_category
+kind: support
+name: dw_scc_asset_category
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_asset_category_0
+    name: SYS_ASSET_CATEGORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_asset_category_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_asset_category_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_asset_category_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_asset_category_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_asset_category_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_asset_category_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_asset_category_7
+    name: ASSET_CATEGORY_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_asset_category_8
+    name: ASSET_CATEGORY_DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_dw_scc_asset_category_9
+    name: ACTIVE
+    type: TINYINT(4)
+  - id: sc_dw_scc_asset_category_10
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_asset_category_11
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_asset_category_12
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,54 @@
+id: support_dw_scc_attrib_schema_map
+kind: support
+name: dw_scc_attrib_schema_map
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_attrib_schema_map_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attrib_schema_map_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attrib_schema_map_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attrib_schema_map_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attrib_schema_map_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_attrib_schema_map_5
+    name: MODEL_INSTANCE_DISPLAY
+    type: VARCHAR(400)
+  - id: sc_dw_scc_attrib_schema_map_6
+    name: MODEL_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attrib_schema_map_7
+    name: MODEL_INSTANCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attrib_schema_map_8
+    name: MODEL_LEVEL
+    type: VARCHAR(256)
+  - id: sc_dw_scc_attrib_schema_map_9
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_attrib_schema_map_10
+    name: SYS_ATTRIBUTE_SCHEMA_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attrib_schema_map_11
+    name: SYS_ATTRIB_SCHEMA_MAP_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attrib_schema_map_12
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attrib_schema_map_13
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_attrib_schema_map_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_attrib_schema_map_15
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

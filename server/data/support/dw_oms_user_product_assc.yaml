@@ -1,0 +1,36 @@
+id: support_dw_oms_user_product_assc
+kind: support
+name: dw_oms_user_product_assc
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_user_product_assc_0
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_user_product_assc_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_user_product_assc_2
+    name: MODEL_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_oms_user_product_assc_3
+    name: MODEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_user_product_assc_4
+    name: MODEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_oms_user_product_assc_5
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_user_product_assc_6
+    name: SYS_USER_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_user_product_assc_7
+    name: SYS_USER_PRODUCT_ASSC_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_user_product_assc_8
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_user_product_assc_9
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

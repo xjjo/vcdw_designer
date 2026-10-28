@@ -1,0 +1,42 @@
+id: support_dw_attribute
+kind: support
+name: dw_attribute
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_attribute_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_attribute_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_attribute_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_attribute_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_attribute_4
+    name: NAME
+    type: VARCHAR(128)
+  - id: sc_dw_attribute_5
+    name: OWNER_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_attribute_6
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_attribute_7
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_attribute_8
+    name: VALUE
+    type: VARCHAR(4000)
+  - id: sc_dw_attribute_9
+    name: SYS_ATTRIBUTE_ID
+    type: BIGINT(20)
+  - id: sc_dw_attribute_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_attribute_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

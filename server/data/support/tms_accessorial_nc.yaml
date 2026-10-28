@@ -1,0 +1,69 @@
+id: support_tms_accessorial_nc
+kind: support
+name: tms_accessorial_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_accessorial_nc_0
+    name: ACCESSORIAL_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_tms_accessorial_nc_1
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_tms_accessorial_nc_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_tms_accessorial_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_tms_accessorial_nc_4
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_tms_accessorial_nc_5
+    name: EDICODE
+    type: VARCHAR(3)
+  - id: sc_tms_accessorial_nc_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_accessorial_nc_7
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_accessorial_nc_8
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_tms_accessorial_nc_9
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_accessorial_nc_10
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_accessorial_nc_11
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_accessorial_nc_12
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_tms_accessorial_nc_13
+    name: ORG_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_tms_accessorial_nc_14
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_tms_accessorial_nc_15
+    name: SERVICE_OFFERING
+    type: DECIMAL(1,0)
+  - id: sc_tms_accessorial_nc_16
+    name: SYS_ACCESSORIAL_ID
+    type: BIGINT(20)
+  - id: sc_tms_accessorial_nc_17
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_tms_accessorial_nc_18
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_tms_accessorial_nc_19
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_accessorial_nc_20
+    name: RECONCILED
+    type: TINYINT(1)

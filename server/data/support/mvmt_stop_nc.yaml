@@ -1,0 +1,177 @@
+id: support_mvmt_stop_nc
+kind: support
+name: mvmt_stop_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_mvmt_stop_nc_0
+    name: sys_mvmt_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_1
+    name: sys_mvmt_stop_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_2
+    name: trans_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_3
+    name: spt_name
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_4
+    name: spt_version
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_5
+    name: level_creation_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_6
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_7
+    name: mvmt_stop_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_8
+    name: stop_seq_no
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_9
+    name: notes
+    type: VARCHAR(512)
+  - id: sc_mvmt_stop_nc_10
+    name: rate_stop_number
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_11
+    name: target_arrival_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_12
+    name: estimated_arrival_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_13
+    name: eta_reason
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_nc_14
+    name: actual_arrival_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_15
+    name: actual_departure_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_16
+    name: arrival_date_range_start
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_17
+    name: arrival_date_range_end
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_18
+    name: latest_planned_departure_date
+    type: DATETIME(6)
+  - id: sc_mvmt_stop_nc_19
+    name: planned_fixed_time
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_20
+    name: planned_var_time
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_21
+    name: distance_to_stop
+    type: DOUBLE
+  - id: sc_mvmt_stop_nc_22
+    name: time_to_stop
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_23
+    name: total_non_work_time
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_24
+    name: state
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_25
+    name: mvmt_no
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_26
+    name: site_name
+    type: VARCHAR(256)
+  - id: sc_mvmt_stop_nc_27
+    name: site_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_28
+    name: site_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_29
+    name: creation_org_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_30
+    name: addr_country
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_31
+    name: addr_comp1
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_32
+    name: addr_comp2
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_33
+    name: addr_comps
+    type: VARCHAR(512)
+  - id: sc_mvmt_stop_nc_34
+    name: sys_creation_template_id
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_35
+    name: tms_cum_distance_to_stop
+    type: DOUBLE
+  - id: sc_mvmt_stop_nc_36
+    name: tms_cum_time_to_stop
+    type: BIGINT(20)
+  - id: sc_mvmt_stop_nc_37
+    name: tms_discounted
+    type: DECIMAL(1,0)
+  - id: sc_mvmt_stop_nc_38
+    name: tms_notes
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_39
+    name: tms_stop_cage
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_40
+    name: tms_stop_contact_phone
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_41
+    name: tms_stop_contact_phone_qual
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_nc_42
+    name: tms_stop_dodaac
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_43
+    name: tms_stop_mapac
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_44
+    name: tms_stop_off_splc
+    type: DECIMAL(9,0)
+  - id: sc_mvmt_stop_nc_45
+    name: tms_stop_quantity1
+    type: DOUBLE
+  - id: sc_mvmt_stop_nc_46
+    name: tms_stop_quantity1_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_nc_47
+    name: tms_stop_quantity2
+    type: DOUBLE
+  - id: sc_mvmt_stop_nc_48
+    name: tms_stop_quantity2_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_nc_49
+    name: tms_stop_reason
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_50
+    name: tms_stop_type
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_51
+    name: tms_stop_volume
+    type: DOUBLE
+  - id: sc_mvmt_stop_nc_52
+    name: tms_stop_volume_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_nc_53
+    name: tms_stop_weight
+    type: DOUBLE
+  - id: sc_mvmt_stop_nc_54
+    name: tms_stop_weight_uom
+    type: DECIMAL(6,0)
+  - id: sc_mvmt_stop_nc_55
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_mvmt_stop_nc_56
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,48 @@
+id: support_dw_attachment
+kind: support
+name: dw_attachment
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_attachment_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_attachment_1
+    name: CATEGORY
+    type: VARCHAR(256)
+  - id: sc_dw_attachment_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_attachment_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_attachment_4
+    name: FILE_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_attachment_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_attachment_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_attachment_7
+    name: OWNER_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_attachment_8
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_attachment_9
+    name: SYS_ATTACHMENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_attachment_10
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_attachment_11
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_attachment_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_attachment_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,42 @@
+id: support_oms_scorecard_measures_nc
+kind: support
+name: oms_scorecard_measures_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_oms_scorecard_measures_nc_0
+    name: SYS_SCORECARD_MEASURES_ID
+    type: BIGINT(20)
+  - id: sc_oms_scorecard_measures_nc_1
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_oms_scorecard_measures_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_oms_scorecard_measures_nc_3
+    name: SYS_SCORECARD_ENTRY_ID
+    type: BIGINT(20)
+  - id: sc_oms_scorecard_measures_nc_4
+    name: KPI_NAME
+    type: VARCHAR(128)
+  - id: sc_oms_scorecard_measures_nc_5
+    name: SCORE
+    type: DOUBLE
+  - id: sc_oms_scorecard_measures_nc_6
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_oms_scorecard_measures_nc_7
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_oms_scorecard_measures_nc_8
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_oms_scorecard_measures_nc_9
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_oms_scorecard_measures_nc_10
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_oms_scorecard_measures_nc_11
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

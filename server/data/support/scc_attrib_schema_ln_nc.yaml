@@ -1,0 +1,51 @@
+id: support_scc_attrib_schema_ln_nc
+kind: support
+name: scc_attrib_schema_ln_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_attrib_schema_ln_nc_0
+    name: ATTRIBUTE_CONFIG
+    type: LONGTEXT
+  - id: sc_scc_attrib_schema_ln_nc_1
+    name: ATTRIBUTE_DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_ln_nc_2
+    name: ATTRIBUTE_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_ln_nc_3
+    name: DATA_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_attrib_schema_ln_nc_4
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attrib_schema_ln_nc_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attrib_schema_ln_nc_6
+    name: MULTI_VALUED
+    type: DECIMAL(1,0)
+  - id: sc_scc_attrib_schema_ln_nc_7
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_ln_nc_8
+    name: SYS_ATTRIB_SCHEMA_ID
+    type: BIGINT(20)
+  - id: sc_scc_attrib_schema_ln_nc_9
+    name: SYS_ATTRIB_SCHEMA_LN_ID
+    type: BIGINT(20)
+  - id: sc_scc_attrib_schema_ln_nc_10
+    name: SYS_OWNING_ENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_attrib_schema_ln_nc_11
+    name: DW_COL
+    type: DECIMAL(9,0)
+  - id: sc_scc_attrib_schema_ln_nc_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_attrib_schema_ln_nc_13
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_schema_ln_nc_14
+    name: RECONCILED
+    type: TINYINT(1)

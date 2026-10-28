@@ -1,0 +1,48 @@
+id: support_dw_scc_prod_ord_dsched_asso
+kind: support
+name: dw_scc_prod_ord_dsched_asso
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_prod_ord_dsched_asso_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_prod_ord_dsched_asso_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_ord_dsched_asso_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_prod_ord_dsched_asso_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_ord_dsched_asso_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_prod_ord_dsched_asso_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_ord_dsched_asso_6
+    name: MFG_ACTUAL_ALLOCATED_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_prod_ord_dsched_asso_7
+    name: MFG_PLANNED_ALLOCATED_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_prod_ord_dsched_asso_8
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_prod_ord_dsched_asso_9
+    name: SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_ord_dsched_asso_10
+    name: SYS_PROD_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_ord_dsched_asso_11
+    name: SYS_PROD_ORD_DSCHED_ASSO_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_prod_ord_dsched_asso_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_prod_ord_dsched_asso_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

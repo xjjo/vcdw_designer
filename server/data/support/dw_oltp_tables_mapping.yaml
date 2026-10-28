@@ -1,0 +1,12 @@
+id: support_dw_oltp_tables_mapping
+kind: support
+name: dw_oltp_tables_mapping
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oltp_tables_mapping_0
+    name: OLTP_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_oltp_tables_mapping_1
+    name: DW_TABLE
+    type: VARCHAR(64)

@@ -1,0 +1,18 @@
+id: support_dw_table_and_dimension_mapping
+kind: support
+name: dw_table_and_dimension_mapping
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_table_and_dimension_mapping_0
+    name: DIMENSION_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_table_and_dimension_mapping_1
+    name: DW_TABLE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_table_and_dimension_mapping_2
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_table_and_dimension_mapping_3
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

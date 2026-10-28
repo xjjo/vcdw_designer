@@ -1,0 +1,57 @@
+id: support_site_rsrc_nc
+kind: support
+name: site_rsrc_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_site_rsrc_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_site_rsrc_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_site_rsrc_nc_2
+    name: DESCRIPTION
+    type: VARCHAR(255)
+  - id: sc_site_rsrc_nc_3
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_site_rsrc_nc_4
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_site_rsrc_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_site_rsrc_nc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_site_rsrc_nc_7
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_site_rsrc_nc_8
+    name: PARENT_SITE_RSRC_NAME
+    type: VARCHAR(164)
+  - id: sc_site_rsrc_nc_9
+    name: SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_site_rsrc_nc_10
+    name: SITE_RSRC_NAME
+    type: VARCHAR(164)
+  - id: sc_site_rsrc_nc_11
+    name: SYS_PARENT_SITE_RSRC_ID
+    type: BIGINT(20)
+  - id: sc_site_rsrc_nc_12
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_site_rsrc_nc_13
+    name: SYS_SITE_RSRC_ID
+    type: BIGINT(20)
+  - id: sc_site_rsrc_nc_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_site_rsrc_nc_15
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_site_rsrc_nc_16
+    name: RECONCILED
+    type: TINYINT(1)

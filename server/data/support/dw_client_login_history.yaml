@@ -1,0 +1,57 @@
+id: support_dw_client_login_history
+kind: support
+name: dw_client_login_history
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_client_login_history_0
+    name: CLIENT_IP
+    type: VARCHAR(1024)
+  - id: sc_dw_client_login_history_1
+    name: ID
+    type: BIGINT(20)
+  - id: sc_dw_client_login_history_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_client_login_history_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_client_login_history_4
+    name: LOGIN_DATE
+    type: DATETIME(6)
+  - id: sc_dw_client_login_history_5
+    name: LOGOUT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_client_login_history_6
+    name: MESSAGE
+    type: TEXT
+  - id: sc_dw_client_login_history_7
+    name: SERVER_IP
+    type: VARCHAR(64)
+  - id: sc_dw_client_login_history_8
+    name: SESSION_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_client_login_history_9
+    name: STATUS
+    type: VARCHAR(64)
+  - id: sc_dw_client_login_history_10
+    name: SYS_ALIAS_USER_ID
+    type: BIGINT(20)
+  - id: sc_dw_client_login_history_11
+    name: SYS_CLIENT_HISTORY_LOGIN_ID
+    type: BIGINT(20)
+  - id: sc_dw_client_login_history_12
+    name: SYS_ROLE_ID
+    type: BIGINT(20)
+  - id: sc_dw_client_login_history_13
+    name: SYS_USER_ID
+    type: BIGINT(20)
+  - id: sc_dw_client_login_history_14
+    name: TOMCAT_SESSION_ID
+    type: VARCHAR(128)
+  - id: sc_dw_client_login_history_15
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_client_login_history_16
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

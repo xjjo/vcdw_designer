@@ -1,0 +1,66 @@
+id: support_dw_scc_invoice_fact_weekly
+kind: support
+name: dw_scc_invoice_fact_weekly
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_invoice_fact_weekly_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_invoice_fact_weekly_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_invoice_fact_weekly_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_invoice_fact_weekly_3
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_invoice_fact_weekly_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_invoice_fact_weekly_5
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_invoice_fact_weekly_6
+    name: SYS_INVOICE_FACT_WEEKLY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_invoice_fact_weekly_7
+    name: QUANTITY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_scc_invoice_fact_weekly_8
+    name: REPORT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_invoice_fact_weekly_9
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_invoice_fact_weekly_10
+    name: SYS_BUYING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_invoice_fact_weekly_11
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_invoice_fact_weekly_12
+    name: SYS_SELLING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_invoice_fact_weekly_13
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_invoice_fact_weekly_14
+    name: WEEKLY_HOLD_INVOICE_CNT
+    type: DOUBLE
+  - id: sc_dw_scc_invoice_fact_weekly_15
+    name: WEEKLY_INVOICE_CNT
+    type: DOUBLE
+  - id: sc_dw_scc_invoice_fact_weekly_16
+    name: WEEKLY_INV_TOTAL_DAYS_HELD
+    type: DOUBLE
+  - id: sc_dw_scc_invoice_fact_weekly_17
+    name: WKLY_INV_FIRST_TIME_MATCH_CNT
+    type: DOUBLE
+  - id: sc_dw_scc_invoice_fact_weekly_18
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_invoice_fact_weekly_19
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

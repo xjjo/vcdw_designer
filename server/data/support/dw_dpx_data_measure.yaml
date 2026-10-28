@@ -1,0 +1,114 @@
+id: support_dw_dpx_data_measure
+kind: support
+name: dw_dpx_data_measure
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_dpx_data_measure_0
+    name: SYS_DATA_MEASURE_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_1
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_2
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_3
+    name: SYS_PARTNER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_4
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_5
+    name: SYS_PRODUCT_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_6
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_7
+    name: SYS_SITE_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_8
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_9
+    name: SYS_CUST_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_10
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_11
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_12
+    name: SYS_DM_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_13
+    name: EXTRA_ATTRIBUTES
+    type: VARCHAR(4000)
+  - id: sc_dw_dpx_data_measure_14
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_dpx_data_measure_15
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_dpx_data_measure_16
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_dw_dpx_data_measure_17
+    name: DM_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_dpx_data_measure_18
+    name: DM_SUB_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_dpx_data_measure_19
+    name: DM_DATE
+    type: DATETIME(6)
+  - id: sc_dw_dpx_data_measure_20
+    name: QUANTITY_UOM
+    type: BIGINT(20)
+  - id: sc_dw_dpx_data_measure_21
+    name: QUANTITY
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_22
+    name: OVERRIDE1
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_23
+    name: OVERRIDE2
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_24
+    name: BASELINE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_25
+    name: PROMOTIONAL_ADJUST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_26
+    name: SEASONAL_ADJUST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_27
+    name: CURRENCY_VALUE
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_28
+    name: OVERRIDE1_CURRENCY_VALUE
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_29
+    name: OVERRIDE2_CURRENCY_VALUE
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_30
+    name: BASELINE_CUR_VAL
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_31
+    name: PROMOTIONAL_ADJUST_CUR_VAL
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_32
+    name: SEASONAL_ADJUST_CUR_VAL
+    type: DOUBLE
+  - id: sc_dw_dpx_data_measure_33
+    name: DM_NUMBER
+    type: VARCHAR(256)
+  - id: sc_dw_dpx_data_measure_34
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_dpx_data_measure_35
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

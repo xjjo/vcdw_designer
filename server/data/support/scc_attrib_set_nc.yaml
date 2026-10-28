@@ -1,0 +1,54 @@
+id: support_scc_attrib_set_nc
+kind: support
+name: scc_attrib_set_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_attrib_set_nc_0
+    name: ASSOCIATED_MODEL_DISPLAY
+    type: VARCHAR(128)
+  - id: sc_scc_attrib_set_nc_1
+    name: ASSOCIATED_MODEL_ID
+    type: BIGINT(20)
+  - id: sc_scc_attrib_set_nc_2
+    name: ASSOCIATED_MODEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_set_nc_3
+    name: ATTRIBUTE_SEQUENCE
+    type: DECIMAL(9,0)
+  - id: sc_scc_attrib_set_nc_4
+    name: ATTRIBUTE_VALUE
+    type: VARCHAR(4000)
+  - id: sc_scc_attrib_set_nc_5
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attrib_set_nc_6
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_set_nc_7
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attrib_set_nc_8
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_set_nc_9
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attrib_set_nc_10
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_set_nc_11
+    name: SYS_ATTRIB_SCHEMA_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_attrib_set_nc_12
+    name: SYS_ATTRIB_SET_ID
+    type: BIGINT(20)
+  - id: sc_scc_attrib_set_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_attrib_set_nc_14
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_attrib_set_nc_15
+    name: RECONCILED
+    type: TINYINT(1)

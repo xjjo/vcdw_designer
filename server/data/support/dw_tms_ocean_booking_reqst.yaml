@@ -1,0 +1,105 @@
+id: support_dw_tms_ocean_booking_reqst
+kind: support
+name: dw_tms_ocean_booking_reqst
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_ocean_booking_reqst_0
+    name: BILL_OF_LADING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_ocean_booking_reqst_1
+    name: CARGO_READY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_ocean_booking_reqst_2
+    name: CARRIER_BOOKING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_ocean_booking_reqst_3
+    name: CARRIER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_4
+    name: CONSIGNEE_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_5
+    name: CONTRACT_HOLDER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_6
+    name: IS_SPLIT
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_ocean_booking_reqst_7
+    name: MOVE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_tms_ocean_booking_reqst_8
+    name: NUMBER_OF_CONTAINERS
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_ocean_booking_reqst_9
+    name: PREBOOKED
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_ocean_booking_reqst_10
+    name: REQUEST_NUMBER
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_11
+    name: RESPONSE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_ocean_booking_reqst_12
+    name: REQUEST_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_ocean_booking_reqst_13
+    name: SHIPMENT_ID
+    type: VARCHAR(64)
+  - id: sc_dw_tms_ocean_booking_reqst_14
+    name: SHIPPER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_15
+    name: SPLIT_BILL_OF_LADING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_ocean_booking_reqst_16
+    name: SPLIT_BOOKING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_tms_ocean_booking_reqst_17
+    name: SPLIT_REQUEST_NUMBER
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_18
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_tms_ocean_booking_reqst_19
+    name: SYS_CLIENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_20
+    name: SYS_OCEAN_BOOKING_REQST_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_21
+    name: SYS_TCO_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_22
+    name: VESSEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_tms_ocean_booking_reqst_23
+    name: VOYAGE_NUMBER
+    type: VARCHAR(128)
+  - id: sc_dw_tms_ocean_booking_reqst_24
+    name: FORWARDER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_25
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_ocean_booking_reqst_26
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_ocean_booking_reqst_27
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_tms_ocean_booking_reqst_28
+    name: SYS_LLPORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_29
+    name: SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_30
+    name: SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_tms_ocean_booking_reqst_31
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_ocean_booking_reqst_32
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

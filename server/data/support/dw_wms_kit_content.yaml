@@ -1,0 +1,48 @@
+id: support_dw_wms_kit_content
+kind: support
+name: dw_wms_kit_content
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_wms_kit_content_0
+    name: ACTIVE
+    type: TINYINT(1)
+  - id: sc_dw_wms_kit_content_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_kit_content_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_kit_content_3
+    name: SYS_KIT_CONTENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_kit_content_4
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_kit_content_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_kit_content_6
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_wms_kit_content_7
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wms_kit_content_8
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_kit_content_9
+    name: SYS_BILL_OF_MATERIALS_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_kit_content_10
+    name: KIT_CONTENT_NO
+    type: VARCHAR(64)
+  - id: sc_dw_wms_kit_content_11
+    name: SYS_WORK_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_wms_kit_content_12
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wms_kit_content_13
+    name: ES_LMD
+    type: DATETIME(6)

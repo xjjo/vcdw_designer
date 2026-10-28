@@ -1,0 +1,54 @@
+id: support_dw_scc_xentity_relationship
+kind: support
+name: dw_scc_xentity_relationship
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_xentity_relationship_0
+    name: ACTIVE
+    type: TINYINT(1)
+  - id: sc_dw_scc_xentity_relationship_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_xentity_relationship_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_xentity_relationship_3
+    name: FROM_AGGREGATOR_ID
+    type: VARCHAR(256)
+  - id: sc_dw_scc_xentity_relationship_4
+    name: FROM_XENTITY_ID
+    type: VARCHAR(256)
+  - id: sc_dw_scc_xentity_relationship_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_xentity_relationship_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_xentity_relationship_7
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_xentity_relationship_8
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_xentity_relationship_9
+    name: SYS_FROM_XENTITY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_xentity_relationship_10
+    name: SYS_TO_XENTITY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_xentity_relationship_11
+    name: SYS_XENTITY_RELATIONSHIP_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_xentity_relationship_12
+    name: TO_AGGREGATOR_ID
+    type: VARCHAR(256)
+  - id: sc_dw_scc_xentity_relationship_13
+    name: TO_XENTITY_ID
+    type: VARCHAR(256)
+  - id: sc_dw_scc_xentity_relationship_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_xentity_relationship_15
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

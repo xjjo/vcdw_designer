@@ -1,39 +1,63 @@
 import { useEffect, useRef, useState } from 'react';
-import { useStore } from './store';
-import type { ViewId } from './store';
+import { useStore, VIEW_TITLES } from './store';
+import type { Tab, ViewId } from './store';
 import { checkHealth, saveModel } from './api';
 import { downloadFile } from './ui';
 import type { DesignModel } from '@shared/types';
 import Dashboard from './pages/Dashboard';
-import EntityList from './pages/EntityList';
+import EntityCatalog from './pages/EntityCatalog';
 import EntityEditor from './pages/EntityEditor';
-import CanvasView from './pages/CanvasView';
 import AuditProfiles from './pages/AuditProfiles';
 import JsonExplorer from './pages/JsonExplorer';
+import EnumerationsCatalog from './pages/EnumerationsCatalog';
+import SupportTablesCatalog from './pages/SupportTablesCatalog';
+import WorkingArea from './pages/WorkingArea';
+import TrainView from './pages/TrainView';
 
 const NAV: { id: ViewId; label: string; icon: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '▦' },
+  { id: 'working', label: 'Working Area', icon: '◳' },
   { id: 'enumerations', label: 'Enumerations', icon: '#' },
   { id: 'dimensions', label: 'Dimensions', icon: '◆' },
   { id: 'facts', label: 'Facts', icon: '⚡' },
-  { id: 'canvas', label: 'Star-Schema Canvas', icon: '🕸' },
+  { id: 'support', label: 'Support Tables', icon: '▤' },
   { id: 'audit', label: 'Audit Profiles', icon: '🛡' },
+  { id: 'train', label: 'Train / Sources', icon: '⟳' },
   { id: 'json', label: 'JSON & SQL', icon: '{ }' },
 ];
 
+function tabIcon(tab: Tab): string {
+  if (tab.kind === 'entity') return '▤';
+  return NAV.find((n) => n.id === tab.kind)?.icon ?? '•';
+}
+
 export default function App() {
-  const { model, view, selectedEntityId, setView, select, loadSeed, importModel } = useStore();
+  const {
+    model,
+    tabs,
+    activeTabId,
+    openView,
+    openEntity,
+    closeTab,
+    activateTab,
+    getEntity,
+    loadSeed,
+    importModel,
+    catalogCounts,
+    refreshCatalogCounts,
+  } = useStore();
   const [online, setOnline] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     checkHealth().then(setOnline);
-  }, []);
+    void refreshCatalogCounts();
+  }, [refreshCatalogCounts]);
 
-  const counts = {
-    enumerations: model.enumerations.length,
-    dimensions: model.dimensions.length,
-    facts: model.facts.length,
+  const counts: Record<string, number> = {
+    enumerations: catalogCounts.enumerations,
+    dimensions: catalogCounts.dimensions,
+    facts: catalogCounts.facts,
   };
 
   function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
@@ -44,7 +68,6 @@ export default function App() {
       try {
         const parsed = JSON.parse(String(reader.result)) as DesignModel;
         importModel(parsed);
-        setView('dashboard');
       } catch {
         alert('Invalid JSON file.');
       }
@@ -66,16 +89,45 @@ export default function App() {
     }
   }
 
-  function goEntity(id: string) {
-    select(id);
-    const kind = useStore.getState().getEntity(id)?.kind;
-    if (kind === 'enumeration') setView('enumerations');
-    else if (kind === 'dimension') setView('dimensions');
-    else if (kind === 'fact') setView('facts');
+  const activeTab = tabs.find((t) => t.id === activeTabId) ?? tabs[0];
+
+  function tabTitle(tab: Tab): string {
+    if (tab.kind === 'entity' && tab.entityId) {
+      return getEntity(tab.entityId)?.name ?? tab.title;
+    }
+    return VIEW_TITLES[tab.kind as ViewId] ?? tab.title;
   }
 
-  const showingEditor =
-    (view === 'enumerations' || view === 'dimensions' || view === 'facts') && selectedEntityId;
+  function renderActive() {
+    if (!activeTab) return null;
+    if (activeTab.kind === 'entity' && activeTab.entityId) {
+      const entity = getEntity(activeTab.entityId);
+      if (!entity) return <div className="empty">Entity not found. It may have been deleted.</div>;
+      return <EntityEditor entityId={activeTab.entityId} />;
+    }
+    switch (activeTab.kind) {
+      case 'dashboard':
+        return <Dashboard onOpen={openEntity} />;
+      case 'working':
+        return <WorkingArea />;
+      case 'enumerations':
+        return <EnumerationsCatalog />;
+      case 'dimensions':
+        return <EntityCatalog kind="dimension" />;
+      case 'facts':
+        return <EntityCatalog kind="fact" />;
+      case 'support':
+        return <SupportTablesCatalog />;
+      case 'audit':
+        return <AuditProfiles />;
+      case 'train':
+        return <TrainView />;
+      case 'json':
+        return <JsonExplorer />;
+      default:
+        return null;
+    }
+  }
 
   return (
     <div className="app">
@@ -116,32 +168,61 @@ export default function App() {
             v{model.project.version} · {model.project.targetDatabase}
           </div>
         </div>
-        {NAV.map((n) => (
-          <button
-            key={n.id}
-            className={`nav-item ${view === n.id ? 'active' : ''}`}
-            onClick={() => {
-              select(null);
-              setView(n.id);
-            }}
-          >
-            <span className="ico">{n.icon}</span>
-            {n.label}
-            {n.id in counts && <span className="count">{(counts as Record<string, number>)[n.id]}</span>}
-          </button>
-        ))}
+        {NAV.map((n) => {
+          const active = activeTab?.id === `view:${n.id}`;
+          return (
+            <button
+              key={n.id}
+              className={`nav-item ${active ? 'active' : ''}`}
+              onClick={() => openView(n.id)}
+            >
+              <span className="ico">{n.icon}</span>
+              {n.label}
+              {n.id in counts && <span className="count">{counts[n.id]}</span>}
+            </button>
+          );
+        })}
       </aside>
 
-      <main className="main">
-        {view === 'dashboard' && <Dashboard onOpen={goEntity} />}
-        {view === 'enumerations' && !showingEditor && <EntityList kind="enumeration" />}
-        {view === 'dimensions' && !showingEditor && <EntityList kind="dimension" />}
-        {view === 'facts' && !showingEditor && <EntityList kind="fact" />}
-        {showingEditor && <EntityEditor entityId={selectedEntityId!} />}
-        {view === 'canvas' && <CanvasView />}
-        {view === 'audit' && <AuditProfiles />}
-        {view === 'json' && <JsonExplorer />}
-      </main>
+      <div className="tabbar" role="tablist">
+        {tabs.map((t) => {
+          const active = t.id === activeTab?.id;
+          return (
+            <div
+              key={t.id}
+              role="tab"
+              aria-selected={active}
+              className={`tabchip ${active ? 'active' : ''}`}
+              onClick={() => activateTab(t.id)}
+              onAuxClick={(e) => {
+                if (e.button === 1 && t.closable) {
+                  e.preventDefault();
+                  closeTab(t.id);
+                }
+              }}
+              title={tabTitle(t)}
+            >
+              <span className="tabchip-ico">{tabIcon(t)}</span>
+              <span className="tabchip-label">{tabTitle(t)}</span>
+              {t.closable && (
+                <span
+                  className="tabchip-close"
+                  role="button"
+                  aria-label={`Close ${tabTitle(t)}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    closeTab(t.id);
+                  }}
+                >
+                  ×
+                </span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      <main className="main">{renderActive()}</main>
     </div>
   );
 }

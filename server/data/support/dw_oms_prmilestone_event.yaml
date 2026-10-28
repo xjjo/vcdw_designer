@@ -1,0 +1,48 @@
+id: support_dw_oms_prmilestone_event
+kind: support
+name: dw_oms_prmilestone_event
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_prmilestone_event_0
+    name: SYS_PRMILESTONE_EVENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_prmilestone_event_1
+    name: SYS_PR_MILESTONE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_prmilestone_event_2
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_oms_prmilestone_event_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_prmilestone_event_4
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_prmilestone_event_5
+    name: EVENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_prmilestone_event_6
+    name: EVENT_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_oms_prmilestone_event_7
+    name: EVENT_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_oms_prmilestone_event_8
+    name: EVENT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_prmilestone_event_9
+    name: SYS_REQUISITION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_prmilestone_event_10
+    name: SYS_MILESTONE_TYPE_REF_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_prmilestone_event_11
+    name: SYS_REQUISITION_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_prmilestone_event_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_prmilestone_event_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,42 @@
+id: support_dw_enum_conversion_factor
+kind: support
+name: dw_enum_conversion_factor
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_enum_conversion_factor_0
+    name: sys_enum_conversion_factor_id
+    type: BIGINT(20)
+  - id: sc_dw_enum_conversion_factor_1
+    name: level_creation_date
+    type: DATETIME(6)
+  - id: sc_dw_enum_conversion_factor_2
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_enum_conversion_factor_3
+    name: sys_enum_conversion_def_id
+    type: BIGINT(20)
+  - id: sc_dw_enum_conversion_factor_4
+    name: enumeration_name
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_factor_5
+    name: measure
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_factor_6
+    name: scope_id
+    type: BIGINT(20)
+  - id: sc_dw_enum_conversion_factor_7
+    name: scope_model_level
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_factor_8
+    name: scope_display
+    type: VARCHAR(64)
+  - id: sc_dw_enum_conversion_factor_9
+    name: factor
+    type: DOUBLE
+  - id: sc_dw_enum_conversion_factor_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_enum_conversion_factor_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

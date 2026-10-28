@@ -1,0 +1,39 @@
+id: support_dw_sync_table_stats
+kind: support
+name: dw_sync_table_stats
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_sync_table_stats_0
+    name: JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_stats_1
+    name: INITIAL_LOAD
+    type: TINYINT(1)
+  - id: sc_dw_sync_table_stats_2
+    name: INTERVAL_KEY
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_stats_3
+    name: CHUNKS_EXECUTED
+    type: TINYINT(1)
+  - id: sc_dw_sync_table_stats_4
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_sync_table_stats_5
+    name: OLTP_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_sync_table_stats_6
+    name: TOTAL_OLTP_ROWS
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_stats_7
+    name: REMAINING_ROWS
+    type: BIGINT(20)
+  - id: sc_dw_sync_table_stats_8
+    name: REMAINING_PERCENTAGE
+    type: VARCHAR(64)
+  - id: sc_dw_sync_table_stats_9
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_sync_table_stats_10
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

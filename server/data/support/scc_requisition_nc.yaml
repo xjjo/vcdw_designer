@@ -1,0 +1,144 @@
+id: support_scc_requisition_nc
+kind: support
+name: scc_requisition_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_requisition_nc_0
+    name: SYS_REQUISITION_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_nc_7
+    name: REQUISITION_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_8
+    name: REQUESTED_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_nc_9
+    name: TOTAL_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_requisition_nc_10
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_nc_11
+    name: CURRENCY
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_nc_12
+    name: SUBMISSION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_nc_13
+    name: APPROVAL_DATE
+    type: DATETIME(6)
+  - id: sc_scc_requisition_nc_14
+    name: REQUESTEDBY
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_15
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_16
+    name: COMMENTS
+    type: VARCHAR(500)
+  - id: sc_scc_requisition_nc_17
+    name: REQUISITION_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_requisition_nc_18
+    name: INTERNATIONAL
+    type: DECIMAL(1,0)
+  - id: sc_scc_requisition_nc_19
+    name: SYS_REQUESTING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_20
+    name: SYS_PURCHASING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_21
+    name: SYS_BILL_TO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_22
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_23
+    name: SYS_CLONED_FROM_REQUISITION_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_24
+    name: SHIP_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_25
+    name: SHIP_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_26
+    name: SYS_FULFILLMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_27
+    name: PENDING_AUTHORIZATION
+    type: DECIMAL(1,0)
+  - id: sc_scc_requisition_nc_28
+    name: SHIP_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_29
+    name: SYS_SHIP_TO_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_30
+    name: SYS_REQUISITION_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_31
+    name: SHIP_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_requisition_nc_32
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_requisition_nc_33
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_requisition_nc_34
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_requisition_nc_35
+    name: REQUISITION_AUX_NUM1
+    type: DOUBLE
+  - id: sc_scc_requisition_nc_36
+    name: REQUISITION_AUX_NUM2
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_37
+    name: REQUISITION_AUX_NUM3
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_38
+    name: REQUISITION_AUX_NUM4
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_39
+    name: REQUISITION_AUX_NUM5
+    type: BIGINT(20)
+  - id: sc_scc_requisition_nc_40
+    name: REQUISITION_AUX_STR1
+    type: VARCHAR(128)
+  - id: sc_scc_requisition_nc_41
+    name: REQUISITION_AUX_STR2
+    type: VARCHAR(128)
+  - id: sc_scc_requisition_nc_42
+    name: REQUISITION_AUX_STR3
+    type: VARCHAR(128)
+  - id: sc_scc_requisition_nc_43
+    name: REQUISITION_AUX_STR4
+    type: VARCHAR(128)
+  - id: sc_scc_requisition_nc_44
+    name: REQUISITION_AUX_STR5
+    type: VARCHAR(128)
+  - id: sc_scc_requisition_nc_45
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

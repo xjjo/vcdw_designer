@@ -1,0 +1,73 @@
+id: enum_mu4gpdao_4
+kind: enumeration
+name: hernan_type
+displayName: Enum Hernan_type
+description: ""
+domain: General
+isReferenceTable: true
+sourceNcTable: enumeration_nc
+enumTypeFilter: CSS.Enum.Type.xjo
+auditProfileId: audit_default
+columns:
+  - id: col_mu4gpdao_5
+    nullable: false
+    name: Hernan_KEY
+    type: BIGINT
+    isPk: true
+    isSk: true
+    autoIncrement: true
+  - id: col_mu4gpdao_6
+    nullable: false
+    name: OLTP_ID
+    type: BIGINT
+    isNaturalKey: true
+    sourceColumn: sys_enum_id
+  - id: col_mu4gpdao_7
+    nullable: false
+    name: BLABLA_NAME
+    type: VARCHAR(256)
+    sourceColumn: enum_entry_name
+  - id: col_mu4gpdao_8
+    nullable: true
+    name: ENUM_ENTRY_VALUE
+    type: DECIMAL(5,0)
+    sourceColumn: enum_entry_value
+  - id: col_mu4gpdao_9
+    nullable: true
+    name: ENT_NAME
+    type: VARCHAR(64)
+    sourceColumn: ent_name
+  - id: col_mu4gpdao_a
+    nullable: false
+    name: DELETED
+    type: TINYINT(1)
+    default: "0"
+    auditRole: deleted
+  - id: col_mu4gpdao_b
+    nullable: false
+    name: DW_CREATED
+    type: DATETIME(6)
+    default: CURRENT_TIMESTAMP
+    auditRole: created
+  - id: col_mu4gpdao_c
+    nullable: false
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+    default: CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    auditRole: modified
+etlConfig:
+  isEnabled: true
+  priority: 5
+ui:
+  x: 12.5
+  y: -64
+lookups: []
+netChange:
+  - id: nc_mu5z5k34_n
+    isPrimary: true
+    oltpTable: source_table
+    ncTable: source_table_nc
+    oltpTableSysId: sys_id
+    oltpTableLmd: last_modified_date
+    alias: ""
+    columns: []

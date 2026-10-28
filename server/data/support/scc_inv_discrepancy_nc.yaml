@@ -1,0 +1,165 @@
+id: support_scc_inv_discrepancy_nc
+kind: support
+name: scc_inv_discrepancy_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_inv_discrepancy_nc_0
+    name: COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_scc_inv_discrepancy_nc_1
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inv_discrepancy_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_3
+    name: CYCLE_COUNTING_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inv_discrepancy_nc_4
+    name: DISCREPANCY_NO
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_5
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inv_discrepancy_nc_6
+    name: EXTERNAL_DOC_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_7
+    name: EXTRA_ATTRIBUTES
+    type: VARCHAR(4000)
+  - id: sc_scc_inv_discrepancy_nc_8
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_inv_discrepancy_nc_9
+    name: EXT_SERIAL_NO
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_10
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inv_discrepancy_nc_11
+    name: HASH_KEY
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_12
+    name: INVENTORY_NO
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_13
+    name: MASTER_DISCREPANCY_NO
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_14
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_15
+    name: ORIGIN
+    type: VARCHAR(256)
+  - id: sc_scc_inv_discrepancy_nc_16
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inv_discrepancy_nc_17
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_scc_inv_discrepancy_nc_18
+    name: QTY_DISCREPANCY
+    type: DECIMAL(65,6)
+  - id: sc_scc_inv_discrepancy_nc_19
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_inv_discrepancy_nc_20
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inv_discrepancy_nc_21
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_22
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_scc_inv_discrepancy_nc_23
+    name: SUBLOCATION
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_24
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_25
+    name: SYS_INV_DISCREPANCY_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_26
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_27
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_28
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_29
+    name: SYS_LOT_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_30
+    name: SYS_LPN_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_31
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_32
+    name: SYS_PERSON_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_33
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_34
+    name: SYS_SERIAL_NO_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_35
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_36
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_37
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_38
+    name: WMS_POSTING_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inv_discrepancy_nc_39
+    name: WMS_SYS_CYCLE_COUNT_ATTEMPT_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_40
+    name: WMS_SYS_KIT_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_41
+    name: WMS_SYS_REJECT_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_42
+    name: WMS_SYS_CYCLE_COUNT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_43
+    name: WMS_SYS_CYCLE_COUNT_ID
+    type: BIGINT(20)
+  - id: sc_scc_inv_discrepancy_nc_44
+    name: WMS_BLIND_CYCLE_COUNTING
+    type: TINYINT(1)
+  - id: sc_scc_inv_discrepancy_nc_45
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inv_discrepancy_nc_46
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_inv_discrepancy_nc_47
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_inv_discrepancy_nc_48
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_inv_discrepancy_nc_49
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_inv_discrepancy_nc_50
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_inv_discrepancy_nc_51
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_inv_discrepancy_nc_52
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

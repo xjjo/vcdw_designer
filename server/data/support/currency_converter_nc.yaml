@@ -1,0 +1,36 @@
+id: support_currency_converter_nc
+kind: support
+name: currency_converter_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_currency_converter_nc_0
+    name: SYS_CURRENCY_CONVERTER_ID
+    type: BIGINT(20)
+  - id: sc_currency_converter_nc_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_currency_converter_nc_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_currency_converter_nc_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_currency_converter_nc_4
+    name: NAME
+    type: VARCHAR(64)
+  - id: sc_currency_converter_nc_5
+    name: API
+    type: VARCHAR(64)
+  - id: sc_currency_converter_nc_6
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_currency_converter_nc_7
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_currency_converter_nc_8
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_currency_converter_nc_9
+    name: RECONCILED
+    type: TINYINT(1)

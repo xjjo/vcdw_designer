@@ -1,0 +1,405 @@
+enumerations:
+  - enumType: TMS.AccessorialType
+    kjb: ""
+    enumeration: accessorial_type
+    yaml: accessorial_type.yaml
+  - enumType: AdjustTypeValues
+    kjb: adjust_type_sync
+    enumeration: adjust_type
+    yaml: adjust_type.yaml
+  - enumType: SCC.BomType
+    kjb: bill_of_materials_type_sync
+    enumeration: bill_of_materials_type
+    yaml: bill_of_materials_type.yaml
+  - enumType: SCC.BucketizationPolicyType
+    kjb: bucketization_policy_sync
+    enumeration: bucketization_policy
+    yaml: bucketization_policy.yaml
+  - enumType: OMS.BucketizationType
+    kjb: BucketizationPolicyType
+    enumeration: bucketization_type
+    yaml: bucketization_type.yaml
+  - enumType: SCC.EnhancedBOFBuyerReasonCode
+    kjb: buyer_reason_code_sync
+    enumeration: buyer_reason_code
+    yaml: buyer_reason_code.yaml
+  - enumType: OMS.CancelCollaborationStatus
+    kjb: cancel_collaboration_status_sync
+    enumeration: cancel_collaboration_status
+    yaml: cancel_collaboration_status.yaml
+  - enumType: CancelReasonCode
+    kjb: cancel_reason_code_sync
+    enumeration: cancel_reason_code
+    yaml: cancel_reason_code.yaml
+  - enumType: CapacityUom
+    kjb: capacity_uom_sync
+    enumeration: capacity_uom
+    yaml: capacity_uom.yaml
+  - enumType: TMS.CarrierType
+    kjb: carrier_type_sync
+    enumeration: carrier_type
+    yaml: carrier_type.yaml
+  - enumType: SCC.ClaimType
+    kjb: claim_type_sync
+    enumeration: claim_type
+    yaml: claim_type.yaml
+  - enumType: OMS.CommunicationType
+    kjb: communication_type_sync
+    enumeration: communication_type
+    yaml: communication_type.yaml
+  - enumType: OMS.ContractType
+    kjb: contract_type_sync
+    enumeration: contract_type
+    yaml: contract_type.yaml
+  - enumType: SCC.CostCenter
+    kjb: cost_center_sync
+    enumeration: cost_center
+    yaml: cost_center.yaml
+  - enumType: TMS.CostMethod
+    kjb: cost_method_sync
+    enumeration: cost_method
+    yaml: cost_method.yaml
+  - enumType: currencycode
+    kjb: currency_sync
+    enumeration: currency
+    yaml: currency.yaml
+  - enumType: SCC.SNOPDemandForecastType
+    kjb: demand_forecast_type_sync
+    enumeration: demand_forecast_type
+    yaml: demand_forecast_type.yaml
+  - enumType: OMS.DeviationReasonCode
+    kjb: deviation_reason_code_sync
+    enumeration: deviation_reason_code
+    yaml: deviation_reason_code.yaml
+  - enumType: SCC.DimensionType
+    kjb: dimension_type_sync
+    enumeration: dimension_type
+    yaml: dimension_type.yaml
+  - enumType: DistanceUOM
+    kjb: distance_uom_sync
+    enumeration: distance_uom
+    yaml: distance_uom.yaml
+  - enumType: TMS.DistributionType
+    kjb: distribution_type_sync
+    enumeration: distribution_type
+    yaml: distribution_type.yaml
+  - enumType: SCC.EquipmentCategory
+    kjb: equipment_category_sync
+    enumeration: equipment_category
+    yaml: equipment_category.yaml
+  - enumType: TMS.EquipmentModel
+    kjb: equipment_mode_sync
+    enumeration: equipment_mode
+    yaml: equipment_mode.yaml
+  - enumType: EventAdjustmentUom
+    kjb: event_adjustment_uom_sync
+    enumeration: event_adjustment_uom
+    yaml: event_adjustment_uom.yaml
+  - enumType: EventFrequencyValues
+    kjb: event_frequency_sync
+    enumeration: event_frequency
+    yaml: event_frequency.yaml
+  - enumType: EventPatternValues
+    kjb: event_pattern_sync
+    enumeration: event_pattern
+    yaml: event_pattern.yaml
+  - enumType: RecurrenceValues
+    kjb: event_recurrence_sync
+    enumeration: event_recurrence
+    yaml: event_recurrence.yaml
+  - enumType: SCC.ExecutionStatus
+    kjb: execution_status_sync
+    enumeration: execution_status
+    yaml: execution_status.yaml
+  - enumType: TMS.SelectionType
+    kjb: fleet_type_sync
+    enumeration: fleet_type
+    yaml: fleet_type.yaml
+  - enumType: OMS.FOBCode
+    kjb: fob_code_sync
+    enumeration: fob_code
+    yaml: fob_code.yaml
+  - enumType: OMS.FOBPoint
+    kjb: fob_point_sync
+    enumeration: fob_point
+    yaml: fob_point.yaml
+  - enumType: FreightTerms
+    kjb: freight_terms_sync
+    enumeration: freight_terms
+    yaml: freight_terms.yaml
+  - enumType: HierarchyMetaType
+    kjb: hierarchy_meta_data_type_sync
+    enumeration: hierarchy_meta_data_type
+    yaml: hierarchy_meta_data_type.yaml
+  - enumType: SCC.HoldType
+    kjb: hold_type_sync
+    enumeration: hold_type
+    yaml: hold_type.yaml
+  - enumType: SCC.INCOTerms
+    kjb: inco_terms_sync
+    enumeration: inco_terms
+    yaml: inco_terms.yaml
+  - enumType: SCC.ConditionCode
+    kjb: inventory_condition_code_sync
+    enumeration: inventory_condition_code
+    yaml: inventory_condition_code.yaml
+  - enumType: SCC.OwnerCode
+    kjb: inventory_owner_code_sync
+    enumeration: inventory_owner_code
+    yaml: inventory_owner_code.yaml
+  - enumType: SCC.PurposeCode
+    kjb: inventory_purpose_code_sync
+    enumeration: inventory_purpose_code
+    yaml: inventory_purpose_code.yaml
+  - enumType: SCC.InventoryRequisitionSourceType
+    kjb: inventory_requisition_source_type_sync
+    enumeration: inventory_requisition_source_type
+    yaml: inventory_requisition_source_type.yaml
+  - enumType: SCC.InventoryStatus
+    kjb: inventory_status_sync
+    enumeration: inventory_status
+    yaml: inventory_status.yaml
+  - enumType: SCC.InvoiceActiveCode
+    kjb: invoice_active_code_sync
+    enumeration: invoice_active_code
+    yaml: invoice_active_code.yaml
+  - enumType: TMS.InvoiceCategory
+    kjb: invoice_category_sync
+    enumeration: invoice_category
+    yaml: invoice_category.yaml
+  - enumType: FIN.InvoiceGenerationMode
+    kjb: invoice_generation_mode_sync
+    enumeration: invoice_generation_mode
+    yaml: invoice_generation_mode.yaml
+  - enumType: InvoiceLineType
+    kjb: invoice_line_type_sync
+    enumeration: invoice_line_type
+    yaml: invoice_line_type.yaml
+  - enumType: InvoiceType
+    kjb: invoice_type_sync
+    enumeration: invoice_type
+    yaml: invoice_type.yaml
+  - enumType: SCC.ItemSupplyType
+    kjb: item_supply_type_sync
+    enumeration: item_supply_type
+    yaml: item_supply_type.yaml
+  - enumType: LinearUOM
+    kjb: linear_uom_sync
+    enumeration: linear_uom
+    yaml: linear_uom.yaml
+  - enumType: LoadType
+    kjb: load_type_sync
+    enumeration: load_type
+    yaml: load_type.yaml
+  - enumType: WBProblemAttributeType
+    kjb: load_wbplm_attr_type
+    enumeration: wbproblem_attr_type
+    yaml: wbproblem_attr_type.yaml
+  - enumType: TMS.MovementEventTypes
+    kjb: movement_event_type_sync
+    enumeration: movement_event_type
+    yaml: movement_event_type.yaml
+  - enumType: YMS.MovePurposeType
+    kjb: move_purpose_type_sync
+    enumeration: move_purpose_type
+    yaml: move_purpose_type.yaml
+  - enumType: TMS.MoveType
+    kjb: move_type_sync
+    enumeration: move_type
+    yaml: move_type.yaml
+  - enumType: OrderingUOM
+    kjb: ordering_uom_sync
+    enumeration: ordering_uom
+    yaml: ordering_uom.yaml
+  - enumType: SCC.OrderForecastType
+    kjb: order_forecast_type_sync
+    enumeration: order_forecast_type
+    yaml: order_forecast_type.yaml
+  - enumType: SCC.OrderLineType
+    kjb: order_line_type_sync
+    enumeration: order_line_type
+    yaml: order_line_type.yaml
+  - enumType: SCC.OrderPriority
+    kjb: order_priority_sync
+    enumeration: order_priority
+    yaml: order_priority.yaml
+  - enumType: SCC.OrderPromiseState
+    kjb: order_promise_status_sync
+    enumeration: order_promise_status
+    yaml: order_promise_status.yaml
+  - enumType: SCC.Origin
+    kjb: origin_sync
+    enumeration: origin
+    yaml: origin.yaml
+  - enumType: OMS.PaymentDateType
+    kjb: payment_date_type
+    enumeration: payment_date_type
+    yaml: payment_date_type.yaml
+  - enumType: OMS.PriceCumulationType
+    kjb: price_cumulation_type_sync
+    enumeration: price_cumulation_type
+    yaml: price_cumulation_type.yaml
+  - enumType: OMS.PricingModel
+    kjb: pricing_model_sync
+    enumeration: pricing_model
+    yaml: pricing_model.yaml
+  - enumType: WBProblemPriority
+    kjb: problem_priority_sync
+    enumeration: problem_priority
+    yaml: problem_priority.yaml
+  - enumType: SCC.ProductionType
+    kjb: production_type_sync
+    enumeration: production_type
+    yaml: production_type.yaml
+  - enumType: MFG.ProdOrderReasonCode
+    kjb: prod_order_reason_code_sync
+    enumeration: prod_order_reason_code
+    yaml: prod_order_reason_code.yaml
+  - enumType: QuantityUOM
+    kjb: quantity_uom_sync
+    enumeration: quantity_uom
+    yaml: quantity_uom.yaml
+  - enumType: TMS.RankingType
+    kjb: ranking_type_sync
+    enumeration: ranking_type
+    yaml: ranking_type.yaml
+  - enumType: TMS.RatingType
+    kjb: RatingType
+    enumeration: rating_type
+    yaml: rating_type.yaml
+  - enumType: SCC.RequisitionType
+    kjb: RequisitionType
+    enumeration: requisition_type
+    yaml: requisition_type.yaml
+  - enumType: SCC.RiskSeverity
+    kjb: risk_severity_sync
+    enumeration: risk_severity
+    yaml: risk_severity.yaml
+  - enumType: SCC.RiskTypes
+    kjb: risk_type_sync
+    enumeration: risk_type
+    yaml: risk_type.yaml
+  - enumType: TMS.MovementConsolidationType
+    kjb: route_type_sync
+    enumeration: route_type
+    yaml: route_type.yaml
+  - enumType: TMS.RoutingGroup
+    kjb: routing_group_sync
+    enumeration: routing_group
+    yaml: routing_group.yaml
+  - enumType: SafetyStockUOM
+    kjb: safety_stock_uom_sync
+    enumeration: safety_stock_uom
+    yaml: safety_stock_uom.yaml
+  - enumType: SCH.ScheduleType
+    kjb: schedule_type_sync
+    enumeration: schedule_type
+    yaml: schedule_type.yaml
+  - enumType: OMS.PartnerScorecardDateType
+    kjb: scorecard_date_type_sync
+    enumeration: scorecard_date_type
+    yaml: scorecard_date_type.yaml
+  - enumType: TMS.SelectionType
+    kjb: selection_type_sync
+    enumeration: selection_type
+    yaml: selection_type.yaml
+  - enumType: TMS.ShipmentEventTypes
+    kjb: shipment_event_type_sync
+    enumeration: shipment_event_type
+    yaml: shipment_event_type.yaml
+  - enumType: SCC.ShipmentType
+    kjb: ShipmentType
+    enumeration: shipment_type
+    yaml: shipment_type.yaml
+  - enumType: SCC.SiteTrait
+    kjb: site_trait_type_sync
+    enumeration: site_trait_type
+    yaml: site_trait_type.yaml
+  - enumType: SCC.SiteType
+    kjb: site_type_sync
+    enumeration: site_type
+    yaml: site_type.yaml
+  - enumType: OMS.TaxProvider
+    kjb: tax_provider_sync
+    enumeration: tax_provider
+    yaml: tax_provider.yaml
+  - enumType: TimeUOM
+    kjb: time_uom_sync
+    enumeration: time_uom
+    yaml: time_uom.yaml
+  - enumType: TMS.TrackingEvtConfigTargetGroups
+    kjb: tracking_evt_config_target_groups_sync
+    enumeration: tracking_evt_config_target_groups
+    yaml: tracking_evt_config_target_groups.yaml
+  - enumType: YMS.TrailerMoveStatus
+    kjb: trailer_move_status_sync
+    enumeration: trailer_move_status
+    yaml: trailer_move_status.yaml
+  - enumType: SCC.TransCapacityPlanStatus
+    kjb: transportation_capacity_status_sync
+    enumeration: transportation_capacity_status
+    yaml: transportation_capacity_status.yaml
+  - enumType: SCC.TransporatationMode
+    kjb: transportation_mode_sync
+    enumeration: transportation_mode
+    yaml: transportation_mode.yaml
+  - enumType: SCH.TrackingEventReasonCodes
+    kjb: trk_evt_reason_code_sync
+    enumeration: tracking_event_reason_code
+    yaml: tracking_event_reason_code.yaml
+  - enumType: SCC.EnhancedBOFVendorReasonCode
+    kjb: vendor_reason_code_sync
+    enumeration: vendor_reason_code
+    yaml: vendor_reason_code.yaml
+  - enumType: VolumeUOM
+    kjb: volume_uom_sync
+    enumeration: volume_uom
+    yaml: volume_uom.yaml
+  - enumType: WeightUOM
+    kjb: weight_uom_sync
+    enumeration: weight_uom
+    yaml: weight_uom.yaml
+  - enumType: SCC.WorkOrderType
+    kjb: work_type_sync
+    enumeration: work_type
+    yaml: work_type.yaml
+  - enumType: InvoiceLineDetailType
+    kjb: invoice_line_detail_type_sync
+    enumeration: ""
+    yaml: ""
+  - enumType: intrinsicequipmenttype
+    kjb: equipment_type_stg_sync
+    enumeration: equipment_type
+    yaml: equipment_type.yaml
+  - enumType: TMS.Direction
+    kjb: shipment_direction_sync
+    enumeration: shipment_direction
+    yaml: shipment_direction.yaml
+  - enumType: SCC.ShipmentStatus
+    kjb: shipment_status_sync
+    enumeration: shipment_status
+    yaml: shipment_status.yaml
+  - enumType: TMS.ContainerTrackingStatus
+    kjb: container_tracking_status_sync
+    enumeration: container_tracking_status
+    yaml: container_tracking_status.yaml
+  - enumType: SCC.OrderSubType
+    kjb: order_sub_type_sync
+    enumeration: order_sub_type
+    yaml: order_sub_type.yaml
+  - enumType: SCC.OrderEventOrigin
+    kjb: order_event_origin_sync
+    enumeration: order_event_origin
+    yaml: order_event_origin.yaml
+  - enumType: SCC.OrderLevel
+    kjb: order_level_sync
+    enumeration: order_level
+    yaml: order_level.yaml
+  - enumType: CSS.Enum.Type.xjo
+    kjb: ""
+    enumeration: hernan_type
+    yaml: hernan_type.yaml
+  - enumType: AdjustTypeValues
+    kjb: ""
+    enumeration: adjust_type_copy
+    yaml: adjust_type_copy.yaml

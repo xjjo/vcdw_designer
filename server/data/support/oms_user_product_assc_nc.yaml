@@ -1,0 +1,39 @@
+id: support_oms_user_product_assc_nc
+kind: support
+name: oms_user_product_assc_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_oms_user_product_assc_nc_0
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_oms_user_product_assc_nc_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_oms_user_product_assc_nc_2
+    name: MODEL_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_oms_user_product_assc_nc_3
+    name: MODEL_ID
+    type: BIGINT(20)
+  - id: sc_oms_user_product_assc_nc_4
+    name: MODEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_oms_user_product_assc_nc_5
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_oms_user_product_assc_nc_6
+    name: SYS_USER_ID
+    type: BIGINT(20)
+  - id: sc_oms_user_product_assc_nc_7
+    name: SYS_USER_PRODUCT_ASSC_ID
+    type: BIGINT(20)
+  - id: sc_oms_user_product_assc_nc_8
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_oms_user_product_assc_nc_9
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_oms_user_product_assc_nc_10
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,105 @@
+id: support_scc_snop_event_nc
+kind: support
+name: scc_snop_event_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_snop_event_nc_0
+    name: ADJUST_PERCENTAGE
+    type: DECIMAL(65,6)
+  - id: sc_scc_snop_event_nc_1
+    name: ADJUST_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_scc_snop_event_nc_2
+    name: ADJUST_TYPE
+    type: SMALLINT(6)
+  - id: sc_scc_snop_event_nc_3
+    name: ADJUST_UOM
+    type: SMALLINT(6)
+  - id: sc_scc_snop_event_nc_4
+    name: CAL_INSTANCE
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_5
+    name: CURRENCY
+    type: DECIMAL(65,6)
+  - id: sc_scc_snop_event_nc_6
+    name: END_DAY
+    type: DATETIME(6)
+  - id: sc_scc_snop_event_nc_7
+    name: EVENT_NAME
+    type: VARCHAR(256)
+  - id: sc_scc_snop_event_nc_8
+    name: EVENT_PATTERN
+    type: SMALLINT(6)
+  - id: sc_scc_snop_event_nc_9
+    name: EVENT_UNIT_PRICE
+    type: DECIMAL(65,6)
+  - id: sc_scc_snop_event_nc_10
+    name: FREQUENCY
+    type: SMALLINT(6)
+  - id: sc_scc_snop_event_nc_11
+    name: RECURRENCE
+    type: SMALLINT(6)
+  - id: sc_scc_snop_event_nc_12
+    name: RECURRENCE_END_DATE
+    type: DATETIME(6)
+  - id: sc_scc_snop_event_nc_13
+    name: RECURRENCE_START_DATE
+    type: DATETIME(6)
+  - id: sc_scc_snop_event_nc_14
+    name: SNOP_SYS_EVENT_GROUP_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_15
+    name: START_DAY
+    type: DATETIME(6)
+  - id: sc_scc_snop_event_nc_16
+    name: SYS_ACCOUNT_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_17
+    name: SYS_DC_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_18
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_19
+    name: SYS_GEO_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_20
+    name: SYS_GEO_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_21
+    name: SYS_GEO_PATTERN_LIST_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_22
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_23
+    name: SYS_PROD_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_24
+    name: SYS_PROD_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_25
+    name: SYS_SCENARIO_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_26
+    name: SYS_SNOP_EVENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_27
+    name: SYS_VENDOR_ENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_event_nc_28
+    name: STANDARD_UNIT_PRICE
+    type: DOUBLE
+  - id: sc_scc_snop_event_nc_29
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_snop_event_nc_30
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_snop_event_nc_31
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_snop_event_nc_32
+    name: RECONCILED
+    type: TINYINT(1)

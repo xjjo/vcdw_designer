@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useStore } from '../store';
 import { KIND_META } from '../ui';
 import type { AnyEntity } from '@shared/types';
@@ -5,15 +6,21 @@ import type { AnyEntity } from '@shared/types';
 export default function Dashboard({ onOpen }: { onOpen: (id: string) => void }) {
   const model = useStore((s) => s.model);
   const setView = useStore((s) => s.setView);
+  const catalogCounts = useStore((s) => s.catalogCounts);
+  const refreshCatalogCounts = useStore((s) => s.refreshCatalogCounts);
+
+  useEffect(() => {
+    void refreshCatalogCounts();
+  }, [refreshCatalogCounts]);
 
   const all: AnyEntity[] = [...model.enumerations, ...model.dimensions, ...model.facts];
   const totalColumns = all.reduce((n, e) => n + e.columns.length, 0);
   const totalLookups = model.facts.reduce((n, f) => n + (f.dimensionLookups?.length ?? 0), 0);
 
   const stats = [
-    { n: model.facts.length, l: 'Facts', color: KIND_META.fact.color },
-    { n: model.dimensions.length, l: 'Dimensions', color: KIND_META.dimension.color },
-    { n: model.enumerations.length, l: 'Enumerations', color: KIND_META.enumeration.color },
+    { n: catalogCounts.facts, l: 'Facts', color: KIND_META.fact.color },
+    { n: catalogCounts.dimensions, l: 'Dimensions', color: KIND_META.dimension.color },
+    { n: catalogCounts.enumerations, l: 'Enumerations', color: KIND_META.enumeration.color },
     { n: totalColumns, l: 'Total columns', color: '#38bdf8' },
     { n: totalLookups, l: 'Dimension lookups', color: '#f59e0b' },
     { n: model.auditProfiles.length, l: 'Audit profiles', color: '#e2e8f0' },
@@ -24,9 +31,6 @@ export default function Dashboard({ onOpen }: { onOpen: (id: string) => void }) 
       <div className="page-head">
         <h1>Dashboard</h1>
         <div className="spacer" />
-        <button className="btn" onClick={() => setView('canvas')}>
-          Open Canvas
-        </button>
         <button className="btn primary" onClick={() => setView('json')}>
           View JSON / SQL
         </button>

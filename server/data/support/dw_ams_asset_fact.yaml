@@ -1,0 +1,84 @@
+id: support_dw_ams_asset_fact
+kind: support
+name: dw_ams_asset_fact
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_ams_asset_fact_0
+    name: SYS_ASSET_FACT_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_ams_asset_fact_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_ams_asset_fact_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_ams_asset_fact_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_ams_asset_fact_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_ams_asset_fact_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_ams_asset_fact_7
+    name: REPORT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_ams_asset_fact_8
+    name: ASSET_AUX_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_ams_asset_fact_9
+    name: DOWN_TIME
+    type: DOUBLE
+  - id: sc_dw_ams_asset_fact_10
+    name: UP_TIME
+    type: DOUBLE
+  - id: sc_dw_ams_asset_fact_11
+    name: REPAIR_DOWN_TIME
+    type: DOUBLE
+  - id: sc_dw_ams_asset_fact_12
+    name: REPAIR_UP_TIME
+    type: DOUBLE
+  - id: sc_dw_ams_asset_fact_13
+    name: NO_OF_BREAKDOWNS
+    type: DOUBLE
+  - id: sc_dw_ams_asset_fact_14
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_15
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_16
+    name: SYS_OPERATING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_17
+    name: SYS_POSSESSING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_18
+    name: SYS_CATEGORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_19
+    name: SYS_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_20
+    name: SYS_ASSET_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_21
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_22
+    name: SYS_HOME_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_23
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_ams_asset_fact_24
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_ams_asset_fact_25
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

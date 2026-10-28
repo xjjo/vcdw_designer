@@ -1,0 +1,24 @@
+id: support_delete_audit_nc
+kind: support
+name: delete_audit_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_delete_audit_nc_0
+    name: SYS_ID
+    type: BIGINT(20)
+  - id: sc_delete_audit_nc_1
+    name: TABLE_NAME
+    type: VARCHAR(64)
+  - id: sc_delete_audit_nc_2
+    name: DELETE_DATE
+    type: DATETIME(6)
+  - id: sc_delete_audit_nc_3
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_delete_audit_nc_4
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_delete_audit_nc_5
+    name: RECONCILED
+    type: TINYINT(1)

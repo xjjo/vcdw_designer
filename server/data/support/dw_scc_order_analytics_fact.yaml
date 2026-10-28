@@ -1,0 +1,321 @@
+id: support_dw_scc_order_analytics_fact
+kind: support
+name: dw_scc_order_analytics_fact
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_order_analytics_fact_0
+    name: ACTUAL_OLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_1
+    name: ACTUAL_TRANSIT_TIME
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_2
+    name: AGREED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_3
+    name: CONTRACTED_OLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_4
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_analytics_fact_5
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_6
+    name: DAY
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_7
+    name: FISCAL_DAY
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_8
+    name: FISCAL_MONTH
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_9
+    name: FISCAL_WEEK
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_10
+    name: FISCAL_YEAR
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_11
+    name: IN_TLRC_CONF_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_12
+    name: IN_WINDOW_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_13
+    name: IN_WINDOW_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_14
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_analytics_fact_15
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_16
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_analytics_fact_17
+    name: MONTH
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_18
+    name: MOQ_ADHERENCE_CNT
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_19
+    name: ONTIME_DELIVERY_CNT_ON_ORDD
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_20
+    name: ONTIME_DELIVERY_QTY_ON_ORDD
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_21
+    name: ONTIME_RCV_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_22
+    name: ONTIME_RCV_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_23
+    name: ONTIME_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_24
+    name: ONTIME_SHIP_CNT_ON_ORSD
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_25
+    name: ONTIME_SHIP_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_26
+    name: ONTIME_SHIP_QTY_ON_ORSD
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_27
+    name: ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_28
+    name: ORIGINAL_PROMISE_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_29
+    name: ORIGINAL_REQ_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_30
+    name: OVERSHIP_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_31
+    name: OVERSHIP_SHIPPED_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_32
+    name: PLANNER_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_33
+    name: PLANNER_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_34
+    name: PLANNER_TOTAL_MISS_TIME
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_35
+    name: PROMISED_LATE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_36
+    name: PROMISED_LATE_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_37
+    name: PROMISE_CUT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_38
+    name: PROMISE_CUT_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_39
+    name: PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_40
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_analytics_fact_41
+    name: CURRENCY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_analytics_fact_42
+    name: RECEIVED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_43
+    name: REPORT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_analytics_fact_44
+    name: REPORT_DATE_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_45
+    name: REQUESTED_OLT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_46
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_47
+    name: RUN_MODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_48
+    name: SHIPMENT_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_49
+    name: SHIPMENT_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_50
+    name: SHIPPED_ACCURACY_CNT_ON_AQ
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_51
+    name: SHIPPED_ACCURACY_CNT_ON_ORQ
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_52
+    name: SHIPPED_ACCURACY_QTY_ON_AQ
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_53
+    name: SHIPPED_ACCURACY_QTY_ON_ORQ
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_54
+    name: SHIPPED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_55
+    name: SHIP_FROM_CITY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_56
+    name: SHIP_FROM_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_57
+    name: SHIP_FROM_STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_58
+    name: SHIP_TO_CITY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_59
+    name: SHIP_TO_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_60
+    name: SHIP_TO_INV_TIME
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_61
+    name: SHIP_TO_STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_62
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_63
+    name: SYS_BUYING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_64
+    name: SYS_ORDER_ANALYTICS_FACT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_65
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_66
+    name: SYS_SELLING_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_67
+    name: SYS_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_68
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_69
+    name: TOTAL_CUT_COUNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_70
+    name: TOTAL_CUT_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_71
+    name: TOTAL_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_72
+    name: TOTAL_SPEND_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_73
+    name: VENDOR_ACCURACY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_74
+    name: VENDOR_ACCURACY_QTY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_75
+    name: VENDOR_TOTAL_MISS_TIME
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_76
+    name: WEEK
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_77
+    name: YEAR
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_78
+    name: ON_TIME_DELIVERY_APPT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_79
+    name: ON_TIME_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_80
+    name: ON_TIME_SHIP_READY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_81
+    name: IN_WINDOW_SHIP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_82
+    name: VENDOR_REVISION_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_83
+    name: ON_TIME_PICKUP_APPT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_84
+    name: ORDER_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_analytics_fact_85
+    name: IN_FULL_RCV_CNT_ON_ORQ
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_86
+    name: IN_TLRC_ASN_CREATION_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_87
+    name: SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_88
+    name: SYS_ORDER_FULFILLMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_analytics_fact_89
+    name: ORDER_ONTIME_INFULL_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_90
+    name: DAMAGE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_91
+    name: DAMAGE_FREE_DELIVERY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_92
+    name: EARLY_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_93
+    name: LATE_PICKUP_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_94
+    name: INVOICE_DISCREPANCY_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_95
+    name: OVERRIDDEN_DS_COUNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_96
+    name: PERFECT_DS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_97
+    name: QUALITY_CLAIMS_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_98
+    name: REJECT_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_99
+    name: RETURN_ORDER_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_analytics_fact_100
+    name: CANCELLED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_101
+    name: TOTAL_EMISSION_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_order_analytics_fact_102
+    name: EMISSION_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_analytics_fact_103
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_analytics_fact_104
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

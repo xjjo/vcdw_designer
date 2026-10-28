@@ -1,0 +1,90 @@
+id: support_scc_budget_nc
+kind: support
+name: scc_budget_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_budget_nc_0
+    name: SYS_BUDGET_ID
+    type: BIGINT(20)
+  - id: sc_scc_budget_nc_1
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_budget_nc_2
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_budget_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_budget_nc_4
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_budget_nc_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_7
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_8
+    name: BUDGET_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_budget_nc_9
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_scc_budget_nc_10
+    name: COST_CENTER
+    type: VARCHAR(256)
+  - id: sc_scc_budget_nc_11
+    name: EFFECTIVE_DATE_START_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_12
+    name: EFFECTIVE_DATE_END_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_13
+    name: TOTAL_BUDGETED_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_budget_nc_14
+    name: TOTAL_CONSUMED_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_budget_nc_15
+    name: CURRENCY
+    type: VARCHAR(256)
+  - id: sc_scc_budget_nc_16
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_budget_nc_17
+    name: SYS_BUDGET_MANAGEMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_budget_nc_18
+    name: REVISION_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_scc_budget_nc_19
+    name: PROPOSED_EFFECTIVE_END_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_20
+    name: TOTAL_PROPOSED_BUDGETED_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_scc_budget_nc_21
+    name: APPROVED_EFFECTIVE_START_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_22
+    name: TOTAL_APPROVED_BUDGETED_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_scc_budget_nc_23
+    name: PROPOSED_EFFECTIVE_START_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_24
+    name: APPROVED_EFFECTIVE_END_DATE
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_25
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_budget_nc_26
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_budget_nc_27
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,96 @@
+id: support_scc_hold_nc
+kind: support
+name: scc_hold_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_hold_nc_0
+    name: SYS_HOLD_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_hold_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_hold_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_hold_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_hold_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_hold_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_hold_nc_7
+    name: HOLD_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_hold_nc_8
+    name: TRANSACTION_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_hold_nc_9
+    name: TRANSACTION_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_10
+    name: TRANSACTION_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_hold_nc_11
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_hold_nc_12
+    name: OWNING_ROLE_TYPE
+    type: VARCHAR(64)
+  - id: sc_scc_hold_nc_13
+    name: DESCRIPTION_ARGS
+    type: VARCHAR(2048)
+  - id: sc_scc_hold_nc_14
+    name: RESOLUTION
+    type: VARCHAR(512)
+  - id: sc_scc_hold_nc_15
+    name: CLOSED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_hold_nc_16
+    name: SYS_HOLD_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_17
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_18
+    name: SYS_ASSIGNED_TO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_19
+    name: SYS_ASSIGNED_BY_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_20
+    name: SYS_ASSIGNED_TO_USER_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_21
+    name: SYS_ASSIGNED_BY_USER_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_22
+    name: SYS_INITIAL_ASSIGNED_TO_USE_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_23
+    name: SYS_INITIAL_ASSIGNED_BY_USE_ID
+    type: BIGINT(20)
+  - id: sc_scc_hold_nc_24
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_hold_nc_25
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_hold_nc_26
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_hold_nc_27
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_hold_nc_28
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_hold_nc_29
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

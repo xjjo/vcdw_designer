@@ -1,0 +1,642 @@
+id: support_partner_nc
+kind: support
+name: partner_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_partner_nc_0
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_1
+    name: PARTNER_NAME
+    type: VARCHAR(192)
+  - id: sc_partner_nc_2
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_partner_nc_3
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_partner_nc_4
+    name: TYPE_NAME
+    type: TEXT
+  - id: sc_partner_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_partner_nc_6
+    name: LAST_MODIFIED_USER
+    type: TEXT
+  - id: sc_partner_nc_7
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_8
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_partner_nc_9
+    name: CONTACT_NAME
+    type: TEXT
+  - id: sc_partner_nc_10
+    name: DESCRIPTION
+    type: TEXT
+  - id: sc_partner_nc_11
+    name: CONTACT_PHONE
+    type: TEXT
+  - id: sc_partner_nc_12
+    name: CONTACT_EMAIL
+    type: TEXT
+  - id: sc_partner_nc_13
+    name: DEFAULT_PARTNER
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_14
+    name: RESPOND_WITH_EDI824
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_15
+    name: ISA_QUALIFIER
+    type: TEXT
+  - id: sc_partner_nc_16
+    name: ISA_IDENTIFIER
+    type: TEXT
+  - id: sc_partner_nc_17
+    name: OMS_AUTO_PRE_ASNCALENDAR
+    type: TEXT
+  - id: sc_partner_nc_18
+    name: OMS_AUTO_PRE_ASNLEAD_TIME
+    type: BIGINT(20)
+  - id: sc_partner_nc_19
+    name: GS_IDENTIFIER
+    type: TEXT
+  - id: sc_partner_nc_20
+    name: PARTNER_ISA_QUALIFIER
+    type: TEXT
+  - id: sc_partner_nc_21
+    name: PARTNER_ISA_IDENTIFIER
+    type: TEXT
+  - id: sc_partner_nc_22
+    name: PARTNER_GS_IDENTIFIER
+    type: TEXT
+  - id: sc_partner_nc_23
+    name: CREATION_USER
+    type: TEXT
+  - id: sc_partner_nc_24
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_partner_nc_25
+    name: ONBOARDING_STATUS
+    type: TEXT
+  - id: sc_partner_nc_26
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_27
+    name: PARTNER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_28
+    name: PARTNER_ENT_NAME
+    type: TEXT
+  - id: sc_partner_nc_29
+    name: PARTNER_ORG_NAME
+    type: TEXT
+  - id: sc_partner_nc_30
+    name: PARENT_SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_31
+    name: PARENT_PARTNER_ENT_NAME
+    type: TEXT
+  - id: sc_partner_nc_32
+    name: PARENT_PARTNER_ORG_NAME
+    type: TEXT
+  - id: sc_partner_nc_33
+    name: PARENT_PARTNER_NAME
+    type: TEXT
+  - id: sc_partner_nc_34
+    name: CONTACT_ADDR_COUNTRY
+    type: TEXT
+  - id: sc_partner_nc_35
+    name: CONTACT_ADDR_COMP1
+    type: TEXT
+  - id: sc_partner_nc_36
+    name: CONTACT_ADDR_COMP2
+    type: TEXT
+  - id: sc_partner_nc_37
+    name: CONTACT_ADDR_COMPS
+    type: TEXT
+  - id: sc_partner_nc_38
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_39
+    name: ALLOW_MASTER_DATA_MGMT
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_40
+    name: AUTO_APPROVE_BUCKETIZED_ORDER
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_41
+    name: BILLTO_ADDRESS_COMP1
+    type: TEXT
+  - id: sc_partner_nc_42
+    name: BILLTO_ADDRESS_COMP2
+    type: TEXT
+  - id: sc_partner_nc_43
+    name: BILLTO_ADDRESS_COMPS
+    type: TEXT
+  - id: sc_partner_nc_44
+    name: BILLTO_ADDRESS_COUNTRY
+    type: TEXT
+  - id: sc_partner_nc_45
+    name: BUCKETIZATION_TYPE
+    type: TEXT
+  - id: sc_partner_nc_46
+    name: CUSTOMER_TYPE
+    type: TEXT
+  - id: sc_partner_nc_47
+    name: DISC_BILL_TO_ADDR_COMP1
+    type: TEXT
+  - id: sc_partner_nc_48
+    name: DISC_BILL_TO_ADDR_COMP2
+    type: TEXT
+  - id: sc_partner_nc_49
+    name: DISC_BILL_TO_ADDR_COMPS
+    type: TEXT
+  - id: sc_partner_nc_50
+    name: DISC_BILL_TO_ADDR_COUNTRY
+    type: TEXT
+  - id: sc_partner_nc_51
+    name: EXPEDITE_CONTACT_ADDRE_COMP1
+    type: TEXT
+  - id: sc_partner_nc_52
+    name: EXPEDITE_CONTACT_ADDRE_COMP2
+    type: TEXT
+  - id: sc_partner_nc_53
+    name: EXPEDITE_CONTACT_ADDRE_COMPS
+    type: TEXT
+  - id: sc_partner_nc_54
+    name: EXPEDITE_CONTACT_ADDRE_COUNTRY
+    type: TEXT
+  - id: sc_partner_nc_55
+    name: EXPEDITE_CONTACT_EMAIL
+    type: TEXT
+  - id: sc_partner_nc_56
+    name: EXPEDITE_CONTACT_NAME
+    type: TEXT
+  - id: sc_partner_nc_57
+    name: EXPEDITE_CONTACT_PHONE
+    type: TEXT
+  - id: sc_partner_nc_58
+    name: ON_CREDIT_HOLD
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_59
+    name: ORDER_COLLABORATION_ENABLED
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_60
+    name: ORD_FCST_APPRV_TOLERANCE_PCT
+    type: DOUBLE
+  - id: sc_partner_nc_61
+    name: SCC_SYS_ASNTEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_62
+    name: SCC_SYS_MILESTONE_CONFIG_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_63
+    name: SCC_SYS_TCO_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_64
+    name: SHIPPING_CONTACT_ADDRE_COMP1
+    type: TEXT
+  - id: sc_partner_nc_65
+    name: SHIPPING_CONTACT_ADDRE_COMP2
+    type: TEXT
+  - id: sc_partner_nc_66
+    name: SHIPPING_CONTACT_ADDRE_COMPS
+    type: TEXT
+  - id: sc_partner_nc_67
+    name: SHIPPING_CONTACT_ADDRE_COUNTRY
+    type: TEXT
+  - id: sc_partner_nc_68
+    name: SHIPPING_CONTACT_EMAIL
+    type: TEXT
+  - id: sc_partner_nc_69
+    name: SHIPPING_CONTACT_NAME
+    type: TEXT
+  - id: sc_partner_nc_70
+    name: SHIPPING_CONTACT_PHONE
+    type: TEXT
+  - id: sc_partner_nc_71
+    name: SYS_FULFILLMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_72
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_73
+    name: CMDC_ADDITIONAL_PROPERTIES
+    type: LONGTEXT
+  - id: sc_partner_nc_74
+    name: CMDC_AUTHORITY_LEVEL
+    type: VARCHAR(64)
+  - id: sc_partner_nc_75
+    name: CMDC_LAST_SYNCED_FROM_CMD
+    type: DATETIME(6)
+  - id: sc_partner_nc_76
+    name: CMDC_UPDATED_FROM_CMD
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_77
+    name: DPX_DISABLE_FORECASTING
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_78
+    name: OMS_ADD_CONSIGNMENT_PAY_DAY
+    type: TEXT
+  - id: sc_partner_nc_79
+    name: OMS_ADD_CONSIGNMENT_RECU_TYPE
+    type: SMALLINT(6)
+  - id: sc_partner_nc_80
+    name: OMS_ADD_PROMO_LIFT_TO_BP
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_81
+    name: OMS_AP_CODE
+    type: TEXT
+  - id: sc_partner_nc_82
+    name: OMS_ASNNUMBER_SEQUENCE
+    type: TEXT
+  - id: sc_partner_nc_83
+    name: OMS_AUTO_CLOSE_ON_RECEIPT
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_84
+    name: OMS_AUTO_CREATE_SHIPMENT
+    type: TEXT
+  - id: sc_partner_nc_85
+    name: OMS_AUTO_INVOICE
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_86
+    name: OMS_AUTO_PAY
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_87
+    name: OMS_AUTO_PO_ACK_MODE
+    type: TEXT
+  - id: sc_partner_nc_88
+    name: OMS_BANK_CODE
+    type: TEXT
+  - id: sc_partner_nc_89
+    name: OMS_COLLABORATION_LEVEL
+    type: SMALLINT(6)
+  - id: sc_partner_nc_90
+    name: OMS_COLLABORATION_TYPE
+    type: SMALLINT(6)
+  - id: sc_partner_nc_91
+    name: OMS_COMMUNICATION_MODE
+    type: SMALLINT(6)
+  - id: sc_partner_nc_92
+    name: OMS_CONSIGNMENT_MATURITY_DAYS
+    type: DECIMAL(9,0)
+  - id: sc_partner_nc_93
+    name: OMS_CONSIGNMENT_PAYMENT_DAY
+    type: TEXT
+  - id: sc_partner_nc_94
+    name: OMS_CONSIGN_PAYMENT_RECU_TYPE
+    type: SMALLINT(6)
+  - id: sc_partner_nc_95
+    name: OMS_CONTRACT_SHIP_TO_REQUIRED
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_96
+    name: OMS_COUNTRY_OF_CONSIGNMENT
+    type: TEXT
+  - id: sc_partner_nc_97
+    name: OMS_CREATE_SHIP_IN_ALL_STATES
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_98
+    name: OMS_CURRENCY
+    type: SMALLINT(6)
+  - id: sc_partner_nc_99
+    name: OMS_DISABLE_PARTIAL_SHIPMENTS
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_100
+    name: OMS_EARLY_DELIVERY_TOLERANCE
+    type: BIGINT(20)
+  - id: sc_partner_nc_101
+    name: OMS_ENABLE_APPT_CAPACITY_CHECK
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_102
+    name: OMS_FOBCODE
+    type: TEXT
+  - id: sc_partner_nc_103
+    name: OMS_INBOX_FOLDER
+    type: TEXT
+  - id: sc_partner_nc_104
+    name: OMS_INVOICE_ACTIVE_CODE
+    type: SMALLINT(6)
+  - id: sc_partner_nc_105
+    name: OMS_INVOICE_ELIGIBLE
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_106
+    name: OMS_INVOICE_LINE_AMT_TOLERANCE
+    type: DOUBLE
+  - id: sc_partner_nc_107
+    name: OMS_INVOICE_LINE_QTY_TOLER_PCT
+    type: DOUBLE
+  - id: sc_partner_nc_108
+    name: OMS_INVOICE_UNIT_PRICE_TOLER
+    type: DOUBLE
+  - id: sc_partner_nc_109
+    name: OMS_IS_ALLOW_DISCNT_ON_FUEL_S
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_110
+    name: OMS_IS_ALLOW_DISCOUNT_ON_FRGHT
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_111
+    name: OMS_IS_ALLOW_DISCOUNT_ON_PRDCT
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_112
+    name: OMS_IS_ALLOW_DISCOUNT_ON_TAX
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_113
+    name: OMS_IS_BACK_PROP_ENABLED
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_114
+    name: OMS_IS_INDEPENDANT_CHANNEL
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_115
+    name: OMS_LATE_DELIVERY_TOLERANCE
+    type: BIGINT(20)
+  - id: sc_partner_nc_116
+    name: OMS_MAX_TAX_EXEMPT
+    type: DOUBLE
+  - id: sc_partner_nc_117
+    name: OMS_OLT
+    type: DECIMAL(9,0)
+  - id: sc_partner_nc_118
+    name: OMS_ORDER_CONFIRMATION_TYPE
+    type: TEXT
+  - id: sc_partner_nc_119
+    name: OMS_ORDER_EMAIL_FORMAT
+    type: TEXT
+  - id: sc_partner_nc_120
+    name: OMS_OTHER_SYSTEM_URL
+    type: TEXT
+  - id: sc_partner_nc_121
+    name: OMS_OUTBOX_FOLDER
+    type: TEXT
+  - id: sc_partner_nc_122
+    name: OMS_OVERSHIPPING_TOLERANCE_PCT
+    type: DOUBLE
+  - id: sc_partner_nc_123
+    name: OMS_PAYMENT_TYPE
+    type: TEXT
+  - id: sc_partner_nc_124
+    name: OMS_PRICE_INCLUDES_TAX
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_125
+    name: OMS_PURCHASING_ADDRESS_COMP1
+    type: TEXT
+  - id: sc_partner_nc_126
+    name: OMS_PURCHASING_ADDRESS_COMP2
+    type: TEXT
+  - id: sc_partner_nc_127
+    name: OMS_PURCHASING_ADDRESS_COMPS
+    type: TEXT
+  - id: sc_partner_nc_128
+    name: OMS_PURCHASING_ADDRESS_COUNTRY
+    type: TEXT
+  - id: sc_partner_nc_129
+    name: OMS_REMIT_TO_ADDRESS_COMP1
+    type: TEXT
+  - id: sc_partner_nc_130
+    name: OMS_REMIT_TO_ADDRESS_COMP2
+    type: TEXT
+  - id: sc_partner_nc_131
+    name: OMS_REMIT_TO_ADDRESS_COMPS
+    type: TEXT
+  - id: sc_partner_nc_132
+    name: OMS_REMIT_TO_ADDRESS_COUNTRY
+    type: TEXT
+  - id: sc_partner_nc_133
+    name: OMS_REQUIRED_FIELDS_FOR_ASN
+    type: TEXT
+  - id: sc_partner_nc_134
+    name: OMS_RO_CONFIRMED_SHIPMENT
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_135
+    name: OMS_SACCODE
+    type: TEXT
+  - id: sc_partner_nc_136
+    name: OMS_SHIPMENT_LOT_NUM_REQ
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_137
+    name: OMS_SHIPMENT_TRAILER_NUM_REQ
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_138
+    name: OMS_SHIPPING_INSTRUCTIONS
+    type: TEXT
+  - id: sc_partner_nc_139
+    name: OMS_SHIP_ORDER_ONCE
+    type: TEXT
+  - id: sc_partner_nc_140
+    name: OMS_SIZE
+    type: TEXT
+  - id: sc_partner_nc_141
+    name: OMS_SYS_EQUIP_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_142
+    name: OMS_SYS_FREIGHT_FORWARDER_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_143
+    name: OMS_SYS_PAYMENT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_144
+    name: OMS_TAX_ALLOWED
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_145
+    name: OMS_TAX_CODE
+    type: TEXT
+  - id: sc_partner_nc_146
+    name: OMS_TAX_EXEMPT_CERT_NUMBER
+    type: TEXT
+  - id: sc_partner_nc_147
+    name: OMS_TAX_EXEMPT_EXPIRY
+    type: DATETIME(6)
+  - id: sc_partner_nc_148
+    name: OMS_TAX_EXEMPT_NUMBER
+    type: TEXT
+  - id: sc_partner_nc_149
+    name: OMS_TRIGGER_SHIPMENT_CANCEL
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_150
+    name: OMS_USE_CUSTOMER_ASNNUMBER
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_151
+    name: TMS_ADDITIONAL_CHARGE_LIMIT
+    type: FLOAT
+  - id: sc_partner_nc_152
+    name: TMS_ALLOWED_FREIGHT_TERMS
+    type: VARCHAR(64)
+  - id: sc_partner_nc_153
+    name: TMS_AUTO_ACCEPT_CONTROL
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_154
+    name: TMS_AUTO_CONVERT_FREIGHT_TERMS
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_155
+    name: TMS_BUSINESS_CATEGORY
+    type: VARCHAR(64)
+  - id: sc_partner_nc_156
+    name: TMS_CARRIER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_partner_nc_157
+    name: TMS_CONSIGNEE_SIG_REQD
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_158
+    name: TMS_CONSTRAINT_BY_AUTH_LOCS
+    type: VARCHAR(64)
+  - id: sc_partner_nc_159
+    name: TMS_DECLARED_VALUE_THRESHOLD
+    type: FLOAT
+  - id: sc_partner_nc_160
+    name: TMS_ENABLE_FOR_SPOT_TENDERING
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_161
+    name: TMS_MAX_ITEM_SIZE_HEIGHT
+    type: FLOAT
+  - id: sc_partner_nc_162
+    name: TMS_MAX_ITEM_SIZE_LENGTH
+    type: FLOAT
+  - id: sc_partner_nc_163
+    name: TMS_MAX_ITEM_SIZE_UOM
+    type: VARCHAR(256)
+  - id: sc_partner_nc_164
+    name: TMS_MAX_ITEM_SIZE_WIDTH
+    type: FLOAT
+  - id: sc_partner_nc_165
+    name: TMS_MAX_VOLUME_AMOUNT
+    type: FLOAT
+  - id: sc_partner_nc_166
+    name: TMS_MAX_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_partner_nc_167
+    name: TMS_MAX_WEIGHT_AMOUNT
+    type: FLOAT
+  - id: sc_partner_nc_168
+    name: TMS_MAX_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_partner_nc_169
+    name: TMS_ONLY_FOR_KNOWN_SHIP_SITES
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_170
+    name: TMS_PERMISSION_TO_ADD_CHARGES
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_171
+    name: TMS_SMARTWAY_CERTIFIED
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_172
+    name: TMS_TAX_EXEMPTED
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_173
+    name: SCPT_SCPL_EDIFORMAT
+    type: VARCHAR(64)
+  - id: sc_partner_nc_174
+    name: SCPT_SUPPORT_MULTI_SCHEDULE
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_175
+    name: OMS_INCO_TERMS_LOCATION
+    type: TEXT
+  - id: sc_partner_nc_176
+    name: OMS_VENDOR_ANALYTICS_LICENSED
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_177
+    name: OMS_INCO_TERMS
+    type: TEXT
+  - id: sc_partner_nc_178
+    name: OMS_AUTO_MOVE_TO_RECEIVED
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_179
+    name: OMS_AUTO_RECEIPT
+    type: DECIMAL(1,0)
+  - id: sc_partner_nc_180
+    name: SCC_SYS_CUSTOMER_OF_TCO_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_181
+    name: OMS_SYS_INVOICER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_182
+    name: OMS_SYS_INVOICEE_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_partner_nc_183
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_partner_nc_184
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_partner_nc_185
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_partner_nc_186
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_partner_nc_187
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_partner_nc_188
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_partner_nc_189
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_partner_nc_190
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_partner_nc_191
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_partner_nc_192
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_partner_nc_193
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_partner_nc_194
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_partner_nc_195
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_partner_nc_196
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_partner_nc_197
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_partner_nc_198
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_partner_nc_199
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_partner_nc_200
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_partner_nc_201
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_partner_nc_202
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_partner_nc_203
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_partner_nc_204
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_partner_nc_205
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_partner_nc_206
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_partner_nc_207
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_partner_nc_208
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_partner_nc_209
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_partner_nc_210
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_partner_nc_211
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

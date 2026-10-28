@@ -1,0 +1,54 @@
+id: support_dw_site_rsrc
+kind: support
+name: dw_site_rsrc
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_site_rsrc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_2
+    name: DESCRIPTION
+    type: VARCHAR(255)
+  - id: sc_dw_site_rsrc_3
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_site_rsrc_4
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_rsrc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_site_rsrc_7
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_site_rsrc_8
+    name: PARENT_SITE_RSRC_NAME
+    type: VARCHAR(164)
+  - id: sc_dw_site_rsrc_9
+    name: SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_site_rsrc_10
+    name: SITE_RSRC_NAME
+    type: VARCHAR(164)
+  - id: sc_dw_site_rsrc_11
+    name: SYS_PARENT_SITE_RSRC_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_12
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_13
+    name: SYS_SITE_RSRC_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_rsrc_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_site_rsrc_15
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

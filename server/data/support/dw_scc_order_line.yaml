@@ -1,0 +1,240 @@
+id: support_dw_scc_order_line
+kind: support
+name: dw_scc_order_line
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_order_line_0
+    name: SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_line_2
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_3
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_4
+    name: ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_5
+    name: LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_6
+    name: LINE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_7
+    name: LINE_TYPE_DESC
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_8
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_9
+    name: PRIORITY
+    type: DECIMAL(9,0)
+  - id: sc_dw_scc_order_line_10
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_11
+    name: EXT_VENDOR_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_12
+    name: UNIVERSAL_ITEM_IDENTIFIER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_13
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_14
+    name: UNIT_PRICE
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_15
+    name: SYS_PRODUCT_GROUP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_16
+    name: CURRENCY
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_17
+    name: LINE_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_18
+    name: MIN_LOT_SIZE
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_19
+    name: INCREMENT_LOT_SIZE
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_20
+    name: MAX_LOT_SIZE
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_21
+    name: BPO_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_22
+    name: EXT_COMMODITY_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_23
+    name: EXT_PARENT_ORDER_LINE_NUMBE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_24
+    name: LN_AUDIT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_25
+    name: EXT_CUSTOMER_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_26
+    name: LN_INCO_TERMS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_27
+    name: LN_IS_DISABLE_DELIVERY_COMPL
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_order_line_28
+    name: HTS_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_29
+    name: DUTY_FREE_HTS_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_30
+    name: COUNTRY_OF_MANUFACTURING
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_31
+    name: IS_LN_EXPEDITE
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_order_line_32
+    name: EXT_ITEM_DESC
+    type: VARCHAR(1024)
+  - id: sc_dw_scc_order_line_33
+    name: IS_SOURCE_INSPECTION_REQUIRED
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_order_line_34
+    name: SOURCE_INSPECTION_TYPE
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_order_line_35
+    name: IS_DUTY_FREE
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_order_line_36
+    name: GLACCOUNT
+    type: LONGTEXT
+  - id: sc_dw_scc_order_line_37
+    name: GOVT_CONTRACT_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_line_38
+    name: UNDEFINITIZED_CONTRACT
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_order_line_39
+    name: ATTACHED_NOTE_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_40
+    name: ATTACHED_NOTES
+    type: LONGTEXT
+  - id: sc_dw_scc_order_line_41
+    name: EXT_LOT
+    type: VARCHAR(100)
+  - id: sc_dw_scc_order_line_42
+    name: EXT_SINGLETON
+    type: VARCHAR(100)
+  - id: sc_dw_scc_order_line_43
+    name: RECOVERABLE_LOST_SALES
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_44
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_45
+    name: SYS_VENDOR_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_46
+    name: SYS_COMMODITY_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_47
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_48
+    name: SYS_LN_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_49
+    name: SYS_PARENT_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_50
+    name: SYS_CUSTOMER_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_51
+    name: SYS_LN_SERVICE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_52
+    name: SYS_REQUISITION_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_53
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_54
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_55
+    name: SYS_GENERIC_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_56
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_57
+    name: OMS_SYS_CONTRACT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_58
+    name: LINE_WEIGHT_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_59
+    name: LINE_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_60
+    name: LINE_VOLUME_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_61
+    name: LINE_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_62
+    name: DROP_SHIPMENT
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_order_line_63
+    name: OMS_LN_CANCEL_COLLAB_STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_line_64
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_line_65
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_line_66
+    name: ORDER_TYPE_VALUE
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_67
+    name: OMS_PRICE_PER
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_68
+    name: ORDER_LINE_AUX_NUM_FIELD1
+    type: DOUBLE
+  - id: sc_dw_scc_order_line_69
+    name: ORDER_LINE_AUX_NUM_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_70
+    name: ORDER_LINE_AUX_NUM_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_71
+    name: ORDER_LINE_AUX_NUM_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_72
+    name: ORDER_LINE_AUX_NUM_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_line_73
+    name: ORDER_LINE_AUX_STR_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_scc_order_line_74
+    name: ORDER_LINE_AUX_STR_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_scc_order_line_75
+    name: ORDER_LINE_AUX_STR_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_scc_order_line_76
+    name: ORDER_LINE_AUX_STR_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_scc_order_line_77
+    name: ORDER_LINE_AUX_STR_FIELD5
+    type: VARCHAR(128)

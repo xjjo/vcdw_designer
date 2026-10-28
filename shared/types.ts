@@ -14,6 +14,17 @@ export type EntityKind = 'enumeration' | 'dimension' | 'fact';
 
 export type AggregationType = 'NONE' | 'SUM' | 'AVG' | 'COUNT' | 'MIN' | 'MAX';
 
+/**
+ * How a target column is produced in the ETL flow:
+ *  - direct:     1:1 rename of a source (NC) column, optionally coalesced.
+ *  - lookup:     value returned by a Database Lookup / join step (parent key or name).
+ *  - audit:      DW-managed audit column (DELETED, DW_CREATED, ...).
+ *  - generated:  surrogate key assigned by auto-increment.
+ *  - constant:   a literal value.
+ *  - calculated: a SQL expression evaluated in staging.
+ */
+export type MappingKind = 'direct' | 'lookup' | 'join' | 'audit' | 'generated' | 'constant' | 'calculated';
+
 /** A single physical column plus every design-time flag we may need. */
 export interface Column {
   id: string;
@@ -42,11 +53,58 @@ export interface Column {
   isDateKey?: boolean;
 
   // --- mapping to the OLTP / SLICE source ---
+  /** How this column is fed in the ETL flow (defaults inferred when absent). */
+  mappingKind?: MappingKind;
+  /** Direct-mapped source column name (1:1 rename) in the origin/NC table. */
   sourceColumn?: string;
+  /** Source table alias the direct column is read from (multi-source facts/dims). */
+  sourceTable?: string;
+  /** Coalesce the value in the ETL flow (text -> 'No Value', numeric -> -1/0). */
+  coalesce?: boolean;
+  /** Id of the lookup that yields this column when mappingKind = 'lookup'. */
+  lookupId?: string;
+  /** Which return field of the lookup feeds this column (lookups can return many). */
+  lookupField?: string;
+  /** Id of the join that yields this column when mappingKind = 'join'. */
+  joinId?: string;
+  /** Which field returned by the join feeds this column. */
+  joinField?: string;
+  /** Literal value when mappingKind = 'constant'. */
+  constantValue?: string;
 
   // --- audit ---
   /** Non-empty when this column comes from an audit profile. */
   auditRole?: string;
+}
+
+/** A physical column of a source (OLTP/NC) table, used to drive field mapping. */
+export interface SourceColumn {
+  id: string;
+  name: string;
+  type?: string;
+  comment?: string;
+}
+
+/** How a support table participates physically. */
+export type SupportTableKind = 'nc' | 'dw' | 'other';
+
+/**
+ * A reusable VCDW support table (names starting with `dw_` or ending with `_nc`).
+ * Stored in its own YAML library so it can be referenced by facts / dims / enums.
+ */
+export interface SupportTable {
+  id: string;
+  kind: 'support';
+  name: string;
+  displayName?: string;
+  description?: string;
+  /** 'nc' = net-change mirror, 'dw' = dw copy table, else 'other'. */
+  tableKind?: SupportTableKind;
+  /** Suggested alias when joined. */
+  alias?: string;
+  /** Where the definition came from. */
+  origin?: 'db' | 'manual';
+  columns: SourceColumn[];
 }
 
 /** Reusable, fully customizable set of audit columns applied to any entity. */
@@ -57,14 +115,37 @@ export interface AuditFieldProfile {
   columns: Column[];
 }
 
-/** A net-change (CDC) source feeding an entity. */
+/**
+ * How a declared source table participates in the ETL flow:
+ *  - netchange: drives change-data-capture (has an OLTP origin + _nc mirror).
+ *  - support:   exists only to be joined in the source SELECT.
+ */
+export type SourceRole = 'netchange' | 'support';
+
+/**
+ * A source table feeding an entity. Every entry is a real table you can join;
+ * `role` decides whether it also drives net-change (CDC), and `isPrimary`
+ * marks the single primary net-change table.
+ */
 export interface NetChangeSource {
   id: string;
+  /** Defaults to 'netchange' when absent (back-compat with older designs). */
+  role?: SourceRole;
   isPrimary?: boolean;
-  oltpTable: string;
+  /** Physical table referenced in FROM / JOIN (the _nc mirror for net-change sources). */
+  ncTable: string;
+  /** Table alias used when mapping fields / writing joins (e.g. 'en', 'me'). */
+  alias?: string;
+  /** Declared physical columns of this source, used by the mapping/joins editors. */
+  columns?: SourceColumn[];
+  /** When true, emit a CREATE TABLE DDL for this source in the preview. */
+  createDdl?: boolean;
+  /** SingleStore storage layout used when `createDdl` is on. */
+  storageType?: 'columnstore' | 'rowstore';
+  // --- net-change origin metadata (only meaningful when role === 'netchange') ---
+  oltpTable?: string;
   oltpTableSysId?: string;
   oltpTableLmd?: string;
-  ncTable: string;
   dwOltpCopyTable?: string;
   condition?: string;
 }
@@ -82,7 +163,11 @@ export interface JoinDef {
   id: string;
   name?: string;
   leftTable: string;
+  /** Alias for the left table (informational; the ON clause references aliases). */
+  leftAlias?: string;
   rightTable: string;
+  /** Alias for the right table, used in the generated JOIN clause and ON conditions. */
+  rightAlias?: string;
   joinType: JoinType;
   onConditions: JoinCondition[];
 }
@@ -95,13 +180,20 @@ export interface LookupReturnField {
   defaultType?: number;
 }
 
+/** Join/lookup strategy understood by the generator (`lookup` = stream lookup step). */
+export type LookupStrategy = 'lookup' | 'left_join' | 'inner_join';
+
 /** Generic lookup (maps 1:1 onto the ETL generator lookup contract). */
 export interface LookupDef {
   id: string;
+  /** Human-readable step label (e.g. 'Lookup Invoicer Org'). */
+  name?: string;
   /** Optional link to a dimension/enum entity for the diagram. */
   targetEntityId?: string;
   tableName: string;
   cache?: boolean;
+  /** Resolution strategy; enums typically use `left_join` for enterprise scope. */
+  strategy?: LookupStrategy;
   streamKeyFields: string[];
   tableKeyFields: string[];
   keyConditions?: string[];
@@ -183,6 +275,14 @@ export interface Enumeration extends BaseEntity {
   isReferenceTable?: boolean;
   sourceNcTable?: string;
   enumTypeFilter?: string;
+  /** Physical reference table name (defaults to `name`). */
+  enumTable?: string;
+  /** Surrogate-key column emitted as generator `field_key`. */
+  fieldKey?: string;
+  /** Value/name column emitted as generator `field_name`. */
+  fieldName?: string;
+  /** Source column in the NC table that carries the enterprise scope id. */
+  entScopeSource?: string;
 }
 
 export interface Dimension extends BaseEntity {

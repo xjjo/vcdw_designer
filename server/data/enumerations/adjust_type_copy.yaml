@@ -1,0 +1,1568 @@
+id: enumeration_muejbcba_5
+kind: enumeration
+name: adjust_type_copy
+displayName: Adjust Type Enumeration
+description: "ETL sync transform: adjust_type_sync.ktr"
+domain: General
+isReferenceTable: true
+sourceNcTable: enumeration_nc
+enumTypeFilter: AdjustTypeValues
+auditProfileId: audit_default
+columns:
+  - id: col_mu4g35pw_h
+    nullable: false
+    name: ADJUST_TYPE_KEY
+    type: BIGINT
+    isPk: true
+    isSk: true
+    autoIncrement: true
+    mappingKind: generated
+  - id: col_mu4g35pw_i
+    nullable: false
+    name: OLTP_ID
+    type: BIGINT
+    isNaturalKey: true
+    sourceColumn: sys_enum_id
+    mappingKind: direct
+    sourceTable: en
+    coalesce: true
+  - id: col_mu4g35pw_j
+    nullable: false
+    name: ADJUST_TYPE_NAME
+    type: VARCHAR(256)
+    sourceColumn: enum_entry_name
+    mappingKind: direct
+    sourceTable: en
+    coalesce: true
+  - id: col_mu4g35pw_k
+    nullable: true
+    name: ENUM_ENTRY_VALUE
+    type: DECIMAL(5,0)
+    sourceColumn: enum_entry_value
+    mappingKind: direct
+    sourceTable: en
+  - id: col_mu4g35pw_l
+    nullable: true
+    name: ENT_NAME
+    type: VARCHAR(64)
+    mappingKind: lookup
+    sourceTable: e
+    lookupId: lkp_adjust_type_ent
+    lookupField: ENT_NAME
+  - id: col_muejsr36_du
+    nullable: true
+    name: SHIP_QTY
+    type: BIGINT(20)
+    mappingKind: join
+    isCalculated: false
+    joinId: jn_muejnzu6_dt
+    joinField: estimated_delivery_date
+  - id: col_mu4g35pw_m
+    nullable: false
+    name: DELETED
+    type: TINYINT(1)
+    default: "0"
+    auditRole: deleted
+    mappingKind: audit
+  - id: col_mu4g35pw_n
+    nullable: false
+    name: DW_CREATED
+    type: DATETIME(6)
+    default: CURRENT_TIMESTAMP
+    auditRole: created
+    mappingKind: audit
+  - id: col_mu4g35pw_o
+    nullable: false
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+    default: CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    auditRole: modified
+    mappingKind: audit
+etlConfig:
+  isEnabled: true
+  priority: 5
+enumTable: adjust_type
+fieldKey: ADJUST_TYPE_KEY
+fieldName: ADJUST_TYPE_NAME
+entScopeSource: sys_ent_id
+netChange:
+  - id: nc_adjust_type
+    isPrimary: true
+    oltpTable: enumeration
+    oltpTableSysId: SYS_ENUM_ID
+    oltpTableLmd: es_lmd
+    ncTable: enumeration_nc
+    dwOltpCopyTable: dw_enumeration
+    condition: enum_type='AdjustTypeValues'
+    alias: en
+    columns:
+      - id: sc_adjust_type_0
+        name: sys_enum_id
+        type: BIGINT
+      - id: sc_adjust_type_1
+        name: enum_type
+        type: VARCHAR(64)
+      - id: sc_adjust_type_2
+        name: enum_entry_name
+        type: VARCHAR(256)
+      - id: sc_adjust_type_3
+        name: enum_entry_value
+        type: DECIMAL(5,0)
+      - id: sc_adjust_type_4
+        name: last_modified_date
+        type: DATETIME(6)
+      - id: sc_adjust_type_5
+        name: hidden
+        type: DECIMAL(1,0)
+      - id: sc_adjust_type_6
+        name: sys_ent_id
+        type: BIGINT
+      - id: sc_adjust_type_7
+        name: es_lmd
+        type: DATETIME(6)
+  - id: nc_muejdgr3_6
+    role: netchange
+    isPrimary: false
+    oltpTable: shipment_header
+    ncTable: shipment_header_nc
+    oltpTableSysId: sys_shiph_id
+    oltpTableLmd: last_modified_date
+    alias: sh
+    columns:
+      - id: sc_muejkqa2_t
+        name: sys_shiph_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_u
+        name: trans_name
+        type: TEXT
+      - id: sc_muejkqa2_v
+        name: spt_version
+        type: TEXT
+      - id: sc_muejkqa2_w
+        name: spt_name
+        type: TEXT
+      - id: sc_muejkqa2_x
+        name: shipment_no
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_y
+        name: shipfrom_contact
+        type: TEXT
+      - id: sc_muejkqa2_z
+        name: shipto_contact
+        type: TEXT
+      - id: sc_muejkqa2_10
+        name: current_carrier_contact
+        type: TEXT
+      - id: sc_muejkqa2_11
+        name: creation_user
+        type: TEXT
+      - id: sc_muejkqa2_12
+        name: creation_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_13
+        name: last_modified_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_14
+        name: last_modified_user
+        type: TEXT
+      - id: sc_muejkqa2_15
+        name: level_modified_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_16
+        name: last_computed_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_17
+        name: last_touched_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_18
+        name: billto_contact
+        type: TEXT
+      - id: sc_muejkqa2_19
+        name: earliest_ship_target_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1a
+        name: estimated_ship_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1b
+        name: actual_pickup_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1c
+        name: pickup_date_range_start
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1d
+        name: pickup_date_range_end
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1e
+        name: pickup_appt_required
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_1f
+        name: pickup_rsrv_grp_id
+        type: TEXT
+      - id: sc_muejkqa2_1g
+        name: pickup_appt_date_range_start
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1h
+        name: pickup_appt_date_range_end
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1i
+        name: earliest_delivery_target_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1j
+        name: estimated_delivery_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1k
+        name: actual_delivery_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1l
+        name: delivery_date_range_start
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1m
+        name: delivery_date_range_end
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1n
+        name: delivery_appt_required
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_1o
+        name: delivery_rsrv_grp_id
+        type: TEXT
+      - id: sc_muejkqa2_1p
+        name: delivery_appt_date_range_start
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1q
+        name: delivery_appt_date_range_end
+        type: DATETIME(6)
+      - id: sc_muejkqa2_1r
+        name: load_type
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_1s
+        name: current_position
+        type: TEXT
+      - id: sc_muejkqa2_1t
+        name: order_ref_no
+        type: TEXT
+      - id: sc_muejkqa2_1u
+        name: master_shipment_no
+        type: TEXT
+      - id: sc_muejkqa2_1v
+        name: total_volume
+        type: DOUBLE
+      - id: sc_muejkqa2_1w
+        name: volume_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_1x
+        name: total_weight
+        type: DOUBLE
+      - id: sc_muejkqa2_1y
+        name: weight_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_1z
+        name: total_shipped_qty
+        type: DOUBLE
+      - id: sc_muejkqa2_20
+        name: total_received_qty
+        type: DOUBLE
+      - id: sc_muejkqa2_21
+        name: total_ordered_qty
+        type: DOUBLE
+      - id: sc_muejkqa2_22
+        name: quantity_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_23
+        name: total_shipped_qty2
+        type: DOUBLE
+      - id: sc_muejkqa2_24
+        name: total_received_qty2
+        type: DOUBLE
+      - id: sc_muejkqa2_25
+        name: total_ordered_qty2
+        type: DOUBLE
+      - id: sc_muejkqa2_26
+        name: quantity_uom2
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_27
+        name: freight_terms
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_28
+        name: special_instructions
+        type: TEXT
+      - id: sc_muejkqa2_29
+        name: freight_controlled_by_system
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_2a
+        name: state
+        type: TEXT
+      - id: sc_muejkqa2_2b
+        name: attached_notes
+        type: LONGTEXT
+      - id: sc_muejkqa2_2c
+        name: attached_note_count
+        type: BIGINT(20)
+      - id: sc_muejkqa2_2d
+        name: parent_ship_no
+        type: TEXT
+      - id: sc_muejkqa2_2e
+        name: bill_of_lading_no
+        type: TEXT
+      - id: sc_muejkqa2_2f
+        name: routing_no
+        type: TEXT
+      - id: sc_muejkqa2_2g
+        name: buyer_contact
+        type: TEXT
+      - id: sc_muejkqa2_2h
+        name: seller_contact
+        type: TEXT
+      - id: sc_muejkqa2_2i
+        name: description
+        type: TEXT
+      - id: sc_muejkqa2_2j
+        name: fob_location
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_2k
+        name: fob_notes
+        type: TEXT
+      - id: sc_muejkqa2_2l
+        name: current_position_lon
+        type: DOUBLE
+      - id: sc_muejkqa2_2m
+        name: current_position_lat
+        type: DOUBLE
+      - id: sc_muejkqa2_2n
+        name: transaction_cost
+        type: DOUBLE
+      - id: sc_muejkqa2_2o
+        name: shipto_site_name
+        type: TEXT
+      - id: sc_muejkqa2_2p
+        name: shipfrom_site_name
+        type: TEXT
+      - id: sc_muejkqa2_2q
+        name: pickup_commodity_code
+        type: TEXT
+      - id: sc_muejkqa2_2r
+        name: delivery_commodity_code
+        type: TEXT
+      - id: sc_muejkqa2_2s
+        name: pickup_dock_door_group_name
+        type: TEXT
+      - id: sc_muejkqa2_2t
+        name: delivery_dock_door_group_name
+        type: TEXT
+      - id: sc_muejkqa2_2u
+        name: recovered_lost_sales_value
+        type: DOUBLE
+      - id: sc_muejkqa2_2v
+        name: recovered_lost_sales_days
+        type: DOUBLE
+      - id: sc_muejkqa2_2w
+        name: ship_with_group_ref
+        type: TEXT
+      - id: sc_muejkqa2_2x
+        name: priority
+        type: BIGINT(20)
+      - id: sc_muejkqa2_2y
+        name: pickup_notifications
+        type: TEXT
+      - id: sc_muejkqa2_2z
+        name: delivery_notifications
+        type: TEXT
+      - id: sc_muejkqa2_30
+        name: creation_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_31
+        name: shipfrom_site_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_32
+        name: shipto_site_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_33
+        name: shipfrom_partner_site_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_34
+        name: shipfrom_partner_prof_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_35
+        name: shipto_partner_site_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_36
+        name: shipto_partner_prof_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_37
+        name: tc_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_38
+        name: custof_tc_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_39
+        name: current_carrier_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3a
+        name: broker_site_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3b
+        name: billto_site_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3c
+        name: billto_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3d
+        name: pickup_appt_code_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3e
+        name: delivery_appt_code_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3f
+        name: pickup_commodity_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3g
+        name: delivery_commodity_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3h
+        name: pickup_dd_group_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3i
+        name: delivery_dd_group_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3j
+        name: parent_ship_creation_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3k
+        name: buy_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3l
+        name: sell_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3m
+        name: shipto_partner_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3n
+        name: shipto_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3o
+        name: shipfrom_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3p
+        name: shipfrom_partner_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3q
+        name: broker_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3r
+        name: mvmt_creation_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3s
+        name: sys_parent_ship_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3t
+        name: sys_mvmt_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_3u
+        name: shipfrom_addr_country
+        type: TEXT
+      - id: sc_muejkqa2_3v
+        name: shipfrom_addr_comp1
+        type: TEXT
+      - id: sc_muejkqa2_3w
+        name: shipfrom_addr_comp2
+        type: TEXT
+      - id: sc_muejkqa2_3x
+        name: shipfrom_addr_comps
+        type: TEXT
+      - id: sc_muejkqa2_3y
+        name: shipto_addr_country
+        type: TEXT
+      - id: sc_muejkqa2_3z
+        name: shipto_addr_comp1
+        type: TEXT
+      - id: sc_muejkqa2_40
+        name: shipto_addr_comp2
+        type: TEXT
+      - id: sc_muejkqa2_41
+        name: shipto_addr_comps
+        type: TEXT
+      - id: sc_muejkqa2_42
+        name: billto_addr_country
+        type: TEXT
+      - id: sc_muejkqa2_43
+        name: billto_addr_comp1
+        type: TEXT
+      - id: sc_muejkqa2_44
+        name: billto_addr_comp2
+        type: TEXT
+      - id: sc_muejkqa2_45
+        name: billto_addr_comps
+        type: TEXT
+      - id: sc_muejkqa2_46
+        name: buyer_addr_country
+        type: TEXT
+      - id: sc_muejkqa2_47
+        name: buyer_addr_comp1
+        type: TEXT
+      - id: sc_muejkqa2_48
+        name: buyer_addr_comp2
+        type: TEXT
+      - id: sc_muejkqa2_49
+        name: buyer_addr_comps
+        type: TEXT
+      - id: sc_muejkqa2_4a
+        name: seller_addr_country
+        type: TEXT
+      - id: sc_muejkqa2_4b
+        name: seller_addr_comp1
+        type: TEXT
+      - id: sc_muejkqa2_4c
+        name: seller_addr_comp2
+        type: TEXT
+      - id: sc_muejkqa2_4d
+        name: seller_addr_comps
+        type: TEXT
+      - id: sc_muejkqa2_4e
+        name: sys_creation_template_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_4f
+        name: singleton_trans_name
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_4g
+        name: parent_ship_trans_name
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_4h
+        name: total_shipped_qty3
+        type: DOUBLE
+      - id: sc_muejkqa2_4i
+        name: total_received_qty3
+        type: DOUBLE
+      - id: sc_muejkqa2_4j
+        name: total_ordered_qty3
+        type: DOUBLE
+      - id: sc_muejkqa2_4k
+        name: quantity_uom3
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_4l
+        name: mvmt_trans_name
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_4m
+        name: asn_number
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_4n
+        name: asn_status
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_4o
+        name: buyer_allowance_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_4p
+        name: buyer_allowance_uom
+        type: TEXT
+      - id: sc_muejkqa2_4q
+        name: cust_of_buyer_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_4r
+        name: delivery_ready_notifications
+        type: TEXT
+      - id: sc_muejkqa2_4s
+        name: equipment_type
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_4t
+        name: expedite1
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_4u
+        name: external_contract_no
+        type: TEXT
+      - id: sc_muejkqa2_4v
+        name: ext_packing_list_no
+        type: TEXT
+      - id: sc_muejkqa2_4w
+        name: hazmat_contact_name
+        type: TEXT
+      - id: sc_muejkqa2_4x
+        name: hazmat_contact_phone
+        type: TEXT
+      - id: sc_muejkqa2_4y
+        name: hazmat_packaging_group
+        type: TEXT
+      - id: sc_muejkqa2_4z
+        name: inco_terms
+        type: TEXT
+      - id: sc_muejkqa2_50
+        name: international
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_51
+        name: is_hazardous
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_52
+        name: is_over_dimension
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_53
+        name: is_over_weight
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_54
+        name: odc_certified
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_55
+        name: package_type
+        type: TEXT
+      - id: sc_muejkqa2_56
+        name: rmanumber
+        type: TEXT
+      - id: sc_muejkqa2_57
+        name: seal_no
+        type: TEXT
+      - id: sc_muejkqa2_58
+        name: ship_from_close_time
+        type: BIGINT(20)
+      - id: sc_muejkqa2_59
+        name: swpmcertified
+        type: TEXT
+      - id: sc_muejkqa2_5a
+        name: sys_customs_broker_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5b
+        name: sys_fulfillment_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5c
+        name: sys_hazard_class_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5d
+        name: sys_hazmat_number_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5e
+        name: sys_packing_list_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5f
+        name: sys_proper_ship_name_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5g
+        name: sys_sales_order_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5h
+        name: tms_default_freight_class
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_5i
+        name: tms_equipment_number
+        type: TEXT
+      - id: sc_muejkqa2_5j
+        name: tms_execution_status
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_5k
+        name: tms_pro_number
+        type: TEXT
+      - id: sc_muejkqa2_5l
+        name: tms_routing_group
+        type: TEXT
+      - id: sc_muejkqa2_5m
+        name: tms_size
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_5n
+        name: tms_sys_service_level_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5o
+        name: tms_total_scale_weight_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_5p
+        name: tms_total_scale_weight_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_5q
+        name: total_allowance_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_5r
+        name: total_allowance_uom
+        type: TEXT
+      - id: sc_muejkqa2_5s
+        name: total_no_of_packages_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_5t
+        name: total_no_of_packages_uom
+        type: TEXT
+      - id: sc_muejkqa2_5u
+        name: total_value_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_5v
+        name: total_value_uom
+        type: TEXT
+      - id: sc_muejkqa2_5w
+        name: delivery_dd_primary_demander
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_5x
+        name: delivery_schedule_type
+        type: TEXT
+      - id: sc_muejkqa2_5y
+        name: distinct_item_count
+        type: BIGINT(20)
+      - id: sc_muejkqa2_5z
+        name: off_network_carrier
+        type: TEXT
+      - id: sc_muejkqa2_60
+        name: pickup_dd_primary_demander
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_61
+        name: pickup_schedule_type
+        type: TEXT
+      - id: sc_muejkqa2_62
+        name: sch_balance_item
+        type: TEXT
+      - id: sc_muejkqa2_63
+        name: sch_dacomments
+        type: TEXT
+      - id: sc_muejkqa2_64
+        name: sch_delivery_auto_sch_status
+        type: TEXT
+      - id: sc_muejkqa2_65
+        name: sch_num_required_delivery_appt
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_66
+        name: sch_num_required_pickup_appts
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_67
+        name: sch_origin_vendor
+        type: TEXT
+      - id: sc_muejkqa2_68
+        name: sch_pickup_auto_sch_status
+        type: TEXT
+      - id: sc_muejkqa2_69
+        name: sch_pickup_load_type
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_6a
+        name: sch_pocomments1
+        type: TEXT
+      - id: sc_muejkqa2_6b
+        name: sch_pocomments2
+        type: TEXT
+      - id: sc_muejkqa2_6c
+        name: sch_scheduled_receiving_date
+        type: TEXT
+      - id: sc_muejkqa2_6d
+        name: sch_sys_shipment_owning_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_6e
+        name: sch_vendor_pallet_qty
+        type: TEXT
+      - id: sc_muejkqa2_6f
+        name: oms_acklowledgement_type
+        type: TEXT
+      - id: sc_muejkqa2_6g
+        name: oms_actual_receipt_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_6h
+        name: oms_carrier_name
+        type: TEXT
+      - id: sc_muejkqa2_6i
+        name: carrier_scac
+        type: TEXT
+      - id: sc_muejkqa2_6j
+        name: container_number
+        type: TEXT
+      - id: sc_muejkqa2_6k
+        name: oms_created_in_tms
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_6l
+        name: oms_delay_reason
+        type: TEXT
+      - id: sc_muejkqa2_6m
+        name: editrans_set
+        type: TEXT
+      - id: sc_muejkqa2_6n
+        name: editrans_set_ctrl_no
+        type: TEXT
+      - id: sc_muejkqa2_6o
+        name: editrans_set_purpose
+        type: TEXT
+      - id: sc_muejkqa2_6p
+        name: edi_receiver_id
+        type: TEXT
+      - id: sc_muejkqa2_6q
+        name: edi_receiver_type
+        type: TEXT
+      - id: sc_muejkqa2_6r
+        name: edi_sender_id
+        type: TEXT
+      - id: sc_muejkqa2_6s
+        name: edi_sender_type
+        type: TEXT
+      - id: sc_muejkqa2_6t
+        name: equipment_initials
+        type: TEXT
+      - id: sc_muejkqa2_6u
+        name: oms_equipment_size
+        type: TEXT
+      - id: sc_muejkqa2_6v
+        name: oms_freight_currency
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_6w
+        name: oms_hold_shipment
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_6x
+        name: movement_number
+        type: TEXT
+      - id: sc_muejkqa2_6y
+        name: old_movement_no
+        type: TEXT
+      - id: sc_muejkqa2_6z
+        name: oms_order_status
+        type: TEXT
+      - id: sc_muejkqa2_70
+        name: origin
+        type: TEXT
+      - id: sc_muejkqa2_71
+        name: orig_to_org
+        type: TEXT
+      - id: sc_muejkqa2_72
+        name: oms_other_data
+        type: LONGTEXT
+      - id: sc_muejkqa2_73
+        name: oms_revision_no
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_74
+        name: oms_seal_number
+        type: TEXT
+      - id: sc_muejkqa2_75
+        name: orig_ship_from_site_name
+        type: TEXT
+      - id: sc_muejkqa2_76
+        name: orig_ship_to_site_name
+        type: TEXT
+      - id: sc_muejkqa2_77
+        name: oms_stop_sequence_number
+        type: TEXT
+      - id: sc_muejkqa2_78
+        name: scc_sys_trans_mode_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_79
+        name: oms_total_cheps_in
+        type: DOUBLE
+      - id: sc_muejkqa2_7a
+        name: oms_total_cheps_out
+        type: DOUBLE
+      - id: sc_muejkqa2_7b
+        name: oms_total_net_weight
+        type: DOUBLE
+      - id: sc_muejkqa2_7c
+        name: oms_total_pallets_in
+        type: DOUBLE
+      - id: sc_muejkqa2_7d
+        name: oms_total_pallets_out
+        type: DOUBLE
+      - id: sc_muejkqa2_7e
+        name: tracking_number
+        type: TEXT
+      - id: sc_muejkqa2_7f
+        name: oms_transmission_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_7g
+        name: oms_vendor_delivery_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_7h
+        name: oms_vendor_partner_site_name
+        type: TEXT
+      - id: sc_muejkqa2_7i
+        name: oms_vendor_trans_mgr_code
+        type: TEXT
+      - id: sc_muejkqa2_7j
+        name: allowance_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_7k
+        name: allowance_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_7l
+        name: consolidated_cost_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_7m
+        name: consolidated_cost_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_7n
+        name: declared_value_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_7o
+        name: declared_value_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_7p
+        name: del_change_reason_code
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_7q
+        name: estimated_delivery_dt_local
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_7r
+        name: estimated_dlv_target_dt_local
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_7s
+        name: estimated_ship_dt_local
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_7t
+        name: estimated_ship_target_dt_local
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_7u
+        name: last_pos_update_time
+        type: DATETIME(6)
+      - id: sc_muejkqa2_7v
+        name: ltlcost_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_7w
+        name: ltlcost_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_7x
+        name: non_consolidated_cost_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_7y
+        name: non_consolidated_cost_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_7z
+        name: pickup_change_reason_code
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_80
+        name: ship_with_group_volume_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_81
+        name: ship_with_group_volume_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_82
+        name: ship_with_group_weight_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_83
+        name: ship_with_group_weight_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_84
+        name: sys_quote_plan_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_85
+        name: sys_tender_plan_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_86
+        name: tlcost_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_87
+        name: tlcost_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_88
+        name: tms_accessorial_list
+        type: TEXT
+      - id: sc_muejkqa2_89
+        name: tms_accessorial_names_list
+        type: TEXT
+      - id: sc_muejkqa2_8a
+        name: tms_actual_due
+        type: DATETIME(6)
+      - id: sc_muejkqa2_8b
+        name: tms_advance_purchase_number
+        type: TEXT
+      - id: sc_muejkqa2_8c
+        name: tms_allocation_percentage
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_8d
+        name: tms_allw_opr_cost_amount
+        type: FLOAT
+      - id: sc_muejkqa2_8e
+        name: tms_allw_opr_cost_uom
+        type: VARCHAR(256)
+      - id: sc_muejkqa2_8f
+        name: tms_all_times_in_local_time
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_8g
+        name: tms_apply_across_siblings
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_8h
+        name: tms_authorization_code
+        type: TEXT
+      - id: sc_muejkqa2_8i
+        name: tms_base_rate_level
+        type: TEXT
+      - id: sc_muejkqa2_8j
+        name: tms_bill_to_site_integ_ref
+        type: TEXT
+      - id: sc_muejkqa2_8k
+        name: tms_booking_number
+        type: TEXT
+      - id: sc_muejkqa2_8l
+        name: tms_broker_service_level
+        type: TEXT
+      - id: sc_muejkqa2_8m
+        name: tms_buyer_id
+        type: TEXT
+      - id: sc_muejkqa2_8n
+        name: tms_carbon_emission_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_8o
+        name: tms_carbon_emission_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_8p
+        name: tms_carrier_for_status
+        type: TEXT
+      - id: sc_muejkqa2_8q
+        name: tms_carrier_integ_ref
+        type: TEXT
+      - id: sc_muejkqa2_8r
+        name: tms_carrier_pro_number_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_8s
+        name: tms_carrier_ref
+        type: TEXT
+      - id: sc_muejkqa2_8t
+        name: tms_check_number
+        type: TEXT
+      - id: sc_muejkqa2_8u
+        name: tms_compliancy_codes
+        type: TEXT
+      - id: sc_muejkqa2_8v
+        name: tms_consider_for_pooling
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_8w
+        name: tms_conversion_event_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_8x
+        name: tms_conversion_rate
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_8y
+        name: tms_cost_alloc_description
+        type: TEXT
+      - id: sc_muejkqa2_8z
+        name: tms_cost_description
+        type: TEXT
+      - id: sc_muejkqa2_90
+        name: tms_credit_acct
+        type: TEXT
+      - id: sc_muejkqa2_91
+        name: tms_credit_card_cvv
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_92
+        name: tms_credit_card_info
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_93
+        name: tms_credit_card_owner
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_94
+        name: tms_csr
+        type: TEXT
+      - id: sc_muejkqa2_95
+        name: tms_customer_order_ref
+        type: TEXT
+      - id: sc_muejkqa2_96
+        name: tms_debit_acct
+        type: TEXT
+      - id: sc_muejkqa2_97
+        name: tms_delivery_attempts
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_98
+        name: tms_delivery_instruction
+        type: TEXT
+      - id: sc_muejkqa2_99
+        name: tms_delivery_sequence
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_9a
+        name: tms_destination_location
+        type: TEXT
+      - id: sc_muejkqa2_9b
+        name: tms_direct_distance
+        type: DOUBLE
+      - id: sc_muejkqa2_9c
+        name: tms_discounted_stop
+        type: TEXT
+      - id: sc_muejkqa2_9d
+        name: tms_discount_acc_code_ids
+        type: TEXT
+      - id: sc_muejkqa2_9e
+        name: tms_dispatch_response_code
+        type: TEXT
+      - id: sc_muejkqa2_9f
+        name: tms_disposition
+        type: TEXT
+      - id: sc_muejkqa2_9g
+        name: tms_distance
+        type: DOUBLE
+      - id: sc_muejkqa2_9h
+        name: tms_distance_source
+        type: TEXT
+      - id: sc_muejkqa2_9i
+        name: tms_distance_type
+        type: TEXT
+      - id: sc_muejkqa2_9j
+        name: tms_distance_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_9k
+        name: tms_driver_type
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_9l
+        name: tms_enable_promotion
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_9m
+        name: tms_equipment_model
+        type: TEXT
+      - id: sc_muejkqa2_9n
+        name: tms_etaport_of_discharge
+        type: DATETIME(6)
+      - id: sc_muejkqa2_9o
+        name: tms_etdport_of_loading
+        type: DATETIME(6)
+      - id: sc_muejkqa2_9p
+        name: tms_expedite
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_9q
+        name: tms_export_customs_status
+        type: DECIMAL(5,0)
+      - id: sc_muejkqa2_9r
+        name: tms_export_customs_status_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_9s
+        name: tms_fed_ex_pickup_location
+        type: TEXT
+      - id: sc_muejkqa2_9t
+        name: tms_fed_ex_pickup_status
+        type: TEXT
+      - id: sc_muejkqa2_9u
+        name: tms_functional_grp_ctrl_number
+        type: TEXT
+      - id: sc_muejkqa2_9v
+        name: tms_functional_grp_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_9w
+        name: tms_fwd_client_addr_comp1
+        type: TEXT
+      - id: sc_muejkqa2_9x
+        name: tms_fwd_client_addr_comp2
+        type: TEXT
+      - id: sc_muejkqa2_9y
+        name: tms_fwd_client_addr_comps
+        type: TEXT
+      - id: sc_muejkqa2_9z
+        name: tms_fwd_client_addr_country
+        type: TEXT
+      - id: sc_muejkqa2_a0
+        name: tms_height
+        type: DOUBLE
+      - id: sc_muejkqa2_a1
+        name: tms_import_customs_status
+        type: DECIMAL(5,0)
+      - id: sc_muejkqa2_a2
+        name: tms_import_customs_status_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_a3
+        name: tms_integ_file_name
+        type: TEXT
+      - id: sc_muejkqa2_a4
+        name: tms_is_changed_after_planning
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_a5
+        name: tms_is_combined
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_a6
+        name: tms_last_rr_distance_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_a7
+        name: tms_last_rr_quantity1_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_a8
+        name: tms_last_rr_quantity2_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_a9
+        name: tms_last_rr_spaces_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_aa
+        name: tms_last_rr_volume_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_ab
+        name: tms_last_rr_weight_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_ac
+        name: tms_leg_sequence_no
+        type: BIGINT(20)
+      - id: sc_muejkqa2_ad
+        name: tms_length
+        type: DOUBLE
+      - id: sc_muejkqa2_ae
+        name: tms_linear_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_af
+        name: tms_load_reference
+        type: TEXT
+      - id: sc_muejkqa2_ag
+        name: tms_load_sequence
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_ah
+        name: tms_location_basis
+        type: TEXT
+      - id: sc_muejkqa2_ai
+        name: tms_lock_shipment_structure
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_aj
+        name: tms_manually_cancelled_appt
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_ak
+        name: tms_manual_dispatch
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_al
+        name: tms_master_bill_of_lading
+        type: TEXT
+      - id: sc_muejkqa2_am
+        name: tms_menlo_load_number
+        type: TEXT
+      - id: sc_muejkqa2_an
+        name: tms_mode
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_ao
+        name: tms_offnw_dlv_carr_contact
+        type: TEXT
+      - id: sc_muejkqa2_ap
+        name: tms_offnw_pkup_carr_contact
+        type: TEXT
+      - id: sc_muejkqa2_aq
+        name: tms_operating_price_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_ar
+        name: tms_operating_price_uom
+        type: TEXT
+      - id: sc_muejkqa2_as
+        name: tms_order_origin_state
+        type: TEXT
+      - id: sc_muejkqa2_at
+        name: tms_order_type_code
+        type: TEXT
+      - id: sc_muejkqa2_au
+        name: tms_payment_option
+        type: TEXT
+      - id: sc_muejkqa2_av
+        name: tms_pickup_attempts
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_aw
+        name: tms_pickup_instruction
+        type: TEXT
+      - id: sc_muejkqa2_ax
+        name: tms_pickup_number
+        type: TEXT
+      - id: sc_muejkqa2_ay
+        name: tms_pickup_sequence
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_az
+        name: tms_planned_delivery_end
+        type: DATETIME(6)
+      - id: sc_muejkqa2_b0
+        name: tms_planned_delivery_start
+        type: DATETIME(6)
+      - id: sc_muejkqa2_b1
+        name: tms_planned_pickup_end
+        type: DATETIME(6)
+      - id: sc_muejkqa2_b2
+        name: tms_planned_pickup_start
+        type: DATETIME(6)
+      - id: sc_muejkqa2_b3
+        name: tms_planning_group_id
+        type: TEXT
+      - id: sc_muejkqa2_b4
+        name: tms_plan_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_b5
+        name: tms_plan_id
+        type: TEXT
+      - id: sc_muejkqa2_b6
+        name: tms_plan_status
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_b7
+        name: tms_pool_priority
+        type: BIGINT(20)
+      - id: sc_muejkqa2_b8
+        name: tms_pool_priority_level
+        type: TEXT
+      - id: sc_muejkqa2_b9
+        name: tms_price_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_ba
+        name: tms_price_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_bb
+        name: tms_rcv_client_addr_comp1
+        type: TEXT
+      - id: sc_muejkqa2_bc
+        name: tms_rcv_client_addr_comp2
+        type: TEXT
+      - id: sc_muejkqa2_bd
+        name: tms_rcv_client_addr_comps
+        type: TEXT
+      - id: sc_muejkqa2_be
+        name: tms_rcv_client_addr_country
+        type: TEXT
+      - id: sc_muejkqa2_bf
+        name: tms_ready_for_delivery_time
+        type: DATETIME(6)
+      - id: sc_muejkqa2_bg
+        name: tms_ready_for_pickup_time
+        type: DATETIME(6)
+      - id: sc_muejkqa2_bh
+        name: tms_received_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_bi
+        name: tms_receiving_slip_number
+        type: TEXT
+      - id: sc_muejkqa2_bj
+        name: tms_request_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_bk
+        name: tms_return_shipment
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_bl
+        name: tms_shipment_number_purpose
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_bm
+        name: tms_shipment_received_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_bn
+        name: tms_shipment_template_type
+        type: TEXT
+      - id: sc_muejkqa2_bo
+        name: tms_shipment_type
+        type: TEXT
+      - id: sc_muejkqa2_bp
+        name: tms_ship_distribution_code
+        type: TEXT
+      - id: sc_muejkqa2_bq
+        name: tms_ship_from_site_group
+        type: TEXT
+      - id: sc_muejkqa2_br
+        name: tms_ship_from_site_integ_ref
+        type: TEXT
+      - id: sc_muejkqa2_bs
+        name: tms_ship_to_site_group
+        type: TEXT
+      - id: sc_muejkqa2_bt
+        name: tms_ship_to_site_integ_ref
+        type: TEXT
+      - id: sc_muejkqa2_bu
+        name: tms_ship_with_group_id
+        type: TEXT
+      - id: sc_muejkqa2_bv
+        name: tms_should_skip_mvmt_gen
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_bw
+        name: tms_status
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_bx
+        name: tms_std_carrier_alpha_code
+        type: TEXT
+      - id: sc_muejkqa2_by
+        name: tms_sys_account_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_bz
+        name: tms_sys_carrier_service_lvl_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c0
+        name: tms_sys_controlling_site_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c1
+        name: tms_sys_conv_shipt_tpl_cfg_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c2
+        name: tms_sys_distance_plcy_ovr_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c3
+        name: tms_sys_distance_policy_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c4
+        name: tms_sys_dlv_carr_contact_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c5
+        name: tms_sys_followup_shipment_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c6
+        name: tms_sys_fwd_client_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c7
+        name: tms_sys_itinerary_route_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c8
+        name: tms_sys_lead_logistics_prov_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_c9
+        name: tms_sys_pkup_carr_contact_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_ca
+        name: tms_sys_port_of_discharge_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_cb
+        name: tms_sys_port_of_loading_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_cc
+        name: tms_sys_rcv_client_org_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_cd
+        name: tms_sys_return_shipment_lin_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_ce
+        name: tms_sys_shipment_tpl_cfg_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_cf
+        name: tms_sys_static_route_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_cg
+        name: tms_tcn_number
+        type: TEXT
+      - id: sc_muejkqa2_ch
+        name: tms_temperature
+        type: TEXT
+      - id: sc_muejkqa2_ci
+        name: tms_terms_accepted_by
+        type: TEXT
+      - id: sc_muejkqa2_cj
+        name: tms_total_spaces
+        type: DOUBLE
+      - id: sc_muejkqa2_ck
+        name: tms_to_be_hard_deleted
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_cl
+        name: tms_track_action_name
+        type: TEXT
+      - id: sc_muejkqa2_cm
+        name: tms_trans_service_type
+        type: TEXT
+      - id: sc_muejkqa2_cn
+        name: tms_trasaction_opr_cost_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_co
+        name: tms_trasaction_opr_cost_uom
+        type: TEXT
+      - id: sc_muejkqa2_cp
+        name: tms_units
+        type: TEXT
+      - id: sc_muejkqa2_cq
+        name: tms_unload_sequence
+        type: DECIMAL(9,0)
+      - id: sc_muejkqa2_cr
+        name: tms_uuid
+        type: TEXT
+      - id: sc_muejkqa2_cs
+        name: vehicle_no
+        type: TEXT
+      - id: sc_muejkqa2_ct
+        name: tms_whse_release_date
+        type: DATETIME(6)
+      - id: sc_muejkqa2_cu
+        name: tms_width
+        type: DOUBLE
+      - id: sc_muejkqa2_cv
+        name: total_shipped_quantity_amount
+        type: DOUBLE
+      - id: sc_muejkqa2_cw
+        name: total_shipped_quantity_uom
+        type: DECIMAL(6,0)
+      - id: sc_muejkqa2_cx
+        name: scpt_initial_confirmed
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_cy
+        name: scpt_initial_delivered
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_cz
+        name: scpt_initial_intransit
+        type: DECIMAL(1,0)
+      - id: sc_muejkqa2_d0
+        name: TMS_TRANSPORTATION_MODE
+        type: TEXT
+      - id: sc_muejkqa2_d1
+        name: inco_terms_enum
+        type: TEXT
+      - id: sc_muejkqa2_d2
+        name: tms_total_half_spaces
+        type: DOUBLE
+      - id: sc_muejkqa2_d3
+        name: tms_sys_product_group_level_id
+        type: BIGINT(20)
+      - id: sc_muejkqa2_d4
+        name: reconciled
+        type: TINYINT(1)
+      - id: sc_muejkqa2_d5
+        name: oms_ext_ship_from_site_name
+        type: TEXT
+      - id: sc_muejkqa2_d6
+        name: oms_ext_ship_to_site_name
+        type: TEXT
+      - id: sc_muejkqa2_d7
+        name: ES_LMD
+        type: DATETIME(6)
+      - id: sc_muejkqa2_d8
+        name: DIM_OR_FACT_TABLE
+        type: VARCHAR(64)
+      - id: sc_muejkqa2_d9
+        name: ERROR_RESYNC_COUNT
+        type: INT(11)
+      - id: sc_muejkqa2_da
+        name: ERROR_PENALTY_COUNT
+        type: INT(11)
+      - id: sc_muejkqa2_db
+        name: ERROR_FEEDBACK_COUNT
+        type: INT(11)
+      - id: sc_muejkqa2_dc
+        name: PADF_NUM_FIELD1
+        type: BIGINT(20)
+      - id: sc_muejkqa2_dd
+        name: PADF_NUM_FIELD2
+        type: BIGINT(20)
+      - id: sc_muejkqa2_de
+        name: PADF_NUM_FIELD3
+        type: BIGINT(20)
+      - id: sc_muejkqa2_df
+        name: PADF_NUM_FIELD4
+        type: DOUBLE
+      - id: sc_muejkqa2_dg
+        name: PADF_NUM_FIELD5
+        type: DOUBLE
+      - id: sc_muejkqa2_dh
+        name: PADF_NUM_FIELD6
+        type: DOUBLE
+      - id: sc_muejkqa2_di
+        name: PADF_STR_FIELD1
+        type: TEXT
+      - id: sc_muejkqa2_dj
+        name: PADF_STR_FIELD2
+        type: TEXT
+      - id: sc_muejkqa2_dk
+        name: PADF_STR_FIELD3
+        type: TEXT
+      - id: sc_muejkqa2_dl
+        name: PADF_STR_FIELD4
+        type: TEXT
+      - id: sc_muejkqa2_dm
+        name: PADF_STR_FIELD5
+        type: TEXT
+      - id: sc_muejkqa2_dn
+        name: PADF_STR_FIELD6
+        type: TEXT
+      - id: sc_muejkqa2_do
+        name: PADF_STR_FIELD7
+        type: TEXT
+      - id: sc_muejkqa2_dp
+        name: PADF_STR_FIELD8
+        type: TEXT
+      - id: sc_muejkqa2_dq
+        name: PADF_STR_FIELD9
+        type: TEXT
+      - id: sc_muejkqa2_dr
+        name: SYS_PARTNER_PROCESS_TYPE_ID
+        type: BIGINT(20)
+      - id: sc_muejkqa2_ds
+        name: TMS_DIRECTION
+        type: VARCHAR(256)
+    condition: 1=1
+lookups:
+  - id: lkp_adjust_type_ent
+    tableName: enterprise
+    cache: true
+    strategy: left_join
+    streamKeyFields:
+      - sys_ent_id
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: ENT_NAME
+        newName: ENT_NAME
+    name: Lookup enterprise scope
+joins:
+  - id: jn_muejnzu6_dt
+    leftTable: enumeration_nc
+    rightTable: shipment_header_nc
+    joinType: INNER
+    onConditions:
+      - left: en.sys_enum_id
+        op: =
+        right: sh.sys_shiph_id
+      - left: en.enum_type
+        op: =
+        right: sh.billto_site_id
+    leftAlias: en
+    rightAlias: sh
+ui:
+  x: -50
+  y: 31.5

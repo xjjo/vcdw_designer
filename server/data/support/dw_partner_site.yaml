@@ -1,0 +1,60 @@
+id: support_dw_partner_site
+kind: support
+name: dw_partner_site
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_partner_site_0
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_partner_site_1
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_partner_site_2
+    name: SITE_ALIAS
+    type: VARCHAR(164)
+  - id: sc_dw_partner_site_3
+    name: TIME_ZONE_ID
+    type: VARCHAR(64)
+  - id: sc_dw_partner_site_4
+    name: EXTERNAL_REF_NO
+    type: VARCHAR(164)
+  - id: sc_dw_partner_site_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_partner_site_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_partner_site_7
+    name: IS_ACTIVE
+    type: TINYINT(4)
+  - id: sc_dw_partner_site_8
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_partner_site_9
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_partner_site_10
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_partner_site_11
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_partner_site_12
+    name: ADDR_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_partner_site_13
+    name: ADDR_SEARCH_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_partner_site_14
+    name: ADDR_SEARCH_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_partner_site_15
+    name: ADDR_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_partner_site_16
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_partner_site_17
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,156 @@
+id: support_scc_container_move_link_nc
+kind: support
+name: scc_container_move_link_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_container_move_link_nc_0
+    name: BOOKING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_link_nc_1
+    name: CONTAINER_NO
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_link_nc_2
+    name: EQUIPMENT_MODE
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_link_nc_3
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_4
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_5
+    name: RETURN_MOVEMENT
+    type: DECIMAL(1,0)
+  - id: sc_scc_container_move_link_nc_6
+    name: SEQUENCE_NO
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_link_nc_7
+    name: SYS_CONTAINER_MOVE_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_8
+    name: SYS_CONTAINER_MOVE_LINK_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_9
+    name: SYS_MOVEMENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_10
+    name: TMS_DEMURRAGE_TIME
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_11
+    name: TMS_DETENTION_TIME
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_12
+    name: TMS_FREE_DEMURRAGE_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_13
+    name: TMS_FREE_DETMUR_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_14
+    name: TMS_INCURRED_DEMURRAGE_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_15
+    name: TMS_INCURRED_DETMUR_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_16
+    name: TMS_DELIVERY_DEM_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_container_move_link_nc_17
+    name: TMS_DELIVERY_DEM_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_link_nc_18
+    name: TMS_DELIVERY_DEM_DET_LOCATION
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_link_nc_19
+    name: TMS_DELIVERY_DEM_START
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_20
+    name: TMS_DELIVERY_DETMURCOST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_container_move_link_nc_21
+    name: TMS_DELIVERY_DETMURCOST_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_link_nc_22
+    name: TMS_DELIVERY_DETMURSTART
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_23
+    name: TMS_DELIVERY_DET_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_container_move_link_nc_24
+    name: TMS_DELIVERY_DET_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_link_nc_25
+    name: TMS_DELIVERY_DET_START
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_26
+    name: TMS_DELIVERY_FREE_DET_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_27
+    name: TMS_DELIVERY_INC_DET_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_28
+    name: TMS_PICKUP_DEM_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_container_move_link_nc_29
+    name: TMS_PICKUP_DEM_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_link_nc_30
+    name: TMS_PICKUP_DEM_DET_LOCATION
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_link_nc_31
+    name: TMS_PICKUP_DEM_START
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_32
+    name: TMS_PICKUP_DETMURCOST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_container_move_link_nc_33
+    name: TMS_PICKUP_DETMURCOST_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_link_nc_34
+    name: TMS_PICKUP_DETMURSTART
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_35
+    name: TMS_PICKUP_DET_COST_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_container_move_link_nc_36
+    name: TMS_PICKUP_DET_COST_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_container_move_link_nc_37
+    name: TMS_PICKUP_DET_START
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_38
+    name: TMS_PICKUP_FREE_DEM_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_39
+    name: TMS_PICKUP_FREE_DETMURDAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_40
+    name: TMS_PICKUP_FREE_DET_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_41
+    name: TMS_PICKUP_INC_DEM_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_42
+    name: TMS_PICKUP_INC_DETMURDAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_43
+    name: TMS_PICKUP_INC_DET_DAYS
+    type: BIGINT(20)
+  - id: sc_scc_container_move_link_nc_44
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_container_move_link_nc_45
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_container_move_link_nc_46
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_container_move_link_nc_47
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_container_move_link_nc_48
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_container_move_link_nc_49
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

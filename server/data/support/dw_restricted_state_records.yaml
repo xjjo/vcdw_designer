@@ -1,0 +1,18 @@
+id: support_dw_restricted_state_records
+kind: support
+name: dw_restricted_state_records
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_restricted_state_records_0
+    name: SYS_ID
+    type: BIGINT(20)
+  - id: sc_dw_restricted_state_records_1
+    name: TABLE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_restricted_state_records_2
+    name: STATE
+    type: VARCHAR(128)
+  - id: sc_dw_restricted_state_records_3
+    name: ES_LMD
+    type: VARCHAR(64)

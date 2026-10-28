@@ -1,0 +1,21 @@
+id: support_dw_delete_audit_temp
+kind: support
+name: dw_delete_audit_temp
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_delete_audit_temp_0
+    name: SYS_ID
+    type: BIGINT(20)
+  - id: sc_dw_delete_audit_temp_1
+    name: TABLE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_delete_audit_temp_2
+    name: DELETE_DATE
+    type: DATETIME(6)
+  - id: sc_dw_delete_audit_temp_3
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_delete_audit_temp_4
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

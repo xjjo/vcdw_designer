@@ -1,0 +1,599 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": {
+    "name": "VCDW_Model",
+    "version": "1.0.0",
+    "targetDatabase": "MemSQL",
+    "createdAt": "2026-09-14T17:10:16.392Z"
+  },
+  "auditProfiles": [
+    {
+      "id": "audit_default",
+      "name": "Standard Audit",
+      "description": "Soft-delete flag plus DW create/modify timestamps.",
+      "columns": [
+        {
+          "id": "col_mu1i0si0_1",
+          "nullable": false,
+          "name": "DELETED",
+          "type": "TINYINT(1)",
+          "default": "0",
+          "auditRole": "deleted"
+        },
+        {
+          "id": "col_mu1i0si0_2",
+          "nullable": false,
+          "name": "DW_CREATED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP",
+          "auditRole": "created"
+        },
+        {
+          "id": "col_mu1i0si0_3",
+          "nullable": false,
+          "name": "DW_LAST_MODIFIED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
+          "auditRole": "modified"
+        }
+      ]
+    },
+    {
+      "id": "audit_mu1i5qdm_2h",
+      "name": "New Audit Profile3",
+      "description": "asfdasdf",
+      "columns": [
+        {
+          "id": "col_mu1i5qdm_2i",
+          "nullable": false,
+          "name": "DELETED",
+          "type": "TINYINT(1)",
+          "default": "0",
+          "auditRole": "deleted"
+        },
+        {
+          "id": "col_mu1i5x2i_2j",
+          "nullable": true,
+          "name": "NEW_AUDIT_COL",
+          "type": "DATETIME(6)"
+        }
+      ]
+    }
+  ],
+  "enumerations": [
+    {
+      "id": "enum_mu1i0si0_7",
+      "kind": "enumeration",
+      "name": "currencycode",
+      "displayName": "Currency Code Enumeration",
+      "description": "ISO currency codes.",
+      "domain": "General",
+      "isReferenceTable": true,
+      "sourceNcTable": "enumeration_nc",
+      "enumTypeFilter": "currencycode",
+      "auditProfileId": "audit_default",
+      "columns": [
+        {
+          "id": "col_mu1i0si0_8",
+          "nullable": false,
+          "name": "CURRENCYCODE_KEY",
+          "type": "BIGINT",
+          "isPk": true,
+          "isSk": true,
+          "autoIncrement": true
+        },
+        {
+          "id": "col_mu1i0si0_9",
+          "nullable": false,
+          "name": "ENUM_TYPE",
+          "type": "VARCHAR(64)"
+        },
+        {
+          "id": "col_mu1i0si0_a",
+          "nullable": false,
+          "name": "ENUM_ENTRY_NAME",
+          "type": "VARCHAR(128)",
+          "isNaturalKey": true
+        },
+        {
+          "id": "col_mu1i0si0_b",
+          "nullable": true,
+          "name": "ENUM_ENTRY_VALUE",
+          "type": "VARCHAR(256)"
+        },
+        {
+          "id": "col_mu1i0si0_c",
+          "nullable": true,
+          "name": "OLTP_ID",
+          "type": "BIGINT"
+        },
+        {
+          "id": "col_mu1i0si0_d",
+          "nullable": false,
+          "name": "DELETED",
+          "type": "TINYINT(1)",
+          "default": "0",
+          "auditRole": "deleted"
+        },
+        {
+          "id": "col_mu1i0si0_e",
+          "nullable": false,
+          "name": "DW_CREATED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP",
+          "auditRole": "created"
+        },
+        {
+          "id": "col_mu1i0si0_f",
+          "nullable": false,
+          "name": "DW_LAST_MODIFIED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
+          "auditRole": "modified"
+        }
+      ],
+      "etlConfig": {
+        "isEnabled": true,
+        "priority": 5
+      },
+      "ui": {
+        "x": 60,
+        "y": 380
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "dim_mu1i0si0_j",
+      "kind": "dimension",
+      "name": "customer",
+      "displayName": "Customer Dimension",
+      "description": "Business customers.",
+      "domain": "Logistics",
+      "requiresStaging": false,
+      "sourceNcTables": [
+        "customer_nc"
+      ],
+      "hasDefaultUnknownRow": true,
+      "surrogateKey": "CUSTOMER_KEY",
+      "naturalKey": "OLTP_ID",
+      "shardKey": "OLTP_ID",
+      "sortKeys": [
+        "OLTP_ID",
+        "CUSTOMER_NUMBER"
+      ],
+      "auditProfileId": "audit_default",
+      "columns": [
+        {
+          "id": "col_mu1i0si0_p",
+          "nullable": false,
+          "name": "CUSTOMER_KEY",
+          "type": "BIGINT",
+          "isPk": true,
+          "isSk": true,
+          "autoIncrement": true
+        },
+        {
+          "id": "col_mu1i0si0_q",
+          "nullable": false,
+          "name": "OLTP_ID",
+          "type": "BIGINT",
+          "isNaturalKey": true,
+          "sourceColumn": "oltp_id"
+        },
+        {
+          "id": "col_mu1i0si0_r",
+          "nullable": false,
+          "name": "CUSTOMER_NUMBER",
+          "type": "VARCHAR(64)",
+          "sourceColumn": "customer_number"
+        },
+        {
+          "id": "col_mu1i0si0_s",
+          "nullable": true,
+          "name": "CUSTOMER_NAME",
+          "type": "VARCHAR(255)",
+          "sourceColumn": "customer_name"
+        },
+        {
+          "id": "col_mu1i0si0_t",
+          "nullable": true,
+          "name": "STATUS",
+          "type": "VARCHAR(32)",
+          "sourceColumn": "status"
+        },
+        {
+          "id": "col_mu1i0si0_u",
+          "nullable": false,
+          "name": "DELETED",
+          "type": "TINYINT(1)",
+          "default": "0",
+          "auditRole": "deleted"
+        },
+        {
+          "id": "col_mu1i0si0_v",
+          "nullable": false,
+          "name": "DW_CREATED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP",
+          "auditRole": "created"
+        },
+        {
+          "id": "col_mu1i0si0_w",
+          "nullable": false,
+          "name": "DW_LAST_MODIFIED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
+          "auditRole": "modified"
+        }
+      ],
+      "etlConfig": {
+        "isEnabled": true,
+        "priority": 1
+      },
+      "ui": {
+        "x": 60,
+        "y": 60
+      },
+      "netChange": [
+        {
+          "id": "nc_mu1i0si0_x",
+          "isPrimary": true,
+          "oltpTable": "customer",
+          "ncTable": "customer_nc",
+          "oltpTableSysId": "sys_customer_id",
+          "oltpTableLmd": "last_modified_date"
+        }
+      ]
+    },
+    {
+      "id": "dim_mu1i0si0_11",
+      "kind": "dimension",
+      "name": "location",
+      "displayName": "Location Dimension",
+      "description": "Facilities / locations with geography.",
+      "domain": "Logistics",
+      "requiresStaging": true,
+      "sourceNcTables": [
+        "location_nc"
+      ],
+      "hasDefaultUnknownRow": true,
+      "surrogateKey": "LOCATION_KEY",
+      "naturalKey": "OLTP_ID",
+      "shardKey": "OLTP_ID",
+      "sortKeys": [
+        "OLTP_ID"
+      ],
+      "auditProfileId": "audit_default",
+      "columns": [
+        {
+          "id": "col_mu1i0si0_17",
+          "nullable": false,
+          "name": "LOCATION_KEY",
+          "type": "BIGINT",
+          "isPk": true,
+          "isSk": true,
+          "autoIncrement": true
+        },
+        {
+          "id": "col_mu1i0si0_18",
+          "nullable": false,
+          "name": "OLTP_ID",
+          "type": "BIGINT",
+          "isNaturalKey": true,
+          "sourceColumn": "oltp_id"
+        },
+        {
+          "id": "col_mu1i0si0_19",
+          "nullable": true,
+          "name": "LOCATION_NAME",
+          "type": "VARCHAR(255)",
+          "sourceColumn": "location_name"
+        },
+        {
+          "id": "col_mu1i0si0_1a",
+          "nullable": true,
+          "name": "COUNTRY_CODE",
+          "type": "VARCHAR(3)",
+          "sourceColumn": "country_code"
+        },
+        {
+          "id": "col_mu1i0si0_1b",
+          "nullable": true,
+          "name": "STATE_CODE",
+          "type": "VARCHAR(8)",
+          "sourceColumn": "state_code"
+        },
+        {
+          "id": "col_mu1i0si0_1c",
+          "nullable": true,
+          "name": "CITY_NAME",
+          "type": "VARCHAR(128)",
+          "sourceColumn": "city_name"
+        },
+        {
+          "id": "col_mu1i0si0_1d",
+          "nullable": true,
+          "name": "GEO_SK",
+          "type": "BIGINT",
+          "isFk": true
+        },
+        {
+          "id": "col_mu1i0si0_1e",
+          "nullable": false,
+          "name": "DELETED",
+          "type": "TINYINT(1)",
+          "default": "0",
+          "auditRole": "deleted"
+        },
+        {
+          "id": "col_mu1i0si0_1f",
+          "nullable": false,
+          "name": "DW_CREATED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP",
+          "auditRole": "created"
+        },
+        {
+          "id": "col_mu1i0si0_1g",
+          "nullable": false,
+          "name": "DW_LAST_MODIFIED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
+          "auditRole": "modified"
+        }
+      ],
+      "etlConfig": {
+        "isEnabled": true,
+        "priority": 1
+      },
+      "ui": {
+        "x": 60,
+        "y": 210
+      },
+      "stgTable": "location_stg",
+      "stgErrorTable": "location_stg_error",
+      "netChange": [
+        {
+          "id": "nc_mu1i0si0_1h",
+          "isPrimary": true,
+          "oltpTable": "location",
+          "ncTable": "location_nc",
+          "oltpTableSysId": "sys_location_id",
+          "oltpTableLmd": "last_modified_date"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact_mu1i0si0_1l",
+      "kind": "fact",
+      "name": "dw_shipment_fact",
+      "displayName": "Shipment Fact",
+      "description": "One row per shipment header.",
+      "domain": "Logistics",
+      "factType": "transaction",
+      "primaryNcTable": "shipment_header_nc",
+      "secondaryNcTables": [
+        "shipment_line_nc"
+      ],
+      "stagingTable": "shipment_fact_stg",
+      "errorTable": "shipment_fact_stg_error",
+      "shardKey": "OLTP_ID",
+      "sortKeys": [
+        "OLTP_ID",
+        "REPORT_DATE_KEY",
+        "DELETED"
+      ],
+      "auditProfileId": "audit_default",
+      "columns": [
+        {
+          "id": "col_mu1i0si0_1t",
+          "nullable": false,
+          "name": "SHIPMENT_FACT_KEY",
+          "type": "BIGINT",
+          "isPk": true,
+          "isSk": true,
+          "autoIncrement": true
+        },
+        {
+          "id": "col_mu1i0si0_1u",
+          "nullable": false,
+          "name": "OLTP_ID",
+          "type": "BIGINT",
+          "isNaturalKey": true,
+          "sourceColumn": "oltp_id"
+        },
+        {
+          "id": "col_mu1i0si0_1v",
+          "nullable": true,
+          "name": "REPORT_DATE_KEY",
+          "type": "BIGINT",
+          "isDateKey": true
+        },
+        {
+          "id": "col_mu1i0si0_1w",
+          "nullable": true,
+          "name": "REPORT_DATE_TS",
+          "type": "DATETIME(6)"
+        },
+        {
+          "id": "col_mu1i0si0_1x",
+          "nullable": true,
+          "name": "CUSTOMER_KEY",
+          "type": "BIGINT",
+          "isFk": true,
+          "referencedEntityId": "dim_mu1i0si0_j"
+        },
+        {
+          "id": "col_mu1i0si0_1y",
+          "nullable": true,
+          "name": "ORIGIN_LOCATION_KEY",
+          "type": "BIGINT",
+          "isFk": true,
+          "referencedEntityId": "dim_mu1i0si0_11"
+        },
+        {
+          "id": "col_mu1i0si0_1z",
+          "nullable": true,
+          "name": "CURRENCY_KEY",
+          "type": "BIGINT",
+          "isFk": true,
+          "referencedEntityId": "enum_mu1i0si0_7"
+        },
+        {
+          "id": "col_mu1i0si0_20",
+          "nullable": true,
+          "name": "SHIP_FROM_GEO_SK",
+          "type": "BIGINT",
+          "isFk": true
+        },
+        {
+          "id": "col_mu1i0si0_21",
+          "nullable": true,
+          "name": "SHIP_TO_GEO_SK",
+          "type": "BIGINT",
+          "isFk": true
+        },
+        {
+          "id": "col_mu1i0si0_22",
+          "nullable": true,
+          "name": "TOTAL_WEIGHT",
+          "type": "DECIMAL(18,4)",
+          "isMeasure": true,
+          "aggregation": "SUM"
+        },
+        {
+          "id": "col_mu1i0si0_23",
+          "nullable": true,
+          "name": "LOCAL_FREIGHT_COST",
+          "type": "DECIMAL(18,4)",
+          "isMeasure": true
+        },
+        {
+          "id": "col_mu1i0si0_24",
+          "nullable": true,
+          "name": "FREIGHT_COST_USD",
+          "type": "DECIMAL(18,4)",
+          "isMeasure": true,
+          "isCalculated": true
+        },
+        {
+          "id": "col_mu1i0si0_25",
+          "nullable": true,
+          "name": "TRANSIT_DAYS",
+          "type": "DOUBLE",
+          "isMeasure": true,
+          "isCalculated": true,
+          "formula": "DATEDIFF(ACTUAL_DELIVERY_DATE, ACTUAL_PICKUP_DATE)"
+        },
+        {
+          "id": "col_mu1i0si0_26",
+          "nullable": false,
+          "name": "DELETED",
+          "type": "TINYINT(1)",
+          "default": "0",
+          "auditRole": "deleted"
+        },
+        {
+          "id": "col_mu1i0si0_27",
+          "nullable": false,
+          "name": "DW_CREATED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP",
+          "auditRole": "created"
+        },
+        {
+          "id": "col_mu1i0si0_28",
+          "nullable": false,
+          "name": "DW_LAST_MODIFIED",
+          "type": "DATETIME(6)",
+          "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
+          "auditRole": "modified"
+        }
+      ],
+      "dimensionLookups": [
+        {
+          "id": "dl_mu1i0si0_29",
+          "dimensionId": "dim_mu1i0si0_j",
+          "dimensionTable": "customer",
+          "sourceIdColumn": "SYS_CUSTOMER_ID",
+          "targetSkColumn": "CUSTOMER_KEY",
+          "defaultFallbackSk": -1,
+          "isMandatory": true
+        },
+        {
+          "id": "dl_mu1i0si0_2a",
+          "dimensionId": "dim_mu1i0si0_11",
+          "dimensionTable": "location",
+          "sourceIdColumn": "SYS_ORIGIN_LOCATION_ID",
+          "targetSkColumn": "ORIGIN_LOCATION_KEY",
+          "defaultFallbackSk": -1,
+          "isMandatory": false
+        },
+        {
+          "id": "dl_mu1i0si0_2b",
+          "dimensionId": "enum_mu1i0si0_7",
+          "dimensionTable": "currencycode",
+          "sourceIdColumn": "CURRENCY_CODE",
+          "targetSkColumn": "CURRENCY_KEY",
+          "defaultFallbackSk": -1,
+          "isMandatory": false
+        }
+      ],
+      "geoEnrichment": [
+        {
+          "id": "geo_mu1i0si0_2c",
+          "type": "ship_from",
+          "targetGeoSk": "SHIP_FROM_GEO_SK",
+          "sourceCountryCol": "FROM_COUNTRY_CODE",
+          "sourceStateCol": "FROM_STATE_CODE",
+          "sourceCityCol": "FROM_CITY_NAME"
+        },
+        {
+          "id": "geo_mu1i0si0_2d",
+          "type": "ship_to",
+          "targetGeoSk": "SHIP_TO_GEO_SK",
+          "sourceCountryCol": "TO_COUNTRY_CODE",
+          "sourceStateCol": "TO_STATE_CODE",
+          "sourceCityCol": "TO_CITY_NAME"
+        }
+      ],
+      "currencyConversions": [
+        {
+          "id": "cc_mu1i0si0_2e",
+          "sourceAmountCol": "LOCAL_FREIGHT_COST",
+          "sourceCurrencyCol": "CURRENCY_CODE",
+          "targetBaseAmountCol": "FREIGHT_COST_USD",
+          "baseCurrency": "USD"
+        }
+      ],
+      "validationRules": [
+        {
+          "id": "vr_mu1i0si0_2f",
+          "ruleName": "CheckValidCustomer",
+          "condition": "CUSTOMER_KEY IS NOT NULL AND CUSTOMER_KEY != -1",
+          "errorCode": "ERR_DIM_CUSTOMER_NOT_FOUND",
+          "errorMessage": "Customer not found in customer dimension"
+        },
+        {
+          "id": "vr_mu1i0si0_2g",
+          "ruleName": "CheckPositiveWeight",
+          "condition": "TOTAL_WEIGHT >= 0",
+          "errorCode": "ERR_NEGATIVE_WEIGHT",
+          "errorMessage": "Total weight must not be negative"
+        }
+      ],
+      "etlConfig": {
+        "isEnabled": true,
+        "priority": 2,
+        "resourceCost": 2
+      },
+      "ui": {
+        "x": 480,
+        "y": 200
+      }
+    }
+  ]
+}

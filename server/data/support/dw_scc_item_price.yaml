@@ -1,0 +1,54 @@
+id: support_dw_scc_item_price
+kind: support
+name: dw_scc_item_price
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_item_price_0
+    name: COST_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_item_price_1
+    name: COST_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_item_price_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_item_price_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_item_price_4
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_item_price_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_item_price_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_item_price_7
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_item_price_8
+    name: PRICE_AMOUNT
+    type: DECIMAL(65,6)
+  - id: sc_dw_scc_item_price_9
+    name: PRICE_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_item_price_10
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_item_price_11
+    name: SYS_ITEM_PRICE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_item_price_12
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_item_price_13
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_item_price_14
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_item_price_15
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,69 @@
+id: support_scc_milestone_type_nc
+kind: support
+name: scc_milestone_type_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_milestone_type_nc_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_scc_milestone_type_nc_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_milestone_type_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_milestone_type_nc_3
+    name: DESCRIPTION
+    type: VARCHAR(1024)
+  - id: sc_scc_milestone_type_nc_4
+    name: EVENT_TRIGGERING_POLICY
+    type: VARCHAR(256)
+  - id: sc_scc_milestone_type_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_milestone_type_nc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_milestone_type_nc_7
+    name: LEAD_TIME
+    type: BIGINT(20)
+  - id: sc_scc_milestone_type_nc_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_milestone_type_nc_9
+    name: MILESTONE_CATEGORY
+    type: VARCHAR(256)
+  - id: sc_scc_milestone_type_nc_10
+    name: MILESTONE_TYPE
+    type: VARCHAR(64)
+  - id: sc_scc_milestone_type_nc_11
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_milestone_type_nc_12
+    name: SEQ_NUMBER
+    type: BIGINT(20)
+  - id: sc_scc_milestone_type_nc_13
+    name: SYS_LEAD_TIME_REFERENCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_milestone_type_nc_14
+    name: SYS_MILESTONE_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_scc_milestone_type_nc_15
+    name: SYS_MILESTONE_CONFIG_ID
+    type: BIGINT(20)
+  - id: sc_scc_milestone_type_nc_16
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_milestone_type_nc_17
+    name: TARGET_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_milestone_type_nc_18
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_milestone_type_nc_19
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_milestone_type_nc_20
+    name: RECONCILED
+    type: TINYINT(1)

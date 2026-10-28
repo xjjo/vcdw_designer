@@ -1,0 +1,51 @@
+id: support_dw_oms_scorecard_formula
+kind: support
+name: dw_oms_scorecard_formula
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_scorecard_formula_0
+    name: AUDIT_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_formula_1
+    name: BAD_THRESHOLD
+    type: DOUBLE
+  - id: sc_dw_oms_scorecard_formula_2
+    name: DISPLAY_COLOR
+    type: VARCHAR(64)
+  - id: sc_dw_oms_scorecard_formula_3
+    name: GOOD_THRESHOLD
+    type: DOUBLE
+  - id: sc_dw_oms_scorecard_formula_4
+    name: KPI_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_oms_scorecard_formula_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_formula_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_formula_7
+    name: SYS_OWNING_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_formula_8
+    name: SYS_SCORECARD_FORMULA_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_formula_9
+    name: WEIGHT
+    type: DOUBLE
+  - id: sc_dw_oms_scorecard_formula_10
+    name: SYS_PARTNER_GROUP_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_formula_11
+    name: FORMULA
+    type: VARCHAR(4000)
+  - id: sc_dw_oms_scorecard_formula_12
+    name: FORMULA_TYPE
+    type: VARCHAR(128)
+  - id: sc_dw_oms_scorecard_formula_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_formula_14
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

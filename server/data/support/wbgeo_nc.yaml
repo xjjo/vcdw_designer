@@ -1,0 +1,93 @@
+id: support_wbgeo_nc
+kind: support
+name: wbgeo_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_wbgeo_nc_0
+    name: ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_1
+    name: ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_2
+    name: ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_wbgeo_nc_3
+    name: ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_4
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wbgeo_nc_5
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_6
+    name: FROM_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_7
+    name: FROM_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_8
+    name: FROM_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_wbgeo_nc_9
+    name: FROM_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_10
+    name: ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_11
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wbgeo_nc_12
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_13
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wbgeo_nc_14
+    name: SYS_FROM_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_15
+    name: SYS_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_16
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_17
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_18
+    name: SYS_TO_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_19
+    name: SYS_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_20
+    name: SYS_WBGEO_ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_21
+    name: SYS_WBPROBLEM_ID
+    type: BIGINT(20)
+  - id: sc_wbgeo_nc_22
+    name: TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_23
+    name: TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_24
+    name: TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_wbgeo_nc_25
+    name: TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_26
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_wbgeo_nc_27
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_wbgeo_nc_28
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,183 @@
+id: support_dw_scc_inventory_receipt
+kind: support
+name: dw_scc_inventory_receipt
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_inventory_receipt_0
+    name: SYS_INVENTORY_RECEIPT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_receipt_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_receipt_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_receipt_7
+    name: OFF_NETWORK_ORDER_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_8
+    name: OFF_NETWORK_SHIPMENT_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_9
+    name: OFF_NETWORK_REF_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_10
+    name: IS_INTERNAL
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_inventory_receipt_11
+    name: EXT_SITE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_12
+    name: OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_13
+    name: OPERATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_receipt_14
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_receipt_15
+    name: QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inventory_receipt_16
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_receipt_17
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_receipt_18
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_receipt_19
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_receipt_20
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_receipt_21
+    name: COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_inventory_receipt_22
+    name: EXT_SERIAL_NO
+    type: VARCHAR(200)
+  - id: sc_dw_scc_inventory_receipt_23
+    name: BALANCE_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inventory_receipt_24
+    name: BALANCE_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_receipt_25
+    name: ORIGINAL_OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_26
+    name: AUXILARY_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_27
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_28
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_receipt_29
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_receipt_30
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_receipt_31
+    name: ORIGIN
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_receipt_32
+    name: MASTER_OPERATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_33
+    name: MASTER_OPERATION_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_34
+    name: MASTER_OPERATION_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_35
+    name: SOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_36
+    name: SOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_37
+    name: SOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_38
+    name: EXTERNAL_DOC_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_39
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_40
+    name: SYS_SHIPMENT_LINE_CONTENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_41
+    name: SYS_ORDER_DSCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_42
+    name: SYS_WORK_ORDER_TASK_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_43
+    name: SYS_PRODUCTION_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_44
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_45
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_46
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_47
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_48
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_49
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_50
+    name: SYS_ORIGINAL_ORDER_DS_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_51
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_receipt_52
+    name: WMS_DEFECT_CODE1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_53
+    name: WMS_DEFECT_CODE2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_54
+    name: WMS_DEFECT_CODE3
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_55
+    name: WMS_DEFECT_CODE4
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_56
+    name: WMS_DEFECT_CODE5
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_receipt_57
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_receipt_58
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

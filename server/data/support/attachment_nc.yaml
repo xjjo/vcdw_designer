@@ -1,0 +1,54 @@
+id: support_attachment_nc
+kind: support
+name: attachment_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_attachment_nc_0
+    name: ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_attachment_nc_1
+    name: CATEGORY
+    type: VARCHAR(256)
+  - id: sc_attachment_nc_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_attachment_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_attachment_nc_4
+    name: FILE_NAME
+    type: VARCHAR(128)
+  - id: sc_attachment_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_attachment_nc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_attachment_nc_7
+    name: OWNER_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_attachment_nc_8
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_attachment_nc_9
+    name: SYS_ATTACHMENT_ID
+    type: BIGINT(20)
+  - id: sc_attachment_nc_10
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_attachment_nc_11
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_attachment_nc_12
+    name: IS_POD_AVAILABLE
+    type: DECIMAL(1,0)
+  - id: sc_attachment_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_attachment_nc_14
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_attachment_nc_15
+    name: RECONCILED
+    type: TINYINT(1)

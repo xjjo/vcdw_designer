@@ -1,0 +1,156 @@
+id: support_dw_scc_inventory_adjust
+kind: support
+name: dw_scc_inventory_adjust
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_inventory_adjust_0
+    name: SYS_INVENTORY_ADJUST_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_adjust_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_adjust_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_adjust_7
+    name: OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_8
+    name: OPERATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_adjust_9
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_adjust_10
+    name: QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inventory_adjust_11
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_adjust_12
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_adjust_13
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_adjust_14
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_adjust_15
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_adjust_16
+    name: COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_inventory_adjust_17
+    name: EXT_SERIAL_NO
+    type: VARCHAR(200)
+  - id: sc_dw_scc_inventory_adjust_18
+    name: BALANCE_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inventory_adjust_19
+    name: BALANCE_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_adjust_20
+    name: ORIGINAL_OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_21
+    name: AUXILARY_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_22
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_23
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_adjust_24
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_adjust_25
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_adjust_26
+    name: ORIGIN
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_adjust_27
+    name: MASTER_OPERATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_28
+    name: MASTER_OPERATION_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_29
+    name: MASTER_OPERATION_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_30
+    name: SOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_31
+    name: SOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_32
+    name: SOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_33
+    name: EXTERNAL_DOC_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_34
+    name: SYS_INVENTORY_DISCREPANCY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_35
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_36
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_37
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_38
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_39
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_40
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_41
+    name: SYS_ORIGINAL_ORDER_DS_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_42
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_adjust_43
+    name: WMS_DEFECT_CODE1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_44
+    name: WMS_DEFECT_CODE2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_45
+    name: WMS_DEFECT_CODE3
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_46
+    name: WMS_DEFECT_CODE4
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_47
+    name: WMS_DEFECT_CODE5
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_adjust_48
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_adjust_49
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

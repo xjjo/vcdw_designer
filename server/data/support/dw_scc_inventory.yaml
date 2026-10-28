@@ -1,0 +1,111 @@
+id: support_dw_scc_inventory
+kind: support
+name: dw_scc_inventory
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_inventory_0
+    name: SYS_INVENTORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_1
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_4
+    name: INVENTORY_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_5
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_6
+    name: QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inventory_7
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_8
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_9
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_10
+    name: EXT_SERIAL_NO
+    type: VARCHAR(200)
+  - id: sc_dw_scc_inventory_11
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_12
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_13
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_14
+    name: LOCKED
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_inventory_15
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_16
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_17
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inventory_18
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_19
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_20
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_21
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_22
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_23
+    name: WMS_DEFECT_CODE1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_24
+    name: WMS_DEFECT_CODE2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_25
+    name: WMS_DEFECT_CODE3
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_26
+    name: WMS_DEFECT_CODE4
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_27
+    name: WMS_DEFECT_CODE5
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inventory_28
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_29
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inventory_30
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_31
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_32
+    name: SYS_PERSON_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_33
+    name: SYS_LOT_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inventory_34
+    name: SUBLOCATION
+    type: VARCHAR(64)

@@ -1,0 +1,210 @@
+id: support_tms_tender_nc
+kind: support
+name: tms_tender_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_tender_nc_0
+    name: sys_tender_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_1
+    name: model_name
+    type: VARCHAR(64)
+  - id: sc_tms_tender_nc_2
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_3
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_tms_tender_nc_4
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_5
+    name: sequence
+    type: DECIMAL(9,0)
+  - id: sc_tms_tender_nc_6
+    name: rating_type
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_7
+    name: state
+    type: VARCHAR(64)
+  - id: sc_tms_tender_nc_8
+    name: tender_time
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_9
+    name: tender_expire_time
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_10
+    name: actual_response_time
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_11
+    name: additional_status
+    type: VARCHAR(2000)
+  - id: sc_tms_tender_nc_12
+    name: rotational_carrier_entry_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_13
+    name: ship_date
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_14
+    name: carrier_total_cost_amount
+    type: DOUBLE
+  - id: sc_tms_tender_nc_15
+    name: carrier_total_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_16
+    name: three_pltotal_cost_amount
+    type: DOUBLE
+  - id: sc_tms_tender_nc_17
+    name: three_pltotal_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_18
+    name: total_cost_amount
+    type: DOUBLE
+  - id: sc_tms_tender_nc_19
+    name: total_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_20
+    name: reject_reason_type
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_21
+    name: reject_reason
+    type: VARCHAR(4000)
+  - id: sc_tms_tender_nc_22
+    name: sys_tg_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_23
+    name: sys_tp_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_24
+    name: tender_plan_name
+    type: VARCHAR(64)
+  - id: sc_tms_tender_nc_25
+    name: override_duration_hour
+    type: DECIMAL(9,0)
+  - id: sc_tms_tender_nc_26
+    name: override_duration_minute
+    type: DECIMAL(9,0)
+  - id: sc_tms_tender_nc_27
+    name: cost_limit_amount
+    type: DOUBLE
+  - id: sc_tms_tender_nc_28
+    name: cost_limit_uom
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_29
+    name: cost_limit_status
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_30
+    name: tender_no
+    type: DECIMAL(9,0)
+  - id: sc_tms_tender_nc_31
+    name: transit_time
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_32
+    name: carrier_service_type
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_33
+    name: base_rate_level
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_34
+    name: execution_errors
+    type: VARCHAR(512)
+  - id: sc_tms_tender_nc_35
+    name: execution_warnings
+    type: TEXT
+  - id: sc_tms_tender_nc_36
+    name: allow_spot_tender
+    type: DECIMAL(1,0)
+  - id: sc_tms_tender_nc_37
+    name: is_spot_group
+    type: DECIMAL(1,0)
+  - id: sc_tms_tender_nc_38
+    name: spot_tender_cost_amount
+    type: DOUBLE
+  - id: sc_tms_tender_nc_39
+    name: spot_tender_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_40
+    name: commitment_overriden
+    type: DECIMAL(1,0)
+  - id: sc_tms_tender_nc_41
+    name: grouping_criteria
+    type: VARCHAR(200)
+  - id: sc_tms_tender_nc_42
+    name: carrier_operating_cost_amount
+    type: FLOAT
+  - id: sc_tms_tender_nc_43
+    name: carrier_operating_cost_uom
+    type: VARCHAR(256)
+  - id: sc_tms_tender_nc_44
+    name: value_added_opr_cost_amount
+    type: FLOAT
+  - id: sc_tms_tender_nc_45
+    name: value_added_opr_cost_uom
+    type: VARCHAR(256)
+  - id: sc_tms_tender_nc_46
+    name: conversion_rate
+    type: VARCHAR(1024)
+  - id: sc_tms_tender_nc_47
+    name: conversion_event_date
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_48
+    name: value_added_conversion_rate
+    type: FLOAT
+  - id: sc_tms_tender_nc_49
+    name: value_added_conv_event_dt
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_50
+    name: spot_tender_opr_cost_amount
+    type: DOUBLE
+  - id: sc_tms_tender_nc_51
+    name: spot_tender_opr_cost_uom
+    type: VARCHAR(256)
+  - id: sc_tms_tender_nc_52
+    name: sys_carrier_org_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_53
+    name: sys_routing_strategy_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_54
+    name: sys_clsetting_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_55
+    name: sys_org_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_56
+    name: sys_other_org_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_57
+    name: sys_static_route_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_58
+    name: sys_carrier_commitment_tier_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_59
+    name: sys_carrier_commitment_id
+    type: BIGINT(20)
+  - id: sc_tms_tender_nc_60
+    name: carbon_emission_amount
+    type: DOUBLE
+  - id: sc_tms_tender_nc_61
+    name: carbon_emission_uom
+    type: DECIMAL(6,0)
+  - id: sc_tms_tender_nc_62
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_tms_tender_nc_63
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_tender_nc_64
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_tms_tender_nc_65
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_tms_tender_nc_66
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_tms_tender_nc_67
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

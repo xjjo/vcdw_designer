@@ -1,12 +1,14 @@
+import { useState } from 'react';
 import type { AnyEntity, Column, EntityKind } from '@shared/types';
-import { col } from '@shared/templates';
+import { col, type StandardColumnProfile } from '@shared/templates';
 
 interface Props {
   kind: EntityKind;
   columns: Column[];
   entities: AnyEntity[];
+  profiles: StandardColumnProfile[];
   onChange: (columns: Column[]) => void;
-  onInsertStandard: () => void;
+  onInsertProfile: (profile: StandardColumnProfile) => void;
   onApplyAudit: () => void;
 }
 
@@ -16,10 +18,13 @@ export default function ColumnsEditor({
   kind,
   columns,
   entities,
+  profiles,
   onChange,
-  onInsertStandard,
+  onInsertProfile,
   onApplyAudit,
 }: Props) {
+  const [profileId, setProfileId] = useState(profiles[0]?.id ?? '');
+
   function update(id: string, patch: Partial<Column>) {
     onChange(columns.map((c) => (c.id === id ? { ...c, ...patch } : c)));
   }
@@ -40,6 +45,7 @@ export default function ColumnsEditor({
 
   const dims = entities.filter((e) => e.kind === 'dimension' || e.kind === 'enumeration');
   const isFact = kind === 'fact';
+  const selectedProfile = profiles.find((p) => p.id === profileId);
 
   return (
     <div className="panel">
@@ -47,9 +53,29 @@ export default function ColumnsEditor({
         <button className="btn sm primary" onClick={add}>
           + Add column
         </button>
-        <button className="btn sm" onClick={onInsertStandard}>
-          Insert standard columns
-        </button>
+        {profiles.length > 0 && (
+          <>
+            <select
+              value={profileId}
+              onChange={(e) => setProfileId(e.target.value)}
+              style={{ maxWidth: 320 }}
+              title="Standard column preset"
+            >
+              {profiles.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.label}
+                </option>
+              ))}
+            </select>
+            <button
+              className="btn sm"
+              onClick={() => selectedProfile && onInsertProfile(selectedProfile)}
+              title={selectedProfile?.description}
+            >
+              Insert standard columns
+            </button>
+          </>
+        )}
         <button className="btn sm" onClick={onApplyAudit}>
           Apply audit profile
         </button>
@@ -58,13 +84,19 @@ export default function ColumnsEditor({
         </span>
       </div>
 
+      {columns.length === 0 && (
+        <p className="hint">
+          No columns yet. Use <strong>Insert standard columns</strong> to add the standard set for this
+          object, or add columns manually. Source mapping is set in the Mapping tab.
+        </p>
+      )}
+
       <div className="tbl-scroll">
         <table className="data">
           <thead>
             <tr>
-              <th style={{ width: 170 }}>Name</th>
-              <th style={{ width: 140 }}>SQL Type</th>
-              <th style={{ width: 150 }}>Source column</th>
+              <th style={{ width: 190 }}>Name</th>
+              <th style={{ width: 150 }}>SQL Type</th>
               <th className="chk">PK</th>
               <th className="chk">SK</th>
               <th className="chk">NK</th>
@@ -85,13 +117,6 @@ export default function ColumnsEditor({
                 </td>
                 <td>
                   <input value={c.type} onChange={(e) => update(c.id, { type: e.target.value })} />
-                </td>
-                <td>
-                  <input
-                    value={c.sourceColumn ?? ''}
-                    placeholder="oltp col"
-                    onChange={(e) => update(c.id, { sourceColumn: e.target.value })}
-                  />
                 </td>
                 <td className="chk">
                   <input type="checkbox" checked={!!c.isPk} onChange={(e) => update(c.id, { isPk: e.target.checked })} />

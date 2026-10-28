@@ -1,0 +1,84 @@
+id: support_dw_oms_cost_component
+kind: support
+name: dw_oms_cost_component
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_cost_component_0
+    name: AUX_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_oms_cost_component_1
+    name: CHARGE_LEVEL_DISPLAY
+    type: VARCHAR(256)
+  - id: sc_dw_oms_cost_component_2
+    name: CHARGE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_cost_component_3
+    name: CHARGE_LEVEL_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_oms_cost_component_4
+    name: CHARGE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_oms_cost_component_5
+    name: COMPONENT_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_dw_oms_cost_component_6
+    name: CONVERSION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_cost_component_7
+    name: CONVERTED_COST
+    type: DOUBLE
+  - id: sc_dw_oms_cost_component_8
+    name: COST_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_oms_cost_component_9
+    name: COST_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_oms_cost_component_10
+    name: DELETED
+    type: DECIMAL(1,0)
+  - id: sc_dw_oms_cost_component_11
+    name: DESCRIPTION
+    type: VARCHAR(512)
+  - id: sc_dw_oms_cost_component_12
+    name: DISTRIBUTED
+    type: DECIMAL(1,0)
+  - id: sc_dw_oms_cost_component_13
+    name: DISTRIBUTION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_oms_cost_component_14
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_cost_component_15
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_cost_component_16
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_cost_component_17
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_oms_cost_component_18
+    name: SOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_oms_cost_component_19
+    name: SOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_cost_component_20
+    name: SOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_oms_cost_component_21
+    name: SOURCE_DESCRIPTION
+    type: VARCHAR(512)
+  - id: sc_dw_oms_cost_component_22
+    name: SYS_ADDITIONAL_COST_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_cost_component_23
+    name: SYS_COST_COMPONENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_cost_component_24
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_cost_component_25
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

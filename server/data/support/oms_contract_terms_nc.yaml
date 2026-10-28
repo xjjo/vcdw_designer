@@ -1,0 +1,321 @@
+id: support_oms_contract_terms_nc
+kind: support
+name: oms_contract_terms_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_oms_contract_terms_nc_0
+    name: SYS_CONTRACT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_oms_contract_terms_nc_3
+    name: SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_4
+    name: CONTRACT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_5
+    name: CONTRACT_TERMS_NUMBER
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_6
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_7
+    name: INVOICE_ACTIVE_CODE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_8
+    name: IS_LOAD_RETENTION_CHARGES
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_9
+    name: IS_AUTO_GENERATE_INVOICE
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_10
+    name: IS_AUTO_OKTO_PAY
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_11
+    name: INVOICE_TOTAL_PRICE_TOLER_PCT
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_12
+    name: INVOICE_TOTAL_PRICE_TOLERANCE
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_13
+    name: INVOICE_UNIT_PRICE_TOLER_PCT
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_14
+    name: INVOICE_UNIT_PRICE_TOLERANCE
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_15
+    name: INVOICE_LINE_QTY_TOLER_PCT
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_16
+    name: INVOICE_TOTAL_QTY_TOLERANCE
+    type: FLOAT
+  - id: sc_oms_contract_terms_nc_17
+    name: COUNTRY_OF_CONSIGNMENT
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_18
+    name: CONSIGNMENT_PAYMENT_RECU_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_19
+    name: CONSIGNMENT_PAYMENT_DAY
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_20
+    name: ADD_CONSIGNMENT_PAY_RECU_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_21
+    name: ADD_CONSIGNMENT_PAY_DAY
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_22
+    name: CONSIGNMENT_MATURITY_DAYS
+    type: DECIMAL(9,0)
+  - id: sc_oms_contract_terms_nc_23
+    name: THRESHOLD_MATURITY_DAYS
+    type: DECIMAL(9,0)
+  - id: sc_oms_contract_terms_nc_24
+    name: VENDOR_ORD_NOTIFICATION_METHOD
+    type: DECIMAL(5,0)
+  - id: sc_oms_contract_terms_nc_25
+    name: OVERSHIPPING_TOLERANCE_PCT
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_26
+    name: QTY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_27
+    name: MAX_QTY_PER_TIME_BUCKET
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_28
+    name: MAX_QTY_TIME_BUCKET_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_29
+    name: MIN_QTY_PER_TIME_BUCKET
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_30
+    name: MIN_QTY_TIME_BUCKET_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_31
+    name: MAX_POS_PER_TIME_BUCKET
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_32
+    name: MAX_POS_TIME_BUCKET_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_33
+    name: MIN_POS_PER_TIME_BUCKET
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_34
+    name: MIN_POS_TIME_BUCKET_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_35
+    name: FOBCODE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_36
+    name: FOBPOINT
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_37
+    name: TRAN_MEANS
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_38
+    name: TOTAL_ORDER_QUANTITY
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_39
+    name: TOTAL_RECEIVED_QTY
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_40
+    name: TOTAL_REMAINING_QTY
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_41
+    name: TOTAL_ORDER_AMOUNT
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_42
+    name: TOTAL_RECEIVED_AMOUNT
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_43
+    name: TOTAL_REMAINING_AMOUNT
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_44
+    name: COMMENTS
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_45
+    name: CONSIGN_NOTIF_RECUR_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_oms_contract_terms_nc_46
+    name: CONSIGN_NOTIF_DAY
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_47
+    name: CURRENT_PONUMBER
+    type: DECIMAL(9,0)
+  - id: sc_oms_contract_terms_nc_48
+    name: CURRENT_POLINE_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_oms_contract_terms_nc_49
+    name: REFERENCE_CONTRACT_TERM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_50
+    name: SHIPPING_INSTRUCTIONS
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_51
+    name: INVOICE_AUTO_APPROVAL
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_52
+    name: TOTAL_INVOICE_QUANTITY
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_53
+    name: TOTAL_INVOICE_AMOUNT
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_54
+    name: FORECAST_FREEZE_LEAD_TIME
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_55
+    name: FORECAST_COLLAB_LEAD_TIME
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_56
+    name: ORIG_PREFERRED_CARRIER_NAME
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_57
+    name: IS_DISCOUNT
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_58
+    name: QUALITY_SERVICE
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_59
+    name: IS_VMI
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_60
+    name: INVOICE_LINE_AMT_TOLERANCE
+    type: DOUBLE
+  - id: sc_oms_contract_terms_nc_61
+    name: IS_ALLOW_DISCOUNT_ON_PRODUCT
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_62
+    name: IS_ALLOW_DISCOUNT_ON_FREIGHT
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_63
+    name: IS_ALLOW_DISCOUNT_ON_TAX
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_64
+    name: IS_DISCOUNT_ON_FUEL_SURCHARGE
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_65
+    name: EFFECTIVE_TERMS_START_DATE
+    type: DATETIME(6)
+  - id: sc_oms_contract_terms_nc_66
+    name: EFFECTIVE_TERMS_END_DATE
+    type: DATETIME(6)
+  - id: sc_oms_contract_terms_nc_67
+    name: TERM_FALREQUISITION_USER
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_68
+    name: TERM_FALAPPROVED_FOR_USER
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_69
+    name: TERM_CUR_FALASSIGN_TO_USER
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_70
+    name: SYS_CREATION_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_71
+    name: SYS_SHIP_FROM_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_72
+    name: SYS_SHIP_FROM_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_73
+    name: SYS_SHIP_TO_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_74
+    name: SYS_SHIP_TO_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_75
+    name: SYS_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_76
+    name: SYS_SHIP_FROM_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_77
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_78
+    name: SYS_SHIP_TO_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_79
+    name: SYS_PAYMENT_TERMS_CODE_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_80
+    name: SYS_TRANS_MODE_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_81
+    name: SYS_PREFERRED_CARRIER_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_82
+    name: SYS_FREIGHT_FORWARDER_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_83
+    name: SYS_STORAGE_SITE_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_84
+    name: SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_85
+    name: BILL_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_86
+    name: BILL_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_87
+    name: BILL_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_88
+    name: BILL_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_oms_contract_terms_nc_89
+    name: PURCHASING_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_90
+    name: PURCHASING_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_91
+    name: PURCHASING_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_92
+    name: PURCHASING_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_oms_contract_terms_nc_93
+    name: REMIT_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_94
+    name: REMIT_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_95
+    name: REMIT_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_96
+    name: REMIT_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_oms_contract_terms_nc_97
+    name: TAX_ALLOWED
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_98
+    name: TAX_PROVIDER
+    type: VARCHAR(256)
+  - id: sc_oms_contract_terms_nc_99
+    name: AUTO_COMPUTE_TAX
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_100
+    name: GENERATE_DETAILED_INVOICE
+    type: DECIMAL(1,0)
+  - id: sc_oms_contract_terms_nc_101
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_oms_contract_terms_nc_102
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_oms_contract_terms_nc_103
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_oms_contract_terms_nc_104
+    name: RECONCILED
+    type: TINYINT(1)

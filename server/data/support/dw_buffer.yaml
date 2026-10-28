@@ -1,0 +1,507 @@
+id: support_dw_buffer
+kind: support
+name: dw_buffer
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_buffer_0
+    name: SYS_BUFFER_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_1
+    name: BUFFER_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_2
+    name: DESCRIPTION
+    type: VARCHAR(255)
+  - id: sc_dw_buffer_3
+    name: ON_HAND
+    type: DOUBLE
+  - id: sc_dw_buffer_4
+    name: QUANTITY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_5
+    name: SAFETY_STOCK
+    type: DOUBLE
+  - id: sc_dw_buffer_6
+    name: SAFETY_STOCK_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_7
+    name: REORDER_TARGET
+    type: DOUBLE
+  - id: sc_dw_buffer_8
+    name: AVG_CONSUMPTION
+    type: DOUBLE
+  - id: sc_dw_buffer_9
+    name: OMS_SYS_PACKAGE_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_10
+    name: IN_TRANSIT
+    type: DOUBLE
+  - id: sc_dw_buffer_11
+    name: DAYS_OF_SUPPLY
+    type: DOUBLE
+  - id: sc_dw_buffer_12
+    name: IS_DEFAULT
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_13
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_14
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_15
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_16
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_17
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_18
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_19
+    name: ON_ORDER_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_buffer_20
+    name: OPLT
+    type: BIGINT(20)
+  - id: sc_dw_buffer_21
+    name: TRANS_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_22
+    name: SPT_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_23
+    name: SPT_VERSION
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_24
+    name: ITEM_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_25
+    name: ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_buffer_26
+    name: SITE_ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_27
+    name: SITE_ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_28
+    name: SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_buffer_29
+    name: RLT
+    type: BIGINT(20)
+  - id: sc_dw_buffer_30
+    name: FCST_COMMIT_DURATION
+    type: BIGINT(20)
+  - id: sc_dw_buffer_31
+    name: FCST_DURATION
+    type: BIGINT(20)
+  - id: sc_dw_buffer_32
+    name: ORDER_UPTO
+    type: DOUBLE
+  - id: sc_dw_buffer_33
+    name: REORDER_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_buffer_34
+    name: PROJECTED_LOST_SALES
+    type: DOUBLE
+  - id: sc_dw_buffer_35
+    name: EARLIEST_PROJECT_STOCKOUT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_36
+    name: LOST_SALES_VALUE
+    type: DOUBLE
+  - id: sc_dw_buffer_37
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_38
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_39
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_40
+    name: SYS_PARTNER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_41
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_42
+    name: SYS_SITE_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_43
+    name: SYS_PARENT_BUFFER_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_44
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_45
+    name: BAR_CODE_FORMAT
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_46
+    name: BUFFER_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_buffer_47
+    name: BUYER_ITEM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_48
+    name: CASES_PER_LAYER
+    type: DECIMAL(9,0)
+  - id: sc_dw_buffer_49
+    name: CASE_HEIGHT
+    type: DOUBLE
+  - id: sc_dw_buffer_50
+    name: CASE_LENGTH
+    type: DOUBLE
+  - id: sc_dw_buffer_51
+    name: CASE_LINEAR_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_52
+    name: CASE_WEIGHT
+    type: DOUBLE
+  - id: sc_dw_buffer_53
+    name: CASE_WEIGHT_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_54
+    name: CASE_WIDTH
+    type: DOUBLE
+  - id: sc_dw_buffer_55
+    name: CURRENCY
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_56
+    name: CUST_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_57
+    name: CYCLE_COUNTING_FREQUENCY
+    type: BIGINT(20)
+  - id: sc_dw_buffer_58
+    name: DAILY_FCST_DURATION_IN_WEEKS
+    type: DECIMAL(9,0)
+  - id: sc_dw_buffer_59
+    name: EARLIEST_MAX_VIOLATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_60
+    name: EARLIEST_MIN_VIOLATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_61
+    name: FCST_TO_ORD_CONV_THRESHOLD
+    type: DOUBLE
+  - id: sc_dw_buffer_62
+    name: FORECAST_BEGIN_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_63
+    name: FORECAST_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_64
+    name: INCREMENT_LOT_SIZE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_buffer_65
+    name: INVENTORY_STATUS
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_66
+    name: IN_STOCK
+    type: DOUBLE
+  - id: sc_dw_buffer_67
+    name: IS_DSD
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_68
+    name: ITEM_COST
+    type: DOUBLE
+  - id: sc_dw_buffer_69
+    name: ITEM_PRICE
+    type: DOUBLE
+  - id: sc_dw_buffer_70
+    name: LAST_CYCLE_COUNTING_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_71
+    name: LAYERS_PER_PALLET
+    type: DECIMAL(9,0)
+  - id: sc_dw_buffer_72
+    name: MAX_DAYS_OF_SUPPLY
+    type: DOUBLE
+  - id: sc_dw_buffer_73
+    name: MAX_LOT_SIZE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_buffer_74
+    name: MFG_LEAD_TIME
+    type: BIGINT(20)
+  - id: sc_dw_buffer_75
+    name: MIN_LOT_SIZE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_buffer_76
+    name: OLT
+    type: BIGINT(20)
+  - id: sc_dw_buffer_77
+    name: OMS_CONSIGNMENT
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_78
+    name: OMS_VMI
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_79
+    name: ON_FLOOR
+    type: DOUBLE
+  - id: sc_dw_buffer_80
+    name: ON_HOLD
+    type: DOUBLE
+  - id: sc_dw_buffer_81
+    name: ORDERING_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_82
+    name: ORDER_POLICY_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_83
+    name: ORD_TO_STOCK_CONV_FACTOR
+    type: DOUBLE
+  - id: sc_dw_buffer_84
+    name: OTHER_QTY
+    type: DOUBLE
+  - id: sc_dw_buffer_85
+    name: PERPETUAL_INVENTORY
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_86
+    name: PLANNER_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_87
+    name: REPL_SUBNET_GROUP_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_88
+    name: RUN_REPLENISHMENT
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_89
+    name: SCC_SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_90
+    name: SELLER_ITEM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_91
+    name: SELLER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_92
+    name: SITE_TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_93
+    name: SNAPSHOT_ONHAND
+    type: DOUBLE
+  - id: sc_dw_buffer_94
+    name: SNAPSHOT_ONHAND_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_95
+    name: STD_CASE_ITEM_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_buffer_96
+    name: STD_PALLET_CASE_CNT
+    type: DECIMAL(9,0)
+  - id: sc_dw_buffer_97
+    name: STOCKING_UOM_SPACES
+    type: BIGINT(20)
+  - id: sc_dw_buffer_98
+    name: STOCKOUT
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_99
+    name: STRATIFICATION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_buffer_100
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_101
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_102
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_103
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_104
+    name: SYS_PARTNER_NAME_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_105
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_106
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_107
+    name: APPLY_FCST_NET
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_108
+    name: DAYS_OF_STOCKOUT
+    type: DOUBLE
+  - id: sc_dw_buffer_109
+    name: LAST_REPL_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_110
+    name: PS_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_111
+    name: RPL_DO_NOT_ADJUST
+    type: DECIMAL(1,0)
+  - id: sc_dw_buffer_112
+    name: RPL_MAX_STOCK_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_buffer_113
+    name: RPL_MERCHANDISING_MINIMUM
+    type: DOUBLE
+  - id: sc_dw_buffer_114
+    name: RPL_ONHAND_CALC_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_115
+    name: RPL_ROUND_DOWN_FACTOR
+    type: DOUBLE
+  - id: sc_dw_buffer_116
+    name: RPL_SYS_BUFFER_TMPL_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_117
+    name: RPL_SYS_POLICY_SUBNET_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_118
+    name: RPL_USE_BASE_INVENTORY
+    type: DECIMAL(9,0)
+  - id: sc_dw_buffer_119
+    name: OMS_CONSIGNMENT_ON_HAND
+    type: DOUBLE
+  - id: sc_dw_buffer_120
+    name: OMS_INVENTORY_CLASSIFICATION
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_121
+    name: OMS_OWNING_ON_HAND
+    type: DOUBLE
+  - id: sc_dw_buffer_122
+    name: OMS_PO_TYPE
+    type: VARCHAR(64)
+  - id: sc_dw_buffer_123
+    name: OMS_PSLT
+    type: BIGINT(20)
+  - id: sc_dw_buffer_124
+    name: OMS_SOURCING_POLICY_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_buffer_125
+    name: OMS_SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_126
+    name: TC_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_127
+    name: MAGNITUDE
+    type: DECIMAL(65,6)
+  - id: sc_dw_buffer_128
+    name: SCC_SYS_INVENTORY_OWN_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_buffer_129
+    name: INBOUND_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_buffer_130
+    name: BACK_ORDERED_QUANTITY
+    type: DECIMAL(65,6)
+  - id: sc_dw_buffer_131
+    name: BACK_ORDER_AVAILABILITY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_132
+    name: AVG_DAILY_DEMAND
+    type: DECIMAL(65,6)
+  - id: sc_dw_buffer_133
+    name: ORDER_UOM
+    type: DECIMAL(6,0)
+  - id: sc_dw_buffer_134
+    name: ITEM_SUPPLY_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_buffer_135
+    name: MINIMUM_TARGET_INVENTORY
+    type: DECIMAL(65,6)
+  - id: sc_dw_buffer_136
+    name: MINIMUM_DAYS_OF_SUPPLY
+    type: DECIMAL(65,6)
+  - id: sc_dw_buffer_137
+    name: MAGNITUDE_COST
+    type: DECIMAL(65,6)
+  - id: sc_dw_buffer_138
+    name: MAGNITUDE_LOST_SALES
+    type: DECIMAL(65,6)
+  - id: sc_dw_buffer_139
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_buffer_140
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_buffer_141
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_buffer_142
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_buffer_143
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_buffer_144
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_buffer_145
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_buffer_146
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_buffer_147
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_buffer_148
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_buffer_149
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_buffer_150
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_buffer_151
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_buffer_152
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_buffer_153
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_buffer_154
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_buffer_155
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_buffer_156
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_157
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_158
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_159
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_160
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_161
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_162
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_163
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_164
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_165
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_buffer_166
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

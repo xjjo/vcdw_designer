@@ -1,0 +1,195 @@
+id: support_dw_scc_inv_consumption
+kind: support
+name: dw_scc_inv_consumption
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_inv_consumption_0
+    name: SYS_INV_CONSUMPTION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_consumption_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_consumption_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_consumption_7
+    name: OFF_NETWORK_ORDER_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_8
+    name: OFF_NETWORK_SHIPMENT_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_9
+    name: OFF_NETWORK_REF_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_10
+    name: IS_INTERNAL
+    type: DECIMAL(1,0)
+  - id: sc_dw_scc_inv_consumption_11
+    name: EXT_SITE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_12
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_13
+    name: CONSUMPTION_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_14
+    name: OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_15
+    name: OPERATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_consumption_16
+    name: EXT_ITEM_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_17
+    name: QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inv_consumption_18
+    name: QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_19
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_consumption_20
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_consumption_21
+    name: FIFO_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_consumption_22
+    name: STATUS
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_23
+    name: COMMENTS
+    type: VARCHAR(4000)
+  - id: sc_dw_scc_inv_consumption_24
+    name: EXT_SERIAL_NO
+    type: VARCHAR(200)
+  - id: sc_dw_scc_inv_consumption_25
+    name: BALANCE_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_inv_consumption_26
+    name: BALANCE_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_27
+    name: ORIGINAL_OPERATION_NO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_28
+    name: AUXILARY_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_29
+    name: UNITS_PER_PACKAGE
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_30
+    name: CONDITION_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_31
+    name: PURPOSE_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_32
+    name: OWNER_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_33
+    name: ORIGIN
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_34
+    name: MASTER_OPERATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_35
+    name: MASTER_OPERATION_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_36
+    name: MASTER_OPERATION_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_37
+    name: SOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_38
+    name: SOURCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_39
+    name: SOURCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_40
+    name: EXTERNAL_DOC_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_41
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_42
+    name: SYS_SHIPMENT_LINE_CONTENT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_43
+    name: SYS_ORDER_DSCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_44
+    name: SYS_PRODUCTION_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_45
+    name: SYS_WORK_ORDER_TASK_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_46
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_47
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_48
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_49
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_50
+    name: SYS_REASON_CODE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_51
+    name: SYS_SINGLETON_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_52
+    name: SYS_ORIGINAL_ORDER_DS_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_53
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_inv_consumption_54
+    name: WMS_DEFECT_CODE1
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_55
+    name: WMS_DEFECT_CODE2
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_56
+    name: WMS_DEFECT_CODE3
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_57
+    name: WMS_DEFECT_CODE4
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_58
+    name: WMS_DEFECT_CODE5
+    type: VARCHAR(64)
+  - id: sc_dw_scc_inv_consumption_59
+    name: SCPT_HOLD_AUX_INFO
+    type: VARCHAR(512)
+  - id: sc_dw_scc_inv_consumption_60
+    name: SCPT_HOLD_REASON
+    type: VARCHAR(256)
+  - id: sc_dw_scc_inv_consumption_61
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_inv_consumption_62
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

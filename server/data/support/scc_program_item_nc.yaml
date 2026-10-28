@@ -1,0 +1,30 @@
+id: support_scc_program_item_nc
+kind: support
+name: scc_program_item_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_program_item_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_program_item_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_program_item_nc_2
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_program_item_nc_3
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_program_item_nc_4
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_program_item_nc_5
+    name: SYS_PROGRAM_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_program_item_nc_6
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_program_item_nc_7
+    name: RECONCILED
+    type: TINYINT(1)

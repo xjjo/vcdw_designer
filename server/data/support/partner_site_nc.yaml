@@ -1,0 +1,63 @@
+id: support_partner_site_nc
+kind: support
+name: partner_site_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_partner_site_nc_0
+    name: SYS_PARTNER_SITE_ID
+    type: BIGINT(20)
+  - id: sc_partner_site_nc_1
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_partner_site_nc_2
+    name: SITE_ALIAS
+    type: VARCHAR(164)
+  - id: sc_partner_site_nc_3
+    name: TIME_ZONE_ID
+    type: VARCHAR(64)
+  - id: sc_partner_site_nc_4
+    name: EXTERNAL_REF_NO
+    type: VARCHAR(164)
+  - id: sc_partner_site_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_partner_site_nc_6
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_partner_site_nc_7
+    name: IS_ACTIVE
+    type: TINYINT(4)
+  - id: sc_partner_site_nc_8
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_partner_site_nc_9
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_partner_site_nc_10
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_partner_site_nc_11
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_partner_site_nc_12
+    name: ADDR_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_partner_site_nc_13
+    name: ADDR_SEARCH_COMP1
+    type: VARCHAR(64)
+  - id: sc_partner_site_nc_14
+    name: ADDR_SEARCH_COMP2
+    type: VARCHAR(64)
+  - id: sc_partner_site_nc_15
+    name: ADDR_COMPS
+    type: VARCHAR(512)
+  - id: sc_partner_site_nc_16
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_partner_site_nc_17
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_partner_site_nc_18
+    name: RECONCILED
+    type: TINYINT(1)

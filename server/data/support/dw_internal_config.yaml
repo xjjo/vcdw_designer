@@ -1,0 +1,18 @@
+id: support_dw_internal_config
+kind: support
+name: dw_internal_config
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_internal_config_0
+    name: PROPERTY_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_internal_config_1
+    name: PROPERTY_VALUE
+    type: VARCHAR(256)
+  - id: sc_dw_internal_config_2
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_internal_config_3
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

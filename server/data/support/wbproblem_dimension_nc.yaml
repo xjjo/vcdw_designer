@@ -1,0 +1,54 @@
+id: support_wbproblem_dimension_nc
+kind: support
+name: wbproblem_dimension_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_wbproblem_dimension_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_dimension_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_wbproblem_dimension_nc_2
+    name: DIM_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_dimension_nc_3
+    name: DIM_TYPE
+    type: VARCHAR(256)
+  - id: sc_wbproblem_dimension_nc_4
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_dimension_nc_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_wbproblem_dimension_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_wbproblem_dimension_nc_7
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_dimension_nc_8
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_dimension_nc_9
+    name: SYS_PROBLEM_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_dimension_nc_10
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_dimension_nc_11
+    name: SYS_WBGEO_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_dimension_nc_12
+    name: SYS_WBPROBLEM_DIMENSION_ID
+    type: BIGINT(20)
+  - id: sc_wbproblem_dimension_nc_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_wbproblem_dimension_nc_14
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_wbproblem_dimension_nc_15
+    name: RECONCILED
+    type: TINYINT(1)

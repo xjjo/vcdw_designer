@@ -1,0 +1,264 @@
+id: support_scc_snop_dmd_fcst_nc
+kind: support
+name: scc_snop_dmd_fcst_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_snop_dmd_fcst_nc_0
+    name: SYS_SNOP_DMD_FCST_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_1
+    name: FORECAST_NO
+    type: VARCHAR(64)
+  - id: sc_scc_snop_dmd_fcst_nc_2
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(64)
+  - id: sc_scc_snop_dmd_fcst_nc_3
+    name: QUANTITY_UOM
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_4
+    name: FORECAST_DATE_S1
+    type: DATETIME(6)
+  - id: sc_scc_snop_dmd_fcst_nc_5
+    name: FORECAST_QUANTITY_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_6
+    name: OVERRIDE1_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_7
+    name: OVERRIDE2_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_8
+    name: BASELINE_FORECAST_QUANTITY_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_9
+    name: PROMOTIONAL_ADJUST_QUANTITY_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_10
+    name: SEASONAL_ADJUST_QUANTITY_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_11
+    name: FORECAST_DATE_S2
+    type: DATETIME(6)
+  - id: sc_scc_snop_dmd_fcst_nc_12
+    name: FORECAST_QUANTITY_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_13
+    name: OVERRIDE1_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_14
+    name: OVERRIDE2_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_15
+    name: BASELINE_FORECAST_QUANTITY_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_16
+    name: PROMOTIONAL_ADJUST_QUANTITY_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_17
+    name: SEASONAL_ADJUST_QUANTITY_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_18
+    name: FORECAST_DATE_S3
+    type: DATETIME(6)
+  - id: sc_scc_snop_dmd_fcst_nc_19
+    name: FORECAST_QUANTITY_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_20
+    name: OVERRIDE1_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_21
+    name: OVERRIDE2_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_22
+    name: BASELINE_FORECAST_QUANTITY_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_23
+    name: PROMOTIONAL_ADJUST_QUANTITY_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_24
+    name: SEASONAL_ADJUST_QUANTITY_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_25
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_snop_dmd_fcst_nc_26
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_snop_dmd_fcst_nc_27
+    name: ACTUALS
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_28
+    name: LAST_YEAR_ACTUALS_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_29
+    name: LAST_YEAR_ACTUALS_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_30
+    name: LAST_YEAR_ACTUALS_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_31
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_32
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_33
+    name: LAST_YEAR_ACTUALS_CUR_VAL_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_34
+    name: HISTORICAL_SALES
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_35
+    name: DIGITAL_SIGNATURE
+    type: VARCHAR(64)
+  - id: sc_scc_snop_dmd_fcst_nc_36
+    name: FORECAST_CURRENCY_VALUE_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_37
+    name: OVERRIDE1_CURRENCY_VALUE_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_38
+    name: OVERRIDE2_CURRENCY_VALUE_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_39
+    name: BASELINE_FORECAST_CUR_VAL_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_40
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_41
+    name: SEASONAL_ADJUST_CUR_VAL_S1
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_42
+    name: ITEM_PRICE_S1_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_43
+    name: ITEM_PRICE_S1_CURRENCY
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_44
+    name: FORECAST_CURRENCY_VALUE_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_45
+    name: OVERRIDE1_CURRENCY_VALUE_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_46
+    name: OVERRIDE2_CURRENCY_VALUE_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_47
+    name: BASELINE_FORECAST_CUR_VAL_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_48
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_49
+    name: SEASONAL_ADJUST_CUR_VAL_S2
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_50
+    name: ITEM_PRICE_S2_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_51
+    name: ITEM_PRICE_S2_CURRENCY
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_52
+    name: FORECAST_CURRENCY_VALUE_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_53
+    name: OVERRIDE1_CURRENCY_VALUE_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_54
+    name: OVERRIDE2_CURRENCY_VALUE_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_55
+    name: BASELINE_FORECAST_CUR_VAL_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_56
+    name: PROMOTIONAL_ADJUST_CUR_VAL_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_57
+    name: SEASONAL_ADJUST_CUR_VAL_S3
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_58
+    name: ITEM_PRICE_S3_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_59
+    name: ITEM_PRICE_S3_CURRENCY
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_60
+    name: ITEM_INDICATOR
+    type: DECIMAL(1,0)
+  - id: sc_scc_snop_dmd_fcst_nc_61
+    name: SITE_PARTNER_INDICATOR
+    type: DECIMAL(1,0)
+  - id: sc_scc_snop_dmd_fcst_nc_62
+    name: OVERRIDE_SIGN
+    type: DECIMAL(1,0)
+  - id: sc_scc_snop_dmd_fcst_nc_63
+    name: FORECAST_DATE_WEEK_YEAR
+    type: VARCHAR(10)
+  - id: sc_scc_snop_dmd_fcst_nc_64
+    name: REV_FCST_QTY
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_65
+    name: REV_BASE_QTY
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_66
+    name: REV_SEASONAL_ADJ_QTY
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_67
+    name: REV_EVENT_ADJ_QTY
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_68
+    name: COMMITTED_QTY
+    type: DOUBLE
+  - id: sc_scc_snop_dmd_fcst_nc_69
+    name: DMD_FCST_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_snop_dmd_fcst_nc_70
+    name: SITE_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_71
+    name: PARTNER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_72
+    name: SYS_PRODUCT_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_73
+    name: ITEM_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_74
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_75
+    name: SYS_SITE_GROUP_INSTANCE_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_76
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_77
+    name: SYS_SCENARIO_ID
+    type: BIGINT(20)
+  - id: sc_scc_snop_dmd_fcst_nc_78
+    name: FORECAST_END_DATE
+    type: DATETIME(6)
+  - id: sc_scc_snop_dmd_fcst_nc_79
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_snop_dmd_fcst_nc_80
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_snop_dmd_fcst_nc_81
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_snop_dmd_fcst_nc_82
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_snop_dmd_fcst_nc_83
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_scc_snop_dmd_fcst_nc_84
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_scc_snop_dmd_fcst_nc_85
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)

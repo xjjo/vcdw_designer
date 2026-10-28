@@ -1,0 +1,81 @@
+id: support_dw_scc_order_milestone
+kind: support
+name: dw_scc_order_milestone
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_order_milestone_0
+    name: SYS_ORDER_MILESTONE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_milestone_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_milestone_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_milestone_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_milestone_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_7
+    name: ORIG_ETA_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_8
+    name: ESTIMATED_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_9
+    name: ACTUAL_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_10
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_milestone_11
+    name: ORDER_INFO
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_milestone_12
+    name: NOTIFICATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_13
+    name: DELIVERY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_milestone_14
+    name: DELIVERY_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_milestone_15
+    name: DELIVERY_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_order_milestone_16
+    name: SYS_MILESTONE_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_milestone_17
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_milestone_18
+    name: SYS_ORDER_REQUEST_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_milestone_19
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_20
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_order_milestone_21
+    name: MILESTONE_LEVEL
+    type: VARCHAR(256)
+  - id: sc_dw_scc_order_milestone_22
+    name: SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_milestone_23
+    name: SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_order_milestone_24
+    name: SYS_PREVIOUS_MILESTONE_REF_ID
+    type: BIGINT(20)

@@ -1,0 +1,39 @@
+id: support_scc_attribute_option_nc
+kind: support
+name: scc_attribute_option_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_attribute_option_nc_0
+    name: ATTRIBUTE_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_attribute_option_nc_1
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_attribute_option_nc_2
+    name: OPTION_DESCRIPTION
+    type: VARCHAR(100)
+  - id: sc_scc_attribute_option_nc_3
+    name: OPTION_VALUE
+    type: VARCHAR(100)
+  - id: sc_scc_attribute_option_nc_4
+    name: SYS_ATTRIBUTE_ID
+    type: BIGINT(20)
+  - id: sc_scc_attribute_option_nc_5
+    name: SYS_ATTRIBUTE_OPTION_ID
+    type: BIGINT(20)
+  - id: sc_scc_attribute_option_nc_6
+    name: SYS_ATTRIBUTE_SET_ID
+    type: BIGINT(20)
+  - id: sc_scc_attribute_option_nc_7
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_scc_attribute_option_nc_8
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_attribute_option_nc_9
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_attribute_option_nc_10
+    name: RECONCILED
+    type: TINYINT(1)

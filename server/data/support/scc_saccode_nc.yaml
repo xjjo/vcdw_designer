@@ -1,0 +1,81 @@
+id: support_scc_saccode_nc
+kind: support
+name: scc_saccode_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_saccode_nc_0
+    name: SYS_SACCODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_saccode_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_saccode_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_saccode_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_saccode_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_saccode_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_saccode_nc_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_saccode_nc_7
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_saccode_nc_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_saccode_nc_9
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_scc_saccode_nc_10
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_scc_saccode_nc_11
+    name: OWNER_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_scc_saccode_nc_12
+    name: CODE_TYPE
+    type: VARCHAR(64)
+  - id: sc_scc_saccode_nc_13
+    name: CODE
+    type: VARCHAR(64)
+  - id: sc_scc_saccode_nc_14
+    name: AMOUNT
+    type: DOUBLE
+  - id: sc_scc_saccode_nc_15
+    name: PENALTY_METHOD
+    type: VARCHAR(256)
+  - id: sc_scc_saccode_nc_16
+    name: MIN_COST
+    type: DOUBLE
+  - id: sc_scc_saccode_nc_17
+    name: MAX_COST
+    type: DOUBLE
+  - id: sc_scc_saccode_nc_18
+    name: RATE_INFO_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_saccode_nc_19
+    name: RATE_INFO_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_saccode_nc_20
+    name: OMS_IS_ALLOW_DISCOUNT
+    type: TINYINT(4)
+  - id: sc_scc_saccode_nc_21
+    name: OMS_REVISION_NO
+    type: BIGINT(20)
+  - id: sc_scc_saccode_nc_22
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_saccode_nc_23
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_saccode_nc_24
+    name: RECONCILED
+    type: TINYINT(1)

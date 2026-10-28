@@ -1,0 +1,30 @@
+id: support_dw_pipeline_sync_history
+kind: support
+name: dw_pipeline_sync_history
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_pipeline_sync_history_0
+    name: JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_pipeline_sync_history_1
+    name: JOB_NAME
+    type: VARCHAR(250)
+  - id: sc_dw_pipeline_sync_history_2
+    name: STATUS
+    type: TINYINT(4)
+  - id: sc_dw_pipeline_sync_history_3
+    name: RUN_TYPE
+    type: VARCHAR(50)
+  - id: sc_dw_pipeline_sync_history_4
+    name: DW_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_pipeline_sync_history_5
+    name: OLTP_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_pipeline_sync_history_6
+    name: LAST_SYNC_START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_pipeline_sync_history_7
+    name: LAST_SYNC_END_DATE
+    type: DATETIME(6)

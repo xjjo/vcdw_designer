@@ -1,0 +1,147 @@
+id: support_dw_scc_lot
+kind: support
+name: dw_scc_lot
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_lot_0
+    name: SYS_LOT_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_scc_lot_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_lot_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_lot_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_7
+    name: LOT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_lot_8
+    name: LOT_OWNER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_lot_9
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_scc_lot_10
+    name: MFG_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_11
+    name: MFG_BATCH_QTY_AMOUNT
+    type: DOUBLE
+  - id: sc_dw_scc_lot_12
+    name: MFG_BATCH_QTY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_lot_13
+    name: BEST_BUY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_14
+    name: EXPIRY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_15
+    name: RECALL_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_16
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_17
+    name: SYS_MFG_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_18
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_19
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_20
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_lot_21
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_scc_lot_22
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_scc_lot_23
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_scc_lot_24
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_scc_lot_25
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_scc_lot_26
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_27
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_28
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_29
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_30
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_31
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_32
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_33
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_34
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_35
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_scc_lot_36
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_37
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_38
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_39
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_40
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_41
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_42
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_43
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_44
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_45
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_scc_lot_46
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

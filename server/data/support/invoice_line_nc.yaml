@@ -1,0 +1,417 @@
+id: support_invoice_line_nc
+kind: support
+name: invoice_line_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_invoice_line_nc_0
+    name: SYS_INVOICE_LINE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_2
+    name: LEVEL_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_invoice_line_nc_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_invoice_line_nc_4
+    name: INVOICE_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_5
+    name: REFERENCE_INVOICE_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_6
+    name: BILL_OF_LADING_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_7
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_8
+    name: INVOICE_LINE_TYPE
+    type: SMALLINT(6)
+  - id: sc_invoice_line_nc_9
+    name: INVOICE_SACCODE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_10
+    name: REFERENCE_ITEM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_11
+    name: QUANTITY_UOM
+    type: SMALLINT(6)
+  - id: sc_invoice_line_nc_12
+    name: ORIGINAL_INVOICE_LINE_QTY
+    type: DOUBLE
+  - id: sc_invoice_line_nc_13
+    name: INVOICE_LINE_QTY
+    type: DOUBLE
+  - id: sc_invoice_line_nc_14
+    name: EXPECTED_INVOICE_LINE_QTY
+    type: DOUBLE
+  - id: sc_invoice_line_nc_15
+    name: ORIGINAL_UNIT_PRICE
+    type: DOUBLE
+  - id: sc_invoice_line_nc_16
+    name: UNIT_PRICE
+    type: DOUBLE
+  - id: sc_invoice_line_nc_17
+    name: EXPECTED_UNIT_PRICE
+    type: DOUBLE
+  - id: sc_invoice_line_nc_18
+    name: ORIGINAL_INVOICE_LINE_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_nc_19
+    name: INVOICE_LINE_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_nc_20
+    name: EXPECTED_INVOICE_LINE_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_nc_21
+    name: TAX_ALLOWED
+    type: TINYINT(4)
+  - id: sc_invoice_line_nc_22
+    name: DISCOUNT_ALLOWED
+    type: TINYINT(4)
+  - id: sc_invoice_line_nc_23
+    name: SYS_INVOICE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_24
+    name: INVOICE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_25
+    name: SYS_SHIPMENT_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_26
+    name: SYS_SHIPMENT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_27
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_28
+    name: SYS_INVOICER_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_29
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_30
+    name: ITEM_DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_31
+    name: SCC_SYS_DELIVERY_SCHEDULE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_32
+    name: SCC_SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_33
+    name: SCC_SYS_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_34
+    name: SCC_SYS_PURCHASE_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_35
+    name: SCC_SYS_PURCHASE_ORDER_LINE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_36
+    name: FIN_COMMENTS
+    type: VARCHAR(512)
+  - id: sc_invoice_line_nc_37
+    name: FIN_CONTRACTED_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_nc_38
+    name: FIN_DURATION
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_39
+    name: FIN_MODIFICATION_REASON
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_40
+    name: FIN_NOTES
+    type: LONGTEXT
+  - id: sc_invoice_line_nc_41
+    name: FIN_OTHER_REF_NO
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_42
+    name: FIN_RATE
+    type: DOUBLE
+  - id: sc_invoice_line_nc_43
+    name: FIN_RATE_TYPE
+    type: VARCHAR(256)
+  - id: sc_invoice_line_nc_44
+    name: FIN_REFERENCE_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_45
+    name: FIN_REFERENCE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_46
+    name: FIN_REFERENCE_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_47
+    name: FIN_SYS_CATEGORY_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_48
+    name: FIN_TIME_UOM
+    type: VARCHAR(256)
+  - id: sc_invoice_line_nc_49
+    name: OMS_CONTRACT_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_50
+    name: OMS_CONTRACT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_51
+    name: OMS_CONTRACT_TERM_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_52
+    name: OMS_DEL_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_53
+    name: OMS_DISCOUNT_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_nc_54
+    name: OMS_FOBCODE
+    type: SMALLINT(6)
+  - id: sc_invoice_line_nc_55
+    name: OMS_FOBINSTRUCTIONS
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_56
+    name: OMS_IS_NEGATIVE_QTY
+    type: TINYINT(4)
+  - id: sc_invoice_line_nc_57
+    name: OMS_ITEM_COMMODITY_NAME
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_58
+    name: OMS_ITEM_MANUFACTURER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_59
+    name: OMS_ITEM_NAME
+    type: VARCHAR(255)
+  - id: sc_invoice_line_nc_60
+    name: OMS_ITEM_NATIONAL_STOCK_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_61
+    name: OMS_LINE_CURRENCY
+    type: SMALLINT(6)
+  - id: sc_invoice_line_nc_62
+    name: OMS_LN_OTHER_DATA
+    type: LONGTEXT
+  - id: sc_invoice_line_nc_63
+    name: OMS_LN_PURCHASE_REQ_NO
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_64
+    name: OMS_MANUFACTURER_PART_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_65
+    name: OMS_ORDER_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_66
+    name: OMS_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_67
+    name: OMS_PURCHASE_ORDER_DATE
+    type: DATETIME(6)
+  - id: sc_invoice_line_nc_68
+    name: OMS_REQ_SCHEDULE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_69
+    name: OMS_REVISION_NO_LN
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_70
+    name: OMS_SHIPMENT_LINE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_71
+    name: OMS_SHIPMENT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_72
+    name: OMS_SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_73
+    name: OMS_SYS_CONTRACT_LINE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_74
+    name: OMS_SYS_CONTRACT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_75
+    name: OMS_UNIVERSAL_ITEM_IDENTIFIER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_76
+    name: OMS_VENDOR_PART_NUMBER
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_77
+    name: TMS_ACCRUAL_CODE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_78
+    name: TMS_BILLED_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_invoice_line_nc_79
+    name: TMS_BILLED_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_invoice_line_nc_80
+    name: TMS_BILLED_VOLUME_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_nc_81
+    name: TMS_BILLED_VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_invoice_line_nc_82
+    name: TMS_BILLED_WEIGHT_AMOUNT
+    type: DOUBLE
+  - id: sc_invoice_line_nc_83
+    name: TMS_BILLED_WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_invoice_line_nc_84
+    name: TMS_FINAL_PAYMENT_CODE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_85
+    name: TMS_REFERENCE_NO
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_86
+    name: TMS_SHIP_FROM_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_87
+    name: TMS_SHIP_FROM_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_88
+    name: TMS_SHIP_FROM_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_invoice_line_nc_89
+    name: TMS_SHIP_FROM_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_90
+    name: TMS_SHIP_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_91
+    name: TMS_SHIP_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_92
+    name: TMS_SHIP_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_invoice_line_nc_93
+    name: TMS_SHIP_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_94
+    name: TMS_STOP_COUNT
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_95
+    name: TMS_SYS_ACCESSORIAL_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_96
+    name: TMS_SYS_BILLED_DESTINATION_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_97
+    name: TMS_SYS_BILLED_ORIGIN_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_98
+    name: TMS_SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_99
+    name: TMS_SYS_TAX_CODE_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_100
+    name: TMS_TAX_PERCENTAGE
+    type: DOUBLE
+  - id: sc_invoice_line_nc_101
+    name: OMS_SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_102
+    name: OMS_ORDERED_QUANTITY
+    type: DOUBLE
+  - id: sc_invoice_line_nc_103
+    name: OMS_SHIPPED_QUANTITY
+    type: DOUBLE
+  - id: sc_invoice_line_nc_104
+    name: OMS_RECEIVED_QUANTITY
+    type: DOUBLE
+  - id: sc_invoice_line_nc_105
+    name: OMS_ITEM_HSCODE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_106
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_invoice_line_nc_107
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_invoice_line_nc_108
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_invoice_line_nc_109
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_invoice_line_nc_110
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_invoice_line_nc_111
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)
+  - id: sc_invoice_line_nc_112
+    name: LVL1_PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_invoice_line_nc_113
+    name: LVL1_PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_invoice_line_nc_114
+    name: LVL1_PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_invoice_line_nc_115
+    name: LVL1_PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_invoice_line_nc_116
+    name: LVL1_PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_invoice_line_nc_117
+    name: LVL1_PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_118
+    name: LVL1_PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_119
+    name: LVL1_PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_120
+    name: LVL1_PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_121
+    name: LVL1_PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_122
+    name: LVL1_PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_123
+    name: LVL1_PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_124
+    name: LVL1_PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_125
+    name: LVL1_PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_126
+    name: LVL1_PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_invoice_line_nc_127
+    name: LVL1_PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_128
+    name: LVL1_PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_129
+    name: LVL1_PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_130
+    name: LVL1_PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_131
+    name: LVL1_PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_132
+    name: LVL1_PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_133
+    name: LVL1_PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_134
+    name: LVL1_PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_135
+    name: LVL1_PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_invoice_line_nc_136
+    name: LVL1_PADF_STRING_FIELD9
+    type: VARCHAR(128)

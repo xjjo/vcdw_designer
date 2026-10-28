@@ -1,0 +1,99 @@
+id: support_dw_mfg_pof_history
+kind: support
+name: dw_mfg_pof_history
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_mfg_pof_history_0
+    name: SYS_POF_HISTORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_mfg_pof_history_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_mfg_pof_history_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_pof_history_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_mfg_pof_history_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_pof_history_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_pof_history_7
+    name: COMPUTATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_pof_history_8
+    name: TIME_PERIOD_OUT
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_9
+    name: TIME_PERIOD_OUT_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_mfg_pof_history_10
+    name: AGGREGATION_BEGIN_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_pof_history_11
+    name: AGGREGATION_END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_mfg_pof_history_12
+    name: AGGREGATION_HORIZON
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_13
+    name: AGGREGATION_HORIZON_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_mfg_pof_history_14
+    name: ACTUAL_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_mfg_pof_history_15
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_mfg_pof_history_16
+    name: PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_mfg_pof_history_17
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_mfg_pof_history_18
+    name: PLANNED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_mfg_pof_history_19
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_20
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_21
+    name: SYS_REQUESTING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_22
+    name: SYS_EXECUTION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_23
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_24
+    name: SYS_CUSTOMER_OF_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_25
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_26
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_27
+    name: SYS_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_28
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_mfg_pof_history_29
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_mfg_pof_history_30
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

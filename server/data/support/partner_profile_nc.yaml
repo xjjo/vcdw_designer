@@ -1,0 +1,45 @@
+id: support_partner_profile_nc
+kind: support
+name: partner_profile_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_partner_profile_nc_0
+    name: SYS_PARTNER_PROFILE_ID
+    type: BIGINT(20)
+  - id: sc_partner_profile_nc_1
+    name: PROFILE_NAME
+    type: VARCHAR(256)
+  - id: sc_partner_profile_nc_2
+    name: APPOINTMENT_CODE
+    type: VARCHAR(128)
+  - id: sc_partner_profile_nc_3
+    name: NOTE
+    type: VARCHAR(512)
+  - id: sc_partner_profile_nc_4
+    name: PICKUP_APPOINTMENT_CODE
+    type: VARCHAR(128)
+  - id: sc_partner_profile_nc_5
+    name: IS_ACTIVE
+    type: TINYINT(1)
+  - id: sc_partner_profile_nc_6
+    name: PARTNER_NAME
+    type: VARCHAR(256)
+  - id: sc_partner_profile_nc_7
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_partner_profile_nc_8
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_partner_profile_nc_9
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_partner_profile_nc_10
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_partner_profile_nc_11
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_partner_profile_nc_12
+    name: RECONCILED
+    type: TINYINT(1)

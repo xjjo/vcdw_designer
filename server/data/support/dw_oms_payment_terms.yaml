@@ -1,0 +1,69 @@
+id: support_dw_oms_payment_terms
+kind: support
+name: dw_oms_payment_terms
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_payment_terms_0
+    name: SYS_PAYMENT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_payment_terms_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_oms_payment_terms_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_payment_terms_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_payment_terms_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_payment_terms_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_payment_terms_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_payment_terms_7
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_payment_terms_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_payment_terms_9
+    name: PAYMENT_TERMS_CODE
+    type: VARCHAR(64)
+  - id: sc_dw_oms_payment_terms_10
+    name: DESCRIPTION
+    type: TEXT
+  - id: sc_dw_oms_payment_terms_11
+    name: PAYMENT_DATE_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_dw_oms_payment_terms_12
+    name: DUE_DATE_MONTH_OF_YEAR
+    type: DECIMAL(9,0)
+  - id: sc_dw_oms_payment_terms_13
+    name: DUE_DATE_DAY
+    type: DECIMAL(9,0)
+  - id: sc_dw_oms_payment_terms_14
+    name: EARLY_PAYMENT_DISCOUNT_PCT
+    type: DOUBLE
+  - id: sc_dw_oms_payment_terms_15
+    name: DISCOUNT_DATE_MONTH_OF_YEAR
+    type: DECIMAL(9,0)
+  - id: sc_dw_oms_payment_terms_16
+    name: DISCOUNT_DATE_DAY
+    type: DECIMAL(9,0)
+  - id: sc_dw_oms_payment_terms_17
+    name: TAX_AMOUNT_BEFORE_DISCOUNT
+    type: DOUBLE
+  - id: sc_dw_oms_payment_terms_18
+    name: SYS_ENTERPRISE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_payment_terms_19
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_payment_terms_20
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

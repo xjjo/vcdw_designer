@@ -1,0 +1,34 @@
+id: support_dw_csv_chunk_tracker
+kind: support
+name: dw_csv_chunk_tracker
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_csv_chunk_tracker_0
+    name: JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_csv_chunk_tracker_1
+    name: DW_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_csv_chunk_tracker_2
+    name: OLTP_TABLE
+    type: VARCHAR(64)
+  - id: sc_dw_csv_chunk_tracker_3
+    name: CHUNK_FILE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_csv_chunk_tracker_4
+    name: CHUNK_INDEX
+    type: INT(11)
+  - id: sc_dw_csv_chunk_tracker_5
+    name: TOTAL_CHUNKS
+    type: INT(11)
+  - id: sc_dw_csv_chunk_tracker_6
+    name: IMPORT_STATUS
+    type: TINYINT(4)
+    comment: NULL=pending, 0=success, 1=failed
+  - id: sc_dw_csv_chunk_tracker_7
+    name: CREATED_AT
+    type: DATETIME(6)
+  - id: sc_dw_csv_chunk_tracker_8
+    name: UPDATED_AT
+    type: DATETIME(6)

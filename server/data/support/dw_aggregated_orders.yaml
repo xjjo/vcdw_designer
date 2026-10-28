@@ -1,0 +1,75 @@
+id: support_dw_aggregated_orders
+kind: support
+name: dw_aggregated_orders
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_aggregated_orders_0
+    name: SYS_AGGREGATED_ORDERS_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_aggregated_orders_2
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_3
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_4
+    name: SYS_PARENT_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_5
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_6
+    name: SYS_PGRP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_7
+    name: SYS_SHIPFROM_SGRP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_8
+    name: SYS_SHIPFROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_9
+    name: SYS_SHIPTO_SGRP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_10
+    name: SYS_SHIPTO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_aggregated_orders_11
+    name: EXTERNAL_FULFILLED_QTY
+    type: DOUBLE
+  - id: sc_dw_aggregated_orders_12
+    name: OUTLIER_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_aggregated_orders_13
+    name: PROMO_ADJ_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_aggregated_orders_14
+    name: RECEIVED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_aggregated_orders_15
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_aggregated_orders_16
+    name: SHIPPED_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_aggregated_orders_17
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_aggregated_orders_18
+    name: QUANTITY_OVERRIDE
+    type: DOUBLE
+  - id: sc_dw_aggregated_orders_19
+    name: REQUEST_DELIVERY_DATE
+    type: DATETIME(6)
+  - id: sc_dw_aggregated_orders_20
+    name: REQUEST_SHIP_DATE
+    type: DATETIME(6)
+  - id: sc_dw_aggregated_orders_21
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_aggregated_orders_22
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

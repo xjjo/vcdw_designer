@@ -1,0 +1,231 @@
+id: support_payment_nc
+kind: support
+name: payment_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_payment_nc_0
+    name: SYS_PAYMENT_ID
+    type: BIGINT(20)
+  - id: sc_payment_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_payment_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_payment_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_payment_nc_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_payment_nc_7
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_payment_nc_8
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_payment_nc_9
+    name: PAYMENT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_10
+    name: PAYMENT_AMOUNT
+    type: DOUBLE
+  - id: sc_payment_nc_11
+    name: PAYMENT_DATE
+    type: DATETIME(6)
+  - id: sc_payment_nc_12
+    name: PAYMENT_TYPE
+    type: VARCHAR(64)
+  - id: sc_payment_nc_13
+    name: BANK_CODE
+    type: VARCHAR(64)
+  - id: sc_payment_nc_14
+    name: VOUCHER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_15
+    name: CHECK_NUMBER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_16
+    name: CURRENCY
+    type: SMALLINT(6)
+  - id: sc_payment_nc_17
+    name: PAYMENT_REF_NO
+    type: VARCHAR(64)
+  - id: sc_payment_nc_18
+    name: OFF_NETWORK_INVOICE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_19
+    name: SYS_PAYER_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_payment_nc_20
+    name: SYS_PAYEE_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_payment_nc_21
+    name: SYS_INVOICE_ID
+    type: BIGINT(20)
+  - id: sc_payment_nc_22
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_payment_nc_23
+    name: TMS_ACCOUNT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_24
+    name: TMS_ADVANCE_PURCHASE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_25
+    name: TMS_CREDIT_CARD_CVV
+    type: VARCHAR(64)
+  - id: sc_payment_nc_26
+    name: TMS_CREDIT_CARD_INFO
+    type: VARCHAR(64)
+  - id: sc_payment_nc_27
+    name: TMS_CREDIT_CARD_NUMBER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_28
+    name: TMS_CREDIT_CARD_OWNER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_29
+    name: TMS_PAYEE_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_payment_nc_30
+    name: TMS_PAYEE_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_payment_nc_31
+    name: TMS_PAYEE_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_payment_nc_32
+    name: TMS_PAYEE_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_payment_nc_33
+    name: TMS_PAYEE_CONTACT
+    type: VARCHAR(514)
+  - id: sc_payment_nc_34
+    name: TMS_PAYER_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_payment_nc_35
+    name: TMS_PAYER_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_payment_nc_36
+    name: TMS_PAYER_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_payment_nc_37
+    name: TMS_PAYER_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_payment_nc_38
+    name: TMS_PAYER_CONTACT
+    type: VARCHAR(514)
+  - id: sc_payment_nc_39
+    name: TMS_SYS_ACCOUNT_ID
+    type: BIGINT(20)
+  - id: sc_payment_nc_40
+    name: OFF_NETWORK_PAYMENT_NUMBER
+    type: VARCHAR(64)
+  - id: sc_payment_nc_41
+    name: APPLIED_INVOICE_AMOUNT
+    type: DOUBLE
+  - id: sc_payment_nc_42
+    name: PAYMENT_TOTAL
+    type: DOUBLE
+  - id: sc_payment_nc_43
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_payment_nc_44
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_payment_nc_45
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_payment_nc_46
+    name: ERROR_RESYNC_COUNT
+    type: INT(11)
+  - id: sc_payment_nc_47
+    name: ERROR_PENALTY_COUNT
+    type: INT(11)
+  - id: sc_payment_nc_48
+    name: ERROR_FEEDBACK_COUNT
+    type: INT(11)
+  - id: sc_payment_nc_49
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_payment_nc_50
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_payment_nc_51
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_payment_nc_52
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_payment_nc_53
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_payment_nc_54
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_payment_nc_55
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_payment_nc_56
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_payment_nc_57
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_payment_nc_58
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_payment_nc_59
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_payment_nc_60
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_payment_nc_61
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_payment_nc_62
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_payment_nc_63
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_payment_nc_64
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_payment_nc_65
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_payment_nc_66
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_payment_nc_67
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_payment_nc_68
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_payment_nc_69
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_payment_nc_70
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_payment_nc_71
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_payment_nc_72
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_payment_nc_73
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_payment_nc_74
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

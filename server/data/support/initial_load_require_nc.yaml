@@ -1,0 +1,39 @@
+id: support_initial_load_require_nc
+kind: support
+name: initial_load_require_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_initial_load_require_nc_0
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_initial_load_require_nc_1
+    name: OLTP_TABLE
+    type: VARCHAR(64)
+  - id: sc_initial_load_require_nc_2
+    name: LAST_EXTRACTED
+    type: DATETIME(6)
+  - id: sc_initial_load_require_nc_3
+    name: LAST_PROCESSED
+    type: DATETIME(6)
+  - id: sc_initial_load_require_nc_4
+    name: NC_ROW_COUNT
+    type: BIGINT(20)
+  - id: sc_initial_load_require_nc_5
+    name: START_DATE
+    type: DATETIME(6)
+  - id: sc_initial_load_require_nc_6
+    name: END_DATE
+    type: DATETIME(6)
+  - id: sc_initial_load_require_nc_7
+    name: START_SYS_ID
+    type: BIGINT(20)
+  - id: sc_initial_load_require_nc_8
+    name: END_SYS_ID
+    type: BIGINT(20)
+  - id: sc_initial_load_require_nc_9
+    name: IS_CHUNK_SYNC
+    type: TINYINT(1)
+  - id: sc_initial_load_require_nc_10
+    name: IS_LOAD_COMPLETE
+    type: TINYINT(1)

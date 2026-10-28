@@ -1,0 +1,60 @@
+id: support_scc_pick_list_nc
+kind: support
+name: scc_pick_list_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_pick_list_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_pick_list_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_pick_list_nc_2
+    name: EXT_SITE_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_pick_list_nc_3
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_pick_list_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_pick_list_nc_5
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_pick_list_nc_6
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_pick_list_nc_7
+    name: PICKING_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_pick_list_nc_8
+    name: PICK_LIST_DATE
+    type: DATETIME(6)
+  - id: sc_scc_pick_list_nc_9
+    name: PICK_LIST_NO
+    type: VARCHAR(64)
+  - id: sc_scc_pick_list_nc_10
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_pick_list_nc_11
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_scc_pick_list_nc_12
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_pick_list_nc_13
+    name: SYS_PICK_LIST_ID
+    type: BIGINT(20)
+  - id: sc_scc_pick_list_nc_14
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_pick_list_nc_15
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_pick_list_nc_16
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_pick_list_nc_17
+    name: RECONCILED
+    type: TINYINT(1)

@@ -1,0 +1,48 @@
+id: support_dw_partner_profile
+kind: support
+name: dw_partner_profile
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_partner_profile_0
+    name: SYS_PARTNER_PROFILE_ID
+    type: BIGINT(20)
+  - id: sc_dw_partner_profile_1
+    name: PROFILE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_partner_profile_2
+    name: APPOINTMENT_CODE
+    type: VARCHAR(128)
+  - id: sc_dw_partner_profile_3
+    name: NOTE
+    type: VARCHAR(512)
+  - id: sc_dw_partner_profile_4
+    name: PICKUP_APPOINTMENT_CODE
+    type: VARCHAR(128)
+  - id: sc_dw_partner_profile_5
+    name: IS_ACTIVE
+    type: TINYINT(1)
+  - id: sc_dw_partner_profile_6
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_partner_profile_7
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_partner_profile_8
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_partner_profile_9
+    name: PARTNER_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_partner_profile_10
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_partner_profile_11
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_partner_profile_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_partner_profile_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

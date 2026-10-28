@@ -1,0 +1,141 @@
+id: support_scc_receipt_nc
+kind: support
+name: scc_receipt_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_receipt_nc_0
+    name: SYS_RECEIPT_ID
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_receipt_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_receipt_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_receipt_nc_7
+    name: RECEIPT_NO
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_8
+    name: RECEIPT_DATE
+    type: DATETIME(6)
+  - id: sc_scc_receipt_nc_9
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_10
+    name: EXT_SITE_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_11
+    name: ORIGINAL_RECEIPT_NO
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_12
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_13
+    name: SYS_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_14
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_15
+    name: SCPT_ORIGIN
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_16
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_receipt_nc_17
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_receipt_nc_18
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_receipt_nc_19
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_scc_receipt_nc_20
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_scc_receipt_nc_21
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_scc_receipt_nc_22
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_scc_receipt_nc_23
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_scc_receipt_nc_24
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_25
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_26
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_27
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_28
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_29
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_30
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_31
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_32
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_33
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_scc_receipt_nc_34
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_35
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_36
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_37
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_38
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_39
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_40
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_41
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_42
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_43
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_scc_receipt_nc_44
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

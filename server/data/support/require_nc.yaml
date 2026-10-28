@@ -1,0 +1,57 @@
+id: support_require_nc
+kind: support
+name: require_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_require_nc_0
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_require_nc_1
+    name: OLTP_TABLE
+    type: VARCHAR(64)
+  - id: sc_require_nc_2
+    name: LAST_EXTRACTED
+    type: DATETIME(6)
+  - id: sc_require_nc_3
+    name: LAST_PROCESSED
+    type: DATETIME(6)
+  - id: sc_require_nc_4
+    name: NC_ROW_COUNT
+    type: BIGINT(20)
+  - id: sc_require_nc_5
+    name: INITIAL_LOAD_START_DATE
+    type: DATETIME(6)
+  - id: sc_require_nc_6
+    name: INITIAL_LOAD_END_DATE
+    type: DATETIME(6)
+  - id: sc_require_nc_7
+    name: INITIAL_LOAD_START_SYS_ID
+    type: BIGINT(20)
+  - id: sc_require_nc_8
+    name: INITIAL_LOAD_END_SYS_ID
+    type: BIGINT(20)
+  - id: sc_require_nc_9
+    name: INCREMENTAL_LOAD_START_DATE
+    type: DATETIME(6)
+  - id: sc_require_nc_10
+    name: INCREMENTAL_LOAD_END_DATE
+    type: DATETIME(6)
+  - id: sc_require_nc_11
+    name: INCREMENTAL_LOAD_START_SYS_ID
+    type: BIGINT(20)
+  - id: sc_require_nc_12
+    name: INCREMENTAL_LOAD_END_SYS_ID
+    type: BIGINT(20)
+  - id: sc_require_nc_13
+    name: IS_INCR_LOAD_CHUNK_SYNC
+    type: TINYINT(1)
+  - id: sc_require_nc_14
+    name: IS_INIT_LOAD_CHUNK_SYNC
+    type: TINYINT(1)
+  - id: sc_require_nc_15
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_require_nc_16
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

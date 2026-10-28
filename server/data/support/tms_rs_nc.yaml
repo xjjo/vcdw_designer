@@ -1,0 +1,45 @@
+id: support_tms_rs_nc
+kind: support
+name: tms_rs_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_rs_nc_0
+    name: DEFINED_BY
+    type: VARCHAR(64)
+  - id: sc_tms_rs_nc_1
+    name: DISTRIBUTION_TYPE
+    type: SMALLINT(6)
+  - id: sc_tms_rs_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_rs_nc_3
+    name: RANKING_TYPE
+    type: SMALLINT(6)
+  - id: sc_tms_rs_nc_4
+    name: ROUTING_RULE_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_rs_nc_5
+    name: SELECTION_TYPE
+    type: SMALLINT(6)
+  - id: sc_tms_rs_nc_6
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_tms_rs_nc_7
+    name: SYS_ROUTING_RULE_ID
+    type: BIGINT(20)
+  - id: sc_tms_rs_nc_8
+    name: SYS_RS_ID
+    type: BIGINT(20)
+  - id: sc_tms_rs_nc_9
+    name: TMS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_tms_rs_nc_10
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_tms_rs_nc_11
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_tms_rs_nc_12
+    name: ES_LMD
+    type: DATETIME(6)

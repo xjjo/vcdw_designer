@@ -1,0 +1,51 @@
+id: support_mfg_prod_order_milestone_nc
+kind: support
+name: mfg_prod_order_milestone_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_mfg_prod_order_milestone_nc_0
+    name: SYS_PROD_ORDER_MILESTONE_ID
+    type: BIGINT(20)
+  - id: sc_mfg_prod_order_milestone_nc_1
+    name: ACTUAL_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_prod_order_milestone_nc_2
+    name: COMMENTS
+    type: VARCHAR(1024)
+  - id: sc_mfg_prod_order_milestone_nc_3
+    name: DISABLED
+    type: TINYINT(1)
+  - id: sc_mfg_prod_order_milestone_nc_4
+    name: ESTIMATED_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_prod_order_milestone_nc_5
+    name: SYS_MILESTONE_TYPE_REF_ID
+    type: BIGINT(20)
+  - id: sc_mfg_prod_order_milestone_nc_6
+    name: ORIGINAL_ESTIMATED_COMPLETION
+    type: DATETIME(6)
+  - id: sc_mfg_prod_order_milestone_nc_7
+    name: SYS_PRODUCTION_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_mfg_prod_order_milestone_nc_8
+    name: SYS_RESPONSIBLE_ORG_ID
+    type: BIGINT(20)
+  - id: sc_mfg_prod_order_milestone_nc_9
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_mfg_prod_order_milestone_nc_10
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_prod_order_milestone_nc_11
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_prod_order_milestone_nc_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_mfg_prod_order_milestone_nc_13
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_mfg_prod_order_milestone_nc_14
+    name: RECONCILED
+    type: TINYINT(1)

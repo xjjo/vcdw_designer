@@ -1,0 +1,267 @@
+id: support_enterprise_nc
+kind: support
+name: enterprise_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_enterprise_nc_0
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_enterprise_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_enterprise_nc_3
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_enterprise_nc_4
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+  - id: sc_enterprise_nc_5
+    name: DESCRIPTION
+    type: VARCHAR(255)
+  - id: sc_enterprise_nc_6
+    name: START_DAY_OF_WEEK
+    type: VARCHAR(9)
+  - id: sc_enterprise_nc_7
+    name: DUNS_NUMBER
+    type: BIGINT(20)
+  - id: sc_enterprise_nc_8
+    name: TIME_ZONE_ID
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_9
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_enterprise_nc_10
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_11
+    name: IS_ACTIVE
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_12
+    name: LOCAL_ONBOARD_COMPLETED
+    type: DECIMAL(1,0)
+  - id: sc_enterprise_nc_13
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_enterprise_nc_14
+    name: ATTACHMENTS_DISABLED
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_15
+    name: PHONE
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_16
+    name: FAX
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_17
+    name: BILLING_CONTACT_FIRST_NAME
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_18
+    name: BILLING_CONTACT_LAST_NAME
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_19
+    name: BILLING_CONTACT_PHONE
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_20
+    name: BILLING_CONTACT_FAX
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_21
+    name: BILLING_CONTACT_EMAIL
+    type: VARCHAR(254)
+  - id: sc_enterprise_nc_22
+    name: ONE_ENTERPRISE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_23
+    name: EXCLUDE_FROM_CMD
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_24
+    name: EPT_NAME
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_25
+    name: ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_26
+    name: ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_27
+    name: ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_28
+    name: ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_enterprise_nc_29
+    name: BILLING_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_30
+    name: BILLING_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_31
+    name: BILLING_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_32
+    name: BILLING_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_enterprise_nc_33
+    name: SYS_CREATION_TEMPLATE_ID
+    type: DECIMAL(19,0)
+  - id: sc_enterprise_nc_34
+    name: ANALYTICS_SCHEMA_NAME
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_35
+    name: ANALYTICS_URL
+    type: VARCHAR(255)
+  - id: sc_enterprise_nc_36
+    name: AUTHORITATIVE_LEVEL
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_37
+    name: EIN
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_38
+    name: EIN_TYPE
+    type: SMALLINT(6)
+  - id: sc_enterprise_nc_39
+    name: IS_VAN
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_40
+    name: IXM_POLICY_PRODUCT_HIERARCHY
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_41
+    name: SITE_HIERARCHY_ENABLED
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_42
+    name: TERMS_ACCEPTED_BY
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_43
+    name: CMDC_ADDITIONAL_PROPERTIES
+    type: LONGTEXT
+  - id: sc_enterprise_nc_44
+    name: CMDC_AUTHORITY_LEVEL
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_45
+    name: CMDC_LAST_SYNCED_FROM_CMD
+    type: DATETIME(6)
+  - id: sc_enterprise_nc_46
+    name: CMDC_UPDATED_FROM_CMD
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_47
+    name: RUN_PROBLEM_COMPUTATION
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_48
+    name: APPT_SCHEDULING_SYSTEM
+    type: VARCHAR(10)
+  - id: sc_enterprise_nc_49
+    name: RSVN_CUSTOM_TRANSACTION_NAME
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_50
+    name: SHIP_CUSTOM_TRANSACTION_NAME
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_51
+    name: OMS_ACKNOWLEDGEMENT_TYPE
+    type: SMALLINT(6)
+  - id: sc_enterprise_nc_52
+    name: OMS_ALLOW_BATCH_MESSAGES
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_53
+    name: OMS_AS2_PROD_CERTIFICATE
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_54
+    name: OMS_AS2_PROD_ID
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_55
+    name: OMS_AS2_PROD_URL
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_56
+    name: OMS_AS2_TEST_CERTIFICATE
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_57
+    name: OMS_AS2_TEST_ID
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_58
+    name: OMS_AS2_TEST_URL
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_59
+    name: OMS_BATCH_PROCESSING
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_60
+    name: OMS_CARRIER_SCACCODE
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_61
+    name: OMS_CMD_ONBOARDED
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_62
+    name: OMS_CONNECTION_TYPE
+    type: SMALLINT(6)
+  - id: sc_enterprise_nc_63
+    name: OMS_DEPLOYMENT_ENGINE_NAME
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_64
+    name: OMS_ENCRYPTION
+    type: SMALLINT(6)
+  - id: sc_enterprise_nc_65
+    name: OMS_EXTERNAL_INVOICE_SYSTEM
+    type: VARCHAR(256)
+  - id: sc_enterprise_nc_66
+    name: OMS_INTEG_PREXIX
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_67
+    name: OMS_REQUEST_ACKNOWLEDGEMENT
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_68
+    name: OMS_RUN_RETAIL_METRICS_ENGINE
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_69
+    name: OMS_SIGNATURE_HASH
+    type: SMALLINT(6)
+  - id: sc_enterprise_nc_70
+    name: OMS_SIGN_DOCUMENTS
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_71
+    name: OMS_SYS_VANENTERPRISE_ID
+    type: DECIMAL(19,0)
+  - id: sc_enterprise_nc_72
+    name: TMS_APPT_SCHEDULING_SINGLETON
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_73
+    name: TMS_FINANCIAL_TERMS
+    type: VARCHAR(512)
+  - id: sc_enterprise_nc_74
+    name: TMS_IS_CARRIER_SERVICE_ENABLED
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_75
+    name: TMS_IS_CLIENT_SERVICE_ENABLED
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_76
+    name: TMS_IS_LLPSERVICE_ENABLED
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_77
+    name: TMS_IS_PARTNER_SERVICE_ENABLED
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_78
+    name: TMS_IS_SHIPPER_SERVICE_ENABLED
+    type: TINYINT(4)
+  - id: sc_enterprise_nc_79
+    name: TMS_MAP_NAME
+    type: VARCHAR(512)
+  - id: sc_enterprise_nc_80
+    name: TMS_MAX_SHIP_PROCESSING_GRID_Q
+    type: BIGINT(20)
+  - id: sc_enterprise_nc_81
+    name: TMS_TENDER_EXPIRE_TIME
+    type: DOUBLE
+  - id: sc_enterprise_nc_82
+    name: TROUBLESHOOTING_CONTACT
+    type: VARCHAR(512)
+  - id: sc_enterprise_nc_83
+    name: RTL_VENDOR_ORDER_TYPE
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_84
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_enterprise_nc_85
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_enterprise_nc_86
+    name: RECONCILED
+    type: TINYINT(1)

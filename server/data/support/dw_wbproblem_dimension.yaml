@@ -1,0 +1,51 @@
+id: support_dw_wbproblem_dimension
+kind: support
+name: dw_wbproblem_dimension
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_wbproblem_dimension_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wbproblem_dimension_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wbproblem_dimension_2
+    name: DIM_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_dimension_3
+    name: DIM_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_wbproblem_dimension_4
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wbproblem_dimension_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_wbproblem_dimension_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_wbproblem_dimension_7
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_dimension_8
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_dimension_9
+    name: SYS_PROBLEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_dimension_10
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_dimension_11
+    name: SYS_WBGEO_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_dimension_12
+    name: SYS_WBPROBLEM_DIMENSION_ID
+    type: BIGINT(20)
+  - id: sc_dw_wbproblem_dimension_13
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_wbproblem_dimension_14
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

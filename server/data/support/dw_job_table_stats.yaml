@@ -1,0 +1,90 @@
+id: support_dw_job_table_stats
+kind: support
+name: dw_job_table_stats
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_job_table_stats_0
+    name: JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_1
+    name: TABLE_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_2
+    name: COUNTS
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_3
+    name: JOB_STATUS
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_4
+    name: START_DATE
+    type: DATETIME(6)
+  - id: sc_dw_job_table_stats_5
+    name: END_DATE
+    type: DATETIME(6)
+  - id: sc_dw_job_table_stats_6
+    name: ENGINE
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_7
+    name: VERSION
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_8
+    name: ROW_FORMAT
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_9
+    name: AVG_ROW_LENGTH
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_10
+    name: DATA_LENGTH
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_11
+    name: MAX_DATA_LENGTH
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_12
+    name: INDEX_LENGTH
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_13
+    name: DATA_FREE
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_14
+    name: AUTOINCREMENT
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_15
+    name: CREATE_TIME
+    type: DATETIME(6)
+  - id: sc_dw_job_table_stats_16
+    name: UPDATE_TIME
+    type: DATETIME(6)
+  - id: sc_dw_job_table_stats_17
+    name: CHECK_TIME
+    type: DATETIME(6)
+  - id: sc_dw_job_table_stats_18
+    name: COLLATION
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_19
+    name: CHECKSUM
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_20
+    name: CREATE_OPTIONS
+    type: VARCHAR(128)
+  - id: sc_dw_job_table_stats_21
+    name: COMMENT
+    type: VARCHAR(250)
+  - id: sc_dw_job_table_stats_22
+    name: BUFFER_MGR_MEMORY_USE
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_23
+    name: AVG_GC_DURATION(MS)
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_24
+    name: ROWS_IN_MEMORY
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_25
+    name: TOTAL_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_job_table_stats_26
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_job_table_stats_27
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

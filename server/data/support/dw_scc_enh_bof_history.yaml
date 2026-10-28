@@ -1,0 +1,108 @@
+id: support_dw_scc_enh_bof_history
+kind: support
+name: dw_scc_enh_bof_history
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_scc_enh_bof_history_0
+    name: BUCKETIZATION_POLICY
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enh_bof_history_1
+    name: BUYER_REASON_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enh_bof_history_2
+    name: COMPUTATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enh_bof_history_3
+    name: FORECAST_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enh_bof_history_4
+    name: FORECAST_NUMBER
+    type: VARCHAR(128)
+  - id: sc_dw_scc_enh_bof_history_5
+    name: PROMISE_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_enh_bof_history_6
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enh_bof_history_7
+    name: REQUEST_QUANTITY
+    type: DOUBLE
+  - id: sc_dw_scc_enh_bof_history_8
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_9
+    name: SYS_CREATION_ORGANIZATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_10
+    name: SYS_CUSTOMER_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_11
+    name: SYS_ENH_BOF_HISTORY_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_12
+    name: SYS_FROM_SITE_GROUP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_13
+    name: SYS_ITEM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_14
+    name: SYS_PRODUCT_GROUP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_15
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_16
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_17
+    name: SYS_SHIP_FROM_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_18
+    name: SYS_SHIP_FROM_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_19
+    name: SYS_SHIP_FROM_SITE_RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_20
+    name: SYS_SHIP_TO_LOCATION_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_21
+    name: SYS_SHIP_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_22
+    name: SYS_SHIP_TO_SITE_RESOURCE_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_23
+    name: SYS_TO_SITE_GROUP_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_24
+    name: VENDOR_REASON_CODE
+    type: VARCHAR(256)
+  - id: sc_dw_scc_enh_bof_history_25
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enh_bof_history_26
+    name: RELEASE_NUMBER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enh_bof_history_27
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enh_bof_history_28
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_scc_enh_bof_history_29
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enh_bof_history_30
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_scc_enh_bof_history_31
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_scc_enh_bof_history_32
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_scc_enh_bof_history_33
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,48 @@
+id: support_dw_oms_scorecard_entry
+kind: support
+name: dw_oms_scorecard_entry
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_scorecard_entry_0
+    name: DATE_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_oms_scorecard_entry_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_entry_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_entry_3
+    name: MONTH
+    type: DECIMAL(9,0)
+  - id: sc_dw_oms_scorecard_entry_4
+    name: SCORE
+    type: DOUBLE
+  - id: sc_dw_oms_scorecard_entry_5
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_entry_6
+    name: SYS_SCORECARD_ENTRY_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_entry_7
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_entry_8
+    name: YEAR
+    type: DECIMAL(9,0)
+  - id: sc_dw_oms_scorecard_entry_9
+    name: ORDER_TYPE
+    type: VARCHAR(256)
+  - id: sc_dw_oms_scorecard_entry_10
+    name: SYS_SITE_LANE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_scorecard_entry_11
+    name: RUN_MODE
+    type: VARCHAR(128)
+  - id: sc_dw_oms_scorecard_entry_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_scorecard_entry_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

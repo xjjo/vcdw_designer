@@ -1,0 +1,48 @@
+id: support_enum_conversion_factor_nc
+kind: support
+name: enum_conversion_factor_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_enum_conversion_factor_nc_0
+    name: sys_enum_conversion_factor_id
+    type: BIGINT(20)
+  - id: sc_enum_conversion_factor_nc_1
+    name: model_name
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_factor_nc_2
+    name: level_creation_date
+    type: DATETIME(6)
+  - id: sc_enum_conversion_factor_nc_3
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_enum_conversion_factor_nc_4
+    name: sys_enum_conversion_def_id
+    type: BIGINT(20)
+  - id: sc_enum_conversion_factor_nc_5
+    name: enumeration_name
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_factor_nc_6
+    name: measure
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_factor_nc_7
+    name: scope_id
+    type: BIGINT(20)
+  - id: sc_enum_conversion_factor_nc_8
+    name: scope_model_level
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_factor_nc_9
+    name: scope_display
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_factor_nc_10
+    name: factor
+    type: DOUBLE
+  - id: sc_enum_conversion_factor_nc_11
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_enum_conversion_factor_nc_12
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_enum_conversion_factor_nc_13
+    name: RECONCILED
+    type: TINYINT(1)

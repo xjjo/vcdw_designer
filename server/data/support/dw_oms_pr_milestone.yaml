@@ -1,0 +1,63 @@
+id: support_dw_oms_pr_milestone
+kind: support
+name: dw_oms_pr_milestone
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_pr_milestone_0
+    name: SYS_PR_MILESTONE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_pr_milestone_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_oms_pr_milestone_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_pr_milestone_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_pr_milestone_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_pr_milestone_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_pr_milestone_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_pr_milestone_7
+    name: ORIGINAL_ESTIMATED_COMPLETION
+    type: DATETIME(6)
+  - id: sc_dw_oms_pr_milestone_8
+    name: ESTIMATED_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_pr_milestone_9
+    name: ACTUAL_COMPLETION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_pr_milestone_10
+    name: COMMENTS
+    type: VARCHAR(1024)
+  - id: sc_dw_oms_pr_milestone_11
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_dw_oms_pr_milestone_12
+    name: DISABLED
+    type: TINYINT(1)
+  - id: sc_dw_oms_pr_milestone_13
+    name: SYS_MILESTONE_TYPE_REF_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_pr_milestone_14
+    name: SYS_REQUISITION_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_pr_milestone_15
+    name: SYS_REQUISITION_LINE_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_pr_milestone_16
+    name: SYS_RESPONSIBLE_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_pr_milestone_17
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_pr_milestone_18
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,180 @@
+id: support_dw_tms_cost_component
+kind: support
+name: dw_tms_cost_component
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_tms_cost_component_0
+    name: sys_cost_component_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_1
+    name: model_name
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_2
+    name: creation_user
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_3
+    name: creation_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_cost_component_4
+    name: last_modified_user
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_5
+    name: last_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_cost_component_6
+    name: last_computed_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_cost_component_7
+    name: last_touched_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_cost_component_8
+    name: level_modified_date
+    type: DATETIME(6)
+  - id: sc_dw_tms_cost_component_9
+    name: cost_component_no
+    type: DECIMAL(9,0)
+  - id: sc_dw_tms_cost_component_10
+    name: cost_method
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_11
+    name: max_cost_boundary
+    type: DOUBLE
+  - id: sc_dw_tms_cost_component_12
+    name: min_cost_boundary
+    type: DOUBLE
+  - id: sc_dw_tms_cost_component_13
+    name: discount
+    type: DOUBLE
+  - id: sc_dw_tms_cost_component_14
+    name: unbounded_net_cost
+    type: DOUBLE
+  - id: sc_dw_tms_cost_component_15
+    name: net_cost
+    type: DOUBLE
+  - id: sc_dw_tms_cost_component_16
+    name: net_cost_uom
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_cost_component_17
+    name: total_units_amount
+    type: VARCHAR(256)
+  - id: sc_dw_tms_cost_component_18
+    name: total_units_uom
+    type: VARCHAR(256)
+  - id: sc_dw_tms_cost_component_19
+    name: unit_rate_amount
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_20
+    name: unit_rate_currency
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_cost_component_21
+    name: description
+    type: VARCHAR(4000)
+  - id: sc_dw_tms_cost_component_22
+    name: comments
+    type: VARCHAR(512)
+  - id: sc_dw_tms_cost_component_23
+    name: charge_type
+    type: DECIMAL(6,0)
+  - id: sc_dw_tms_cost_component_24
+    name: other_vasprovider
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_25
+    name: distribution_code
+    type: VARCHAR(4000)
+  - id: sc_dw_tms_cost_component_26
+    name: is_taxable
+    type: DECIMAL(1,0)
+  - id: sc_dw_tms_cost_component_27
+    name: group_info
+    type: VARCHAR(2048)
+  - id: sc_dw_tms_cost_component_28
+    name: operating_cost_amount
+    type: DOUBLE
+  - id: sc_dw_tms_cost_component_29
+    name: operating_cost_uom
+    type: VARCHAR(256)
+  - id: sc_dw_tms_cost_component_30
+    name: preferred_cost_amount
+    type: DOUBLE
+  - id: sc_dw_tms_cost_component_31
+    name: preferred_cost_uom
+    type: VARCHAR(256)
+  - id: sc_dw_tms_cost_component_32
+    name: sys_tplan_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_33
+    name: sys_tender_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_34
+    name: sys_base_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_35
+    name: sys_discount_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_36
+    name: sys_acc_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_37
+    name: sys_site_acc_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_38
+    name: sys_stop_off_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_39
+    name: sys_cost_plus_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_40
+    name: sys_service_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_41
+    name: sys_additional_charge_acc_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_42
+    name: sys_additional_charge_site_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_43
+    name: sys_contract_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_44
+    name: sys_paid_org_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_45
+    name: sys_paying_org_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_46
+    name: sys_third_party_org_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_47
+    name: sys_split_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_48
+    name: sys_tax_rate_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_49
+    name: sys_vasprovider_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_50
+    name: sys_shipment_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_51
+    name: sys_site_id
+    type: BIGINT(20)
+  - id: sc_dw_tms_cost_component_52
+    name: addition_site_address_country
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_53
+    name: addition_site_address_comp1
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_54
+    name: addition_site_address_comp2
+    type: VARCHAR(64)
+  - id: sc_dw_tms_cost_component_55
+    name: addition_site_address_comps
+    type: VARCHAR(512)
+  - id: sc_dw_tms_cost_component_56
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_tms_cost_component_57
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

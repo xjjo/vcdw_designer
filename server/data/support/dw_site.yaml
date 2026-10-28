@@ -1,0 +1,309 @@
+id: support_dw_site
+kind: support
+name: dw_site
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_site_0
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_1
+    name: SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_site_2
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_site_3
+    name: ORG_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_site_4
+    name: DESCRIPTION
+    type: VARCHAR(255)
+  - id: sc_dw_site_5
+    name: TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_6
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+  - id: sc_dw_site_7
+    name: TIER
+    type: VARCHAR(64)
+  - id: sc_dw_site_8
+    name: SITE_GRP_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_9
+    name: TIME_ZONE_ID
+    type: VARCHAR(64)
+  - id: sc_dw_site_10
+    name: LATITUDE
+    type: DOUBLE
+  - id: sc_dw_site_11
+    name: LONGITUDE
+    type: DOUBLE
+  - id: sc_dw_site_12
+    name: EXTERNAL_REF_NO
+    type: VARCHAR(256)
+  - id: sc_dw_site_13
+    name: CONTACT
+    type: VARCHAR(512)
+  - id: sc_dw_site_14
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_15
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_site_16
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_17
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_18
+    name: RUN_REPLENISHMENT
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_19
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_site_20
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_21
+    name: SYS_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_22
+    name: ADDR_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_site_23
+    name: ADDR_SEARCH_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_site_24
+    name: ADDR_SEARCH_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_site_25
+    name: ADDR_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_site_26
+    name: ALT_ADDR_1_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_site_27
+    name: ALT_ADDR_1_SEARCH_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_site_28
+    name: ALT_ADDR_1_SEARCH_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_site_29
+    name: ALT_ADDR_1_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_site_30
+    name: ALT_ADDR_2_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_dw_site_31
+    name: ALT_ADDR_2_SEARCH_COMP1
+    type: VARCHAR(64)
+  - id: sc_dw_site_32
+    name: ALT_ADDR_2_SEARCH_COMP2
+    type: VARCHAR(64)
+  - id: sc_dw_site_33
+    name: ALT_ADDR_2_COMPS
+    type: VARCHAR(512)
+  - id: sc_dw_site_34
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_35
+    name: ACTIVATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_36
+    name: AUTHORITATIVE_LEVEL
+    type: VARCHAR(256)
+  - id: sc_dw_site_37
+    name: AUTO_GEN_BUFFER
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_38
+    name: BAR_CODE_DELIMITER
+    type: VARCHAR(64)
+  - id: sc_dw_site_39
+    name: BAR_CODE_FORMAT
+    type: VARCHAR(64)
+  - id: sc_dw_site_40
+    name: BAR_CODE_PREFIXING
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_41
+    name: BILLING
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_42
+    name: DEACTIVATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_43
+    name: HOLIDAY_CALENDAR_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_44
+    name: IS_DC
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_45
+    name: IS_PLANT
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_46
+    name: IS_PRIMARY_SUB_SITE
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_47
+    name: IS_STORE
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_48
+    name: PRIMARY_SUB_SITE_NAME
+    type: VARCHAR(256)
+  - id: sc_dw_site_49
+    name: RECEIVING_CALENDAR_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_50
+    name: SHIPPING
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_51
+    name: SHIPPING_CALENDAR_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_52
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_53
+    name: TMS_BILLING_CONTACT_EMAIL
+    type: VARCHAR(64)
+  - id: sc_dw_site_54
+    name: TMS_BILLING_CONTACT_FAX
+    type: VARCHAR(64)
+  - id: sc_dw_site_55
+    name: TMS_BILLING_CONTACT_MOBILE
+    type: VARCHAR(64)
+  - id: sc_dw_site_56
+    name: TMS_BILLING_CONTACT_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_57
+    name: TMS_BILLING_CONTACT_PH_NUM
+    type: VARCHAR(64)
+  - id: sc_dw_site_58
+    name: TMS_COUNTY
+    type: VARCHAR(64)
+  - id: sc_dw_site_59
+    name: TMS_IS_PUBLIC
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_60
+    name: TMS_RECEIVING_CONTACT_EMAIL
+    type: VARCHAR(64)
+  - id: sc_dw_site_61
+    name: TMS_RECEIVING_CONTACT_FAX
+    type: VARCHAR(64)
+  - id: sc_dw_site_62
+    name: TMS_RECEIVING_CONTACT_MOBILE
+    type: VARCHAR(64)
+  - id: sc_dw_site_63
+    name: TMS_RECEIVING_CONTACT_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_64
+    name: TMS_RECEIVING_CONTACT_PH_NUM
+    type: VARCHAR(64)
+  - id: sc_dw_site_65
+    name: TMS_SHIPPING_CONTACT_EMAIL
+    type: VARCHAR(64)
+  - id: sc_dw_site_66
+    name: TMS_SHIPPING_CONTACT_FAX
+    type: VARCHAR(64)
+  - id: sc_dw_site_67
+    name: TMS_SHIPPING_CONTACT_MOBILE
+    type: VARCHAR(64)
+  - id: sc_dw_site_68
+    name: TMS_SHIPPING_CONTACT_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_site_69
+    name: TMS_SHIPPING_CONTACT_PHONE_NUM
+    type: VARCHAR(64)
+  - id: sc_dw_site_70
+    name: TMS_SPECIAL_INSTRUCTIONS
+    type: VARCHAR(1024)
+  - id: sc_dw_site_71
+    name: OMS_DEFAULT_BUYER_PLANNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_site_72
+    name: OMS_IS_INVENTORY_NETTABLE
+    type: DECIMAL(1,0)
+  - id: sc_dw_site_73
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_site_74
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_site_75
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+  - id: sc_dw_site_76
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+  - id: sc_dw_site_77
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+  - id: sc_dw_site_78
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+  - id: sc_dw_site_79
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+  - id: sc_dw_site_80
+    name: PADF_LONG_FIELD1
+    type: BIGINT(20)
+  - id: sc_dw_site_81
+    name: PADF_LONG_FIELD10
+    type: BIGINT(20)
+  - id: sc_dw_site_82
+    name: PADF_LONG_FIELD2
+    type: BIGINT(20)
+  - id: sc_dw_site_83
+    name: PADF_LONG_FIELD3
+    type: BIGINT(20)
+  - id: sc_dw_site_84
+    name: PADF_LONG_FIELD4
+    type: BIGINT(20)
+  - id: sc_dw_site_85
+    name: PADF_LONG_FIELD5
+    type: BIGINT(20)
+  - id: sc_dw_site_86
+    name: PADF_LONG_FIELD6
+    type: BIGINT(20)
+  - id: sc_dw_site_87
+    name: PADF_LONG_FIELD7
+    type: BIGINT(20)
+  - id: sc_dw_site_88
+    name: PADF_LONG_FIELD8
+    type: BIGINT(20)
+  - id: sc_dw_site_89
+    name: PADF_LONG_FIELD9
+    type: BIGINT(20)
+  - id: sc_dw_site_90
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+  - id: sc_dw_site_91
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+  - id: sc_dw_site_92
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+  - id: sc_dw_site_93
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+  - id: sc_dw_site_94
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+  - id: sc_dw_site_95
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+  - id: sc_dw_site_96
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+  - id: sc_dw_site_97
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+  - id: sc_dw_site_98
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+  - id: sc_dw_site_99
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+  - id: sc_dw_site_100
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)

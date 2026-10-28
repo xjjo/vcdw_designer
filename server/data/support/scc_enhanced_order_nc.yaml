@@ -1,0 +1,438 @@
+id: support_scc_enhanced_order_nc
+kind: support
+name: scc_enhanced_order_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_scc_enhanced_order_nc_0
+    name: SYS_ENHANCED_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_1
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_2
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_3
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_4
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_5
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_7
+    name: STATE
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_8
+    name: PROMISE_STATUS
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_9
+    name: LOAD_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_scc_enhanced_order_nc_10
+    name: ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_11
+    name: PURCHASE_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_12
+    name: SALES_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_13
+    name: ORDER_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_14
+    name: DELIVERY_MODE
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_15
+    name: EXT_PARENT_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_16
+    name: PRIORITY
+    type: DECIMAL(9,0)
+  - id: sc_scc_enhanced_order_nc_17
+    name: BUYER_CODE
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_18
+    name: PLANNER_CODE
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_19
+    name: VENDOR_NOTIFICATION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_20
+    name: VENDOR_ACK_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_21
+    name: VENDOR_ACCEPT_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_22
+    name: VENDOR_CSRCODE
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_23
+    name: TOTAL_WEIGHT
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_24
+    name: WEIGHT_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_25
+    name: TOTAL_VOLUME
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_26
+    name: VOLUME_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_27
+    name: TOTAL_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_28
+    name: QUANTITY_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_29
+    name: PLANNER_NOTES
+    type: VARCHAR(512)
+  - id: sc_scc_enhanced_order_nc_30
+    name: VENDOR_NOTES
+    type: VARCHAR(512)
+  - id: sc_scc_enhanced_order_nc_31
+    name: BUYER_REVISION_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_scc_enhanced_order_nc_32
+    name: LATEST_BUYER_REVISION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_33
+    name: VENDOR_REVISION_NUMBER
+    type: DECIMAL(9,0)
+  - id: sc_scc_enhanced_order_nc_34
+    name: LATEST_VENDOR_REVISION_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_35
+    name: CURRENCY
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_36
+    name: TOTAL_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_37
+    name: TOTAL_INVOICE_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_38
+    name: TOTAL_SCALE_UP_QUANTITY
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_39
+    name: TOTAL_SCALE_UP_WEIGHT
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_40
+    name: TOTAL_SCALE_UP_VOLUME
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_41
+    name: EXT_TCO_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_42
+    name: BUYER_ORDER_APPROVAL_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_43
+    name: VENDOR_ORDER_APPROVAL_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_44
+    name: IS_SPOT
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_45
+    name: IS_CONSIGNMENT
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_46
+    name: IS_VMI
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_47
+    name: IS_AUTO_RECEIPT
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_48
+    name: IS_EMERGENCY
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_49
+    name: IS_EXPEDITE
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_50
+    name: IS_PROMOTION
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_51
+    name: IS_MIN_ORDER_QTY_RELAXED
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_52
+    name: FREIGHT_CONTROL_BY_SYSTEM
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_53
+    name: EXT_BUYER_APPROVED_BY
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_54
+    name: EXT_VENDOR_APPROVED_BY
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_55
+    name: EXT_BPO_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_56
+    name: ORIGIN
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_57
+    name: EXT_FREIGHT_FORWARDER_NAME
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_58
+    name: AUDIT_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_59
+    name: INCO_TERMS
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_60
+    name: IS_DISABLE_DELIVERY_DATE_COMPL
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_61
+    name: IXMPROCESSED_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_62
+    name: IXMPROCESSED_BY
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_63
+    name: RMA_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_64
+    name: RETURN_VALID_START_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_65
+    name: RETURN_VALID_END_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_66
+    name: INTERNATIONAL
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_67
+    name: IS_EXPEDITE_REQUIRED
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_68
+    name: PLANNED_EXPEDITE_DATE
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_69
+    name: SYS_OWNING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_70
+    name: SYS_BUYING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_71
+    name: SYS_SELLING_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_72
+    name: SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_73
+    name: SYS_SHIP_TO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_74
+    name: SYS_SHIP_FROM_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_75
+    name: SYS_VENDOR_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_76
+    name: SYS_CUSTOMER_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_77
+    name: SYS_CUST_OF_BUYER_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_78
+    name: SYS_TCO_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_79
+    name: SYS_FREIGHT_FWD_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_80
+    name: SYS_TRANS_MODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_81
+    name: SYS_BUYER_APPROVED_BY_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_82
+    name: SYS_VENDOR_APPROVED_BY_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_83
+    name: SYS_PARENT_ORDER_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_84
+    name: SYS_PROGRAM_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_85
+    name: SYS_FULFILLMENT_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_86
+    name: SYS_OWNING_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_87
+    name: SYS_SERVICE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_88
+    name: SYS_CLONED_FROM_ORDER_NO_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_89
+    name: SYS_REQUISITION_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_90
+    name: SYS_MILESTONE_CONFIG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_91
+    name: BILL_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_92
+    name: BILL_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_93
+    name: BILL_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_94
+    name: BILL_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_enhanced_order_nc_95
+    name: PURCHASING_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_96
+    name: PURCHASING_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_97
+    name: PURCHASING_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_98
+    name: PURCHASING_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_enhanced_order_nc_99
+    name: REMIT_TO_ADDRESS_COUNTRY
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_100
+    name: REMIT_TO_ADDRESS_COMP1
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_101
+    name: REMIT_TO_ADDRESS_COMP2
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_102
+    name: REMIT_TO_ADDRESS_COMPS
+    type: VARCHAR(512)
+  - id: sc_scc_enhanced_order_nc_103
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_104
+    name: OMS_AUTO_MOVE_TO_RECEIVED
+    type: DECIMAL(1,0)
+  - id: sc_scc_enhanced_order_nc_105
+    name: OMS_FOBCODE
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_106
+    name: OMS_FOBPOINT
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_107
+    name: OMS_ORIG_ORDER_FCST_ID
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_108
+    name: OMS_SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_109
+    name: OMS_SYS_CONTRACT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_110
+    name: OMS_SYS_PAYMENT_TERMS_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_111
+    name: OMS_TEMP_ORDER_NUMBER
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_112
+    name: SYS_BILL_TO_SITE_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_113
+    name: OMS_CANCEL_COLLAB_STATUS
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_114
+    name: OMS_SYS_ADDITIONAL_COST_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_115
+    name: TOTAL_EMISSION_AMOUNT
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_116
+    name: TOTAL_EMISSION_UOM
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_117
+    name: RECONCILED
+    type: TINYINT(1)
+  - id: sc_scc_enhanced_order_nc_118
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_scc_enhanced_order_nc_119
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_scc_enhanced_order_nc_120
+    name: ORDER_TYPE_VALUE
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_121
+    name: SYS_EMERGENCY_CODE_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_122
+    name: SYS_CREATION_ORG_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_123
+    name: SYS_BUYING_AGENT1_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_124
+    name: SYS_BUYING_AGENT2_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_125
+    name: SYS_BUYING_AGENT3_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_126
+    name: SYS_BUYING_AGENT4_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_127
+    name: SYS_SELLING_AGENT1_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_128
+    name: SYS_SELLING_AGENT2_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_129
+    name: SYS_SELLING_AGENT3_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_130
+    name: SYS_SELLING_AGENT4_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_131
+    name: ORDER_AUX_NUM_FIELD1
+    type: DOUBLE
+  - id: sc_scc_enhanced_order_nc_132
+    name: ORDER_AUX_NUM_FIELD2
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_133
+    name: ORDER_AUX_NUM_FIELD3
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_134
+    name: ORDER_AUX_NUM_FIELD4
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_135
+    name: ORDER_AUX_NUM_FIELD5
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_136
+    name: ORDER_AUX_STR_FIELD1
+    type: VARCHAR(128)
+  - id: sc_scc_enhanced_order_nc_137
+    name: ORDER_AUX_STR_FIELD2
+    type: VARCHAR(128)
+  - id: sc_scc_enhanced_order_nc_138
+    name: ORDER_AUX_STR_FIELD3
+    type: VARCHAR(128)
+  - id: sc_scc_enhanced_order_nc_139
+    name: ORDER_AUX_STR_FIELD4
+    type: VARCHAR(128)
+  - id: sc_scc_enhanced_order_nc_140
+    name: ORDER_AUX_STR_FIELD5
+    type: VARCHAR(128)
+  - id: sc_scc_enhanced_order_nc_141
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_scc_enhanced_order_nc_142
+    name: ORDER_SUB_TYPE
+    type: VARCHAR(256)
+  - id: sc_scc_enhanced_order_nc_143
+    name: AUXILIARY_KEY
+    type: VARCHAR(64)

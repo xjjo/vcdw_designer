@@ -1,0 +1,177 @@
+id: support_tms_base_rate_nc
+kind: support
+name: tms_base_rate_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_tms_base_rate_nc_0
+    name: CONTRACT_SERVICING_REF
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_1
+    name: COST_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_tms_base_rate_nc_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_4
+    name: CURRENT_USAGE_COUNT
+    type: DOUBLE
+  - id: sc_tms_base_rate_nc_5
+    name: DESTINATION_TO
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_6
+    name: DESTINATION_TYPE
+    type: VARCHAR(256)
+  - id: sc_tms_base_rate_nc_7
+    name: DIM_CAL_LEVEL
+    type: VARCHAR(256)
+  - id: sc_tms_base_rate_nc_8
+    name: DIM_WEIGHT_FACTOR
+    type: DOUBLE
+  - id: sc_tms_base_rate_nc_9
+    name: DISTANCE_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_10
+    name: END_DATE
+    type: DATETIME(6)
+  - id: sc_tms_base_rate_nc_11
+    name: EQUIPMENT_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_12
+    name: FAK
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_13
+    name: GL_ENTERPRISE_NAME
+    type: VARCHAR(128)
+  - id: sc_tms_base_rate_nc_14
+    name: GL_NAME
+    type: VARCHAR(600)
+  - id: sc_tms_base_rate_nc_15
+    name: GL_ORGANIZATION_NAME
+    type: VARCHAR(128)
+  - id: sc_tms_base_rate_nc_16
+    name: INDIRECT_MINIMUM
+    type: DOUBLE
+  - id: sc_tms_base_rate_nc_17
+    name: INDIRECT_MINIMUM_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_18
+    name: INTEG_FILE_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_19
+    name: IS_TAXABLE
+    type: DECIMAL(1,0)
+  - id: sc_tms_base_rate_nc_20
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_base_rate_nc_21
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_base_rate_nc_22
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_23
+    name: LAST_TOUCHED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_base_rate_nc_24
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_tms_base_rate_nc_25
+    name: MAX_COST
+    type: DOUBLE
+  - id: sc_tms_base_rate_nc_26
+    name: MAX_RATE_WARE_WEIGHT_GROUP
+    type: VARCHAR(256)
+  - id: sc_tms_base_rate_nc_27
+    name: MIN_COST
+    type: DOUBLE
+  - id: sc_tms_base_rate_nc_28
+    name: MIN_MAX_COST_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_29
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_30
+    name: ORIGIN_FROM
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_31
+    name: ORIGIN_TYPE
+    type: VARCHAR(256)
+  - id: sc_tms_base_rate_nc_32
+    name: QUANTITY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_33
+    name: RATE_INFO
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_34
+    name: RATING_LEVEL
+    type: VARCHAR(256)
+  - id: sc_tms_base_rate_nc_35
+    name: RATING_TYPE
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_36
+    name: ROUND_UP_DIM_WT_VOL
+    type: DECIMAL(1,0)
+  - id: sc_tms_base_rate_nc_37
+    name: START_DATE
+    type: DATETIME(6)
+  - id: sc_tms_base_rate_nc_38
+    name: STEP_INFO
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_39
+    name: SYS_BASE_RATE_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_40
+    name: SYS_CARRIER_COMMITMENT_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_41
+    name: SYS_COMMODITY_CODE_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_42
+    name: SYS_CONTRACT_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_43
+    name: SYS_DESTINATION_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_44
+    name: SYS_GL_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_45
+    name: SYS_ORIGIN_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_46
+    name: SYS_PARTNER_PROFILE_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_47
+    name: SYS_SERVICE_LEVEL_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_48
+    name: SYS_ZONE_ID
+    type: BIGINT(20)
+  - id: sc_tms_base_rate_nc_49
+    name: TARIFF
+    type: VARCHAR(64)
+  - id: sc_tms_base_rate_nc_50
+    name: TIME_UOM
+    type: VARCHAR(256)
+  - id: sc_tms_base_rate_nc_51
+    name: TMS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_tms_base_rate_nc_52
+    name: TOTAL_SHIPMENT_COUNT
+    type: DECIMAL(9,0)
+  - id: sc_tms_base_rate_nc_53
+    name: TYPE
+    type: VARCHAR(256)
+  - id: sc_tms_base_rate_nc_54
+    name: USE_FOR_REVERSE_LANE
+    type: DECIMAL(1,0)
+  - id: sc_tms_base_rate_nc_55
+    name: VOLUME_UOM
+    type: DECIMAL(6,0)
+  - id: sc_tms_base_rate_nc_56
+    name: WEIGHT_UOM
+    type: DECIMAL(6,0)

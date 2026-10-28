@@ -1,0 +1,84 @@
+id: support_equipment_type_nc
+kind: support
+name: equipment_type_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_equipment_type_nc_0
+    name: SYS_EQUIP_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_equipment_type_nc_1
+    name: EQUIPMENT_TYPE
+    type: VARCHAR(256)
+  - id: sc_equipment_type_nc_2
+    name: LENGTH
+    type: DOUBLE
+  - id: sc_equipment_type_nc_3
+    name: HEIGHT
+    type: DOUBLE
+  - id: sc_equipment_type_nc_4
+    name: WIDTH
+    type: DOUBLE
+  - id: sc_equipment_type_nc_5
+    name: WEIGHT_CAPACITY
+    type: DOUBLE
+  - id: sc_equipment_type_nc_6
+    name: WEIGHT_UOM
+    type: DECIMAL(6,0)
+  - id: sc_equipment_type_nc_7
+    name: LINEAR_UOM
+    type: DECIMAL(6,0)
+  - id: sc_equipment_type_nc_8
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_equipment_type_nc_9
+    name: TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_equipment_type_nc_10
+    name: PULLING_THRESHOLD
+    type: DOUBLE
+  - id: sc_equipment_type_nc_11
+    name: QUANTITY_CAPACITY
+    type: DOUBLE
+  - id: sc_equipment_type_nc_12
+    name: QUANTITY_UOM
+    type: DECIMAL(6,0)
+  - id: sc_equipment_type_nc_13
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_equipment_type_nc_14
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_equipment_type_nc_15
+    name: IS_ACTIVE
+    type: DECIMAL(1,0)
+  - id: sc_equipment_type_nc_16
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_equipment_type_nc_17
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_equipment_type_nc_18
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_equipment_type_nc_19
+    name: SYS_CREATION_TEMPLATE_ID
+    type: BIGINT(20)
+  - id: sc_equipment_type_nc_20
+    name: SCC_SYS_BASE_EQ_TYPE_ID
+    type: BIGINT(20)
+  - id: sc_equipment_type_nc_21
+    name: TMS_CATEGORY
+    type: DECIMAL(6,0)
+  - id: sc_equipment_type_nc_22
+    name: TMS_TRANSIT_TIME_MODE
+    type: VARCHAR(256)
+  - id: sc_equipment_type_nc_23
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_equipment_type_nc_24
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_equipment_type_nc_25
+    name: RECONCILED
+    type: TINYINT(1)

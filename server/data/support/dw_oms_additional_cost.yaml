@@ -1,0 +1,48 @@
+id: support_dw_oms_additional_cost
+kind: support
+name: dw_oms_additional_cost
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_oms_additional_cost_0
+    name: AUX_KEY
+    type: VARCHAR(64)
+  - id: sc_dw_oms_additional_cost_1
+    name: CONVERTED_CURRENCY
+    type: VARCHAR(256)
+  - id: sc_dw_oms_additional_cost_2
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_additional_cost_3
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_additional_cost_4
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_additional_cost_5
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_dw_oms_additional_cost_6
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_dw_oms_additional_cost_7
+    name: MODEL_NAME
+    type: VARCHAR(64)
+  - id: sc_dw_oms_additional_cost_8
+    name: OWNER_DISPLAY
+    type: VARCHAR(64)
+  - id: sc_dw_oms_additional_cost_9
+    name: OWNER_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_additional_cost_10
+    name: OWNER_MODEL_LEVEL
+    type: VARCHAR(64)
+  - id: sc_dw_oms_additional_cost_11
+    name: SYS_ADDITIONAL_COST_ID
+    type: BIGINT(20)
+  - id: sc_dw_oms_additional_cost_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_dw_oms_additional_cost_13
+    name: ES_CREATION_DATE
+    type: DATETIME(6)

@@ -1,0 +1,105 @@
+id: support_oms_scorecard_entry_nc
+kind: support
+name: oms_scorecard_entry_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_oms_scorecard_entry_nc_0
+    name: BUYER_ACCURACY
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_1
+    name: DATE_TYPE
+    type: VARCHAR(256)
+  - id: sc_oms_scorecard_entry_nc_2
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_oms_scorecard_entry_nc_3
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_oms_scorecard_entry_nc_4
+    name: MONTH
+    type: DECIMAL(9,0)
+  - id: sc_oms_scorecard_entry_nc_5
+    name: PO_FILL_RATE
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_6
+    name: PO_IN_WINDOW_DELIVERY
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_7
+    name: PO_IN_WINDOW_DELIVERY_BY_QTY
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_8
+    name: PO_ONTIME_DELIVERY
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_9
+    name: PO_ONTIME_DELIVERY_BY_QTY
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_10
+    name: PO_ONTIME_DELIVERY_QTY_VS_ORIG
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_11
+    name: PO_ONTIME_DELIVERY_VS_ORIG
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_12
+    name: PO_ONTIME_SHIP
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_13
+    name: PO_ONTIME_SHIP_BY_QTY
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_14
+    name: PO_ONTIME_SHIP_QTY_VS_ORIG
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_15
+    name: PO_ONTIME_SHIP_VS_ORIG
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_16
+    name: PO_PROMISE_CUT
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_17
+    name: PO_RECEIVED_VS_SHIPPED_CUT
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_18
+    name: SCORE
+    type: DOUBLE
+  - id: sc_oms_scorecard_entry_nc_19
+    name: SHIPMENT_ACCURACY
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_20
+    name: SHIPMENT_ACCURACY_VS_ORIG
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_21
+    name: SYS_PARTNER_ID
+    type: BIGINT(20)
+  - id: sc_oms_scorecard_entry_nc_22
+    name: SYS_SCORECARD_ENTRY_ID
+    type: BIGINT(20)
+  - id: sc_oms_scorecard_entry_nc_23
+    name: SYS_SITE_ID
+    type: BIGINT(20)
+  - id: sc_oms_scorecard_entry_nc_24
+    name: VENDOR_ACCURACY
+    type: FLOAT
+  - id: sc_oms_scorecard_entry_nc_25
+    name: YEAR
+    type: DECIMAL(9,0)
+  - id: sc_oms_scorecard_entry_nc_26
+    name: ADDITIONAL_MEASURES
+    type: VARCHAR(4000)
+  - id: sc_oms_scorecard_entry_nc_27
+    name: ORDER_TYPE
+    type: VARCHAR(256)
+  - id: sc_oms_scorecard_entry_nc_28
+    name: SYS_SITE_LANE_ID
+    type: BIGINT(20)
+  - id: sc_oms_scorecard_entry_nc_29
+    name: RUN_MODE
+    type: VARCHAR(128)
+  - id: sc_oms_scorecard_entry_nc_30
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_oms_scorecard_entry_nc_31
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_oms_scorecard_entry_nc_32
+    name: RECONCILED
+    type: TINYINT(1)

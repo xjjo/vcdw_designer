@@ -1,0 +1,33 @@
+id: support_dw_nc_table_detailed_stats
+kind: support
+name: dw_nc_table_detailed_stats
+tableKind: dw
+origin: db
+columns:
+  - id: sc_dw_nc_table_detailed_stats_0
+    name: JOB_ID
+    type: BIGINT(20)
+  - id: sc_dw_nc_table_detailed_stats_1
+    name: NC_TABLE_NAME
+    type: VARCHAR(128)
+  - id: sc_dw_nc_table_detailed_stats_2
+    name: DIM_NC_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_nc_table_detailed_stats_3
+    name: FACT_NC_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_nc_table_detailed_stats_4
+    name: ORIGINAL_NC_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_nc_table_detailed_stats_5
+    name: RECONCILE_NC_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_nc_table_detailed_stats_6
+    name: TOTAL_NC_COUNT
+    type: BIGINT(20)
+  - id: sc_dw_nc_table_detailed_stats_7
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+  - id: sc_dw_nc_table_detailed_stats_8
+    name: DW_LAST_MODIFIED_USER
+    type: VARCHAR(64)

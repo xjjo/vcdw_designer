@@ -1,0 +1,51 @@
+id: support_product_group_nc
+kind: support
+name: product_group_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_product_group_nc_0
+    name: CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_product_group_nc_1
+    name: CREATION_USER
+    type: VARCHAR(64)
+  - id: sc_product_group_nc_2
+    name: DESCRIPTION
+    type: VARCHAR(64)
+  - id: sc_product_group_nc_3
+    name: ENT_NAME
+    type: VARCHAR(128)
+  - id: sc_product_group_nc_4
+    name: IS_ACTIVE
+    type: TINYINT(1)
+  - id: sc_product_group_nc_5
+    name: LAST_COMPUTED_DATE
+    type: DATETIME(6)
+  - id: sc_product_group_nc_6
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_product_group_nc_7
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+  - id: sc_product_group_nc_8
+    name: SYS_ENT_ID
+    type: BIGINT(20)
+  - id: sc_product_group_nc_9
+    name: SYS_PGRP_ID
+    type: BIGINT(20)
+  - id: sc_product_group_nc_10
+    name: TYPE_NAME
+    type: VARCHAR(64)
+  - id: sc_product_group_nc_11
+    name: ES_CREATION_DATE
+    type: DATETIME(6)
+  - id: sc_product_group_nc_12
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_product_group_nc_13
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_product_group_nc_14
+    name: RECONCILED
+    type: TINYINT(1)

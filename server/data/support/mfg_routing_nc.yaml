@@ -1,0 +1,27 @@
+id: support_mfg_routing_nc
+kind: support
+name: mfg_routing_nc
+tableKind: nc
+origin: db
+columns:
+  - id: sc_mfg_routing_nc_0
+    name: SYS_ROUTING_ID
+    type: BIGINT(20)
+  - id: sc_mfg_routing_nc_1
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_routing_nc_2
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+  - id: sc_mfg_routing_nc_3
+    name: CYCLE_TIME
+    type: BIGINT(20)
+  - id: sc_mfg_routing_nc_4
+    name: ES_LMD
+    type: DATETIME(6)
+  - id: sc_mfg_routing_nc_5
+    name: DIM_OR_FACT_TABLE
+    type: VARCHAR(64)
+  - id: sc_mfg_routing_nc_6
+    name: RECONCILED
+    type: TINYINT(1)
