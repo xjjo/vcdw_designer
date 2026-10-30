@@ -459,7 +459,7 @@ export function factToGenerator(f: Fact) {
       ),
       ...netChangeSources(f.netChange).map(mapNetChange),
     ],
-    reconciles: [],
+    reconciles: (f.reconciles ?? []).map((r) => ({ nc_table: r.ncTable, ktr_file_name: r.ktrFileName })),
   };
 }
 

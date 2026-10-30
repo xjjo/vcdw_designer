@@ -282,6 +282,7 @@ export function newFact(name = 'dw_new_fact'): Fact {
     geoEnrichment: [],
     currencyConversions: [],
     validationRules: [],
+    reconciles: [],
     etlConfig: { isEnabled: true, priority: 2, resourceCost: 2 },
     ui: { x: 360, y: 200 },
   };

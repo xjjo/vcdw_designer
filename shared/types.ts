@@ -238,6 +238,15 @@ export interface ValidationRule {
   errorMessage: string;
 }
 
+/** Post-load reconciliation: a net-change table re-checked by a Pentaho transform. */
+export interface ReconcileDef {
+  id: string;
+  /** Net-change table whose loaded rows are reconciled. */
+  ncTable: string;
+  /** Pentaho `.ktr` transform file that performs the reconciliation. */
+  ktrFileName: string;
+}
+
 export interface EtlConfig {
   isEnabled?: boolean;
   priority?: number;
@@ -309,6 +318,7 @@ export interface Fact extends BaseEntity {
   geoEnrichment?: GeoEnrichment[];
   currencyConversions?: CurrencyConversion[];
   validationRules?: ValidationRule[];
+  reconciles?: ReconcileDef[];
 }
 
 export interface ProjectMeta {
