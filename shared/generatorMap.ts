@@ -18,13 +18,17 @@
 import type {
   AnyEntity,
   Column,
+  CurrencyConversion,
   Dimension,
+  DimensionLookup,
   Enumeration,
   Fact,
+  GeoEnrichment,
   JoinCondition,
   JoinDef,
   LookupDef,
   NetChangeSource,
+  ValidationRule,
 } from './types';
 
 interface GeneratorLookup {
@@ -76,6 +80,39 @@ interface GeneratorJoin {
   right_alias: string;
   join_type: string;
   on: JoinCondition[];
+}
+
+interface GeneratorDimensionLink {
+  dimension: string;
+  dim_table: string;
+  source_id_column: string;
+  target_sk_column: string;
+  default_fallback_sk: number;
+  mandatory: boolean;
+  active_condition: string;
+  role_alias: string;
+}
+
+interface GeneratorGeo {
+  type: string;
+  target_geo_sk: string;
+  country_col: string;
+  state_col: string;
+  city_col: string;
+}
+
+interface GeneratorCurrency {
+  source_amount_col: string;
+  source_currency_col: string;
+  target_base_amount_col: string;
+  base_currency: string;
+}
+
+interface GeneratorValidation {
+  rule_name: string;
+  condition: string;
+  error_code: string;
+  error_message: string;
 }
 
 function csv(values: (string | undefined)[]): string {
@@ -213,6 +250,51 @@ function factLookups(f: Fact): GeneratorLookup[] {
   }));
   const generic = (f.lookups ?? []).map(mapLookup);
   return [...fromDims, ...generic];
+}
+
+/** Fact → dimension surrogate-key links (active-row guard + fallback SK). */
+export function mapDimensionLinks(links: DimensionLookup[] = []): GeneratorDimensionLink[] {
+  return links.map((dl) => ({
+    dimension: dl.dimensionId,
+    dim_table: dl.dimensionTable,
+    source_id_column: dl.sourceIdColumn,
+    target_sk_column: dl.targetSkColumn,
+    default_fallback_sk: dl.defaultFallbackSk,
+    mandatory: dl.isMandatory,
+    active_condition: (dl as any).activeCondition ?? 'DELETED = 0',
+    role_alias: (dl as any).roleAlias ?? '',
+  }));
+}
+
+/** Geo-enrichment lookups (country/state/city → geo surrogate key). */
+export function mapGeo(geos: GeoEnrichment[] = []): GeneratorGeo[] {
+  return geos.map((g) => ({
+    type: g.type,
+    target_geo_sk: g.targetGeoSk,
+    country_col: g.sourceCountryCol,
+    state_col: g.sourceStateCol,
+    city_col: g.sourceCityCol,
+  }));
+}
+
+/** Currency conversions (source amount/currency → base amount). */
+export function mapCurrency(convs: CurrencyConversion[] = []): GeneratorCurrency[] {
+  return convs.map((c) => ({
+    source_amount_col: c.sourceAmountCol,
+    source_currency_col: c.sourceCurrencyCol,
+    target_base_amount_col: c.targetBaseAmountCol,
+    base_currency: c.baseCurrency,
+  }));
+}
+
+/** Record-level validation rules emitted to the generator contract. */
+export function mapValidations(rules: ValidationRule[] = []): GeneratorValidation[] {
+  return rules.map((v) => ({
+    rule_name: v.ruleName,
+    condition: v.condition,
+    error_code: v.errorCode,
+    error_message: v.errorMessage,
+  }));
 }
 
 interface GeneratorEnumField {
@@ -354,7 +436,13 @@ export function factToGenerator(f: Fact) {
     stg_error_table: f.errorTable ?? `${f.name.replace(/^dw_/, '')}_stg_error`,
     sub_job_name: `${f.name.replace(/^dw_/, '')}_sync`,
     lookups: factLookups(f),
-    fields: mapFields(f.columns),
+    fields: mapAllFields(f.columns),
+    source_tables: mapSourceTables(f.netChange),
+    joins: mapJoins(f.joins),
+    dimension_links: mapDimensionLinks(f.dimensionLookups),
+    geo: mapGeo(f.geoEnrichment),
+    currency: mapCurrency(f.currencyConversions),
+    validations: mapValidations(f.validationRules),
     netchange: [
       ...(f.primaryNcTable
         ? [
