@@ -10,6 +10,7 @@ import type { Column, Enumeration } from '../../shared/types.js';
 import { buildSeedModel } from '../../shared/seed.js';
 import { generateModelSql, generateEntitySql } from '../../shared/sqlGenerator.js';
 import { entityToGenerator } from '../../shared/generatorMap.js';
+import { validateGeneratorDoc, contractSchema } from '../../shared/contract/validate.js';
 import { newEnumerationFromCatalog } from '../../shared/templates.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -391,7 +392,12 @@ app.post('/api/generator-map', (req, res) => {
     res.status(422).json({ error: `Cannot map entity of kind "${entity.kind}".` });
     return;
   }
-  res.json(mapped);
+  const check = validateGeneratorDoc(mapped);
+  res.json({ ...mapped, _valid: check.valid, _errors: check.errors });
+});
+
+app.get('/api/contract/schema', (_req, res) => {
+  res.json(contractSchema);
 });
 
 // ---------------------------------------------------------------------------
