@@ -176,9 +176,10 @@ export function mapAllFields(cols: Column[]): GeneratorField[] {
     .filter((c) => !c.autoIncrement)
     .map((c) => ({ c, role: roleOf(c) }))
     .filter((x) => x.role !== 'audit') // controller ruling: audit handled downstream
+    .filter((x) => x.role === 'calculated' || x.role === 'constant' || !!x.c.sourceColumn)
     .map(({ c, role }) => {
       const source = c.sourceColumn ?? c.name.toLowerCase();
-      const renamed = source !== c.name;
+      const renamed = source.toUpperCase() !== c.name.toUpperCase();
       const derived = role === 'calculated' || role === 'constant';
       const base: GeneratorField = {
         coalesce: c.coalesce ?? false,
