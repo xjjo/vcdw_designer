@@ -29,8 +29,9 @@ export interface DeploymentPacket {
 
 /**
  * Net-change sources that drive NC DDL, mapping CSVs and field mapping:
- * declared non-support sources, or — for facts with none declared — synthetic
- * sources derived from `primaryNcTable` / `secondaryNcTables`.
+ * declared non-support sources, or — when none are declared — synthetic sources
+ * derived from `primaryNcTable` / `secondaryNcTables` (facts) or `sourceNcTables`
+ * (dimensions), mirroring the control-insert generators.
  */
 function netChangeSourcesFor(e: AnyEntity): NetChangeSource[] {
   const declared = (e.netChange ?? []).filter((s) => (s.role ?? 'netchange') !== 'support');
@@ -41,6 +42,10 @@ function netChangeSourcesFor(e: AnyEntity): NetChangeSource[] {
     if (f.primaryNcTable) synthetic.push({ id: 'primary_nc', ncTable: f.primaryNcTable, isPrimary: true });
     for (const t of f.secondaryNcTables ?? []) synthetic.push({ id: t, ncTable: t });
     return synthetic;
+  }
+  if (e.kind === 'dimension') {
+    const d = e as Dimension;
+    return (d.sourceNcTables ?? []).map((nc) => ({ id: nc, ncTable: nc } as NetChangeSource));
   }
   return [];
 }
