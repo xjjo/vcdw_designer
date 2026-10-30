@@ -44,6 +44,9 @@ interface GeneratorField {
   new_name: string;
   data_type: string;
   alias: string;
+  role?: 'key' | 'attribute' | 'measure' | 'date_key' | 'audit' | 'calculated' | 'constant';
+  formula?: string;
+  constant_value?: string;
 }
 
 interface GeneratorNetChange {
@@ -95,6 +98,44 @@ function mapFields(cols: Column[]): GeneratorField[] {
       alias: c.sourceTable ?? '',
     };
   });
+}
+
+function roleOf(c: Column): NonNullable<GeneratorField['role']> {
+  if (c.mappingKind === 'calculated' || c.isCalculated) return 'calculated';
+  if (c.mappingKind === 'constant') return 'constant';
+  if (c.auditRole) return 'audit';
+  if (c.isMeasure) return 'measure';
+  if (c.isDateKey) return 'date_key';
+  if (c.isPk || c.isSk || c.isNaturalKey) return 'key';
+  return 'attribute';
+}
+
+/**
+ * All generator fields: direct source renames plus derived (calculated/constant)
+ * and role-annotated columns. Audit columns are excluded (controller ruling:
+ * audit columns are handled downstream, as before).
+ */
+export function mapAllFields(cols: Column[]): GeneratorField[] {
+  return cols
+    .filter((c) => !c.autoIncrement)
+    .map((c) => ({ c, role: roleOf(c) }))
+    .filter((x) => x.role !== 'audit') // controller ruling: audit handled downstream
+    .map(({ c, role }) => {
+      const source = c.sourceColumn ?? c.name.toLowerCase();
+      const renamed = source !== c.name;
+      const derived = role === 'calculated' || role === 'constant';
+      const base: GeneratorField = {
+        coalesce: c.coalesce ?? false,
+        name: derived ? c.name.toLowerCase() : source,
+        new_name: derived ? c.name : renamed ? c.name : '',
+        data_type: c.type,
+        alias: c.sourceTable ?? '',
+        role,
+      };
+      if (role === 'calculated' && c.formula) base.formula = c.formula;
+      if (role === 'constant') base.constant_value = c.constantValue ?? '';
+      return base;
+    });
 }
 
 function mapNetChange(nc: NetChangeSource): GeneratorNetChange {
