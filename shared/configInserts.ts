@@ -9,7 +9,12 @@
  */
 import type { ControlTable } from './contract/controlTables';
 import { CONTROL_TABLES } from './contract/controlTables';
-import type { Enumeration } from './types';
+import type { Dimension, Enumeration } from './types';
+
+/** The three net-change bookkeeping tables, loaded identically per OLTP source. */
+const REQUIRE_NC_TABLES = ['require_nc', 'initial_load_require_nc', 'incremental_load_require_nc'] as const;
+/** Epoch sentinel so the first run performs a full extract. */
+const LAST_EXTRACTED = '1970-01-01 00:00:00';
 
 function ct(table: string): ControlTable {
   const t = CONTROL_TABLES.find((c) => c.table === table);
@@ -40,4 +45,46 @@ export function enumControlInserts(e: Enumeration): string {
     insertRow('dw_table_and_dimension_mapping', { DIMENSION_NAME: name, DW_TABLE_NAME: name }),
     insertRow('dw_dimension_enabler_config', { DIMENSION_NAME: name, IS_ENABLE: 1 }),
   ].join('\n');
+}
+
+/** Resolved OLTP source feeding a dimension's net-change load. */
+interface OltpSource {
+  oltp: string;
+  dwTable: string;
+}
+
+/**
+ * Dimensions register (mapping + enabler) plus, per net-change OLTP source, an
+ * `dw_oltp_tables_mapping` row and a require_nc row in each of the three
+ * net-change bookkeeping tables. When no net-change sources are declared, fall
+ * back to a single synthetic source derived from the first `sourceNcTables` entry.
+ */
+export function dimensionControlInserts(d: Dimension): string {
+  const lines: string[] = [
+    insertRow('dw_table_and_dimension_mapping', { DIMENSION_NAME: d.name, DW_TABLE_NAME: d.name }),
+    insertRow('dw_dimension_enabler_config', { DIMENSION_NAME: d.name, IS_ENABLE: 1 }),
+  ];
+
+  const ncs = (d.netChange ?? []).filter((s) => (s.role ?? 'netchange') !== 'support');
+  let sources: OltpSource[];
+  if (ncs.length > 0) {
+    sources = ncs.map((nc) => {
+      const oltp = nc.oltpTable ?? nc.ncTable.replace(/_nc$/, '');
+      return { oltp, dwTable: nc.dwOltpCopyTable ?? `dw_${oltp}` };
+    });
+  } else {
+    const first = d.sourceNcTables?.[0];
+    const oltp = first ? first.replace(/_nc$/, '') : undefined;
+    sources = oltp ? [{ oltp, dwTable: `dw_${oltp}` }] : [];
+  }
+
+  for (const s of sources) {
+    lines.push(insertRow('dw_oltp_tables_mapping', { OLTP_TABLE: s.oltp, DW_TABLE: s.dwTable }));
+  }
+  for (const s of sources) {
+    for (const table of REQUIRE_NC_TABLES) {
+      lines.push(insertRow(table, { DIM_OR_FACT_TABLE: d.name, OLTP_TABLE: s.oltp, last_extracted: LAST_EXTRACTED }));
+    }
+  }
+  return lines.join('\n');
 }
