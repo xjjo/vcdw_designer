@@ -12,5 +12,10 @@ describe('stagingDdl quarantine columns', () => {
     expect(out).toMatch(/ERROR_PENALTY_COUNT/);
     expect(out).toMatch(/ERROR_FEEDBACK_COUNT/);
     expect(out).toMatch(/ERROR_MAP_VALUES/);
+    // STG_ERROR_ID must be AUTO_INCREMENT NOT NULL (never NULL) and backed by a
+    // PRIMARY KEY, otherwise SingleStore/MySQL/MariaDB reject the CREATE.
+    expect(out).toMatch(/STG_ERROR_ID`?\s+BIGINT\s+AUTO_INCREMENT\s+NOT NULL/);
+    expect(out).not.toMatch(/AUTO_INCREMENT\s+NULL/);
+    expect(out).toMatch(/PRIMARY KEY \(`STG_ERROR_ID`\)/);
   });
 });

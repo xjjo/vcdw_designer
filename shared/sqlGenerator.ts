@@ -72,7 +72,7 @@ export function stagingDdl(e: AnyEntity, dialect: SqlDialect): string[] {
   // Error (quarantine) tables carry extra bookkeeping columns the reconciler
   // uses to track resync/penalty/feedback attempts and the offending values.
   const quarantineCols: Column[] = [
-    { id: 'stg_error_id', name: 'STG_ERROR_ID', type: 'BIGINT', autoIncrement: true },
+    { id: 'stg_error_id', name: 'STG_ERROR_ID', type: 'BIGINT', autoIncrement: true, nullable: false },
     { id: 'error_resync_count', name: 'ERROR_RESYNC_COUNT', type: 'INT', default: '0' },
     { id: 'error_penalty_count', name: 'ERROR_PENALTY_COUNT', type: 'INT', default: '0' },
     { id: 'error_feedback_count', name: 'ERROR_FEEDBACK_COUNT', type: 'INT', default: '0' },
@@ -80,7 +80,10 @@ export function stagingDdl(e: AnyEntity, dialect: SqlDialect): string[] {
   ];
   const buildStg = (tbl: string, isError = false) => {
     const tblCols = isError ? [...stgCols, ...quarantineCols] : stgCols;
-    const body = tblCols.map((c) => '  ' + columnDdl(c)).join(',\n');
+    const lines = tblCols.map((c) => '  ' + columnDdl(c));
+    // AUTO_INCREMENT requires a key; the PRIMARY KEY also serves as the MemSQL shard key.
+    if (isError) lines.push('  ' + `PRIMARY KEY (${quoteIdent('STG_ERROR_ID')})`);
+    const body = lines.join(',\n');
     return `CREATE TABLE IF NOT EXISTS ${quoteIdent(tbl)} (\n${body}\n);`;
   };
   if (e.kind === 'fact') {
