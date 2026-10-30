@@ -120,6 +120,20 @@ export function ncTableDdl(source: NetChangeSource, dialect: SqlDialect): string
   return `CREATE TABLE IF NOT EXISTS ${quoteIdent(source.ncTable)} (\n${lines.join(',\n')}\n);`;
 }
 
+/**
+ * Delete-then-insert "update delta" table for a fact: it stages the rows to be
+ * replaced on each load. Carries the fact's non-auto-increment columns and is
+ * sharded on `OLTP_ID` on MemSQL.
+ */
+export function updateDeltaDdl(f: Fact, dialect: SqlDialect): string {
+  const deltaTable = `${f.name.replace(/^dw_/, '')}_update_delta`;
+  const lines = f.columns.filter((c) => !c.autoIncrement).map((c) => '  ' + columnDdl(c));
+  if (dialect === 'MemSQL') {
+    lines.push('  ' + `SHARD KEY (${quoteIdent('OLTP_ID')})`);
+  }
+  return `CREATE TABLE IF NOT EXISTS ${quoteIdent(deltaTable)} (\n${lines.join(',\n')}\n);`;
+}
+
 function sampleValueFor(c: Column, rowIndex: number): string {
   const t = c.type.toUpperCase();
   if (c.autoIncrement) return 'DEFAULT';
