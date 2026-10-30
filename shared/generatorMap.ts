@@ -21,6 +21,8 @@ import type {
   Dimension,
   Enumeration,
   Fact,
+  JoinCondition,
+  JoinDef,
   LookupDef,
   NetChangeSource,
 } from './types';
@@ -57,6 +59,23 @@ interface GeneratorNetChange {
   nc_table: string;
   dw_oltp_copy_table: string;
   condition: string;
+}
+
+interface GeneratorSourceTable {
+  name: string;
+  alias: string;
+  role: 'netchange' | 'support';
+  columns: string[];
+}
+
+interface GeneratorJoin {
+  name: string;
+  left_table: string;
+  left_alias: string;
+  right_table: string;
+  right_alias: string;
+  join_type: string;
+  on: JoinCondition[];
 }
 
 function csv(values: (string | undefined)[]): string {
@@ -153,6 +172,29 @@ function mapNetChange(nc: NetChangeSource): GeneratorNetChange {
 /** Only net-change sources become generator netchange records; support tables are join-only. */
 function netChangeSources(sources: NetChangeSource[] = []): NetChangeSource[] {
   return sources.filter((s) => (s.role ?? 'netchange') !== 'support');
+}
+
+/** All declared source tables (net-change and support) with their join columns. */
+export function mapSourceTables(sources: NetChangeSource[] = []): GeneratorSourceTable[] {
+  return sources.map((s) => ({
+    name: s.ncTable,
+    alias: s.alias ?? s.ncTable,
+    role: s.role ?? 'netchange',
+    columns: (s.columns ?? []).map((c) => c.name),
+  }));
+}
+
+/** Generic joins between declared source tables (snake_case + explicit ON clause). */
+export function mapJoins(joins: JoinDef[] = []): GeneratorJoin[] {
+  return joins.map((j) => ({
+    name: j.name ?? '',
+    left_table: j.leftTable,
+    left_alias: j.leftAlias ?? j.leftTable,
+    right_table: j.rightTable,
+    right_alias: j.rightAlias ?? j.rightTable,
+    join_type: j.joinType,
+    on: (j.onConditions ?? []).map((c) => ({ left: c.left, op: c.op, right: c.right })),
+  }));
 }
 
 /** Derive generator lookups from a fact's dimension lookups + generic lookups. */
