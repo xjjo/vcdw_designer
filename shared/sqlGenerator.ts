@@ -85,6 +85,31 @@ export function stagingDdl(e: AnyEntity, dialect: SqlDialect): string[] {
   return out;
 }
 
+/**
+ * CDC net-change (NC) mirror table DDL: the declared source columns plus the
+ * standard control columns (`ES_LMD`, `DIM_OR_FACT_TABLE`, `RECONCILED`). On
+ * MemSQL it is sharded on the OLTP sys-id column (or the first column).
+ */
+export function ncTableDdl(source: NetChangeSource, dialect: SqlDialect): string {
+  const sourceCols: Column[] = (source.columns ?? []).map((c) => ({
+    id: c.id,
+    name: c.name,
+    type: c.type ?? 'VARCHAR(255)',
+    comment: c.comment,
+  }));
+  const controlCols: Column[] = [
+    { id: 'es_lmd', name: 'ES_LMD', type: 'DATETIME(6)' },
+    { id: 'dim_or_fact_table', name: 'DIM_OR_FACT_TABLE', type: 'VARCHAR(128)' },
+    { id: 'reconciled', name: 'RECONCILED', type: 'TINYINT(1)', default: '0' },
+  ];
+  const lines = [...sourceCols, ...controlCols].map((c) => '  ' + columnDdl(c));
+  if (dialect === 'MemSQL') {
+    const shardCol = source.oltpTableSysId?.trim() || source.columns?.[0]?.name;
+    if (shardCol) lines.push('  ' + `SHARD KEY (${quoteIdent(shardCol)})`);
+  }
+  return `CREATE TABLE IF NOT EXISTS ${quoteIdent(source.ncTable)} (\n${lines.join(',\n')}\n);`;
+}
+
 function sampleValueFor(c: Column, rowIndex: number): string {
   const t = c.type.toUpperCase();
   if (c.autoIncrement) return 'DEFAULT';
