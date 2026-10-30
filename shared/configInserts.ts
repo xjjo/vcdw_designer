@@ -9,7 +9,7 @@
  */
 import type { ControlTable } from './contract/controlTables';
 import { CONTROL_TABLES } from './contract/controlTables';
-import type { Dimension, Enumeration } from './types';
+import type { Dimension, Enumeration, Fact } from './types';
 
 /** The three net-change bookkeeping tables, loaded identically per OLTP source. */
 const REQUIRE_NC_TABLES = ['require_nc', 'initial_load_require_nc', 'incremental_load_require_nc'] as const;
@@ -84,6 +84,50 @@ export function dimensionControlInserts(d: Dimension): string {
   for (const s of sources) {
     for (const table of REQUIRE_NC_TABLES) {
       lines.push(insertRow(table, { DIM_OR_FACT_TABLE: d.name, OLTP_TABLE: s.oltp, last_extracted: LAST_EXTRACTED }));
+    }
+  }
+  return lines.join('\n');
+}
+
+/**
+ * Facts register (enabler + table mapping + a job_task_mapping scheduler row)
+ * plus a require_nc row in each of the three net-change bookkeeping tables per
+ * NC source. The NC source list is primaryNcTable + secondaryNcTables + any
+ * net-change sources on the fact (support sources excluded).
+ *
+ * `job_task_mapping_id` is an explicit auto-increment int in the real
+ * populate_job_task_mapping.sql, so we emit NULL and flag it with a trailing
+ * `-- set job_task_mapping_id` comment for the deployer to assign. `job_path`
+ * mirrors the observed `/<subject_area>_fact/wrapper_for_<fact>_sync.kjb` shape.
+ */
+export function factControlInserts(f: Fact): string {
+  const factName = f.name.replace(/^dw_/, '');
+  const subjectArea = `${(f.domain ?? 'logistics').trim().toLowerCase().replace(/\s+/g, '_')}_fact`;
+  const jobPath = `/${subjectArea}/wrapper_for_${factName}_sync.kjb`;
+
+  const lines: string[] = [
+    insertRow('dw_fact_enabler_config', { FACT_NAME: factName, IS_ENABLE: 1 }),
+    insertRow('dw_table_and_fact_mapping', { FACT_NAME: factName, DW_TABLE_NAME: f.name }),
+    `${insertRow('job_task_mapping', {
+      job_task_mapping_id: null,
+      priority: f.etlConfig?.priority ?? 2,
+      fact_name: factName,
+      resource_cost: f.etlConfig?.resourceCost ?? 2,
+      job_path: jobPath,
+    })} -- set job_task_mapping_id`,
+  ];
+
+  const ncTables: string[] = [];
+  if (f.primaryNcTable) ncTables.push(f.primaryNcTable);
+  for (const t of f.secondaryNcTables ?? []) ncTables.push(t);
+  for (const s of f.netChange ?? []) {
+    if ((s.role ?? 'netchange') !== 'support') ncTables.push(s.ncTable);
+  }
+
+  for (const ncTable of ncTables) {
+    const oltp = ncTable.replace(/_nc$/, '');
+    for (const table of REQUIRE_NC_TABLES) {
+      lines.push(insertRow(table, { DIM_OR_FACT_TABLE: f.name, OLTP_TABLE: oltp, last_extracted: LAST_EXTRACTED }));
     }
   }
   return lines.join('\n');
