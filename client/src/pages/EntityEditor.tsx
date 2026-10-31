@@ -5,6 +5,7 @@ import { saveEnumerationDesign, fetchDbColumns, saveSupportTableDesign, fetchPac
 import type {
   AnyEntity,
   Dimension,
+  DimensionType,
   Enumeration,
   Fact,
   FactType,
@@ -318,6 +319,32 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
                     value={(entity as Dimension).naturalKey ?? ''}
                     onChange={(e) => patch({ naturalKey: e.target.value } as Partial<Dimension>)}
                   />
+                </div>
+              </div>
+              <div className="row">
+                <div className="field" style={{ maxWidth: 220 }}>
+                  <label>Dimension type</label>
+                  <select
+                    value={(entity as Dimension).dimensionType ?? 'simple'}
+                    onChange={(e) => patch({ dimensionType: e.target.value as DimensionType } as Partial<Dimension>)}
+                  >
+                    <option value="simple">Simple</option>
+                    <option value="staged">Staged</option>
+                    <option value="geo">Geo</option>
+                    <option value="hierarchical">Hierarchical</option>
+                    <option value="multi_target">Multi-target</option>
+                  </select>
+                </div>
+                <div className="field" style={{ maxWidth: 260 }}>
+                  <label className="check">
+                    <input
+                      type="checkbox"
+                      checked={!!(entity as Dimension).nkUpdates}
+                      onChange={(e) => patch({ nkUpdates: e.target.checked } as Partial<Dimension>)}
+                    />
+                    Natural-key updates
+                  </label>
+                  <span className="hint">Retire renamed rows (handle_nk_updates).</span>
                 </div>
               </div>
               <div className="row">
