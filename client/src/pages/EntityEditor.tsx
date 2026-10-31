@@ -26,6 +26,7 @@ import MappingEditor from '../components/MappingEditor';
 import DimensionLookupsEditor from '../components/DimensionLookupsEditor';
 import GeoCurrencyEditor from '../components/GeoCurrencyEditor';
 import ValidationEditor from '../components/ValidationEditor';
+import ReconcileEditor from '../components/ReconcileEditor';
 import SourceTablesEditor from '../components/SourceTablesEditor';
 import NcEditor from '../components/NcEditor';
 import LookupsEditor from '../components/LookupsEditor';
@@ -41,6 +42,7 @@ type Tab =
   | 'lookups'
   | 'relations'
   | 'validation'
+  | 'reconcile'
   | 'etl'
   | 'preview';
 
@@ -176,6 +178,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
     { id: 'lookups', label: 'Lookups', show: true },
     { id: 'relations', label: 'Dimension Links', show: isFact },
     { id: 'validation', label: 'Validation', show: isFact },
+    { id: 'reconcile', label: 'Reconcile', show: isFact },
     { id: 'etl', label: 'ETL Config', show: true },
     { id: 'preview', label: 'Preview', show: true },
   ];
@@ -541,6 +544,10 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
           rules={(entity as Fact).validationRules ?? []}
           onChange={(validationRules) => patch({ validationRules } as Partial<Fact>)}
         />
+      )}
+
+      {tab === 'reconcile' && isFact && (
+        <ReconcileEditor fact={entity as Fact} onChange={(f) => updateEntity(f)} />
       )}
 
       {tab === 'etl' && (
