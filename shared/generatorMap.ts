@@ -422,8 +422,14 @@ export function dimensionToGenerator(d: Dimension) {
     sub_job_name: `${d.name}_sync`,
     surrogate_key: sk,
     natural_key: nk,
+    dimension_type: d.dimensionType ?? 'simple',
+    has_unknown_row: d.hasDefaultUnknownRow ?? false,
+    nk_updates: d.nkUpdates ?? false,
+    default_row: d.defaultRow ?? {},
     lookups: (d.lookups ?? []).map(mapLookup),
     fields: mapFields(d.columns),
+    source_tables: mapSourceTables(d.netChange),
+    joins: mapJoins(d.joins),
     netchange: netChangeSources(d.netChange).map(mapNetChange),
   };
 }
