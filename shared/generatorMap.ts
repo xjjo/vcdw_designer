@@ -262,8 +262,8 @@ export function mapDimensionLinks(links: DimensionLookup[] = []): GeneratorDimen
     target_sk_column: dl.targetSkColumn,
     default_fallback_sk: dl.defaultFallbackSk,
     mandatory: dl.isMandatory,
-    active_condition: (dl as any).activeCondition ?? 'DELETED = 0',
-    role_alias: (dl as any).roleAlias ?? '',
+    active_condition: dl.activeCondition ?? 'DELETED = 0',
+    role_alias: dl.roleAlias ?? '',
   }));
 }
 

@@ -209,6 +209,10 @@ export interface DimensionLookup {
   targetSkColumn: string;
   defaultFallbackSk: number;
   isMandatory: boolean;
+  /** Active-row predicate for the lookup (defaults to 'DELETED = 0'). */
+  activeCondition?: string;
+  /** Role label when the same dimension is resolved multiple times (e.g. 'invoicer'). */
+  roleAlias?: string;
 }
 
 export interface GeoEnrichment {
