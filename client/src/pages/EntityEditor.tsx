@@ -43,6 +43,7 @@ type Tab =
   | 'relations'
   | 'validation'
   | 'reconcile'
+  | 'geocurrency'
   | 'etl'
   | 'preview';
 
@@ -179,6 +180,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
     { id: 'relations', label: 'Dimension Links', show: isFact },
     { id: 'validation', label: 'Validation', show: isFact },
     { id: 'reconcile', label: 'Reconcile', show: isFact },
+    { id: 'geocurrency', label: 'Geo / Currency', show: isFact },
     { id: 'etl', label: 'ETL Config', show: true },
     { id: 'preview', label: 'Preview', show: true },
   ];
@@ -524,19 +526,11 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
       )}
 
       {tab === 'relations' && isFact && (
-        <>
-          <DimensionLookupsEditor
-            lookups={(entity as Fact).dimensionLookups ?? []}
-            entities={allEntities.filter((e) => e.id !== entity.id)}
-            onChange={(dimensionLookups) => patch({ dimensionLookups } as Partial<Fact>)}
-          />
-          <GeoCurrencyEditor
-            geo={(entity as Fact).geoEnrichment ?? []}
-            currency={(entity as Fact).currencyConversions ?? []}
-            onGeoChange={(geoEnrichment) => patch({ geoEnrichment } as Partial<Fact>)}
-            onCurrencyChange={(currencyConversions) => patch({ currencyConversions } as Partial<Fact>)}
-          />
-        </>
+        <DimensionLookupsEditor
+          lookups={(entity as Fact).dimensionLookups ?? []}
+          entities={allEntities.filter((e) => e.id !== entity.id)}
+          onChange={(dimensionLookups) => patch({ dimensionLookups } as Partial<Fact>)}
+        />
       )}
 
       {tab === 'validation' && isFact && (
@@ -548,6 +542,15 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
 
       {tab === 'reconcile' && isFact && (
         <ReconcileEditor fact={entity as Fact} onChange={(f) => updateEntity(f)} />
+      )}
+
+      {tab === 'geocurrency' && isFact && (
+        <GeoCurrencyEditor
+          geo={(entity as Fact).geoEnrichment ?? []}
+          currency={(entity as Fact).currencyConversions ?? []}
+          onGeoChange={(geoEnrichment) => patch({ geoEnrichment } as Partial<Fact>)}
+          onCurrencyChange={(currencyConversions) => patch({ currencyConversions } as Partial<Fact>)}
+        />
       )}
 
       {tab === 'etl' && (
