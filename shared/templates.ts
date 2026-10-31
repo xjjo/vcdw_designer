@@ -247,6 +247,8 @@ export function newDimension(name = 'new_dim'): Dimension {
     description: '',
     domain: 'Logistics',
     requiresStaging: false,
+    dimensionType: 'simple',
+    nkUpdates: false,
     sourceNcTables: [`${name}_nc`],
     hasDefaultUnknownRow: true,
     surrogateKey: `${name.toUpperCase()}_KEY`,

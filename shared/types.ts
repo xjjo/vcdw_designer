@@ -294,6 +294,16 @@ export interface Enumeration extends BaseEntity {
   entScopeSource?: string;
 }
 
+/**
+ * The build pattern a dimension follows in the ETL flow:
+ *  - simple:        1:1 net-change → dimension load.
+ *  - staged:        loaded through a staging table before the final merge.
+ *  - geo:           carries a geo-address tuple (country/state/city/...).
+ *  - hierarchical:  denormalizes a parent/ancestor chain onto each row.
+ *  - multi_target:  a single source feeds several dimension tables.
+ */
+export type DimensionType = 'simple' | 'staged' | 'geo' | 'hierarchical' | 'multi_target';
+
 export interface Dimension extends BaseEntity {
   kind: 'dimension';
   requiresStaging?: boolean;
@@ -303,6 +313,14 @@ export interface Dimension extends BaseEntity {
   naturalKey?: string;
   stgTable?: string;
   stgErrorTable?: string;
+  /** Build pattern driving the generated ETL flow (defaults to 'simple'). */
+  dimensionType?: DimensionType;
+  /** Target tables fed when dimensionType = 'multi_target'. */
+  multiTargetTables?: string[];
+  /** Allow natural-key (type-1) updates on existing rows. */
+  nkUpdates?: boolean;
+  /** Literal column values for the unknown/default row (keyed by column name). */
+  defaultRow?: Record<string, string>;
 }
 
 export type FactType = 'transaction' | 'snapshot' | 'weekly_aggregation';
