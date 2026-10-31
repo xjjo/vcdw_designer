@@ -10,6 +10,7 @@ import type { Column, Enumeration } from '../../shared/types.js';
 import { buildSeedModel } from '../../shared/seed.js';
 import { generateModelSql, generateEntitySql } from '../../shared/sqlGenerator.js';
 import { entityToGenerator } from '../../shared/generatorMap.js';
+import { buildDeploymentPacket } from '../../shared/packet.js';
 import { validateGeneratorDoc, contractSchema } from '../../shared/contract/validate.js';
 import { newEnumerationFromCatalog } from '../../shared/templates.js';
 
@@ -394,6 +395,22 @@ app.post('/api/generator-map', (req, res) => {
   }
   const check = validateGeneratorDoc(mapped);
   res.json({ ...mapped, _valid: check.valid, _errors: check.errors });
+});
+
+/**
+ * Bundle a single entity into a full deployment packet (generator.json, DDL,
+ * control inserts, mapping CSVs, INSTALL.md) ready to drop into the VCDW repo.
+ */
+app.post('/api/packet', (req, res) => {
+  const { entity, dialect } = req.body as {
+    entity: AnyEntity;
+    dialect?: DesignModel['project']['targetDatabase'];
+  };
+  if (!entity) {
+    res.status(400).json({ error: 'entity is required.' });
+    return;
+  }
+  res.json(buildDeploymentPacket(entity, dialect ?? 'MemSQL'));
 });
 
 app.get('/api/contract/schema', (_req, res) => {

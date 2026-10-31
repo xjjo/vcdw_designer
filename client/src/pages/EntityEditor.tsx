@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useStore } from '../store';
 import { KIND_META, downloadFile } from '../ui';
-import { saveEnumerationDesign, fetchDbColumns, saveSupportTableDesign } from '../api';
+import { saveEnumerationDesign, fetchDbColumns, saveSupportTableDesign, fetchPacket } from '../api';
 import type {
   AnyEntity,
   Dimension,
@@ -17,6 +17,7 @@ import {
 } from '@shared/templates';
 import { entityToGenerator } from '@shared/generatorMap';
 import { generateEntitySql, buildSourceSelectPreview, buildStreamLookupPreview, buildSourceTableDdl } from '@shared/sqlGenerator';
+import type { DeploymentPacket } from '@shared/packet';
 import { buildDesignerTables, workingTableFromEntity } from '../tableOptions';
 import Collapsible from '../components/Collapsible';
 import ColumnsEditor from '../components/ColumnsEditor';
@@ -52,6 +53,9 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
   const refreshCatalogCounts = useStore((s) => s.refreshCatalogCounts);
   const [tab, setTab] = useState<Tab>('general');
   const [saveState, setSaveState] = useState<'idle' | 'busy' | 'ok' | 'err'>('idle');
+  const [packet, setPacket] = useState<DeploymentPacket | null>(null);
+  const [packetBusy, setPacketBusy] = useState(false);
+  const [packetError, setPacketError] = useState<string | null>(null);
 
   const entity = allEntities.find((e) => e.id === entityId) as AnyEntity | undefined;
   if (!entity) return <div className="empty">Entity not found.</div>;
@@ -78,6 +82,25 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
       setSaveState('err');
       setTimeout(() => setSaveState('idle'), 3500);
     }
+  }
+
+  async function generatePacket() {
+    setPacketBusy(true);
+    setPacketError(null);
+    try {
+      setPacket(await fetchPacket(entity!, model.project.targetDatabase));
+    } catch (err) {
+      setPacket(null);
+      setPacketError(err instanceof Error ? err.message : 'Failed to generate packet.');
+    } finally {
+      setPacketBusy(false);
+    }
+  }
+
+  function downloadPacket() {
+    if (!packet) return;
+    const combined = packet.files.map((f) => `=== ${f.path} ===\n${f.content}`).join('\n\n');
+    downloadFile(`${entity!.name}-packet.txt`, combined, 'text/plain');
   }
 
   const columnProfiles = standardProfilesFor(entity.kind);
@@ -632,6 +655,37 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
             }
           >
             <pre className="code">{sql}</pre>
+          </Collapsible>
+          <Collapsible
+            title="Deployment packet"
+            subtitle="Full per-entity bundle (generator.json, DDL, control inserts, mapping CSVs, INSTALL.md) ready to drop into the VCDW DataWarehouse repo"
+            id={`preview-packet-${entity.id}`}
+            defaultOpen={false}
+            right={
+              packet ? (
+                <button className="btn sm" onClick={downloadPacket}>
+                  Download all
+                </button>
+              ) : undefined
+            }
+          >
+            <div className="row" style={{ marginBottom: 10 }}>
+              <button className="btn primary sm" onClick={generatePacket} disabled={packetBusy}>
+                {packetBusy ? 'Generating…' : 'Generate deployment packet'}
+              </button>
+              {packetError && <span className="badge error">{packetError}</span>}
+            </div>
+            {packet &&
+              (packet.files.length === 0 ? (
+                <p className="hint">Packet is empty for this entity.</p>
+              ) : (
+                packet.files.map((f) => (
+                  <div key={f.path} style={{ marginBottom: 12 }}>
+                    <div className="mono" style={{ fontWeight: 600, marginBottom: 4 }}>{f.path}</div>
+                    <pre className="code">{f.content}</pre>
+                  </div>
+                ))
+              ))}
           </Collapsible>
         </>
       )}

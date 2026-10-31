@@ -1,4 +1,7 @@
-import type { AnyEntity, DesignModel, Enumeration, Dimension, Fact, EntityKind, SourceColumn, SupportTable, SupportTableKind } from '@shared/types';
+import type { AnyEntity, DesignModel, Enumeration, Dimension, Fact, EntityKind, SourceColumn, SupportTable, SupportTableKind, SqlDialect } from '@shared/types';
+import type { DeploymentPacket, PacketFile } from '@shared/packet';
+
+export type { DeploymentPacket, PacketFile };
 
 /** Thin client for the optional Node backend. All calls degrade gracefully. */
 async function post<T>(url: string, body: unknown): Promise<T> {
@@ -18,6 +21,14 @@ export async function generateModelSql(model: DesignModel, rows = 3): Promise<st
 
 export async function mapToGenerator(entity: AnyEntity): Promise<unknown> {
   return post<unknown>('/api/generator-map', { entity });
+}
+
+/** Build the full deployment packet (generator.json, DDL, control inserts, mapping CSVs, INSTALL.md). */
+export async function fetchPacket(
+  entity: AnyEntity,
+  dialect: SqlDialect = 'MemSQL',
+): Promise<DeploymentPacket> {
+  return post<DeploymentPacket>('/api/packet', { entity, dialect });
 }
 
 export async function saveModel(model: DesignModel): Promise<void> {
