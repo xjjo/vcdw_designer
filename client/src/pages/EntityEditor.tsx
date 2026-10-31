@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useStore } from '../store';
 import { KIND_META, downloadFile } from '../ui';
 import { saveEnumerationDesign, fetchDbColumns, saveSupportTableDesign, fetchPacket } from '../api';
@@ -56,6 +56,12 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
   const [packet, setPacket] = useState<DeploymentPacket | null>(null);
   const [packetBusy, setPacketBusy] = useState(false);
   const [packetError, setPacketError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPacket(null);
+    setPacketError(null);
+    setPacketBusy(false);
+  }, [entityId]);
 
   const entity = allEntities.find((e) => e.id === entityId) as AnyEntity | undefined;
   if (!entity) return <div className="empty">Entity not found.</div>;
