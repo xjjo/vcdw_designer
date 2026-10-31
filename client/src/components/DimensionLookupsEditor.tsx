@@ -50,6 +50,8 @@ export default function DimensionLookupsEditor({ lookups, entities, onChange }: 
               <th>Target SK column (fact)</th>
               <th style={{ width: 90 }}>Fallback</th>
               <th className="chk">Mandatory</th>
+              <th style={{ width: 140 }}>Role alias</th>
+              <th style={{ width: 160 }}>Active condition</th>
               <th style={{ width: 40 }}></th>
             </tr>
           </thead>
@@ -89,6 +91,20 @@ export default function DimensionLookupsEditor({ lookups, entities, onChange }: 
                     type="checkbox"
                     checked={l.isMandatory}
                     onChange={(e) => update(l.id, { isMandatory: e.target.checked })}
+                  />
+                </td>
+                <td>
+                  <input
+                    value={l.roleAlias ?? ''}
+                    placeholder="invoicer"
+                    onChange={(e) => update(l.id, { roleAlias: e.target.value })}
+                  />
+                </td>
+                <td>
+                  <input
+                    value={l.activeCondition ?? ''}
+                    placeholder="DELETED = 0"
+                    onChange={(e) => update(l.id, { activeCondition: e.target.value })}
                   />
                 </td>
                 <td>
