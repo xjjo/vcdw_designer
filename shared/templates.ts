@@ -87,6 +87,36 @@ export function standardDimensionColumns(dimName: string): Column[] {
   ];
 }
 
+/**
+ * Geo-address tuple denormalized onto a dimension: an FK to the geo dimension
+ * plus the country → sub-city + time-zone text columns. The geo key resolves to
+ * the unknown row (-1) and each text column defaults to 'No Value'.
+ */
+export function geoAddressColumns(dimName: string): Column[] {
+  const base = dimName.toUpperCase();
+  const geoText = (name: string) =>
+    col({ name, type: 'VARCHAR(64)', nullable: true, default: "'No Value'" });
+  return [
+    col({ name: `${base}_GEO_DIMENSION_KEY`, type: 'BIGINT', isFk: true, nullable: false, default: '-1' }),
+    geoText('GEO_DIM_COUNTRY'),
+    geoText('GEO_DIM_STATE'),
+    geoText('GEO_DIM_CITY'),
+    geoText('GEO_DIM_SUB_CITY'),
+    geoText('GEO_DIM_TIME_ZONE'),
+  ];
+}
+
+/**
+ * Denormalized parent/enterprise reference for hierarchical dimensions: an FK to
+ * the enterprise dimension (unknown row -1) plus its name (default 'No Value').
+ */
+export function parentDenormColumns(_dimName: string): Column[] {
+  return [
+    col({ name: 'ENTERPRISE_KEY', type: 'BIGINT', isFk: true, nullable: false, default: '-1' }),
+    col({ name: 'ENT_NAME', type: 'VARCHAR(64)', nullable: true, default: "'No Value'" }),
+  ];
+}
+
 export function standardFactColumns(factName: string): Column[] {
   const key = `${factName.replace(/^dw_/, '').toUpperCase()}_KEY`;
   return [
@@ -126,6 +156,20 @@ export const STANDARD_COLUMN_PROFILES: StandardColumnProfile[] = [
     description: 'Surrogate key plus OLTP natural key.',
     categories: ['dimension'],
     build: (n) => standardDimensionColumns(n),
+  },
+  {
+    id: 'dim_geo_address',
+    label: 'Geo address (GEO key · COUNTRY · STATE · CITY · SUB_CITY · TIME_ZONE)',
+    description: 'Geo-dimension FK plus denormalized address + time-zone columns.',
+    categories: ['dimension'],
+    build: (n) => geoAddressColumns(n),
+  },
+  {
+    id: 'dim_parent_denorm',
+    label: 'Parent denorm (ENTERPRISE_KEY · ENT_NAME)',
+    description: 'Denormalized enterprise/parent reference key and name.',
+    categories: ['dimension'],
+    build: (n) => parentDenormColumns(n),
   },
   {
     id: 'fact_core',
