@@ -28,21 +28,39 @@ export interface DeploymentPacket {
 }
 
 /**
- * Net-change sources that drive NC DDL, mapping CSVs and field mapping:
- * declared non-support sources, or — when none are declared — synthetic sources
- * derived from `primaryNcTable` / `secondaryNcTables` (facts) or `sourceNcTables`
- * (dimensions), mirroring the control-insert generators.
+ * Net-change sources that drive NC DDL, mapping CSVs and field mapping.
+ *
+ * Facts union their `primaryNcTable` (isPrimary), `secondaryNcTables` and any
+ * declared non-support `netChange` sources — deduped by `ncTable`, first wins —
+ * so the packet's DDL/CSV cover exactly what `factToGenerator` and
+ * `factControlInserts` reference. Dimensions use declared non-support sources, or
+ * — when none are declared — synthetic sources derived from `sourceNcTables`,
+ * mirroring the control-insert generators.
  */
 function netChangeSourcesFor(e: AnyEntity): NetChangeSource[] {
-  const declared = (e.netChange ?? []).filter((s) => (s.role ?? 'netchange') !== 'support');
-  if (declared.length > 0) return declared;
   if (e.kind === 'fact') {
     const f = e as Fact;
-    const synthetic: NetChangeSource[] = [];
-    if (f.primaryNcTable) synthetic.push({ id: 'primary_nc', ncTable: f.primaryNcTable, isPrimary: true });
-    for (const t of f.secondaryNcTables ?? []) synthetic.push({ id: t, ncTable: t });
-    return synthetic;
+    const union: NetChangeSource[] = [];
+    if (f.primaryNcTable) {
+      union.push({ id: f.primaryNcTable, isPrimary: true, ncTable: f.primaryNcTable, oltpTable: f.primaryNcTable.replace(/_nc$/, '') });
+    }
+    for (const t of f.secondaryNcTables ?? []) {
+      union.push({ id: t, isPrimary: false, ncTable: t, oltpTable: t.replace(/_nc$/, '') });
+    }
+    for (const s of (f.netChange ?? []).filter((s) => (s.role ?? 'netchange') !== 'support')) {
+      union.push(s);
+    }
+    const seen = new Set<string>();
+    const deduped: NetChangeSource[] = [];
+    for (const s of union) {
+      if (seen.has(s.ncTable)) continue;
+      seen.add(s.ncTable);
+      deduped.push(s);
+    }
+    return deduped;
   }
+  const declared = (e.netChange ?? []).filter((s) => (s.role ?? 'netchange') !== 'support');
+  if (declared.length > 0) return declared;
   if (e.kind === 'dimension') {
     const d = e as Dimension;
     return (d.sourceNcTables ?? []).map((nc) => ({ id: nc, ncTable: nc } as NetChangeSource));

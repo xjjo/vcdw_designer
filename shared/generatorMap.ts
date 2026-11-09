@@ -328,7 +328,7 @@ function generatorDataType(sqlType: string): string {
 /** The NC SELECT columns: direct-mapped columns + the ent scope join key. */
 function enumFields(e: Enumeration): GeneratorEnumField[] {
   const fields = e.columns.filter(isDirectField).map((c) => ({
-    name: c.sourceColumn as string,
+    name: c.sourceColumn ?? c.name.toLowerCase(),
     new_name: c.name,
     data_type: generatorDataType(c.type),
     coalesce: c.coalesce ?? false,
@@ -413,6 +413,15 @@ export function enumerationToGenerator(e: Enumeration) {
 export function dimensionToGenerator(d: Dimension) {
   const sk = d.surrogateKey ?? d.columns.find((c) => c.isSk)?.name ?? `${d.name.toUpperCase()}_KEY`;
   const nk = d.naturalKey ?? d.columns.find((c) => c.isNaturalKey)?.name ?? 'OLTP_ID';
+  // Mirror configInserts/packet: when no net-change sources are declared, fall
+  // back to the dimension's `sourceNcTables` so generator.json netchange[] is
+  // never empty for a simple dimension.
+  const declaredNc = netChangeSources(d.netChange);
+  const ncSources = declaredNc.length
+    ? declaredNc
+    : (d.sourceNcTables ?? []).map(
+        (nc) => ({ id: nc, ncTable: nc, oltpTable: nc.replace(/_nc$/, '') } as NetChangeSource),
+      );
   return {
     type: 'dimension',
     name: d.name,
@@ -430,7 +439,7 @@ export function dimensionToGenerator(d: Dimension) {
     fields: mapFields(d.columns),
     source_tables: mapSourceTables(d.netChange),
     joins: mapJoins(d.joins),
-    netchange: netChangeSources(d.netChange).map(mapNetChange),
+    netchange: ncSources.map(mapNetChange),
   };
 }
 
