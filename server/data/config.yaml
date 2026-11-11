@@ -15,3 +15,8 @@ etl:
 
 catalog:
   enumCatalogPath: knowledge/graph/etl/enum/enum_catalog.md
+
+etlBuilder:
+  appDir: C:\Users\1039971\Desktop\workspace\workspace-eclipse\workspace-by\dw\vcdw-etl-builder
+  pdiHome: ''
+  enabled: true

@@ -31,6 +31,12 @@ export async function fetchPacket(
   return post<DeploymentPacket>('/api/packet', { entity, dialect });
 }
 
+/** Generate the Pentaho Kettle ETL code (.ktr / .kjb) for an entity via the Java vcdw-etl-builder. */
+export interface EtlGenResult { ok: boolean; files: PacketFile[]; log: string; error?: string }
+export function generateEtl(entity: AnyEntity): Promise<EtlGenResult> {
+  return post<EtlGenResult>('/api/generate-etl', { entity });
+}
+
 export async function saveModel(model: DesignModel): Promise<void> {
   await post('/api/model', model);
 }
@@ -67,6 +73,7 @@ export interface AppConfig {
   db: { host: string; name: string; user: string; password: string; port: number };
   etl: { root: string; enumerationsDir: string };
   catalog: { enumCatalogPath: string };
+  etlBuilder: { appDir: string; pdiHome: string; enabled: boolean };
 }
 
 export interface DbEnumRow {

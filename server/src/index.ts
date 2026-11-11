@@ -1,6 +1,8 @@
+import { spawn } from 'node:child_process';
+import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { dirname, join, isAbsolute } from 'node:path';
-import { existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
+import { dirname, join, isAbsolute, relative } from 'node:path';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync, statSync, mkdtempSync, rmSync } from 'node:fs';
 import cors from 'cors';
 import express from 'express';
 import YAML from 'yaml';
@@ -44,12 +46,18 @@ interface AppConfig {
   db: { host: string; name: string; user: string; password: string; port: number };
   etl: { root: string; enumerationsDir: string };
   catalog: { enumCatalogPath: string };
+  etlBuilder: { appDir: string; pdiHome: string; enabled: boolean };
 }
 
 const DEFAULT_CONFIG: AppConfig = {
   db: { host: '', name: '', user: '', password: '', port: 3306 },
   etl: { root: '', enumerationsDir: '' },
   catalog: { enumCatalogPath: 'knowledge/graph/etl/enum/enum_catalog.md' },
+  etlBuilder: {
+    appDir: 'C:\\Users\\1039971\\Desktop\\workspace\\workspace-eclipse\\workspace-by\\dw\\vcdw-etl-builder',
+    pdiHome: '',
+    enabled: true,
+  },
 };
 
 function loadConfig(): AppConfig {
@@ -60,6 +68,7 @@ function loadConfig(): AppConfig {
       db: { ...DEFAULT_CONFIG.db, ...parsed.db },
       etl: { ...DEFAULT_CONFIG.etl, ...parsed.etl },
       catalog: { ...DEFAULT_CONFIG.catalog, ...parsed.catalog },
+      etlBuilder: { ...DEFAULT_CONFIG.etlBuilder, ...parsed.etlBuilder },
     };
   } catch {
     return DEFAULT_CONFIG;
@@ -413,6 +422,78 @@ app.post('/api/packet', (req, res) => {
   res.json(buildDeploymentPacket(entity, dialect ?? 'MemSQL'));
 });
 
+/**
+ * Generate the Pentaho Kettle ETL code (.ktr / .kjb) for a single design entity
+ * by invoking the Java vcdw-etl-builder app (generate-one.bat). The entity is
+ * mapped to the generator JSON, written to a throwaway work dir together with a
+ * per-request generator.properties (pointing output.root at that dir), the bat
+ * is run, and the emitted Kettle files are read back and returned to the client.
+ */
+app.post('/api/generate-etl', (req, res) => {
+  const { entity } = req.body as { entity: AnyEntity };
+  if (!entity) { res.status(400).json({ error: 'entity is required.' }); return; }
+  const doc = entityToGenerator(entity);
+  if (!doc) { res.status(422).json({ error: `Cannot map entity of kind "${entity.kind}".` }); return; }
+  const cfg = loadConfig();
+  const eb = cfg.etlBuilder;
+  if (!eb.enabled) { res.status(400).json({ error: 'ETL builder is disabled in config.' }); return; }
+  if (!eb.appDir || !existsSync(eb.appDir)) { res.status(400).json({ error: `etlBuilder.appDir not found: ${eb.appDir || '(empty)'} — set it in Train/Settings.` }); return; }
+  const bat = join(eb.appDir, 'generate-one.bat');
+  if (!existsSync(bat)) { res.status(400).json({ error: `generate-one.bat not found in ${eb.appDir}. Update the vcdw-etl-builder app.` }); return; }
+
+  const fwd = (p: string) => p.replace(/\\/g, '/');
+  const work = mkdtempSync(join(tmpdir(), 'vcdw-etl-'));
+  const outDir = join(work, 'out');
+  const inputJson = join(work, 'input.json');
+  const propsPath = join(work, 'generator.properties');
+  try {
+    writeFileSync(inputJson, JSON.stringify(doc, null, 2), 'utf-8');
+    const props = [
+      `output.root=${fwd(outDir)}`,
+      `input.json=${fwd(inputJson)}`,
+      'fact.dir=fact', 'dim.dir=dim', 'enum.dir=enumeration',
+      `template.enum.sync=${fwd(join(eb.appDir, 'resources/templates/enumeration/time_uom_sync.ktr'))}`,
+      `template.enum.insert.default=${fwd(join(eb.appDir, 'resources/templates/enumeration/time_uom_insert_default_row.ktr'))}`,
+      '',
+    ].join('\n');
+    writeFileSync(propsPath, props, 'utf-8');
+
+    const args = ['/c', bat, propsPath, inputJson];
+    if (eb.pdiHome) args.push(eb.pdiHome);
+    const child = spawn('cmd', args, { cwd: eb.appDir, windowsHide: true });
+    let log = '';
+    child.stdout.on('data', (d) => { log += d.toString(); });
+    child.stderr.on('data', (d) => { log += d.toString(); });
+    const timer = setTimeout(() => child.kill(), 180000);
+    child.on('error', (err) => {
+      clearTimeout(timer);
+      try { rmSync(work, { recursive: true, force: true }); } catch {}
+      res.status(500).json({ ok: false, files: [], log, error: `Failed to launch generator: ${err.message}` });
+    });
+    child.on('close', (code) => {
+      clearTimeout(timer);
+      const files: { path: string; content: string }[] = [];
+      try {
+        const walk = (dir: string) => {
+          for (const e of readdirSync(dir)) {
+            const full = join(dir, e);
+            const s = statSync(full);
+            if (s.isDirectory()) walk(full);
+            else if (/\.(ktr|kjb)$/i.test(e)) files.push({ path: fwd(relative(outDir, full)), content: readFileSync(full, 'utf-8') });
+          }
+        };
+        if (existsSync(outDir)) walk(outDir);
+      } catch (e) { log += `\n[collect] ${(e as Error).message}`; }
+      try { rmSync(work, { recursive: true, force: true }); } catch {}
+      const ok = code === 0;
+      res.json({ ok, files, log, ...(ok ? {} : { error: `Generator exited with code ${code}.` }) });
+    });
+  } catch (e) {
+    try { rmSync(work, { recursive: true, force: true }); } catch {}
+    res.status(500).json({ ok: false, files: [], log: '', error: (e as Error).message });
+  }
+});
+
 app.get('/api/contract/schema', (_req, res) => {
   res.json(contractSchema);
 });
@@ -750,6 +831,7 @@ app.post('/api/config', (req, res) => {
     },
     etl: { ...current.etl, ...incoming.etl },
     catalog: { ...current.catalog, ...incoming.catalog },
+    etlBuilder: { ...current.etlBuilder, ...incoming.etlBuilder },
   };
   writeConfig(merged);
   res.json({ saved: true });
