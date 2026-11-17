@@ -15,6 +15,7 @@ import { entityToGenerator } from '../../shared/generatorMap.js';
 import { buildDeploymentPacket } from '../../shared/packet.js';
 import { validateGeneratorDoc, contractSchema } from '../../shared/contract/validate.js';
 import { newEnumerationFromCatalog } from '../../shared/templates.js';
+import { stripLegacyEnumOverrides } from '../../shared/enumNaming.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dirname, '..', 'data');
@@ -531,7 +532,7 @@ app.post('/api/enumerations/:name', (req, res) => {
   ensureStoreDir();
   const name = design.name || req.params.name;
   const file = enumFile(name);
-  writeFileSync(file, YAML.stringify(design), 'utf-8');
+  writeFileSync(file, YAML.stringify(stripLegacyEnumOverrides(design)), 'utf-8');
   // Keep the catalog in sync so freshly designed enums appear in the list.
   upsertEnumCatalog({
     enumType: design.enumTypeFilter || name,

@@ -18,6 +18,7 @@ import {
   type StandardColumnProfile,
 } from '@shared/templates';
 import { entityToGenerator } from '@shared/generatorMap';
+import { withEnumTypeFilter } from '@shared/enumNaming';
 import { generateEntitySql, buildSourceSelectPreview, buildStreamLookupPreview, buildSourceTableDdl } from '@shared/sqlGenerator';
 import type { DeploymentPacket } from '@shared/packet';
 import { buildDesignerTables, workingTableFromEntity } from '../tableOptions';
@@ -233,7 +234,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
 
   const designerTables = buildDesignerTables(entity, workingSet);
   const inWorkingSet = workingSet.some(
-    (t) => t.name.toLowerCase() === (isEnum ? (entity as Enumeration).enumTable ?? entity.name : entity.name).toLowerCase(),
+    (t) => t.name.toLowerCase() === entity.name.toLowerCase(),
   );
 
   return (
@@ -314,7 +315,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
                   <label>ENUM_TYPE filter</label>
                   <input
                     value={(entity as Enumeration).enumTypeFilter ?? ''}
-                    onChange={(e) => patch({ enumTypeFilter: e.target.value } as Partial<Enumeration>)}
+                    onChange={(e) => patch(withEnumTypeFilter(entity as Enumeration, e.target.value))}
                   />
                   <span className="hint">
                     Reference table, keys and name are derived from the Columns + Mapping tabs.
