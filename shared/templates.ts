@@ -196,7 +196,6 @@ export function standardProfilesFor(
 
 export function newEnumeration(name = 'new_enum'): Enumeration {
   const audit = defaultAuditProfile();
-  const base = name.toUpperCase();
   const entLookup = standardEnterpriseLookup();
   return {
     id: uid('enum'),
@@ -208,9 +207,6 @@ export function newEnumeration(name = 'new_enum'): Enumeration {
     isReferenceTable: true,
     sourceNcTable: 'enumeration_nc',
     enumTypeFilter: name,
-    enumTable: name,
-    fieldKey: `${base}_KEY`,
-    fieldName: `${base}_NAME`,
     entScopeSource: 'sys_ent_id',
     auditProfileId: audit.id,
     columns: [],

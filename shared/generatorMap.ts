@@ -30,6 +30,7 @@ import type {
   NetChangeSource,
   ValidationRule,
 } from './types';
+import { enumNetChangeCondition, enumTypeCondition } from './enumNaming';
 
 interface GeneratorLookup {
   table_name: string;
@@ -384,7 +385,7 @@ function enumNetChange(e: Enumeration): GeneratorNetChange {
     oltp_table_lmd: 'es_lmd',
     nc_table: ncTable,
     dw_oltp_copy_table: `dw_${oltp}`,
-    condition: `enum_type='${e.enumTypeFilter ?? e.name}'`,
+    condition: enumTypeCondition(e),
   };
 }
 
@@ -396,14 +397,16 @@ export function enumerationToGenerator(e: Enumeration) {
     e.columns.find((c) => c.name.toUpperCase().endsWith('_NAME')) ??
     e.columns.find((c) => c.isNaturalKey && !c.isSk && !c.isPk);
   const ncSources = netChangeSources(e.netChange);
-  const netchange = ncSources.length ? ncSources.map(mapNetChange) : [enumNetChange(e)];
+  const netchange = ncSources.length
+    ? ncSources.map((nc) => ({ ...mapNetChange(nc), condition: enumNetChangeCondition(e, nc) }))
+    : [enumNetChange(e)];
   return {
     type: 'enumeration',
     name: e.name,
-    table: e.enumTable ?? e.name,
+    table: e.name,
     enum_type: e.enumTypeFilter ?? e.name,
-    field_key: e.fieldKey ?? keyCol?.name ?? `${e.name.toUpperCase()}_KEY`,
-    field_name: e.fieldName ?? nameCol?.name ?? `${e.name.toUpperCase()}_NAME`,
+    field_key: keyCol?.name ?? `${e.name.toUpperCase()}_KEY`,
+    field_name: nameCol?.name ?? `${e.name.toUpperCase()}_NAME`,
     fields: enumFields(e),
     netchange,
     lookups: enumLookups(e),

@@ -288,11 +288,11 @@ export interface Enumeration extends BaseEntity {
   isReferenceTable?: boolean;
   sourceNcTable?: string;
   enumTypeFilter?: string;
-  /** Physical reference table name (defaults to `name`). */
+  /** @deprecated Ignored: the physical table is always `name`. Kept so old YAML designs still parse. */
   enumTable?: string;
-  /** Surrogate-key column emitted as generator `field_key`. */
+  /** @deprecated Ignored: `field_key` is derived from the SK column. Kept so old YAML designs still parse. */
   fieldKey?: string;
-  /** Value/name column emitted as generator `field_name`. */
+  /** @deprecated Ignored: `field_name` is derived from the `enum_entry_name` column. Kept so old YAML designs still parse. */
   fieldName?: string;
   /** Source column in the NC table that carries the enterprise scope id. */
   entScopeSource?: string;
