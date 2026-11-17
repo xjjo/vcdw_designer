@@ -19,6 +19,7 @@ import {
 } from '@shared/templates';
 import { entityToGenerator } from '@shared/generatorMap';
 import { withEnumTypeFilter } from '@shared/enumNaming';
+import { renameEntity } from '@shared/entityRename';
 import { generateEntitySql, buildSourceSelectPreview, buildStreamLookupPreview, buildSourceTableDdl } from '@shared/sqlGenerator';
 import type { DeploymentPacket } from '@shared/packet';
 import { buildZip } from '@shared/zipFiles';
@@ -302,7 +303,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
           <div className="row">
             <div className="field">
               <label>Physical name</label>
-              <input value={entity.name} onChange={(e) => patch({ name: e.target.value })} />
+              <input value={entity.name} onChange={(e) => patch(renameEntity(entity, e.target.value))} />
             </div>
             <div className="field">
               <label>Display name</label>

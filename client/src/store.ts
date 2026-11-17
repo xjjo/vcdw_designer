@@ -11,6 +11,7 @@ import type {
 import { buildSeedModel } from '@shared/seed';
 import { newDimension, newEnumeration, newFact, uid } from '@shared/templates';
 import { stripLegacyEnumOverrides } from '@shared/enumNaming';
+import { renameEntity } from '@shared/entityRename';
 import { saveEnumerationDesign, saveEntityDesign, fetchEnumCatalog, fetchEntityCatalog } from './api';
 
 export type ViewId =
@@ -692,7 +693,7 @@ export const useStore = create<Store>((set, get) => ({
     let clone = JSON.parse(JSON.stringify(design)) as AnyEntity;
     if (clone.kind === 'enumeration') clone = stripLegacyEnumOverrides(clone);
     clone.id = uid(design.kind);
-    clone.name = newName;
+    clone = renameEntity(clone, newName);
     delete (clone as AnyEntity & { ui?: unknown }).ui;
     return get().addDesign(clone, { dirty: true });
   },
