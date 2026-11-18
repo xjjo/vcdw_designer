@@ -1,4 +1,4 @@
-import type { AnyEntity, Enumeration } from '@shared/types';
+import type { AnyEntity } from '@shared/types';
 import type { WorkingTable } from './store';
 
 export type TableGroup = 'Source' | 'Support' | 'Dimension' | 'Enumeration' | 'Fact' | 'Working';
@@ -71,12 +71,8 @@ export function columnsForTable(
 
 /** Snapshot an entity's target columns for the Working Area. */
 export function workingTableFromEntity(entity: AnyEntity): WorkingTable {
-  const name =
-    entity.kind === 'enumeration'
-      ? (entity as Enumeration).enumTable ?? entity.name
-      : entity.name;
   return {
-    name,
+    name: entity.name,
     origin: entity.kind,
     columns: entity.columns.map((c) => ({ name: c.name, type: c.type })),
   };

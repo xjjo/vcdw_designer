@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useStore } from '../store';
-import { KIND_META, downloadFile } from '../ui';
+import { KIND_META, downloadFile, downloadBytes } from '../ui';
 import { saveEnumerationDesign, fetchDbColumns, saveSupportTableDesign, fetchPacket, generateEtl } from '../api';
 import type { EtlGenResult } from '../api';
 import type {
@@ -18,8 +18,11 @@ import {
   type StandardColumnProfile,
 } from '@shared/templates';
 import { entityToGenerator } from '@shared/generatorMap';
+import { withEnumTypeFilter } from '@shared/enumNaming';
+import { renameEntity } from '@shared/entityRename';
 import { generateEntitySql, buildSourceSelectPreview, buildStreamLookupPreview, buildSourceTableDdl } from '@shared/sqlGenerator';
 import type { DeploymentPacket } from '@shared/packet';
+import { buildZip } from '@shared/zipFiles';
 import { buildDesignerTables, workingTableFromEntity } from '../tableOptions';
 import Collapsible from '../components/Collapsible';
 import ColumnsEditor from '../components/ColumnsEditor';
@@ -64,15 +67,21 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
   const [etl, setEtl] = useState<EtlGenResult | null>(null);
   const [etlBusy, setEtlBusy] = useState(false);
   const [etlError, setEtlError] = useState<string | null>(null);
+  const packetGeneration = useRef(0);
+  const etlGeneration = useRef(0);
 
+  const currentEntity = allEntities.find((e) => e.id === entityId);
+  const entitySignature = currentEntity ? JSON.stringify(currentEntity) : '';
   useEffect(() => {
+    packetGeneration.current += 1;
+    etlGeneration.current += 1;
     setPacket(null);
     setPacketError(null);
     setPacketBusy(false);
     setEtl(null);
     setEtlBusy(false);
     setEtlError(null);
-  }, [entityId]);
+  }, [entityId, entitySignature]);
 
   const entity = allEntities.find((e) => e.id === entityId) as AnyEntity | undefined;
   if (!entity) return <div className="empty">Entity not found.</div>;
@@ -102,42 +111,49 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
   }
 
   async function generatePacket() {
+    const request = ++packetGeneration.current;
     setPacketBusy(true);
     setPacketError(null);
     try {
-      setPacket(await fetchPacket(entity!, model.project.targetDatabase));
+      const result = await fetchPacket(entity!, model.project.targetDatabase);
+      if (request === packetGeneration.current) setPacket(result);
     } catch (err) {
-      setPacket(null);
-      setPacketError(err instanceof Error ? err.message : 'Failed to generate packet.');
+      if (request === packetGeneration.current) {
+        setPacket(null);
+        setPacketError(err instanceof Error ? err.message : 'Failed to generate packet.');
+      }
     } finally {
-      setPacketBusy(false);
+      if (request === packetGeneration.current) setPacketBusy(false);
     }
   }
 
   function downloadPacket() {
     if (!packet) return;
-    const combined = packet.files.map((f) => `=== ${f.path} ===\n${f.content}`).join('\n\n');
-    downloadFile(`${entity!.name}-packet.txt`, combined, 'text/plain');
+    downloadBytes(`${entity!.name}-packet.zip`, buildZip(packet.files), 'application/zip');
   }
 
   async function generateEtlCode() {
+    const request = ++etlGeneration.current;
     setEtlBusy(true);
     setEtlError(null);
     try {
       const r = await generateEtl(entity!);
-      setEtl(r);
-      if (!r.ok) setEtlError(r.error || 'Generation failed.');
+      if (request === etlGeneration.current) {
+        setEtl(r);
+        if (!r.ok) setEtlError(r.error || 'Generation failed.');
+      }
     } catch (err) {
-      setEtlError(err instanceof Error ? err.message : 'Failed to generate ETL code.');
+      if (request === etlGeneration.current) {
+        setEtlError(err instanceof Error ? err.message : 'Failed to generate ETL code.');
+      }
     } finally {
-      setEtlBusy(false);
+      if (request === etlGeneration.current) setEtlBusy(false);
     }
   }
 
   function downloadEtl() {
     if (!etl) return;
-    const combined = etl.files.map((f) => `=== ${f.path} ===\n${f.content}`).join('\n\n');
-    downloadFile(`${entity!.name}-etl-kettle.txt`, combined, 'text/plain');
+    downloadBytes(`${entity!.name}-etl.zip`, buildZip(etl.files), 'application/zip');
   }
 
   const columnProfiles = standardProfilesFor(entity.kind);
@@ -233,7 +249,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
 
   const designerTables = buildDesignerTables(entity, workingSet);
   const inWorkingSet = workingSet.some(
-    (t) => t.name.toLowerCase() === (isEnum ? (entity as Enumeration).enumTable ?? entity.name : entity.name).toLowerCase(),
+    (t) => t.name.toLowerCase() === entity.name.toLowerCase(),
   );
 
   return (
@@ -287,7 +303,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
           <div className="row">
             <div className="field">
               <label>Physical name</label>
-              <input value={entity.name} onChange={(e) => patch({ name: e.target.value })} />
+              <input value={entity.name} onChange={(e) => patch(renameEntity(entity, e.target.value))} />
             </div>
             <div className="field">
               <label>Display name</label>
@@ -314,7 +330,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
                   <label>ENUM_TYPE filter</label>
                   <input
                     value={(entity as Enumeration).enumTypeFilter ?? ''}
-                    onChange={(e) => patch({ enumTypeFilter: e.target.value } as Partial<Enumeration>)}
+                    onChange={(e) => patch(withEnumTypeFilter(entity as Enumeration, e.target.value))}
                   />
                   <span className="hint">
                     Reference table, keys and name are derived from the Columns + Mapping tabs.
@@ -734,7 +750,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
             right={
               packet ? (
                 <button className="btn sm" onClick={downloadPacket}>
-                  Download all
+                  Download .zip
                 </button>
               ) : undefined
             }
@@ -765,7 +781,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
             right={
               etl && etl.files.length > 0 ? (
                 <button className="btn sm" onClick={downloadEtl}>
-                  Download all
+                  Download .zip
                 </button>
               ) : undefined
             }

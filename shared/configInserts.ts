@@ -82,7 +82,7 @@ function netChangeSources(sources: NetChangeSource[] | undefined): ResolvedSourc
  * source resolves to `dw_enumeration` → `('LOAD_TYPE','DW_ENUMERATION')`.
  */
 export function enumControlInserts(e: Enumeration): string {
-  const name = U(e.enumTable ?? e.name);
+  const name = U(e.name);
   let sources = netChangeSources(e.netChange);
   if (sources.length === 0) {
     sources = [resolveSource({ ncTable: e.sourceNcTable ?? `${e.name}_nc` })];
