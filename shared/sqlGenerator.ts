@@ -69,20 +69,72 @@ export function stagingDdl(e: AnyEntity, dialect: SqlDialect): string[] {
   const out: string[] = [];
   const cols = e.columns.filter((c) => !c.autoIncrement);
   const stgCols = [...cols, { id: 'err', name: 'ERROR', type: 'VARCHAR(512)', nullable: true } as Column];
-  const buildStg = (tbl: string) => {
-    const body = stgCols.map((c) => '  ' + columnDdl(c)).join(',\n');
+  // Error (quarantine) tables carry extra bookkeeping columns the reconciler
+  // uses to track resync/penalty/feedback attempts and the offending values.
+  const quarantineCols: Column[] = [
+    { id: 'stg_error_id', name: 'STG_ERROR_ID', type: 'BIGINT', autoIncrement: true, nullable: false },
+    { id: 'error_resync_count', name: 'ERROR_RESYNC_COUNT', type: 'INT', default: '0' },
+    { id: 'error_penalty_count', name: 'ERROR_PENALTY_COUNT', type: 'INT', default: '0' },
+    { id: 'error_feedback_count', name: 'ERROR_FEEDBACK_COUNT', type: 'INT', default: '0' },
+    { id: 'error_map_values', name: 'ERROR_MAP_VALUES', type: 'VARCHAR(4096)' },
+  ];
+  const buildStg = (tbl: string, isError = false) => {
+    const tblCols = isError ? [...stgCols, ...quarantineCols] : stgCols;
+    const lines = tblCols.map((c) => '  ' + columnDdl(c));
+    // AUTO_INCREMENT requires a key; the PRIMARY KEY also serves as the MemSQL shard key.
+    if (isError) lines.push('  ' + `PRIMARY KEY (${quoteIdent('STG_ERROR_ID')})`);
+    const body = lines.join(',\n');
     return `CREATE TABLE IF NOT EXISTS ${quoteIdent(tbl)} (\n${body}\n);`;
   };
   if (e.kind === 'fact') {
     const f = e as Fact;
     if (f.stagingTable) out.push(buildStg(f.stagingTable));
-    if (f.errorTable) out.push(buildStg(f.errorTable));
+    if (f.errorTable) out.push(buildStg(f.errorTable, true));
   } else if (e.kind === 'dimension') {
     const d = e as Dimension;
     if (d.requiresStaging && d.stgTable) out.push(buildStg(d.stgTable));
-    if (d.requiresStaging && d.stgErrorTable) out.push(buildStg(d.stgErrorTable));
+    if (d.requiresStaging && d.stgErrorTable) out.push(buildStg(d.stgErrorTable, true));
   }
   return out;
+}
+
+/**
+ * CDC net-change (NC) mirror table DDL: the declared source columns plus the
+ * standard control columns (`ES_LMD`, `DIM_OR_FACT_TABLE`, `RECONCILED`). On
+ * MemSQL it is sharded on the OLTP sys-id column (or the first column).
+ */
+export function ncTableDdl(source: NetChangeSource, dialect: SqlDialect): string {
+  const sourceCols: Column[] = (source.columns ?? []).map((c) => ({
+    id: c.id,
+    name: c.name,
+    type: c.type ?? 'VARCHAR(255)',
+    comment: c.comment,
+  }));
+  const controlCols: Column[] = [
+    { id: 'es_lmd', name: 'ES_LMD', type: 'DATETIME(6)' },
+    { id: 'dim_or_fact_table', name: 'DIM_OR_FACT_TABLE', type: 'VARCHAR(128)' },
+    { id: 'reconciled', name: 'RECONCILED', type: 'TINYINT(1)', default: '0' },
+  ];
+  const lines = [...sourceCols, ...controlCols].map((c) => '  ' + columnDdl(c));
+  if (dialect === 'MemSQL') {
+    const shardCol = source.oltpTableSysId?.trim() || source.columns?.[0]?.name;
+    if (shardCol) lines.push('  ' + `SHARD KEY (${quoteIdent(shardCol)})`);
+  }
+  return `CREATE TABLE IF NOT EXISTS ${quoteIdent(source.ncTable)} (\n${lines.join(',\n')}\n);`;
+}
+
+/**
+ * Delete-then-insert "update delta" table for a fact: it stages the rows to be
+ * replaced on each load. Carries the fact's non-auto-increment columns and is
+ * sharded on `OLTP_ID` on MemSQL.
+ */
+export function updateDeltaDdl(f: Fact, dialect: SqlDialect): string {
+  const deltaTable = `${f.name.replace(/^dw_/, '')}_update_delta`;
+  const lines = f.columns.filter((c) => !c.autoIncrement).map((c) => '  ' + columnDdl(c));
+  if (dialect === 'MemSQL') {
+    lines.push('  ' + `SHARD KEY (${quoteIdent('OLTP_ID')})`);
+  }
+  return `CREATE TABLE IF NOT EXISTS ${quoteIdent(deltaTable)} (\n${lines.join(',\n')}\n);`;
 }
 
 function sampleValueFor(c: Column, rowIndex: number): string {

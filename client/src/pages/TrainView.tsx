@@ -13,6 +13,7 @@ const EMPTY: AppConfig = {
   db: { host: '', name: '', user: '', password: '', port: 3306 },
   etl: { root: '', enumerationsDir: '' },
   catalog: { enumCatalogPath: '' },
+  etlBuilder: { appDir: '', pdiHome: '', enabled: true },
 };
 
 type Status = { kind: 'idle' | 'busy' | 'ok' | 'err'; message?: string };
@@ -31,7 +32,7 @@ export default function TrainView() {
 
   useEffect(() => {
     fetchConfig()
-      .then((c) => setCfg({ ...EMPTY, ...c, db: { ...EMPTY.db, ...c.db }, etl: { ...EMPTY.etl, ...c.etl }, catalog: { ...EMPTY.catalog, ...c.catalog } }))
+      .then((c) => setCfg({ ...EMPTY, ...c, db: { ...EMPTY.db, ...c.db }, etl: { ...EMPTY.etl, ...c.etl }, catalog: { ...EMPTY.catalog, ...c.catalog }, etlBuilder: { ...EMPTY.etlBuilder, ...c.etlBuilder } }))
       .catch(() => setSaveStatus({ kind: 'err', message: 'Server offline — start the API to load/save configs.' }))
       .finally(() => setLoaded(true));
   }, []);
@@ -41,6 +42,9 @@ export default function TrainView() {
   }
   function patchEtl(p: Partial<AppConfig['etl']>) {
     setCfg((c) => ({ ...c, etl: { ...c.etl, ...p } }));
+  }
+  function patchEtlBuilder(p: Partial<AppConfig['etlBuilder']>) {
+    setCfg((c) => ({ ...c, etlBuilder: { ...c.etlBuilder, ...p } }));
   }
 
   async function onSave() {
@@ -251,6 +255,20 @@ export default function TrainView() {
           <input
             value={cfg.etl.enumerationsDir}
             onChange={(e) => patchEtl({ enumerationsDir: e.target.value })}
+          />
+        </div>
+        <div className="field">
+          <label>ETL builder app dir</label>
+          <input
+            value={cfg.etlBuilder.appDir}
+            onChange={(e) => patchEtlBuilder({ appDir: e.target.value })}
+          />
+        </div>
+        <div className="field">
+          <label>PDI home override (optional)</label>
+          <input
+            value={cfg.etlBuilder.pdiHome}
+            onChange={(e) => patchEtlBuilder({ pdiHome: e.target.value })}
           />
         </div>
         {scan && scan.enumerations.length > 0 && (

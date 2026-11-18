@@ -18,12 +18,19 @@
 import type {
   AnyEntity,
   Column,
+  CurrencyConversion,
   Dimension,
+  DimensionLookup,
   Enumeration,
   Fact,
+  GeoEnrichment,
+  JoinCondition,
+  JoinDef,
   LookupDef,
   NetChangeSource,
+  ValidationRule,
 } from './types';
+import { enumNetChangeCondition, enumTypeCondition } from './enumNaming';
 
 interface GeneratorLookup {
   table_name: string;
@@ -44,6 +51,9 @@ interface GeneratorField {
   new_name: string;
   data_type: string;
   alias: string;
+  role?: 'key' | 'attribute' | 'measure' | 'date_key' | 'audit' | 'calculated' | 'constant';
+  formula?: string;
+  constant_value?: string;
 }
 
 interface GeneratorNetChange {
@@ -54,6 +64,56 @@ interface GeneratorNetChange {
   nc_table: string;
   dw_oltp_copy_table: string;
   condition: string;
+}
+
+interface GeneratorSourceTable {
+  name: string;
+  alias: string;
+  role: 'netchange' | 'support';
+  columns: string[];
+}
+
+interface GeneratorJoin {
+  name: string;
+  left_table: string;
+  left_alias: string;
+  right_table: string;
+  right_alias: string;
+  join_type: string;
+  on: JoinCondition[];
+}
+
+interface GeneratorDimensionLink {
+  dimension: string;
+  dim_table: string;
+  source_id_column: string;
+  target_sk_column: string;
+  default_fallback_sk: number;
+  mandatory: boolean;
+  active_condition: string;
+  role_alias: string;
+}
+
+interface GeneratorGeo {
+  type: string;
+  target_geo_sk: string;
+  country_col: string;
+  state_col: string;
+  city_col: string;
+}
+
+interface GeneratorCurrency {
+  source_amount_col: string;
+  source_currency_col: string;
+  target_base_amount_col: string;
+  base_currency: string;
+}
+
+interface GeneratorValidation {
+  rule_name: string;
+  condition: string;
+  error_code: string;
+  error_message: string;
 }
 
 function csv(values: (string | undefined)[]): string {
@@ -97,6 +157,45 @@ function mapFields(cols: Column[]): GeneratorField[] {
   });
 }
 
+function roleOf(c: Column): NonNullable<GeneratorField['role']> {
+  if (c.mappingKind === 'calculated' || c.isCalculated) return 'calculated';
+  if (c.mappingKind === 'constant') return 'constant';
+  if (c.auditRole) return 'audit';
+  if (c.isMeasure) return 'measure';
+  if (c.isDateKey) return 'date_key';
+  if (c.isPk || c.isSk || c.isNaturalKey) return 'key';
+  return 'attribute';
+}
+
+/**
+ * All generator fields: direct source renames plus derived (calculated/constant)
+ * and role-annotated columns. Audit columns are excluded (controller ruling:
+ * audit columns are handled downstream, as before).
+ */
+export function mapAllFields(cols: Column[]): GeneratorField[] {
+  return cols
+    .filter((c) => !c.autoIncrement)
+    .map((c) => ({ c, role: roleOf(c) }))
+    .filter((x) => x.role !== 'audit') // controller ruling: audit handled downstream
+    .filter((x) => x.role === 'calculated' || x.role === 'constant' || !!x.c.sourceColumn)
+    .map(({ c, role }) => {
+      const source = c.sourceColumn ?? c.name.toLowerCase();
+      const renamed = source.toUpperCase() !== c.name.toUpperCase();
+      const derived = role === 'calculated' || role === 'constant';
+      const base: GeneratorField = {
+        coalesce: c.coalesce ?? false,
+        name: derived ? c.name.toLowerCase() : source,
+        new_name: derived ? c.name : renamed ? c.name : '',
+        data_type: c.type,
+        alias: c.sourceTable ?? '',
+        role,
+      };
+      if (role === 'calculated' && c.formula) base.formula = c.formula;
+      if (role === 'constant') base.constant_value = c.constantValue ?? '';
+      return base;
+    });
+}
+
 function mapNetChange(nc: NetChangeSource): GeneratorNetChange {
   return {
     is_primary: nc.isPrimary ?? false,
@@ -112,6 +211,29 @@ function mapNetChange(nc: NetChangeSource): GeneratorNetChange {
 /** Only net-change sources become generator netchange records; support tables are join-only. */
 function netChangeSources(sources: NetChangeSource[] = []): NetChangeSource[] {
   return sources.filter((s) => (s.role ?? 'netchange') !== 'support');
+}
+
+/** All declared source tables (net-change and support) with their join columns. */
+export function mapSourceTables(sources: NetChangeSource[] = []): GeneratorSourceTable[] {
+  return sources.map((s) => ({
+    name: s.ncTable,
+    alias: s.alias ?? s.ncTable,
+    role: s.role ?? 'netchange',
+    columns: (s.columns ?? []).map((c) => c.name),
+  }));
+}
+
+/** Generic joins between declared source tables (snake_case + explicit ON clause). */
+export function mapJoins(joins: JoinDef[] = []): GeneratorJoin[] {
+  return joins.map((j) => ({
+    name: j.name ?? '',
+    left_table: j.leftTable,
+    left_alias: j.leftAlias ?? j.leftTable,
+    right_table: j.rightTable,
+    right_alias: j.rightAlias ?? j.rightTable,
+    join_type: j.joinType,
+    on: (j.onConditions ?? []).map((c) => ({ left: c.left, op: c.op, right: c.right })),
+  }));
 }
 
 /** Derive generator lookups from a fact's dimension lookups + generic lookups. */
@@ -130,6 +252,51 @@ function factLookups(f: Fact): GeneratorLookup[] {
   }));
   const generic = (f.lookups ?? []).map(mapLookup);
   return [...fromDims, ...generic];
+}
+
+/** Fact → dimension surrogate-key links (active-row guard + fallback SK). */
+export function mapDimensionLinks(links: DimensionLookup[] = []): GeneratorDimensionLink[] {
+  return links.map((dl) => ({
+    dimension: dl.dimensionId,
+    dim_table: dl.dimensionTable,
+    source_id_column: dl.sourceIdColumn,
+    target_sk_column: dl.targetSkColumn,
+    default_fallback_sk: dl.defaultFallbackSk,
+    mandatory: dl.isMandatory,
+    active_condition: dl.activeCondition ?? 'DELETED = 0',
+    role_alias: dl.roleAlias ?? '',
+  }));
+}
+
+/** Geo-enrichment lookups (country/state/city → geo surrogate key). */
+export function mapGeo(geos: GeoEnrichment[] = []): GeneratorGeo[] {
+  return geos.map((g) => ({
+    type: g.type,
+    target_geo_sk: g.targetGeoSk,
+    country_col: g.sourceCountryCol,
+    state_col: g.sourceStateCol,
+    city_col: g.sourceCityCol,
+  }));
+}
+
+/** Currency conversions (source amount/currency → base amount). */
+export function mapCurrency(convs: CurrencyConversion[] = []): GeneratorCurrency[] {
+  return convs.map((c) => ({
+    source_amount_col: c.sourceAmountCol,
+    source_currency_col: c.sourceCurrencyCol,
+    target_base_amount_col: c.targetBaseAmountCol,
+    base_currency: c.baseCurrency,
+  }));
+}
+
+/** Record-level validation rules emitted to the generator contract. */
+export function mapValidations(rules: ValidationRule[] = []): GeneratorValidation[] {
+  return rules.map((v) => ({
+    rule_name: v.ruleName,
+    condition: v.condition,
+    error_code: v.errorCode,
+    error_message: v.errorMessage,
+  }));
 }
 
 interface GeneratorEnumField {
@@ -162,7 +329,7 @@ function generatorDataType(sqlType: string): string {
 /** The NC SELECT columns: direct-mapped columns + the ent scope join key. */
 function enumFields(e: Enumeration): GeneratorEnumField[] {
   const fields = e.columns.filter(isDirectField).map((c) => ({
-    name: c.sourceColumn as string,
+    name: c.sourceColumn ?? c.name.toLowerCase(),
     new_name: c.name,
     data_type: generatorDataType(c.type),
     coalesce: c.coalesce ?? false,
@@ -218,7 +385,7 @@ function enumNetChange(e: Enumeration): GeneratorNetChange {
     oltp_table_lmd: 'es_lmd',
     nc_table: ncTable,
     dw_oltp_copy_table: `dw_${oltp}`,
-    condition: `enum_type='${e.enumTypeFilter ?? e.name}'`,
+    condition: enumTypeCondition(e),
   };
 }
 
@@ -230,14 +397,16 @@ export function enumerationToGenerator(e: Enumeration) {
     e.columns.find((c) => c.name.toUpperCase().endsWith('_NAME')) ??
     e.columns.find((c) => c.isNaturalKey && !c.isSk && !c.isPk);
   const ncSources = netChangeSources(e.netChange);
-  const netchange = ncSources.length ? ncSources.map(mapNetChange) : [enumNetChange(e)];
+  const netchange = ncSources.length
+    ? ncSources.map((nc) => ({ ...mapNetChange(nc), condition: enumNetChangeCondition(e, nc) }))
+    : [enumNetChange(e)];
   return {
     type: 'enumeration',
     name: e.name,
-    table: e.enumTable ?? e.name,
+    table: e.name,
     enum_type: e.enumTypeFilter ?? e.name,
-    field_key: e.fieldKey ?? keyCol?.name ?? `${e.name.toUpperCase()}_KEY`,
-    field_name: e.fieldName ?? nameCol?.name ?? `${e.name.toUpperCase()}_NAME`,
+    field_key: keyCol?.name ?? `${e.name.toUpperCase()}_KEY`,
+    field_name: nameCol?.name ?? `${e.name.toUpperCase()}_NAME`,
     fields: enumFields(e),
     netchange,
     lookups: enumLookups(e),
@@ -247,6 +416,15 @@ export function enumerationToGenerator(e: Enumeration) {
 export function dimensionToGenerator(d: Dimension) {
   const sk = d.surrogateKey ?? d.columns.find((c) => c.isSk)?.name ?? `${d.name.toUpperCase()}_KEY`;
   const nk = d.naturalKey ?? d.columns.find((c) => c.isNaturalKey)?.name ?? 'OLTP_ID';
+  // Mirror configInserts/packet: when no net-change sources are declared, fall
+  // back to the dimension's `sourceNcTables` so generator.json netchange[] is
+  // never empty for a simple dimension.
+  const declaredNc = netChangeSources(d.netChange);
+  const ncSources = declaredNc.length
+    ? declaredNc
+    : (d.sourceNcTables ?? []).map(
+        (nc) => ({ id: nc, ncTable: nc, oltpTable: nc.replace(/_nc$/, '') } as NetChangeSource),
+      );
   return {
     type: 'dimension',
     name: d.name,
@@ -256,9 +434,15 @@ export function dimensionToGenerator(d: Dimension) {
     sub_job_name: `${d.name}_sync`,
     surrogate_key: sk,
     natural_key: nk,
+    dimension_type: d.dimensionType ?? 'simple',
+    has_unknown_row: d.hasDefaultUnknownRow ?? false,
+    nk_updates: d.nkUpdates ?? false,
+    default_row: d.defaultRow ?? {},
     lookups: (d.lookups ?? []).map(mapLookup),
     fields: mapFields(d.columns),
-    netchange: netChangeSources(d.netChange).map(mapNetChange),
+    source_tables: mapSourceTables(d.netChange),
+    joins: mapJoins(d.joins),
+    netchange: ncSources.map(mapNetChange),
   };
 }
 
@@ -271,7 +455,13 @@ export function factToGenerator(f: Fact) {
     stg_error_table: f.errorTable ?? `${f.name.replace(/^dw_/, '')}_stg_error`,
     sub_job_name: `${f.name.replace(/^dw_/, '')}_sync`,
     lookups: factLookups(f),
-    fields: mapFields(f.columns),
+    fields: mapAllFields(f.columns),
+    source_tables: mapSourceTables(f.netChange),
+    joins: mapJoins(f.joins),
+    dimension_links: mapDimensionLinks(f.dimensionLookups),
+    geo: mapGeo(f.geoEnrichment),
+    currency: mapCurrency(f.currencyConversions),
+    validations: mapValidations(f.validationRules),
     netchange: [
       ...(f.primaryNcTable
         ? [
@@ -288,7 +478,7 @@ export function factToGenerator(f: Fact) {
       ),
       ...netChangeSources(f.netChange).map(mapNetChange),
     ],
-    reconciles: [],
+    reconciles: (f.reconciles ?? []).map((r) => ({ nc_table: r.ncTable, ktr_file_name: r.ktrFileName })),
   };
 }
 

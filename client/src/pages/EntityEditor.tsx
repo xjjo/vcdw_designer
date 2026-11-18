@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useStore } from '../store';
-import { KIND_META, downloadFile } from '../ui';
-import { saveEnumerationDesign, fetchDbColumns, saveSupportTableDesign } from '../api';
+import { KIND_META, downloadFile, downloadBytes } from '../ui';
+import { saveEnumerationDesign, fetchDbColumns, saveSupportTableDesign, fetchPacket, generateEtl } from '../api';
+import type { EtlGenResult } from '../api';
 import type {
   AnyEntity,
   Dimension,
+  DimensionType,
   Enumeration,
   Fact,
   FactType,
@@ -16,7 +18,11 @@ import {
   type StandardColumnProfile,
 } from '@shared/templates';
 import { entityToGenerator } from '@shared/generatorMap';
+import { withEnumTypeFilter } from '@shared/enumNaming';
+import { renameEntity } from '@shared/entityRename';
 import { generateEntitySql, buildSourceSelectPreview, buildStreamLookupPreview, buildSourceTableDdl } from '@shared/sqlGenerator';
+import type { DeploymentPacket } from '@shared/packet';
+import { buildZip } from '@shared/zipFiles';
 import { buildDesignerTables, workingTableFromEntity } from '../tableOptions';
 import Collapsible from '../components/Collapsible';
 import ColumnsEditor from '../components/ColumnsEditor';
@@ -24,6 +30,7 @@ import MappingEditor from '../components/MappingEditor';
 import DimensionLookupsEditor from '../components/DimensionLookupsEditor';
 import GeoCurrencyEditor from '../components/GeoCurrencyEditor';
 import ValidationEditor from '../components/ValidationEditor';
+import ReconcileEditor from '../components/ReconcileEditor';
 import SourceTablesEditor from '../components/SourceTablesEditor';
 import NcEditor from '../components/NcEditor';
 import LookupsEditor from '../components/LookupsEditor';
@@ -39,6 +46,8 @@ type Tab =
   | 'lookups'
   | 'relations'
   | 'validation'
+  | 'reconcile'
+  | 'geocurrency'
   | 'etl'
   | 'preview';
 
@@ -52,6 +61,27 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
   const refreshCatalogCounts = useStore((s) => s.refreshCatalogCounts);
   const [tab, setTab] = useState<Tab>('general');
   const [saveState, setSaveState] = useState<'idle' | 'busy' | 'ok' | 'err'>('idle');
+  const [packet, setPacket] = useState<DeploymentPacket | null>(null);
+  const [packetBusy, setPacketBusy] = useState(false);
+  const [packetError, setPacketError] = useState<string | null>(null);
+  const [etl, setEtl] = useState<EtlGenResult | null>(null);
+  const [etlBusy, setEtlBusy] = useState(false);
+  const [etlError, setEtlError] = useState<string | null>(null);
+  const packetGeneration = useRef(0);
+  const etlGeneration = useRef(0);
+
+  const currentEntity = allEntities.find((e) => e.id === entityId);
+  const entitySignature = currentEntity ? JSON.stringify(currentEntity) : '';
+  useEffect(() => {
+    packetGeneration.current += 1;
+    etlGeneration.current += 1;
+    setPacket(null);
+    setPacketError(null);
+    setPacketBusy(false);
+    setEtl(null);
+    setEtlBusy(false);
+    setEtlError(null);
+  }, [entityId, entitySignature]);
 
   const entity = allEntities.find((e) => e.id === entityId) as AnyEntity | undefined;
   if (!entity) return <div className="empty">Entity not found.</div>;
@@ -78,6 +108,52 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
       setSaveState('err');
       setTimeout(() => setSaveState('idle'), 3500);
     }
+  }
+
+  async function generatePacket() {
+    const request = ++packetGeneration.current;
+    setPacketBusy(true);
+    setPacketError(null);
+    try {
+      const result = await fetchPacket(entity!, model.project.targetDatabase);
+      if (request === packetGeneration.current) setPacket(result);
+    } catch (err) {
+      if (request === packetGeneration.current) {
+        setPacket(null);
+        setPacketError(err instanceof Error ? err.message : 'Failed to generate packet.');
+      }
+    } finally {
+      if (request === packetGeneration.current) setPacketBusy(false);
+    }
+  }
+
+  function downloadPacket() {
+    if (!packet) return;
+    downloadBytes(`${entity!.name}-packet.zip`, buildZip(packet.files), 'application/zip');
+  }
+
+  async function generateEtlCode() {
+    const request = ++etlGeneration.current;
+    setEtlBusy(true);
+    setEtlError(null);
+    try {
+      const r = await generateEtl(entity!);
+      if (request === etlGeneration.current) {
+        setEtl(r);
+        if (!r.ok) setEtlError(r.error || 'Generation failed.');
+      }
+    } catch (err) {
+      if (request === etlGeneration.current) {
+        setEtlError(err instanceof Error ? err.message : 'Failed to generate ETL code.');
+      }
+    } finally {
+      if (request === etlGeneration.current) setEtlBusy(false);
+    }
+  }
+
+  function downloadEtl() {
+    if (!etl) return;
+    downloadBytes(`${entity!.name}-etl.zip`, buildZip(etl.files), 'application/zip');
   }
 
   const columnProfiles = standardProfilesFor(entity.kind);
@@ -146,6 +222,8 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
     { id: 'lookups', label: 'Lookups', show: true },
     { id: 'relations', label: 'Dimension Links', show: isFact },
     { id: 'validation', label: 'Validation', show: isFact },
+    { id: 'reconcile', label: 'Reconcile', show: isFact },
+    { id: 'geocurrency', label: 'Geo / Currency', show: isFact },
     { id: 'etl', label: 'ETL Config', show: true },
     { id: 'preview', label: 'Preview', show: true },
   ];
@@ -171,7 +249,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
 
   const designerTables = buildDesignerTables(entity, workingSet);
   const inWorkingSet = workingSet.some(
-    (t) => t.name.toLowerCase() === (isEnum ? (entity as Enumeration).enumTable ?? entity.name : entity.name).toLowerCase(),
+    (t) => t.name.toLowerCase() === entity.name.toLowerCase(),
   );
 
   return (
@@ -225,7 +303,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
           <div className="row">
             <div className="field">
               <label>Physical name</label>
-              <input value={entity.name} onChange={(e) => patch({ name: e.target.value })} />
+              <input value={entity.name} onChange={(e) => patch(renameEntity(entity, e.target.value))} />
             </div>
             <div className="field">
               <label>Display name</label>
@@ -252,7 +330,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
                   <label>ENUM_TYPE filter</label>
                   <input
                     value={(entity as Enumeration).enumTypeFilter ?? ''}
-                    onChange={(e) => patch({ enumTypeFilter: e.target.value } as Partial<Enumeration>)}
+                    onChange={(e) => patch(withEnumTypeFilter(entity as Enumeration, e.target.value))}
                   />
                   <span className="hint">
                     Reference table, keys and name are derived from the Columns + Mapping tabs.
@@ -289,6 +367,32 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
                     value={(entity as Dimension).naturalKey ?? ''}
                     onChange={(e) => patch({ naturalKey: e.target.value } as Partial<Dimension>)}
                   />
+                </div>
+              </div>
+              <div className="row">
+                <div className="field" style={{ maxWidth: 220 }}>
+                  <label>Dimension type</label>
+                  <select
+                    value={(entity as Dimension).dimensionType ?? 'simple'}
+                    onChange={(e) => patch({ dimensionType: e.target.value as DimensionType } as Partial<Dimension>)}
+                  >
+                    <option value="simple">Simple</option>
+                    <option value="staged">Staged</option>
+                    <option value="geo">Geo</option>
+                    <option value="hierarchical">Hierarchical</option>
+                    <option value="multi_target">Multi-target</option>
+                  </select>
+                </div>
+                <div className="field" style={{ maxWidth: 260 }}>
+                  <label className="check">
+                    <input
+                      type="checkbox"
+                      checked={!!(entity as Dimension).nkUpdates}
+                      onChange={(e) => patch({ nkUpdates: e.target.checked } as Partial<Dimension>)}
+                    />
+                    Natural-key updates
+                  </label>
+                  <span className="hint">Retire renamed rows (handle_nk_updates).</span>
                 </div>
               </div>
               <div className="row">
@@ -465,25 +569,30 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
       )}
 
       {tab === 'relations' && isFact && (
-        <>
-          <DimensionLookupsEditor
-            lookups={(entity as Fact).dimensionLookups ?? []}
-            entities={allEntities.filter((e) => e.id !== entity.id)}
-            onChange={(dimensionLookups) => patch({ dimensionLookups } as Partial<Fact>)}
-          />
-          <GeoCurrencyEditor
-            geo={(entity as Fact).geoEnrichment ?? []}
-            currency={(entity as Fact).currencyConversions ?? []}
-            onGeoChange={(geoEnrichment) => patch({ geoEnrichment } as Partial<Fact>)}
-            onCurrencyChange={(currencyConversions) => patch({ currencyConversions } as Partial<Fact>)}
-          />
-        </>
+        <DimensionLookupsEditor
+          lookups={(entity as Fact).dimensionLookups ?? []}
+          entities={allEntities.filter((e) => e.id !== entity.id)}
+          onChange={(dimensionLookups) => patch({ dimensionLookups } as Partial<Fact>)}
+        />
       )}
 
       {tab === 'validation' && isFact && (
         <ValidationEditor
           rules={(entity as Fact).validationRules ?? []}
           onChange={(validationRules) => patch({ validationRules } as Partial<Fact>)}
+        />
+      )}
+
+      {tab === 'reconcile' && isFact && (
+        <ReconcileEditor fact={entity as Fact} onChange={(f) => updateEntity(f)} />
+      )}
+
+      {tab === 'geocurrency' && isFact && (
+        <GeoCurrencyEditor
+          geo={(entity as Fact).geoEnrichment ?? []}
+          currency={(entity as Fact).currencyConversions ?? []}
+          onGeoChange={(geoEnrichment) => patch({ geoEnrichment } as Partial<Fact>)}
+          onCurrencyChange={(currencyConversions) => patch({ currencyConversions } as Partial<Fact>)}
         />
       )}
 
@@ -632,6 +741,68 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
             }
           >
             <pre className="code">{sql}</pre>
+          </Collapsible>
+          <Collapsible
+            title="Deployment packet"
+            subtitle="Full per-entity bundle (generator.json, DDL, control inserts, mapping CSVs, INSTALL.md) ready to drop into the VCDW DataWarehouse repo"
+            id={`preview-packet-${entity.id}`}
+            defaultOpen={false}
+            right={
+              packet ? (
+                <button className="btn sm" onClick={downloadPacket}>
+                  Download .zip
+                </button>
+              ) : undefined
+            }
+          >
+            <div className="row" style={{ marginBottom: 10 }}>
+              <button className="btn primary sm" onClick={generatePacket} disabled={packetBusy}>
+                {packetBusy ? 'Generating…' : 'Generate deployment packet'}
+              </button>
+              {packetError && <span className="badge error">{packetError}</span>}
+            </div>
+            {packet &&
+              (packet.files.length === 0 ? (
+                <p className="hint">Packet is empty for this entity.</p>
+              ) : (
+                packet.files.map((f) => (
+                  <div key={f.path} style={{ marginBottom: 12 }}>
+                    <div className="mono" style={{ fontWeight: 600, marginBottom: 4 }}>{f.path}</div>
+                    <pre className="code">{f.content}</pre>
+                  </div>
+                ))
+              ))}
+          </Collapsible>
+          <Collapsible
+            title="ETL code (Kettle .ktr / .kjb)"
+            subtitle="Generated by the vcdw-etl-builder Java app from this entity's generator JSON"
+            id={`preview-etl-${entity.id}`}
+            defaultOpen={false}
+            right={
+              etl && etl.files.length > 0 ? (
+                <button className="btn sm" onClick={downloadEtl}>
+                  Download .zip
+                </button>
+              ) : undefined
+            }
+          >
+            <div className="row" style={{ marginBottom: 10 }}>
+              <button className="btn primary sm" onClick={generateEtlCode} disabled={etlBusy}>
+                {etlBusy ? 'Generating…' : 'Generate ETL code'}
+              </button>
+              {etlError && <span className="badge error">{etlError}</span>}
+            </div>
+            {etl &&
+              (etl.files.length === 0 ? (
+                <pre className="code">{etl.log}</pre>
+              ) : (
+                etl.files.map((f) => (
+                  <div key={f.path} style={{ marginBottom: 12 }}>
+                    <div className="mono" style={{ fontWeight: 600, marginBottom: 4 }}>{f.path}</div>
+                    <pre className="code">{f.content}</pre>
+                  </div>
+                ))
+              ))}
           </Collapsible>
         </>
       )}

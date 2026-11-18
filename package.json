@@ -13,10 +13,14 @@
     "dev:client": "npm --workspace client run dev",
     "dev:server": "npm --workspace server run dev",
     "build": "npm --workspace server run build && npm --workspace client run build",
-    "start": "npm --workspace server run start"
+    "start": "npm --workspace server run start",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "ajv": "^8.17.1",
+    "concurrently": "^8.2.2",
+    "vitest": "^2.1.0"
   },
   "overrides": {
     "esbuild": "0.28.2"

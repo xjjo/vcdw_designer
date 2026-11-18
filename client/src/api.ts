@@ -1,4 +1,7 @@
-import type { AnyEntity, DesignModel, Enumeration, Dimension, Fact, EntityKind, SourceColumn, SupportTable, SupportTableKind } from '@shared/types';
+import type { AnyEntity, DesignModel, Enumeration, Dimension, Fact, EntityKind, SourceColumn, SupportTable, SupportTableKind, SqlDialect } from '@shared/types';
+import type { DeploymentPacket, PacketFile } from '@shared/packet';
+
+export type { DeploymentPacket, PacketFile };
 
 /** Thin client for the optional Node backend. All calls degrade gracefully. */
 async function post<T>(url: string, body: unknown): Promise<T> {
@@ -18,6 +21,20 @@ export async function generateModelSql(model: DesignModel, rows = 3): Promise<st
 
 export async function mapToGenerator(entity: AnyEntity): Promise<unknown> {
   return post<unknown>('/api/generator-map', { entity });
+}
+
+/** Build the full deployment packet (generator.json, DDL, control inserts, mapping CSVs, INSTALL.md). */
+export async function fetchPacket(
+  entity: AnyEntity,
+  dialect: SqlDialect = 'MemSQL',
+): Promise<DeploymentPacket> {
+  return post<DeploymentPacket>('/api/packet', { entity, dialect });
+}
+
+/** Generate the Pentaho Kettle ETL code (.ktr / .kjb) for an entity via the Java vcdw-etl-builder. */
+export interface EtlGenResult { ok: boolean; files: PacketFile[]; log: string; error?: string }
+export function generateEtl(entity: AnyEntity): Promise<EtlGenResult> {
+  return post<EtlGenResult>('/api/generate-etl', { entity });
 }
 
 export async function saveModel(model: DesignModel): Promise<void> {
@@ -56,6 +73,7 @@ export interface AppConfig {
   db: { host: string; name: string; user: string; password: string; port: number };
   etl: { root: string; enumerationsDir: string };
   catalog: { enumCatalogPath: string };
+  etlBuilder: { appDir: string; pdiHome: string; enabled: boolean };
 }
 
 export interface DbEnumRow {

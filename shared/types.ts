@@ -209,6 +209,10 @@ export interface DimensionLookup {
   targetSkColumn: string;
   defaultFallbackSk: number;
   isMandatory: boolean;
+  /** Active-row predicate for the lookup (defaults to 'DELETED = 0'). */
+  activeCondition?: string;
+  /** Role label when the same dimension is resolved multiple times (e.g. 'invoicer'). */
+  roleAlias?: string;
 }
 
 export interface GeoEnrichment {
@@ -236,6 +240,15 @@ export interface ValidationRule {
   condition: string;
   errorCode: string;
   errorMessage: string;
+}
+
+/** Post-load reconciliation: a net-change table re-checked by a Pentaho transform. */
+export interface ReconcileDef {
+  id: string;
+  /** Net-change table whose loaded rows are reconciled. */
+  ncTable: string;
+  /** Pentaho `.ktr` transform file that performs the reconciliation. */
+  ktrFileName: string;
 }
 
 export interface EtlConfig {
@@ -275,15 +288,25 @@ export interface Enumeration extends BaseEntity {
   isReferenceTable?: boolean;
   sourceNcTable?: string;
   enumTypeFilter?: string;
-  /** Physical reference table name (defaults to `name`). */
+  /** @deprecated Ignored: the physical table is always `name`. Kept so old YAML designs still parse. */
   enumTable?: string;
-  /** Surrogate-key column emitted as generator `field_key`. */
+  /** @deprecated Ignored: `field_key` is derived from the SK column. Kept so old YAML designs still parse. */
   fieldKey?: string;
-  /** Value/name column emitted as generator `field_name`. */
+  /** @deprecated Ignored: `field_name` is derived from the `enum_entry_name` column. Kept so old YAML designs still parse. */
   fieldName?: string;
   /** Source column in the NC table that carries the enterprise scope id. */
   entScopeSource?: string;
 }
+
+/**
+ * The build pattern a dimension follows in the ETL flow:
+ *  - simple:        1:1 net-change → dimension load.
+ *  - staged:        loaded through a staging table before the final merge.
+ *  - geo:           carries a geo-address tuple (country/state/city/...).
+ *  - hierarchical:  denormalizes a parent/ancestor chain onto each row.
+ *  - multi_target:  a single source feeds several dimension tables.
+ */
+export type DimensionType = 'simple' | 'staged' | 'geo' | 'hierarchical' | 'multi_target';
 
 export interface Dimension extends BaseEntity {
   kind: 'dimension';
@@ -294,6 +317,14 @@ export interface Dimension extends BaseEntity {
   naturalKey?: string;
   stgTable?: string;
   stgErrorTable?: string;
+  /** Build pattern driving the generated ETL flow (defaults to 'simple'). */
+  dimensionType?: DimensionType;
+  /** Target tables fed when dimensionType = 'multi_target'. */
+  multiTargetTables?: string[];
+  /** Allow natural-key (type-1) updates on existing rows. */
+  nkUpdates?: boolean;
+  /** Literal column values for the unknown/default row (keyed by column name). */
+  defaultRow?: Record<string, string>;
 }
 
 export type FactType = 'transaction' | 'snapshot' | 'weekly_aggregation';
@@ -309,6 +340,7 @@ export interface Fact extends BaseEntity {
   geoEnrichment?: GeoEnrichment[];
   currencyConversions?: CurrencyConversion[];
   validationRules?: ValidationRule[];
+  reconciles?: ReconcileDef[];
 }
 
 export interface ProjectMeta {

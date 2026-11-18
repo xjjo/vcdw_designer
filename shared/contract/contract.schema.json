@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vcdw-designer/contract/generator-doc.schema.json",
+  "title": "VCDW generator document",
+  "description": "Contract for documents produced by entityToGenerator(). New keys are allowed (additionalProperties: true); legacy keys are required per type.",
+  "type": "object",
+  "oneOf": [
+    {
+      "title": "enumeration",
+      "additionalProperties": true,
+      "properties": {
+        "type": { "const": "enumeration" }
+      },
+      "required": [
+        "type",
+        "name",
+        "table",
+        "enum_type",
+        "field_key",
+        "field_name",
+        "fields",
+        "netchange",
+        "lookups"
+      ]
+    },
+    {
+      "title": "dimension",
+      "additionalProperties": true,
+      "properties": {
+        "type": { "const": "dimension" }
+      },
+      "required": [
+        "type",
+        "name",
+        "dim_table",
+        "stg_table",
+        "stg_error_table",
+        "sub_job_name",
+        "surrogate_key",
+        "natural_key",
+        "fields",
+        "lookups",
+        "netchange"
+      ]
+    },
+    {
+      "title": "fact",
+      "additionalProperties": true,
+      "properties": {
+        "type": { "const": "fact" }
+      },
+      "required": [
+        "type",
+        "fact_name",
+        "fact_table",
+        "stg_table",
+        "stg_error_table",
+        "sub_job_name",
+        "fields",
+        "lookups",
+        "netchange",
+        "reconciles"
+      ]
+    }
+  ]
+}
