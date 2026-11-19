@@ -1,0 +1,2527 @@
+id: dim_item
+kind: dimension
+name: item
+displayName: Item Dimension
+description: "Reverse-engineered from item_sync.kjb: item_nc -> item_sync.ktr
+  (CTE + 4 left joins + 14 DB lookups + 'set error' UDJC) -> item_stg;
+  sync_item_and_error_for_update.ktr (update item / quarantine to
+  item_stg_error); sync_item_for_insert.ktr (insert new); attribute keys + EPT
+  computation; default row."
+domain: Supply Chain Core
+requiresStaging: true
+dimensionType: staged
+nkUpdates: false
+sourceNcTables:
+  - item_nc
+hasDefaultUnknownRow: true
+surrogateKey: ITEM_KEY
+naturalKey: ITEM_NAME
+businessKeys:
+  - ITEM_NAME
+  - ENT_NAME
+isReferenceTable: false
+loadStrategy: insert_new
+upsertKeys: []
+auditProfileId: audit_default
+columns:
+  - id: col_itm_225
+    name: ITEM_KEY
+    type: BIGINT
+    nullable: false
+    isPk: true
+    isSk: true
+    autoIncrement: true
+    mappingKind: generated
+  - id: col_itm_226
+    name: ITEM_NAME
+    type: VARCHAR(256)
+    nullable: false
+    default: "'No Value'"
+    mappingKind: direct
+    sourceColumn: item_name
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_227
+    name: ENT_NAME
+    type: VARCHAR(128)
+    nullable: false
+    default: "'No Value'"
+    mappingKind: direct
+    sourceColumn: ent_name
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_228
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: display_name
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_229
+    name: DESCRIPTION
+    type: VARCHAR(1024)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: description
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_230
+    name: TYPE_NAME
+    type: VARCHAR(64)
+    nullable: false
+    mappingKind: direct
+    sourceColumn: type_name
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_231
+    name: MFG_ITEM_NAME
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: mfg_item_name
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_232
+    name: MFG_ITEM_ENT_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: mfg_ent_name
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_233
+    name: UNIVERSAL_ITEM_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: universal_item_name
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_234
+    name: GTIN
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: gtin
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_235
+    name: PRICE
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: price
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_236
+    name: MSRP
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: msrp
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_237
+    name: PURCHASE_COST
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: purchase_cost
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_238
+    name: TOTAL_LANDED_COST
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: total_landed_cost
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_239
+    name: CURRENCY
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: currency
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_240
+    name: STYLE
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: style
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_241
+    name: SIZE_CODE
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: size_code
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_242
+    name: COLOR
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: color
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_243
+    name: STD_CASE_ITEM_CNT
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: std_case_item_cnt
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_244
+    name: STD_PALLET_ITEM_CNT
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: std_pallet_item_cnt
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_245
+    name: STD_PALLET_CASE_CNT
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: std_pallet_case_cnt
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_246
+    name: WEIGHT
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: weight
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_247
+    name: WEIGHT_UOM
+    type: DECIMAL(6,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: weight_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_248
+    name: WEIGHT_UOM_VAL
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_218
+    lookupField: WEIGHT_UOM_NAME
+  - id: col_itm_249
+    name: LENGTH
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: length
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_250
+    name: WIDTH
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: width
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_251
+    name: HEIGHT
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: height
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_252
+    name: LINEAR_UOM
+    type: DECIMAL(6,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: linear_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_253
+    name: LINEAR_UOM_VAL
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_219
+    lookupField: LINEAR_UOM_NAME
+  - id: col_itm_254
+    name: CASE_WEIGHT
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: case_weight
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_255
+    name: CASE_WEIGHT_UOM
+    type: DECIMAL(6,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: case_weight_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_256
+    name: CASE_WEIGHT_UOM_VAL
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_220
+    lookupField: WEIGHT_UOM_NAME
+  - id: col_itm_257
+    name: CASE_LENGTH
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: case_length
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_258
+    name: CASE_WIDTH
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: case_width
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_259
+    name: CASE_HEIGHT
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: case_height
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_260
+    name: CASE_LINEAR_UOM
+    type: DECIMAL(6,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: case_linear_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_261
+    name: CASE_LINEAR_UOM_VAL
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_221
+    lookupField: LINEAR_UOM_NAME
+  - id: col_itm_262
+    name: PALLET_WEIGHT
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: pallet_weight
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_263
+    name: PALLET_WEIGHT_UOM
+    type: DECIMAL(6,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: pallet_weight_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_264
+    name: PALLET_WEIGHT_UOM_VAL
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_222
+    lookupField: WEIGHT_UOM_NAME
+  - id: col_itm_265
+    name: PALLET_LENGTH
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: pallet_length
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_266
+    name: PALLET_WIDTH
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: pallet_width
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_267
+    name: PALLET_HEIGHT
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: pallet_height
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_268
+    name: PALLET_LINEAR_UOM
+    type: DECIMAL(6,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: pallet_linear_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_269
+    name: PALLET_LINEAR_UOM_VAL
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_223
+    lookupField: LINEAR_UOM_NAME
+  - id: col_itm_270
+    name: ORDERING_UOM
+    type: DECIMAL(6,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: ordering_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_271
+    name: ORDERING_UOM_VAL
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_224
+    lookupField: ORDERING_UOM_NAME
+  - id: col_itm_272
+    name: IS_ACTIVE
+    type: TINYINT(1)
+    nullable: true
+    default: "1"
+    mappingKind: direct
+    sourceColumn: is_active
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_273
+    name: ACTIVATION_DATE
+    type: DATETIME(6)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: activation_date
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_274
+    name: DEACTIVATION_DATE
+    type: DATETIME(6)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: deactivation_date
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_275
+    name: FLT
+    type: DECIMAL(19,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: flt
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_276
+    name: AUTHORITATIVE_LEVEL
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: authoritative_level
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_277
+    name: BOMITEM_TYPE
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: bomitem_type
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_278
+    name: CASE_UPC
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: case_upc
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_279
+    name: IS_COMPLEX
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: complex
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_280
+    name: CYCLE_COUNTING_FREQUENCY
+    type: DECIMAL(19,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: cycle_counting_frequency
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_281
+    name: DEADLINE_DURATION
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: deadline_duration
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_282
+    name: DEADLINE_DURATION_UOM
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: deadline_duration_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_283
+    name: DRAWING_NUMBER
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: drawing_number
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_284
+    name: EXT_MFG_ENT_NAME
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: ext_mfg_ent_name
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_285
+    name: EXT_MFG_ITEM_NAME
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: ext_mfg_item_name
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_286
+    name: FORECAST_BEGIN_DATE
+    type: DATETIME(6)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: forecast_begin_date
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_287
+    name: GROWTH_DURATION
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: growth_duration
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_288
+    name: GROWTH_DURATION_UOM
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: growth_duration_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_289
+    name: HAZMAT_CONTACT_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: hazmat_contact_name
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_290
+    name: HAZMAT_CONTACT_PHONE
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: hazmat_contact_phone
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_291
+    name: HTS_CODE
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: hts_code
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_292
+    name: INITIAL_DURATION
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: initial_duration
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_293
+    name: INITIAL_DURATION_UOM
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: initial_duration_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_294
+    name: IS_HAZARDOUS
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: is_hazardous
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_295
+    name: IS_LOT_CONTROLLED
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: is_lot_controlled
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_296
+    name: IS_NEVER_OUT_ITEM
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: is_never_out_item
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_297
+    name: IS_SERIAL_CONTROLLED
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: is_serial_controlled
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_298
+    name: ITEM_CATEGORY
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: item_category
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_299
+    name: ITEM_CLASS
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: item_class
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_300
+    name: ITEM_TYPE
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: item_type
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_301
+    name: LAUNCH_DATE
+    type: DATETIME(6)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: launch_date
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_302
+    name: LAYERS_PER_PALLET
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: layers_per_pallet
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_303
+    name: MATURITY_DURATION
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: maturity_duration
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_304
+    name: MATURITY_DURATION_UOM
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: maturity_duration_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_305
+    name: MEAN_TIME_BETWEEN_FAILURES
+    type: DECIMAL(19,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: mean_time_between_failures
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_306
+    name: IS_MODEL_SUPPLY_CHAIN
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: model_supply_chain
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_307
+    name: NOTES_FIELDS
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: notes_fields
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_308
+    name: BUYER_CODE
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: oms_buyer_code
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_309
+    name: ORD_TO_STOCK_CONV_FACTOR
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: ord_to_stock_conv_factor
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_310
+    name: PACKAGE_UPC
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: package_upc
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_311
+    name: PLANNER_CODE
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: planner_code
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_312
+    name: POSITEM_IDS
+    type: VARCHAR(4000)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: positem_ids
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_313
+    name: IS_PRIMARY
+    type: TINYINT(1)
+    nullable: true
+    default: "0"
+    mappingKind: direct
+    sourceColumn: primary_
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_314
+    name: RUN_REPLENISHMENT
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: run_replenishment
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_315
+    name: PACKAGE_ITEM_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_213
+    lookupField: ITEM_NAME
+  - id: col_itm_316
+    name: ORDER_MGMT_ORG_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_216
+    lookupField: ORG_NAME
+  - id: col_itm_317
+    name: ORDER_MGMT_ENT_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_216
+    lookupField: ENT_NAME
+  - id: col_itm_318
+    name: SHELF_LIFE
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: shelf_life
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_319
+    name: SHELF_LIFE_UOM
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: shelf_life_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_320
+    name: IS_STACKABLE
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: stackable
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_321
+    name: STANDARD_COST
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: standard_cost
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_322
+    name: STOCKING_UOM
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: stocking_uom
+    sourceTable: i
+    coalesce: true
+  - id: col_itm_323
+    name: STOCKING_UOM_SPACES
+    type: DECIMAL(19,0)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: stocking_uom_spaces
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_324
+    name: HAZARD_CLASS_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_214
+    lookupField: HAZARD_CLASS_NAME
+  - id: col_itm_325
+    name: HAZMAT_NUMBER
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_215
+    lookupField: HAZMAT_NUMBER
+  - id: col_itm_326
+    name: MANAGING_ORG_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_212
+    lookupField: ORG_NAME
+  - id: col_itm_327
+    name: PROPER_SHIP_NAME
+    type: VARCHAR(64)
+    nullable: true
+    comment: Present in DDL but not loaded by item_sync.ktr
+  - id: col_itm_328
+    name: UNITS_PER_LAYER
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: units_per_layer
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_329
+    name: REPLENISHMENT_PILOT
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: replenishment_pilot
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_330
+    name: REPLENISHMENT_TYPE
+    type: SMALLINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: replenishment_type
+    sourceTable: i
+    coalesce: true
+    coalesceDefault: "0"
+  - id: col_itm_331
+    name: PGRP_LEVEL_LEVEL1_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_211
+    lookupField: LEVEL1_NAME
+  - id: col_itm_332
+    name: PGRP_LEVEL_LEVEL2_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_211
+    lookupField: LEVEL2_NAME
+  - id: col_itm_333
+    name: PGRP_LEVEL_LEVEL3_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_211
+    lookupField: LEVEL3_NAME
+  - id: col_itm_334
+    name: PGRP_LEVEL_LEVEL4_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_211
+    lookupField: LEVEL4_NAME
+  - id: col_itm_335
+    name: PGRP_LEVEL_LEVEL5_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_211
+    lookupField: LEVEL5_NAME
+  - id: col_itm_336
+    name: OLTP_ID
+    type: BIGINT
+    nullable: true
+    isNaturalKey: true
+    mappingKind: direct
+    sourceColumn: sys_item_id
+    sourceTable: i
+  - id: col_itm_337
+    name: CURRENCY_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_217
+    lookupField: CURRENCY_NAME
+  - id: col_itm_338
+    name: ITEM_ATT1_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_1_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_339
+    name: ITEM_ATT2_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_2_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_340
+    name: ITEM_ATT3_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_3_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_341
+    name: ITEM_ATT4_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_4_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_342
+    name: ITEM_ATT5_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_5_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_343
+    name: ITEM_ATT6_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_6_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_344
+    name: ITEM_ATT7_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_7_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_345
+    name: ITEM_ATT8_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_8_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_346
+    name: ITEM_ATT9_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_9_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_347
+    name: ITEM_ATT10_DIM_KEY
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_207
+    joinField: ATTRIBUTE_10_KEY
+    sourceTable: attr
+    coalesce: true
+  - id: col_itm_348
+    name: CREATION_DATE
+    type: DATETIME(6)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: creation_date
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_349
+    name: GENERIC_ITEM_NAME
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_209
+    joinField: ITEM_NAME
+    sourceTable: dw1
+    coalesce: true
+  - id: col_itm_350
+    name: GENERIC_ITEM_ENT_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_209
+    joinField: ENT_NAME
+    sourceTable: dw1
+    coalesce: true
+  - id: col_itm_351
+    name: PADF_DOUBLE_FIELD1
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_double_field1
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_352
+    name: PADF_DOUBLE_FIELD2
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_double_field2
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_353
+    name: PADF_DOUBLE_FIELD3
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_double_field3
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_354
+    name: PADF_DOUBLE_FIELD4
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_double_field4
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_355
+    name: PADF_DOUBLE_FIELD5
+    type: DOUBLE
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_double_field5
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_356
+    name: PADF_LONG_FIELD1
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field1
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_357
+    name: PADF_LONG_FIELD10
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field10
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_358
+    name: PADF_LONG_FIELD2
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field2
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_359
+    name: PADF_LONG_FIELD3
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field3
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_360
+    name: PADF_LONG_FIELD4
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field4
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_361
+    name: PADF_LONG_FIELD5
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field5
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_362
+    name: PADF_LONG_FIELD6
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field6
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_363
+    name: PADF_LONG_FIELD7
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field7
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_364
+    name: PADF_LONG_FIELD8
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field8
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_365
+    name: PADF_LONG_FIELD9
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_long_field9
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_366
+    name: PADF_STRING_FIELD1
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field1
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_367
+    name: PADF_STRING_FIELD10
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field10
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_368
+    name: PADF_STRING_FIELD2
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field2
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_369
+    name: PADF_STRING_FIELD3
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field3
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_370
+    name: PADF_STRING_FIELD4
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field4
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_371
+    name: PADF_STRING_FIELD5
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field5
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_372
+    name: PADF_STRING_FIELD6
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field6
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_373
+    name: PADF_STRING_FIELD7
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field7
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_374
+    name: PADF_STRING_FIELD8
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field8
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_375
+    name: PADF_STRING_FIELD9
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: padf_string_field9
+    sourceTable: i
+    coalesce: false
+  - id: col_itm_376
+    name: PAPT_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_210
+    joinField: NAME
+    sourceTable: pt
+    coalesce: false
+  - id: col_itm_377
+    name: PAPT_VERSION
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_210
+    joinField: VERSION
+    sourceTable: pt
+    coalesce: false
+  - id: col_itm_378
+    name: PAPT_OWNING_ENTERPRISE_NAME
+    type: VARCHAR(128)
+    nullable: false
+    default: "'No Value'"
+    mappingKind: join
+    joinId: join_itm_210
+    joinField: OWNING_ENTERPRISE_NAME
+    sourceTable: pt
+    coalesce: false
+  - id: col_itm_379
+    name: PAPT_DEFINITION
+    type: LONGTEXT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_210
+    joinField: DEFINITION
+    sourceTable: pt
+    coalesce: false
+  - id: col_itm_380
+    name: HAZMAT_NUMBER_CATEGORY_NAME
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_itm_215
+    lookupField: HAZMAT_NUMBER_CATEGORY_NAME
+  - id: col_itm_381
+    name: SYS_MANAGING_ORG_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: sys_managing_org_id
+    sourceTable: i
+    coalesce: true
+    isTransient: true
+    comment: "stream-only lookup driver: stored in item_stg, not in item"
+  - id: col_itm_382
+    name: OMS_SYS_PACKAGE_ITEM_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: oms_sys_package_item_id
+    sourceTable: i
+    coalesce: false
+    isTransient: true
+    comment: "stream-only lookup driver: stored in item_stg, not in item"
+  - id: col_itm_383
+    name: SYS_HAZARD_CLASS_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: sys_hazard_class_id
+    sourceTable: i
+    coalesce: true
+    isTransient: true
+    comment: "stream-only lookup driver: stored in item_stg, not in item"
+  - id: col_itm_384
+    name: SYS_HAZMAT_NUMBER_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: sys_hazmat_number_id
+    sourceTable: i
+    coalesce: true
+    isTransient: true
+    comment: "stream-only lookup driver: stored in item_stg, not in item"
+  - id: col_itm_385
+    name: SCC_SYS_ORDER_MGMT_ORG_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: scc_sys_order_mgmt_org_id
+    sourceTable: i
+    coalesce: true
+    isTransient: true
+    comment: "stream-only lookup driver: stored in item_stg, not in item"
+  - id: col_itm_386
+    name: SYS_PGRP_LEVEL_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: join
+    joinId: join_itm_208
+    joinField: SYS_PGRP_LEVEL_ID
+    sourceTable: dw2
+    isTransient: true
+    comment: stream-only lookup driver from CTE item_pgrp_level_assoc
+      (max(SYS_PGRP_LEVEL_ID) group by sys_item_id)
+  - id: col_itm_387
+    name: DELETED
+    type: TINYINT(1)
+    nullable: false
+    default: "0"
+    auditRole: deleted
+    mappingKind: audit
+  - id: col_itm_388
+    name: DW_CREATED
+    type: DATETIME(6)
+    nullable: false
+    default: CURRENT_TIMESTAMP
+    auditRole: created
+    mappingKind: audit
+  - id: col_itm_389
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+    nullable: false
+    default: CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    auditRole: modified
+    mappingKind: audit
+etlConfig:
+  isEnabled: true
+  priority: 1
+netChange:
+  - id: nc_itm_176
+    role: netchange
+    isPrimary: true
+    ncTable: item_nc
+    alias: i
+    oltpTable: item
+    oltpTableSysId: SYS_ITEM_ID
+    oltpTableLmd: last_modified_date
+    dwOltpCopyTable: dw_item
+    condition: 2=2
+    columns:
+      - id: sc_itm_001
+        name: sys_item_id
+        type: BIGINT
+      - id: sc_itm_002
+        name: ent_name
+        type: VARCHAR(128)
+      - id: sc_itm_003
+        name: item_name
+        type: VARCHAR(256)
+      - id: sc_itm_004
+        name: display_name
+        type: VARCHAR(255)
+      - id: sc_itm_005
+        name: description
+        type: VARCHAR(1024)
+      - id: sc_itm_006
+        name: type_name
+        type: VARCHAR(64)
+      - id: sc_itm_007
+        name: mfg_item_name
+        type: VARCHAR(256)
+      - id: sc_itm_008
+        name: mfg_ent_name
+        type: VARCHAR(128)
+      - id: sc_itm_009
+        name: universal_item_name
+        type: VARCHAR(128)
+      - id: sc_itm_010
+        name: gtin
+        type: VARCHAR(64)
+      - id: sc_itm_011
+        name: price
+        type: DOUBLE
+      - id: sc_itm_012
+        name: msrp
+        type: DOUBLE
+      - id: sc_itm_013
+        name: oms_sys_package_item_id
+        type: BIGINT
+      - id: sc_itm_014
+        name: purchase_cost
+        type: DOUBLE
+      - id: sc_itm_015
+        name: total_landed_cost
+        type: DOUBLE
+      - id: sc_itm_016
+        name: currency
+        type: DECIMAL(9,0)
+      - id: sc_itm_017
+        name: style
+        type: VARCHAR(64)
+      - id: sc_itm_018
+        name: size_code
+        type: VARCHAR(64)
+      - id: sc_itm_019
+        name: color
+        type: VARCHAR(64)
+      - id: sc_itm_020
+        name: std_case_item_cnt
+        type: DECIMAL(9,0)
+      - id: sc_itm_021
+        name: std_pallet_item_cnt
+        type: DECIMAL(9,0)
+      - id: sc_itm_022
+        name: std_pallet_case_cnt
+        type: DECIMAL(9,0)
+      - id: sc_itm_023
+        name: weight
+        type: DOUBLE
+      - id: sc_itm_024
+        name: weight_uom
+        type: DECIMAL(6,0)
+      - id: sc_itm_025
+        name: length
+        type: DOUBLE
+      - id: sc_itm_026
+        name: width
+        type: DOUBLE
+      - id: sc_itm_027
+        name: height
+        type: DOUBLE
+      - id: sc_itm_028
+        name: linear_uom
+        type: DECIMAL(6,0)
+      - id: sc_itm_029
+        name: case_weight
+        type: DOUBLE
+      - id: sc_itm_030
+        name: case_weight_uom
+        type: DECIMAL(6,0)
+      - id: sc_itm_031
+        name: case_length
+        type: DOUBLE
+      - id: sc_itm_032
+        name: case_width
+        type: DOUBLE
+      - id: sc_itm_033
+        name: case_height
+        type: DOUBLE
+      - id: sc_itm_034
+        name: case_linear_uom
+        type: DECIMAL(6,0)
+      - id: sc_itm_035
+        name: pallet_weight
+        type: DOUBLE
+      - id: sc_itm_036
+        name: pallet_weight_uom
+        type: DECIMAL(6,0)
+      - id: sc_itm_037
+        name: pallet_length
+        type: DOUBLE
+      - id: sc_itm_038
+        name: pallet_width
+        type: DOUBLE
+      - id: sc_itm_039
+        name: pallet_height
+        type: DOUBLE
+      - id: sc_itm_040
+        name: pallet_linear_uom
+        type: DECIMAL(6,0)
+      - id: sc_itm_041
+        name: ordering_uom
+        type: DECIMAL(6,0)
+      - id: sc_itm_042
+        name: last_modified_date
+        type: DATETIME(6)
+      - id: sc_itm_043
+        name: last_modified_user
+        type: VARCHAR(64)
+      - id: sc_itm_044
+        name: is_active
+        type: DECIMAL(1,0)
+      - id: sc_itm_045
+        name: last_computed_date
+        type: DATETIME(6)
+      - id: sc_itm_046
+        name: activation_date
+        type: DATETIME(6)
+      - id: sc_itm_047
+        name: deactivation_date
+        type: DATETIME(6)
+      - id: sc_itm_048
+        name: creation_user
+        type: VARCHAR(64)
+      - id: sc_itm_049
+        name: creation_date
+        type: DATETIME(6)
+      - id: sc_itm_050
+        name: sys_ent_id
+        type: BIGINT
+      - id: sc_itm_051
+        name: mfg_item_id
+        type: BIGINT
+      - id: sc_itm_052
+        name: sys_creation_template_id
+        type: BIGINT
+      - id: sc_itm_053
+        name: flt
+        type: BIGINT
+      - id: sc_itm_054
+        name: authoritative_level
+        type: VARCHAR(256)
+      - id: sc_itm_055
+        name: bomitem_type
+        type: VARCHAR(64)
+      - id: sc_itm_056
+        name: case_upc
+        type: VARCHAR(64)
+      - id: sc_itm_057
+        name: complex
+        type: DECIMAL(1,0)
+      - id: sc_itm_058
+        name: cycle_counting_frequency
+        type: BIGINT
+      - id: sc_itm_059
+        name: deadline_duration
+        type: DECIMAL(9,0)
+      - id: sc_itm_060
+        name: deadline_duration_uom
+        type: VARCHAR(256)
+      - id: sc_itm_061
+        name: drawing_number
+        type: VARCHAR(64)
+      - id: sc_itm_062
+        name: ext_mfg_ent_name
+        type: VARCHAR(256)
+      - id: sc_itm_063
+        name: ext_mfg_item_name
+        type: VARCHAR(256)
+      - id: sc_itm_064
+        name: forecast_begin_date
+        type: DATETIME(6)
+      - id: sc_itm_065
+        name: growth_duration
+        type: DECIMAL(9,0)
+      - id: sc_itm_066
+        name: growth_duration_uom
+        type: VARCHAR(256)
+      - id: sc_itm_067
+        name: hazmat_contact_name
+        type: VARCHAR(64)
+      - id: sc_itm_068
+        name: hazmat_contact_phone
+        type: VARCHAR(64)
+      - id: sc_itm_069
+        name: hts_code
+        type: VARCHAR(64)
+      - id: sc_itm_070
+        name: initial_duration
+        type: DECIMAL(9,0)
+      - id: sc_itm_071
+        name: initial_duration_uom
+        type: VARCHAR(256)
+      - id: sc_itm_072
+        name: is_hazardous
+        type: DECIMAL(1,0)
+      - id: sc_itm_073
+        name: is_lot_controlled
+        type: DECIMAL(1,0)
+      - id: sc_itm_074
+        name: is_never_out_item
+        type: DECIMAL(1,0)
+      - id: sc_itm_075
+        name: is_serial_controlled
+        type: DECIMAL(1,0)
+      - id: sc_itm_076
+        name: item_category
+        type: VARCHAR(256)
+      - id: sc_itm_077
+        name: item_class
+        type: VARCHAR(64)
+      - id: sc_itm_078
+        name: item_type
+        type: VARCHAR(256)
+      - id: sc_itm_079
+        name: launch_date
+        type: DATETIME(6)
+      - id: sc_itm_080
+        name: layers_per_pallet
+        type: DOUBLE
+      - id: sc_itm_081
+        name: maturity_duration
+        type: DECIMAL(9,0)
+      - id: sc_itm_082
+        name: maturity_duration_uom
+        type: VARCHAR(256)
+      - id: sc_itm_083
+        name: mean_time_between_failures
+        type: BIGINT
+      - id: sc_itm_084
+        name: model_supply_chain
+        type: DECIMAL(1,0)
+      - id: sc_itm_085
+        name: notes_fields
+        type: VARCHAR(64)
+      - id: sc_itm_086
+        name: oms_buyer_code
+        type: VARCHAR(64)
+      - id: sc_itm_087
+        name: ord_to_stock_conv_factor
+        type: DOUBLE
+      - id: sc_itm_088
+        name: package_upc
+        type: VARCHAR(64)
+      - id: sc_itm_089
+        name: planner_code
+        type: VARCHAR(64)
+      - id: sc_itm_090
+        name: positem_ids
+        type: VARCHAR(4000)
+      - id: sc_itm_091
+        name: primary_
+        type: DECIMAL(1,0)
+      - id: sc_itm_092
+        name: run_replenishment
+        type: DECIMAL(1,0)
+      - id: sc_itm_093
+        name: scc_sys_generic_item_id
+        type: BIGINT
+      - id: sc_itm_094
+        name: scc_sys_order_mgmt_org_id
+        type: BIGINT
+      - id: sc_itm_095
+        name: shelf_life
+        type: DECIMAL(9,0)
+      - id: sc_itm_096
+        name: shelf_life_uom
+        type: VARCHAR(256)
+      - id: sc_itm_097
+        name: stackable
+        type: DECIMAL(1,0)
+      - id: sc_itm_098
+        name: standard_cost
+        type: DOUBLE
+      - id: sc_itm_099
+        name: stocking_uom
+        type: DECIMAL(6,0)
+      - id: sc_itm_100
+        name: stocking_uom_spaces
+        type: BIGINT
+      - id: sc_itm_101
+        name: sys_hazard_class_id
+        type: BIGINT
+      - id: sc_itm_102
+        name: sys_hazmat_number_id
+        type: BIGINT
+      - id: sc_itm_103
+        name: sys_like_item_id
+        type: BIGINT
+      - id: sc_itm_104
+        name: sys_managing_org_id
+        type: BIGINT
+      - id: sc_itm_105
+        name: sys_proper_ship_name_id
+        type: BIGINT
+      - id: sc_itm_106
+        name: tms_commodity_code
+        type: VARCHAR(64)
+      - id: sc_itm_107
+        name: tms_freight_class
+        type: DECIMAL(6,0)
+      - id: sc_itm_108
+        name: units_per_layer
+        type: DOUBLE
+      - id: sc_itm_109
+        name: cmdc_additional_properties
+        type: LONGTEXT
+      - id: sc_itm_110
+        name: cmdc_authority_level
+        type: VARCHAR(64)
+      - id: sc_itm_111
+        name: cmdc_last_synced_from_cmd
+        type: DATETIME(6)
+      - id: sc_itm_112
+        name: cmdc_updated_from_cmd
+        type: DECIMAL(1,0)
+      - id: sc_itm_113
+        name: dpx_deactivation_date
+        type: DATETIME(6)
+      - id: sc_itm_114
+        name: dpx_forecast_by_analogy
+        type: DECIMAL(1,0)
+      - id: sc_itm_115
+        name: dpx_forecast_end_date
+        type: DATETIME(6)
+      - id: sc_itm_116
+        name: dpx_is_run
+        type: DECIMAL(1,0)
+      - id: sc_itm_117
+        name: dpx_plan_site_count
+        type: DECIMAL(9,0)
+      - id: sc_itm_118
+        name: dpx_state
+        type: VARCHAR(64)
+      - id: sc_itm_119
+        name: mfg_bom_effectivity_type
+        type: VARCHAR(64)
+      - id: sc_itm_120
+        name: mfg_increment_prod_batch
+        type: FLOAT
+      - id: sc_itm_121
+        name: mfg_min_prod_batch
+        type: FLOAT
+      - id: sc_itm_122
+        name: mfg_production_frequency
+        type: FLOAT
+      - id: sc_itm_123
+        name: mfg_production_frequency_uom
+        type: DECIMAL(5,0)
+      - id: sc_itm_124
+        name: mfg_quantity_uom
+        type: DECIMAL(5,0)
+      - id: sc_itm_125
+        name: replenishment_pilot
+        type: DECIMAL(1,0)
+      - id: sc_itm_126
+        name: replenishment_type
+        type: DECIMAL(5,0)
+      - id: sc_itm_127
+        name: oms_brite_item_code
+        type: VARCHAR(64)
+      - id: sc_itm_128
+        name: oms_brite_item_description
+        type: VARCHAR(64)
+      - id: sc_itm_129
+        name: oms_buyer_category_mgr_code
+        type: VARCHAR(64)
+      - id: sc_itm_130
+        name: oms_common_case_factor
+        type: DOUBLE
+      - id: sc_itm_131
+        name: oms_enable_dcinv_metrics
+        type: DECIMAL(1,0)
+      - id: sc_itm_132
+        name: oms_enable_reporting
+        type: DECIMAL(1,0)
+      - id: sc_itm_133
+        name: oms_equivalent_case_factor
+        type: DOUBLE
+      - id: sc_itm_134
+        name: oms_is_coa_required
+        type: DECIMAL(1,0)
+      - id: sc_itm_135
+        name: oms_item_rank
+        type: VARCHAR(64)
+      - id: sc_itm_136
+        name: oms_olt
+        type: BIGINT
+      - id: sc_itm_137
+        name: oms_order_file_no
+        type: VARCHAR(64)
+      - id: sc_itm_138
+        name: oms_order_type
+        type: VARCHAR(64)
+      - id: sc_itm_139
+        name: oms_plccode
+        type: VARCHAR(64)
+      - id: sc_itm_140
+        name: oms_sizes
+        type: VARCHAR(64)
+      - id: sc_itm_141
+        name: oms_sourcing_policy_name
+        type: VARCHAR(256)
+      - id: sc_itm_142
+        name: oms_stat_convfactor
+        type: DOUBLE
+      - id: sc_itm_143
+        name: oms_sys_invoice_item_id
+        type: BIGINT
+      - id: sc_itm_144
+        name: oms_vendor_pack_qty
+        type: DOUBLE
+      - id: sc_itm_145
+        name: rtl_corp_vendor_number
+        type: VARCHAR(64)
+      - id: sc_itm_146
+        name: scpt_scpl_pack_quantity
+        type: FLOAT
+      - id: sc_itm_147
+        name: es_lmd
+        type: DATETIME(6)
+      - id: sc_itm_148
+        name: dim_or_fact_table
+        type: VARCHAR(64)
+      - id: sc_itm_149
+        name: reconciled
+        type: TINYINT(1)
+      - id: sc_itm_150
+        name: padf_double_field1
+        type: DOUBLE
+      - id: sc_itm_151
+        name: padf_double_field2
+        type: DOUBLE
+      - id: sc_itm_152
+        name: padf_double_field3
+        type: DOUBLE
+      - id: sc_itm_153
+        name: padf_double_field4
+        type: DOUBLE
+      - id: sc_itm_154
+        name: padf_double_field5
+        type: DOUBLE
+      - id: sc_itm_155
+        name: padf_long_field1
+        type: BIGINT
+      - id: sc_itm_156
+        name: padf_long_field10
+        type: BIGINT
+      - id: sc_itm_157
+        name: padf_long_field2
+        type: BIGINT
+      - id: sc_itm_158
+        name: padf_long_field3
+        type: BIGINT
+      - id: sc_itm_159
+        name: padf_long_field4
+        type: BIGINT
+      - id: sc_itm_160
+        name: padf_long_field5
+        type: BIGINT
+      - id: sc_itm_161
+        name: padf_long_field6
+        type: BIGINT
+      - id: sc_itm_162
+        name: padf_long_field7
+        type: BIGINT
+      - id: sc_itm_163
+        name: padf_long_field8
+        type: BIGINT
+      - id: sc_itm_164
+        name: padf_long_field9
+        type: BIGINT
+      - id: sc_itm_165
+        name: padf_string_field1
+        type: VARCHAR(128)
+      - id: sc_itm_166
+        name: padf_string_field10
+        type: VARCHAR(128)
+      - id: sc_itm_167
+        name: padf_string_field2
+        type: VARCHAR(128)
+      - id: sc_itm_168
+        name: padf_string_field3
+        type: VARCHAR(128)
+      - id: sc_itm_169
+        name: padf_string_field4
+        type: VARCHAR(128)
+      - id: sc_itm_170
+        name: padf_string_field5
+        type: VARCHAR(128)
+      - id: sc_itm_171
+        name: padf_string_field6
+        type: VARCHAR(128)
+      - id: sc_itm_172
+        name: padf_string_field7
+        type: VARCHAR(128)
+      - id: sc_itm_173
+        name: padf_string_field8
+        type: VARCHAR(128)
+      - id: sc_itm_174
+        name: padf_string_field9
+        type: VARCHAR(128)
+      - id: sc_itm_175
+        name: sys_partner_process_type_id
+        type: BIGINT
+  - id: src_itm_177
+    role: support
+    ncTable: model_attribute_keys_stg
+    alias: attr
+    columns:
+      - id: sc_itm_178
+        name: dim_or_fact_table
+        type: VARCHAR(64)
+      - id: sc_itm_179
+        name: oltp_id
+        type: BIGINT
+      - id: sc_itm_180
+        name: ATTRIBUTE_1_KEY
+        type: BIGINT
+      - id: sc_itm_181
+        name: ATTRIBUTE_2_KEY
+        type: BIGINT
+      - id: sc_itm_182
+        name: ATTRIBUTE_3_KEY
+        type: BIGINT
+      - id: sc_itm_183
+        name: ATTRIBUTE_4_KEY
+        type: BIGINT
+      - id: sc_itm_184
+        name: ATTRIBUTE_5_KEY
+        type: BIGINT
+      - id: sc_itm_185
+        name: ATTRIBUTE_6_KEY
+        type: BIGINT
+      - id: sc_itm_186
+        name: ATTRIBUTE_7_KEY
+        type: BIGINT
+      - id: sc_itm_187
+        name: ATTRIBUTE_8_KEY
+        type: BIGINT
+      - id: sc_itm_188
+        name: ATTRIBUTE_9_KEY
+        type: BIGINT
+      - id: sc_itm_189
+        name: ATTRIBUTE_10_KEY
+        type: BIGINT
+  - id: src_itm_190
+    role: support
+    ncTable: dw_item_pgrp_level_assoc
+    alias: dw2
+    columns:
+      - id: sc_itm_191
+        name: sys_item_id
+        type: BIGINT
+      - id: sc_itm_192
+        name: SYS_PGRP_LEVEL_ID
+        type: BIGINT
+      - id: sc_itm_193
+        name: PGRP_TYPE_NAME
+        type: VARCHAR(64)
+      - id: sc_itm_194
+        name: LAST_MODIFIED_DATE
+        type: DATETIME(6)
+  - id: src_itm_195
+    role: support
+    ncTable: dw_item
+    alias: dw1
+    columns:
+      - id: sc_itm_196
+        name: SYS_ITEM_ID
+        type: BIGINT
+      - id: sc_itm_197
+        name: ITEM_NAME
+        type: VARCHAR(256)
+      - id: sc_itm_198
+        name: ENT_NAME
+        type: VARCHAR(128)
+      - id: sc_itm_199
+        name: LAST_MODIFIED_DATE
+        type: DATETIME(6)
+  - id: src_itm_200
+    role: support
+    ncTable: partner_process_type
+    alias: pt
+    columns:
+      - id: sc_itm_201
+        name: oltp_id
+        type: BIGINT
+      - id: sc_itm_202
+        name: NAME
+        type: VARCHAR(64)
+      - id: sc_itm_203
+        name: VERSION
+        type: VARCHAR(64)
+      - id: sc_itm_204
+        name: OWNING_ENTERPRISE_NAME
+        type: VARCHAR(128)
+      - id: sc_itm_205
+        name: DEFINITION
+        type: LONGTEXT
+      - id: sc_itm_206
+        name: deleted
+        type: TINYINT(1)
+joins:
+  - id: join_itm_207
+    name: Attribute keys (model_attribute_keys_stg)
+    leftTable: item_nc
+    leftAlias: i
+    rightTable: model_attribute_keys_stg
+    rightAlias: attr
+    joinType: LEFT
+    onConditions:
+      - left: attr.dim_or_fact_table
+        op: =
+        right: upper('${dw.dim.or.fact.table.name}')
+      - left: i.sys_item_id
+        op: =
+        right: attr.oltp_id
+  - id: join_itm_208
+    name: Product group level assoc (CTE item_pgrp_level_assoc)
+    leftTable: item_nc
+    leftAlias: i
+    rightTable: dw_item_pgrp_level_assoc
+    rightAlias: dw2
+    joinType: LEFT
+    onConditions:
+      - left: dw2.sys_item_id
+        op: =
+        right: i.sys_item_id
+      - left: dw2.PGRP_TYPE_NAME
+        op: =
+        right: "'${product.group.type.name}'"
+  - id: join_itm_209
+    name: Generic item (dw_item)
+    leftTable: item_nc
+    leftAlias: i
+    rightTable: dw_item
+    rightAlias: dw1
+    joinType: LEFT
+    onConditions:
+      - left: dw1.SYS_ITEM_ID
+        op: =
+        right: i.scc_sys_generic_item_id
+  - id: join_itm_210
+    name: Partner process type
+    leftTable: item_nc
+    leftAlias: i
+    rightTable: partner_process_type
+    rightAlias: pt
+    joinType: LEFT
+    onConditions:
+      - left: pt.oltp_id
+        op: =
+        right: coalesce(i.SYS_PARTNER_PROCESS_TYPE_ID,-1)
+      - left: pt.deleted
+        op: =
+        right: "false"
+lookups:
+  - id: lkp_itm_211
+    name: Database lookup Product Group Level
+    tableName: product_group_level
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - sys_pgrp_level_id
+      - is_deleted
+    tableKeyFields:
+      - OLTP_ID
+      - DELETED
+    keyConditions:
+      - =
+      - =
+    returnFields:
+      - field: LEVEL1_NAME
+        newName: PGRP_LEVEL_LEVEL1_NAME
+        default: ""
+        defaultType: 2
+      - field: LEVEL2_NAME
+        newName: PGRP_LEVEL_LEVEL2_NAME
+        default: ""
+        defaultType: 2
+      - field: LEVEL3_NAME
+        newName: PGRP_LEVEL_LEVEL3_NAME
+        default: ""
+        defaultType: 2
+      - field: LEVEL4_NAME
+        newName: PGRP_LEVEL_LEVEL4_NAME
+        default: ""
+        defaultType: 2
+      - field: LEVEL5_NAME
+        newName: PGRP_LEVEL_LEVEL5_NAME
+        default: ""
+        defaultType: 2
+    orderBy: dw_last_modified desc
+  - id: lkp_itm_212
+    name: Database lookup for org
+    tableName: organization
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - sys_managing_org_id
+      - is_deleted
+    tableKeyFields:
+      - OLTP_ID
+      - DELETED
+    keyConditions:
+      - =
+      - =
+    returnFields:
+      - field: ORG_NAME
+        newName: MANAGING_ORG_NAME
+        default: ""
+        defaultType: 2
+    orderBy: dw_last_modified desc
+    targetEntityId: dim_organization
+  - id: lkp_itm_213
+    name: Database lookup for packing Item name
+    tableName: dw_item
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - oms_sys_package_item_id
+    tableKeyFields:
+      - SYS_ITEM_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: ITEM_NAME
+        newName: PACKAGE_ITEM_NAME
+        default: ""
+        defaultType: 2
+    orderBy: LAST_MODIFIED_DATE desc
+  - id: lkp_itm_214
+    name: Database lookup hazard class
+    tableName: hazard_class
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - sys_hazard_class_id
+      - is_deleted
+    tableKeyFields:
+      - OLTP_ID
+      - DELETED
+    keyConditions:
+      - =
+      - =
+    returnFields:
+      - field: HAZARD_CLASS_NAME
+        newName: HAZARD_CLASS_NAME
+        default: ""
+        defaultType: 2
+    orderBy: dw_last_modified desc
+    targetEntityId: dim_hazard_class
+  - id: lkp_itm_215
+    name: Database lookup hazmat_number
+    tableName: hazmat_number
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - sys_hazmat_number_id
+      - is_deleted
+    tableKeyFields:
+      - OLTP_ID
+      - DELETED
+    keyConditions:
+      - =
+      - =
+    returnFields:
+      - field: HAZMAT_NUMBER_CATEGORY_NAME
+        newName: HAZMAT_NUMBER_CATEGORY_NAME
+        default: ""
+        defaultType: 2
+      - field: HAZMAT_NUMBER
+        newName: HAZMAT_NUMBER
+        default: ""
+        defaultType: 2
+    orderBy: dw_last_modified desc
+  - id: lkp_itm_216
+    name: Database lookup order_mgmt_org
+    tableName: organization
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - scc_sys_order_mgmt_org_id
+      - is_deleted
+    tableKeyFields:
+      - OLTP_ID
+      - DELETED
+    keyConditions:
+      - =
+      - =
+    returnFields:
+      - field: ORG_NAME
+        newName: ORDER_MGMT_ORG_NAME
+        default: ""
+        defaultType: 2
+      - field: ENT_NAME
+        newName: ORDER_MGMT_ENT_NAME
+        default: ""
+        defaultType: 2
+    orderBy: dw_last_modified desc
+    targetEntityId: dim_organization
+  - id: lkp_itm_217
+    name: Lookup currency
+    tableName: currency
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - currency
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: CURRENCY_NAME
+        newName: CURRENCY_NAME
+        default: ""
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_itm_218
+    name: Lookup weight_uom
+    tableName: weight_uom
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - weight_uom
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: WEIGHT_UOM_NAME
+        newName: WEIGHT_UOM_VAL
+        default: ""
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_itm_219
+    name: Lookup linear_uom
+    tableName: linear_uom
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - linear_uom
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: LINEAR_UOM_NAME
+        newName: LINEAR_UOM_VAL
+        default: ""
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_itm_220
+    name: Lookup case_weight_uom
+    tableName: weight_uom
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - case_weight_uom
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: WEIGHT_UOM_NAME
+        newName: CASE_WEIGHT_UOM_VAL
+        default: ""
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_itm_221
+    name: Lookup case_linear_uom
+    tableName: linear_uom
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - case_linear_uom
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: LINEAR_UOM_NAME
+        newName: CASE_LINEAR_UOM_VAL
+        default: ""
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_itm_222
+    name: Lookup pallet_weight_uom
+    tableName: weight_uom
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - pallet_weight_uom
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: WEIGHT_UOM_NAME
+        newName: PALLET_WEIGHT_UOM_VAL
+        default: ""
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_itm_223
+    name: Lookup pallet_linear_uom
+    tableName: linear_uom
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - pallet_linear_uom
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: LINEAR_UOM_NAME
+        newName: PALLET_LINEAR_UOM_VAL
+        default: ""
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_itm_224
+    name: Lookup ordering_uom
+    tableName: ordering_uom
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - ordering_uom
+    tableKeyFields:
+      - OLTP_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: ORDERING_UOM_NAME
+        newName: ORDERING_UOM_VAL
+        default: ""
+        defaultType: 2
+    orderBy: ""
+ui:
+  x: 80
+  y: 70
+stgTable: item_stg
+stgErrorTable: item_stg_error
+shardKey: OLTP_ID
+sortKeys:
+  - OLTP_ID
+  - ITEM_NAME
+  - ENT_NAME
+  - ITEM_KEY
+defaultRow:
+  ITEM_KEY: "-1"
+  OLTP_ID: "-1"
+  ITEM_NAME: No Value
+  ENT_NAME: No Value
+  DISPLAY_NAME: No Value
+  DESCRIPTION: No Value
+  TYPE_NAME: No Value
+  MFG_ITEM_NAME: No Value
+  MFG_ITEM_ENT_NAME: No Value
+  UNIVERSAL_ITEM_NAME: No Value
+  GTIN: No Value
+  PRICE: "0"
+  MSRP: "0"
+  PURCHASE_COST: "0"
+  TOTAL_LANDED_COST: "0"
+  CURRENCY: "-1"
+  STYLE: No Value
+  SIZE_CODE: No Value
+  COLOR: No Value
+  STD_CASE_ITEM_CNT: "0"
+  STD_PALLET_ITEM_CNT: "0"
+  STD_PALLET_CASE_CNT: "0"
+  WEIGHT: "0"
+  WEIGHT_UOM: "-1"
+  WEIGHT_UOM_VAL: No Value
+  LENGTH: "0"
+  WIDTH: "0"
+  HEIGHT: "0"
+  LINEAR_UOM: "-1"
+  LINEAR_UOM_VAL: No Value
+  CASE_WEIGHT: "0"
+  CASE_WEIGHT_UOM: "-1"
+  CASE_WEIGHT_UOM_VAL: No Value
+  CASE_LENGTH: "0"
+  CASE_WIDTH: "0"
+  CASE_HEIGHT: "0"
+  CASE_LINEAR_UOM: "-1"
+  CASE_LINEAR_UOM_VAL: No Value
+  PALLET_WEIGHT: "0"
+  PALLET_WEIGHT_UOM: "-1"
+  PALLET_WEIGHT_UOM_VAL: No Value
+  PALLET_LENGTH: "0"
+  PALLET_WIDTH: "0"
+  PALLET_HEIGHT: "0"
+  PALLET_LINEAR_UOM: "-1"
+  PALLET_LINEAR_UOM_VAL: No Value
+  ORDERING_UOM: "-1"
+  ORDERING_UOM_VAL: No Value
+  IS_ACTIVE: "0"
+  FLT: "0"
+  AUTHORITATIVE_LEVEL: No Value
+  BOMITEM_TYPE: No Value
+  CASE_UPC: No Value
+  IS_COMPLEX: "0"
+  CYCLE_COUNTING_FREQUENCY: "0"
+  DEADLINE_DURATION: "0"
+  DEADLINE_DURATION_UOM: No Value
+  DRAWING_NUMBER: No Value
+  EXT_MFG_ENT_NAME: No Value
+  EXT_MFG_ITEM_NAME: No Value
+  GROWTH_DURATION: "0"
+  GROWTH_DURATION_UOM: No Value
+  HAZMAT_CONTACT_NAME: No Value
+  HAZMAT_CONTACT_PHONE: No Value
+  HTS_CODE: No Value
+  INITIAL_DURATION: "0"
+  INITIAL_DURATION_UOM: No Value
+  IS_HAZARDOUS: "0"
+  IS_LOT_CONTROLLED: "0"
+  IS_NEVER_OUT_ITEM: "0"
+  IS_SERIAL_CONTROLLED: "0"
+  ITEM_CATEGORY: No Value
+  ITEM_CLASS: No Value
+  ITEM_TYPE: No Value
+  LAYERS_PER_PALLET: "0"
+  MATURITY_DURATION: "0"
+  MATURITY_DURATION_UOM: No Value
+  MEAN_TIME_BETWEEN_FAILURES: "0"
+  IS_MODEL_SUPPLY_CHAIN: "0"
+  NOTES_FIELDS: No Value
+  BUYER_CODE: No Value
+  ORD_TO_STOCK_CONV_FACTOR: "0"
+  PACKAGE_UPC: No Value
+  PLANNER_CODE: No Value
+  POSITEM_IDS: No Value
+  IS_PRIMARY: "0"
+  RUN_REPLENISHMENT: "0"
+  PACKAGE_ITEM_NAME: No Value
+  ORDER_MGMT_ORG_NAME: No Value
+  ORDER_MGMT_ENT_NAME: No Value
+  SHELF_LIFE: "0"
+  SHELF_LIFE_UOM: No Value
+  IS_STACKABLE: "0"
+  STANDARD_COST: "0"
+  STOCKING_UOM: No Value
+  STOCKING_UOM_SPACES: "0"
+  HAZARD_CLASS_NAME: No Value
+  HAZMAT_NUMBER: No Value
+  MANAGING_ORG_NAME: No Value
+  PROPER_SHIP_NAME: No Value
+  UNITS_PER_LAYER: "0"
+  REPLENISHMENT_PILOT: "0"
+  REPLENISHMENT_TYPE: "0"
+  PGRP_LEVEL_LEVEL1_NAME: No Value
+  PGRP_LEVEL_LEVEL2_NAME: No Value
+  PGRP_LEVEL_LEVEL3_NAME: No Value
+  PGRP_LEVEL_LEVEL4_NAME: No Value
+  PGRP_LEVEL_LEVEL5_NAME: No Value
+  CURRENCY_NAME: No Value
+  ITEM_ATT1_DIM_KEY: "-1"
+  ITEM_ATT2_DIM_KEY: "-1"
+  ITEM_ATT3_DIM_KEY: "-1"
+  ITEM_ATT4_DIM_KEY: "-1"
+  ITEM_ATT5_DIM_KEY: "-1"
+  ITEM_ATT6_DIM_KEY: "-1"
+  ITEM_ATT7_DIM_KEY: "-1"
+  ITEM_ATT8_DIM_KEY: "-1"
+  ITEM_ATT9_DIM_KEY: "-1"
+  ITEM_ATT10_DIM_KEY: "-1"
+  GENERIC_ITEM_NAME: No Value
+  GENERIC_ITEM_ENT_NAME: No Value
+  PADF_DOUBLE_FIELD1: "0"
+  PADF_DOUBLE_FIELD2: "0"
+  PADF_DOUBLE_FIELD3: "0"
+  PADF_DOUBLE_FIELD4: "0"
+  PADF_DOUBLE_FIELD5: "0"
+  PADF_LONG_FIELD1: "0"
+  PADF_LONG_FIELD10: "0"
+  PADF_LONG_FIELD2: "0"
+  PADF_LONG_FIELD3: "0"
+  PADF_LONG_FIELD4: "0"
+  PADF_LONG_FIELD5: "0"
+  PADF_LONG_FIELD6: "0"
+  PADF_LONG_FIELD7: "0"
+  PADF_LONG_FIELD8: "0"
+  PADF_LONG_FIELD9: "0"
+  PADF_STRING_FIELD1: No Value
+  PADF_STRING_FIELD10: No Value
+  PADF_STRING_FIELD2: No Value
+  PADF_STRING_FIELD3: No Value
+  PADF_STRING_FIELD4: No Value
+  PADF_STRING_FIELD5: No Value
+  PADF_STRING_FIELD6: No Value
+  PADF_STRING_FIELD7: No Value
+  PADF_STRING_FIELD8: No Value
+  PADF_STRING_FIELD9: No Value
+  PAPT_NAME: No Value
+  PAPT_VERSION: No Value
+  PAPT_OWNING_ENTERPRISE_NAME: No Value
+  PAPT_DEFINITION: No Value
+  HAZMAT_NUMBER_CATEGORY_NAME: No Value

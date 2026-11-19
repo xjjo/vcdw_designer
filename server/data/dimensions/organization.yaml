@@ -1,0 +1,549 @@
+id: dim_organization
+kind: dimension
+name: organization
+displayName: Organization Dimension
+description: Reverse-engineered from organization_sync.kjb
+  (organization_sync.ktr insert path with 4 DB lookups, update_organization.ktr
+  update path, organization_insert_default_row.ktr). Reference table, no
+  staging.
+domain: Supply Chain Core
+requiresStaging: false
+dimensionType: simple
+nkUpdates: false
+sourceNcTables:
+  - organization_nc
+hasDefaultUnknownRow: true
+surrogateKey: ORGANIZATION_KEY
+naturalKey: ORG_NAME
+businessKeys:
+  - ENT_NAME
+  - ORG_NAME
+isReferenceTable: true
+loadStrategy: insert_new
+upsertKeys: []
+auditProfileId: audit_default
+columns:
+  - id: col_org_075
+    name: ORGANIZATION_KEY
+    type: BIGINT
+    nullable: false
+    isPk: true
+    isSk: true
+    autoIncrement: true
+    mappingKind: generated
+  - id: col_org_076
+    name: ENT_NAME
+    type: VARCHAR(128)
+    nullable: false
+    default: "'No Value'"
+    mappingKind: direct
+    sourceColumn: ent_name
+    sourceTable: nc
+    coalesce: false
+  - id: col_org_077
+    name: ORG_NAME
+    type: VARCHAR(128)
+    nullable: false
+    default: "'No Value'"
+    mappingKind: direct
+    sourceColumn: org_name
+    sourceTable: nc
+    coalesce: false
+  - id: col_org_078
+    name: DISPLAY_NAME
+    type: VARCHAR(255)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: display_name
+    sourceTable: nc
+    coalesce: true
+  - id: col_org_079
+    name: DESCRIPTION
+    type: VARCHAR(255)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: description
+    sourceTable: nc
+    coalesce: true
+  - id: col_org_080
+    name: CONTACT
+    type: VARCHAR(512)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: contact
+    sourceTable: nc
+    coalesce: true
+  - id: col_org_081
+    name: IS_ACTIVE
+    type: TINYINT(1)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: is_active
+    sourceTable: nc
+    coalesce: false
+  - id: col_org_082
+    name: BILLTO_ADDR_COUNTRY
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: billto_addr_country
+    sourceTable: nc
+    coalesce: true
+  - id: col_org_083
+    name: BILLTO_ADDR_COMP1
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: billto_addr_comp1
+    sourceTable: nc
+    coalesce: true
+  - id: col_org_084
+    name: BILLTO_ADDR_COMP2
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: billto_addr_comp2
+    sourceTable: nc
+    coalesce: true
+  - id: col_org_085
+    name: BILLTO_ADDR_COMPS
+    type: VARCHAR(512)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: billto_addr_comps
+    sourceTable: nc
+    coalesce: true
+  - id: col_org_086
+    name: REQUISITION_MANAGEMENT_ORG_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_org_071
+    lookupField: ORG_NAME
+  - id: col_org_087
+    name: REQUISITION_MANAGEMENT_ORG_ENT_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_org_071
+    lookupField: ENT_NAME
+  - id: col_org_088
+    name: INVOICER_MANAGEMENT_ORG_ENT_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_org_073
+    lookupField: ENT_NAME
+  - id: col_org_089
+    name: INVOICER_MANAGEMENT_ORG_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_org_073
+    lookupField: ORG_NAME
+  - id: col_org_090
+    name: INVOICEE_MANAGEMENT_ORG_ENT_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_org_072
+    lookupField: ENT_NAME
+  - id: col_org_091
+    name: INVOICEE_MANAGEMENT_ORG_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_org_072
+    lookupField: ORG_NAME
+  - id: col_org_092
+    name: OLTP_ID
+    type: BIGINT
+    nullable: true
+    isNaturalKey: true
+    mappingKind: direct
+    sourceColumn: sys_org_id
+    sourceTable: nc
+  - id: col_org_093
+    name: SCACCODE
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_org_074
+    lookupField: SCACCODE
+  - id: col_org_094
+    name: OMS_SYS_REQUISTION_MGMT_ORG_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: oms_sys_requistion_mgmt_org_id
+    sourceTable: nc
+    coalesce: true
+    isTransient: true
+    comment: stream-only lookup driver (not a physical column)
+  - id: col_org_095
+    name: OMS_SYS_INVOICEE_MGMT_ORG_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: oms_sys_invoicee_mgmt_org_id
+    sourceTable: nc
+    coalesce: true
+    isTransient: true
+    comment: stream-only lookup driver (not a physical column)
+  - id: col_org_096
+    name: OMS_SYS_INVOICER_MGMT_ORG_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: oms_sys_invoicer_mgmt_org_id
+    sourceTable: nc
+    coalesce: true
+    isTransient: true
+    comment: stream-only lookup driver (not a physical column)
+  - id: col_org_097
+    name: DELETED
+    type: TINYINT(1)
+    nullable: false
+    default: "0"
+    auditRole: deleted
+    mappingKind: audit
+  - id: col_org_098
+    name: DW_CREATED
+    type: DATETIME(6)
+    nullable: false
+    default: CURRENT_TIMESTAMP
+    auditRole: created
+    mappingKind: audit
+  - id: col_org_099
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+    nullable: false
+    default: CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    auditRole: modified
+    mappingKind: audit
+etlConfig:
+  isEnabled: true
+  priority: 2
+netChange:
+  - id: nc_org_070
+    role: netchange
+    isPrimary: true
+    ncTable: organization_nc
+    alias: nc
+    oltpTable: organization
+    oltpTableSysId: SYS_ORG_ID
+    oltpTableLmd: last_modified_date
+    dwOltpCopyTable: dw_organization
+    condition: 2=2
+    columns:
+      - id: sc_org_001
+        name: sys_org_id
+        type: BIGINT
+      - id: sc_org_002
+        name: ent_name
+        type: VARCHAR(128)
+      - id: sc_org_003
+        name: org_name
+        type: VARCHAR(128)
+      - id: sc_org_004
+        name: display_name
+        type: VARCHAR(255)
+      - id: sc_org_005
+        name: description
+        type: VARCHAR(255)
+      - id: sc_org_006
+        name: contact
+        type: VARCHAR(512)
+      - id: sc_org_007
+        name: last_modified_date
+        type: DATETIME(6)
+      - id: sc_org_008
+        name: last_modified_user
+        type: VARCHAR(64)
+      - id: sc_org_009
+        name: is_active
+        type: DECIMAL(1,0)
+      - id: sc_org_010
+        name: last_computed_date
+        type: DATETIME(6)
+      - id: sc_org_011
+        name: creation_user
+        type: VARCHAR(64)
+      - id: sc_org_012
+        name: creation_date
+        type: DATETIME(6)
+      - id: sc_org_013
+        name: sys_ent_id
+        type: BIGINT
+      - id: sc_org_014
+        name: billto_addr_country
+        type: VARCHAR(64)
+      - id: sc_org_015
+        name: billto_addr_comp1
+        type: VARCHAR(64)
+      - id: sc_org_016
+        name: billto_addr_comp2
+        type: VARCHAR(64)
+      - id: sc_org_017
+        name: billto_addr_comps
+        type: VARCHAR(512)
+      - id: sc_org_018
+        name: sys_creation_template_id
+        type: BIGINT
+      - id: sc_org_019
+        name: authoritative_level
+        type: VARCHAR(256)
+      - id: sc_org_020
+        name: contact_email
+        type: VARCHAR(64)
+      - id: sc_org_021
+        name: contact_phone
+        type: VARCHAR(64)
+      - id: sc_org_022
+        name: default_dist_calc
+        type: DECIMAL(6,0)
+      - id: sc_org_023
+        name: dist_calc_type
+        type: DECIMAL(6,0)
+      - id: sc_org_024
+        name: dunsnumber
+        type: BIGINT
+      - id: sc_org_025
+        name: order_no_prefix
+        type: VARCHAR(64)
+      - id: sc_org_026
+        name: order_print_template_name
+        type: VARCHAR(256)
+      - id: sc_org_027
+        name: shipment_no_prefix
+        type: VARCHAR(64)
+      - id: sc_org_028
+        name: cmdc_additional_properties
+        type: LONGTEXT
+      - id: sc_org_029
+        name: cmdc_authority_level
+        type: VARCHAR(64)
+      - id: sc_org_030
+        name: cmdc_last_synced_from_cmd
+        type: DATETIME(6)
+      - id: sc_org_031
+        name: cmdc_updated_from_cmd
+        type: DECIMAL(1,0)
+      - id: sc_org_032
+        name: sch_support_ctrl_nonctrl_appt
+        type: DECIMAL(1,0)
+      - id: sc_org_033
+        name: oms_disc_bill_to_addr_comp1
+        type: VARCHAR(64)
+      - id: sc_org_034
+        name: oms_disc_bill_to_addr_comp2
+        type: VARCHAR(64)
+      - id: sc_org_035
+        name: oms_disc_bill_to_addr_comps
+        type: VARCHAR(512)
+      - id: sc_org_036
+        name: oms_disc_bill_to_addr_country
+        type: VARCHAR(64)
+      - id: sc_org_037
+        name: oms_invoice_line_amt_tolerance
+        type: DOUBLE
+      - id: sc_org_038
+        name: oms_invoice_print_template_nam
+        type: VARCHAR(64)
+      - id: sc_org_039
+        name: oms_line_qnty_tolerance_pct
+        type: DOUBLE
+      - id: sc_org_040
+        name: oms_total_amount_tolerance
+        type: DOUBLE
+      - id: sc_org_041
+        name: oms_unit_price_tolerance_pct
+        type: DOUBLE
+      - id: sc_org_042
+        name: tms_additional_charge_limit
+        type: DOUBLE
+      - id: sc_org_043
+        name: tms_appointment_notification
+        type: DECIMAL(1,0)
+      - id: sc_org_044
+        name: tms_appt_notes_notification
+        type: DECIMAL(1,0)
+      - id: sc_org_045
+        name: tms_con_inv_site_oride_plc
+        type: DECIMAL(6,0)
+      - id: sc_org_046
+        name: tms_freight_inv_notification
+        type: DECIMAL(1,0)
+      - id: sc_org_047
+        name: tms_generate_invoice_on_tender
+        type: DECIMAL(1,0)
+      - id: sc_org_048
+        name: tms_mvmt_approved_notification
+        type: DECIMAL(1,0)
+      - id: sc_org_049
+        name: tms_non_con_inv_site_oride_plc
+        type: DECIMAL(6,0)
+      - id: sc_org_050
+        name: tms_psngeneration_state
+        type: VARCHAR(256)
+      - id: sc_org_051
+        name: tms_queue_prefix
+        type: VARCHAR(64)
+      - id: sc_org_052
+        name: tms_send_tender_notification
+        type: DECIMAL(1,0)
+      - id: sc_org_053
+        name: tms_shipment_notification
+        type: DECIMAL(1,0)
+      - id: sc_org_054
+        name: tms_skip_mmnotifications
+        type: DECIMAL(1,0)
+      - id: sc_org_055
+        name: tms_subs_appt_notif_type
+        type: DECIMAL(6,0)
+      - id: sc_org_056
+        name: tms_track_notification
+        type: DECIMAL(1,0)
+      - id: sc_org_057
+        name: tms_track_not_file_type
+        type: VARCHAR(256)
+      - id: sc_org_058
+        name: scpt_scpl_edi_delimiter
+        type: VARCHAR(64)
+      - id: sc_org_059
+        name: scpt_scpl_gs_identifier
+        type: VARCHAR(64)
+      - id: sc_org_060
+        name: scpt_scpl_isa_identifier
+        type: VARCHAR(64)
+      - id: sc_org_061
+        name: scpt_scpl_isa_qualifier
+        type: VARCHAR(64)
+      - id: sc_org_062
+        name: scpt_scpl_mailbox
+        type: VARCHAR(64)
+      - id: sc_org_063
+        name: scpt_scpl_notes
+        type: VARCHAR(64)
+      - id: sc_org_064
+        name: oms_sys_requistion_mgmt_org_id
+        type: BIGINT
+      - id: sc_org_065
+        name: oms_sys_invoicer_mgmt_org_id
+        type: BIGINT
+      - id: sc_org_066
+        name: oms_sys_invoicee_mgmt_org_id
+        type: BIGINT
+      - id: sc_org_067
+        name: es_lmd
+        type: DATETIME(6)
+      - id: sc_org_068
+        name: dim_or_fact_table
+        type: VARCHAR(64)
+      - id: sc_org_069
+        name: reconciled
+        type: TINYINT(1)
+joins: []
+lookups:
+  - id: lkp_org_071
+    name: Lookup Requistion Mgmt Org
+    tableName: dw_organization
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - oms_sys_requistion_mgmt_org_id
+    tableKeyFields:
+      - SYS_ORG_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: ENT_NAME
+        newName: REQUISITION_MANAGEMENT_ORG_ENT_NAME
+        default: No Value
+        defaultType: 2
+      - field: ORG_NAME
+        newName: REQUISITION_MANAGEMENT_ORG_NAME
+        default: No Value
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_org_072
+    name: Lookup Invoicee Org
+    tableName: dw_organization
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - oms_sys_invoicee_mgmt_org_id
+    tableKeyFields:
+      - SYS_ORG_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: ENT_NAME
+        newName: INVOICEE_MANAGEMENT_ORG_ENT_NAME
+        default: No Value
+        defaultType: 2
+      - field: ORG_NAME
+        newName: INVOICEE_MANAGEMENT_ORG_NAME
+        default: No Value
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_org_073
+    name: Lookup Invoicer Org
+    tableName: dw_organization
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - oms_sys_invoicer_mgmt_org_id
+    tableKeyFields:
+      - SYS_ORG_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: ENT_NAME
+        newName: INVOICER_MANAGEMENT_ORG_ENT_NAME
+        default: No Value
+        defaultType: 2
+      - field: ORG_NAME
+        newName: INVOICER_MANAGEMENT_ORG_NAME
+        default: No Value
+        defaultType: 2
+    orderBy: ""
+  - id: lkp_org_074
+    name: Lookup for scaccode
+    tableName: dw_tms_org_profile
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - oltp_id
+    tableKeyFields:
+      - SYS_ORG_ID
+    keyConditions:
+      - =
+    returnFields:
+      - field: SCACCODE
+        newName: SCACCODE
+        default: No Value
+        defaultType: 2
+    orderBy: ""
+ui:
+  x: 120
+  y: 100
+defaultRow:
+  ENT_NAME: No Value
+  ORG_NAME: No Value
+  DISPLAY_NAME: No Value
+  DESCRIPTION: No Value
+  CONTACT: No Value
+  BILLTO_ADDR_COUNTRY: No Value
+  BILLTO_ADDR_COMP1: No Value
+  BILLTO_ADDR_COMP2: No Value
+  BILLTO_ADDR_COMPS: No Value
+  REQUISITION_MANAGEMENT_ORG_NAME: No Value
+  REQUISITION_MANAGEMENT_ORG_ENT_NAME: No Value
+  INVOICER_MANAGEMENT_ORG_ENT_NAME: No Value
+  INVOICER_MANAGEMENT_ORG_NAME: No Value
+  INVOICEE_MANAGEMENT_ORG_ENT_NAME: No Value
+  INVOICEE_MANAGEMENT_ORG_NAME: No Value
+  ORGANIZATION_KEY: "-1"
+  OLTP_ID: "-1"
+  IS_ACTIVE: "0"

@@ -1,0 +1,168 @@
+id: dim_hazard_class
+kind: dimension
+name: hazard_class
+displayName: Hazard Class Dimension
+description: "Reverse-engineered from hazard_class_sync.kjb /
+  hazard_class_sync.ktr (scc_hazard_class_nc -> hazard_class, InsertUpdate keyed
+  on OLTP_ID+DELETED, update bypassed). Default row:
+  hazard_class_insert_default_row.ktr."
+domain: Supply Chain Core
+requiresStaging: false
+dimensionType: simple
+nkUpdates: false
+sourceNcTables:
+  - scc_hazard_class_nc
+hasDefaultUnknownRow: true
+surrogateKey: HAZARD_CLASS_KEY
+naturalKey: HAZARD_CLASS_NAME
+businessKeys:
+  - HAZARD_CLASS_NAME
+isReferenceTable: true
+loadStrategy: upsert_by_key
+upsertKeys:
+  - OLTP_ID
+  - DELETED
+auditProfileId: audit_default
+columns:
+  - id: col_hzc_015
+    name: HAZARD_CLASS_KEY
+    type: BIGINT
+    nullable: false
+    isPk: true
+    isSk: true
+    autoIncrement: true
+    mappingKind: generated
+  - id: col_hzc_016
+    name: HAZARD_CLASS_DESCRIPTION
+    type: VARCHAR(256)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: description
+    sourceTable: nc
+    coalesce: true
+  - id: col_hzc_017
+    name: LAST_MODIFIED_DATE
+    type: DATETIME(6)
+    nullable: true
+    comment: Present in DDL but not loaded by hazard_class_sync.ktr
+  - id: col_hzc_018
+    name: LAST_MODIFIED_USER
+    type: VARCHAR(64)
+    nullable: true
+    comment: Present in DDL but not loaded by hazard_class_sync.ktr
+  - id: col_hzc_019
+    name: LEVEL_MODIFIED_DATE
+    type: DATETIME(6)
+    nullable: true
+    comment: Present in DDL but not loaded by hazard_class_sync.ktr
+  - id: col_hzc_020
+    name: MODEL_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: model_name
+    sourceTable: nc
+    coalesce: true
+  - id: col_hzc_021
+    name: HAZARD_CLASS_NAME
+    type: VARCHAR(64)
+    nullable: true
+    mappingKind: direct
+    sourceColumn: name
+    sourceTable: nc
+    coalesce: true
+  - id: col_hzc_022
+    name: OLTP_ID
+    type: BIGINT
+    nullable: false
+    mappingKind: direct
+    sourceColumn: sys_hazard_class_id
+    sourceTable: nc
+    coalesce: false
+    isNaturalKey: true
+  - id: col_hzc_023
+    name: DELETED
+    type: TINYINT(1)
+    nullable: false
+    default: "0"
+    auditRole: deleted
+    mappingKind: audit
+  - id: col_hzc_024
+    name: DW_CREATED
+    type: DATETIME(6)
+    nullable: false
+    default: CURRENT_TIMESTAMP
+    auditRole: created
+    mappingKind: audit
+  - id: col_hzc_025
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+    nullable: false
+    default: CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    auditRole: modified
+    mappingKind: audit
+etlConfig:
+  isEnabled: true
+  priority: 5
+netChange:
+  - id: nc_hzc_014
+    role: netchange
+    isPrimary: true
+    ncTable: scc_hazard_class_nc
+    alias: nc
+    oltpTable: scc_hazard_class
+    oltpTableSysId: SYS_HAZARD_CLASS_ID
+    oltpTableLmd: last_modified_date
+    dwOltpCopyTable: dw_scc_hazard_class
+    condition: 2=2
+    columns:
+      - id: sc_hzc_001
+        name: creation_date
+        type: DATETIME(6)
+      - id: sc_hzc_002
+        name: creation_user
+        type: VARCHAR(64)
+      - id: sc_hzc_003
+        name: description
+        type: VARCHAR(256)
+      - id: sc_hzc_004
+        name: last_modified_date
+        type: DATETIME(6)
+      - id: sc_hzc_005
+        name: last_modified_user
+        type: VARCHAR(64)
+      - id: sc_hzc_006
+        name: level_modified_date
+        type: DATETIME(6)
+      - id: sc_hzc_007
+        name: model_name
+        type: VARCHAR(64)
+      - id: sc_hzc_008
+        name: name
+        type: VARCHAR(64)
+      - id: sc_hzc_009
+        name: sys_hazard_class_id
+        type: BIGINT
+      - id: sc_hzc_010
+        name: es_lmd
+        type: DATETIME(6)
+      - id: sc_hzc_011
+        name: es_creation_date
+        type: DATETIME(6)
+      - id: sc_hzc_012
+        name: dim_or_fact_table
+        type: VARCHAR(64)
+      - id: sc_hzc_013
+        name: reconciled
+        type: TINYINT(1)
+joins: []
+lookups: []
+ui:
+  x: 240
+  y: 190
+defaultRow:
+  HAZARD_CLASS_KEY: "-1"
+  HAZARD_CLASS_DESCRIPTION: No Value
+  MODEL_NAME: No Value
+  HAZARD_CLASS_NAME: No Value
+  OLTP_ID: "-1"

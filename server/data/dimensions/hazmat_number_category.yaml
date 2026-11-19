@@ -1,0 +1,161 @@
+id: dim_hazmat_number_category
+kind: dimension
+name: hazmat_number_category
+displayName: Hazmat Number Category Dimension
+description: "Reverse-engineered from hazmat_number_category_sync.kjb / .ktr.
+  Enumeration-style table living in the dimension folder (run by
+  wrapper_for_enums.kjb): reads enumeration_nc where
+  enum_type='SCC.HazmatNumberCategory', left joins enterprise for ENT_NAME and
+  InsertUpdates on (HAZMAT_NUMBER_CATEGORY_NAME, ENT_NAME). NOTE: OLTP_ID is
+  loaded from enum_entry_value."
+domain: Supply Chain Core
+requiresStaging: false
+dimensionType: simple
+nkUpdates: false
+sourceNcTables:
+  - enumeration_nc
+hasDefaultUnknownRow: true
+surrogateKey: HAZMAT_NUMBER_CATEGORY_KEY
+naturalKey: HAZMAT_NUMBER_CATEGORY_NAME
+businessKeys:
+  - HAZMAT_NUMBER_CATEGORY_NAME
+  - ENT_NAME
+isReferenceTable: true
+loadStrategy: upsert_by_key
+upsertKeys:
+  - HAZMAT_NUMBER_CATEGORY_NAME
+  - ENT_NAME
+auditProfileId: audit_default
+columns:
+  - id: col_hnc_011
+    name: HAZMAT_NUMBER_CATEGORY_KEY
+    type: BIGINT
+    nullable: false
+    isPk: true
+    isSk: true
+    autoIncrement: true
+    mappingKind: generated
+  - id: col_hnc_012
+    name: HAZMAT_NUMBER_CATEGORY_NAME
+    type: VARCHAR(256)
+    nullable: false
+    mappingKind: direct
+    sourceColumn: enum_entry_name
+    sourceTable: en
+  - id: col_hnc_013
+    name: OLTP_ID
+    type: BIGINT
+    nullable: true
+    isNaturalKey: true
+    mappingKind: direct
+    sourceColumn: enum_entry_value
+    sourceTable: en
+    comment: Legacy ETL loads OLTP_ID from enum_entry_value (not sys_enum_id)
+  - id: col_hnc_014
+    name: ENT_NAME
+    type: VARCHAR(128)
+    nullable: true
+    mappingKind: lookup
+    lookupId: lkp_hnc_010
+    lookupField: ENT_NAME
+  - id: col_hnc_015
+    name: SYS_ENT_ID
+    type: BIGINT
+    nullable: true
+    mappingKind: direct
+    sourceColumn: sys_ent_id
+    sourceTable: en
+    coalesce: true
+    isTransient: true
+    comment: stream-only lookup driver (not a physical column)
+  - id: col_hnc_016
+    name: DELETED
+    type: TINYINT(1)
+    nullable: false
+    default: "0"
+    auditRole: deleted
+    mappingKind: audit
+  - id: col_hnc_017
+    name: DW_CREATED
+    type: DATETIME(6)
+    nullable: false
+    default: CURRENT_TIMESTAMP
+    auditRole: created
+    mappingKind: audit
+  - id: col_hnc_018
+    name: DW_LAST_MODIFIED
+    type: DATETIME(6)
+    nullable: false
+    default: CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    auditRole: modified
+    mappingKind: audit
+etlConfig:
+  isEnabled: true
+  priority: 6
+netChange:
+  - id: nc_hnc_009
+    role: netchange
+    isPrimary: true
+    ncTable: enumeration_nc
+    alias: en
+    oltpTable: enumeration
+    oltpTableSysId: SYS_ENUM_ID
+    oltpTableLmd: es_lmd
+    dwOltpCopyTable: dw_enumeration
+    condition: enum_type='SCC.HazmatNumberCategory'
+    columns:
+      - id: sc_hnc_001
+        name: sys_enum_id
+        type: BIGINT
+      - id: sc_hnc_002
+        name: enum_type
+        type: VARCHAR(64)
+      - id: sc_hnc_003
+        name: enum_entry_name
+        type: VARCHAR(256)
+      - id: sc_hnc_004
+        name: enum_entry_value
+        type: DECIMAL(5,0)
+      - id: sc_hnc_005
+        name: last_modified_date
+        type: DATETIME(6)
+      - id: sc_hnc_006
+        name: hidden
+        type: DECIMAL(1,0)
+      - id: sc_hnc_007
+        name: sys_ent_id
+        type: BIGINT
+      - id: sc_hnc_008
+        name: es_lmd
+        type: DATETIME(6)
+joins: []
+lookups:
+  - id: lkp_hnc_010
+    name: Lookup enterprise scope (ENT_NAME)
+    tableName: enterprise
+    cache: true
+    strategy: lookup
+    streamKeyFields:
+      - sys_ent_id
+      - is_deleted
+    tableKeyFields:
+      - OLTP_ID
+      - DELETED
+    keyConditions:
+      - =
+      - =
+    returnFields:
+      - field: ENT_NAME
+        newName: ENT_NAME
+        default: No Value
+        defaultType: 2
+    orderBy: ""
+    targetEntityId: dim_enterprise
+ui:
+  x: 280
+  y: 220
+defaultRow:
+  HAZMAT_NUMBER_CATEGORY_KEY: "-1"
+  HAZMAT_NUMBER_CATEGORY_NAME: No Value
+  OLTP_ID: "-1"
+  ENT_NAME: No Value

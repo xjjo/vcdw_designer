@@ -1,1 +1,21 @@
-entities: []
+entities:
+  - name: hazard_class
+    displayName: Hazard Class Dimension
+    table: hazard_class
+    yaml: hazard_class.yaml
+  - name: hazmat_number_category
+    displayName: Hazmat Number Category Dimension
+    table: hazmat_number_category
+    yaml: hazmat_number_category.yaml
+  - name: enterprise
+    displayName: Enterprise Dimension
+    table: enterprise
+    yaml: enterprise.yaml
+  - name: organization
+    displayName: Organization Dimension
+    table: organization
+    yaml: organization.yaml
+  - name: item
+    displayName: Item Dimension
+    table: item
+    yaml: item.yaml
