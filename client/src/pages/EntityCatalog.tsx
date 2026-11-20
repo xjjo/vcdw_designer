@@ -52,10 +52,11 @@ export default function EntityCatalog({ kind }: { kind: CatalogKind }) {
       .catch(() => setOffline(true));
   }
 
+  // M28: also refresh when the working model gains/loses an entity (e.g. deleted from the editor)
   useEffect(() => {
     refresh();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [kind]);
+  }, [kind, localList.length]);
 
   /** Catalog rows from the server, annotated with the matching working entity. */
   const rows = useMemo<Row[]>(() => {
