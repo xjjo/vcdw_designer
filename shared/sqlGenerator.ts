@@ -55,10 +55,13 @@ function tableConstraints(e: AnyEntity, dialect: SqlDialect): string[] {
 
 /** Generate a single CREATE TABLE statement for any entity. */
 export function entityDdl(e: AnyEntity, dialect: SqlDialect): string {
-  const isRefTable = e.kind === 'enumeration' && (e as Enumeration).isReferenceTable && dialect === 'MemSQL';
-  const createKeyword = isRefTable ? 'CREATE REFERENCE TABLE' : 'CREATE TABLE';
+  const isRefFlag =
+    (e.kind === 'enumeration' && (e as Enumeration).isReferenceTable) ||
+    (e.kind === 'dimension' && (e as Dimension).isReferenceTable);
+  const createKeyword = isRefFlag && dialect === 'MemSQL' ? 'CREATE REFERENCE TABLE' : 'CREATE TABLE';
   const body = [
-    ...e.columns.map((c) => '  ' + columnDdl(c)),
+    // stream-only (transient) columns exist in the ETL flow, not in the table
+    ...e.columns.filter((c) => !c.isTransient).map((c) => '  ' + columnDdl(c)),
     ...tableConstraints(e, dialect).map((l) => '  ' + l),
   ].join(',\n');
   return `${createKeyword} IF NOT EXISTS ${quoteIdent(tableName(e))} (\n${body}\n);`;

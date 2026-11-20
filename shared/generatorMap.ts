@@ -43,6 +43,8 @@ interface GeneratorLookup {
   return_value_new_name: string;
   return_value_default: string;
   return_value_default_type: string;
+  order_by?: string;
+  step_name?: string;
 }
 
 interface GeneratorField {
@@ -54,6 +56,12 @@ interface GeneratorField {
   role?: 'key' | 'attribute' | 'measure' | 'date_key' | 'audit' | 'calculated' | 'constant';
   formula?: string;
   constant_value?: string;
+  /** Physical SQL type (dimension fields), e.g. VARCHAR(64); data_type carries the generator vocabulary. */
+  sql_type?: string;
+  /** false = stream-only field (lookup driver), never written to the target table. */
+  store?: boolean;
+  /** SQL literal used by coalesce(); absent = default by type. */
+  coalesce_default?: string;
 }
 
 interface GeneratorNetChange {
@@ -133,7 +141,25 @@ function mapLookup(l: LookupDef): GeneratorLookup {
     return_value_new_name: csv(returns.map((r) => r.newName ?? '')),
     return_value_default: csv(returns.map((r) => r.default ?? '-1')),
     return_value_default_type: csv(returns.map((r) => String(r.defaultType ?? 5))),
+    order_by: l.orderBy ?? '',
+    step_name: l.name ?? '',
   };
+}
+
+/** Normalize a physical SQL type into the vcdw-etl-builder (DbToJavaTypeMapper) vocabulary. */
+export function javaDataType(sqlType: string): 'bigint' | 'tinyint' | 'decimal' | 'datetime' | 'varchar' {
+  const t = (sqlType ?? '').trim().toUpperCase();
+  if (/^TINYINT\b/.test(t)) return 'tinyint';
+  if (/^(BIGINT|INT|INTEGER|SMALLINT|MEDIUMINT)\b/.test(t)) return 'bigint';
+  if (/^(DECIMAL|NUMERIC|DOUBLE|FLOAT|REAL)\b/.test(t)) return 'decimal';
+  if (/^(DATETIME|TIMESTAMP|DATE|TIME)\b/.test(t)) return 'datetime';
+  return 'varchar';
+}
+
+/** Change-management-framework parameter, e.g. scc_hazard_class_nc + hazard_class -> scc.hazard.class.nc.cmf.for.hazard.class */
+export function cmfParamName(ncTable: string, target: string): string {
+  const dots = (s: string) => s.replace(/_/g, '.');
+  return `${dots(ncTable)}.cmf.for.${dots(target)}`;
 }
 
 /** True when a column is a 1:1 rename of a source (NC) column (a generator `field`). */
@@ -142,18 +168,42 @@ function isDirectField(c: Column): boolean {
   return !c.autoIncrement && !c.auditRole && !c.isCalculated && !!c.sourceColumn;
 }
 
-/** Direct-mapped columns become source fields (rename + optional coalesce + table alias). */
-function mapFields(cols: Column[]): GeneratorField[] {
-  return cols.filter(isDirectField).map((c) => {
-    const source = c.sourceColumn ?? c.name.toLowerCase();
+/** Dimension fields: direct source columns plus columns read from a joined table. */
+function isDimensionField(c: Column): boolean {
+  if (c.mappingKind === 'join') return !!(c.joinField || c.sourceColumn);
+  return isDirectField(c);
+}
+
+/**
+ * Field names available in a dimension read stream, i.e. what a lookup stream key can reference.
+ * The Java generator aliases every field to lower(target column) and always adds oltp_id / is_deleted.
+ */
+export function dimensionStreamFields(cols: Column[]): string[] {
+  const names = cols.filter(isDimensionField).map((c) => c.name.toLowerCase());
+  return [...new Set([...names, 'oltp_id', 'is_deleted'])];
+}
+
+/**
+ * Dimension generator `fields`: rename + optional coalesce + table alias. `data_type` uses the Java
+ * generator vocabulary (bigint|tinyint|decimal|datetime|varchar); the physical type goes in `sql_type`.
+ */
+function mapFields(cols: Column[], joins: JoinDef[] = []): GeneratorField[] {
+  return cols.filter(isDimensionField).map((c) => {
+    const isJoin = c.mappingKind === 'join';
+    const source = isJoin ? c.joinField ?? c.sourceColumn ?? c.name : c.sourceColumn ?? c.name.toLowerCase();
     const renamed = source.toUpperCase() !== c.name.toUpperCase();
-    return {
+    const joinAlias = isJoin ? joins.find((j) => j.id === c.joinId)?.rightAlias : undefined;
+    const field: GeneratorField = {
       coalesce: c.coalesce ?? false,
       name: source,
       new_name: renamed ? c.name : '',
-      data_type: c.type,
-      alias: c.sourceTable ?? '',
+      data_type: javaDataType(c.type),
+      sql_type: c.type,
+      alias: c.sourceTable ?? joinAlias ?? '',
+      store: !c.isTransient,
     };
+    if (c.coalesceDefault?.trim()) field.coalesce_default = c.coalesceDefault.trim();
+    return field;
   });
 }
 
@@ -425,6 +475,7 @@ export function dimensionToGenerator(d: Dimension) {
     : (d.sourceNcTables ?? []).map(
         (nc) => ({ id: nc, ncTable: nc, oltpTable: nc.replace(/_nc$/, '') } as NetChangeSource),
       );
+  const primaryNc = ncSources.find((s) => s.isPrimary) ?? ncSources[0];
   return {
     type: 'dimension',
     name: d.name,
@@ -434,12 +485,17 @@ export function dimensionToGenerator(d: Dimension) {
     sub_job_name: `${d.name}_sync`,
     surrogate_key: sk,
     natural_key: nk,
+    natural_keys: d.businessKeys?.length ? d.businessKeys : [nk],
     dimension_type: d.dimensionType ?? 'simple',
     has_unknown_row: d.hasDefaultUnknownRow ?? false,
     nk_updates: d.nkUpdates ?? false,
     default_row: d.defaultRow ?? {},
+    is_reference: d.isReferenceTable ?? false,
+    load_strategy: d.loadStrategy ?? 'insert_new',
+    upsert_keys: d.upsertKeys ?? [],
+    cmf_param: cmfParamName(primaryNc?.ncTable ?? `${d.name}_nc`, d.name),
     lookups: (d.lookups ?? []).map(mapLookup),
-    fields: mapFields(d.columns),
+    fields: mapFields(d.columns, d.joins),
     source_tables: mapSourceTables(d.netChange),
     joins: mapJoins(d.joins),
     netchange: ncSources.map(mapNetChange),

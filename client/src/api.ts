@@ -32,7 +32,7 @@ export async function fetchPacket(
 }
 
 /** Generate the Pentaho Kettle ETL code (.ktr / .kjb) for an entity via the Java vcdw-etl-builder. */
-export interface EtlGenResult { ok: boolean; files: PacketFile[]; log: string; error?: string }
+export interface EtlGenResult { ok: boolean; files: PacketFile[]; log: string; error?: string; missing?: string[] }
 export function generateEtl(entity: AnyEntity): Promise<EtlGenResult> {
   return post<EtlGenResult>('/api/generate-etl', { entity });
 }

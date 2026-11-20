@@ -6,6 +6,7 @@ import type { EtlGenResult } from '../api';
 import type {
   AnyEntity,
   Dimension,
+  DimensionLoadStrategy,
   DimensionType,
   Enumeration,
   Fact,
@@ -17,7 +18,7 @@ import {
   standardProfilesFor,
   type StandardColumnProfile,
 } from '@shared/templates';
-import { entityToGenerator } from '@shared/generatorMap';
+import { dimensionStreamFields, entityToGenerator } from '@shared/generatorMap';
 import { withEnumTypeFilter } from '@shared/enumNaming';
 import { renameEntity } from '@shared/entityRename';
 import { generateEntitySql, buildSourceSelectPreview, buildStreamLookupPreview, buildSourceTableDdl } from '@shared/sqlGenerator';
@@ -312,7 +313,17 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
             <div className="field" style={{ maxWidth: 190 }}>
               <label>Domain</label>
               <select value={entity.domain ?? 'General'} onChange={(e) => patch({ domain: e.target.value })}>
-                {['Logistics', 'Supply Chain Core', 'Manufacturing', 'Yard', 'General'].map((d) => (
+                {[
+                  'Logistics',
+                  'Supply Chain Core',
+                  'Manufacturing',
+                  'Yard',
+                  'General',
+                  // keep a domain loaded from YAML visible instead of silently showing the first option
+                  ...(entity.domain && !['Logistics', 'Supply Chain Core', 'Manufacturing', 'Yard', 'General'].includes(entity.domain)
+                    ? [entity.domain]
+                    : []),
+                ].map((d) => (
                   <option key={d}>{d}</option>
                 ))}
               </select>
@@ -418,6 +429,84 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
                   </label>
                 </div>
               </div>
+              <div className="row">
+                <div className="field" style={{ maxWidth: 240 }}>
+                  <label className="check">
+                    <input
+                      type="checkbox"
+                      checked={!!(entity as Dimension).isReferenceTable}
+                      onChange={(e) => patch({ isReferenceTable: e.target.checked } as Partial<Dimension>)}
+                    />
+                    Reference table (MemSQL)
+                  </label>
+                </div>
+                <div className="field" style={{ maxWidth: 340 }}>
+                  <label>Load strategy</label>
+                  <select
+                    value={(entity as Dimension).loadStrategy ?? 'insert_new'}
+                    onChange={(e) => patch({ loadStrategy: e.target.value as DimensionLoadStrategy } as Partial<Dimension>)}
+                  >
+                    <option value="insert_new">Insert new rows (anti-join on OLTP_ID) + update existing</option>
+                    <option value="upsert_by_key">Insert when the key is missing (InsertUpdate, no update)</option>
+                  </select>
+                </div>
+                {(entity as Dimension).loadStrategy === 'upsert_by_key' && (
+                  <div className="field">
+                    <label>Upsert keys (target columns)</label>
+                    <input
+                      value={((entity as Dimension).upsertKeys ?? []).join(', ')}
+                      placeholder="e.g. OLTP_ID, DELETED"
+                      onChange={(e) =>
+                        patch({ upsertKeys: e.target.value.split(',').map((s) => s.trim()).filter(Boolean) } as Partial<Dimension>)
+                      }
+                    />
+                  </div>
+                )}
+              </div>
+              <div className="row">
+                <div className="field">
+                  <label>Business keys (compared by natural-key updates)</label>
+                  <input
+                    value={((entity as Dimension).businessKeys ?? []).join(', ')}
+                    placeholder={(entity as Dimension).naturalKey || 'e.g. ENT_NAME, ORG_NAME'}
+                    onChange={(e) =>
+                      patch({ businessKeys: e.target.value.split(',').map((s) => s.trim()).filter(Boolean) } as Partial<Dimension>)
+                    }
+                  />
+                </div>
+              </div>
+              {(entity as Dimension).hasDefaultUnknownRow && (
+                <Collapsible
+                  title="Default (-1) row values"
+                  subtitle="Empty = default by type ('No Value', -1, 0 for TINYINT)"
+                  defaultOpen={false}
+                >
+                  <table className="data">
+                    <tbody>
+                      {entity.columns
+                        .filter((c) => !c.auditRole && !c.isTransient && !c.isSk && !c.autoIncrement)
+                        .map((c) => (
+                          <tr key={c.id}>
+                            <td className="mono">{c.name}</td>
+                            <td className="mono muted-txt">{c.type}</td>
+                            <td>
+                              <input
+                                value={(entity as Dimension).defaultRow?.[c.name] ?? ''}
+                                placeholder="by type"
+                                onChange={(e) => {
+                                  const next = { ...((entity as Dimension).defaultRow ?? {}) };
+                                  if (e.target.value === '') delete next[c.name];
+                                  else next[c.name] = e.target.value;
+                                  patch({ defaultRow: next } as Partial<Dimension>);
+                                }}
+                              />
+                            </td>
+                          </tr>
+                        ))}
+                    </tbody>
+                  </table>
+                </Collapsible>
+              )}
               {(entity as Dimension).requiresStaging && (
                 <div className="row">
                   <div className="field">
@@ -565,6 +654,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
         <LookupsEditor
           lookups={entity.lookups ?? []}
           onChange={(lookups) => patch({ lookups })}
+          streamFields={isDim ? dimensionStreamFields(entity.columns) : undefined}
         />
       )}
 

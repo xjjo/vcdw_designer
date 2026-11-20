@@ -68,6 +68,10 @@ export default function MappingEditor({ columns, tables, lookups, joins, onChang
               <th style={{ width: 180 }}>Source table / step</th>
               <th style={{ width: 200 }}>Source Field</th>
               <th className="chk">Coalesce</th>
+              <th style={{ width: 110 }}>Coalesce default</th>
+              <th className="chk" title="Read by the ETL (e.g. a lookup driver) but not a column of the table">
+                Stream only
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -214,11 +218,35 @@ export default function MappingEditor({ columns, tables, lookups, joins, onChang
                   </td>
 
                   <td className="chk">
-                    {kind === 'direct' ? (
+                    {kind === 'direct' || kind === 'join' ? (
                       <input
                         type="checkbox"
                         checked={!!c.coalesce}
                         onChange={(e) => update(c.id, { coalesce: e.target.checked })}
+                      />
+                    ) : (
+                      <span className="hint">—</span>
+                    )}
+                  </td>
+                  <td>
+                    {kind === 'direct' || kind === 'join' ? (
+                      <input
+                        value={c.coalesceDefault ?? ''}
+                        placeholder="by type"
+                        title="SQL literal, e.g. 0, -1 or 'No Value'. Empty = default by type."
+                        disabled={!c.coalesce}
+                        onChange={(e) => update(c.id, { coalesceDefault: e.target.value || undefined })}
+                      />
+                    ) : (
+                      <span className="hint">—</span>
+                    )}
+                  </td>
+                  <td className="chk">
+                    {kind === 'direct' || kind === 'join' ? (
+                      <input
+                        type="checkbox"
+                        checked={!!c.isTransient}
+                        onChange={(e) => update(c.id, { isTransient: e.target.checked || undefined })}
                       />
                     ) : (
                       <span className="hint">—</span>
@@ -229,7 +257,7 @@ export default function MappingEditor({ columns, tables, lookups, joins, onChang
             })}
             {columns.length === 0 && (
               <tr>
-                <td colSpan={5} className="muted-txt" style={{ padding: 16 }}>
+                <td colSpan={7} className="muted-txt" style={{ padding: 16 }}>
                   No columns yet. Add columns in the Columns tab first.
                 </td>
               </tr>

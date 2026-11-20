@@ -16,6 +16,7 @@ import { buildDeploymentPacket } from '../../shared/packet.js';
 import { validateGeneratorDoc, contractSchema } from '../../shared/contract/validate.js';
 import { newEnumerationFromCatalog } from '../../shared/templates.js';
 import { stripLegacyEnumOverrides } from '../../shared/enumNaming.js';
+import { missingEtlFiles } from '../../shared/etlFiles.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dirname, '..', 'data');
@@ -452,7 +453,8 @@ app.post('/api/generate-etl', (req, res) => {
     const props = [
       `output.root=${fwd(outDir)}`,
       `input.json=${fwd(inputJson)}`,
-      'fact.dir=fact', 'dim.dir=dim', 'enum.dir=enumeration',
+      // dim.layout=flat mirrors cfg/etl/dimension (the generated jobs use ../common, ../stats)
+      'fact.dir=fact', 'dim.dir=dimension', 'dim.layout=flat', 'enum.dir=enumeration',
       `template.enum.sync=${fwd(join(eb.appDir, 'resources/templates/enumeration/time_uom_sync.ktr'))}`,
       `template.enum.insert.default=${fwd(join(eb.appDir, 'resources/templates/enumeration/time_uom_insert_default_row.ktr'))}`,
       '',
@@ -486,8 +488,10 @@ app.post('/api/generate-etl', (req, res) => {
         if (existsSync(outDir)) walk(outDir);
       } catch (e) { log += `\n[collect] ${(e as Error).message}`; }
       try { rmSync(work, { recursive: true, force: true }); } catch {}
-      const ok = code === 0;
-      res.json({ ok, files, log, ...(ok ? {} : { error: `Generator exited with code ${code}.` }) });
+      const missing = missingEtlFiles(doc as Record<string, unknown>, files.map((f) => f.path));
+      const ok = code === 0 && missing.length === 0;
+      const error = code !== 0 ? `Generator exited with code ${code}.` : `Generator did not produce: ${missing.join(', ')}`;
+      res.json({ ok, files, log, missing, ...(ok ? {} : { error }) });
     });
   } catch (e) {
     try { rmSync(work, { recursive: true, force: true }); } catch {}

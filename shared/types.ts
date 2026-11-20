@@ -71,6 +71,13 @@ export interface Column {
   joinField?: string;
   /** Literal value when mappingKind = 'constant'. */
   constantValue?: string;
+  /**
+   * Stream-only column: read and used by the ETL flow (e.g. a lookup driver) but not a physical
+   * column of the target table. Excluded from the table DDL and from the insert/update.
+   */
+  isTransient?: boolean;
+  /** SQL literal used by coalesce() (e.g. `0`, `-1`, `'No Value'`); empty = default by type. */
+  coalesceDefault?: string;
 
   // --- audit ---
   /** Non-empty when this column comes from an audit profile. */
@@ -198,6 +205,8 @@ export interface LookupDef {
   tableKeyFields: string[];
   keyConditions?: string[];
   returnFields: LookupReturnField[];
+  /** ORDER BY applied by the Database Lookup step when several rows match (empty = none). */
+  orderBy?: string;
 }
 
 /** Fact → dimension surrogate-key resolution. */
@@ -325,7 +334,21 @@ export interface Dimension extends BaseEntity {
   nkUpdates?: boolean;
   /** Literal column values for the unknown/default row (keyed by column name). */
   defaultRow?: Record<string, string>;
+  /** MemSQL REFERENCE table (replicated on every leaf), like most VCDW dimensions. */
+  isReferenceTable?: boolean;
+  /**
+   * How new rows are written:
+   *  - insert_new:    anti-join on OLTP_ID + insert (default).
+   *  - upsert_by_key: InsertUpdate keyed on `upsertKeys` (rows already present are left untouched).
+   */
+  loadStrategy?: DimensionLoadStrategy;
+  /** Target columns that identify a row when loadStrategy = 'upsert_by_key'. */
+  upsertKeys?: string[];
+  /** Business key columns compared by handle_nk_updates (composite keys allowed). */
+  businessKeys?: string[];
 }
+
+export type DimensionLoadStrategy = 'insert_new' | 'upsert_by_key';
 
 export type FactType = 'transaction' | 'snapshot' | 'weekly_aggregation';
 
