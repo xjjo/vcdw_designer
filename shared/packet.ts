@@ -122,6 +122,25 @@ function populateTargets(kind: EntityKind): string[] {
   }
 }
 
+/** Main job produced by the Java generator for the entity. */
+function jobFileName(e: AnyEntity): string {
+  if (e.kind === 'fact') return `${e.name.replace(/^dw_/, '')}_sync.kjb`;
+  return `${e.name}_sync.kjb`;
+}
+
+/**
+ * M32: wrapper job that must call the generated job. Dimensions read from `enumeration_nc` are orchestrated by
+ * `wrapper_for_enums.kjb` (like hazmat_number_category); other dimensions by `sync_dimensions.kjb`.
+ */
+export function suggestedWrapper(e: AnyEntity): string {
+  if (e.kind === 'enumeration') return '`wrapper_for_enums.kjb`';
+  if (e.kind === 'fact') return `the generated \`wrapper_for_${e.name.replace(/^dw_/, '')}.kjb\` (task manager: \`job_task_mapping\`)`;
+  const ncTables = [...(e.netChange ?? []).map((s) => s.ncTable), ...((e as Dimension).sourceNcTables ?? [])];
+  return ncTables.some((t) => t.toLowerCase() === 'enumeration_nc')
+    ? '`wrapper_for_enums.kjb` (the dimension reads `enumeration_nc`)'
+    : '`sync_dimensions.kjb`';
+}
+
 /** Ordered, human-readable deployment guide naming the real repo files to edit. */
 function buildInstallMd(e: AnyEntity, mappingFiles: string[]): string {
   const name = e.name;
@@ -154,6 +173,8 @@ function buildInstallMd(e: AnyEntity, mappingFiles: string[]): string {
   lines.push('Target: `cfg/etl/**`');
   lines.push(`Add the Kettle jobs the Java ETL generator produces for this ${e.kind}, plus the`);
   lines.push('correct wrapper job.');
+  lines.push('');
+  lines.push(`Register \`${jobFileName(e)}\` in the wrapper job: ${suggestedWrapper(e)}.`);
   lines.push('');
 
   if (isMapped) {
