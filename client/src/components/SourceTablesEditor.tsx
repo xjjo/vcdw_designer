@@ -195,6 +195,19 @@ export default function SourceTablesEditor({
               </div>
             </div>
 
+            {(s.role ?? 'netchange') === 'support' && (
+              <div className="field">
+                <label>Derived SQL (optional) — emitted as WITH {s.ncTable || '<table>'} AS (…)</label>
+                <textarea
+                  rows={4}
+                  value={s.sql ?? ''}
+                  placeholder={'select sys_item_id, max(SYS_PGRP_LEVEL_ID) as SYS_PGRP_LEVEL_ID\nfrom dw_item_pgrp_level_assoc group by sys_item_id'}
+                  onChange={(e) => update(s.id, { sql: e.target.value })}
+                />
+                <span className="hint">Leave empty for a physical table. Joins reference the table name above.</span>
+              </div>
+            )}
+
             <div className="field">
               <label>Columns (one per line, name:type)</label>
               <textarea

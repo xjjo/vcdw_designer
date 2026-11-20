@@ -90,6 +90,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
   const meta = KIND_META[entity.kind];
   const isFact = entity.kind === 'fact';
   const isDim = entity.kind === 'dimension';
+  const isStagedDim = isDim && (entity as Dimension).dimensionType === 'staged';
   const isEnum = entity.kind === 'enumeration';
   const isRefEnum = isEnum && !!(entity as Enumeration).isReferenceTable;
 
@@ -222,7 +223,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
     { id: 'joins', label: 'Joins', show: true },
     { id: 'lookups', label: 'Lookups', show: true },
     { id: 'relations', label: 'Dimension Links', show: isFact },
-    { id: 'validation', label: 'Validation', show: isFact },
+    { id: 'validation', label: 'Validation', show: isFact || isStagedDim },
     { id: 'reconcile', label: 'Reconcile', show: isFact },
     { id: 'geocurrency', label: 'Geo / Currency', show: isFact },
     { id: 'etl', label: 'ETL Config', show: true },
@@ -525,6 +526,94 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
                   </div>
                 </div>
               )}
+              <div className="row">
+                <div className="field">
+                  <label>Kettle parameters (one per line, name=default)</label>
+                  <textarea
+                    rows={2}
+                    value={(entity.parameters ?? []).map((p) => `${p.name}=${p.default ?? ''}`).join('\n')}
+                    placeholder="product.group.type.name="
+                    onChange={(e) =>
+                      patch({
+                        parameters: e.target.value
+                          .split('\n')
+                          .map((l) => l.trim())
+                          .filter(Boolean)
+                          .map((l) => {
+                            const i = l.indexOf('=');
+                            return i < 0 ? { name: l, default: '' } : { name: l.slice(0, i).trim(), default: l.slice(i + 1) };
+                          }),
+                      })
+                    }
+                  />
+                </div>
+                <div className="field" style={{ maxWidth: 130 }}>
+                  <label>Output copies</label>
+                  <input
+                    type="number"
+                    min={1}
+                    value={(entity as Dimension).insertCopies ?? ''}
+                    placeholder="4"
+                    onChange={(e) => patch({ insertCopies: e.target.value ? Number(e.target.value) : undefined } as Partial<Dimension>)}
+                  />
+                </div>
+                <div className="field" style={{ maxWidth: 130 }}>
+                  <label>Lanes</label>
+                  <input
+                    type="number"
+                    min={1}
+                    value={(entity as Dimension).lanes ?? ''}
+                    placeholder="1"
+                    onChange={(e) => patch({ lanes: e.target.value ? Number(e.target.value) : undefined } as Partial<Dimension>)}
+                  />
+                </div>
+              </div>
+              {isStagedDim && (
+                <div className="row">
+                  <div className="field" style={{ maxWidth: 200 }}>
+                    <label className="check">
+                      <input
+                        type="checkbox"
+                        checked={(entity as Dimension).extensions?.truncateStg ?? true}
+                        onChange={(e) =>
+                          patch({ extensions: { ...(entity as Dimension).extensions, truncateStg: e.target.checked } } as Partial<Dimension>)
+                        }
+                      />
+                      Truncate staging table
+                    </label>
+                  </div>
+                  <div className="field">
+                    <label>Attribute keys model level (empty = off)</label>
+                    <input
+                      value={(entity as Dimension).extensions?.attributeKeys?.modelLevel ?? ''}
+                      placeholder="item"
+                      onChange={(e) =>
+                        patch({
+                          extensions: {
+                            ...(entity as Dimension).extensions,
+                            attributeKeys: e.target.value.trim() ? { modelLevel: e.target.value.trim() } : undefined,
+                          },
+                        } as Partial<Dimension>)
+                      }
+                    />
+                  </div>
+                  <div className="field">
+                    <label>EPT transformation (empty = off)</label>
+                    <input
+                      value={(entity as Dimension).extensions?.ept?.transPath ?? ''}
+                      placeholder="compute_item.ktr"
+                      onChange={(e) =>
+                        patch({
+                          extensions: {
+                            ...(entity as Dimension).extensions,
+                            ept: e.target.value.trim() ? { transPath: e.target.value.trim() } : undefined,
+                          },
+                        } as Partial<Dimension>)
+                      }
+                    />
+                  </div>
+                </div>
+              )}
             </>
           )}
 
@@ -655,6 +744,7 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
           lookups={entity.lookups ?? []}
           onChange={(lookups) => patch({ lookups })}
           streamFields={isDim ? dimensionStreamFields(entity.columns) : undefined}
+          errorRules={isStagedDim}
         />
       )}
 
@@ -670,6 +760,14 @@ export default function EntityEditor({ entityId }: { entityId: string }) {
         <ValidationEditor
           rules={(entity as Fact).validationRules ?? []}
           onChange={(validationRules) => patch({ validationRules } as Partial<Fact>)}
+        />
+      )}
+
+      {tab === 'validation' && isStagedDim && (
+        <ValidationEditor
+          dimensionMode
+          rules={(entity as Dimension).validationRules ?? []}
+          onChange={(validationRules) => patch({ validationRules } as Partial<Dimension>)}
         />
       )}
 

@@ -6,6 +6,8 @@ interface Props {
   onChange: (l: LookupDef[]) => void;
   /** Field names present in the read stream; used to suggest and validate stream keys (dimensions). */
   streamFields?: string[];
+  /** Staged dimensions: show the "error if not found" settings (ERROR / ERROR_MAP_VALUES). */
+  errorRules?: boolean;
 }
 
 /** Kettle value types used by the Database Lookup step for return-field defaults. */
@@ -17,8 +19,13 @@ const VALUE_TYPES: { id: number; label: string }[] = [
   { id: 4, label: 'Boolean' },
 ];
 
+/** Next free error code among the lookups (max + 1). */
+function nextErrorCode(lookups: LookupDef[]): number {
+  return lookups.reduce((max, l) => Math.max(max, l.errorOnMiss?.code ?? 0), 0) + 1;
+}
+
 /** Generic, fully customizable lookups (maps 1:1 to the ETL generator lookup contract). */
-export default function LookupsEditor({ lookups, onChange, streamFields }: Props) {
+export default function LookupsEditor({ lookups, onChange, streamFields, errorRules }: Props) {
   function update(id: string, patch: Partial<LookupDef>) {
     onChange(lookups.map((l) => (l.id === id ? { ...l, ...patch } : l)));
   }
@@ -96,6 +103,64 @@ export default function LookupsEditor({ lookups, onChange, streamFields }: Props
                 </label>
               </div>
             </div>
+            {errorRules && (
+              <div className="row">
+                <div className="field" style={{ maxWidth: 200 }}>
+                  <label className="check">
+                    <input
+                      type="checkbox"
+                      checked={!!l.errorOnMiss}
+                      onChange={(e) =>
+                        update(l.id, {
+                          errorOnMiss: e.target.checked
+                            ? { code: nextErrorCode(lookups), message: `${l.returnFields[0]?.newName || l.returnFields[0]?.field || 'LOOKUP'} Lookup Failed` }
+                            : undefined,
+                        })
+                      }
+                    />
+                    Error if not found
+                  </label>
+                </div>
+                {l.errorOnMiss && (
+                  <>
+                    <div className="field" style={{ maxWidth: 90 }}>
+                      <label>Code</label>
+                      <input
+                        type="number"
+                        value={l.errorOnMiss.code}
+                        onChange={(e) => update(l.id, { errorOnMiss: { ...l.errorOnMiss!, code: Number(e.target.value) } })}
+                      />
+                    </div>
+                    <div className="field">
+                      <label>Message (ERROR)</label>
+                      <input
+                        value={l.errorOnMiss.message ?? ''}
+                        onChange={(e) => update(l.id, { errorOnMiss: { ...l.errorOnMiss!, message: e.target.value } })}
+                      />
+                    </div>
+                    <div className="field">
+                      <label>Checked fields (empty = every return)</label>
+                      <input
+                        value={(l.errorOnMiss.checkFields ?? []).join(', ')}
+                        onChange={(e) => update(l.id, { errorOnMiss: { ...l.errorOnMiss!, checkFields: csvToArr(e.target.value) } })}
+                      />
+                    </div>
+                    <div className="field" style={{ maxWidth: 150 }}>
+                      <label>Error when</label>
+                      <select
+                        value={l.errorOnMiss.checkMode ?? 'all'}
+                        onChange={(e) =>
+                          update(l.id, { errorOnMiss: { ...l.errorOnMiss!, checkMode: e.target.value === 'any' ? 'any' : undefined } })
+                        }
+                      >
+                        <option value="all">all are null</option>
+                        <option value="any">any is null</option>
+                      </select>
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
             <div className="row">
               <div className="field">
                 <label>Stream key fields</label>
