@@ -155,6 +155,11 @@ export interface NetChangeSource {
   oltpTableLmd?: string;
   dwOltpCopyTable?: string;
   condition?: string;
+  /**
+   * Derived source (role 'support'): SQL emitted as `with <ncTable> as (<sql>)` before the read query, so joins can
+   * reference `ncTable` like a table (e.g. item's `item_pgrp_level_assoc`). Empty = physical table.
+   */
+  sql?: string;
 }
 
 export type JoinType = 'INNER' | 'LEFT' | 'RIGHT' | 'FULL';
@@ -207,7 +212,22 @@ export interface LookupDef {
   returnFields: LookupReturnField[];
   /** ORDER BY applied by the Database Lookup step when several rows match (empty = none). */
   orderBy?: string;
+  /** Staged dimensions: flag the row (ERROR / ERROR_MAP_VALUES) when the driver is set and the lookup returns null. */
+  errorOnMiss?: LookupErrorOnMiss;
 }
+
+export interface LookupErrorOnMiss {
+  /** Code written to ERROR_MAP_VALUES (unique per entity). */
+  code: number;
+  /** Message appended to ERROR; default `<FIRST_RETURN> Lookup Failed`. */
+  message?: string;
+  /** Returned fields checked for null; default = every return field. */
+  checkFields?: string[];
+  /** 'all' (default): every checked field null; 'any': at least one null (item rule 4). */
+  checkMode?: ErrorCheckMode;
+}
+
+export type ErrorCheckMode = 'all' | 'any';
 
 /** Fact → dimension surrogate-key resolution. */
 export interface DimensionLookup {
@@ -249,6 +269,28 @@ export interface ValidationRule {
   condition: string;
   errorCode: string;
   errorMessage: string;
+  /** Dimensions: stream field that must be non-null for the rule to apply (with `checkFields`). */
+  driverField?: string;
+  /** Dimensions: stream fields checked for null. */
+  checkFields?: string[];
+  /** Dimensions: 'all' (default) or 'any' checked field null. */
+  checkMode?: ErrorCheckMode;
+}
+
+/** Kettle named parameter declared in every generated KTR/KJB of the entity (e.g. `product.group.type.name`). */
+export interface EntityParameter {
+  name: string;
+  default?: string;
+}
+
+/** Optional hooks of a staged dimension job (item_sync.kjb). */
+export interface DimensionExtensions {
+  /** Truncate the stg table before each chunk (default true). */
+  truncateStg?: boolean;
+  /** Refresh model_attribute_keys_stg before the sync (sync_attribute_key_into_attribute_stg_key_table.ktr). */
+  attributeKeys?: { modelLevel: string; associatedModelLevel?: string };
+  /** Run the EPT computation (call_compuatation_transformation.kjb) after the sync. */
+  ept?: { transPath: string };
 }
 
 /** Post-load reconciliation: a net-change table re-checked by a Pentaho transform. */
@@ -289,6 +331,8 @@ export interface BaseEntity {
   netChange?: NetChangeSource[];
   joins?: JoinDef[];
   lookups?: LookupDef[];
+  /** Kettle named parameters declared in the generated KTR/KJB (dimensions). */
+  parameters?: EntityParameter[];
   ui?: UiState;
 }
 
@@ -346,6 +390,14 @@ export interface Dimension extends BaseEntity {
   upsertKeys?: string[];
   /** Business key columns compared by handle_nk_updates (composite keys allowed). */
   businessKeys?: string[];
+  /** Staged dimensions: record-level rules (driverField + checkFields) evaluated by the "set error" step. */
+  validationRules?: ValidationRule[];
+  /** Staged dimensions: truncate / attribute keys / EPT hooks. */
+  extensions?: DimensionExtensions;
+  /** Copies of each output step (default 4). */
+  insertCopies?: number;
+  /** Parallel lookup chains in <dim>_sync.ktr (default 1). */
+  lanes?: number;
 }
 
 export type DimensionLoadStrategy = 'insert_new' | 'upsert_by_key';

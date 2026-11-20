@@ -95,10 +95,38 @@ export function stagingDdl(e: AnyEntity, dialect: SqlDialect): string[] {
     if (f.errorTable) out.push(buildStg(f.errorTable, true));
   } else if (e.kind === 'dimension') {
     const d = e as Dimension;
-    if (d.requiresStaging && d.stgTable) out.push(buildStg(d.stgTable));
-    if (d.requiresStaging && d.stgErrorTable) out.push(buildStg(d.stgErrorTable, true));
+    if (d.requiresStaging && d.stgTable) out.push(dimensionStgDdl(d, d.stgTable, false));
+    if (d.requiresStaging && d.stgErrorTable) out.push(dimensionStgDdl(d, d.stgErrorTable, true));
   }
   return out;
+}
+
+/**
+ * Staging tables of a staged dimension (M33), as written by the generated item-like ETL: every column except the
+ * surrogate key and the stream-only constants/calculated, including stream-only drivers (they are lookup inputs and
+ * error evidence), plus `ERROR LONGTEXT` and `ERROR_MAP_VALUES LONGTEXT`. The error table adds the quarantine
+ * bookkeeping columns.
+ */
+function dimensionStgDdl(d: Dimension, table: string, isError: boolean): string {
+  const streamOnlyDerived = (c: Column) =>
+    !!c.isTransient && (c.mappingKind === 'constant' || c.mappingKind === 'calculated');
+  const cols: Column[] = d.columns
+    .filter((c) => !c.autoIncrement && !streamOnlyDerived(c))
+    .filter((c) => !['ERROR', 'ERROR_MAP_VALUES'].includes(c.name.toUpperCase()));
+  const errorCols: Column[] = [
+    { id: 'err', name: 'ERROR', type: 'LONGTEXT', nullable: true },
+    { id: 'error_map_values', name: 'ERROR_MAP_VALUES', type: 'LONGTEXT', nullable: true },
+  ];
+  const quarantineCols: Column[] = [
+    { id: 'stg_error_id', name: 'STG_ERROR_ID', type: 'BIGINT', autoIncrement: true, nullable: false },
+    { id: 'error_resync_count', name: 'ERROR_RESYNC_COUNT', type: 'INT', default: '0' },
+    { id: 'error_penalty_count', name: 'ERROR_PENALTY_COUNT', type: 'INT', default: '0' },
+    { id: 'error_feedback_count', name: 'ERROR_FEEDBACK_COUNT', type: 'INT', default: '0' },
+  ];
+  const all = isError ? [...cols, ...errorCols, ...quarantineCols] : [...cols, ...errorCols];
+  const lines = all.map((c) => '  ' + columnDdl(c));
+  if (isError) lines.push('  ' + `PRIMARY KEY (${quoteIdent('STG_ERROR_ID')})`);
+  return `CREATE TABLE IF NOT EXISTS ${quoteIdent(table)} (\n${lines.join(',\n')}\n);`;
 }
 
 /**

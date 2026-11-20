@@ -45,6 +45,8 @@ interface GeneratorLookup {
   return_value_default_type: string;
   order_by?: string;
   step_name?: string;
+  /** Contract v4 (staged dimensions): flag ERROR / ERROR_MAP_VALUES when the lookup misses. */
+  error_on_miss?: { code: number; message?: string; check_fields?: string[]; check_mode?: 'any' };
 }
 
 interface GeneratorField {
@@ -64,6 +66,12 @@ interface GeneratorField {
   coalesce_default?: string;
 }
 
+/** Contract v4: Kettle named parameter. */
+interface GeneratorParameter {
+  name: string;
+  default: string;
+}
+
 interface GeneratorNetChange {
   is_primary: boolean;
   oltp_table: string;
@@ -79,6 +87,8 @@ interface GeneratorSourceTable {
   alias: string;
   role: 'netchange' | 'support';
   columns: string[];
+  /** Contract v4: derived source emitted as `with <name> as (<sql>)`. */
+  sql?: string;
 }
 
 interface GeneratorJoin {
@@ -122,6 +132,10 @@ interface GeneratorValidation {
   condition: string;
   error_code: string;
   error_message: string;
+  /** Contract v4 (dimensions): rule fires when driver_field is set and every check_fields is null. */
+  driver_field?: string;
+  check_fields?: string[];
+  check_mode?: 'any';
 }
 
 function csv(values: (string | undefined)[]): string {
@@ -143,7 +157,18 @@ function mapLookup(l: LookupDef): GeneratorLookup {
     return_value_default_type: csv(returns.map((r) => String(r.defaultType ?? 5))),
     order_by: l.orderBy ?? '',
     step_name: l.name ?? '',
+    ...(l.errorOnMiss ? { error_on_miss: mapErrorOnMiss(l) } : {}),
   };
+}
+
+function mapErrorOnMiss(l: LookupDef): NonNullable<GeneratorLookup['error_on_miss']> {
+  const e = l.errorOnMiss!;
+  const out: NonNullable<GeneratorLookup['error_on_miss']> = { code: Number(e.code) };
+  if (e.message?.trim()) out.message = e.message.trim();
+  const checks = (e.checkFields ?? []).map((c) => c.trim()).filter(Boolean);
+  if (checks.length) out.check_fields = checks;
+  if (e.checkMode === 'any') out.check_mode = 'any';
+  return out;
 }
 
 /** Normalize a physical SQL type into the vcdw-etl-builder (DbToJavaTypeMapper) vocabulary. */
@@ -174,12 +199,19 @@ function isDimensionField(c: Column): boolean {
   return isDirectField(c);
 }
 
+/** Contract v4 (M27): constant / calculated dimension columns, emitted as `<expr> as <col>` by the Java generator. */
+function derivedRole(c: Column): 'constant' | 'calculated' | null {
+  if (c.mappingKind === 'constant') return 'constant';
+  if (c.mappingKind === 'calculated' || (c.isCalculated && !!c.formula)) return 'calculated';
+  return null;
+}
+
 /**
  * Field names available in a dimension read stream, i.e. what a lookup stream key can reference.
  * The Java generator aliases every field to lower(target column) and always adds oltp_id / is_deleted.
  */
 export function dimensionStreamFields(cols: Column[]): string[] {
-  const names = cols.filter(isDimensionField).map((c) => c.name.toLowerCase());
+  const names = cols.filter((c) => isDimensionField(c) || derivedRole(c)).map((c) => c.name.toLowerCase());
   return [...new Set([...names, 'oltp_id', 'is_deleted'])];
 }
 
@@ -188,7 +220,23 @@ export function dimensionStreamFields(cols: Column[]): string[] {
  * generator vocabulary (bigint|tinyint|decimal|datetime|varchar); the physical type goes in `sql_type`.
  */
 function mapFields(cols: Column[], joins: JoinDef[] = []): GeneratorField[] {
-  return cols.filter(isDimensionField).map((c) => {
+  return cols.filter((c) => isDimensionField(c) || derivedRole(c)).map((c) => {
+    const role = derivedRole(c);
+    if (role) {
+      const derived: GeneratorField = {
+        coalesce: false,
+        name: c.name.toLowerCase(),
+        new_name: c.name,
+        data_type: javaDataType(c.type),
+        sql_type: c.type,
+        alias: '',
+        store: !c.isTransient,
+        role,
+      };
+      if (role === 'constant') derived.constant_value = c.constantValue ?? '';
+      else derived.formula = c.formula ?? '';
+      return derived;
+    }
     const isJoin = c.mappingKind === 'join';
     const source = isJoin ? c.joinField ?? c.sourceColumn ?? c.name : c.sourceColumn ?? c.name.toLowerCase();
     const renamed = source.toUpperCase() !== c.name.toUpperCase();
@@ -270,6 +318,7 @@ export function mapSourceTables(sources: NetChangeSource[] = []): GeneratorSourc
     alias: s.alias ?? s.ncTable,
     role: s.role ?? 'netchange',
     columns: (s.columns ?? []).map((c) => c.name),
+    ...(s.sql?.trim() ? { sql: s.sql.trim() } : {}),
   }));
 }
 
@@ -346,7 +395,38 @@ export function mapValidations(rules: ValidationRule[] = []): GeneratorValidatio
     condition: v.condition,
     error_code: v.errorCode,
     error_message: v.errorMessage,
+    ...(v.driverField?.trim() ? { driver_field: v.driverField.trim() } : {}),
+    ...(v.checkFields?.length ? { check_fields: v.checkFields } : {}),
+    ...(v.checkMode === 'any' ? { check_mode: 'any' as const } : {}),
   }));
+}
+
+/**
+ * Contract v4 keys of a dimension (phase C/D). Every key is emitted only when the design sets it, so a design that
+ * uses none of them produces exactly the A/B document.
+ */
+export function dimensionV4Keys(d: Dimension): Record<string, unknown> {
+  const out: Record<string, unknown> = {};
+  const params: GeneratorParameter[] = (d.parameters ?? [])
+    .filter((p) => p.name?.trim())
+    .map((p) => ({ name: p.name.trim(), default: p.default ?? '' }));
+  if (params.length) out.parameters = params;
+  const ext = d.extensions;
+  if (ext) {
+    const e: Record<string, unknown> = { truncate_stg: ext.truncateStg ?? true };
+    if (ext.attributeKeys?.modelLevel?.trim()) {
+      e.attribute_keys = {
+        model_level: ext.attributeKeys.modelLevel.trim(),
+        associated_model_level: ext.attributeKeys.associatedModelLevel?.trim() || ext.attributeKeys.modelLevel.trim(),
+      };
+    }
+    if (ext.ept?.transPath?.trim()) e.ept = { trans_path: ext.ept.transPath.trim() };
+    out.extensions = e;
+  }
+  if (d.validationRules?.length) out.validations = mapValidations(d.validationRules);
+  if (d.insertCopies && d.insertCopies > 0) out.insert_copies = d.insertCopies;
+  if (d.lanes && d.lanes > 0) out.lanes = d.lanes;
+  return out;
 }
 
 interface GeneratorEnumField {
@@ -499,6 +579,7 @@ export function dimensionToGenerator(d: Dimension) {
     source_tables: mapSourceTables(d.netChange),
     joins: mapJoins(d.joins),
     netchange: ncSources.map(mapNetChange),
+    ...dimensionV4Keys(d),
   };
 }
 
