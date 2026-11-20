@@ -22,6 +22,37 @@ businessKeys:
 isReferenceTable: false
 loadStrategy: insert_new
 upsertKeys: []
+parameters:
+  - name: product.group.type.name
+    default: ""
+extensions:
+  truncateStg: true
+  attributeKeys:
+    modelLevel: item
+    associatedModelLevel: item
+  ept:
+    transPath: compute_item.ktr
+insertCopies: 3
+lanes: 3
+validationRules:
+  - id: vr_itm_005
+    ruleName: Generic item (join dw_item)
+    condition: ""
+    errorCode: "5"
+    errorMessage: GENERIC_ITEM_NAME or GENERIC_ITEM_ENT_NAME Lookup Failed
+    driverField: scc_sys_generic_item_id
+    checkFields:
+      - GENERIC_ITEM_NAME
+      - GENERIC_ITEM_ENT_NAME
+  - id: vr_itm_013
+    ruleName: Partner process type (join partner_process_type)
+    condition: ""
+    errorCode: "13"
+    errorMessage: Partner Process Type Lookup Failed
+    driverField: sys_partner_process_type_id
+    checkFields:
+      - PAPT_NAME
+      - PAPT_OWNING_ENTERPRISE_NAME
 auditProfileId: audit_default
 columns:
   - id: col_itm_225
@@ -1389,6 +1420,40 @@ columns:
     default: CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     auditRole: modified
     mappingKind: audit
+  - id: col_itm_c01
+    name: MODEL_LEVEL
+    type: VARCHAR(32)
+    nullable: true
+    comment: "Stream-only constant used by EPT (item_sync.ktr: 'Item' as model_level)"
+    mappingKind: constant
+    constantValue: "'Item'"
+    isTransient: true
+  - id: col_itm_c02
+    name: PRODUCT_GROUP_TYPE_NAME
+    type: VARCHAR(64)
+    nullable: true
+    comment: "Stream-only constant (item_sync.ktr: '${product.group.type.name}' as product_group_type_name)"
+    mappingKind: constant
+    constantValue: "'${product.group.type.name}'"
+    isTransient: true
+  - id: col_itm_c03
+    name: SCC_SYS_GENERIC_ITEM_ID
+    type: BIGINT
+    nullable: true
+    comment: Join driver of dw_item (dw1); kept in item_stg like the original
+    mappingKind: direct
+    sourceColumn: scc_sys_generic_item_id
+    sourceTable: i
+    isTransient: true
+  - id: col_itm_c04
+    name: SYS_PARTNER_PROCESS_TYPE_ID
+    type: BIGINT
+    nullable: true
+    comment: Join driver of partner_process_type (pt); kept in item_stg like the original
+    mappingKind: direct
+    sourceColumn: SYS_PARTNER_PROCESS_TYPE_ID
+    sourceTable: i
+    isTransient: true
 etlConfig:
   isEnabled: true
   priority: 1
@@ -1972,8 +2037,14 @@ netChange:
         type: BIGINT
   - id: src_itm_190
     role: support
-    ncTable: dw_item_pgrp_level_assoc
+    ncTable: item_pgrp_level_assoc
     alias: dw2
+    sql: |-
+      select sys_item_id,max(SYS_PGRP_LEVEL_ID) as SYS_PGRP_LEVEL_ID
+      from dw_item_pgrp_level_assoc
+      where PGRP_TYPE_NAME='${product.group.type.name}'
+      group by sys_item_id
+      order by LAST_MODIFIED_DATE desc
     columns:
       - id: sc_itm_191
         name: sys_item_id
@@ -1981,12 +2052,6 @@ netChange:
       - id: sc_itm_192
         name: SYS_PGRP_LEVEL_ID
         type: BIGINT
-      - id: sc_itm_193
-        name: PGRP_TYPE_NAME
-        type: VARCHAR(64)
-      - id: sc_itm_194
-        name: LAST_MODIFIED_DATE
-        type: DATETIME(6)
   - id: src_itm_195
     role: support
     ncTable: dw_item
@@ -2046,16 +2111,13 @@ joins:
     name: Product group level assoc (CTE item_pgrp_level_assoc)
     leftTable: item_nc
     leftAlias: i
-    rightTable: dw_item_pgrp_level_assoc
+    rightTable: item_pgrp_level_assoc
     rightAlias: dw2
     joinType: LEFT
     onConditions:
       - left: dw2.sys_item_id
         op: =
         right: i.sys_item_id
-      - left: dw2.PGRP_TYPE_NAME
-        op: =
-        right: "'${product.group.type.name}'"
   - id: join_itm_209
     name: Generic item (dw_item)
     leftTable: item_nc
@@ -2139,6 +2201,11 @@ lookups:
         defaultType: 2
     orderBy: dw_last_modified desc
     targetEntityId: dim_organization
+    errorOnMiss:
+      code: 2
+      message: MANAGING ORG NAME KEY Lookup Failed
+      checkFields:
+        - MANAGING_ORG_NAME
   - id: lkp_itm_213
     name: Database lookup for packing Item name
     tableName: dw_item
@@ -2156,6 +2223,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: LAST_MODIFIED_DATE desc
+    errorOnMiss:
+      code: 1
+      message: PACKAGE ITEM NAME Lookup Failed
+      checkFields:
+        - PACKAGE_ITEM_NAME
   - id: lkp_itm_214
     name: Database lookup hazard class
     tableName: hazard_class
@@ -2177,6 +2249,11 @@ lookups:
         defaultType: 2
     orderBy: dw_last_modified desc
     targetEntityId: dim_hazard_class
+    errorOnMiss:
+      code: 15
+      message: HAZARD_CLASS Lookup Failed
+      checkFields:
+        - HAZARD_CLASS_NAME
   - id: lkp_itm_215
     name: Database lookup hazmat_number
     tableName: hazmat_number
@@ -2201,6 +2278,12 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: dw_last_modified desc
+    errorOnMiss:
+      code: 14
+      message: HAZMAT_NUMBER Lookup Failed
+      checkFields:
+        - HAZMAT_NUMBER_CATEGORY_NAME
+        - HAZMAT_NUMBER
   - id: lkp_itm_216
     name: Database lookup order_mgmt_org
     tableName: organization
@@ -2226,6 +2309,13 @@ lookups:
         defaultType: 2
     orderBy: dw_last_modified desc
     targetEntityId: dim_organization
+    errorOnMiss:
+      code: 4
+      message: ORDER_MGMT_ORG_NAME or ORDER_MGMT_ENT_NAME Lookup Failed
+      checkFields:
+        - ORDER_MGMT_ORG_NAME
+        - ORDER_MGMT_ENT_NAME
+      checkMode: any
   - id: lkp_itm_217
     name: Lookup currency
     tableName: currency
@@ -2243,6 +2333,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: ""
+    errorOnMiss:
+      code: 3
+      message: CURRENCY NAME Lookup Failed
+      checkFields:
+        - CURRENCY_NAME
   - id: lkp_itm_218
     name: Lookup weight_uom
     tableName: weight_uom
@@ -2260,6 +2355,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: ""
+    errorOnMiss:
+      code: 6
+      message: WEIGHT_UOM_VAL Lookup Failed
+      checkFields:
+        - WEIGHT_UOM_VAL
   - id: lkp_itm_219
     name: Lookup linear_uom
     tableName: linear_uom
@@ -2277,6 +2377,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: ""
+    errorOnMiss:
+      code: 7
+      message: LINEAR_UOM_VAL Lookup Failed
+      checkFields:
+        - LINEAR_UOM_VAL
   - id: lkp_itm_220
     name: Lookup case_weight_uom
     tableName: weight_uom
@@ -2294,6 +2399,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: ""
+    errorOnMiss:
+      code: 8
+      message: CASE_WEIGHT_UOM_VAL Lookup Failed
+      checkFields:
+        - CASE_WEIGHT_UOM_VAL
   - id: lkp_itm_221
     name: Lookup case_linear_uom
     tableName: linear_uom
@@ -2311,6 +2421,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: ""
+    errorOnMiss:
+      code: 9
+      message: CASE_LINEAR_UOM_VAL Lookup Failed
+      checkFields:
+        - CASE_LINEAR_UOM_VAL
   - id: lkp_itm_222
     name: Lookup pallet_weight_uom
     tableName: weight_uom
@@ -2328,6 +2443,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: ""
+    errorOnMiss:
+      code: 10
+      message: PALLET_WEIGHT_UOM_VAL Lookup Failed
+      checkFields:
+        - PALLET_WEIGHT_UOM_VAL
   - id: lkp_itm_223
     name: Lookup pallet_linear_uom
     tableName: linear_uom
@@ -2345,6 +2465,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: ""
+    errorOnMiss:
+      code: 11
+      message: PALLET_LINEAR_UOM_VAL Lookup Failed
+      checkFields:
+        - PALLET_LINEAR_UOM_VAL
   - id: lkp_itm_224
     name: Lookup ordering_uom
     tableName: ordering_uom
@@ -2362,6 +2487,11 @@ lookups:
         default: ""
         defaultType: 2
     orderBy: ""
+    errorOnMiss:
+      code: 12
+      message: ORDERING_UOM_VAL Lookup Failed
+      checkFields:
+        - ORDERING_UOM_VAL
 ui:
   x: 80
   y: 70
